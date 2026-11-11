@@ -40,7 +40,7 @@ public sealed record ClassRelationship(
 	string? ToCardinality = null
 );
 
-public enum ClassRelationType { Inheritance, Composition, Aggregation, Association, Dependency, Realization, Lollipop }
+public enum ClassRelationType { Inheritance, Composition, Aggregation, Association, Dependency, Realization, Lollipop, Link, DashedLink }
 public enum ClassMarkerAt { From, To }
 
 public sealed record ClassNamespace(string Name, IReadOnlyList<string> ClassIds);

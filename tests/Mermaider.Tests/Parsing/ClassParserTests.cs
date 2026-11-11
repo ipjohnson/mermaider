@@ -236,4 +236,82 @@ public class ClassParserTests
 
 		diagram.Classes.Should().HaveCount(2);
 	}
+
+	[Test]
+	public void Parses_solid_and_dashed_links()
+	{
+		var lines = new[]
+		{
+			"classDiagram",
+			"A -- B",
+			"C .. D",
+		};
+
+		var diagram = ClassParser.Parse(lines);
+
+		diagram.Relationships.Should().HaveCount(2);
+		diagram.Relationships[0].Type.Should().Be(ClassRelationType.Link);
+		diagram.Relationships[1].Type.Should().Be(ClassRelationType.DashedLink);
+		diagram.Relationships[1].From.Should().Be("C");
+		diagram.Relationships[1].To.Should().Be("D");
+	}
+
+	[Test]
+	public void Generic_relationship_endpoint_joins_the_declared_class()
+	{
+		var lines = new[]
+		{
+			"classDiagram",
+			"class List~T~",
+			"Duck ..> List~T~",
+		};
+
+		var diagram = ClassParser.Parse(lines);
+
+		diagram.Classes.Should().HaveCount(2);
+		diagram.Classes.Single(c => c.Id == "List").Label.Should().Be("List<T>");
+		diagram.Relationships[0].To.Should().Be("List");
+	}
+
+	[Test]
+	public void Generic_relationship_endpoint_labels_an_undeclared_class()
+	{
+		var lines = new[]
+		{
+			"classDiagram",
+			"Cage~Animal~ --> Map~K~V~~",
+		};
+
+		var diagram = ClassParser.Parse(lines);
+
+		diagram.Classes.Single(c => c.Id == "Cage").Label.Should().Be("Cage<Animal>");
+		diagram.Classes.Single(c => c.Id == "Map").Label.Should().Be("Map<K<V>>");
+		diagram.Relationships[0].From.Should().Be("Cage");
+		diagram.Relationships[0].To.Should().Be("Map");
+	}
+
+	[Test]
+	public void Method_classifiers_are_not_part_of_the_return_type()
+	{
+		var lines = new[]
+		{
+			"classDiagram",
+			"class Animal {",
+			"+int count$",
+			"+sleep()$",
+			"+wake() bool$",
+			"+run()*",
+			"+walk() bool*",
+			"}",
+		};
+
+		var diagram = ClassParser.Parse(lines);
+		var methods = diagram.Classes[0].Methods;
+
+		diagram.Classes[0].Attributes[0].Type.Should().Be("int");
+		diagram.Classes[0].Attributes[0].IsStatic.Should().BeTrue();
+		methods.Select(m => m.Type).Should().Equal(null, "bool", null, "bool");
+		methods.Select(m => m.IsStatic).Should().Equal(true, true, false, false);
+		methods.Select(m => m.IsAbstract).Should().Equal(false, false, true, true);
+	}
 }

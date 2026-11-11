@@ -32,7 +32,7 @@ internal static partial class ClassParser
 	[GeneratedRegex(@"<\|--|--|\*--|o--|-->|\.\.>|\.\.\|>", RegexOptions.None, TimeoutMs)]
 	private static partial Regex ArrowCheckPattern();
 
-	[GeneratedRegex(@"^(\S+?)\s+(?:""([^""]*?)""\s+)?(<\|--|<\|\.\.|\*--|o--|-->|--\*|--o|--\|>|\.\.>|\.\.\|>|<--|<\.\.?|--)\s+(?:""([^""]*?)""\s+)?(\S+?)(?:\s*:\s*(.+))?$", RegexOptions.None, TimeoutMs)]
+	[GeneratedRegex(@"^(\S+?)\s+(?:""([^""]*?)""\s+)?(<\|--|<\|\.\.|\*--|o--|-->|--\*|--o|--\|>|\.\.>|\.\.\|>|<--|<\.\.?|--|\.\.)\s+(?:""([^""]*?)""\s+)?(\S+?)(?:\s*:\s*(.+))?$", RegexOptions.None, TimeoutMs)]
 	private static partial Regex RelationshipPattern();
 
 	[GeneratedRegex(@"^[+\-#~]", RegexOptions.None, TimeoutMs)]
@@ -220,12 +220,11 @@ internal static partial class ClassParser
 				continue;
 			}
 
-			var rel = ParseRelationship(line);
-			if (rel != null)
+			if (ParseRelationship(line) is { } rel)
 			{
-				_ = EnsureClass(classMap, rel.From);
-				_ = EnsureClass(classMap, rel.To);
-				relationships.Add(rel);
+				EnsureGenericClass(classMap, rel.From.Id, rel.From.Generic);
+				EnsureGenericClass(classMap, rel.To.Id, rel.To.Generic);
+				relationships.Add(rel.Relationship);
 			}
 		}
 
@@ -248,6 +247,40 @@ internal static partial class ClassParser
 		var methods = new List<ClassMember>();
 		classMap[id] = (node, attrs, methods);
 		return (node, attrs, methods);
+	}
+
+	private static void EnsureGenericClass(
+		Dictionary<string, (ClassNode Node, List<ClassMember> Attrs, List<ClassMember> Methods)> classMap,
+		string id,
+		string? generic)
+	{
+		var (node, attrs, methods) = EnsureClass(classMap, id);
+		if (generic != null && node.Label == id)
+			classMap[id] = (node with { Label = $"{id}<{generic}>" }, attrs, methods);
+	}
+
+	/// <summary>Splits <c>List~T~</c> into the id <c>List</c> and the generic <c>T</c>. Nested tildes alternate between <c>&lt;</c> and <c>&gt;</c>.</summary>
+	private static (string Id, string? Generic) SplitGeneric(string name)
+	{
+		var open = name.IndexOf('~');
+		var close = name.LastIndexOf('~');
+		if (open <= 0 || close <= open + 1 || close != name.Length - 1)
+			return (name, null);
+
+		var inner = name.AsSpan(open + 1, close - open - 1);
+		var generic = new char[inner.Length];
+		var opening = true;
+		for (var i = 0; i < inner.Length; i++)
+		{
+			if (inner[i] == '~')
+			{
+				generic[i] = opening ? '<' : '>';
+				opening = !opening;
+			}
+			else
+				generic[i] = inner[i];
+		}
+		return (name[..open], new string(generic));
 	}
 
 	private static (ClassMember Member, bool IsMethod)? ParseMember(string line)
@@ -278,9 +311,8 @@ internal static partial class ClassParser
 			var parms = methodMatch.Groups[2].Success && methodMatch.Groups[2].Value.Trim().Length > 0
 				? methodMatch.Groups[2].Value.Trim()
 				: null;
-			var type = methodMatch.Groups[3].Success && methodMatch.Groups[3].Value.Trim().Length > 0
-				? methodMatch.Groups[3].Value.Trim()
-				: null;
+			var rawType = methodMatch.Groups[3].Success ? methodMatch.Groups[3].Value.Trim().TrimEnd('$', '*').TrimEnd() : "";
+			var type = rawType.Length > 0 ? rawType : null;
 			var isStatic = name.EndsWith('$') || rest.Contains('$');
 			var isAbstract = name.EndsWith('*') || rest.Contains('*');
 
@@ -318,24 +350,25 @@ internal static partial class ClassParser
 			isAbstractAttr), false);
 	}
 
-	private static ClassRelationship? ParseRelationship(string line)
+	private static (ClassRelationship Relationship, (string Id, string? Generic) From, (string Id, string? Generic) To)? ParseRelationship(string line)
 	{
 		var match = RelationshipPattern().Match(line);
 		if (!match.Success)
 			return null;
 
-		var from = match.Groups[1].Value;
+		var from = SplitGeneric(match.Groups[1].Value);
 		var fromCard = match.Groups[2].Success ? MultilineUtils.NormalizeBrTags(match.Groups[2].Value) : null;
 		var arrow = match.Groups[3].Value.Trim();
 		var toCard = match.Groups[4].Success ? MultilineUtils.NormalizeBrTags(match.Groups[4].Value) : null;
-		var to = match.Groups[5].Value;
+		var to = SplitGeneric(match.Groups[5].Value);
 		var label = match.Groups[6].Success ? MultilineUtils.NormalizeBrTags(match.Groups[6].Value.Trim()) : null;
 
 		var parsed = ParseArrow(arrow);
 		if (parsed == null)
 			return null;
 
-		return new ClassRelationship(from, to, parsed.Value.Type, parsed.Value.MarkerAt, label, fromCard, toCard);
+		var relationship = new ClassRelationship(from.Id, to.Id, parsed.Value.Type, parsed.Value.MarkerAt, label, fromCard, toCard);
+		return (relationship, from, to);
 	}
 
 	private static (ClassRelationType Type, ClassMarkerAt MarkerAt)? ParseArrow(string arrow) =>
@@ -353,7 +386,8 @@ internal static partial class ClassParser
 			"<--" => (ClassRelationType.Association, ClassMarkerAt.From),
 			"..>" => (ClassRelationType.Dependency, ClassMarkerAt.To),
 			"<.." => (ClassRelationType.Dependency, ClassMarkerAt.From),
-			"--" => (ClassRelationType.Association, ClassMarkerAt.To),
+			"--" => (ClassRelationType.Link, ClassMarkerAt.To),
+			".." => (ClassRelationType.DashedLink, ClassMarkerAt.To),
 			_ => null,
 		};
 }

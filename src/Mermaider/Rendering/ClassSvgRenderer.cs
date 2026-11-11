@@ -226,8 +226,8 @@ internal static class ClassSvgRenderer
 		if (rel.Points.Count < 2)
 			return;
 
-		// dash language: solid = structure, dashed = dependency / realization
-		var isDashed = rel.Type is ClassRelationType.Dependency or ClassRelationType.Realization;
+		// dash language: solid = structure, dashed = dependency / realization / dashed link
+		var isDashed = rel.Type is ClassRelationType.Dependency or ClassRelationType.Realization or ClassRelationType.DashedLink;
 		var dashArray = isDashed ? $" stroke-dasharray=\"{DesignSystem.DashArray}\"" : "";
 
 		_ = sb.Append("\n<path class=\"class-relationship\" data-from=\"");
@@ -259,7 +259,7 @@ internal static class ClassSvgRenderer
 		_ = sb.Append(" />");
 	}
 
-	/// <summary>Inheritance / realization ▷, composition ◆, aggregation ◇, association → (filled), dependency ⟩ (open). Lollipop: the target is the circle.</summary>
+	/// <summary>Inheritance / realization ▷, composition ◆, aggregation ◇, association → (filled), dependency ⟩ (open). Links have no marker. Lollipop: the target is the circle.</summary>
 	internal static MarkerShape? MarkerShapeOf(ClassRelationType type) => type switch
 	{
 		ClassRelationType.Inheritance or ClassRelationType.Realization => MarkerShape.Triangle,
