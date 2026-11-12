@@ -87,13 +87,14 @@ jobs:
       shell: bash
       env:
         GITHUB_TOKEN: ${{ github.token }}
+        OWNER: ${{ github.repository_owner }}
       run: |
-         until dotnet nuget push 'build/output/*.nupkg' -s https://nuget.pkg.github.com/nullean/index.json -k "$GITHUB_TOKEN" --skip-duplicate --no-symbols; do echo "Retrying"; sleep 1; done;
+         until dotnet nuget push 'build/output/*.nupkg' -s "https://nuget.pkg.github.com/$OWNER/index.json" -k "$GITHUB_TOKEN" --skip-duplicate --no-symbols; do echo "Retrying"; sleep 1; done;
 
   # A release publishes only a commit main proved: it waits (up to an hour) for main's ci.yml push run on the released
   # commit, and fails unless that run, macOS included, succeeded.
   main-green:
-    if: github.event_name == 'release'
+    if: github.event_name == 'release' && github.repository_owner == 'nullean'
     name: main is green
     runs-on: ubuntu-latest
     timeout-minutes: 70
@@ -104,7 +105,7 @@ jobs:
 
   # main's build job tested this commit; pack it again (the tag gives the version), validate, and publish to nuget.org.
   release:
-    if: github.event_name == 'release'
+    if: github.event_name == 'release' && github.repository_owner == 'nullean'
     needs: main-green
     runs-on: ubuntu-latest
     permissions:
