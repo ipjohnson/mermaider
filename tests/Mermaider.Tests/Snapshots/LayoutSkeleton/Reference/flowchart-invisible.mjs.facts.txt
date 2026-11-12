@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f31ba36422d6dd4b
+accept	yes
+edge	A	B	none	none	invisible
+edge	A	C	none	arrow	solid
+edge	B	D	none	arrow	solid
+edge	C	E	none	arrow	solid
+edge	D	E	none	arrow	solid
+node	A	Positioned Left
+node	B	Positioned Right
+node	C	Connected Below
+node	D	Also Below
+node	E	Merged

@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 60f41b0484033728
+accept	yes
+attribute	MathUtils	+PI$ double
+class	MathUtils	MathUtils
+method	MathUtils	+add(a, b) : int
+method	MathUtils	+compute() : void

@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b3cad3adb0ae3c8f
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+message	A	B	dashed	cross	async lost
+message	A	B	solid	cross	sync lost

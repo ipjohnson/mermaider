@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source be088c4ca21a1086
+accept	yes
+class	A	A
+namespace	One	One.Two
+namespace	One.Two	A

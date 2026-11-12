@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bfc0a245000ff0bc
+accept	yes
+edge	Active	Inactive	none	arrow	solid
+edge	[*]start@root	Active	none	arrow	solid
+node	Active	Active	state
+node	Inactive	Inactive	state
+node	[*]start@root		pseudo
+note	Active	Important state

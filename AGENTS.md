@@ -15,6 +15,7 @@ mise run test             # build, then run the tests
 mise run pack             # build, pack the NuGet packages and validate them
 mise run ci               # what CI's build job runs: test, curb check, pack, validate, diff the public API
 mise run docs             # build the docs and serve them
+mise run mjs-facts        # refresh the committed mermaid.js facts (needs Node; mermaid pinned in package-lock.json)
 mise run format           # format the repository with curb
 mise run check            # formatting drift (curb) and workflow security checks (zizmor)
 mise run clean            # delete build output

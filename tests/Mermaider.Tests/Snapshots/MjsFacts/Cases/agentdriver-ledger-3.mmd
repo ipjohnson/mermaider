@@ -1,0 +1,23 @@
+sequenceDiagram
+  autonumber
+  participant S as Scheduler
+  participant L as Ledger
+  participant E as EffectRunner
+  participant R as SessionRunner
+  participant C as claude
+  S->>L: start(item) after the gates and the slots
+  L-->>L: pending to running, a session row, effect prepare
+  L->>E: effects [prepare]
+  E->>R: prepare the worktree and the branch
+  R->>L: prepared(session)
+  L-->>L: running stays, effect launch
+  L->>E: effects [launch]
+  E->>R: launch claude
+  R->>C: claude -p with --session-id
+  R->>L: launched(pid)
+  C-->>R: output lines to events.ndjson
+  C-->>R: exit 0, result
+  R->>L: exited(session, outcome, commits, pull request)
+  L-->>L: running to review or done, effects [notify, settle]
+  L->>S: Committed
+  S->>L: start(next ready item)

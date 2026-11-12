@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c2964b0e3eb33737
+accept	yes
+actor	Auth	Auth	participant
+actor	Client	Client	participant
+actor	Data	Data	participant
+block	par	Fetch in parallel
+divider
+message	Auth	Client	dashed	filled	Combined result
+message	Auth	Data	solid	filled	Get permissions
+message	Auth	Data	solid	filled	Get user profile
+message	Client	Auth	solid	filled	Validate token

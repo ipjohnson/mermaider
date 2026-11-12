@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f71311be00252b3f
+accept	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid
+edge	C	D	none	arrow	solid
+edge	D	E	none	arrow	solid	Yes
+edge	D	F	none	arrow	solid	No
+node	A	All nodes
+node	B	Get the
+node	C	Default style
+node	D	Unless overridden
+node	E	Special
+node	F	Still default

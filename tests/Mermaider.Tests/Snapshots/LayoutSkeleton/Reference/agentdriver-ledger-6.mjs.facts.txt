@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8597f3faf83c6fa1
+accept	yes
+actor	C	claude	participant
+actor	L	Ledger	participant
+actor	R	SessionRunner	participant
+actor	V	ServeVerb	participant
+message	L	L	dashed	filled	X and Y go to interrupted with retry now, and Z stays running with effect adopt
+message	L	L	dashed	filled	stopping is set, and start is a no-op from here
+message	L	R	solid	filled	prepare(X) afresh, launch(Y, resume), adopt(Z)
+message	R	C	dashed	cross	kill Y
+message	R	C	solid	filled	claude --resume for Y, claude -p for X
+message	R	L	solid	filled	prepare-failed(X, serve stopping), exited(Y, killed)
+message	V	L	solid	filled	replay the unfinished effects
+message	V	L	solid	filled	serve-started to every item that has not ended
+message	V	L	solid	filled	serve-stopping
+message	V	R	solid	filled	cut the deadlines, kill the local processes, wait 10 s
+note	over	L	X and Y stay running in the ledger, and Z keeps running on its runner
+note	over	V,C	serve starts
+note	over	V,C	serve stops while X prepares, Y runs here, and Z runs on a runner

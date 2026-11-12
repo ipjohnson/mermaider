@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 53acb787af289f9e
+accept	yes
+annotation	Animal	«abstract»
+attribute	Animal	+String name
+attribute	Animal	+int age
+attribute	Cat	+bool indoor
+attribute	Dog	+String breed
+class	Animal	Animal
+class	Cat	Cat
+class	Dog	Dog
+method	Animal	+eat() : void
+method	Animal	+sleep() : void
+method	Cat	+purr() : void
+method	Cat	+scratch() : void
+method	Dog	+bark() : void
+method	Dog	+fetch() : void
+relation	Animal	Cat	triangle	none	solid
+relation	Animal	Dog	triangle	none	solid

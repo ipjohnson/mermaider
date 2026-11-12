@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source db476fdd8674377c
+accept	yes
+class	Address	Address
+class	Customer	Customer
+class	LineItem	LineItem
+class	Order	Order
+relation	Customer	Address	none	arrow	solid		1	1
+relation	Customer	Order	none	arrow	solid	places	1	0..*
+relation	Order	LineItem	diamond-filled	none	solid	contains	1	1..*

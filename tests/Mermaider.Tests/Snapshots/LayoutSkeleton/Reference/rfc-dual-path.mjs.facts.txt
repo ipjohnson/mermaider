@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 53f432c62cc59c84
+accept	yes
+edge	flag	provV1	none	arrow	solid	false
+edge	flag	provV2	none	arrow	solid	true
+edge	navV2Yml	v2Map	none	arrow	solid	GetV2TocMappings
+edge	navYml	v1Map	none	arrow	solid	GetTocMappings
+edge	v1Map	flag	none	arrow	solid
+edge	v1Map	valV1	none	arrow	solid
+edge	v2Map	flag	none	arrow	solid
+edge	v2Map	valV2	none	arrow	solid
+node	flag	nav-v2 flag
+node	navV2Yml	navigation-v2.yml
+node	navYml	navigation.yml
+node	provV1	GlobalNavigationPathProvider with V1 mappings → V1 paths + V1 sidebar
+node	provV2	GlobalNavigationPathProvider with V2 mappings → V2 paths + V2 sidebar
+node	v1Map	V1 NavigationTocMappings
+node	v2Map	V2 NavigationTocMappings
+node	valV1	V1 validation
+node	valV2	V2 validation

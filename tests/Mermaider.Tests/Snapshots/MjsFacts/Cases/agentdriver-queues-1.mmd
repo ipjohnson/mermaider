@@ -1,0 +1,10 @@
+flowchart LR
+  card["Queue card or enqueue"] --> fg & bg
+  intake["Intake: label or search"] --> fg & bg
+  cont["1. Continuations<br/>answers, Tell, Resume, fixes"] --> d
+  you["2. Sessions you start<br/>Start now and start_session"] --> d
+  fg["3. Foreground queues<br/>and Tasks, shared by weight"] --> d
+  bg["4. Background queues<br/>spare slots only"] --> d
+  d["Dispatcher<br/>one lock, one pass<br/>writes pool.ndjson"] --> pool["Pool<br/>maxSessions slots"]
+  snap["Snapshot<br/>versioned JSON, kept 14 days"] --> gates["Gates<br/>built in now, Jint scripts later"]
+  gates -- "allow or hold" --> d

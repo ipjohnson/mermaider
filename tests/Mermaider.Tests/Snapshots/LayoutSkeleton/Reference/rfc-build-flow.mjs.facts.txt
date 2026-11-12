@@ -1,0 +1,36 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9030927aa46339a4
+accept	yes
+edge	docsetV1	v1SiteNav	none	arrow	solid
+edge	docsetV1	v2SiteNav	none	arrow	dotted	V1 fallback
+edge	docsetV2	v2SiteNav	none	arrow	solid
+edge	flag	emitV1	none	arrow	solid	false
+edge	flag	emitV2	none	arrow	solid	true
+edge	navV2Yml	v2SiteNav	none	arrow	solid
+edge	navYml	v1SiteNav	none	arrow	solid
+edge	v1Map	valV1	none	arrow	solid
+edge	v1SiteNav	v1Map	none	arrow	solid
+edge	v2Map	valV2	none	arrow	solid
+edge	v2SiteNav	v2Map	none	arrow	solid
+edge	valV1	errV1	none	arrow	solid	fail
+edge	valV1	flag	none	arrow	solid	pass
+edge	valV2	errV2	none	arrow	solid	fail
+edge	valV2	flag	none	arrow	solid	pass
+group	config	Config	navV2Yml,navYml
+group	repos	Per-repo checkouts	docsetV1,docsetV2
+node	docsetV1	docset.yml + toc.yml
+node	docsetV2	docset-v2.yml + toc-v2.yml (if present)
+node	emitV1	V1 NavigationTocMappings injected → V1 paths + V1 sidebar
+node	emitV2	V2 NavigationTocMappings injected → V2 paths + V2 sidebar
+node	errV1	Build error
+node	errV2	Build error
+node	flag	nav-v2 flag
+node	navV2Yml	navigation-v2.yml
+node	navYml	navigation.yml
+node	v1Map	V1 NavigationTocMappings
+node	v1SiteNav	V1 SiteNavigation
+node	v2Map	V2 NavigationTocMappings
+node	v2SiteNav	V2 SiteNavigationV2
+node	valV1	V1 valid?
+node	valV2	V2 valid?

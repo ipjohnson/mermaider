@@ -1,0 +1,81 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 86ce734ac0ee5f4e
+accept	yes
+annotation	IClaudeProcess	«interface»
+annotation	IEffectHandler	«interface»
+annotation	IGate	«interface»
+annotation	IPeerLink	«interface»
+annotation	IWatcher	«interface»
+attribute	IEffectHandler	+Kinds Strings
+attribute	Ledger	+Committed event
+class	ClaudeProcess	ClaudeProcess
+class	ClockWatcher	ClockWatcher
+class	EffectRunner	EffectRunner
+class	Exporter	Exporter
+class	GitHubWatcher	GitHubWatcher
+class	IClaudeProcess	IClaudeProcess
+class	IEffectHandler	IEffectHandler
+class	IGate	IGate
+class	IPeerLink	IPeerLink
+class	IWatcher	IWatcher
+class	Importer	Importer
+class	Ledger	Ledger
+class	Policy	Policy
+class	ProcessWatcher	ProcessWatcher
+class	RunnerProcess	RunnerProcess
+class	Scheduler	Scheduler
+class	SessionRunner	SessionRunner
+class	SqliteStore	SqliteStore
+class	UsageWatcher	UsageWatcher
+class	Views	Views
+class	WorkMachine	WorkMachine
+method	EffectRunner	+ReplayAtStart()
+method	EffectRunner	+Run()
+method	IEffectHandler	+HandleAsync(effect)
+method	IGate	+Evaluate(snapshot, candidate) : GateVerdict
+method	IPeerLink	+ClaimAsync(item, lease)
+method	IPeerLink	+ForwardAsync(transition)
+method	IWatcher	+RunAsync(sink)
+method	Ledger	+Replay()
+method	Ledger	+Submit(Command) : Applied
+method	Ledger	-Apply(Command) : Applied
+method	Policy	+Backoff(interruptions) : TimeSpan
+method	Policy	+Charges(outcome) : bool
+method	Policy	+For(item) : PolicyValues
+method	Scheduler	+Tick(trigger)
+method	Scheduler	-Launch(candidate)
+method	Scheduler	-Select() : Candidates
+method	Scheduler	-Settle()
+method	Scheduler	-Supervise()
+method	SqliteStore	+Migrate()
+method	SqliteStore	+Reader() : IStateReader
+method	SqliteStore	+Writer() : IStateWriter
+method	Views	+Queue(id) : WorkQueue
+method	Views	+Session(id) : Session
+method	Views	+Task(id) : WorkTask
+method	WorkMachine	+Actions(ItemState) : ItemActions
+method	WorkMachine	+Next(ItemState, WorkEvent, PolicyValues) : Transition
+relation	EffectRunner	IEffectHandler	none	arrow	solid	by kind
+relation	Exporter	SqliteStore	none	arrow	solid	reads
+relation	IClaudeProcess	ClaudeProcess	triangle	none	dashed
+relation	IClaudeProcess	RunnerProcess	triangle	none	dashed
+relation	IEffectHandler	SessionRunner	triangle	none	dashed
+relation	IPeerLink	Ledger	none	arrow	solid	commands in
+relation	IWatcher	ClockWatcher	triangle	none	dashed
+relation	IWatcher	GitHubWatcher	triangle	none	dashed
+relation	IWatcher	Ledger	none	arrow	solid	observations
+relation	IWatcher	ProcessWatcher	triangle	none	dashed
+relation	IWatcher	UsageWatcher	triangle	none	dashed
+relation	Importer	Ledger	none	arrow	solid	import commands
+relation	Ledger	EffectRunner	none	arrow	solid	wakes
+relation	Ledger	IPeerLink	none	arrow	solid	transitions out
+relation	Ledger	Policy	none	arrow	solid	reads limits
+relation	Ledger	SqliteStore	none	arrow	solid	one transaction
+relation	Ledger	WorkMachine	none	arrow	solid	decides with
+relation	Scheduler	IGate	none	arrow	solid	asks each
+relation	Scheduler	Ledger	none	arrow	solid	start, stall, time limit
+relation	Scheduler	SqliteStore	none	arrow	solid	reads ready items
+relation	SessionRunner	IClaudeProcess	none	arrow	solid	starts claude
+relation	SessionRunner	Ledger	none	arrow	solid	prepared, exited, asked, lost
+relation	Views	SqliteStore	none	arrow	solid	one snapshot

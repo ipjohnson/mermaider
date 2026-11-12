@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 19c559f6868d629f
+accept	yes
+edge	claude	anthropic	none	arrow	solid	the runner's own login
+edge	daemon	serve	none	arrow	dotted	mDNS: _agent-driver._tcp, one subnet
+edge	serve	github	none	arrow	solid	push and API calls, with your token
+edge	ssh	sshd	none	arrow	thick	one SSH connection: control, git, reverse forward
+group	Mac	Mac	home,serve,ssh
+group	Runner	Runner container	claude,daemon,rhome,sshd
+node	anthropic	Anthropic
+node	claude	claude -p, as agent
+node	daemon	agent-driver runner: parent of claude, mDNS
+node	github	github.com
+node	home	driver home: sessions, repos, the clone
+node	rhome	runner home: session copies, repos, ~/.claude login
+node	serve	serve: Dispatcher, inbox, CollisionMonitor
+node	ssh	ssh: one ControlMaster per runner
+node	sshd	sshd :7472, only serve's key

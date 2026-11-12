@@ -1,0 +1,11 @@
+classDiagram
+class Worker {
+<<interface>>
++string Name
+-int count
+#Run(input) Task
++Create()$ Worker
++Execute()* Task
+}
+class Result~T~
+Worker --> Result : returns

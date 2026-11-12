@@ -1,0 +1,26 @@
+flowchart LR
+  New[New in the app] --> T
+  Chat[Chat start_session] --> T
+  Enq[Chat enqueue, Add to queue] --> T
+  Intake[Queue intake] --> T
+  Issue[Issue with sub-issues] --> T
+  T[Task with items] --> E[Queue entry names the Task]
+  T --> X[TaskExecutor offers items]
+  E --> X
+  X --> D[Dispatcher: gates, capacity]
+  D --> S[Session per item]
+  S -->|add_step| T
+  Steward -->|add_step| T
+  You -->|Add step| T
+  T --> P[Planning policy]
+  P -->|rule asks| Inbox[Sign-off in the inbox]
+  T --> M[App: WorkModel]
+  Q[GET /api/queues] --> M
+  Pool[GET /api/pool] --> M
+  Sess[GET /api/sessions] --> M
+  M --> L[List]
+  M --> B[By queue]
+  M --> Bd[Board]
+  L --> Pane[Pane or Page]
+  B --> Pane
+  Bd --> Pane

@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3073f6a1cc41765d
+accept	yes
+class	Repository	Repository<T>
+class	UserRepo	UserRepo
+method	Repository	+findAll() : List<T>
+method	Repository	+getById(id) : T
+method	Repository	+save(entity) : void
+method	UserRepo	+getById(id) : User
+relation	Repository	UserRepo	triangle	none	solid

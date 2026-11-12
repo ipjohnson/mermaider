@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 75f3ca18654046d6
+accept	yes
+class	A	A
+class	B	B
+class	C	C
+class	D	D
+class	E	E
+class	F	F
+class	G	G
+class	H	H
+class	I	I
+class	J	J
+class	K	K
+class	L	L
+relation	A	B	triangle	none	solid	Inheritance
+relation	C	D	diamond-filled	none	solid	Composition
+relation	E	F	diamond	none	solid	Aggregation
+relation	G	H	none	arrow	solid	Association
+relation	I	J	none	arrow	dashed	Dependency
+relation	K	L	none	triangle	dashed	Realization

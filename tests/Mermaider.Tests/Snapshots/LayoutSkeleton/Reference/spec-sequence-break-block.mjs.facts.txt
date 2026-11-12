@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 16aa8e5e16defaec
+accept	yes
+actor	Client	Client	participant
+actor	Server	Server	participant
+block	break	When rate limited
+message	Client	Server	solid	filled	Request
+message	Server	Client	dashed	filled	200 OK
+message	Server	Client	dashed	filled	429 Too Many Requests

@@ -1,0 +1,92 @@
+classDiagram
+  direction LR
+  class Ledger {
+    +Submit(Command) Applied
+    +Replay()
+    +Committed event
+    -Apply(Command) Applied
+  }
+  class WorkMachine {
+    +Next(ItemState, WorkEvent, PolicyValues) Transition
+    +Actions(ItemState) ItemActions
+  }
+  class Policy {
+    +For(item) PolicyValues
+    +Backoff(interruptions) TimeSpan
+    +Charges(outcome) bool
+  }
+  class Scheduler {
+    +Tick(trigger)
+    -Settle()
+    -Select() Candidates
+    -Launch(candidate)
+    -Supervise()
+  }
+  class IGate {
+    <<interface>>
+    +Evaluate(snapshot, candidate) GateVerdict
+  }
+  class IEffectHandler {
+    <<interface>>
+    +Kinds Strings
+    +HandleAsync(effect)
+  }
+  class SessionRunner
+  class IClaudeProcess {
+    <<interface>>
+  }
+  class ClaudeProcess
+  class RunnerProcess
+  class IWatcher {
+    <<interface>>
+    +RunAsync(sink)
+  }
+  class GitHubWatcher
+  class ClockWatcher
+  class ProcessWatcher
+  class UsageWatcher
+  class EffectRunner {
+    +Run()
+    +ReplayAtStart()
+  }
+  class SqliteStore {
+    +Writer() IStateWriter
+    +Reader() IStateReader
+    +Migrate()
+  }
+  class Views {
+    +Session(id) Session
+    +Task(id) WorkTask
+    +Queue(id) WorkQueue
+  }
+  class IPeerLink {
+    <<interface>>
+    +ForwardAsync(transition)
+    +ClaimAsync(item, lease)
+  }
+  class Exporter
+  class Importer
+
+  Ledger --> WorkMachine : decides with
+  Ledger --> Policy : reads limits
+  Ledger --> SqliteStore : one transaction
+  Ledger --> EffectRunner : wakes
+  Scheduler --> Ledger : start, stall, time limit
+  Scheduler --> IGate : asks each
+  Scheduler --> SqliteStore : reads ready items
+  EffectRunner --> IEffectHandler : by kind
+  IEffectHandler <|.. SessionRunner
+  SessionRunner --> IClaudeProcess : starts claude
+  IClaudeProcess <|.. ClaudeProcess
+  IClaudeProcess <|.. RunnerProcess
+  SessionRunner --> Ledger : prepared, exited, asked, lost
+  IWatcher <|.. GitHubWatcher
+  IWatcher <|.. ClockWatcher
+  IWatcher <|.. ProcessWatcher
+  IWatcher <|.. UsageWatcher
+  IWatcher --> Ledger : observations
+  Views --> SqliteStore : one snapshot
+  IPeerLink --> Ledger : commands in
+  Ledger --> IPeerLink : transitions out
+  Exporter --> SqliteStore : reads
+  Importer --> Ledger : import commands

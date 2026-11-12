@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source af95a764b8b37aaa
+accept	yes
+edge	A	B	none	arrow	solid
+node	A	Request
+node	B	Review

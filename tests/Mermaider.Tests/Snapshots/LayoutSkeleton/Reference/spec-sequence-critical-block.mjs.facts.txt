@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 132f72cc0253bbb6
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+block	critical	Establish connection
+divider	Network timeout
+message	A	A	solid	filled	Retry
+message	A	B	solid	filled	Connect
+message	B	A	dashed	filled	Ack

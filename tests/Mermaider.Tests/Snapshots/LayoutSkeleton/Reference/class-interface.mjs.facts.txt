@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 36c6fc573d45b552
+accept	yes
+annotation	ILogger	«interface»
+attribute	ConsoleLogger	-bool _verbose
+attribute	FileLogger	-string _path
+class	ConsoleLogger	ConsoleLogger
+class	FileLogger	FileLogger
+class	ILogger	ILogger
+method	ConsoleLogger	+Log(string message) : void
+method	ConsoleLogger	+LogError(Exception ex) : void
+method	FileLogger	+Flush() : void
+method	FileLogger	+Log(string message) : void
+method	FileLogger	+LogError(Exception ex) : void
+method	ILogger	+Log(string message) : void
+method	ILogger	+LogError(Exception ex) : void
+relation	ILogger	ConsoleLogger	triangle	none	dashed
+relation	ILogger	FileLogger	triangle	none	dashed

@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9002a51ea8c07747
+accept	yes
+edge	src	v1	none	arrow	solid
+edge	src	v2	none	arrow	solid
+edge	v1	v1out	none	arrow	solid
+edge	v2	v2out	none	arrow	solid
+node	src	manage-data/ingest/some-page.md (source — unchanged on disk)
+node	v1	V1 build path_prefix: manage-data
+node	v1out	/docs/manage-data/ingest/some-page
+node	v2	V2 build path_prefix: elasticsearch-fundamentals
+node	v2out	/docs/elasticsearch-fundamentals/ingest/some-page

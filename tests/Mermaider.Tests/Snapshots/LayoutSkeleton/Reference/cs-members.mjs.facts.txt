@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2b0c049f88a80dfc
+accept	yes
+annotation	Worker	«interface»
+attribute	Worker	+string Name
+attribute	Worker	-int count
+class	Result	Result<T>
+class	Worker	Worker
+method	Worker	#Run(input) : Task
+method	Worker	+Create() : Worker
+method	Worker	+Execute() : Task
+relation	Worker	Result	none	arrow	solid	returns

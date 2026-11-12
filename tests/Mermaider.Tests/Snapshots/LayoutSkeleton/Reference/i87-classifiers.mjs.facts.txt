@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5b0703228ee355d9
+accept	yes
+attribute	Worker	+string Default
+class	Worker	Worker
+method	Worker	+Build() : Worker
+method	Worker	+Create()
+method	Worker	+Execute()
+method	Worker	+Run() : Task

@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 269d609153223df6
+accept	yes
+actor	C	claude	participant
+actor	E	EffectRunner	participant
+actor	L	Ledger	participant
+actor	R	SessionRunner	participant
+actor	S	Scheduler	participant
+message	C	R	dashed	filled	exit 0, result
+message	C	R	dashed	filled	output lines to events.ndjson
+message	E	R	solid	filled	launch claude
+message	E	R	solid	filled	prepare the worktree and the branch
+message	L	E	solid	filled	effects [launch]
+message	L	E	solid	filled	effects [prepare]
+message	L	L	dashed	filled	pending to running, a session row, effect prepare
+message	L	L	dashed	filled	running stays, effect launch
+message	L	L	dashed	filled	running to review or done, effects [notify, settle]
+message	L	S	solid	filled	Committed
+message	R	C	solid	filled	claude -p with --session-id
+message	R	L	solid	filled	exited(session, outcome, commits, pull request)
+message	R	L	solid	filled	launched(pid)
+message	R	L	solid	filled	prepared(session)
+message	S	L	solid	filled	start(item) after the gates and the slots
+message	S	L	solid	filled	start(next ready item)

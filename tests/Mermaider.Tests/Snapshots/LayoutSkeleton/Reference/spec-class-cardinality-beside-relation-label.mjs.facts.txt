@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9661b41b07fef28c
+accept	yes
+class	Duck	Duck
+class	Pond	Pond
+class	Wing	Wing
+relation	Duck	Wing	diamond-filled	none	solid	has		2
+relation	Pond	Duck	diamond	none	solid	holds		many

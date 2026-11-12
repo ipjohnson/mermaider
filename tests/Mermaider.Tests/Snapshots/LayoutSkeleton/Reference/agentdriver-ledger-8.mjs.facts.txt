@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6b45f4280039e184
+accept	yes
+edge	a	g	none	arrow	solid	push, pull requests
+edge	a	r	none	arrow	solid	commands, heartbeat
+edge	b	g	none	arrow	solid	push, pull requests
+edge	b	r	none	arrow	solid	commands, heartbeat
+edge	r	a	none	arrow	solid	transitions
+edge	r	b	none	arrow	solid	transitions
+node	a	Your serve, ledger A runs the items whose owner is A
+node	b	A teammate's or a bot's serve, ledger B runs the items whose owner is B
+node	g	GitHub each scheduler uses its own token
+node	r	Room host or parent, ledger R the Room's record, leases, routing, policy

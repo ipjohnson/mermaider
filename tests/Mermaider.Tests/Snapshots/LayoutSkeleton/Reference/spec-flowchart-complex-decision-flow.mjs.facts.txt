@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 82ebf714903a6ad6
+accept	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid	Yes
+edge	B	D	none	arrow	solid	No
+edge	C	G	none	arrow	solid
+edge	D	E	none	arrow	solid	Yes
+edge	D	F	none	arrow	solid	No
+edge	E	G	none	arrow	solid
+edge	F	G	none	arrow	solid
+edge	G	H	none	arrow	solid
+edge	H	A	none	arrow	solid	No
+edge	H	I	none	arrow	solid	Yes
+node	A	Start
+node	B	Is it raining?
+node	C	Take umbrella
+node	D	Is it cold?
+node	E	Wear jacket
+node	F	Dress light
+node	G	Go outside
+node	H	Enjoy?
+node	I	Done

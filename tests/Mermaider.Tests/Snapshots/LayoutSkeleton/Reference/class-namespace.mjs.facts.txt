@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4ee6312179d74720
+accept	yes
+attribute	Order	+int id
+attribute	Product	+String name
+attribute	Product	+double price
+class	Order	Order
+class	OrderRepo	OrderRepo
+class	Product	Product
+class	ProductRepo	ProductRepo
+method	Order	+place() : void
+method	OrderRepo	+save(Order) : void
+method	ProductRepo	+findAll() : List
+namespace	Domain	Order,Product
+namespace	Infrastructure	OrderRepo,ProductRepo
+relation	Order	Product	none	arrow	solid
+relation	OrderRepo	Order	none	triangle	dashed
+relation	ProductRepo	Product	none	triangle	dashed

@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 84fe40b454974ae3
+accept	yes
+actor	A	agent on the runner	participant
+actor	D	agent-driver runner	participant
+actor	G	GitHub	participant
+actor	R	relay on the runner	participant
+actor	S	serve, on the Mac	participant
+message	A	R	solid	filled	git push -u origin, after PushGate allowed it
+message	D	R	dashed	filled	hook exits 0 or 1
+message	D	S	solid	filled	push call, on the control channel
+message	G	S	dashed	filled	accepted or refused
+message	R	A	dashed	filled	GitHub's answer
+message	R	D	solid	filled	the pre-receive hook bundles the commits
+message	S	D	dashed	filled	reply
+message	S	G	solid	filled	git push, your credentials
+note	over	S	own branch only, unbundle into its clone, value check if a grant is active

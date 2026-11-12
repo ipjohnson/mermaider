@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2f79ca7d7be5dcd4
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+message	A	B	solid	filled	Hello
+note	left	A	Left note
+note	over	A,B	Spanning note
+note	right	B	Right note

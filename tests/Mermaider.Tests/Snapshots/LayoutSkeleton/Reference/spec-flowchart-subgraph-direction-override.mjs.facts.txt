@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 64d0cd5cf9eb6a0b
+accept	yes
+edge	H1	H2	none	arrow	solid
+edge	H2	H3	none	arrow	solid
+edge	V1	V2	none	arrow	solid
+edge	V2	V3	none	arrow	solid
+edge	Vertical	Horizontal	none	arrow	solid
+group	Horizontal	Horizontal	H1,H2,H3
+group	Vertical	Vertical	V1,V2,V3
+node	H1	H1
+node	H2	H2
+node	H3	H3
+node	V1	V1
+node	V2	V2
+node	V3	V3

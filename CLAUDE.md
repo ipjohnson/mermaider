@@ -37,6 +37,12 @@ stripping), sanitizer tests for the scoped `<image>` href exception, and spec-co
 (groups, nested groups, junction routing, arrow directions, vendor icon packs, the reported
 k8s/ECH diagram) under `Snapshots/ArchitectureSpecTests.cs`.
 
+`MjsFactsTests` (`tests/Mermaider.Tests/Snapshots/MjsFacts/`) diffs Mermaider's labels, groups, edge ends and markers
+with committed mermaid.js facts (`Snapshots/LayoutSkeleton/Reference/*.mjs.facts.txt`) for the flowchart, state, class
+and sequence gallery examples, spec-test sources and the repros in `MjsFacts/Cases/`. CI needs no Node. Accepted
+differences live in `mjs-facts-baseline.txt` under a reason; a new difference and a vanished one both fail.
+`mise run mjs-facts` (or `scripts/mjs-facts.sh`) re-renders the facts with the mermaid version `package-lock.json` pins.
+
 ## Benchmarks
 
 Run benchmarks with: `dotnet run -c Release --project tests/Mermaider.Benchmarks/Mermaider.Benchmarks.csproj`

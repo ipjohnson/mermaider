@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b8ceaae845d83804
+accept	yes
+actor	A	Service	participant
+actor	B	Queue	participant
+message	A	A	solid	filled	Initialize
+message	A	B	solid	filled	Send message
+message	B	A	dashed	filled	Acknowledgement
+message	B	B	solid	filled	Process internally

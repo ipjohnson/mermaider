@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7af02d22852dfede
+accept	yes
+class	A	A
+class	B	B
+class	C	C
+class	D	D
+relation	A	B	none	none	solid
+relation	A	C	none	arrow	solid
+relation	C	D	none	none	dashed	uses

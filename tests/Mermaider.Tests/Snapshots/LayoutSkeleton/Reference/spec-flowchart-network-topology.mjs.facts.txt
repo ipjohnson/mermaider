@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f425377f1bb1d019
+accept	yes
+edge	app1	db	none	arrow	solid
+edge	app1	nat	none	arrow	solid
+edge	app2	db	none	arrow	solid
+edge	app2	nat	none	arrow	solid
+edge	internet	lb	none	arrow	solid
+edge	lb	app1	none	arrow	solid
+edge	lb	app2	none	arrow	solid
+edge	nat	internet	none	arrow	solid
+group	cloud	Cloud VPC	priv,pub
+group	priv	Private Subnet	app1,app2,db
+group	pub	Public Subnet	lb,nat
+node	app1	App Server 1
+node	app2	App Server 2
+node	db	Database
+node	internet	Internet
+node	lb	Load Balancer
+node	nat	NAT Gateway

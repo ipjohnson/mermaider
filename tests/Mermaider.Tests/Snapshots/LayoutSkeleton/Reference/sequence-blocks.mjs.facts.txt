@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bff59987865fc03f
+accept	yes
+actor	API	API	participant
+actor	Client	Client	participant
+actor	DB	DB	participant
+block	alt	Cache Hit
+block	loop	Health Check
+divider	Cache Miss
+message	API	Client	dashed	filled	Cached Response
+message	API	Client	dashed	filled	Fresh Response
+message	API	Client	dashed	filled	Pong
+message	API	DB	solid	filled	Query
+message	Client	API	solid	filled	Ping
+message	Client	API	solid	filled	Request
+message	DB	API	dashed	filled	Result

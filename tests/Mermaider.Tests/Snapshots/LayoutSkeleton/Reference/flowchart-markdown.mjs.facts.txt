@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 806153ccc65e972d
+accept	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid
+edge	C	D	none	arrow	solid
+node	A	The cat in the hat
+node	B	Italic emphasis
+node	C	Bold and italic mixed
+node	D	Normal label

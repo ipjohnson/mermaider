@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1963f81099b1d706
+accept	yes
+edge	bg	d	none	arrow	solid
+edge	card	bg	none	arrow	solid
+edge	card	fg	none	arrow	solid
+edge	cont	d	none	arrow	solid
+edge	d	pool	none	arrow	solid
+edge	fg	d	none	arrow	solid
+edge	gates	d	none	arrow	solid	allow or hold
+edge	intake	bg	none	arrow	solid
+edge	intake	fg	none	arrow	solid
+edge	snap	gates	none	arrow	solid
+edge	you	d	none	arrow	solid
+node	bg	4. Background queues spare slots only
+node	card	Queue card or enqueue
+node	cont	1. Continuations answers, Tell, Resume, fixes
+node	d	Dispatcher one lock, one pass writes pool.ndjson
+node	fg	3. Foreground queues and Tasks, shared by weight
+node	gates	Gates built in now, Jint scripts later
+node	intake	Intake: label or search
+node	pool	Pool maxSessions slots
+node	snap	Snapshot versioned JSON, kept 14 days
+node	you	2. Sessions you start Start now and start_session

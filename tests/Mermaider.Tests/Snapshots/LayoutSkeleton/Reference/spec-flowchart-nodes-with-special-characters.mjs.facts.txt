@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8e7d2bddee543196
+accept	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid
+node	A	Node with (parens)
+node	B	Node with {braces}
+node	C	Quoted label

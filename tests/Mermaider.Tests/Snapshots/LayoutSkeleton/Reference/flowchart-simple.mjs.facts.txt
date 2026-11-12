@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 625b83453354a9ee
+accept	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid	Yes
+edge	B	D	none	arrow	solid	No
+edge	C	E	none	arrow	solid
+edge	D	E	none	arrow	solid
+node	A	Start
+node	B	Decision
+node	C	OK
+node	D	Cancel
+node	E	End

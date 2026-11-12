@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 72cf9112d5ffab3b
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Worker	Worker	participant
+message	Alice	Bob	solid	filled	Hello Bob
+message	Bob	Alice	dashed	filled	Done
+message	Bob	Worker	solid	cross	Terminate
+message	Bob	Worker	solid	filled	Spawn task
+message	Worker	Bob	dashed	filled	Result
+message	Worker	Worker	solid	filled	Process

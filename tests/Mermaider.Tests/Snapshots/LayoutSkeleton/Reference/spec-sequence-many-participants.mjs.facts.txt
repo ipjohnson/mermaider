@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b84c6b56f24cd18a
+accept	yes
+actor	App	App	participant
+actor	Browser	Browser	participant
+actor	CDN	CDN	participant
+actor	Cache	Cache	participant
+actor	DB	DB	participant
+actor	LB	Load Balancer	participant
+message	App	Cache	solid	filled	Check cache
+message	App	Cache	solid	filled	Store
+message	App	DB	solid	filled	Query
+message	App	LB	dashed	filled	Response
+message	Browser	CDN	solid	filled	Static assets
+message	Browser	LB	solid	filled	API request
+message	Cache	App	dashed	filled	Miss
+message	DB	App	dashed	filled	Result
+message	LB	App	solid	filled	Forward
+message	LB	Browser	dashed	filled	Response

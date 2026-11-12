@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 209bb65b7d6f5a14
+accept	yes
+attribute	Order	+int id
+attribute	User	+String name
+class	Database	Database
+class	Order	Order
+class	User	User
+method	Database	+connect() : void
+method	Database	+query(sql) : void
+method	Order	+submit() : void
+method	User	+login() : void
+namespace	Domain	Order,User
+namespace	Infrastructure	Database
+relation	Order	Database	none	arrow	solid
+relation	User	Order	none	arrow	solid

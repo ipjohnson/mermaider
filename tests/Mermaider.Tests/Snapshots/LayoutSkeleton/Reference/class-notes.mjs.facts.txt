@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 124f31422216c97a
+accept	yes
+attribute	User	+String email
+attribute	User	+String name
+class	User	User
+class	UserService	UserService
+method	UserService	+createUser() : User
+method	UserService	+deleteUser(id) : void
+note	User	Core domain entity
+note	UserService	Handles all user CRUD
+relation	UserService	User	none	arrow	solid

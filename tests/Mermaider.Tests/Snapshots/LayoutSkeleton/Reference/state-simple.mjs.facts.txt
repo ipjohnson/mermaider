@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d9d7014f8685f086
+accept	yes
+edge	Failed	Idle	none	arrow	solid	retry
+edge	Idle	Processing	none	arrow	solid	submit
+edge	Processing	Failed	none	arrow	solid	error
+edge	Processing	Success	none	arrow	solid	ok
+edge	Success	[*]end@root	none	arrow	solid
+edge	[*]start@root	Idle	none	arrow	solid
+node	Failed	Failed	state
+node	Idle	Idle	state
+node	Processing	Processing	state
+node	Success	Success	state
+node	[*]end@root		pseudo
+node	[*]start@root		pseudo

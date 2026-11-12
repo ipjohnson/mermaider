@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source abf97aa45b29a13e
+accept	yes
+actor	Client	Client	participant
+actor	Server	Server	participant
+message	Client	Server	solid	filled	Request 1
+message	Client	Server	solid	filled	Request 2
+message	Server	Client	dashed	filled	Response 1
+message	Server	Client	dashed	filled	Response 2

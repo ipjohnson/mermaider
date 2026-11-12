@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4a3eb97f24466a1c
+accept	yes
+annotation	Electric	«interface»
+annotation	Vehicle	«abstract»
+attribute	Car	+int doors
+attribute	Engine	+String type
+attribute	Engine	+int horsepower
+attribute	Truck	+double payload
+attribute	Vehicle	+String make
+attribute	Vehicle	+int year
+class	Car	Car
+class	Electric	Electric
+class	Engine	Engine
+class	Truck	Truck
+class	Vehicle	Vehicle
+method	Car	+drive() : void
+method	Electric	+batteryLevel() : int
+method	Electric	+charge() : void
+method	Truck	+haul() : void
+method	Vehicle	+start() : void
+method	Vehicle	+stop() : void
+relation	Car	Engine	diamond-filled	none	solid
+relation	Electric	Car	triangle	none	dashed	optional
+relation	Vehicle	Car	triangle	none	solid
+relation	Vehicle	Truck	triangle	none	solid

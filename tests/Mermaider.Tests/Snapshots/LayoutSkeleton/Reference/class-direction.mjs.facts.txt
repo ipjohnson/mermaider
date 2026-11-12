@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2164dc469e99b072
+accept	yes
+class	Controller	Controller
+class	Repository	Repository
+class	Service	Service
+method	Controller	+handle() : void
+method	Repository	+find() : Object
+method	Repository	+save() : void
+method	Service	+process() : void
+relation	Controller	Service	none	arrow	solid
+relation	Service	Repository	none	arrow	solid

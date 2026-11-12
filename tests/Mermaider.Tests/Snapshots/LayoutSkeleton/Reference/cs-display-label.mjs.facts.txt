@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b22dad22700cc2d4
+accept	yes
+class	Animal	Living creature
+class	Dog	Dog
+relation	Animal	Dog	triangle	none	solid

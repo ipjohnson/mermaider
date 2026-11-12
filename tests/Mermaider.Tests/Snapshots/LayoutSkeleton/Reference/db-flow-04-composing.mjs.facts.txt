@@ -1,0 +1,36 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5b6681ba3005a8ea
+accept	yes
+edge	AsmBuild	AsmOut	none	arrow	solid
+edge	AsmCfg	Env	none	arrow	solid
+edge	AsmClone	AsmBuild	none	arrow	solid
+edge	CdxBuild	CdxOut	none	arrow	solid
+edge	CdxCfg	CdxClone	none	arrow	solid
+edge	CdxClone	CdxBuild	none	arrow	solid
+edge	CodexReg	CdxClone	none	arrow	solid
+edge	Env	AsmClone	none	arrow	solid
+edge	R1	S3Reg	none	arrow	solid	links.json
+edge	R2	S3Reg	none	arrow	solid	links.json
+edge	R3	S3Reg	none	arrow	solid	links.json
+edge	R4	CodexReg	none	arrow	solid	links.json
+edge	S3Reg	AsmClone	none	arrow	solid
+group	Assembler	Assembler	AsmBuild,AsmCfg,AsmClone,AsmOut,Env
+group	CodexB	Codex	CdxBuild,CdxCfg,CdxClone,CdxOut
+group	Registries	Link registries	CodexReg,S3Reg
+group	Repos	Repositories (each with its own isolated build)	R1,R2,R3,R4
+node	AsmBuild	Build each docset, re-homed under its mount path
+node	AsmCfg	assembler.yml + navigation.yml
+node	AsmClone	Clone at registry commits
+node	AsmOut	Site, redirects, search index, sitemap, deploy plan
+node	CdxBuild	Build each docset under /r/{repo}
+node	CdxCfg	codex.yml (registry: internal)
+node	CdxClone	Clone every member, pick docset with matching registry
+node	CdxOut	Internal site, grouped
+node	CodexReg	Git link index: elastic/codex-link-index, internal/
+node	Env	PublishEnvironment: content source to branch
+node	R1	elasticsearch
+node	R2	kibana
+node	R3	docs-content
+node	R4	internal-team-docs
+node	S3Reg	S3 link registry (default docsets)

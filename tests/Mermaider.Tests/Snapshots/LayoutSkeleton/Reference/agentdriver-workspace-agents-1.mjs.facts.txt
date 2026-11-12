@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 839d9a054f23c640
+accept	yes
+edge	A	S	none	arrow	solid
+edge	C	L	none	arrow	solid
+edge	C	X	none	arrow	solid
+edge	E	I	none	arrow	solid
+edge	E	L	none	arrow	solid
+edge	I	A	none	arrow	solid
+edge	L	S	none	arrow	solid
+edge	O	E	none	arrow	solid
+edge	P	O	none	arrow	solid
+edge	R	C	none	arrow	solid
+edge	S	R	none	arrow	solid
+node	A	Activation intents
+node	C	Authorized driver commands
+node	E	Durable events
+node	I	Agent inboxes
+node	L	Existing ledger transitions
+node	O	Accepted observations and facts
+node	P	Pollers and external inputs
+node	R	Agent session or bounded script
+node	S	Existing scheduler and dispatcher
+node	X	Existing durable effect outbox
