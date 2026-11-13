@@ -20,6 +20,7 @@ class	Color	Color
 class	Drawable	Drawable
 class	EventBus	EventBus
 class	Shape	Shape
+drawn	yes
 method	Drawable	+draw() : void
 method	EventBus	+publish(event) : void
 method	Shape	+area() : double

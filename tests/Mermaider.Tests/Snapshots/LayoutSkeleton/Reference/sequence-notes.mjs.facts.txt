@@ -15,6 +15,7 @@ bbox	note	Display results	-100	309	50	346
 bbox	note	Subsequent requests use JWT	50	218	300	255
 bbox	note	Validate credentials	300	127	450	164
 canvas	-150	-10	500	480
+drawn	yes
 message	A	B	solid	filled	GET /data
 message	A	B	solid	filled	Login request
 message	B	A	dashed	filled	Auth token

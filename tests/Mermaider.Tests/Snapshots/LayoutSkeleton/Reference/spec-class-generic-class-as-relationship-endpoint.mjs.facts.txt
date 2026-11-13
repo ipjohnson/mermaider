@@ -9,6 +9,7 @@ canvas	4	4	148.4	382
 class	ArrayList	ArrayList
 class	Duck	Duck
 class	List	List<T>
+drawn	yes
 method	List	+add(T item)
 relation	Duck	List	none	arrow	dashed
 relation	List	ArrayList	triangle	none	solid

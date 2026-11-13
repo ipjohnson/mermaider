@@ -7,4 +7,5 @@ bbox	node	Shape	24.6	12	90.6	93
 canvas	4	4	224.8	186
 class	Drawable	Drawable
 class	Shape	Shape
+drawn	yes
 relation	Shape	()Drawable	none	lollipop	solid

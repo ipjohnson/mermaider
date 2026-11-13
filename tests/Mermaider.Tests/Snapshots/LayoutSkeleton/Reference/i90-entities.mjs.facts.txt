@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 846429e265c49f04
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
-node	A	say "hi" #1
-node	B	B
+node	A	say "hi" #1	rect
+node	B	B	rect

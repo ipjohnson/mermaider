@@ -1,0 +1,40 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c44f001fc6712ce5
+accept	yes
+drawn	yes
+edge	awsCompute	R	awsStorage	L	none	none
+edge	awsStorage	B	search	T	none	none
+edge	azureCompute	R	azureStorage	L	none	none
+edge	gcpCompute	R	gcpStorage	L	none	none
+edge	gcpStorage	B	search	T	none	none
+group	awsGroup	AWS
+group	azureGroup	Azure
+group	gcpGroup	GCP
+icon	awsCompute	aws:compute
+icon	awsGroup	cloud
+icon	awsStorage	aws:storage
+icon	azureCompute	azure:compute
+icon	azureGroup	cloud
+icon	azureStorage	azure:storage
+icon	gcpCompute	gcp:compute
+icon	gcpGroup	cloud
+icon	gcpStorage	gcp:storage
+icon	search	elastic:elasticsearch
+label	AWS
+label	Azure
+label	Blob
+label	Cloud Storage
+label	Compute Engine
+label	EC2
+label	Elasticsearch
+label	GCP
+label	S3
+label	VM
+service	awsCompute	EC2	awsGroup
+service	awsStorage	S3	awsGroup
+service	azureCompute	VM	azureGroup
+service	azureStorage	Blob	azureGroup
+service	gcpCompute	Compute Engine	gcpGroup
+service	gcpStorage	Cloud Storage	gcpGroup
+service	search	Elasticsearch

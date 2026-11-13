@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d910f268dacea35f
+accept	yes
+drawn	yes
+flow	Signups	Trials	400
+flow	Trials	Churned	280
+flow	Trials	Paid	120
+flow	Visitors	Signups	1000
+label	Churned
+label	Paid
+label	Signups
+label	Trials
+label	Visitors

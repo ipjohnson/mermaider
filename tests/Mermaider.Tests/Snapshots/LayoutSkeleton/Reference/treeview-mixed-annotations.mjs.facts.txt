@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source eeb3df2f69fbb6ce
+accept	yes
+drawn	yes
+icon	deploy	folder-open
+icon	deploy / certs / server.crt	file:config
+icon	deploy / certs / server.key	file:config
+label	CI/CD entry point
+label	Dockerfile
+label	certs
+label	deploy
+label	deploy.sh
+label	nginx.conf
+label	production image
+label	reverse proxy config
+label	rollback.sh
+label	scripts
+label	server.crt
+label	server.key
+node	deploy	dir
+node	deploy / Dockerfile	file	production image
+node	deploy / certs	dir
+node	deploy / certs / server.crt	file
+node	deploy / certs / server.key	file
+node	deploy / nginx.conf	file	reverse proxy config
+node	deploy / scripts	dir
+node	deploy / scripts / deploy.sh	file	CI/CD entry point
+node	deploy / scripts / rollback.sh	file

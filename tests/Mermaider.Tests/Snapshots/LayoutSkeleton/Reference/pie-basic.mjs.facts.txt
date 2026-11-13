@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e6d99a413432fa6d
+accept	yes
+drawn	yes
+label	Cats
+label	Dogs
+label	Pet Adoption
+label	Rats
+slice	Cats	85
+slice	Dogs	386
+slice	Rats	15
+title	Pet Adoption

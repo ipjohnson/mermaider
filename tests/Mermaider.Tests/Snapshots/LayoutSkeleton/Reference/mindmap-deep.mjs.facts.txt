@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 29e1bdbef25a1028
+accept	yes
+drawn	yes
+label	API
+label	Architecture
+label	Backend
+label	Buttons
+label	Cache
+label	Components
+label	Data
+label	Forms
+label	Frontend
+label	GraphQL
+label	Masks
+label	Postgres
+label	REST
+label	SQL
+label	State
+label	Store
+label	Validation
+node	Architecture	circle
+node	Architecture / Backend	rounded
+node	Architecture / Backend / API	default
+node	Architecture / Backend / API / GraphQL	default
+node	Architecture / Backend / API / REST	default
+node	Architecture / Backend / Data	default
+node	Architecture / Backend / Data / Cache	default
+node	Architecture / Backend / Data / SQL	default
+node	Architecture / Backend / Data / SQL / Postgres	default
+node	Architecture / Frontend	rounded
+node	Architecture / Frontend / Components	default
+node	Architecture / Frontend / Components / Buttons	default
+node	Architecture / Frontend / Components / Forms	default
+node	Architecture / Frontend / Components / Forms / Masks	default
+node	Architecture / Frontend / Components / Forms / Validation	default
+node	Architecture / Frontend / State	default
+node	Architecture / Frontend / State / Store	default

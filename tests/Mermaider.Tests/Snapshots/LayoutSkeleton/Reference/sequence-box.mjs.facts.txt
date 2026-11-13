@@ -23,6 +23,7 @@ bbox	node	DB	405	384	555	457
 box	External	Client
 box	Internal Services	API,Auth,DB
 canvas	-50	-10	830	508
+drawn	yes
 message	API	Auth	solid	filled	Validate
 message	API	Client	dashed	filled	Response
 message	API	DB	solid	filled	Query

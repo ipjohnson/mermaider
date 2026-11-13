@@ -4,10 +4,67 @@
 # MJS_FACTS_REPORT=<dir> and the MjsFactsTests/Write_difference_report test.
 
 # By design: Mermaider reads a literal \n in a label as a line break. mermaid.js 12 draws the two characters.
-rfc-path-flow + node | perRepo | Per-repo docset.yml + toc.yml
-rfc-path-flow - node | perRepo | Per-repo\ndocset.yml + toc.yml
+rfc-path-flow + node | perRepo | Per-repo docset.yml + toc.yml | rect
+rfc-path-flow - node | perRepo | Per-repo\ndocset.yml + toc.yml | rect
 rfc-migration-lifecycle + edge | VirtualRemap | PhysicalRestructure | none | arrow | solid | run apply-nav-restructure (only if content moves)
 rfc-migration-lifecycle - edge | VirtualRemap | PhysicalRestructure | none | arrow | solid | run apply-nav-restructure\n(only if content moves)
+
+# By design: Mermaider reads `direction TD` in an ER diagram as a direction. mermaid.js 12.3.0 takes only TB, BT, LR and
+# RL there, and draws `direction` and `TD` as two entities.
+er-direction - entity | TD | TD
+er-direction - entity | direction | direction
+er-direction - label | TD
+er-direction - label | direction
+spec-er-direction-top-down - entity | TD | TD
+spec-er-direction-top-down - entity | direction | direction
+spec-er-direction-top-down - label | TD
+spec-er-direction-top-down - label | direction
+
+# By design: Mermaider reads quoted tree view names ("my project"/). mermaid.js 12.3.0 draws each such name empty and
+# every node as a file.
+treeview-quoted-labels + node | my project / README (important).md | file
+treeview-quoted-labels + node | my project / config files / app config.json | file
+treeview-quoted-labels + node | my project / config files / env vars.env | file
+treeview-quoted-labels + node | my project / config files | dir
+treeview-quoted-labels + node | my project / source files / helper utils.ts | file
+treeview-quoted-labels + node | my project / source files / main module.ts | file
+treeview-quoted-labels + node | my project / source files | dir
+treeview-quoted-labels + node | my project | dir
+treeview-quoted-labels - node |  | dir
+treeview-quoted-labels - node |  | dir
+treeview-quoted-labels - node |  | dir
+treeview-quoted-labels - node | / README (important).md | file
+treeview-quoted-labels - node | / app config.json | file
+treeview-quoted-labels - node | / config files | file
+treeview-quoted-labels - node | / env vars.env | file
+treeview-quoted-labels - node | / helper utils.ts | file
+treeview-quoted-labels - node | / main module.ts | file
+treeview-quoted-labels - node | / source files | file
+treeview-quoted-labels - node | my project | file
+
+# By design: Mermaider accepts gallery sources that mermaid.js 12.3.0 refuses. mermaid.js wants an entity name where
+# `A ||--|| B` has `||` ("got 'ONLY_ONE'"), requires `: label` on every ER relationship, rejects a requirement id with a
+# hyphen (`id: R-0`, "Expecting 'NEWLINE', got 'LINE'"), and has no block diagram `title`.
+er-cardinalities + accept | yes
+er-cardinalities - accept | no
+spec-er-all-cardinality-combinations + accept | yes
+spec-er-all-cardinality-combinations - accept | no
+er-optional-label + accept | yes
+er-optional-label - accept | no
+spec-er-optional-relationship-label + accept | yes
+spec-er-optional-relationship-label - accept | no
+requirement-kinds + accept | yes
+requirement-kinds - accept | no
+requirement-long-text + accept | yes
+requirement-long-text - accept | no
+requirement-relations + accept | yes
+requirement-relations - accept | no
+requirement-sysml + accept | yes
+requirement-sysml - accept | no
+requirement-two-systems + accept | yes
+requirement-two-systems - accept | no
+block-title-rounded + accept | yes
+block-title-rounded - accept | no
 
 # ipjohnson/AgentDriver#4281: class display labels, two-ended relations and reversed lollipops.
 cs-display-label + class | Animal | Animal
@@ -25,7 +82,7 @@ cs-namespace-duplicate + namespace | One | A
 cs-namespace-duplicate - namespace | One
 
 # ipjohnson/AgentDriver#4283: a flowchart click statement is drawn as a node.
-rs-click + node | click | click
+rs-click + node | click | click | rect
 
 # ipjohnson/AgentDriver#4284: Mermaider renders a source mermaid.js refuses, dropping the lines it cannot read.
 cs-nested-generics + accept | yes
@@ -36,3 +93,100 @@ rs-garbage-line + accept | yes
 rs-garbage-line - accept | no
 rs-unclosed-label + accept | yes
 rs-unclosed-label - accept | no
+
+# ipjohnson/mermaider#6: flowchart nodes given with @{ shape: ..., label: ... } are drawn as rectangles labelled with
+# their id, and the first edge of the line is dropped.
+shape-at-syntax + node | A | A | rect
+shape-at-syntax + node | B | B | rect
+shape-at-syntax + node | C | C | rect
+shape-at-syntax + node | D | D | rect
+shape-at-syntax + node | E | E | rect
+shape-at-syntax + node | F | F | rect
+shape-at-syntax + node | G | G | rect
+shape-at-syntax + node | H | H | rect
+shape-at-syntax + node | I | I | rect
+shape-at-syntax + node | J | J | rect
+shape-at-syntax - edge | A | B | none | arrow | solid
+shape-at-syntax - node | A | Rounded | rounded
+shape-at-syntax - node | B | Database | cyl
+shape-at-syntax - node | C | Decide | diam
+shape-at-syntax - node | D | Report | doc
+shape-at-syntax - node | E | Prepare | hex
+shape-at-syntax - node | F | Card | notch-rect
+shape-at-syntax - node | G | Start | circle
+shape-at-syntax - node | H | Terminal | stadium
+shape-at-syntax - node | I | Store | h-cyl
+shape-at-syntax - node | J |  | bolt
+
+# ipjohnson/mermaider#7: flowchart icon and image nodes draw no icon or image and show their id as the label.
+flowchart-icon-image + node | A | A | rect
+flowchart-icon-image + node | B | B | rect
+flowchart-icon-image + node | C | C | rect
+flowchart-icon-image - edge | A | B | none | arrow | solid
+flowchart-icon-image - icon | A | fa:user
+flowchart-icon-image - image | C | https://mermaid.js.org/favicon.svg
+flowchart-icon-image - node | A | User | rect
+flowchart-icon-image - node | B | Plain | rect
+flowchart-icon-image - node | C | Logo | rect
+
+# ipjohnson/mermaider#8: FontAwesome references are drawn as their fa:fa-name text instead of an icon, and a mindmap
+# ::icon(...) line becomes a child node.
+flowchart-fa-label + node | B | fa:fa-twitter for peace | rect
+flowchart-fa-label + node | D | fa:fa-spinner | rounded
+flowchart-fa-label + node | E | A fa:fa-camera-retro perhaps? | rounded
+flowchart-fa-label - icon | B | fa:fa-twitter
+flowchart-fa-label - icon | C | fa:fa-ban
+flowchart-fa-label - icon | D | fa:fa-spinner
+flowchart-fa-label - icon | E | fa:fa-camera-retro
+flowchart-fa-label - node | B | for peace | rect
+flowchart-fa-label - node | D |  | rounded
+flowchart-fa-label - node | E | A perhaps? | rounded
+mindmap-icon + label | fa fa-book
+mindmap-icon + label | fa fa-film
+mindmap-icon + node | Library / Books / fa fa-book | rounded
+mindmap-icon + node | Library / Films / fa fa-film | rounded
+mindmap-icon - icon | Library / Books | fa:fa-book
+mindmap-icon - icon | Library / Films | fa:fa-film
+
+# ipjohnson/mermaider#10: sequence participants typed with @{ "type": ... } are drawn as plain participants.
+seq-participant-types + actor | B | B | participant
+seq-participant-types + actor | C | C | participant
+seq-participant-types + actor | D | D | participant
+seq-participant-types + actor | E | E | participant
+seq-participant-types + actor | L | L | participant
+seq-participant-types + actor | Q | Q | participant
+seq-participant-types - actor | B | B | boundary
+seq-participant-types - actor | C | C | control
+seq-participant-types - actor | D | D | database
+seq-participant-types - actor | E | E | entity
+seq-participant-types - actor | L | L | collections
+seq-participant-types - actor | Q | Q | queue
+
+# ipjohnson/mermaider#18: block diagram blocks other than [square] and (round) lose their shape, label or the block.
+block-shapes + block | c | ("circle" | rounded | 1
+block-shapes + block | e | e | rect | 1
+block-shapes + label | ("circle"
+block-shapes + label | e
+block-shapes - block | c | circle | circle | 1
+block-shapes - block | d | diamond | diam | 1
+block-shapes - block | e | hexagon | hex | 1
+block-shapes - block | f | stadium | stadium | 1
+block-shapes - block | g | cylinder | cyl | 1
+block-shapes - block | h | subroutine | fr-rect | 1
+block-shapes - label | circle
+block-shapes - label | cylinder
+block-shapes - label | diamond
+block-shapes - label | hexagon
+block-shapes - label | stadium
+block-shapes - label | subroutine
+
+# ipjohnson/mermaider#19: ER attribute comments are only a tooltip, not drawn.
+spec-er-attributes-with-comments - label | Auto-increment
+spec-er-attributes-with-comments - label | In USD
+spec-er-attributes-with-comments - label | Non-negative
+spec-er-attributes-with-comments - label | Required
+
+# ipjohnson/mermaider#20: `B-->C[label]` without spaces is read as one asymmetric node `B--`.
+flowchart-fa-label + node | B-- | C[fa:fa-ban forbidden | odd
+flowchart-fa-label - edge | B | C | none | arrow | solid
+flowchart-fa-label - node | C | forbidden | rect

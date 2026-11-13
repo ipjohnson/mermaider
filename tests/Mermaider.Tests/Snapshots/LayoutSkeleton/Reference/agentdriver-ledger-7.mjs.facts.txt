@@ -37,6 +37,7 @@ bbox	node	R	1377	1049	1527	1122
 bbox	node	W	371	0	521	73
 bbox	node	W	371	1049	521	1122
 canvas	-50	-10	1577	1163
+drawn	yes
 message	E	G	solid	filled	PUT merge
 message	E	R	solid	filled	prepare the worktree on the branch, launch the fix session
 message	G	W	dashed	filled	mergeable clean, checks success

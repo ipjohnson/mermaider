@@ -15,6 +15,7 @@ bbox	node	A	0	357	150	430
 bbox	node	B	200	0	350	73
 bbox	node	B	200	357	350	430
 canvas	-50	-10	400	471
+drawn	yes
 message	A	B	solid	cross	Solid cross
 message	A	B	solid	filled	Solid arrow
 message	A	B	solid	open	Solid open

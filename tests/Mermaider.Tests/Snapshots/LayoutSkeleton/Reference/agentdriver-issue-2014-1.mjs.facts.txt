@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source af95a764b8b37aaa
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
-node	A	Request
-node	B	Review
+node	A	Request	rect
+node	B	Review	rect

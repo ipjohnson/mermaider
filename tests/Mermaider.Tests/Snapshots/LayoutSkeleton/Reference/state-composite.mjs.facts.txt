@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source ce1834d2625d2239
 accept	yes
+drawn	yes
 edge	First	Second	none	arrow	solid
 edge	Inner1	Inner2	none	arrow	solid	next
 edge	Inner2	Inner3	none	arrow	solid	next
@@ -14,14 +15,14 @@ edge	[*]start@Second	Inner4	none	arrow	solid
 edge	[*]start@root	First	none	arrow	solid
 group	First	First	Inner1,Inner2,Inner3,[*]end@First,[*]start@First
 group	Second	Second	Inner4,Inner5,[*]end@Second,[*]start@Second
-node	Inner1	Inner1	state
-node	Inner2	Inner2	state
-node	Inner3	Inner3	state
-node	Inner4	Inner4	state
-node	Inner5	Inner5	state
-node	[*]end@First		pseudo
-node	[*]end@Second		pseudo
-node	[*]end@root		pseudo
-node	[*]start@First		pseudo
-node	[*]start@Second		pseudo
-node	[*]start@root		pseudo
+node	Inner1	Inner1	rounded
+node	Inner2	Inner2	rounded
+node	Inner3	Inner3	rounded
+node	Inner4	Inner4	rounded
+node	Inner5	Inner5	rounded
+node	[*]end@First		fr-circ
+node	[*]end@Second		fr-circ
+node	[*]end@root		fr-circ
+node	[*]start@First		sm-circ
+node	[*]start@Second		sm-circ
+node	[*]start@root		sm-circ

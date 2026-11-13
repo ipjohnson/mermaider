@@ -2,8 +2,9 @@
 # mermaid 12.3.0
 # source 592e2a0c91f9ecea
 accept	yes
+drawn	yes
 edge	Bottom	Middle	none	arrow	solid
 edge	Middle	Top	none	arrow	solid
-node	Bottom	Bottom
-node	Middle	Middle
-node	Top	Top
+node	Bottom	Bottom	rect
+node	Middle	Middle	rect
+node	Top	Top	rect

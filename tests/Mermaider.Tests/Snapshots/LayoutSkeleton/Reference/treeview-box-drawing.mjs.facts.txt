@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 678104de27ec74fe
+accept	yes
+drawn	yes
+label	About.tsx
+label	App.tsx
+label	Footer.tsx
+label	Header.tsx
+label	Home.tsx
+label	Sidebar.tsx
+label	components
+label	index.html
+label	package.json
+label	pages
+label	public
+label	src
+label	tsconfig.json
+node	package.json	file
+node	public	dir
+node	public / index.html	file
+node	src	dir
+node	src / App.tsx	file
+node	src / components	dir
+node	src / components / Footer.tsx	file
+node	src / components / Header.tsx	file
+node	src / components / Sidebar.tsx	file
+node	src / pages	dir
+node	src / pages / About.tsx	file
+node	src / pages / Home.tsx	file
+node	tsconfig.json	file

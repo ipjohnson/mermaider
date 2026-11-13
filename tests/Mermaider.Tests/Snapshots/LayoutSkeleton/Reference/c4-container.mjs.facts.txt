@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 74d29ba232983114
+accept	yes
+boundary	c1	container	Internet Banking
+drawn	yes
+element	api	container	internal	API Application	Java, Spring	Provides banking functionality via API	c1
+element	customer	person	internal	Customer		A customer of the bank
+element	db	container_db	internal	Database	SQL Database	Stores user registration info	c1
+element	mail	system	external	E-mail System		Microsoft Exchange
+element	spa	container	internal	Single-Page App	JavaScript, Angular	Provides banking UI	c1
+label	A customer of the bank
+label	API Application
+label	Container diagram for Internet Banking System
+label	Customer
+label	Database
+label	E-mail System
+label	HTTPS
+label	Internet Banking
+label	JDBC
+label	JSON/HTTPS
+label	Java, Spring
+label	JavaScript, Angular
+label	Microsoft Exchange
+label	Provides banking UI
+label	Provides banking functionality via API
+label	Reads from and writes to
+label	SMTP
+label	SQL Database
+label	Sends e-mails
+label	Single-Page App
+label	Stores user registration info
+label	Uses
+label	Uses
+rel	api	db	one	Reads from and writes to	JDBC
+rel	api	mail	one	Sends e-mails	SMTP
+rel	customer	spa	one	Uses	HTTPS
+rel	spa	api	one	Uses	JSON/HTTPS
+title	Container diagram for Internet Banking System

@@ -35,6 +35,7 @@ block	alt	Valid
 block	loop	Every 30s
 canvas	-50	-10	800	896
 divider	Invalid
+drawn	yes
 message	B	DB	solid	filled	SELECT user
 message	B	F	dashed	filled	200 JWT
 message	B	F	dashed	filled	401 Unauthorized

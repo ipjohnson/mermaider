@@ -21,6 +21,7 @@ bbox	node	C	400	369	550	442
 block	alt	condition one
 canvas	-50	-10	600	483
 divider	condition two
+drawn	yes
 message	A	B	solid	filled	request
 message	A	C	dashed	filled	do the second thing
 message	A	C	solid	filled	do the first thing

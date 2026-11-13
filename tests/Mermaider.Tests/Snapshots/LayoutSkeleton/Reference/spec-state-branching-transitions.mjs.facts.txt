@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 8a8f68dd9af81e2b
 accept	yes
+drawn	yes
 edge	Failed	Idle	none	arrow	solid	retry
 edge	Failed	[*]end@root	none	arrow	solid	abort
 edge	Idle	Processing	none	arrow	solid	submit
@@ -9,9 +10,9 @@ edge	Processing	Failed	none	arrow	solid	error
 edge	Processing	Success	none	arrow	solid	ok
 edge	Success	[*]end@root	none	arrow	solid
 edge	[*]start@root	Idle	none	arrow	solid
-node	Failed	Failed	state
-node	Idle	Idle	state
-node	Processing	Processing	state
-node	Success	Success	state
-node	[*]end@root		pseudo
-node	[*]start@root		pseudo
+node	Failed	Failed	rounded
+node	Idle	Idle	rounded
+node	Processing	Processing	rounded
+node	Success	Success	rounded
+node	[*]end@root		fr-circ
+node	[*]start@root		sm-circ

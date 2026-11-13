@@ -2,11 +2,12 @@
 # mermaid 12.3.0
 # source 519968f549316e7b
 accept	yes
+drawn	yes
 edge	Booting	Ready	none	arrow	solid	initialized
 edge	Processing	Ready	none	arrow	solid	done
 edge	Ready	Processing	none	arrow	solid	request
 edge	[*]start@root	Booting	none	arrow	solid
-node	Booting	System is starting up	state
-node	Processing	Handling request	state
-node	Ready	Accepting connections	state
-node	[*]start@root		pseudo
+node	Booting	System is starting up	rounded
+node	Processing	Handling request	rounded
+node	Ready	Accepting connections	rounded
+node	[*]start@root		sm-circ

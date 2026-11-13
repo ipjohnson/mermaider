@@ -2,8 +2,9 @@
 # mermaid 12.3.0
 # source 98e8469e94b8d3ba
 accept	yes
+drawn	yes
 edge	A	B	none	none	invisible
 edge	A	C	none	arrow	solid
-node	A	First
-node	B	Second
-node	C	Third
+node	A	First	rect
+node	B	Second	rect
+node	C	Third	rect

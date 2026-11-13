@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d6625546d2a8baca
+accept	yes
+drawn	yes
+edge	compute	B	search	T	none	none
+edge	compute	R	storage	L	none	none
+group	cloud1	Cloud
+icon	cloud1	cloud
+icon	compute	aws:compute
+icon	search	elastic:elasticsearch
+icon	storage	aws:storage
+label	Cloud
+label	EC2
+label	Elasticsearch
+label	S3
+service	compute	EC2	cloud1
+service	search	Elasticsearch	cloud1
+service	storage	S3	cloud1

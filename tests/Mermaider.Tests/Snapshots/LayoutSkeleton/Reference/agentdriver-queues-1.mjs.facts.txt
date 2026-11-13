@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 1963f81099b1d706
 accept	yes
+drawn	yes
 edge	bg	d	none	arrow	solid
 edge	card	bg	none	arrow	solid
 edge	card	fg	none	arrow	solid
@@ -13,13 +14,13 @@ edge	intake	bg	none	arrow	solid
 edge	intake	fg	none	arrow	solid
 edge	snap	gates	none	arrow	solid
 edge	you	d	none	arrow	solid
-node	bg	4. Background queues spare slots only
-node	card	Queue card or enqueue
-node	cont	1. Continuations answers, Tell, Resume, fixes
-node	d	Dispatcher one lock, one pass writes pool.ndjson
-node	fg	3. Foreground queues and Tasks, shared by weight
-node	gates	Gates built in now, Jint scripts later
-node	intake	Intake: label or search
-node	pool	Pool maxSessions slots
-node	snap	Snapshot versioned JSON, kept 14 days
-node	you	2. Sessions you start Start now and start_session
+node	bg	4. Background queues spare slots only	rect
+node	card	Queue card or enqueue	rect
+node	cont	1. Continuations answers, Tell, Resume, fixes	rect
+node	d	Dispatcher one lock, one pass writes pool.ndjson	rect
+node	fg	3. Foreground queues and Tasks, shared by weight	rect
+node	gates	Gates built in now, Jint scripts later	rect
+node	intake	Intake: label or search	rect
+node	pool	Pool maxSessions slots	rect
+node	snap	Snapshot versioned JSON, kept 14 days	rect
+node	you	2. Sessions you start Start now and start_session	rect

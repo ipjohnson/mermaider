@@ -1,0 +1,35 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 49d5c4dfe55711ec
+accept	yes
+drawn	yes
+entity	AppliesToEntry	AppliesToEntry
+entity	DocumentInference	DocumentInference
+entity	DocumentationDocument	DocumentationDocument
+entity	Page	Page
+entity	ParentDocument	ParentDocument
+entity	Product	Product
+entity	SearchDocument	SearchDocument
+entity	SearchIndex	SearchIndex
+label	AppliesToEntry
+label	DocumentInference
+label	DocumentationDocument
+label	Page
+label	ParentDocument
+label	Product
+label	SearchDocument
+label	SearchIndex
+label	applies_to
+label	contains
+label	decides product
+label	exported
+label	parents (breadcrumbs)
+label	product
+label	related_products
+relation	DocumentInference	DocumentationDocument	one	one	identifying	decides product
+relation	DocumentationDocument	AppliesToEntry	one	zero-or-more	identifying	applies_to
+relation	DocumentationDocument	ParentDocument	one	zero-or-more	identifying	parents (breadcrumbs)
+relation	DocumentationDocument	Product	zero-or-more	zero-or-more	identifying	related_products
+relation	DocumentationDocument	Product	zero-or-more	zero-or-one	identifying	product
+relation	Page	DocumentationDocument	one	zero-or-one	identifying	exported
+relation	SearchIndex	SearchDocument	one	zero-or-more	identifying	contains

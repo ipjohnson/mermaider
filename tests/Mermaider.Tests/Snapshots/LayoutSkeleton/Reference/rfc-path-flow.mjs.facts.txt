@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 660f226017302de5
 accept	yes
+drawn	yes
 edge	docSetNav	tocNodes	none	arrow	solid
 edge	getToc	tocMappings	none	arrow	solid
 edge	navYml	getToc	none	arrow	solid
@@ -10,12 +11,12 @@ edge	siteNav	pathProvider	none	arrow	solid
 edge	siteNav	sidebar	none	arrow	solid
 edge	tocMappings	siteNav	none	arrow	solid
 edge	tocNodes	siteNav	none	arrow	solid
-node	docSetNav	DocumentationSetNavigation URI → node tree
-node	getToc	GetTocMappings() URI → path_prefix
-node	navYml	navigation.yml
-node	pathProvider	GlobalNavigationPathProvider determines output file paths
-node	perRepo	Per-repo\ndocset.yml + toc.yml
-node	sidebar	Sidebar HTML rendering determines sidebar tree
-node	siteNav	SiteNavigation merges nodes via navigation.yml URI keys
-node	tocMappings	NavigationTocMappings
-node	tocNodes	TableOfContentNodes
+node	docSetNav	DocumentationSetNavigation URI → node tree	rect
+node	getToc	GetTocMappings() URI → path_prefix	rect
+node	navYml	navigation.yml	rect
+node	pathProvider	GlobalNavigationPathProvider determines output file paths	rect
+node	perRepo	Per-repo\ndocset.yml + toc.yml	rect
+node	sidebar	Sidebar HTML rendering determines sidebar tree	rect
+node	siteNav	SiteNavigation merges nodes via navigation.yml URI keys	rect
+node	tocMappings	NavigationTocMappings	rect
+node	tocNodes	TableOfContentNodes	rect

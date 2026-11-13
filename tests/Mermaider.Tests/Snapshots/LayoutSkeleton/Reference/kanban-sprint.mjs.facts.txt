@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7d6e9c406b3fe32a
+accept	yes
+card	Done	Task4	Task4
+card	In Progress	Task3	Task3
+card	Todo	Task1	Task1
+card	Todo	Task2	Task2
+column	Done	Done
+column	In Progress	In Progress
+column	Todo	Todo
+drawn	yes
+label	Done
+label	In Progress
+label	Task1
+label	Task2
+label	Task3
+label	Task4
+label	Todo

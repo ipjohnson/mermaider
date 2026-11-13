@@ -1,0 +1,32 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 680dabefb0143911
+accept	yes
+drawn	yes
+edge	apm	L	es	R	none	none
+edge	edot	L	otlp	R	none	none
+edge	kbn	L	es	T	none	none
+edge	oteldemo	L	edot	R	none	none
+edge	otlp	L	apm	T	none	none
+group	ech	ECH
+group	k8s	k8s
+icon	apm	server
+icon	ech	cloud
+icon	edot	server
+icon	es	server
+icon	k8s	cloud
+icon	kbn	server
+icon	oteldemo	server
+junction	otlp
+label	APM
+label	ECH
+label	EDOT
+label	Elasticsearch
+label	Kibana
+label	OtelDemo
+label	k8s
+service	apm	APM	ech
+service	edot	EDOT	k8s
+service	es	Elasticsearch	ech
+service	kbn	Kibana	ech
+service	oteldemo	OtelDemo	k8s

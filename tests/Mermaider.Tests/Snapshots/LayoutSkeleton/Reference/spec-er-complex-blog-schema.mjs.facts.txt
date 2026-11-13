@@ -1,0 +1,63 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d9696d628a2b1303
+accept	yes
+attribute	COMMENT	date	created
+attribute	COMMENT	int	id	PK
+attribute	COMMENT	text	content
+attribute	POST	bool	draft
+attribute	POST	date	published
+attribute	POST	int	id	PK
+attribute	POST	string	title
+attribute	POST	text	body
+attribute	TAG	int	id	PK
+attribute	TAG	string	name	UK
+attribute	USER	date	joined
+attribute	USER	int	id	PK
+attribute	USER	string	email
+attribute	USER	string	username	UK
+drawn	yes
+entity	COMMENT	COMMENT
+entity	POST	POST
+entity	TAG	TAG
+entity	USER	USER
+label	COMMENT
+label	POST
+label	TAG
+label	USER
+label	body
+label	bool
+label	content
+label	created
+label	date
+label	date
+label	date
+label	draft
+label	email
+label	has
+label	id
+label	id
+label	id
+label	id
+label	int
+label	int
+label	int
+label	int
+label	joined
+label	name
+label	published
+label	string
+label	string
+label	string
+label	string
+label	tagged
+label	text
+label	text
+label	title
+label	username
+label	writes
+label	writes
+relation	POST	COMMENT	one	zero-or-more	identifying	has
+relation	POST	TAG	zero-or-more	zero-or-more	identifying	tagged
+relation	USER	COMMENT	one	zero-or-more	identifying	writes
+relation	USER	POST	one	zero-or-more	identifying	writes

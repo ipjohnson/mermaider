@@ -16,6 +16,7 @@ class	Order	Order
 class	OrderRepo	OrderRepo
 class	Product	Product
 class	ProductRepo	ProductRepo
+drawn	yes
 method	Order	+place() : void
 method	OrderRepo	+save(Order) : void
 method	ProductRepo	+findAll() : List

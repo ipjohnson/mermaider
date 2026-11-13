@@ -22,6 +22,7 @@ class	Electric	Electric
 class	Engine	Engine
 class	Truck	Truck
 class	Vehicle	Vehicle
+drawn	yes
 method	Car	+drive() : void
 method	Electric	+batteryLevel() : int
 method	Electric	+charge() : void

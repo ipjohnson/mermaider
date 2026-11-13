@@ -11,5 +11,6 @@ bbox	node	A	0	181	150	254
 bbox	node	B	200	0	350	73
 bbox	node	B	200	181	350	254
 canvas	-50	-10	400	295
+drawn	yes
 message	A	B	dashed	cross	async lost
 message	A	B	solid	cross	sync lost

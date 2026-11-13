@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 6f544be817622cab
 accept	yes
+drawn	yes
 edge	B	Pane	none	arrow	solid
 edge	Bd	Pane	none	arrow	solid
 edge	Chat	T	none	arrow	solid
@@ -27,25 +28,25 @@ edge	T	P	none	arrow	solid
 edge	T	X	none	arrow	solid
 edge	X	D	none	arrow	solid
 edge	You	T	none	arrow	solid	Add step
-node	B	By queue
-node	Bd	Board
-node	Chat	Chat start_session
-node	D	Dispatcher: gates, capacity
-node	E	Queue entry names the Task
-node	Enq	Chat enqueue, Add to queue
-node	Inbox	Sign-off in the inbox
-node	Intake	Queue intake
-node	Issue	Issue with sub-issues
-node	L	List
-node	M	App: WorkModel
-node	New	New in the app
-node	P	Planning policy
-node	Pane	Pane or Page
-node	Pool	GET /api/pool
-node	Q	GET /api/queues
-node	S	Session per item
-node	Sess	GET /api/sessions
-node	Steward	Steward
-node	T	Task with items
-node	X	TaskExecutor offers items
-node	You	You
+node	B	By queue	rect
+node	Bd	Board	rect
+node	Chat	Chat start_session	rect
+node	D	Dispatcher: gates, capacity	rect
+node	E	Queue entry names the Task	rect
+node	Enq	Chat enqueue, Add to queue	rect
+node	Inbox	Sign-off in the inbox	rect
+node	Intake	Queue intake	rect
+node	Issue	Issue with sub-issues	rect
+node	L	List	rect
+node	M	App: WorkModel	rect
+node	New	New in the app	rect
+node	P	Planning policy	rect
+node	Pane	Pane or Page	rect
+node	Pool	GET /api/pool	rect
+node	Q	GET /api/queues	rect
+node	S	Session per item	rect
+node	Sess	GET /api/sessions	rect
+node	Steward	Steward	rect
+node	T	Task with items	rect
+node	X	TaskExecutor offers items	rect
+node	You	You	rect

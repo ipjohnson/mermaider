@@ -2,14 +2,15 @@
 # mermaid 12.3.0
 # source c5954a9192c30aae
 accept	yes
+drawn	yes
 edge	Crash	[*]end@root	none	arrow	solid
 edge	Moving	Crash	none	arrow	solid
 edge	Moving	Still	none	arrow	solid
 edge	Still	Moving	none	arrow	solid
 edge	Still	[*]end@root	none	arrow	solid
 edge	[*]start@root	Still	none	arrow	solid
-node	Crash	Crash	state
-node	Moving	Moving	state
-node	Still	Still	state
-node	[*]end@root		pseudo
-node	[*]start@root		pseudo
+node	Crash	Crash	rounded
+node	Moving	Moving	rounded
+node	Still	Still	rounded
+node	[*]end@root		fr-circ
+node	[*]start@root		sm-circ

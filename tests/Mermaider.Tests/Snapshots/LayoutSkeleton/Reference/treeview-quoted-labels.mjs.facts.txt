@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source cd6454cb41fa2023
+accept	yes
+drawn	yes
+label	README (important).md
+label	app config.json
+label	config files
+label	env vars.env
+label	helper utils.ts
+label	main module.ts
+label	my project
+label	source files
+node		dir
+node		dir
+node		dir
+node	/ README (important).md	file
+node	/ app config.json	file
+node	/ config files	file
+node	/ env vars.env	file
+node	/ helper utils.ts	file
+node	/ main module.ts	file
+node	/ source files	file
+node	my project	file

@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d2b1a674ef529935
+accept	yes
+drawn	yes
+entity	NavigationNode	NavigationNode
+entity	Phantom	Phantom
+entity	SiteMount	SiteMount
+entity	SiteNavigation	SiteNavigation
+entity	TocItem	TocItem
+label	NavigationNode
+label	Phantom
+label	SiteMount
+label	SiteNavigation
+label	TocItem
+label	mirrors
+label	phantoms
+label	re-homes
+label	toc
+relation	SiteMount	NavigationNode	zero-or-more	one	identifying	re-homes
+relation	SiteNavigation	Phantom	one	zero-or-more	identifying	phantoms
+relation	SiteNavigation	SiteMount	one	one-or-more	identifying	toc
+relation	TocItem	NavigationNode	one	one	identifying	mirrors

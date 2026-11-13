@@ -1,0 +1,43 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3f22eb0a8bc9b51a
+accept	yes
+drawn	yes
+entity	Assembly	Assembly
+entity	Checkout	Checkout
+entity	ContentSource	ContentSource
+entity	ContentSourceBranches	ContentSourceBranches
+entity	DocumentationSet	DocumentationSet
+entity	GitOrigin	GitOrigin
+entity	LinkRegistryEntry	LinkRegistryEntry
+entity	NarrativeRepository	NarrativeRepository
+entity	PublishEnvironment	PublishEnvironment
+entity	Repository	Repository
+label	Assembly
+label	Checkout
+label	ContentSource
+label	ContentSourceBranches
+label	DocumentationSet
+label	GitOrigin
+label	LinkRegistryEntry
+label	NarrativeRepository
+label	PublishEnvironment
+label	Repository
+label	content_source
+label	current / next / edge
+label	narrative
+label	origin
+label	pinned CommitSha
+label	references
+label	repository
+label	resolves to
+label	selects branch
+relation	Assembly	NarrativeRepository	one	one	identifying	narrative
+relation	Assembly	Repository	one	one-or-more	identifying	references
+relation	Checkout	DocumentationSet	one	zero-or-one	identifying	resolves to
+relation	Checkout	LinkRegistryEntry	zero-or-more	one	identifying	pinned CommitSha
+relation	Checkout	Repository	zero-or-more	one	identifying	repository
+relation	ContentSource	ContentSourceBranches	one	zero-or-more	identifying	selects branch
+relation	DocumentationSet	GitOrigin	zero-or-more	one	identifying	origin
+relation	PublishEnvironment	ContentSource	zero-or-more	one	identifying	content_source
+relation	Repository	ContentSourceBranches	one	one	identifying	current / next / edge

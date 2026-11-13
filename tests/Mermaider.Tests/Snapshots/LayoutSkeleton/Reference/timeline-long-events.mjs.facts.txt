@@ -1,0 +1,37 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 52b4d5df1b41830b
+accept	yes
+drawn	yes
+event	2010	First paying customer signs up
+event	2010	Two friends start building a prototype in a garage
+event	2012	Seed round closes and the first five engineers join
+event	2015	Launches the self-serve plan
+event	2015	Opens the first international office in Berlin
+event	2018	Acquires a small analytics startup to extend the platform
+event	2023	Reaches ten thousand customers across forty countries
+label	2010
+label	2012
+label	2015
+label	2018
+label	2023
+label	Acquires a small analytics startup to extend the platform
+label	Company History
+label	First paying customer signs up
+label	Founding
+label	Launches the self-serve plan
+label	Opens the first international office in Berlin
+label	Reaches ten thousand customers across forty countries
+label	Scale
+label	Seed round closes and the first five engineers join
+label	Today
+label	Two friends start building a prototype in a garage
+period	Founding	2010
+period	Founding	2012
+period	Scale	2015
+period	Scale	2018
+period	Today	2023
+section	Founding
+section	Scale
+section	Today
+title	Company History

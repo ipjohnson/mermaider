@@ -13,6 +13,7 @@ bbox	node	J	200	0	350	73
 bbox	node	J	200	302	350	375
 bbox	note	Rational thoughts	300	201	450	238
 canvas	-50	-10	500	416
+drawn	yes
 message	A	J	solid	filled	hi
 message	J	A	dashed	filled	Great
 message	J	J	solid	filled	Fight against hypochondria

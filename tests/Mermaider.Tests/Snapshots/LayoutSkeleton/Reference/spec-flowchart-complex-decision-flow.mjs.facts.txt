@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 82ebf714903a6ad6
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
 edge	B	C	none	arrow	solid	Yes
 edge	B	D	none	arrow	solid	No
@@ -13,12 +14,12 @@ edge	F	G	none	arrow	solid
 edge	G	H	none	arrow	solid
 edge	H	A	none	arrow	solid	No
 edge	H	I	none	arrow	solid	Yes
-node	A	Start
-node	B	Is it raining?
-node	C	Take umbrella
-node	D	Is it cold?
-node	E	Wear jacket
-node	F	Dress light
-node	G	Go outside
-node	H	Enjoy?
-node	I	Done
+node	A	Start	rect
+node	B	Is it raining?	diam
+node	C	Take umbrella	rect
+node	D	Is it cold?	diam
+node	E	Wear jacket	rect
+node	F	Dress light	rect
+node	G	Go outside	rect
+node	H	Enjoy?	diam
+node	I	Done	circle

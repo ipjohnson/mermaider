@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 76f8bf059b800932
+accept	yes
+drawn	yes
+label	API design
+label	Backend
+label	Build
+label	Frontend
+label	Implement
+label	Integration
+label	Launch
+label	Multi-dependency demo
+label	QA
+label	Release
+label	UI design
+section	Backend
+section	Frontend
+section	Release
+task	Backend	API design	b1	2026-01-05 00:00	2026-01-07 00:00	done
+task	Backend	Implement	b2	2026-01-07 00:00	2026-01-10 00:00	done
+task	Frontend	Build	f2	2026-01-07 00:00	2026-01-10 00:00	active
+task	Frontend	UI design	f1	2026-01-05 00:00	2026-01-07 00:00	done
+task	Release	Integration	r1	2026-01-10 00:00	2026-01-12 00:00	crit
+task	Release	Launch	m1	2026-01-13 00:00	2026-01-13 00:00	milestone
+task	Release	QA	r2	2026-01-12 00:00	2026-01-13 00:00	crit
+title	Multi-dependency demo

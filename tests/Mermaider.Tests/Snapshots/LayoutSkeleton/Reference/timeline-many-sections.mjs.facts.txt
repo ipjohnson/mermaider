@@ -1,0 +1,67 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 500e046507612ec9
+accept	yes
+drawn	yes
+event	Apr	Beta
+event	Apr	Docs
+event	Aug	Pricing
+event	Dec	Retrospective
+event	Feb	Customer interviews
+event	Feb	Prototype
+event	Jan	Planning
+event	Jul	Scale-out
+event	Jun	Launch
+event	Mar	Alpha
+event	May	Feedback
+event	Nov	Security audit
+event	Oct	Enterprise
+event	Sep	Partnerships
+label	A Year in Product
+label	Alpha
+label	Apr
+label	Aug
+label	Beta
+label	Customer interviews
+label	Dec
+label	Docs
+label	Enterprise
+label	Feb
+label	Feedback
+label	Jan
+label	Jul
+label	Jun
+label	Launch
+label	Mar
+label	May
+label	Nov
+label	Oct
+label	Partnerships
+label	Planning
+label	Pricing
+label	Prototype
+label	Q1
+label	Q2
+label	Q3
+label	Q4
+label	Retrospective
+label	Scale-out
+label	Security audit
+label	Sep
+period	Q1	Feb
+period	Q1	Jan
+period	Q1	Mar
+period	Q2	Apr
+period	Q2	Jun
+period	Q2	May
+period	Q3	Aug
+period	Q3	Jul
+period	Q3	Sep
+period	Q4	Dec
+period	Q4	Nov
+period	Q4	Oct
+section	Q1
+section	Q2
+section	Q3
+section	Q4
+title	A Year in Product

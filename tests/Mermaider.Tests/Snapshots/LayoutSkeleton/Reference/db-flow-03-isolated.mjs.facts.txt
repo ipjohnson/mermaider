@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source b27d981c9dfb12a3
 accept	yes
+drawn	yes
 edge	Bundles	Content	none	arrow	solid	release_notes
 edge	Checkout	DocSet	none	arrow	solid
 edge	Content	Nav	none	arrow	solid
@@ -19,16 +20,16 @@ group	Build	Isolated build	Content,DocSet,Nav,Toc
 group	External	Read from outside, never checked out	Bundles,LinkReg,OpenApiRepo
 group	Inputs	Inputs	Checkout,Vocab
 group	Outputs	Outputs	Html,Manifest,Redirects,State
-node	Bundles	Release note bundles (CDN)
-node	Checkout	Checkout (one repository, one branch)
-node	Content	Content: pages, snippets, images
-node	DocSet	Documentation set (docset.yml)
-node	Html	HTML, llms.txt, Pagefind
-node	LinkReg	Link registry
-node	Manifest	Link manifest (links.json)
-node	Nav	Navigation tree
-node	OpenApiRepo	OpenAPI repository
-node	Redirects	redirects.json
-node	State	Generation state (.doc.state)
-node	Toc	Table of contents
-node	Vocab	Shared vocabulary (config/)
+node	Bundles	Release note bundles (CDN)	rect
+node	Checkout	Checkout (one repository, one branch)	rect
+node	Content	Content: pages, snippets, images	rect
+node	DocSet	Documentation set (docset.yml)	rect
+node	Html	HTML, llms.txt, Pagefind	rect
+node	LinkReg	Link registry	rect
+node	Manifest	Link manifest (links.json)	rect
+node	Nav	Navigation tree	rect
+node	OpenApiRepo	OpenAPI repository	rect
+node	Redirects	redirects.json	rect
+node	State	Generation state (.doc.state)	rect
+node	Toc	Table of contents	rect
+node	Vocab	Shared vocabulary (config/)	rect

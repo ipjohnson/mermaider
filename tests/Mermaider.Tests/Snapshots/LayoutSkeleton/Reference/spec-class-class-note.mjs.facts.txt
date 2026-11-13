@@ -6,4 +6,5 @@ bbox	node	Animal	57.4	85	128	166
 bbox	note	Can be wild or domestic	12	12	173.4	45
 canvas	4	4	181.4	174
 class	Animal	Animal
+drawn	yes
 note	Animal	Can be wild or domestic

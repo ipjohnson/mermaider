@@ -18,6 +18,7 @@ bbox	node	B	200	357	350	430
 bbox	node	J	400	0	550	73
 bbox	node	J	400	357	550	430
 canvas	-50	-10	600	471
+drawn	yes
 message	A	B	solid	filled	Hello Bob
 message	A	J	solid	filled	How are you?
 message	B	A	dashed	filled	John says hi

@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1eacb0b43a4a73fb
+accept	yes
+drawn	yes
+edge	a	R	b	L	none	none
+group	inner	Inner	outer
+group	outer	Outer
+icon	a	server
+icon	b	server
+icon	inner	cloud
+icon	outer	cloud
+label	A
+label	B
+label	Inner
+label	Outer
+service	a	A	inner
+service	b	B	outer

@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 537afc8cad56364c
+accept	yes
+drawn	yes
+field	0	15	Source Port
+field	16	31	Destination Port
+field	32	47	Length
+field	48	63	Checksum
+label	Checksum
+label	Destination Port
+label	Length
+label	Source Port
+label	UDP Header
+title	UDP Header

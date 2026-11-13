@@ -1,0 +1,28 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6488b40c81bf888e
+accept	yes
+block	A	Source	rect	1
+block	B	Middle	rect	1
+block	C	Target	rect	1
+block	D	Left	rect	1
+block	E	Centre	rect	1
+block	F	Right	rect	1
+block	G	Bottom left	rect	1
+block	H	Bottom	rect	1
+block	I	Bottom right	rect	1
+drawn	yes
+edge	A	C	none	arrow
+edge	B	E	none	arrow
+edge	C	G	none	arrow
+edge	D	F	none	arrow
+edge	E	H	none	arrow
+label	Bottom
+label	Bottom left
+label	Bottom right
+label	Centre
+label	Left
+label	Middle
+label	Right
+label	Source
+label	Target

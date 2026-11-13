@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 02e1229e8158aa21
+accept	yes
+drawn	yes
+label	.NET
+label	AWS
+label	Azure
+label	Backend
+label	CSS
+label	Cloud
+label	Frontend
+label	HTML
+label	JavaScript
+label	Node.js
+label	Web Development
+node	Web Development	circle
+node	Web Development / Backend	rounded
+node	Web Development / Backend / .NET	default
+node	Web Development / Backend / Node.js	default
+node	Web Development / Cloud	bang
+node	Web Development / Cloud / AWS	default
+node	Web Development / Cloud / Azure	default
+node	Web Development / Frontend	rounded
+node	Web Development / Frontend / CSS	default
+node	Web Development / Frontend / HTML	default
+node	Web Development / Frontend / JavaScript	default

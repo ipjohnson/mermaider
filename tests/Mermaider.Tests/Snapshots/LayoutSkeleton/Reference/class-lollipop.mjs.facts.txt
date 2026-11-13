@@ -12,6 +12,7 @@ canvas	4	4	403	357
 class	Circle	Circle
 class	Drawable	Drawable
 class	Shape	Shape
+drawn	yes
 method	Circle	+area() : double
 method	Circle	+draw() : void
 method	Drawable	+draw() : void

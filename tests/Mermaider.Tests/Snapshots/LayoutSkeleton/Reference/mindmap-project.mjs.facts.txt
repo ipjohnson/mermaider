@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fd997942fe932ae0
+accept	yes
+drawn	yes
+label	Backend
+label	Development
+label	Frontend
+label	Integration
+label	Planning
+label	Project
+label	Requirements
+label	Testing
+label	Timeline
+label	Unit Tests
+node	Project	circle
+node	Project / Development	rect
+node	Project / Development / Backend	default
+node	Project / Development / Frontend	default
+node	Project / Planning	rounded
+node	Project / Planning / Requirements	default
+node	Project / Planning / Timeline	default
+node	Project / Testing	hex
+node	Project / Testing / Integration	default
+node	Project / Testing / Unit Tests	default

@@ -34,6 +34,7 @@ bbox	node	R	830.5	887	980.5	960
 bbox	node	S	0	0	150	73
 bbox	node	S	0	887	150	960
 canvas	-50	-10	1283.5	1001
+drawn	yes
 message	C	R	dashed	filled	exit 0, result
 message	C	R	dashed	filled	output lines to events.ndjson
 message	E	R	solid	filled	launch claude

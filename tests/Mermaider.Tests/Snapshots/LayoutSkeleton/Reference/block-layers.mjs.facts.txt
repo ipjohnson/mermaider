@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0ff30fff6b41fcbd
+accept	yes
+block	Auth	Auth	rect	1
+block	Billing	Billing	rect	1
+block	Cache	Cache	rect	1
+block	Core	Core platform	rect	4
+block	Postgres	Postgres	rect	2
+block	Reports	Reports	rect	1
+block	Search	Search	rect	1
+block	Storage	Object storage	rect	1
+block	UI	User interface	rect	4
+drawn	yes
+edge	Auth	Core	none	arrow
+edge	Billing	Core	none	arrow
+edge	Reports	Core	none	arrow
+edge	Search	Core	none	arrow
+edge	UI	Auth	none	arrow
+edge	UI	Reports	none	arrow
+label	Auth
+label	Billing
+label	Cache
+label	Core platform
+label	Object storage
+label	Postgres
+label	Reports
+label	Search
+label	User interface

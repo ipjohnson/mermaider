@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source f1a7c7bcdfcbef27
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
 edge	B	C	none	arrow	solid
 edge	C	D	none	arrow	solid
@@ -13,15 +14,15 @@ edge	H	I	none	arrow	solid
 edge	I	J	none	arrow	solid
 edge	J	K	none	arrow	solid
 edge	K	L	none	arrow	solid
-node	A	Rectangle
-node	B	Rounded
-node	C	Stadium
-node	D	Diamond
-node	E	Circle
-node	F	Asymmetric
-node	G	Hexagon
-node	H	Subroutine
-node	I	Cylinder
-node	J	Trapezoid
-node	K	Trapezoid Alt
-node	L	Double Circle
+node	A	Rectangle	rect
+node	B	Rounded	rounded
+node	C	Stadium	stadium
+node	D	Diamond	diam
+node	E	Circle	circle
+node	F	Asymmetric	odd
+node	G	Hexagon	hex
+node	H	Subroutine	fr-rect
+node	I	Cylinder	cyl
+node	J	Trapezoid	trap-b
+node	K	Trapezoid Alt	trap-t
+node	L	Double Circle	dbl-circ

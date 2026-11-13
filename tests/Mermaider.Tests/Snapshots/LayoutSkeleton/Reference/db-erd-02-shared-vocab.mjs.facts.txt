@@ -1,0 +1,47 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fa6b266201b56ece
+accept	yes
+drawn	yes
+entity	Applicability	Applicability
+entity	ApplicabilityEntry	ApplicabilityEntry
+entity	ChangelogLifecycle	ChangelogLifecycle
+entity	Product	Product
+entity	ProductLifecycle	ProductLifecycle
+entity	ProductRelease	ProductRelease
+entity	Repository	Repository
+entity	SemVersion	SemVersion
+entity	VersionSpec	VersionSpec
+entity	VersioningSystem	VersioningSystem
+label	Applicability
+label	ApplicabilityEntry
+label	ChangelogLifecycle
+label	Product
+label	ProductLifecycle
+label	ProductRelease
+label	Repository
+label	SemVersion
+label	VersionSpec
+label	VersioningSystem
+label	base
+label	current
+label	key resolves to
+label	lifecycle
+label	lifecycle
+label	maps to
+label	per key
+label	product
+label	repository
+label	version
+label	versioning
+relation	Applicability	ApplicabilityEntry	one	zero-or-more	identifying	per key
+relation	ApplicabilityEntry	ProductLifecycle	zero-or-more	one	identifying	lifecycle
+relation	ApplicabilityEntry	VersionSpec	zero-or-more	zero-or-one	identifying	version
+relation	ApplicabilityEntry	VersioningSystem	zero-or-more	one	identifying	key resolves to
+relation	ChangelogLifecycle	ProductLifecycle	zero-or-more	one	identifying	maps to
+relation	Product	Repository	zero-or-more	zero-or-one	identifying	repository
+relation	Product	VersioningSystem	zero-or-more	zero-or-one	identifying	versioning
+relation	ProductRelease	ChangelogLifecycle	zero-or-more	one	identifying	lifecycle
+relation	ProductRelease	Product	zero-or-more	one	identifying	product
+relation	VersioningSystem	SemVersion	one	one	identifying	base
+relation	VersioningSystem	SemVersion	one	one	identifying	current

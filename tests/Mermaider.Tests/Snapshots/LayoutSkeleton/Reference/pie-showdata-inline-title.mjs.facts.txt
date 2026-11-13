@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 35f5da3c4e179592
+accept	yes
+drawn	yes
+label	CI Pipeline Outcomes
+label	Cancelled
+label	Failed
+label	Success
+showdata	yes
+slice	Cancelled	9
+slice	Failed	23
+slice	Success	187
+title	CI Pipeline Outcomes

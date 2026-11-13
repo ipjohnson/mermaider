@@ -31,6 +31,7 @@ bbox	node	DB	1000	533	1150	606
 bbox	node	LB	400	0	550	73
 bbox	node	LB	400	533	550	606
 canvas	-50	-10	1200	647
+drawn	yes
 message	App	Cache	solid	filled	Check cache
 message	App	Cache	solid	filled	Store
 message	App	DB	solid	filled	Query

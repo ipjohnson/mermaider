@@ -20,6 +20,7 @@ bbox	node	Client	0	445	150	518
 bbox	node	DB	400	0	550	73
 bbox	node	DB	400	445	550	518
 canvas	-50	-10	600	559
+drawn	yes
 message	API	Client	dashed	filled	200 OK
 message	API	Client	dashed	filled	Auth token
 message	API	DB	solid	filled	Fetch profile

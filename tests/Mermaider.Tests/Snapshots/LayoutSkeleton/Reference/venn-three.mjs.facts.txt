@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 363b09550edea1b6
+accept	yes
+drawn	yes
+label	Design
+label	Design Systems
+label	Engineering
+label	Product
+label	Technical PM
+label	UX Research
+set	A	Design	10
+set	B	Engineering	10
+set	C	Product	10
+union	A,B	Design Systems	2.5
+union	A,C	UX Research	2.5
+union	B,C	Technical PM	2.5

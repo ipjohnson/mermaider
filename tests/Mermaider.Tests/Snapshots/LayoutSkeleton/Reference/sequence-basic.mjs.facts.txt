@@ -17,6 +17,7 @@ bbox	node	B	200	313	350	386
 bbox	node	C	400	0	550	73
 bbox	node	C	400	313	550	386
 canvas	-50	-10	600	427
+drawn	yes
 message	A	B	solid	filled	Hello Bob!
 message	B	A	dashed	filled	Hi Alice!
 message	B	C	solid	filled	Forward message

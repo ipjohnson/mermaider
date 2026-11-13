@@ -6,6 +6,7 @@ attribute	Worker	+string Default
 bbox	node	Worker	12	12	165.2	210
 canvas	4	4	173.2	218
 class	Worker	Worker
+drawn	yes
 method	Worker	+Build() : Worker
 method	Worker	+Create()
 method	Worker	+Execute()

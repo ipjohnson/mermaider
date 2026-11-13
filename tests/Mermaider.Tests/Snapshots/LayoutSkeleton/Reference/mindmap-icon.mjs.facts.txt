@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 01c78065d0353e5e
+accept	yes
+drawn	yes
+icon	Library / Books	fa:fa-book
+icon	Library / Films	fa:fa-film
+label	Books
+label	Films
+label	Library
+label	Music
+node	Library	circle
+node	Library / Books	default
+node	Library / Films	rect
+node	Library / Music	default

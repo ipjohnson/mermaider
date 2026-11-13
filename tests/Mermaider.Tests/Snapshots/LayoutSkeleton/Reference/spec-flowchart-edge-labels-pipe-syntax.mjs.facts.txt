@@ -2,11 +2,12 @@
 # mermaid 12.3.0
 # source 4895430d0c047275
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid	Yes
 edge	A	C	none	arrow	solid	No
 edge	B	D	none	arrow	solid	Done
 edge	C	A	none	arrow	solid	Retry
-node	A	A
-node	B	B
-node	C	C
-node	D	D
+node	A	A	rect
+node	B	B	rect
+node	C	C	rect
+node	D	D	rect

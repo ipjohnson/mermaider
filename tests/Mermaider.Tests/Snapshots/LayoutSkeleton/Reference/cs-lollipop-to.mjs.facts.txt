@@ -7,4 +7,5 @@ bbox	node	Interface	179.5	12	261.8	93
 canvas	4	4	269.8	186
 class	Implementation	Implementation
 class	Interface	Interface
+drawn	yes
 relation	Implementation	()Interface	none	lollipop	solid

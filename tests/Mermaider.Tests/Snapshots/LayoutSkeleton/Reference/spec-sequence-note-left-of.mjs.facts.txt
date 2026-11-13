@@ -13,6 +13,7 @@ bbox	note	Left note	-100	83	50	120
 bbox	note	Right note	300	174	450	211
 bbox	note	Spanning note	50	221	300	258
 canvas	-150	-10	500	392
+drawn	yes
 message	A	B	solid	filled	Hello
 note	left	A	Left note
 note	over	A,B	Spanning note

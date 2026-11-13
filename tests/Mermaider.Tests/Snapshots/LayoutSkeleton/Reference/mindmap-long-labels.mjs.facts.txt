@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5e38e7c293502bc1
+accept	yes
+drawn	yes
+label	A branch with a descriptive name
+label	A leaf that explains something at length
+label	A mindmap with a fairly long root title
+label	Also a longer leaf label here
+label	Another considerably wordy branch
+label	Short
+node	A mindmap with a fairly long root title	circle
+node	A mindmap with a fairly long root title / A branch with a descriptive name	rounded
+node	A mindmap with a fairly long root title / A branch with a descriptive name / A leaf that explains something at length	default
+node	A mindmap with a fairly long root title / A branch with a descriptive name / Short	default
+node	A mindmap with a fairly long root title / Another considerably wordy branch	rect
+node	A mindmap with a fairly long root title / Another considerably wordy branch / Also a longer leaf label here	default

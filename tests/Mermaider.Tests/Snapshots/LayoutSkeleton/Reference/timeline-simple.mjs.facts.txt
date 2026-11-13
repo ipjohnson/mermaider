@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f64cf73a31272a4f
+accept	yes
+drawn	yes
+event	Q1 2025	Alpha Release
+event	Q2 2025	Beta Launch
+event	Q2 2025	Partner Onboarding
+event	Q3 2025	GA Release
+event	Q4 2025	Enterprise Features
+label	Alpha Release
+label	Beta Launch
+label	Enterprise Features
+label	GA Release
+label	Partner Onboarding
+label	Product Roadmap
+label	Q1 2025
+label	Q2 2025
+label	Q3 2025
+label	Q4 2025
+period		Q1 2025
+period		Q2 2025
+period		Q3 2025
+period		Q4 2025
+title	Product Roadmap

@@ -2,10 +2,11 @@
 # mermaid 12.3.0
 # source 541947f7729676f9
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
 edge	A	C	none	arrow	thick
 edge	A	D	none	arrow	dotted
-node	A	A
-node	B	B
-node	C	C
-node	D	D
+node	A	A	rect
+node	B	B	rect
+node	C	C	rect
+node	D	D	rect

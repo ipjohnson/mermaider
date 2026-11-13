@@ -21,6 +21,7 @@ bbox	node	DB	400	357	550	430
 bbox	node	Server	200	0	350	73
 bbox	node	Server	200	357	350	430
 canvas	-50	-10	800	471
+drawn	yes
 message	Auth	Server	dashed	filled	OK
 message	Client	Server	solid	filled	POST /login
 message	DB	Server	dashed	filled	User row

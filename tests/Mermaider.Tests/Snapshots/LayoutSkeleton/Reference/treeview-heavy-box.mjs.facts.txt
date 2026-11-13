@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3a6e75c5554e5375
+accept	yes
+drawn	yes
+label	Cargo.toml
+label	README.md
+label	lexer.rs
+label	lib
+label	main.rs
+label	parser.rs
+label	src
+node	Cargo.toml	file
+node	README.md	file
+node	src	dir
+node	src / lib	dir
+node	src / lib / lexer.rs	file
+node	src / lib / parser.rs	file
+node	src / main.rs	file

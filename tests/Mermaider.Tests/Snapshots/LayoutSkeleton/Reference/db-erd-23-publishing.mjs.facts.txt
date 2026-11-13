@@ -1,0 +1,65 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 369cd9e43450d16b
+accept	yes
+drawn	yes
+entity	AnalyticsIntegration	AnalyticsIntegration
+entity	AssembledDocumentationSet	AssembledDocumentationSet
+entity	Assembly	Assembly
+entity	Build	Build
+entity	BuildStamp	BuildStamp
+entity	BuildType	BuildType
+entity	CloudfrontRedirectMap	CloudfrontRedirectMap
+entity	DocumentationSet	DocumentationSet
+entity	FeatureFlag	FeatureFlag
+entity	GenerationState	GenerationState
+entity	PublishEnvironment	PublishEnvironment
+entity	Redirect	Redirect
+entity	RedirectStore	RedirectStore
+entity	SearchIndex	SearchIndex
+entity	SyncPlan	SyncPlan
+label	AnalyticsIntegration
+label	AssembledDocumentationSet
+label	Assembly
+label	Build
+label	BuildStamp
+label	BuildType
+label	CloudfrontRedirectMap
+label	DocumentationSet
+label	FeatureFlag
+label	GenerationState
+label	KVS
+label	PublishEnvironment
+label	Redirect
+label	RedirectStore
+label	SearchIndex
+label	SyncPlan
+label	assembler only
+label	assembles
+label	deploy plan
+label	deployed to
+label	derived from
+label	docset
+label	environment
+label	environments
+label	feature_flags
+label	google_tag_manager, optimizely
+label	index name suffix
+label	per docset
+label	redirects.json
+label	type
+relation	AssembledDocumentationSet	DocumentationSet	one	one	identifying	docset
+relation	Assembly	PublishEnvironment	one	one-or-more	identifying	environments
+relation	Build	AssembledDocumentationSet	one	one-or-more	identifying	assembles
+relation	Build	BuildStamp	one	zero-or-one	identifying	assembler only
+relation	Build	BuildType	zero-or-more	one	identifying	type
+relation	Build	CloudfrontRedirectMap	one	one	identifying	redirects.json
+relation	Build	GenerationState	one	zero-or-more	identifying	per docset
+relation	Build	PublishEnvironment	zero-or-more	zero-or-one	identifying	environment
+relation	Build	SyncPlan	one	zero-or-one	identifying	deploy plan
+relation	CloudfrontRedirectMap	Redirect	zero-or-more	one-or-more	identifying	derived from
+relation	CloudfrontRedirectMap	RedirectStore	zero-or-more	one	identifying	deployed to
+relation	PublishEnvironment	AnalyticsIntegration	one	zero-or-one	identifying	google_tag_manager, optimizely
+relation	PublishEnvironment	FeatureFlag	one	zero-or-more	identifying	feature_flags
+relation	PublishEnvironment	RedirectStore	one	zero-or-one	identifying	KVS
+relation	PublishEnvironment	SearchIndex	one	zero-or-more	identifying	index name suffix

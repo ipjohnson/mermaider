@@ -1,0 +1,49 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e748adb9976fd17f
+accept	yes
+drawn	yes
+entity	Anchor	Anchor
+entity	Checkout	Checkout
+entity	CrossLinkUri	CrossLinkUri
+entity	DocumentationSet	DocumentationSet
+entity	GitOrigin	GitOrigin
+entity	LinkManifest	LinkManifest
+entity	LinkManifestPage	LinkManifestPage
+entity	LinkRegistry	LinkRegistry
+entity	LinkRegistryEntry	LinkRegistryEntry
+entity	LinkRegistrySnapshot	LinkRegistrySnapshot
+entity	Redirect	Redirect
+entity	Registry	Registry
+label	Anchor
+label	Checkout
+label	CrossLinkUri
+label	DocumentationSet
+label	GitOrigin
+label	LinkManifest
+label	LinkManifestPage
+label	LinkRegistry
+label	LinkRegistryEntry
+label	LinkRegistrySnapshot
+label	Redirect
+label	Registry
+label	anchors
+label	cross_links (outbound)
+label	link-index.json
+label	link-index.snapshot.json
+label	links
+label	origin
+label	path
+label	per branch
+label	redirects
+label	repository, branch
+relation	Checkout	LinkRegistrySnapshot	one	one	identifying	link-index.snapshot.json
+relation	DocumentationSet	LinkManifest	one	zero-or-more	identifying	per branch
+relation	LinkManifest	CrossLinkUri	one	zero-or-more	identifying	cross_links (outbound)
+relation	LinkManifest	GitOrigin	one	one	identifying	origin
+relation	LinkManifest	LinkManifestPage	one	one-or-more	identifying	links
+relation	LinkManifest	Redirect	one	zero-or-more	identifying	redirects
+relation	LinkManifestPage	Anchor	one	zero-or-more	identifying	anchors
+relation	LinkRegistry	LinkRegistryEntry	one	zero-or-more	identifying	repository, branch
+relation	LinkRegistryEntry	LinkManifest	one	one	identifying	path
+relation	Registry	LinkRegistry	one	one	identifying	link-index.json

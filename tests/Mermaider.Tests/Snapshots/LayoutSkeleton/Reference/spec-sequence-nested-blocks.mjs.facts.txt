@@ -26,6 +26,7 @@ block	alt	Cache Hit
 block	loop	Retry on failure
 canvas	-50	-10	621	656
 divider	Cache Miss
+drawn	yes
 message	API	Client	dashed	filled	Cached
 message	API	Client	dashed	filled	Fresh
 message	API	DB	solid	filled	Query

@@ -1,0 +1,38 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1240f567b3a07774
+accept	yes
+drawn	yes
+label	Acknowledge ticket
+label	Customer
+label	Engineer
+label	Escalate to engineering
+label	Fix
+label	Follow up
+label	Notice the problem
+label	Open a ticket
+label	Report
+label	Reproduce the issue
+label	Resolving a support ticket
+label	Search the help centre
+label	Send satisfaction survey
+label	Ship a patch
+label	Support
+label	Triage
+label	Update the docs
+label	Verify with customer
+section	Fix
+section	Follow up
+section	Report
+section	Triage
+task	Fix	Ship a patch	4	Engineer
+task	Fix	Verify with customer	5	Customer,Support
+task	Follow up	Send satisfaction survey	5	Customer
+task	Follow up	Update the docs	3	Support
+task	Report	Notice the problem	2	Customer
+task	Report	Open a ticket	4	Customer,Support
+task	Report	Search the help centre	3	Customer
+task	Triage	Acknowledge ticket	5	Support
+task	Triage	Escalate to engineering	2	Engineer,Support
+task	Triage	Reproduce the issue	3	Engineer,Support
+title	Resolving a support ticket

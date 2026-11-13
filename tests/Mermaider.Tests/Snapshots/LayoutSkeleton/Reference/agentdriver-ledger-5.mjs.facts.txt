@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 4039435d3fe22168
 accept	yes
+drawn	yes
 edge	[*]start@root	pending	none	arrow	solid
 edge	[*]start@root	proposed	none	arrow	solid
 edge	attention	done	none	arrow	solid	mark done
@@ -24,15 +25,15 @@ edge	running	interrupted	none	arrow	solid	driver fault
 edge	running	review	none	arrow	solid	pull request open
 edge	running	waiting	none	arrow	solid	asked
 edge	waiting	running	none	arrow	solid	answered
-node	[*]start@root		pseudo
-node	attention	attention	state
-node	cancelled	cancelled	state
-node	done	done	state
-node	interrupted	interrupted	state
-node	paused	paused	state
-node	pending	pending	state
-node	proposed	proposed	state
-node	review	review	state
-node	running	running	state
-node	skipped	skipped	state
-node	waiting	waiting	state
+node	[*]start@root		sm-circ
+node	attention	attention	rounded
+node	cancelled	cancelled	rounded
+node	done	done	rounded
+node	interrupted	interrupted	rounded
+node	paused	paused	rounded
+node	pending	pending	rounded
+node	proposed	proposed	rounded
+node	review	review	rounded
+node	running	running	rounded
+node	skipped	skipped	rounded
+node	waiting	waiting	rounded

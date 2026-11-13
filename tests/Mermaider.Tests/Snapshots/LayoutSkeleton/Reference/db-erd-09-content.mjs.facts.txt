@@ -1,0 +1,45 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8f2276532490a52d
+accept	yes
+drawn	yes
+entity	Anchor	Anchor
+entity	Applicability	Applicability
+entity	CrossLink	CrossLink
+entity	CrossLinkUri	CrossLinkUri
+entity	DocumentationFile	DocumentationFile
+entity	DocumentationSet	DocumentationSet
+entity	FrontMatter	FrontMatter
+entity	IncludeDirective	IncludeDirective
+entity	InternalLink	InternalLink
+entity	Link	Link
+entity	Page	Page
+entity	Snippet	Snippet
+label	Anchor
+label	Applicability
+label	CrossLink
+label	CrossLinkUri
+label	DocumentationFile
+label	DocumentationSet
+label	FrontMatter
+label	IncludeDirective
+label	InternalLink
+label	Link
+label	Page
+label	Snippet
+label	anchors
+label	applies_to
+label	files
+label	front matter
+label	include
+label	links
+label	repo://path
+label	target
+relation	CrossLink	CrossLinkUri	zero-or-more	one	identifying	repo://path
+relation	DocumentationSet	DocumentationFile	one	zero-or-more	identifying	files
+relation	FrontMatter	Applicability	one	zero-or-one	identifying	applies_to
+relation	IncludeDirective	Snippet	zero-or-more	one	identifying	include
+relation	InternalLink	Page	zero-or-more	one	identifying	target
+relation	Page	Anchor	one	zero-or-more	identifying	anchors
+relation	Page	FrontMatter	one	zero-or-one	identifying	front matter
+relation	Page	Link	one	zero-or-more	identifying	links

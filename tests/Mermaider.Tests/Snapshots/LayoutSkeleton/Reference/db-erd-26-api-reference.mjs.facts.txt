@@ -1,0 +1,65 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e5c6a276a1860bed
+accept	yes
+drawn	yes
+entity	ApiDeclaration	ApiDeclaration
+entity	ApiEndpoint	ApiEndpoint
+entity	ApiOperation	ApiOperation
+entity	ApiSchema	ApiSchema
+entity	ApiSpecVersion	ApiSpecVersion
+entity	ApiSupplementalDoc	ApiSupplementalDoc
+entity	ApiTag	ApiTag
+entity	ApiTagGroup	ApiTagGroup
+entity	ApiVersionIndex	ApiVersionIndex
+entity	DocumentationDocument	DocumentationDocument
+entity	OpenApiRepository	OpenApiRepository
+entity	OpenApiSpec	OpenApiSpec
+entity	Product	Product
+entity	Repository	Repository
+label	ApiDeclaration
+label	ApiEndpoint
+label	ApiOperation
+label	ApiSchema
+label	ApiSpecVersion
+label	ApiSupplementalDoc
+label	ApiTag
+label	ApiTagGroup
+label	ApiVersionIndex
+label	DocumentationDocument
+label	OpenApiRepository
+label	OpenApiSpec
+label	Product
+label	Repository
+label	api/{key}/
+label	components
+label	endpoints
+label	index.json
+label	op-{operationId}
+label	operations
+label	org/repo, spec, moniker
+label	org/repo/branch/spec
+label	product
+label	publishes, per branch
+label	renders
+label	repository + spec
+label	search export
+label	tag-{slug}
+label	tags
+label	x-tagGroups
+relation	ApiDeclaration	ApiSpecVersion	one	zero-or-more	identifying	renders
+relation	ApiDeclaration	ApiSupplementalDoc	one	zero-or-more	identifying	api/{key}/
+relation	ApiDeclaration	OpenApiSpec	zero-or-more	one	identifying	repository + spec
+relation	ApiDeclaration	Product	zero-or-more	one	identifying	product
+relation	ApiEndpoint	ApiOperation	one	one-or-more	identifying	operations
+relation	ApiOperation	DocumentationDocument	one	zero-or-one	identifying	search export
+relation	ApiSpecVersion	ApiSchema	one	zero-or-more	identifying	components
+relation	ApiSpecVersion	ApiTagGroup	one	zero-or-more	identifying	x-tagGroups
+relation	ApiSupplementalDoc	ApiOperation	zero-or-more	zero-or-one	identifying	op-{operationId}
+relation	ApiSupplementalDoc	ApiTag	zero-or-more	zero-or-one	identifying	tag-{slug}
+relation	ApiTag	ApiEndpoint	one	zero-or-more	identifying	endpoints
+relation	ApiTagGroup	ApiTag	one	zero-or-more	identifying	tags
+relation	ApiVersionIndex	ApiSpecVersion	one	zero-or-more	identifying	org/repo, spec, moniker
+relation	OpenApiRepository	ApiVersionIndex	one	one	identifying	index.json
+relation	OpenApiRepository	OpenApiSpec	one	zero-or-more	identifying	org/repo/branch/spec
+relation	Repository	OpenApiSpec	one	zero-or-more	identifying	publishes, per branch

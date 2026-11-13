@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 24989f1ad331515f
+accept	yes
+axis	Features
+axis	Price
+axis	Quality
+axis	Speed
+axis	Support
+axis	UX
+curve	Product A	4,5,3,4,5,4
+curve	Product B	3,3,5,2,3,5
+drawn	yes
+label	Features
+label	Price
+label	Product A
+label	Product B
+label	Product Comparison
+label	Quality
+label	Speed
+label	Support
+label	UX
+title	Product Comparison

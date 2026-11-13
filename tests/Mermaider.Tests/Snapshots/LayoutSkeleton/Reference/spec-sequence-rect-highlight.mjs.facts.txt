@@ -13,6 +13,7 @@ bbox	node	B	200	0	350	73
 bbox	node	B	200	255	350	328
 block	rect
 canvas	-50	-10	400	369
+drawn	yes
 message	A	B	solid	filled	Inside highlight
 message	A	B	solid	filled	Outside highlight
 message	B	A	dashed	filled	Reply

@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source acbc362123b3c020
 accept	yes
+drawn	yes
 edge	assemblerYml	outputLayer	none	arrow	solid	nav-v2 flag
 edge	contentProc	outputLayer	none	arrow	solid
 edge	dualVal	contentProc	none	arrow	solid	both pass
@@ -17,19 +18,19 @@ group	dualVal	Dual Validation — both must pass	valV1,valV2
 group	inputs	Inputs	assemblerYml,navV2Yml,navYml,repoCheckouts
 group	navAssembly	Navigation Assembly	fileLookup,v1Nav,v2Nav
 group	outputLayer	Output	outputFiles,pathProvider,sidebarHtml
-node	assemblerYml	assembler.yml env config · feature flags
-node	fileLookup	NavigationDocumentationFileLookup file path → output URL
-node	images	Images validate source-side copy via path provider
-node	includes	Include directives 100% source-based unaffected by path changes
-node	navV2Yml	navigation-v2.yml
-node	navYml	navigation.yml
-node	outputFiles	Output files written at V1 or V2 paths
-node	pathProvider	GlobalNavigationPathProvider flag-injected: V1 or V2 mappings
-node	relLinks	Relative links validate source-side emit URL from nav lookup
-node	repoCheckouts	Repo checkouts docset.yml / docset-v2.yml toc.yml / toc-v2.yml content .md files
-node	sidebarHtml	Sidebar HTML V1 or V2 tree per flag
-node	v1Nav	V1 SiteNavigation + V1 NavigationTocMappings
-node	v2Nav	V2 SiteNavigationV2 + V2 NavigationTocMappings
-node	valV1	V1 path prefixes · completeness · links
-node	valV2	V2 path prefixes · completeness cross-nav aliasing · migration warnings
-node	xlinks	Cross-links repo://path resolved via NavigationTocMappings → V1 or V2 output URL
+node	assemblerYml	assembler.yml env config · feature flags	rect
+node	fileLookup	NavigationDocumentationFileLookup file path → output URL	rect
+node	images	Images validate source-side copy via path provider	rect
+node	includes	Include directives 100% source-based unaffected by path changes	rect
+node	navV2Yml	navigation-v2.yml	rect
+node	navYml	navigation.yml	rect
+node	outputFiles	Output files written at V1 or V2 paths	rect
+node	pathProvider	GlobalNavigationPathProvider flag-injected: V1 or V2 mappings	rect
+node	relLinks	Relative links validate source-side emit URL from nav lookup	rect
+node	repoCheckouts	Repo checkouts docset.yml / docset-v2.yml toc.yml / toc-v2.yml content .md files	rect
+node	sidebarHtml	Sidebar HTML V1 or V2 tree per flag	rect
+node	v1Nav	V1 SiteNavigation + V1 NavigationTocMappings	rect
+node	v2Nav	V2 SiteNavigationV2 + V2 NavigationTocMappings	rect
+node	valV1	V1 path prefixes · completeness · links	rect
+node	valV2	V2 path prefixes · completeness cross-nav aliasing · migration warnings	rect
+node	xlinks	Cross-links repo://path resolved via NavigationTocMappings → V1 or V2 output URL	rect

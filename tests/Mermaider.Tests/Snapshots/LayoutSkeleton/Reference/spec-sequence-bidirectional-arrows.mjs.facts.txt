@@ -11,5 +11,6 @@ bbox	node	A	0	181	150	254
 bbox	node	B	203	0	353	73
 bbox	node	B	203	181	353	254
 canvas	-50	-10	403	295
+drawn	yes
 message	A	B	dashed	filled-both	Dashed bidirectional
 message	A	B	solid	filled-both	Solid bidirectional

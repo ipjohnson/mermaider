@@ -15,6 +15,7 @@ bbox	node	Bob	200	225	350	298
 bbox	node	Charlie	400	0	550	73
 bbox	node	Charlie	400	225	550	298
 canvas	-50	-10	600	339
+drawn	yes
 message	Alice	Bob	solid	filled	First message
 message	Bob	Charlie	solid	filled	Second message
 message	Charlie	Alice	dashed	filled	Third message

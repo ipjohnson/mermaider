@@ -13,6 +13,7 @@ bbox	node	A	0	329	150	402
 bbox	node	B	200	0	350	73
 bbox	node	B	200	329	350	402
 canvas	-50	-10	401	443
+drawn	yes
 message	A	A	solid	filled	Initialize
 message	A	B	solid	filled	Send message
 message	B	A	dashed	filled	Acknowledgement

@@ -16,6 +16,7 @@ bbox	node	Bob	200	342	350	415
 bbox	node	Carol	475	124.5	625	197.5
 bbox	node	Carol	475	249	625	322
 canvas	-50	-10	675	456
+drawn	yes
 message	Alice	Bob	solid	filled	Hello
 message	Bob	Carol	solid	cross	Goodbye
 message	Bob	Carol	solid	filled	Hi Carol

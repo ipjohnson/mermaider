@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 1d09ed714994381e
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
-node	A	Start
-node	B	End
+node	A	Start	rect
+node	B	End	rect

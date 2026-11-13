@@ -1,0 +1,38 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3f3a4ff9e9b8e03a
+accept	yes
+actor	B	B	boundary
+actor	C	C	control
+actor	D	D	database
+actor	E	E	entity
+actor	L	L	collections
+actor	P	Plain	participant
+actor	Q	Q	queue
+actor	U	User	actor
+bbox	label	enqueue	1340.9	357.4	1403.1	376.4
+bbox	label	list	1162.2	313.4	1181.8	332.4
+bbox	label	load	756.9	225.4	787.1	244.4
+bbox	label	query	952	269.4	992	288.4
+bbox	label	request	245.3	137.4	298.7	156.4
+bbox	label	route	553.8	181.4	590.2	200.4
+bbox	label	start	162.4	93.4	193.6	112.4
+bbox	node	B	420	0	497	68
+bbox	node	B	420	407	497	475
+bbox	node	C	653	0	697	68
+bbox	node	C	653	407	697	475
+bbox	node	L	1200	0	1350	67
+bbox	node	L	1200	401	1350	468
+bbox	node	P	0	0	150	73
+bbox	node	P	0	401	150	474
+bbox	node	U	258.1	0	292.1	68
+bbox	node	U	258.1	407	292.1	475
+canvas	-50	-10	1600	515
+drawn	yes
+message	B	C	solid	filled	route
+message	C	E	solid	filled	load
+message	D	L	solid	filled	list
+message	E	D	solid	filled	query
+message	L	Q	solid	filled	enqueue
+message	P	B	solid	filled	request
+message	U	P	solid	filled	start

@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7efa6cf2d57dc013
+accept	yes
+axis	x-left	Low Effort
+axis	x-right	High Effort
+axis	y-bottom	Low Impact
+axis	y-top	High Impact
+drawn	yes
+label	Delegate
+label	Do First
+label	Eliminate
+label	Feature A
+label	Feature B
+label	Feature C
+label	Feature D
+label	High Effort
+label	High Impact
+label	Low Effort
+label	Low Impact
+label	Priority Matrix
+label	Schedule
+point	Feature A	0.8	0.9
+point	Feature B	0.2	0.3
+point	Feature C	0.6	0.4
+point	Feature D	0.3	0.8
+quadrant	1	Do First
+quadrant	2	Schedule
+quadrant	3	Delegate
+quadrant	4	Eliminate
+title	Priority Matrix

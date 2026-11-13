@@ -27,6 +27,7 @@ bbox	node	S	980.5	0	1130.5	73
 bbox	node	S	980.5	492	1130.5	565
 bbox	note	own branch only, unbundle into its clone, value check if a grant is active	814	215	1297	252
 canvas	-50	-10	1472	606
+drawn	yes
 message	A	R	solid	filled	git push -u origin, after PushGate allowed it
 message	D	R	dashed	filled	hook exits 0 or 1
 message	D	S	solid	filled	push call, on the control channel

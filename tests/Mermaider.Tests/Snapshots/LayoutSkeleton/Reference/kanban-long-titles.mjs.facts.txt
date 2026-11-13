@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 438ceb22e49b77c2
+accept	yes
+card	doing	t3	Write the migration guide for the new permissions model and review it with support	dana
+card	todo	t1	Investigate why the nightly reconciliation job occasionally double counts refunds	a.very.long.assignee.name	OPS-2210	High
+card	todo	t2	Short
+column	doing	Doing
+column	todo	To Do
+drawn	yes
+label	Doing
+label	Investigate why the nightly reconciliation job occasionally double counts refunds
+label	OPS-2210
+label	Short
+label	To Do
+label	Write the migration guide for the new permissions model and review it with support
+label	a.very.long.assignee.name
+label	dana

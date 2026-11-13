@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 42193fa0036a6bd4
 accept	yes
+drawn	yes
 edge	internet	router	none	arrow	solid
 edge	nat	internet	none	arrow	solid
 edge	router	subnet1	none	arrow	solid
@@ -11,10 +12,10 @@ edge	subnet2	nat	none	arrow	solid
 group	project	project	nat,router,subnet1,subnet2
 group	subnet1	subnet1	compute1,lb1
 group	subnet2	subnet2	compute2,lb2
-node	compute1	compute1
-node	compute2	compute2
-node	internet	internet
-node	lb1	lb1
-node	lb2	lb2
-node	nat	nat
-node	router	router
+node	compute1	compute1	rect
+node	compute2	compute2	rect
+node	internet	internet	rect
+node	lb1	lb1	rect
+node	lb2	lb2	rect
+node	nat	nat	rect
+node	router	router	rect

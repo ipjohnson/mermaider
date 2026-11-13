@@ -12,6 +12,7 @@ class	A	A
 class	B	B
 class	C	C
 class	D	D
+drawn	yes
 relation	A	B	none	none	solid
 relation	A	C	none	arrow	solid
 relation	C	D	none	none	dashed	uses

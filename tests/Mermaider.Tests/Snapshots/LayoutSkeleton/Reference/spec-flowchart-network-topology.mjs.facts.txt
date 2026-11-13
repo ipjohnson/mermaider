@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source f425377f1bb1d019
 accept	yes
+drawn	yes
 edge	app1	db	none	arrow	solid
 edge	app1	nat	none	arrow	solid
 edge	app2	db	none	arrow	solid
@@ -13,9 +14,9 @@ edge	nat	internet	none	arrow	solid
 group	cloud	Cloud VPC	priv,pub
 group	priv	Private Subnet	app1,app2,db
 group	pub	Public Subnet	lb,nat
-node	app1	App Server 1
-node	app2	App Server 2
-node	db	Database
-node	internet	Internet
-node	lb	Load Balancer
-node	nat	NAT Gateway
+node	app1	App Server 1	rect
+node	app2	App Server 2	rect
+node	db	Database	cyl
+node	internet	Internet	circle
+node	lb	Load Balancer	stadium
+node	nat	NAT Gateway	stadium

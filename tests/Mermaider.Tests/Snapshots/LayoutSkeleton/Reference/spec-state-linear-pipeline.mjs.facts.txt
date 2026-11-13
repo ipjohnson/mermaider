@@ -2,16 +2,17 @@
 # mermaid 12.3.0
 # source 45c303bd49d1849e
 accept	yes
+drawn	yes
 edge	Enriched	Stored	none	arrow	solid	persist
 edge	Published	[*]end@root	none	arrow	solid
 edge	Received	Validated	none	arrow	solid	validate
 edge	Stored	Published	none	arrow	solid	notify
 edge	Validated	Enriched	none	arrow	solid	enrich
 edge	[*]start@root	Received	none	arrow	solid
-node	Enriched	Enriched	state
-node	Published	Published	state
-node	Received	Received	state
-node	Stored	Stored	state
-node	Validated	Validated	state
-node	[*]end@root		pseudo
-node	[*]start@root		pseudo
+node	Enriched	Enriched	rounded
+node	Published	Published	rounded
+node	Received	Received	rounded
+node	Stored	Stored	rounded
+node	Validated	Validated	rounded
+node	[*]end@root		fr-circ
+node	[*]start@root		sm-circ

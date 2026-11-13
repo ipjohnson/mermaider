@@ -11,5 +11,6 @@ bbox	node	Alice	57.6	187	92.3	254
 bbox	node	Bob	260.8	0	289.2	67
 bbox	node	Bob	260.8	187	289.2	254
 canvas	-50	-10	400	295
+drawn	yes
 message	Alice	Bob	solid	filled	Hi Bob
 message	Bob	Alice	dashed	filled	Hey Alice

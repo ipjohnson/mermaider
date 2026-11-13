@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8d6bcca7ffb80ca8
+accept	yes
+drawn	yes
+label	Africa
+label	Asia Pacific
+label	Europe
+label	Latin America
+label	Middle East
+label	North America
+label	Revenue by Region
+slice	Africa	2
+slice	Asia Pacific	18
+slice	Europe	28
+slice	Latin America	7
+slice	Middle East	3
+slice	North America	42
+title	Revenue by Region

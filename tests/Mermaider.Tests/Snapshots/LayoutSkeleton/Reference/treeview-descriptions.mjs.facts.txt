@@ -1,0 +1,37 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5afd1b5f68451aa7
+accept	yes
+drawn	yes
+label	Dockerfile
+label	deployment.yaml
+label	docker
+label	docker-compose.yml
+label	exported values
+label	external routing
+label	infrastructure
+label	ingress.yaml
+label	input variables
+label	k8s
+label	load balancer
+label	local dev stack
+label	main.tf
+label	multi-stage build
+label	outputs.tf
+label	pod spec
+label	root module
+label	service.yaml
+label	terraform
+label	variables.tf
+node	infrastructure	dir
+node	infrastructure / docker	dir
+node	infrastructure / docker / Dockerfile	file	multi-stage build
+node	infrastructure / docker / docker-compose.yml	file	local dev stack
+node	infrastructure / k8s	dir
+node	infrastructure / k8s / deployment.yaml	file	pod spec
+node	infrastructure / k8s / ingress.yaml	file	external routing
+node	infrastructure / k8s / service.yaml	file	load balancer
+node	infrastructure / terraform	dir
+node	infrastructure / terraform / main.tf	file	root module
+node	infrastructure / terraform / outputs.tf	file	exported values
+node	infrastructure / terraform / variables.tf	file	input variables

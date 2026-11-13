@@ -2,12 +2,13 @@
 # mermaid 12.3.0
 # source 016274e91a9e7195
 accept	yes
+drawn	yes
 edge	Draft	Review	none	arrow	solid	submit
 edge	Published	[*]end@root	none	arrow	solid
 edge	Review	Published	none	arrow	solid	approve
 edge	[*]start@root	Draft	none	arrow	solid
-node	Draft	Draft	state
-node	Published	Published	state
-node	Review	Review	state
-node	[*]end@root		pseudo
-node	[*]start@root		pseudo
+node	Draft	Draft	rounded
+node	Published	Published	rounded
+node	Review	Review	rounded
+node	[*]end@root		fr-circ
+node	[*]start@root		sm-circ

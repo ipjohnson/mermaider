@@ -15,6 +15,7 @@ canvas	4	4	656.8	337
 class	DockerEngine	DockerEngine
 class	LaunchPoint	LaunchPoint
 class	Policy	Policy
+drawn	yes
 namespace	Containers	DockerEngine
 namespace	Execution	LaunchPoint,Policy
 note	Policy	Restrictions

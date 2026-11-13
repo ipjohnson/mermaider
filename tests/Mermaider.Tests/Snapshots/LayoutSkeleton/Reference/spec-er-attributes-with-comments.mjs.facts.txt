@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5492ae3c9ab4814d
+accept	yes
+attribute	PRODUCT	decimal	price		In USD
+attribute	PRODUCT	int	id	PK	Auto-increment
+attribute	PRODUCT	int	stock		Non-negative
+attribute	PRODUCT	string	name		Required
+drawn	yes
+entity	PRODUCT	PRODUCT
+label	Auto-increment
+label	In USD
+label	Non-negative
+label	PRODUCT
+label	Required
+label	decimal
+label	id
+label	int
+label	int
+label	name
+label	price
+label	stock
+label	string

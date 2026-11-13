@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9906edc844a4731e
+accept	yes
+block	Aside	Aside	rect	1
+block	Content	Content	rect	2
+block	Footer	Footer	rect	3
+block	Header	Header spans all three	rect	3
+block	Nav	Nav	rect	1
+block	Sidebar	Sidebar	rect	2
+drawn	yes
+label	Aside
+label	Content
+label	Footer
+label	Header spans all three
+label	Nav
+label	Sidebar

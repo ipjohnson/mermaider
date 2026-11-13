@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f00e45290e6cf71d
+accept	yes
+drawn	yes
+entity	CodexDocumentationSet	CodexDocumentationSet
+entity	CodexGroup	CodexGroup
+entity	CodexSite	CodexSite
+entity	DocumentationSet	DocumentationSet
+entity	LinkRegistry	LinkRegistry
+entity	Registry	Registry
+label	CodexDocumentationSet
+label	CodexGroup
+label	CodexSite
+label	DocumentationSet
+label	LinkRegistry
+label	Registry
+label	codex.group
+label	docset
+label	environment = registry
+label	from LinkRegistry
+label	git: elastic/codex-link-index/{registry}
+label	groups
+relation	CodexDocumentationSet	CodexGroup	zero-or-more	zero-or-one	identifying	codex.group
+relation	CodexDocumentationSet	DocumentationSet	one	one	identifying	docset
+relation	CodexSite	CodexDocumentationSet	one	zero-or-more	identifying	from LinkRegistry
+relation	CodexSite	CodexGroup	one	zero-or-more	identifying	groups
+relation	CodexSite	Registry	one	one	identifying	environment = registry
+relation	Registry	LinkRegistry	one	one	identifying	git: elastic/codex-link-index/{registry}

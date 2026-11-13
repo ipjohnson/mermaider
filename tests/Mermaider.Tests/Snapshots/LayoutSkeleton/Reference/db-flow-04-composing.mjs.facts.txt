@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 5b6681ba3005a8ea
 accept	yes
+drawn	yes
 edge	AsmBuild	AsmOut	none	arrow	solid
 edge	AsmCfg	Env	none	arrow	solid
 edge	AsmClone	AsmBuild	none	arrow	solid
@@ -19,18 +20,18 @@ group	Assembler	Assembler	AsmBuild,AsmCfg,AsmClone,AsmOut,Env
 group	CodexB	Codex	CdxBuild,CdxCfg,CdxClone,CdxOut
 group	Registries	Link registries	CodexReg,S3Reg
 group	Repos	Repositories (each with its own isolated build)	R1,R2,R3,R4
-node	AsmBuild	Build each docset, re-homed under its mount path
-node	AsmCfg	assembler.yml + navigation.yml
-node	AsmClone	Clone at registry commits
-node	AsmOut	Site, redirects, search index, sitemap, deploy plan
-node	CdxBuild	Build each docset under /r/{repo}
-node	CdxCfg	codex.yml (registry: internal)
-node	CdxClone	Clone every member, pick docset with matching registry
-node	CdxOut	Internal site, grouped
-node	CodexReg	Git link index: elastic/codex-link-index, internal/
-node	Env	PublishEnvironment: content source to branch
-node	R1	elasticsearch
-node	R2	kibana
-node	R3	docs-content
-node	R4	internal-team-docs
-node	S3Reg	S3 link registry (default docsets)
+node	AsmBuild	Build each docset, re-homed under its mount path	rect
+node	AsmCfg	assembler.yml + navigation.yml	rect
+node	AsmClone	Clone at registry commits	rect
+node	AsmOut	Site, redirects, search index, sitemap, deploy plan	rect
+node	CdxBuild	Build each docset under /r/{repo}	rect
+node	CdxCfg	codex.yml (registry: internal)	rect
+node	CdxClone	Clone every member, pick docset with matching registry	rect
+node	CdxOut	Internal site, grouped	rect
+node	CodexReg	Git link index: elastic/codex-link-index, internal/	rect
+node	Env	PublishEnvironment: content source to branch	rect
+node	R1	elasticsearch	rect
+node	R2	kibana	rect
+node	R3	docs-content	rect
+node	R4	internal-team-docs	rect
+node	S3Reg	S3 link registry (default docsets)	rect

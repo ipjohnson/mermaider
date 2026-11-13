@@ -13,6 +13,7 @@ bbox	node	Client	0	269	150	342
 bbox	node	Server	200	0	350	73
 bbox	node	Server	200	269	350	342
 canvas	-50	-10	400	383
+drawn	yes
 message	Client	Server	solid	filled	Request 1
 message	Client	Server	solid	filled	Request 2
 message	Server	Client	dashed	filled	Response 1

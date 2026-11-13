@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c0dde566be4a05ef
+accept	yes
+drawn	yes
+label	Polish
+label	Print this page
+label	Render
+label	Shipping this file
+label	Spike the renderer
+label	Update docs
+label	Update tests
+section	Polish
+section	Render
+task	Polish	Update docs		2026-07-09 12:00	2026-07-09 18:00
+task	Polish	Update tests		2026-07-09 00:00	2026-07-09 12:00	crit
+task	Render	Print this page	a2	2026-07-08 00:00	2026-07-09 00:00	active
+task	Render	Spike the renderer	a1	2026-07-07 00:00	2026-07-08 00:00	done
+title	Shipping this file

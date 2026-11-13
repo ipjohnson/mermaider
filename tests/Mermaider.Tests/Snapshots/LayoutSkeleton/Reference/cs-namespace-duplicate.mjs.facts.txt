@@ -7,5 +7,6 @@ bbox	group	Two	52	12	134.1	165
 bbox	node	A	76	60	110.1	141
 canvas	-9.2	4	142.1	173
 class	A	A
+drawn	yes
 namespace	One
 namespace	Two	A

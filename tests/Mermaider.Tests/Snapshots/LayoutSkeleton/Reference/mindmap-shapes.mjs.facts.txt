@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 79b25409882e9aee
+accept	yes
+drawn	yes
+label	Bang
+label	Circle
+label	Cloud
+label	Hexagon
+label	Plain child
+label	Plain child
+label	Plain child
+label	Plain child
+label	Plain child
+label	Plain child
+label	Rounded
+label	Shapes
+label	Square
+node	Shapes	circle
+node	Shapes / Bang	bang
+node	Shapes / Bang / Plain child	default
+node	Shapes / Circle	circle
+node	Shapes / Circle / Plain child	default
+node	Shapes / Cloud	cloud
+node	Shapes / Cloud / Plain child	default
+node	Shapes / Hexagon	hex
+node	Shapes / Hexagon / Plain child	default
+node	Shapes / Rounded	rounded
+node	Shapes / Rounded / Plain child	default
+node	Shapes / Square	rect
+node	Shapes / Square / Plain child	default

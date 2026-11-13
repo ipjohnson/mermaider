@@ -12,6 +12,7 @@ bbox	node	Alice	0	225	150	298
 bbox	node	Bob	200	0	350	73
 bbox	node	Bob	200	225	350	298
 canvas	-50	-10	400	339
+drawn	yes
 message	Alice	Bob	solid	filled	First
 message	Alice	Bob	solid	filled	Third
 message	Bob	Alice	solid	filled	Second

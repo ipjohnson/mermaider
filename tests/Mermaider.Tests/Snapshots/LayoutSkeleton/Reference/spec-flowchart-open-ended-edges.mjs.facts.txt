@@ -2,12 +2,13 @@
 # mermaid 12.3.0
 # source 081005ff01eb1393
 accept	yes
+drawn	yes
 edge	A	B	none	none	solid
 edge	C	D	none	none	dotted
 edge	E	F	none	none	thick
-node	A	A
-node	B	B
-node	C	C
-node	D	D
-node	E	E
-node	F	F
+node	A	A	rect
+node	B	B	rect
+node	C	C	rect
+node	D	D	rect
+node	E	E	rect
+node	F	F	rect
