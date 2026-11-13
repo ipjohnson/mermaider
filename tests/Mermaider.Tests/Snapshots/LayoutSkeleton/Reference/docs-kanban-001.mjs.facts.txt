@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 64d471958b3a3c6b
+accept	yes
+card	column1	task1	Task Description
+column	column1	Column Title
+drawn	yes
+label	Column Title
+label	Task Description

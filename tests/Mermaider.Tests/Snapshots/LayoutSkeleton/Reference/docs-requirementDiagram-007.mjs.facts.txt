@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source eead694e962481bf
+accept	yes
+drawn	yes
+element	test_entity	simulation
+label	1
+label	simulation
+label	styling example
+label	test_entity
+label	test_req
+requirement	test_req	requirement	1	styling example	low	test

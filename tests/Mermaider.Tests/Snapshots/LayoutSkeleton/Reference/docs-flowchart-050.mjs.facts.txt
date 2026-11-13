@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3a814849f81b02e1
+accept	yes
+drawn	yes
+node	A	Delay	delay

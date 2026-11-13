@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8b4cf7c3adaa9c5f
+accept	yes
+drawn	yes
+edge	IsPositive	if_state	none	arrow	solid
+edge	[*]start@root	IsPositive	none	arrow	solid
+edge	if_state	False	none	arrow	solid	if n < 0
+edge	if_state	True	none	arrow	solid	if n >= 0
+node	False	False	rounded
+node	IsPositive	IsPositive	rounded
+node	True	True	rounded
+node	[*]start@root		sm-circ
+node	if_state		diam

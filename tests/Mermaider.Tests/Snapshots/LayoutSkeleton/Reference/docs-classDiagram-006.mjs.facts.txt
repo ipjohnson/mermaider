@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source cb3671b844c32248
+accept	yes
+bbox	node	Animal	13.9	12	164	93
+bbox	node	Car	12	133	165.9	214
+canvas	4	4	173.9	222
+class	Animal	Animal with a label
+class	Car	Car with *! symbols
+drawn	yes
+relation	Animal	Car	none	arrow	solid

@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 85604c1294449e7d
+accept	yes
+drawn	yes
+label	I am the default shape
+node	I am the default shape	default

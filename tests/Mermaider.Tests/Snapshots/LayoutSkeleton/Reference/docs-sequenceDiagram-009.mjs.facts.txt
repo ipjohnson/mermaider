@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f158c3d82a5bf4f7
+accept	yes
+actor	Alice	Alice	database
+actor	Bob	Bob	participant
+bbox	label	DB query	138.6	94.1	205.4	111.5
+bbox	label	DB result	145.1	138.1	210.9	155.2
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	181	350	254
+canvas	-50	-10	400	295
+drawn	yes
+message	Alice	Bob	solid	filled	DB query
+message	Bob	Alice	solid	filled	DB result

@@ -1,0 +1,28 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 93d3c0ff3d5d384a
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+actor	C	C	participant
+actor	J	J	participant
+bbox	label	Great!	177.8	164.3	222.2	182.8
+bbox	label	Hello Bob, how is Charley?	208	208.3	400	226.8
+bbox	label	Hello Charley, how are you?	558.1	252.3	757.9	270.8
+bbox	label	Hello John, how are you?	103.7	120.3	284.3	138.8
+bbox	node	A	5	27	155	100
+bbox	node	A	5	296	155	369
+bbox	node	B	459	27	609	100
+bbox	node	B	459	296	609	369
+bbox	node	C	712	27	862	100
+bbox	node	C	712	296	862	369
+bbox	node	J	239	27	389	100
+bbox	node	J	239	296	389	369
+box	Alice & John	A,J
+box	Another Group	B,C
+canvas	-50	-10	917	420
+drawn	yes
+message	A	B	solid	filled	Hello Bob, how is Charley?
+message	A	J	solid	filled	Hello John, how are you?
+message	B	C	solid	filled	Hello Charley, how are you?
+message	J	A	solid	filled	Great!

@@ -1,0 +1,49 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b854a6f49b60d200
+accept	yes
+drawn	yes
+label	A section
+label	Active task
+label	Add another diagram to demo page
+label	Add another diagram to demo page
+label	Add gantt diagram to demo page
+label	Add gantt diagram to demo page
+label	Add to mermaid
+label	Adding GANTT diagram functionality to mermaid
+label	Completed task
+label	Completed task in the critical line
+label	Create tests for parser
+label	Create tests for renderer
+label	Critical tasks
+label	Describe gantt syntax
+label	Describe gantt syntax
+label	Documentation
+label	Functionality added
+label	Future task
+label	Future task in critical line
+label	Future task2
+label	Implement parser and jison
+label	Last section
+section	A section
+section	Critical tasks
+section	Documentation
+section	Last section
+task	A section	Active task	des2	2014-01-09 00:00	2014-01-14 00:00	active
+task	A section	Completed task	des1	2014-01-06 00:00	2014-01-08 00:00	done
+task	A section	Future task	des3	2014-01-14 00:00	2014-01-21 00:00
+task	A section	Future task2	des4	2014-01-21 00:00	2014-01-28 00:00
+task	Critical tasks	Add to mermaid		2014-01-24 00:00	2014-01-27 00:00
+task	Critical tasks	Completed task in the critical line		2014-01-06 00:00	2014-01-07 00:00	done,crit
+task	Critical tasks	Create tests for parser		2014-01-10 00:00	2014-01-15 00:00	active,crit
+task	Critical tasks	Create tests for renderer		2014-01-22 00:00	2014-01-24 00:00
+task	Critical tasks	Functionality added	isadded	2014-01-25 00:00	2014-01-25 00:00	milestone
+task	Critical tasks	Future task in critical line		2014-01-15 00:00	2014-01-22 00:00	crit
+task	Critical tasks	Implement parser and jison		2014-01-08 00:00	2014-01-10 00:00	done,crit
+task	Documentation	Add another diagram to demo page	doc1	2014-01-13 00:00	2014-01-15 00:00
+task	Documentation	Add gantt diagram to demo page		2014-01-13 00:00	2014-01-13 20:00
+task	Documentation	Describe gantt syntax	a1	2014-01-08 00:00	2014-01-13 00:00	active
+task	Last section	Add another diagram to demo page		2014-01-20 20:00	2014-01-22 20:00
+task	Last section	Add gantt diagram to demo page		2014-01-20 00:00	2014-01-20 20:00
+task	Last section	Describe gantt syntax		2014-01-15 00:00	2014-01-20 00:00
+title	Adding GANTT diagram functionality to mermaid

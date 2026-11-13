@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3e866a35e9ee4a7a
+accept	yes
+axis	Art
+axis	English
+axis	Geography
+axis	History
+axis	Math
+axis	Science
+curve	Alice	85,90,80,70,75,90
+curve	Bob	70,75,85,80,90,85
+drawn	yes
+label	Alice
+label	Art
+label	Bob
+label	English
+label	Geography
+label	History
+label	Math
+label	Science

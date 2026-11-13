@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4a2ae373f0d2498d
+accept	yes
+drawn	yes
+node	A	This is a subprocess	fr-rect

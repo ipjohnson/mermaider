@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e2806e53df11c521
+accept	yes
+drawn	yes
+event	Bullet 1	sub-point 1a
+event	Bullet 1	sub-point 1b
+event	Bullet 1	sub-point 1c
+event	Bullet 2	sub-point 2a
+event	Bullet 2	sub-point 2b
+event	Bullet 3	sub-point 3a
+event	Bullet 3	sub-point 3b
+event	Bullet 3	sub-point 3c
+event	Bullet 4	sub-point 4a
+event	Bullet 4	sub-point 4b
+label	2023 Q1 Release Personal Tier
+label	2023 Q2 Release XYZ Tier
+label	Bullet 1
+label	Bullet 2
+label	Bullet 3
+label	Bullet 4
+label	MermaidChart 2023 Timeline
+label	sub-point 1a
+label	sub-point 1b
+label	sub-point 1c
+label	sub-point 2a
+label	sub-point 2b
+label	sub-point 3a
+label	sub-point 3b
+label	sub-point 3c
+label	sub-point 4a
+label	sub-point 4b
+period	2023 Q1 Release Personal Tier	Bullet 1
+period	2023 Q1 Release Personal Tier	Bullet 2
+period	2023 Q2 Release XYZ Tier	Bullet 3
+period	2023 Q2 Release XYZ Tier	Bullet 4
+section	2023 Q1 Release Personal Tier
+section	2023 Q2 Release XYZ Tier
+title	MermaidChart 2023 Timeline

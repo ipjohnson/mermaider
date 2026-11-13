@@ -1,0 +1,71 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 90f106b92d608998
+accept	yes
+boundary	apache	apache tomcat 8.x	Apache Tomcat	dn
+boundary	apache2	apache tomcat 8.x	Apache Tomcat	bb2
+boundary	bb2	ubuntu 16.04 lts	bigbank-web*** x4	plc
+boundary	bigbankdb01	ubuntu 16.04 lts	bigbank-db01	plc
+boundary	bigbankdb02	ubuntu 16.04 lts	bigbank-db02	plc
+boundary	browser	google chrome, mozilla firefox,<br/> apple safari or microsoft edge	Web Browser	comp
+boundary	comp	microsoft windows or apple macos	Customer's computer
+boundary	dn	ubuntu 16.04 lts	bigbank-api*** x8	plc
+boundary	mob	apple ios or android	Customer's mobile device
+boundary	oracle	oracle 12c	Oracle - Primary	bigbankdb01
+boundary	oracle2	oracle 12c	Oracle - Secondary	bigbankdb02
+boundary	plc	big bank plc data center	Big Bank plc
+drawn	yes
+element	api	container	internal	API Application	Java and Spring MVC	Provides Internet Banking functionality via a JSON/HTTPS API.	apache
+element	db	container_db	internal	Database	Relational Database Schema	Stores user registration information, hashed authentication credentials, access logs, etc.	oracle
+element	db2	container_db	internal	Database	Relational Database Schema	Stores user registration information, hashed authentication credentials, access logs, etc.	oracle2
+element	mobile	container	internal	Mobile App	Xamarin	Provides a limited subset of the Internet Banking functionality to customers via their mobile device.	mob
+element	spa	container	internal	Single Page Application	JavaScript and Angular	Provides all of the Internet Banking functionality to customers via their web browser.	browser
+element	web	container	internal	Web Application	Java and Spring MVC	Delivers the static content and the Internet Banking single page application.	apache2
+label	API Application
+label	Apache Tomcat
+label	Apache Tomcat
+label	Big Bank plc
+label	Customer's computer
+label	Customer's mobile device
+label	Database
+label	Database
+label	Delivers the static content and the Internet Banking single page application.
+label	Delivers to the customer's web browser
+label	Deployment Diagram for Internet Banking System - Live
+label	JDBC
+label	JDBC
+label	Java and Spring MVC
+label	Java and Spring MVC
+label	JavaScript and Angular
+label	Makes API calls to
+label	Makes API calls to
+label	Mobile App
+label	Oracle - Primary
+label	Oracle - Secondary
+label	Provides Internet Banking functionality via a JSON/HTTPS API.
+label	Provides a limited subset of the Internet Banking functionality to customers via their mobile device.
+label	Provides all of the Internet Banking functionality to customers via their web browser.
+label	Reads from and writes to
+label	Reads from and writes to
+label	Relational Database Schema
+label	Relational Database Schema
+label	Replicates data to
+label	Single Page Application
+label	Stores user registration information, hashed authentication credentials, access logs, etc.
+label	Stores user registration information, hashed authentication credentials, access logs, etc.
+label	Web Application
+label	Web Browser
+label	Xamarin
+label	bigbank-api*** x8
+label	bigbank-db01
+label	bigbank-db02
+label	bigbank-web*** x4
+label	json/HTTPS
+label	json/HTTPS
+rel	api	db	one	Reads from and writes to	JDBC
+rel	api	db2	one	Reads from and writes to	JDBC
+rel	db	db2	one	Replicates data to
+rel	mobile	api	one	Makes API calls to	json/HTTPS
+rel	spa	api	one	Makes API calls to	json/HTTPS
+rel	web	spa	one	Delivers to the customer's web browser
+title	Deployment Diagram for Internet Banking System - Live

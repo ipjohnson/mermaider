@@ -1,0 +1,32 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3347d92631a07bc2
+accept	yes
+branch	main
+branch	nice_feature
+branch	very_nice_feature
+commit	0	main	normal			1
+commit	1	main	normal			2
+commit	2	nice_feature	normal			3
+commit	3	main	normal			4
+commit	4	very_nice_feature	normal			5
+commit	5	main	normal			6
+commit	6	nice_feature	normal			7
+commit	7	main	merge	customTag	nice_feature	customID
+commit	8	very_nice_feature	normal			8
+commit	9	main	normal			9
+drawn	yes
+label	1
+label	2
+label	3
+label	4
+label	5
+label	6
+label	7
+label	8
+label	9
+label	customID
+label	customTag
+label	main
+label	nice_feature
+label	very_nice_feature

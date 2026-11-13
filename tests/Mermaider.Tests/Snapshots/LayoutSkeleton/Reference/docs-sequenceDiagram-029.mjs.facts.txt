@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source af802c7e61fb4116
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Charlie	Charlie	participant
+actor	Diana	Diana	participant
+actor	John	John	participant
+bbox	label	Alice to Bob	463.9	86.1	558.1	105.1
+bbox	label	Alice to John	435.8	180.1	536.2	199.1
+bbox	label	Can we do this today?	498.8	316.2	657.2	335.2
+bbox	label	Can you help us today?	594	405.2	762	424.2
+bbox	label	Go help John	124.4	138.2	219.6	157.2
+bbox	label	I want this done today	194.2	227.2	349.8	246.2
+bbox	label	John to Charlie	647.8	264.1	764.2	283.1
+bbox	label	John to Diana	627.2	358.1	734.8	377.1
+bbox	label	par	464	261	514	296
+bbox	label	par	64	83	114	118
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	469	150	542
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	469	350	542
+bbox	node	Charlie	612	0	762	73
+bbox	node	Charlie	612	469	762	542
+bbox	node	Diana	812	0	962	73
+bbox	node	Diana	812	469	962	542
+bbox	node	John	400	0	550	73
+bbox	node	John	400	469	550	542
+block	par	Alice to Bob
+block	par	John to Charlie
+canvas	-50	-10	1012	583
+divider	Alice to John
+divider	John to Diana
+drawn	yes
+message	Alice	Bob	solid	filled	Go help John
+message	Alice	John	solid	filled	I want this done today
+message	John	Charlie	solid	filled	Can we do this today?
+message	John	Diana	solid	filled	Can you help us today?

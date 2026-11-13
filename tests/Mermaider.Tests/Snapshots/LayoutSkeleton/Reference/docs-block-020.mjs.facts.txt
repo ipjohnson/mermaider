@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7c6756e88c82bb95
+accept	yes
+block	ida	ida	rect	1
+block	idb	idb	rect	1
+block	idc	idc	rect	1
+drawn	yes
+label	ida
+label	idb
+label	idc
+space		3
+space		3
+space		3

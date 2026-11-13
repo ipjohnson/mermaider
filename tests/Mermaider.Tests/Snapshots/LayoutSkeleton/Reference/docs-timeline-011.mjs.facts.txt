@@ -1,0 +1,37 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a24bead1895db6a5
+accept	yes
+drawn	yes
+event	2002	LinkedIn
+event	2004	Facebook
+event	2004	Google
+event	2005	YouTube
+event	2006	Twitter
+event	2007	Tumblr
+event	2008	Instagram
+event	2010	Pinterest
+label	2002
+label	2004
+label	2005
+label	2006
+label	2007
+label	2008
+label	2010
+label	Facebook
+label	Google
+label	History of Social Media Platform
+label	Instagram
+label	LinkedIn
+label	Pinterest
+label	Tumblr
+label	Twitter
+label	YouTube
+period		2002
+period		2004
+period		2005
+period		2006
+period		2007
+period		2008
+period		2010
+title	History of Social Media Platform

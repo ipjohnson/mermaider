@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c1690d0b0e175012
+accept	yes
+block	Backend	Backend	rect	1
+block	Database	Database	cyl	1
+block	Disk	Disk	rect	1
+block	Frontend	Frontend	rect	1
+block	blockArrowId6		block_arrow	1
+block	down		block_arrow	1
+block	left		block_arrow	1
+drawn	yes
+label	Backend
+label	Database
+label	Disk
+label	Frontend
+space		2
+space		2

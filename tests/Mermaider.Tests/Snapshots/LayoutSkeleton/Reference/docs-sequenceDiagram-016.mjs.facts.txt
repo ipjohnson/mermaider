@@ -1,0 +1,30 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5fa9f1e6f236b76b
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Carl	Carl	participant
+actor	D	Donald	actor
+bbox	label	Fine, thank you. And you?	105.5	137.6	290.5	156.1
+bbox	label	Hello Bob, how are you ?	102.6	93.6	281.4	112.1
+bbox	label	Hi Carl!	264.3	181.6	317.7	200.1
+bbox	label	Hi!	704.2	262.6	723.8	281.1
+bbox	label	I agree	136.1	423.6	185.9	442.1
+bbox	label	We are too many	230.2	342.6	351.8	361.1
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	503	150	576
+bbox	node	Bob	240	0	390	73
+bbox	node	Bob	240	410	390	483
+bbox	node	Carl	515	168.5	665	241.5
+bbox	node	Carl	515	329.5	665	402.5
+bbox	node	D	839.7	249	890.3	316.8
+bbox	node	D	839.7	509	890.3	576.8
+canvas	-50	-10	990	617
+drawn	yes
+message	Alice	Bob	solid	filled	Hello Bob, how are you ?
+message	Alice	Carl	solid	cross	We are too many
+message	Alice	Carl	solid	filled	Hi Carl!
+message	Bob	Alice	solid	filled	Fine, thank you. And you?
+message	Bob	Alice	solid	filled	I agree
+message	Carl	D	solid	filled	Hi!

@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fbe6837b9d1a9a5d
+accept	yes
+drawn	yes
+label	Category 1
+label	Category 2
+label	Category 3
+label	Category 4
+label	Different Colors in xyChart
+label	categoriesX
+label	valuesY
+series	bar	15,25,20,30
+series	bar	20,30,25,35
+series	line	10,20,30,40
+series	line	5,15,25,35
+title	Different Colors in xyChart
+x-axis	categoriesX	Category 1,Category 2,Category 3,Category 4
+y-axis	valuesY

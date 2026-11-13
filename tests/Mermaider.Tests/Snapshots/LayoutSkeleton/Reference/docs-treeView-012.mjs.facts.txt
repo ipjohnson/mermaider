@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3a512e31979952f0
+accept	yes
+drawn	yes
+label	⚙️ config.yaml
+label	🎨 ui
+label	📝 README.md
+label	📦 packages
+label	🚀 rocket-app
+label	🛠️ utils
+label	🧪 tests
+node	🚀 rocket-app	dir
+node	🚀 rocket-app / ⚙️ config.yaml	file
+node	🚀 rocket-app / 📝 README.md	file
+node	🚀 rocket-app / 📦 packages	dir
+node	🚀 rocket-app / 📦 packages / 🎨 ui	dir
+node	🚀 rocket-app / 📦 packages / 🛠️ utils	dir
+node	🚀 rocket-app / 🧪 tests	dir

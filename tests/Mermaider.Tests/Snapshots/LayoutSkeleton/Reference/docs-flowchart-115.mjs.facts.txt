@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a18dbc06d2617b03
+accept	yes
+drawn	yes
+edge	B	C	none	arrow	solid
+icon	B	fa:fa-twitter
+icon	C	fab:fa-truck-bold
+node	B	for peace	rect
+node	C	a custom icon	rect

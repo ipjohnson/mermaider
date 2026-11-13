@@ -1,0 +1,47 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 35afb2a472e38d68
+accept	yes
+drawn	yes
+edge	analyst	R	delivery	L	none	arrow
+edge	brief	R	analyst	L	none	arrow
+edge	db_two	B	brief	T	none	arrow
+edge	src_a	B	db_one	T	none	arrow
+edge	src_b	B	db_two	T	none	arrow
+edge	src_c	B	db_three	T	none	arrow
+group	output	Output
+group	sources	Sources
+group	storage	Storage
+icon	analyst	server
+icon	brief	disk
+icon	db_one	database
+icon	db_three	database
+icon	db_two	database
+icon	delivery	cloud
+icon	output	disk
+icon	sources	cloud
+icon	src_a	server
+icon	src_b	server
+icon	src_c	server
+icon	storage	database
+label	Analyst
+label	Brief
+label	DB One
+label	DB Three
+label	DB Two
+label	Delivery
+label	Output
+label	Source A
+label	Source B
+label	Source C
+label	Sources
+label	Storage
+service	analyst	Analyst	output
+service	brief	Brief	output
+service	db_one	DB One	storage
+service	db_three	DB Three	storage
+service	db_two	DB Two	storage
+service	delivery	Delivery	output
+service	src_a	Source A	sources
+service	src_b	Source B	sources
+service	src_c	Source C	sources

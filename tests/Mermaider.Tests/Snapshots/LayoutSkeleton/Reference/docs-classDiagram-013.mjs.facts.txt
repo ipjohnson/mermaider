@@ -1,0 +1,54 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d6b3d7c2435fd4c2
+accept	yes
+bbox	label	Aggregation	226.9	133	302.4	154
+bbox	label	Association	338.1	133	409.7	154
+bbox	label	Composition	117.2	133	195	154
+bbox	label	Dependency	549.8	133	628.4	154
+bbox	label	Inheritance	12	133	81.3	154
+bbox	label	Link(Dashed)	767.5	133	850.8	154
+bbox	label	Link(Solid)	448.6	133	514.7	154
+bbox	label	Realization	664.2	133	733.5	154
+bbox	node	classA	12.4	12	81.6	93
+bbox	node	classB	12.4	194	81.6	275
+bbox	node	classC	121.6	12	190.7	93
+bbox	node	classD	121.6	194	190.7	275
+bbox	node	classE	230.7	12	299.1	93
+bbox	node	classF	231.1	194	298.7	275
+bbox	node	classG	339.1	12	409	93
+bbox	node	classH	339.5	194	408.7	275
+bbox	node	classI	450.6	12	513.5	93
+bbox	node	classJ	448.7	194	515.5	275
+bbox	node	classK	554.7	12	623.9	93
+bbox	node	classL	555.5	194	623.1	275
+bbox	node	classM	663.9	12	734.6	93
+bbox	node	classN	664.6	194	733.8	275
+bbox	node	classO	774.6	12	844.5	93
+bbox	node	classP	775.3	194	843.7	275
+canvas	4	4	858.8	283
+class	classA	classA
+class	classB	classB
+class	classC	classC
+class	classD	classD
+class	classE	classE
+class	classF	classF
+class	classG	classG
+class	classH	classH
+class	classI	classI
+class	classJ	classJ
+class	classK	classK
+class	classL	classL
+class	classM	classM
+class	classN	classN
+class	classO	classO
+class	classP	classP
+drawn	yes
+relation	classA	classB	none	triangle	solid	Inheritance
+relation	classC	classD	none	diamond-filled	solid	Composition
+relation	classE	classF	none	diamond	solid	Aggregation
+relation	classG	classH	none	arrow	solid	Association
+relation	classI	classJ	none	none	solid	Link(Solid)
+relation	classK	classL	none	arrow	dashed	Dependency
+relation	classM	classN	none	triangle	dashed	Realization
+relation	classO	classP	none	none	dashed	Link(Dashed)

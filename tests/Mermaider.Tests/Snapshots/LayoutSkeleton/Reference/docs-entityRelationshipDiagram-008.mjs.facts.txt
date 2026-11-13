@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fff06d91b2ed0ed8
+accept	yes
+drawn	yes
+entity	CAR	CAR
+entity	NAMED-DRIVER	NAMED-DRIVER
+entity	PERSON	PERSON
+label	CAR
+label	NAMED-DRIVER
+label	PERSON
+label	allows
+label	is
+relation	CAR	NAMED-DRIVER	one	zero-or-more	identifying	allows
+relation	PERSON	NAMED-DRIVER	zero-or-more	zero-or-more	non-identifying	is

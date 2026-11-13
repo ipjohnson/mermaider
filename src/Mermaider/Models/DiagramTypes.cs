@@ -55,7 +55,7 @@ public enum DiagramTypes : long
 
 	/// <summary>
 	/// Diagram types that use a <c>-beta</c> keyword in Mermaid source.
-	/// Radar, Treemap, Venn, Sankey, XyChart, Packet, Architecture, Block, TreeView.
+	/// Radar, Treemap, Venn, Sankey, XyChart, Packet, Architecture, Block, TreeView, Usecase.
 	/// </summary>
 	Beta = Radar | Treemap | Venn | Sankey | XyChart | Packet | Architecture | Block | TreeView | Usecase,
 

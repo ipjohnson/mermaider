@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 82e0f657dc5d85d7
+accept	yes
+drawn	yes
+node	A	This is a text block	text

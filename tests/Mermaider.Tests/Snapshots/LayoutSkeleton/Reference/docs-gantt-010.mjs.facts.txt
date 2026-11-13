@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source eb63c5df30e42f5d
+accept	yes
+drawn	yes
+label	34
+label	36
+label	5
+label	71
+label	9
+label	Git Issues - days since last update
+label	Issue1300
+label	Issue19062
+label	Issue193
+label	Issue19401
+label	Issue7441
+section	Issue1300
+section	Issue19062
+section	Issue193
+section	Issue19401
+section	Issue7441
+task	Issue1300	5		1970-01-01 00:00	1970-01-01 00:00
+task	Issue19062	71		1970-01-01 00:00	1970-01-01 00:01
+task	Issue193	34		1970-01-01 00:00	1970-01-01 00:00
+task	Issue19401	36		1970-01-01 00:00	1970-01-01 00:00
+task	Issue7441	9		1970-01-01 00:00	1970-01-01 00:00
+title	Git Issues - days since last update

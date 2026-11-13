@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4ac8b1e3dba7ce46
+accept	yes
+drawn	yes
+label	Innovation
+set	Desirable		10
+set	Feasible		10
+set	Viable		10
+union	Desirable,Feasible,Viable	Innovation	1.111

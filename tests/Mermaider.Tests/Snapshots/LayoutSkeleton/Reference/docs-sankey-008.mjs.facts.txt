@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1bafcf479a9a4573
+accept	yes
+drawn	yes
+flow	Electricity grid	Heating and cooling - homes	113.726
+flow	Electricity grid	Industry	342.165
+flow	Electricity grid	Losses	56.691
+label	Electricity grid
+label	Heating and cooling - homes
+label	Industry
+label	Losses

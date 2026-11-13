@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d34688197fc3593a
+accept	yes
+drawn	yes
+label	**Root** with a second line Unicode works too: 🤓
+label	Regular labels still works
+label	The dog in **the** hog... a *very long text* that wraps to a new line
+node	**Root** with a second line Unicode works too: 🤓	rect
+node	**Root** with a second line Unicode works too: 🤓 / Regular labels still works	rect
+node	**Root** with a second line Unicode works too: 🤓 / The dog in **the** hog... a *very long text* that wraps to a new line	rect

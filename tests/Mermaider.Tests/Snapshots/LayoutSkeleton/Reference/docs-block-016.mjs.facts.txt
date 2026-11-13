@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0c75f48188937507
+accept	yes
+block	A	Christmas	trap-b	1
+block	B	Go shopping	trap-t	1
+block	id1	This is the text in the box	lean-r	1
+block	id2	This is the text in the box	lean-l	1
+drawn	yes
+label	Christmas
+label	Go shopping
+label	This is the text in the box
+label	This is the text in the box

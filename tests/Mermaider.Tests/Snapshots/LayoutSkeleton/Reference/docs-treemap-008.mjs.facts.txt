@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9c4e6d63b7c161fc
+accept	yes
+drawn	yes
+label	Company A
+label	Company B
+label	Company C
+label	Market Share
+label	Others
+node	Market Share
+node	Market Share / Company A	0.35
+node	Market Share / Company B	0.25
+node	Market Share / Company C	0.15
+node	Market Share / Others	0.25

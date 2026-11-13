@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3056eee3048bf090
+accept	yes
+drawn	yes
+label	README.md
+label	mermaid
+label	package.json
+label	packages
+label	parser
+label	parser.ts
+label	renderer.ts
+label	src
+label	src
+node	README.md	file
+node	packages	dir
+node	packages / mermaid	dir
+node	packages / mermaid / package.json	file
+node	packages / mermaid / src	dir
+node	packages / mermaid / src / parser.ts	file
+node	packages / mermaid / src / renderer.ts	file
+node	packages / parser	dir
+node	packages / parser / src	dir

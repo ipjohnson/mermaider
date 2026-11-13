@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9a53dbe64737af6c
+accept	yes
+drawn	yes
+label	Buildable
+label	Marketable
+label	Ship it
+label	Sustainable
+set	Desirable		10
+set	Feasible		10
+set	Viable		10
+union	Desirable,Feasible	Buildable	2.5
+union	Desirable,Feasible,Viable	Ship it	1.111
+union	Desirable,Viable	Marketable	2.5
+union	Feasible,Viable	Sustainable	2.5

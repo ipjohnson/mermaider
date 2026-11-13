@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fe5831e2389554d0
+accept	yes
+drawn	yes
+node	id1	This is the text in the box	fr-rect

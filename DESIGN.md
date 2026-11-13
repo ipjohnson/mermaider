@@ -1,6 +1,6 @@
 # Mermaider Design System
 
-**Goal:** all 24 diagram types are one family, restylable from a minimal input set. A host sets two colours
+**Goal:** all 25 diagram types are one family, restylable from a minimal input set. A host sets two colours
 (`--bg`, `--fg`) and picks a **style preset**; every diagram type, light and dark, responds coherently with no
 per-type work.
 

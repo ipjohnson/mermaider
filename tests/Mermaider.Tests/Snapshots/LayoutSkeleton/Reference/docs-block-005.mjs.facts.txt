@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bd54fe8aea77a0c8
+accept	yes
+block	A	A: I am a wide one	rect	1
+block	D	D	rect	1	anonymous-1
+block	anonymous-1		composite	1
+drawn	yes
+label	A: I am a wide one
+label	D

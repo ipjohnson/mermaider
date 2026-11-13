@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 53d07cd0b16d68dc
+accept	yes
+drawn	yes
+label	I am a hexagon
+node	I am a hexagon	hex

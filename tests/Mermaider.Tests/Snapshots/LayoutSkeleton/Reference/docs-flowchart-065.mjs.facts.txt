@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 022e2327ceeaa8cf
+accept	yes
+drawn	yes
+node	A	Stored data	bow-rect

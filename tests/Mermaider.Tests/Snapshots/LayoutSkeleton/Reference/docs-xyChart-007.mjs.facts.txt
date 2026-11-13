@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ff4787edb814b8de
+accept	yes
+drawn	yes
+label	Q1
+label	Q2
+label	Q3
+label	Q4
+label	Quarterly Performance
+label	Revenue ($M)
+series	line	25,45,72,90
+title	Quarterly Performance
+x-axis		Q1,Q2,Q3,Q4
+y-axis	Revenue ($M)

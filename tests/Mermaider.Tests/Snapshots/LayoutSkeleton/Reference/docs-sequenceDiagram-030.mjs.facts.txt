@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 201a0912328e98f2
+accept	yes
+actor	DB	DB	participant
+actor	Service	Service	participant
+bbox	label	Credentials rejected	62.9	300	214.1	317.4
+bbox	label	Establish a connection to the DB	43.4	87	283.6	104.2
+bbox	label	Log different error	12.6	347.1	139.7	364.5
+bbox	label	Log error	43.5	228.1	108.7	245.5
+bbox	label	Network timeout	76.3	181	200.7	198.2
+bbox	label	connect	146	139.1	202	156.2
+bbox	label	critical	-9	83	41	118
+bbox	node	DB	200	0	350	73
+bbox	node	DB	200	460	350	533
+bbox	node	Service	0	0	150	73
+bbox	node	Service	0	460	150	533
+block	critical	Establish a connection to the DB
+canvas	-59	-10	400	574
+divider	Credentials rejected
+divider	Network timeout
+drawn	yes
+message	Service	DB	dashed	none	connect
+message	Service	Service	dashed	none	Log different error
+message	Service	Service	dashed	none	Log error

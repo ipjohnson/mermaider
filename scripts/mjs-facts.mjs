@@ -60,7 +60,14 @@ const shapes = shapeNames()
 
 const browser = await puppeteer.launch({ headless: 'shell' })
 const page = await browser.newPage()
+// mermaid reads a gantt date without a dateFormat as UTC and a time-only date against today, so the facts are made in
+// UTC on a fixed day.
+await page.emulateTimezone('UTC')
 await page.setContent('<!doctype html><html><body></body></html>')
+await page.addScriptTag({
+	content: `{ const now = Date.UTC(2000, 0, 1); const D = Date;
+	globalThis.Date = class extends D { constructor(...a) { super(...(a.length ? a : [now])) } static now() { return now } } }`,
+})
 await page.addScriptTag({ path: path.join(mermaidDir, 'dist', 'mermaid.min.js') })
 await page.evaluate(() => mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' }))
 
@@ -320,14 +327,16 @@ async function extractFacts(source, name, shapes) {
 		const parentOf = id => {
 			let p = nodes.get(id)?.parentId ?? null
 			while (p && p.endsWith('----parent')) p = nodes.get(p)?.parentId ?? null
-			return p
+			return p && region(p)
 		}
+		// The last concurrent region of a state gets a random id, id-<random>-<n>; the others are divider-id-<n>.
+		const region = id => id.replace(/^id-[a-z0-9]+-(\d+)$/, 'divider-id-$1')
 		const isNote = n => n.shape === 'note' || n.id.includes('----note')
 		const name = id => {
 			const n = nodes.get(id)
 			if (n?.shape === 'stateStart') return `[*]start@${parentOf(id) ?? 'root'}`
 			if (n?.shape === 'stateEnd') return `[*]end@${parentOf(id) ?? 'root'}`
-			return id
+			return region(id)
 		}
 		const children = new Map()
 		for (const n of data.nodes) {
@@ -346,7 +355,7 @@ async function extractFacts(source, name, shapes) {
 				continue
 			}
 			if (n.isGroup) {
-				facts.push(tab('group', n.id, clusterLabel(n.id), [...(children.get(n.id) ?? [])].sort().join(',')))
+				facts.push(tab('group', region(n.id), clusterLabel(n.id), [...(children.get(region(n.id)) ?? [])].sort().join(',')))
 				continue
 			}
 			const id = name(n.id)
@@ -699,14 +708,21 @@ async function extractFacts(source, name, shapes) {
 	function block() {
 		const blockShape = { square: 'rect', na: 'rect', round: 'rounded', composite: 'composite' }
 		const shown = []
+		// A block without an id gets id-<random>-<counter>, the counter running across diagrams; name it by its order here.
+		const anonymous = new Map()
+		const id = raw => {
+			if (!/^id-[a-z0-9]+-\d+$/.test(raw)) return raw
+			if (!anonymous.has(raw)) anonymous.set(raw, `anonymous-${anonymous.size + 1}`)
+			return anonymous.get(raw)
+		}
 		const walk = (n, parent) => {
 			for (const c of n.children ?? []) {
 				if (c.type === 'space') facts.push(tab('space', parent, num(c.width ?? c.widthInColumns ?? 1)))
 				else {
-					facts.push(tab('block', c.id, c.type === 'composite' ? '' : decode(c.label), blockShape[c.type] ?? shape(c.type), num(c.widthInColumns ?? 1), parent))
+					facts.push(tab('block', id(c.id), c.type === 'composite' ? '' : decode(c.label), blockShape[c.type] ?? shape(c.type), num(c.widthInColumns ?? 1), parent))
 					if (c.type !== 'composite') shown.push(decode(c.label))
 				}
-				walk(c, c.id)
+				walk(c, id(c.id))
 			}
 		}
 		walk(db.getBlocksFlat().find(b => b.id === 'root') ?? { children: db.getBlocks() }, '')
