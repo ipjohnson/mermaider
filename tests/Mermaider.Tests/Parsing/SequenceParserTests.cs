@@ -161,4 +161,18 @@ public class SequenceParserTests
 		diagram.Notes[0].Position.Should().Be(SequenceNotePosition.Over);
 		diagram.Notes[0].ActorIds.Should().HaveCount(2);
 	}
+
+	[Test]
+	public void Parses_critical_block_with_option_divider()
+	{
+		var lines = new[] { "sequenceDiagram", "critical Establish connection", "A->>B: connect", "option Network timeout", "A->>A: log", "end", };
+
+		var diagram = SequenceParser.Parse(lines);
+
+		diagram.Blocks.Should().HaveCount(1);
+		diagram.Blocks[0].Type.Should().Be(SequenceBlockType.Critical);
+		diagram.Blocks[0].Label.Should().Be("Establish connection");
+		diagram.Blocks[0].Dividers.Should().HaveCount(1);
+		diagram.Blocks[0].Dividers[0].Label.Should().Be("Network timeout");
+	}
 }

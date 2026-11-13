@@ -15,10 +15,10 @@ internal static partial class SequenceParser
 	[GeneratedRegex(@"^Note\s+(left of|right of|over)\s+([^:]+):\s*(.+)$", RegexOptions.IgnoreCase, TimeoutMs)]
 	private static partial Regex NotePattern();
 
-	[GeneratedRegex(@"^(loop|alt|opt|par|critical|break|rect)\s*(.*)$", RegexOptions.None, TimeoutMs)]
+	[GeneratedRegex(@"^(loop|alt|opt|par|critical|break|rect)(?:\s+(.*))?$", RegexOptions.None, TimeoutMs)]
 	private static partial Regex BlockStartPattern();
 
-	[GeneratedRegex(@"^(else|and)\s*(.*)$", RegexOptions.None, TimeoutMs)]
+	[GeneratedRegex(@"^(else|and|option)(?:\s+(.*))?$", RegexOptions.None, TimeoutMs)]
 	private static partial Regex DividerPattern();
 
 	[GeneratedRegex(@"^(\S+?)\s*(->>|-->>|-\)|--\)|-x|--x|->|-->)\s*([+-]?)(\S+?)\s*:\s*(.+)$", RegexOptions.None, TimeoutMs)]

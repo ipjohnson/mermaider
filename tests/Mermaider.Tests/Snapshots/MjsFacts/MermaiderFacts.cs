@@ -300,7 +300,7 @@ internal static partial class MermaiderFacts
 		var text = m.IsMethod
 			? $"{m.Name}({m.Params}){(string.IsNullOrEmpty(m.Type) ? string.Empty : " : " + m.Type)}"
 			: string.IsNullOrEmpty(m.Type) ? m.Name : $"{m.Type} {m.Name}";
-		return visibility + Display(text);
+		return visibility + Norm(text);
 	}
 
 	private static void Sequence(SequenceDiagram diagram, XDocument doc, List<string> facts)

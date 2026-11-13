@@ -489,7 +489,9 @@ internal static partial class FlowchartParser
 				var label = isMarkdown
 					? MultilineUtils.DecodeEntities(rawLabel[1..^1].Trim().Replace("\\n", "\n"))
 					: MultilineUtils.NormalizeBrTags(rawLabel).Replace("\\n", "\n");
-				RegisterNode(nodes, subgraphStack, new MermaidNode(id, label, shape, isMarkdown));
+				// mermaid.js lets the latest shaped definition set the label and shape, even after a bare reference.
+				nodes[id] = new MermaidNode(id, label, shape, isMarkdown);
+				AddToCurrentSubgraph(subgraphStack, id);
 				remaining = text[match.Length..];
 				break;
 			}

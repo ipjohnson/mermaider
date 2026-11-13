@@ -9,33 +9,6 @@ rfc-path-flow - node | perRepo | Per-repo\ndocset.yml + toc.yml
 rfc-migration-lifecycle + edge | VirtualRemap | PhysicalRestructure | none | arrow | solid | run apply-nav-restructure (only if content moves)
 rfc-migration-lifecycle - edge | VirtualRemap | PhysicalRestructure | none | arrow | solid | run apply-nav-restructure\n(only if content moves)
 
-# Step mjs-found-divergences: a flowchart node labelled after its first bare reference keeps its id as the label.
-agentdriver-queues-1 + node | bg | bg
-agentdriver-queues-1 + node | d | d
-agentdriver-queues-1 + node | fg | fg
-agentdriver-queues-1 - node | bg | 4. Background queues spare slots only
-agentdriver-queues-1 - node | d | Dispatcher one lock, one pass writes pool.ndjson
-agentdriver-queues-1 - node | fg | 3. Foreground queues and Tasks, shared by weight
-agentdriver-work-1 + node | T | T
-agentdriver-work-1 - node | T | Task with items
-
-# Step mjs-found-divergences: critical/option is parsed as an opt block labelled "ion ...".
-spec-sequence-critical-block + block | opt | ion Network timeout
-spec-sequence-critical-block - block | critical | Establish connection
-spec-sequence-critical-block - divider | Network timeout
-
-# Step mjs-found-divergences: a "State : description" line is not drawn; mermaid.js 12 draws it as the state's label.
-spec-state-state-descriptions + node | Booting | Booting | state
-spec-state-state-descriptions + node | Processing | Processing | state
-spec-state-state-descriptions + node | Ready | Ready | state
-spec-state-state-descriptions - node | Booting | System is starting up | state
-spec-state-state-descriptions - node | Processing | Handling request | state
-spec-state-state-descriptions - node | Ready | Accepting connections | state
-
-# Step mjs-found-divergences: class member types draw ~T~ generics raw instead of <T>.
-spec-class-generics + method | Repository | +findAll() : List~T~
-spec-class-generics - method | Repository | +findAll() : List<T>
-
 # ipjohnson/AgentDriver#4281: class display labels, two-ended relations and reversed lollipops.
 cs-display-label + class | Animal | Animal
 cs-display-label - class | Animal | Living creature

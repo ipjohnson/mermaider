@@ -191,4 +191,18 @@ public class FlowchartParserTests
 		graph.Edges[2].Target.Should().Be("F");
 		graph.Edges[2].Label.Should().Be("x | y");
 	}
+
+	[Test]
+	public void Node_labelled_after_its_first_bare_reference_takes_the_label()
+	{
+		var graph = MermaidRenderer.Parse("""
+			flowchart LR
+			  A --> T
+			  T[Tee label] --> D
+			""");
+
+		graph.Nodes["T"].Label.Should().Be("Tee label");
+		graph.Nodes["T"].Shape.Should().Be(NodeShape.Rectangle);
+		graph.Nodes.Keys.Should().Equal("A", "T", "D");
+	}
 }

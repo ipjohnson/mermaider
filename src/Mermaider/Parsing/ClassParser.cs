@@ -303,7 +303,7 @@ internal static partial class ClassParser
 			var isStatic = name.EndsWith('$') || rest.Contains('$');
 			var isAbstract = name.EndsWith('*') || rest.Contains('*');
 
-			return (new ClassMember(visibility, name.TrimEnd('$', '*'), type, isStatic, isAbstract, IsMethod: true, parms), true);
+			return (new ClassMember(visibility, Generics(name.TrimEnd('$', '*')), Generics(type), isStatic, isAbstract, IsMethod: true, Generics(parms)), true);
 		}
 
 		var parts = rest.Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -322,8 +322,45 @@ internal static partial class ClassParser
 		var isStaticAttr = memberName.EndsWith('$');
 		var isAbstractAttr = memberName.EndsWith('*');
 
-		return (new ClassMember(visibility, memberName.TrimEnd('$', '*'), memberType, isStaticAttr, isAbstractAttr), false);
+		return (new ClassMember(visibility, Generics(memberName.TrimEnd('$', '*')), Generics(memberType), isStaticAttr, isAbstractAttr), false);
 	}
+
+	/// <summary>
+	/// Writes the <c>~T~</c> generics of a member as <c>&lt;T&gt;</c>, nested ones too: <c>List~List~int~~</c> is
+	/// <c>List&lt;List&lt;int&gt;&gt;</c>. A tilde between two word characters opens a generic and any other tilde closes
+	/// the innermost one. Text whose tildes do not pair up is returned unchanged.
+	/// </summary>
+	[return: System.Diagnostics.CodeAnalysis.NotNullIfNotNull(nameof(text))]
+	internal static string? Generics(string? text)
+	{
+		if (text is null || !text.Contains('~'))
+			return text;
+
+		var chars = text.ToCharArray();
+		var depth = 0;
+		for (var i = 0; i < chars.Length; i++)
+		{
+			if (chars[i] != '~')
+				continue;
+			var opens = i > 0 && IsWordChar(text[i - 1]) && i + 1 < text.Length && IsWordChar(text[i + 1]);
+			if (opens)
+			{
+				chars[i] = '<';
+				depth++;
+			}
+			else if (depth > 0)
+			{
+				chars[i] = '>';
+				depth--;
+			}
+			else
+				return text;
+		}
+
+		return depth == 0 ? new string(chars) : text;
+	}
+
+	private static bool IsWordChar(char c) => char.IsLetterOrDigit(c) || c == '_';
 
 	private static ClassRelationship? ParseRelationship(string line)
 	{
