@@ -69,7 +69,7 @@ var svg = MermaidRenderer.RenderSvg("""
 Mermaider is a **complete Mermaid parser, layout engine, and SVG renderer** built entirely in .NET.
 Hand it a Mermaid string; get a sanitized, consistently styled SVG back. No interop, no child processes, no headless browsers.
 
-It covers all 24 major Mermaid diagram types, always-on allowlist SVG sanitization with no opt-out,
+It covers all 25 major Mermaid diagram types, always-on allowlist SVG sanitization with no opt-out,
 and a unified design-token model so every diagram type renders from the same `RenderOptions` — one API,
 one theming model, consistent output regardless of diagram type.
 
@@ -78,7 +78,7 @@ one theming model, consistent output regardless of diagram type.
 - **[Pure .NET, zero interop](#pure-net-parsing-and-rendering):** just a NuGet reference. No Chromium, no Node.js, no subprocess management.
 - **[Native AOT](#native-aot):** every public API proven in CI on Linux, macOS, and Windows.
 - **[Built-in layout engine](#built-in-layout-engine):** zero-dependency layered layout with compound subgraphs and an orthogonal edge router.
-- **[24 diagram types](#supported-diagrams):** one API, one theming model for all of them.
+- **[25 diagram types](#supported-diagrams):** one API, one theming model for all of them.
 - **[Unified theming](#theming):** 15 themes, live-switchable via CSS custom properties.
 - **[Always-on SVG sanitization](#svg-sanitization):** allowlist-only, no opt-out.
 - **[Strict styling mode](#strict-styling):** enforce your design system on user-authored diagrams.
@@ -146,7 +146,7 @@ Coverage: [unit tests](tests/Mermaider.Tests/Rendering/SvgSanitizerTests.cs) and
 
 #### Visual consistency
 
-All 24 diagram types render from the same [`RenderOptions`](#render-options). A single set of values controls:
+All 25 diagram types render from the same [`RenderOptions`](#render-options). A single set of values controls:
 
 - **Colors**: `Bg`, `Fg`, `Accent`, `Muted`, `Surface`, `Border`, `Line`
 - **Style preset**: `Style` (Quiet, Blueprint, Tonal) plus `Gradient`, `Tint` and `Elevation`
@@ -332,9 +332,9 @@ Named sets:
 
 | Set | Contents |
 |-----|----------|
-| `DiagramTypes.All` | All 24 diagram types (default) |
+| `DiagramTypes.All` | All 25 diagram types (default) |
 | `DiagramTypes.Stable` | 15 types with stable Mermaid syntax (no `-beta` keyword) |
-| `DiagramTypes.Beta` | 9 types that use a `-beta` keyword (`radar-beta`, `architecture-beta`, etc.) |
+| `DiagramTypes.Beta` | 10 types that use a `-beta` keyword (`radar-beta`, `architecture-beta`, etc.) |
 
 ### Edge rounding
 
@@ -1119,11 +1119,41 @@ Supports indentation-based and box-drawing (`├──`/`└──`/`│`) input
 Built-in icons: `file`, `folder`, `folder-open`, `file:code`, `file:image`, `file:document`,
 `file:config`, `file:data`.
 
+### Use Case
+
+```csharp
+MermaidRenderer.RenderSvg("""
+    usecase-beta
+    direction LR
+    actor Customer
+    actor Staff("Order staff")@{ type: hollow }
+    systemBoundary ordering["Ordering system"]@{ type: package }
+      Browse("Browse products")
+      Checkout("Checkout") <<Core>>
+      Payment("Process payment")
+      Review[Review order]
+    end
+    note for Checkout "Validates the cart before payment"
+    Customer --> Browse
+    Customer -- "places order" ---> Checkout
+    Checkout ..> : include Payment
+    Staff --> Review
+    """);
+```
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nullean/mermaider/main/.github/readme/usecase.dark.svg" /><img src="https://raw.githubusercontent.com/nullean/mermaider/main/.github/readme/usecase.light.svg" alt="Use Case" /></picture></p>
+
+Follows mermaid 12.3.0's `usecase-beta` syntax: actors (`hollow`, `awesome` and icon variants, `business: true`),
+ellipse `(…)` and rectangle `[…]` use cases, `systemBoundary … end` (`type: package` draws a title tab), the seven
+association operators with labels and extra dashes for length, `..> : include`, `..> : extend` and `--|>`, notes,
+`<<stereotypes>>`, `json` tables, and `classDef` / `class` / `style` / `:::`. Input mermaid refuses throws a
+`MermaidParseException` naming the line. Edge animation is accepted but not drawn.
+
 ## Packages
 
 | Package | What it is | |
 |---|---|---|
-| [`Mermaider`](src/Mermaider/README.md) | the parser, layout and SVG and text renderer for all 24 diagram types | [![NuGet](https://img.shields.io/nuget/v/Mermaider?style=flat-square)](https://www.nuget.org/packages/Mermaider) |
+| [`Mermaider`](src/Mermaider/README.md) | the parser, layout and SVG and text renderer for all 25 diagram types | [![NuGet](https://img.shields.io/nuget/v/Mermaider?style=flat-square)](https://www.nuget.org/packages/Mermaider) |
 | [`Mermaider.Cli`](src/Mermaider.Cli/README.md) | the `mermaid` command line tool | [![NuGet](https://img.shields.io/nuget/v/Mermaider.Cli?style=flat-square)](https://www.nuget.org/packages/Mermaider.Cli) |
 | [`Sugiyama`](src/Sugiyama/README.md) | the zero-dependency layered layout engine underneath, usable on its own | [![NuGet](https://img.shields.io/nuget/v/Sugiyama?style=flat-square)](https://www.nuget.org/packages/Sugiyama) |
 | [`Mermaider.Layout.Msagl`](src/Mermaider.Layout.Msagl/README.md) | optional, legacy-compatible MSAGL layout provider | [![NuGet](https://img.shields.io/nuget/v/Mermaider.Layout.Msagl?style=flat-square)](https://www.nuget.org/packages/Mermaider.Layout.Msagl) |

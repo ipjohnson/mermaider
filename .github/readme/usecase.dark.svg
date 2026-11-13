@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1025.171 392.66" width="1025.171" height="392.66" style="--bg:#18181B;--fg:#FAFAFA;--line:#AFBAC9;--accent:#60a5fa">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, color-mix(in srgb, var(--bg) 35%, black) 55%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, color-mix(in srgb, var(--bg) 35%, black) 35%, transparent)); }
+</style>
+
+<rect class="boundary-tab" x="513.518" y="24" width="138.63799999999998" height="16" rx="3" fill="color-mix(in srgb, #F7BC81 22%, var(--bg))" stroke="color-mix(in srgb, #F7BC81 42%, var(--bg))" stroke-width="1.25" />
+<g class="subgraph" data-id="ordering" data-kind="boundary" data-type="package">
+  <rect x="513.518" y="38" width="487.653" height="330.66" rx="12" ry="12" fill="url(#mf0d69919-cw-p1-0)" stroke="color-mix(in srgb, #F7BC81 42%, var(--bg))" stroke-width="1.25" />
+  <path d="M513.518,66 L513.518,50 Q513.518,38 525.518,38 L989.171,38 Q1001.171,38 1001.171,50 L1001.171,66 Z" fill="color-mix(in srgb, #F7BC81 22%, var(--bg))" />
+  <line x1="513.518" y1="66" x2="1001.171" y2="66" stroke="color-mix(in srgb, #F7BC81 42%, var(--bg))" stroke-width="1.25" />
+</g>
+<path class="edge relationship" data-type="association" data-source="Customer" data-target="Browse" d="M94.5,119.5 L537.5,119.5" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#mf0d69919-mk-arrow)" />
+<path class="edge relationship" data-type="association" data-source="Customer" data-target="Checkout" d="M94.5,155.5 L507.5,155.5 Q515.5,155.5 515.5,163.5 L515.5,196.5 Q515.5,204.5 523.5,204.5 L547.5,204.5" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#mf0d69919-mk-arrow)" />
+<path class="edge relationship" data-type="include" data-source="Checkout" data-target="Payment" d="M655,223 L794,223" fill="none" stroke="var(--_line)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#mf0d69919-mk-arrow)" />
+<path class="edge relationship" data-type="association" data-source="Staff" data-target="Review" d="M327.5,242.5 L497.5,242.5 Q505.5,242.5 505.5,250.5 L505.5,306.5 Q505.5,314.5 513.5,314.5 L537.5,314.5" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#mf0d69919-mk-arrow)" />
+<g class="node usecase-actor" data-id="Customer" data-kind="actor">
+  <circle cx="59.374" cy="104.113" r="7" fill="url(#mf0d69919-ng-p0)" stroke="color-mix(in srgb, #94a3b8 44%, var(--fg))" stroke-width="1.5" />
+  <path d="M59.374,111.113 L59.374,127.113 M46.374,117.113 L72.374,117.113 M59.374,127.113 L48.374,141.113 M59.374,127.113 L70.374,141.113" fill="none" stroke="color-mix(in srgb, #94a3b8 44%, var(--fg))" stroke-width="1.5" stroke-linecap="round" />
+  <text x="59.37" y="156.21" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Customer</text>
+</g>
+<g class="node usecase-actor" data-id="Staff" data-kind="actor">
+  <circle cx="289.167" cy="193.196" r="8" fill="url(#mf0d69919-ng-p0)" stroke="color-mix(in srgb, #94a3b8 44%, var(--fg))" stroke-width="1.5" />
+  <path d="M275.167,228.196 L275.167,212.196 Q275.167,204.196 289.167,204.196 Q303.167,204.196 303.167,212.196 L303.167,228.196 Z" fill="url(#mf0d69919-ng-p0)" stroke="color-mix(in srgb, #94a3b8 44%, var(--fg))" stroke-width="1.5" stroke-linejoin="round" />
+  <text x="289.17" y="243.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Order staff</text>
+</g>
+<g class="node usecase" data-id="Browse" data-kind="usecase">
+  <ellipse cx="627.945" cy="118" rx="90.427" ry="24" fill="url(#mf0d69919-ng-p0)" stroke="color-mix(in srgb, #94a3b8 74%, var(--fg))" stroke-width="1.25" />
+  <text x="627.94" y="118" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Browse products</text>
+</g>
+<g class="node usecase" data-id="Checkout" data-kind="usecase">
+  <ellipse cx="596.304" cy="223.23" rx="58.786" ry="33.23" fill="url(#mf0d69919-ng-p0)" stroke="color-mix(in srgb, #94a3b8 74%, var(--fg))" stroke-width="1.25" />
+  <text x="596.3" y="214.13" text-anchor="middle" font-size="var(--fs-xs)" font-weight="400" fill="var(--_text-muted)" dy="4.2">«Core»</text>
+  <text x="596.3" y="231.23" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Checkout</text>
+</g>
+<g class="node usecase" data-id="Payment" data-kind="usecase">
+  <ellipse cx="885.707" cy="223.23" rx="91.464" ry="24" fill="url(#mf0d69919-ng-p0)" stroke="color-mix(in srgb, #94a3b8 74%, var(--fg))" stroke-width="1.25" />
+  <text x="885.71" y="223.23" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Process payment</text>
+</g>
+<g class="node usecase" data-id="Review" data-kind="usecase-rect">
+  <rect x="537.518" y="304.46" width="119.486" height="40.2" rx="8" ry="8" fill="url(#mf0d69919-ng-p0)" stroke="color-mix(in srgb, #94a3b8 74%, var(--fg))" stroke-width="1.25" />
+  <text x="597.26" y="324.56" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Review order</text>
+</g>
+<g data-id="note-0" data-kind="note" data-target="Checkout">
+<g class="note">
+  <line x1="433.5" y1="298.5" x2="547.5" y2="242" stroke="color-mix(in srgb, var(--accent, var(--fg)) 42%, var(--bg))" stroke-width="1.25" stroke-dasharray="1.5 4.5" stroke-linecap="round" />
+  <rect x="251" y="288.396" width="182.518" height="54.4" rx="4" ry="4" fill="color-mix(in srgb, var(--accent, var(--fg)) 9%, var(--bg))" stroke="color-mix(in srgb, var(--accent, var(--fg)) 42%, var(--bg))" stroke-width="1" />
+  <rect x="251" y="288.396" width="3" height="54.4" fill="var(--accent, var(--fg))" />
+  <text x="343.76" y="315.6" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="color-mix(in srgb, var(--accent, var(--fg)) 44%, var(--fg))"><tspan x="343.76" dy="-3.6">Validates the cart before</tspan><tspan x="343.76" dy="15.6">payment</tspan></text>
+</g>
+</g>
+<text x="525.52" y="52" text-anchor="start" font-size="var(--fs-s)" font-weight="600" fill="color-mix(in srgb, #F7BC81 44%, var(--fg))" dy="4.9">Ordering system</text><rect x="260.874" y="130.7" width="88.252" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="305" y="141.5" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">places order</text><rect x="694.848" y="198.2" width="71.15199999999999" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="730.42" y="209" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">«include»</text>
+<defs>
+  <linearGradient id="mf0d69919-cw-p1-0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #F7BC81 2.1%, var(--bg))" /><stop offset="0.55" stop-color="color-mix(in srgb, #F7BC81 6%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #F7BC81 6%, var(--bg))" /></linearGradient>
+  <linearGradient id="mf0d69919-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #94a3b8 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #94a3b8 7%, var(--bg))" /></linearGradient>
+  <marker id="mf0d69919-mk-arrow" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <polygon points="0,1.5 10,6 0,10.5" fill="var(--_line)" stroke="var(--_line)" stroke-width="1" stroke-linejoin="miter" />
+  </marker>
+</defs>
+</svg>

@@ -163,7 +163,7 @@ async function extractFacts(source, name, shapes) {
 		classDiagram: () => { classDiagram(); classBoxes() },
 		sequence: () => { sequence(); sequenceBoxes() },
 		er, pie, quadrantChart: quadrant, timeline, gitGraph, radar, treemap, venn, mindmap, gantt, journey, c4, sankey,
-		xychart, requirement, packet, kanban, architecture, block, treeView,
+		xychart, requirement, packet, kanban, architecture, block, treeView, usecase,
 	}
 	const extract = extractors[type]
 	if (!extract) return { unknownType: type }
@@ -713,6 +713,55 @@ async function extractFacts(source, name, shapes) {
 		for (const e of db.getEdges()) {
 			facts.push(tab('edge', e.start, e.end, end(e.arrowTypeStart), end(e.arrowTypeEnd), decode(e.label)))
 			shown.push(decode(e.label))
+		}
+		labels(shown)
+	}
+
+	// Model: direction, actors with type, icon, business flag, stereotype and boundary; use cases with shape, business
+	// flag, stereotype and boundary; boundaries with type and members; relationships with type, ends, association label and
+	// minimum length; notes; JSON tables and their rows. A Markdown label's markers are dropped, as both engines draw them
+	// as formatting. Labels: every label, stereotype, JSON table id, key and value.
+	function usecase() {
+		const shown = []
+		const plain = (label, type) => { const d = decode(label); return type === 'markdown' ? d.replace(/\*\*|\*|~~/g, '') : d }
+		const yes = v => v ? 'yes' : ''
+		const dir = db.getDirection()
+		facts.push(tab('direction', dir === 'TB' ? 'TD' : dir))
+		for (const a of db.getActors().values()) {
+			facts.push(tab('actor', a.id, plain(a.label, a.labelType), a.type, yes(a.business), decode(a.stereotype), a.parentId ?? ''))
+			if (a.icon) facts.push(tab('icon', a.id, a.icon))
+			shown.push(plain(a.label, a.labelType), decode(a.stereotype))
+		}
+		for (const u of db.getUseCases().values()) {
+			facts.push(tab('usecase', u.id, plain(u.label, u.labelType), u.shape, yes(u.business), decode(u.stereotype), u.parentId ?? ''))
+			shown.push(plain(u.label, u.labelType), decode(u.stereotype))
+		}
+		for (const b of db.getSystemBoundaries().values()) {
+			facts.push(tab('boundary', b.id, plain(b.label, b.labelType), b.type, b.members.slice().sort().join(',')))
+			shown.push(plain(b.label, b.labelType))
+		}
+		const ends = {
+			0: ['none', 'arrow'], 1: ['arrow', 'none'], 2: ['none', 'none'], 3: ['none', 'circle'], 4: ['none', 'cross'],
+			5: ['circle', 'none'], 6: ['cross', 'none'],
+		}
+		for (const r of db.getRelationships()) {
+			const [start, finish] = r.type === 'association' ? ends[r.arrowType] : r.type === 'generalization' ? ['none', 'triangle'] : ['none', 'arrow']
+			const label = r.type === 'association' ? plain(r.label, r.labelType) : ''
+			facts.push(tab('relation', r.source, r.target, r.type, start, finish, label, String(r.minlen)))
+			shown.push(label)
+		}
+		for (const n of db.getNotes().values()) {
+			facts.push(tab('note', n.target, plain(n.label, n.labelType)))
+			shown.push(plain(n.label, n.labelType))
+		}
+		for (const n of db.getData().nodes) {
+			if (n.shape !== 'usecaseJsonTable') continue
+			facts.push(tab('json', n.id))
+			shown.push(n.id)
+			for (const [i, row] of (n.jsonRows ?? []).entries()) {
+				facts.push(tab('row', n.id, String(i), decode(row.key), decode(row.value)))
+				shown.push(decode(row.key), decode(row.value))
+			}
 		}
 		labels(shown)
 	}

@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1f85b4f21297cc84
+accept	yes
+actor	Admin	Admin	normal
+actor	User	User	normal
+boundary	Account	Account	rect	Audit,Login,Reset
+direction	TD
+drawn	yes
+label	Account
+label	Admin
+label	Audit log
+label	Reset password
+label	Sign in
+label	User
+relation	Admin	Audit	association	none	circle		1
+relation	Admin	User	generalization	none	triangle		1
+relation	Login	Audit	include	none	arrow		1
+relation	Reset	Login	extend	none	arrow		1
+relation	User	Login	association	none	arrow		1
+usecase	Audit	Audit log	rect			Account
+usecase	Login	Sign in	ellipse			Account
+usecase	Reset	Reset password	ellipse			Account

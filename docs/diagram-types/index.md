@@ -1,6 +1,6 @@
 # Diagram types
 
-Mermaider renders 24 Mermaid diagram types. Every type shares the same design system: set `Bg`, `Fg` and `Accent` once in `RenderOptions`, or pick a [theme or style preset](../theming/index.md), and the change applies everywhere.
+Mermaider renders 25 Mermaid diagram types. Every type shares the same design system: set `Bg`, `Fg` and `Accent` once in `RenderOptions`, or pick a [theme or style preset](../theming/index.md), and the change applies everywhere.
 
 Each image below renders the source under it, in the default Quiet style with the `zinc-light` theme.
 
@@ -527,6 +527,45 @@ treeView-beta
         turbo.json
         package.json
 ```
+
+
+### Use case (`usecase-beta`)
+
+UML use case diagrams (`usecase-beta`): actors, use cases, system boundaries, notes, JSON tables and include, extend and
+generalization relationships, laid out by the same layered engine as flowcharts with each boundary as a group.
+
+![Use case](../images/diagrams/usecase.svg)
+
+```text
+usecase-beta
+direction LR
+actor Customer
+actor Staff("Order staff")@{ type: hollow }
+systemBoundary ordering["Ordering system"]@{ type: package }
+  Browse("Browse products")
+  Checkout("Checkout") <<Core>>
+  Payment("Process payment")
+  Review[Review order]
+end
+note for Checkout "Validates the cart before payment"
+Customer --> Browse
+Customer -- "places order" ---> Checkout
+Checkout ..> : include Payment
+Staff --> Review
+```
+
+- Actors: `actor Id`, `actor Id("Label")`, with `@{ type: hollow | awesome }`, `@{ icon: "name" }` (resolved through
+  `IconRegistry`, with its fallback glyph) and `@{ business: true }`.
+- Use cases: `Id("Label")` is an ellipse, `Id[Label]` a rectangle, and an endpoint never declared is an ellipse. A quoted
+  declaration such as `"Reset password"` gets the id `Reset_password`.
+- Labels: unquoted text, `"plain strings"` and `` "`Markdown strings`" ``, which may span lines. Entity codes such as
+  `#quot;` are decoded.
+- Relationships: `-->`, `<--`, `--`, `--o`, `o--`, `--x`, `x--`, labelled as `A -- label --> B`, longer with extra dashes
+  (`--->`), plus `..> : include`, `..> : extend` and `--|>`. `id@-->` names an edge for `class` and `style`.
+- Styling: `classDef`, `class`, `style` and `:::`, applied as `default`, then classes, then `style`. Strict styling drops
+  all of them.
+- Input mermaid refuses, such as PlantUML statements, a second statement on a line or an include between actors, throws
+  a `MermaidParseException` naming the line. Edge animation (`animate`, `animation`) is accepted and not drawn.
 
 ### Treemap
 

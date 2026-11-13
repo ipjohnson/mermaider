@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 512322076f2110a9
+accept	yes
+actor	Awesome	Awesome actor	awesome
+actor	Fallback	Missing icon fallback	icon
+actor	Hollow	Hollow actor	hollow
+actor	Icon	Registered icon	icon
+actor	Normal	Normal actor	normal
+direction	LR
+drawn	yes
+icon	Fallback	not-registered:user
+icon	Icon	fa:user
+label	Awesome actor
+label	Hollow actor
+label	Manage
+label	Missing icon fallback
+label	Normal actor
+label	Registered icon
+relation	Awesome	Manage	association	none	arrow		1
+relation	Fallback	Manage	association	none	arrow		1
+relation	Hollow	Manage	association	none	arrow		1
+relation	Icon	Manage	association	none	arrow		1
+relation	Normal	Manage	association	none	arrow		1
+usecase	Manage	Manage	ellipse

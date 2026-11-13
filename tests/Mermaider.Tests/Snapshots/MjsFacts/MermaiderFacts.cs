@@ -112,6 +112,9 @@ internal static partial class MermaiderFacts
 			case DiagramType.TreeView:
 				TreeView(TreeViewParser.Parse(Indented()), doc, facts);
 				break;
+			case DiagramType.Usecase:
+				Usecase(UsecaseParser.Parse(cleaned), doc, facts);
+				break;
 			default:
 				throw new InvalidOperationException("MermaiderFacts has no extractor for this diagram type; add one with its scripts/mjs-facts.mjs twin");
 		}
@@ -967,6 +970,67 @@ internal static partial class MermaiderFacts
 			facts.Add(Fact("edge", e.From, e.To, "none", "arrow", Display(e.Label)));
 		Labels(doc, facts, [.. diagram.Nodes.Where(b => !b.IsSpace).Select(b => Display(b.Label)), .. diagram.Edges.Select(e => Display(e.Label))]);
 	}
+
+	private static void Usecase(UsecaseDiagram diagram, XDocument doc, List<string> facts)
+	{
+		static string Plain(UsecaseLabel? label) =>
+			label is null ? string.Empty : label.IsMarkdown ? MarkdownMarkerPattern().Replace(label.Text, string.Empty) : label.Text;
+
+		static string Yes(bool v) => v ? "yes" : string.Empty;
+
+		static string End(UsecaseEnd e) => e.ToString().ToLowerInvariant();
+
+		var shown = new List<string?>();
+		facts.Add(Fact("direction", diagram.Direction == Direction.TB ? "TD" : diagram.Direction.ToString()));
+		foreach (var a in diagram.Actors)
+		{
+			facts.Add(Fact("actor", a.Id, Plain(a.Label), a.Type.ToString().ToLowerInvariant(), Yes(a.Business), a.Stereotype, a.Boundary));
+			if (a.Icon is { } icon)
+				facts.Add(Fact("icon", a.Id, icon));
+			shown.AddRange([Plain(a.Label), a.Stereotype]);
+		}
+
+		foreach (var u in diagram.UseCases)
+		{
+			facts.Add(Fact("usecase", u.Id, Plain(u.Label), u.Shape.ToString().ToLowerInvariant(), Yes(u.Business), u.Stereotype, u.Boundary));
+			shown.AddRange([Plain(u.Label), u.Stereotype]);
+		}
+
+		foreach (var b in diagram.Boundaries)
+		{
+			facts.Add(Fact("boundary", b.Id, Plain(b.Label), b.Type.ToString().ToLowerInvariant(), string.Join(',', b.Members.Order(StringComparer.Ordinal))));
+			shown.Add(Plain(b.Label));
+		}
+
+		foreach (var r in diagram.Relationships)
+		{
+			var label = r.Type == UsecaseRelationshipType.Association ? Plain(r.Label) : string.Empty;
+			facts.Add(Fact("relation", r.Source, r.Target, r.Type.ToString().ToLowerInvariant(), End(r.StartEnd), End(r.EndEnd), label, Int(r.MinLength)));
+			shown.Add(label);
+		}
+
+		foreach (var n in diagram.Notes)
+		{
+			facts.Add(Fact("note", n.Target, Plain(n.Label)));
+			shown.Add(Plain(n.Label));
+		}
+
+		foreach (var j in diagram.JsonTables)
+		{
+			facts.Add(Fact("json", j.Id));
+			shown.Add(j.Id);
+			for (var i = 0; i < j.Rows.Count; i++)
+			{
+				facts.Add(Fact("row", j.Id, Int(i), j.Rows[i].Key, j.Rows[i].Value));
+				shown.AddRange([j.Rows[i].Key, j.Rows[i].Value]);
+			}
+		}
+
+		Labels(doc, facts, shown);
+	}
+
+	[GeneratedRegex(@"\*\*|\*|~~", RegexOptions.None, TimeoutMs)]
+	private static partial Regex MarkdownMarkerPattern();
 
 	private static void TreeView(TreeViewDiagram diagram, XDocument doc, List<string> facts)
 	{

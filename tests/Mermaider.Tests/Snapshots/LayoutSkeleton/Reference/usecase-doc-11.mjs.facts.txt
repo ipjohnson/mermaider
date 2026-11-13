@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2d94b58bf0c1709c
+accept	yes
+actor	Clerk	Payment clerk	normal			Payment_service
+boundary	Payment_service	Payment service	package	Authorize,Clerk
+direction	LR
+drawn	yes
+label	Authorize payment
+label	Payment clerk
+label	Payment service
+relation	Clerk	Authorize	association	none	arrow		1
+usecase	Authorize	Authorize payment	ellipse			Payment_service

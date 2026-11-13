@@ -407,3 +407,17 @@ test_entity - satisfies -> test_req
 - Upstream: https://github.com/mermaid-js/mermaid  
 - Spec/examples: mermaid.js.org/syntax/  
 - Stress fixture: winprint `testfiles/mermaid.md`  
+
+### Use case (2026-11)
+
+- Detector: `^usecase-beta(?:\s|$)`. Parse `CleanedSource`, not trimmed lines: Markdown strings, `@{ … }` metadata, JSON
+  objects and `accDescr { … }` span lines, so the parser is a cursor over the text that skips accessibility lines itself.
+- Declarations are order independent: collect drafts, resolve kinds (actor only by an `actor` statement, any other
+  endpoint is an ellipse use case) and metadata at the end, then apply mermaid's semantic checks.
+- Keyword tokens (`end`, `TD`, `for`, `include`, …) are not identifiers; `o--` and `x--` are operators only at a token start.
+- Layout: `HierarchicalLayout.Compute` directly with boundaries as `LayoutSubgraph`s and `PortOutline.Ellipse` for
+  ellipse use cases. Notes are layout nodes with an edge to their target.
+- Valid input that is not drawn (edge animation) goes to `UsecaseDiagram.Unused` with its line, until the diagnostics of
+  ipjohnson/AgentDriver#4284 exist.
+- The facts extractor reads mermaid's db (`getActors`, `getUseCases`, `getSystemBoundaries`, `getRelationships`,
+  `getNotes`) and the JSON rows from `getData()`.

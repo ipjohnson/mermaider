@@ -38,7 +38,7 @@ stripping), sanitizer tests for the scoped `<image>` href exception, and spec-co
 k8s/ECH diagram) under `Snapshots/ArchitectureSpecTests.cs`.
 
 `MjsFactsTests` (`tests/Mermaider.Tests/Snapshots/MjsFacts/`) diffs Mermaider's facts with committed mermaid.js facts
-(`Snapshots/LayoutSkeleton/Reference/*.mjs.facts.txt`) for the gallery examples of all 24 diagram types, the flowchart,
+(`Snapshots/LayoutSkeleton/Reference/*.mjs.facts.txt`) for the gallery examples of all 25 diagram types, the flowchart,
 state, class, sequence, ER and architecture spec-test sources and the repros in `MjsFacts/Cases/`. Every case records
 acceptance and whether anything is drawn. Each type adds its structure (labels, groups, edge ends, markers, node shapes in
 mermaid's short names, participant types, icons, chart data) and which of its labels the drawing shows; each extractor

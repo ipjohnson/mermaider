@@ -26,6 +26,7 @@ public enum DiagramCategory
 	Architecture,
 	Block,
 	TreeView,
+	Usecase,
 	RealWorld
 }
 
@@ -1596,6 +1597,7 @@ public static partial class DiagramExamples
 			.. CreateNewDiagramTypeExamples(),
 			.. CreateRequirementExamples(),
 			.. CreateTreeViewExamples(),
+			.. CreateUsecaseExamples(),
 			.. CreateRealWorldExamples(),
 		];
 
@@ -1626,6 +1628,7 @@ public static partial class DiagramExamples
 		DiagramCategory.Kanban => "Kanban",
 		DiagramCategory.Architecture => "Architecture",
 		DiagramCategory.Block => "Block",
+		DiagramCategory.Usecase => "Use Case",
 		DiagramCategory.RealWorld => "Real World",
 		_ => c.ToString(),
 	};
@@ -1655,6 +1658,7 @@ public static partial class DiagramExamples
 		DiagramCategory.Kanban => "kanban",
 		DiagramCategory.Architecture => "architecture",
 		DiagramCategory.Block => "block",
+		DiagramCategory.Usecase => "usecase",
 		DiagramCategory.RealWorld => "real-world",
 		_ => c.ToString().ToLowerInvariant(),
 	};

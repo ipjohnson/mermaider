@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 602930284299ce28
+accept	yes
+actor	Admin	Main administrator	normal
+actor	Customer	Customer	normal
+direction	LR
+drawn	yes
+label	Customer
+label	Generate report
+label	Main administrator
+label	Reset password
+label	Sign in
+relation	Admin	Report	association	none	arrow		1
+relation	Customer	Login	association	none	arrow		1
+usecase	Login	Sign in	ellipse
+usecase	Report	Generate report	rect
+usecase	Reset_password	Reset password	ellipse

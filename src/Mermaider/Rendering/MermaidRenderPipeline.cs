@@ -414,6 +414,17 @@ internal static class DiagramSvgStage
 					);
 					break;
 				}
+			case DiagramType.Usecase:
+				{
+					var parsed = UsecaseParser.Parse(diagram.CleanedSource);
+					ResourceGuard.CheckElements(
+						parsed.Actors.Count + parsed.UseCases.Count + parsed.Notes.Count + parsed.JsonTables.Count + parsed.Relationships.Count,
+						limits
+					);
+					ct.ThrowIfCancellationRequested();
+					sb = UsecaseSvgRenderer.RenderToBuilder(parsed, context, ct);
+					break;
+				}
 			default:
 				{
 					// Flowchart, State — primary Sugiyama path, most DoS-critical
