@@ -245,4 +245,16 @@ public class ClassParserTests
 		diagram.Relationships[1].To.Should().Be("D");
 		diagram.Relationships[1].Label.Should().Be("uses");
 	}
+
+	[Test]
+	public void Member_generics_are_written_with_angle_brackets()
+	{
+		var lines = new[] { "classDiagram", "class Repo {", "+List~T~ items", "+findAll(Map~K, V~ filter) List~List~T~~", "}", };
+
+		var diagram = ClassParser.Parse(lines);
+
+		diagram.Classes[0].Attributes[0].Type.Should().Be("List<T>");
+		diagram.Classes[0].Methods[0].Params.Should().Be("Map<K, V> filter");
+		diagram.Classes[0].Methods[0].Type.Should().Be("List<List<T>>");
+	}
 }

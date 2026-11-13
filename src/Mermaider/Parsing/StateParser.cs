@@ -297,7 +297,13 @@ internal static partial class StateParser
 			{
 				var id = stateDescMatch.Groups[1].Value;
 				var label = MultilineUtils.NormalizeBrTags(stateDescMatch.Groups[2].Value.Trim());
-				RegisterStateNode(nodes, compositeStack, new MermaidNode(id, label, NodeShape.Rounded));
+				if (nodes.TryGetValue(id, out var existing))
+				{
+					nodes[id] = existing with { Label = label };
+					EnsureStateNode(nodes, compositeStack, id);
+				}
+				else
+					RegisterStateNode(nodes, compositeStack, new MermaidNode(id, label, NodeShape.Rounded));
 			}
 		}
 

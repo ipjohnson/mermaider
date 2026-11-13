@@ -335,6 +335,22 @@ public class StateParserTests
 		graph.SubgraphEdgeRedirections.Values.Should().Contain(r => r.TargetSubgraph == "P");
 	}
 
+	[Test]
+	public void Description_after_the_first_transition_labels_the_state()
+	{
+		var graph = MermaidRenderer.Parse(
+			"""
+			stateDiagram-v2
+			[*] --> Booting
+			Booting : System is starting up
+			Booting --> Ready
+			"""
+		);
+
+		graph.Nodes["Booting"].Label.Should().Be("System is starting up");
+		graph.Nodes["Ready"].Label.Should().Be("Ready");
+	}
+
 	private static IEnumerable<string> AllNodeIds(IReadOnlyList<MermaidSubgraph> subgraphs) =>
 		subgraphs.SelectMany(sg => sg.NodeIds.Concat(AllNodeIds(sg.Children)));
 }
