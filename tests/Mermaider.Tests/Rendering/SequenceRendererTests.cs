@@ -125,6 +125,35 @@ public class SequenceRendererTests
 	}
 
 	[Test]
+	public void Notes_get_their_own_rows_clear_of_the_next_message_label()
+	{
+		var diagram = Mermaider
+			.Parsing
+			.SequenceParser
+			.Parse([
+				"sequenceDiagram",
+				"participant A",
+				"participant B",
+				"Note over A,B: first",
+				"A->>B: one",
+				"Note over A: second",
+				"Note over A,B: third",
+				"B->>A: two",
+			]);
+
+		var positioned = Mermaider.Layout.SequenceLayout.Layout(diagram);
+
+		var notes = positioned.Notes;
+		notes.Should().HaveCount(3);
+		// a message's label pill is centred 14px above its line and is at least 20px tall
+		var firstPillTop = positioned.Messages[0].Y - 24;
+		var secondPillTop = positioned.Messages[1].Y - 24;
+		(notes[0].Y + notes[0].Height).Should().BeLessThan(firstPillTop, "a note before a message stays clear of its label");
+		(notes[1].Y + notes[1].Height).Should().BeLessThan(notes[2].Y, "consecutive notes each get their own row");
+		(notes[2].Y + notes[2].Height).Should().BeLessThan(secondPillTop, "the last note stays clear of the next label");
+	}
+
+	[Test]
 	public void Renders_alt_block_with_dividers()
 	{
 		var svg = MermaidRenderer.RenderSvg(

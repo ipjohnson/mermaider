@@ -102,4 +102,44 @@ public class ClassRendererTests
 		svg.Should().MatchRegex("data-type=\"dashed-link\"[^>]*stroke-dasharray=");
 		svg.Should().NotMatchRegex("data-type=\"link\"[^>]*stroke-dasharray=");
 	}
+
+	[Test]
+	public void Note_is_placed_clear_of_relation_labels()
+	{
+		var diagram = Mermaider
+			.Parsing
+			.ClassParser
+			.Parse([
+				"classDiagram",
+				"direction LR",
+				"namespace Execution {",
+				"class LaunchPoint",
+				"class Policy {",
+				"+bool Allowed",
+				"}",
+				"}",
+				"namespace Containers {",
+				"class DockerEngine",
+				"}",
+				"LaunchPoint --> DockerEngine : launches",
+				"DockerEngine --> Policy : reads",
+				"note for Policy \"Restrictions\"",
+			]);
+
+		var positioned = Mermaider.Layout.LightweightClassLayoutEngine.Layout(diagram);
+
+		var note = positioned.Notes.Should().ContainSingle().Subject;
+		foreach (var rel in positioned.Relationships)
+		{
+			var lp = rel.LabelPosition!.Value;
+			var labelW = Mermaider
+				.Rendering
+				.DesignSystem
+				.LabelBoxWidth(
+					Mermaider.Text.TextMetrics.MeasureTextWidth(rel.Label!, Mermaider.Rendering.DesignSystem.Px(Mermaider.Rendering.TypeRole.Caption), 500)
+				);
+			var clear = note.X >= lp.X + (labelW / 2) || note.X + note.Width <= lp.X - (labelW / 2) || note.Y >= lp.Y + 10 || note.Y + note.Height <= lp.Y - 10;
+			clear.Should().BeTrue($"the note must not cover the '{rel.Label}' label");
+		}
+	}
 }

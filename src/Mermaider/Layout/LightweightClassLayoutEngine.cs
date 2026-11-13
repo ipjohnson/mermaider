@@ -12,6 +12,7 @@ namespace Mermaider.Layout;
 internal static class LightweightClassLayoutEngine
 {
 	private const double Padding = 40;
+	private const double NoteGap = 24;
 	// Box sizes come from EntityBoxSizing: the shared entity geometry (class / ER / requirement) every layout provider uses.
 	private const double NodeSpacing = 20;
 	private const double LayerSpacing = 60;
@@ -225,6 +226,19 @@ internal static class LightweightClassLayoutEngine
 		var maxX = result.Width;
 		var maxY = result.Height;
 
+		// a note must not cover a class, a relation label or an earlier note
+		var obstacles = new List<(double X, double Y, double W, double H)>();
+		foreach (var c in positionedClasses)
+			obstacles.Add((c.X, c.Y, c.Width, c.Height));
+		foreach (var r in positionedRels)
+		{
+			if (r.Label is not { Length: > 0 } label || r.LabelPosition is not { } lp)
+				continue;
+			var m = TextMetrics.MeasureMultiline(label.AsSpan(), DesignSystem.Px(TypeRole.Caption), 500);
+			var (lw, lh) = (DesignSystem.LabelBoxWidth(m.Width), Math.Max(DesignSystem.PillHeight, m.Height + 6));
+			obstacles.Add((lp.X - (lw / 2), lp.Y - (lh / 2), lw, lh));
+		}
+
 		foreach (var note in diagram.Notes)
 		{
 			// note body text (s tier) with 16px side padding and room for the rail / ticks / sticker quote
@@ -234,20 +248,11 @@ internal static class LightweightClassLayoutEngine
 
 			if (note.TargetClassId != null && nodeLookup.TryGetValue(note.TargetClassId, out var target))
 			{
-				var noteX = target.X + target.Width + 24;
-				var noteY = target.Y;
-				notes.Add(new PositionedGraphNote
-				{
-					Text = note.Text,
-					X = noteX,
-					Y = noteY,
-					Width = noteW,
-					Height = noteH,
-					LineFrom = new Point(noteX, noteY + (noteH / 2)),
-					LineTo = new Point(target.X + target.Width, target.Y + (target.Height / 2)),
-				});
-				maxX = Math.Max(maxX, noteX + noteW + 10);
-				maxY = Math.Max(maxY, noteY + noteH + 10);
+				var placed = PlaceNote(note.Text, target, noteW, noteH, obstacles);
+				notes.Add(placed);
+				obstacles.Add((placed.X, placed.Y, noteW, noteH));
+				maxX = Math.Max(maxX, placed.X + noteW + 10);
+				maxY = Math.Max(maxY, placed.Y + noteH + 10);
 			}
 			else
 			{
@@ -314,5 +319,43 @@ internal static class LightweightClassLayoutEngine
 			Notes = notes,
 			Namespaces = positionedNs,
 		};
+	}
+
+	/// <summary>
+	/// A note goes right of its class, else below, above or left of it, whichever first stays clear of
+	/// <paramref name="obstacles"/> and the canvas' top-left edge. With no clear side it goes right.
+	/// </summary>
+	private static PositionedGraphNote PlaceNote(
+		string text,
+		LayoutNodeResult target,
+		double noteW,
+		double noteH,
+		List<(double X, double Y, double W, double H)> obstacles
+	)
+	{
+		var midX = target.X + (target.Width / 2);
+		var midY = target.Y + (target.Height / 2);
+		var right = target.X + target.Width;
+		var bottom = target.Y + target.Height;
+		(double X, double Y, Point From, Point To)[] sides =
+		[
+			(right + NoteGap, target.Y, new Point(right + NoteGap, target.Y + (noteH / 2)), new Point(right, midY)),
+			(target.X, bottom + NoteGap, new Point(target.X + (noteW / 2), bottom + NoteGap), new Point(midX, bottom)),
+			(target.X, target.Y - NoteGap - noteH, new Point(target.X + (noteW / 2), target.Y - NoteGap), new Point(midX, target.Y)),
+			(target.X - NoteGap - noteW, target.Y, new Point(target.X - NoteGap, target.Y + (noteH / 2)), new Point(target.X, midY)),
+		];
+
+		var pick = sides[0];
+		foreach (var side in sides)
+		{
+			if (side.X < 0 || side.Y < 0)
+				continue;
+			if (obstacles.Any(o => side.X < o.X + o.W && o.X < side.X + noteW && side.Y < o.Y + o.H && o.Y < side.Y + noteH))
+				continue;
+			pick = side;
+			break;
+		}
+
+		return new PositionedGraphNote { Text = text, X = pick.X, Y = pick.Y, Width = noteW, Height = noteH, LineFrom = pick.From, LineTo = pick.To };
 	}
 }

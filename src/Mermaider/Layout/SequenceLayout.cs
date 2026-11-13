@@ -124,6 +124,22 @@ internal static class SequenceLayout
 			list.Add(ni);
 		}
 
+		// each note gets its own row below the message before it, so neither another note nor the next message's label
+		// pill (drawn above that message's line) lands on it
+		var noteH = NoteFontSize + (NoteVPad * 2);
+		var noteYs = new double[diagram.Notes.Count];
+
+		double PlaceNotes(int afterIdx, double top)
+		{
+			if (!notesByAfterIndex.TryGetValue(afterIdx, out var noteIndices))
+				return 0;
+			for (var i = 0; i < noteIndices.Count; i++)
+				noteYs[noteIndices[i]] = top + (i * (noteH + NoteGap));
+			return (noteIndices.Count * noteH) + ((noteIndices.Count - 1) * NoteGap);
+		}
+
+		messageY += PlaceNotes(-1, actorY + ActorHeight + 10);
+
 		var activationStacks = new Dictionary<string, Stack<(double StartY, int Depth)>>();
 		var activations = new List<Activation>();
 
@@ -175,14 +191,9 @@ internal static class SequenceLayout
 				});
 			}
 
+			// a note after a self-message sits below its loop, not on top of the loop's label
+			messageY += PlaceNotes(msgIdx, messageY + (isSelf ? SelfMessageHeight : 0) + 10);
 			messageY += isSelf ? SelfMessageHeight + MessageRowHeight : MessageRowHeight;
-
-			if (notesByAfterIndex.TryGetValue(msgIdx, out var noteIndices))
-			{
-				// every note gets its own band below the message, so it never sits where the next message's label pill goes
-				var noteBand = noteIndices.Count > 0 ? NoteFontSize + (NoteVPad * 2) : 0;
-				messageY += noteBand;
-			}
 		}
 
 		foreach (var (actorId, stack) in activationStacks)
@@ -277,15 +288,12 @@ internal static class SequenceLayout
 		}
 
 		var notes = new List<PositionedSequenceNote>(diagram.Notes.Count);
-		foreach (var note in diagram.Notes)
+		for (var ni = 0; ni < diagram.Notes.Count; ni++)
 		{
+			var note = diagram.Notes[ni];
 			var textW = TextMetrics.MeasureTextWidth(note.Text, NoteFontSize, RenderConstants.FontWeights.EdgeLabel) + (NoteHPad * 2);
 			var noteW = Math.Max(NoteWidth, textW);
-			var noteH = NoteFontSize + (NoteVPad * 2);
-
-			var refMsg = note.AfterIndex >= 0 && note.AfterIndex < messages.Count ? messages[note.AfterIndex] : null;
-			// a note after a self-message sits below its loop, not on top of the loop's label
-			var noteY = (refMsg?.Y ?? (actorY + ActorHeight)) + (refMsg?.IsSelf == true ? SelfMessageHeight : 0) + 10;
+			var noteY = noteYs[ni];
 
 			_ = actorIndex.TryGetValue(note.ActorIds[0], out var firstActorIdx);
 			double noteX;
