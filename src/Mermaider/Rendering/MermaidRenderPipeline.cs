@@ -84,6 +84,7 @@ internal static class MermaidRenderPipeline
 }
 
 internal sealed record PreparedDiagram(
+	string Source,
 	string CleanedSource,
 	DiagramMetadata Metadata,
 	string[] Lines,
@@ -143,7 +144,7 @@ internal static class DiagramPreparationStage
 			);
 
 		var (accessibility, filteredLines) = AccessibilityParser.Extract(lines);
-		return new PreparedDiagram(cleaned, metadata, lines, filteredLines, diagramType, accessibility);
+		return new PreparedDiagram(text, cleaned, metadata, lines, filteredLines, diagramType, accessibility);
 	}
 }
 
@@ -416,7 +417,7 @@ internal static class DiagramSvgStage
 				}
 			case DiagramType.Usecase:
 				{
-					var parsed = UsecaseParser.Parse(diagram.CleanedSource);
+					var parsed = UsecaseParser.Parse(diagram.Source);
 					ResourceGuard.CheckElements(
 						parsed.Actors.Count + parsed.UseCases.Count + parsed.Notes.Count + parsed.JsonTables.Count + parsed.Relationships.Count,
 						limits

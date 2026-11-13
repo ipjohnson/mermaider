@@ -565,7 +565,10 @@ Staff --> Review
 - Styling: `classDef`, `class`, `style` and `:::`, applied as `default`, then classes, then `style`. Strict styling drops
   all of them.
 - Input mermaid refuses, such as PlantUML statements, a second statement on a line or an include between actors, throws
-  a `MermaidParseException` naming the line. Edge animation (`animate`, `animation`) is accepted and not drawn.
+  a `MermaidParseException` naming the line. Edge animation (`animate`, `animation`), the keys of the `usecase` config
+  section in front matter or `%%{init}%%` (`colorScheme`, the font keys, `nodeSpacing`, `rankSpacing`,
+  `diagramPadding`) and an actor icon that is not registered are accepted and not used. The parser lists each of them
+  with its line and the reason; an unregistered icon is drawn as the fallback glyph.
 
 ### Treemap
 

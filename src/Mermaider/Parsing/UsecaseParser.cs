@@ -1,6 +1,7 @@
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using Mermaider.Icons;
 using Mermaider.Models;
 using Mermaider.Text;
 
@@ -8,15 +9,30 @@ namespace Mermaider.Parsing;
 
 /// <summary>
 /// Parses <c>usecase-beta</c> diagrams with the statement rules of mermaid 12.3.0's use case grammar. The parser reads the
-/// cleaned source rather than trimmed lines, because Markdown strings, metadata blocks, JSON objects and <c>accDescr</c>
-/// blocks may span lines. Input mermaid refuses is refused with a <see cref="MermaidParseException"/> naming the line;
+/// source rather than trimmed lines, because Markdown strings, metadata blocks, JSON objects and <c>accDescr</c>
+/// blocks may span lines. Front matter and init directives are blanked, so line numbers are the source's. Input mermaid refuses is refused with a <see cref="MermaidParseException"/> naming the line;
 /// valid input the renderer does not draw is listed in <see cref="UsecaseDiagram.Unused"/>.
 /// </summary>
 internal static partial class UsecaseParser
 {
 	private const int TimeoutMs = 2000;
 
-	internal static UsecaseDiagram Parse(string source) => new Reader(source).ParseDiagram();
+	internal static UsecaseDiagram Parse(string source)
+	{
+		var (text, config) = DiagramPreprocessor.BlankConfig(source, "usecase");
+		var reader = new Reader(text);
+		foreach (var (line, key, value) in config)
+			reader.AddUnused(new UsecaseUnusedInput(line, $"{key}: {value}", ConfigReason(key)));
+		return reader.ParseDiagram();
+	}
+
+	private static string ConfigReason(string key) => key[(key.LastIndexOf('.') + 1)..] switch
+	{
+		"colorScheme" => $"config '{key}' is not used: colours come from the theme and style preset",
+		var k when k.Contains("Font", StringComparison.Ordinal) => $"config '{key}' is not used: text sizes come from the design system's type roles",
+		"nodeSpacing" or "rankSpacing" or "diagramPadding" => $"config '{key}' is not used: the layout uses its own spacing",
+		_ => $"config '{key}' is not used by the renderer",
+	};
 
 	[GeneratedRegex(@"^usecase-beta(?:[ \t]|$)", RegexOptions.None, TimeoutMs)]
 	private static partial Regex HeaderPattern();
@@ -79,6 +95,7 @@ internal static partial class UsecaseParser
 		public string? Boundary { get; set; }
 		public string? ActorType { get; set; }
 		public string? Icon { get; set; }
+		public int IconLine { get; set; }
 		public bool? Business { get; set; }
 	}
 
@@ -120,6 +137,8 @@ internal static partial class UsecaseParser
 		private readonly List<(string Id, string Class, int Line)> _classAssignments = [];
 		private readonly List<(string Id, List<(string Property, string Value)> Styles, int Line)> _styles = [];
 		private readonly List<UsecaseUnusedInput> _unused = [];
+
+		public void AddUnused(UsecaseUnusedInput input) => _unused.Add(input);
 		private Direction _direction = Direction.LR;
 
 		// ── statements ────────────────────────────────────────────────────
@@ -1244,6 +1263,14 @@ internal static partial class UsecaseParser
 						throw Error($"Actor '{id}' cannot combine icon with type '{t}'", e.Line);
 					if (e.Business == true && type is UsecaseActorType.Icon or UsecaseActorType.Awesome)
 						throw Error($"Business actor '{id}' must use normal or hollow geometry", e.Line);
+					if (e.Icon is { } icon && (string.IsNullOrWhiteSpace(icon) || !IconRegistry.TryGet(icon, out _)))
+						_unused.Add(
+							new UsecaseUnusedInput(
+								e.IconLine,
+								$"icon: {icon}",
+								$"actor '{id}': icon '{icon}' is not registered, the '{IconRegistry.FallbackName}' fallback glyph is drawn"
+							)
+						);
 					actors.Add(new UsecaseActor(id, label, type, e.Icon, e.Business == true, e.Stereotype, e.Boundary));
 				}
 				else
@@ -1307,7 +1334,7 @@ internal static partial class UsecaseParser
 				Notes = notes,
 				JsonTables = _jsonOrder.Select(id => new UsecaseJsonTable(id, _json[id].Rows)).ToList(),
 				Styles = ResolveStyles(explicitEdges),
-				Unused = _unused,
+				Unused = _unused.OrderBy(u => u.Line).ToList(),
 			};
 		}
 
@@ -1388,6 +1415,7 @@ internal static partial class UsecaseParser
 						if (element.Icon is { } icon && icon != value)
 							throw Error($"Actor '{target}' has conflicting icon metadata", at);
 						element.Icon = value;
+						element.IconLine = at;
 						break;
 					default:
 						throw Invalid(isActor ? "actor" : "usecase", key, at);
