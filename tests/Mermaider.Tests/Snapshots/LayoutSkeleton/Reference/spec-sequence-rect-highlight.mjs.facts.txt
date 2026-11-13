@@ -4,7 +4,15 @@
 accept	yes
 actor	A	A	participant
 actor	B	B	participant
+bbox	label	Inside highlight	118.6	114.1	225.4	131.5
+bbox	label	Outside highlight	112.4	212.1	231.6	229.5
+bbox	label	Reply	157.5	158.1	198.5	175.5
+bbox	node	A	0	0	150	73
+bbox	node	A	0	255	150	328
+bbox	node	B	200	0	350	73
+bbox	node	B	200	255	350	328
 block	rect
+canvas	-50	-10	400	369
 message	A	B	solid	filled	Inside highlight
 message	A	B	solid	filled	Outside highlight
 message	B	A	dashed	filled	Reply

@@ -5,6 +5,10 @@ accept	yes
 annotation	Drawable	«interface»
 annotation	Shape	«interface»
 attribute	Circle	+double radius
+bbox	node	Circle	195.8	12	338.5	168
+bbox	node	Drawable	12	19.5	155.8	160.5
+bbox	node	Shape	106	208	263.9	349
+canvas	4	4	403	357
 class	Circle	Circle
 class	Drawable	Drawable
 class	Shape	Shape

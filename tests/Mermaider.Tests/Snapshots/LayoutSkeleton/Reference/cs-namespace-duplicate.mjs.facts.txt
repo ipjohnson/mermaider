@@ -2,6 +2,10 @@
 # mermaid 12.3.0
 # source 5aff30617b8da215
 accept	yes
+bbox	group	One	-9.2	88.5	33.2	88.5
+bbox	group	Two	52	12	134.1	165
+bbox	node	A	76	60	110.1	141
+canvas	-9.2	4	142.1	173
 class	A	A
 namespace	One
 namespace	Two	A

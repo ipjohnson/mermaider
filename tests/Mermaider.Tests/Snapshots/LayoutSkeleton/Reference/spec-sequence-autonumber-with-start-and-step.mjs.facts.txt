@@ -4,6 +4,14 @@
 accept	yes
 actor	Alice	Alice	participant
 actor	Bob	Bob	participant
+bbox	label	First	156.4	94.1	187.6	111.2
+bbox	label	Second	150.9	138.1	205.1	155.2
+bbox	label	Third	153.8	182.1	190.2	199.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	225	150	298
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	225	350	298
+canvas	-50	-10	400	339
 message	Alice	Bob	solid	filled	First
 message	Alice	Bob	solid	filled	Third
 message	Bob	Alice	solid	filled	Second

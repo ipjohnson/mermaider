@@ -5,6 +5,21 @@ accept	yes
 actor	API	API	participant
 actor	Client	Client	participant
 actor	DB	DB	participant
+bbox	label	200 OK	150.9	402.1	205.1	419.2
+bbox	label	Auth token	139.7	226.1	216.3	243.2
+bbox	label	Fetch profile	328	314.1	416	331.3
+bbox	label	GET /profile	129.5	270.1	214.5	287.3
+bbox	label	Login request	123.5	94.1	220.5	111.5
+bbox	label	Profile data	337.5	358.1	418.5	375.2
+bbox	label	User found	338.9	182.1	417.1	199.2
+bbox	label	Verify user	334.2	138.1	410	155.5
+bbox	node	API	200	0	350	73
+bbox	node	API	200	445	350	518
+bbox	node	Client	0	0	150	73
+bbox	node	Client	0	445	150	518
+bbox	node	DB	400	0	550	73
+bbox	node	DB	400	445	550	518
+canvas	-50	-10	600	559
 message	API	Client	dashed	filled	200 OK
 message	API	Client	dashed	filled	Auth token
 message	API	DB	solid	filled	Fetch profile

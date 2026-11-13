@@ -4,5 +4,12 @@
 accept	yes
 actor	A	A	participant
 actor	B	B	participant
+bbox	label	async lost	136.4	94.1	207.6	111.5
+bbox	label	sync lost	140.9	138.1	203.1	155.5
+bbox	node	A	0	0	150	73
+bbox	node	A	0	181	150	254
+bbox	node	B	200	0	350	73
+bbox	node	B	200	181	350	254
+canvas	-50	-10	400	295
 message	A	B	dashed	cross	async lost
 message	A	B	solid	cross	sync lost

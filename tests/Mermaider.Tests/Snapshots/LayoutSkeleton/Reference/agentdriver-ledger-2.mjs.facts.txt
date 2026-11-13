@@ -9,6 +9,44 @@ annotation	IPeerLink	«interface»
 annotation	IWatcher	«interface»
 attribute	IEffectHandler	+Kinds Strings
 attribute	Ledger	+Committed event
+bbox	label	asks each	320.3	71.5	383.4	92.5
+bbox	label	by kind	1525.8	1079.3	1570.2	1100.3
+bbox	label	commands in	925.5	1311.8	1008.7	1332.8
+bbox	label	decides with	928.6	696.3	1005.6	717.3
+bbox	label	import commands	296.2	1263.4	407.5	1284.4
+bbox	label	observations	312.2	1187	391.6	1208
+bbox	label	one snapshot	925.1	384	1009.1	405
+bbox	label	one transaction	919.2	600.8	1015	621.8
+bbox	label	prepared, exited, asked, lost	1192.4	1200.8	1368.3	1221.8
+bbox	label	reads	949.6	222.5	984.6	243.5
+bbox	label	reads limits	931.7	887.8	1002.5	908.8
+bbox	label	reads ready items	593.2	516	704.5	537
+bbox	label	start, stall, time limit	290.4	641	413.3	662
+bbox	label	starts claude	2022.3	1190.6	2101.7	1211.6
+bbox	label	transitions out	923.5	1356.4	1010.7	1377.4
+bbox	label	wakes	947.3	1079.3	986.9	1100.3
+bbox	node	ClaudeProcess	2310.7	1053.8	2435.9	1134.8
+bbox	node	ClockWatcher	285.3	824	402.1	905
+bbox	node	EffectRunner	1194.5	1019.8	1366.3	1160.8
+bbox	node	Exporter	737.6	193	819.2	274
+bbox	node	GitHubWatcher	285.3	703	410.6	784
+bbox	node	IClaudeProcess	2141.7	1150.6	2270.7	1252.6
+bbox	node	IEffectHandler	1610.2	1012.3	1815.6	1168.3
+bbox	node	IGate	478.5	12	819.2	153
+bbox	node	IPeerLink	1075	1262.8	1297.4	1424.8
+bbox	node	IWatcher	40.4	1001.1	205.3	1142.1
+bbox	node	Importer	124.5	1233.9	205.3	1314.9
+bbox	node	Ledger	555.6	1017.9	786.2	1194.9
+bbox	node	Policy	1075	817.8	1335.3	979.8
+bbox	node	ProcessWatcher	285.3	945	418.5	1026
+bbox	node	RunnerProcess	2310.7	1174.8	2438.2	1255.8
+bbox	node	Scheduler	12	425	205.3	629
+bbox	node	SessionRunner	1855.6	1161.1	1982.3	1242.1
+bbox	node	SqliteStore	1075	372.7	1293.5	534.7
+bbox	node	UsageWatcher	285.3	1066	406	1147
+bbox	node	Views	619	314	819.2	476
+bbox	node	WorkMachine	1075	636.8	1485.8	777.8
+canvas	4	4	2446.2	1432.8
 class	ClaudeProcess	ClaudeProcess
 class	ClockWatcher	ClockWatcher
 class	EffectRunner	EffectRunner

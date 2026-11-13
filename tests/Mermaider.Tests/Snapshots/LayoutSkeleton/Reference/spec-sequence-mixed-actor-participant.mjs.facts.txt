@@ -5,6 +5,17 @@ accept	yes
 actor	API	API	participant
 actor	DB	DB	participant
 actor	User	User	actor
+bbox	label	200 OK	150.9	226.1	205.1	243.2
+bbox	label	GET /data	135.7	94.1	208.3	111.2
+bbox	label	SELECT *	335.7	138.1	408.3	155.2
+bbox	label	rows	361.1	182.1	394.9	199.2
+bbox	node	API	200	0	350	73
+bbox	node	API	200	269	350	342
+bbox	node	DB	400	0	550	73
+bbox	node	DB	400	269	550	342
+bbox	node	User	58.1	0	92.1	67
+bbox	node	User	58.1	275	92.1	342
+canvas	-50	-10	600	383
 message	API	DB	solid	filled	SELECT *
 message	API	User	dashed	filled	200 OK
 message	DB	API	dashed	filled	rows

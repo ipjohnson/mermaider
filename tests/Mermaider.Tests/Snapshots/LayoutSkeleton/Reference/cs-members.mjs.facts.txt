@@ -5,6 +5,10 @@ accept	yes
 annotation	Worker	«interface»
 attribute	Worker	+string Name
 attribute	Worker	-int count
+bbox	label	returns	77.3	271	120.9	292
+bbox	node	Result	53.5	332	145.2	413
+bbox	node	Worker	12	12	186.7	231
+canvas	4	4	194.7	421
 class	Result	Result<T>
 class	Worker	Worker
 method	Worker	#Run(input) : Task

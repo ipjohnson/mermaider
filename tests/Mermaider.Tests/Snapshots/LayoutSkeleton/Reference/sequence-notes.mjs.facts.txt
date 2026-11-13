@@ -4,6 +4,17 @@
 accept	yes
 actor	A	Frontend	participant
 actor	B	Backend	participant
+bbox	label	Auth token	139.7	185.1	216.3	202.2
+bbox	label	GET /data	135.7	276.1	208.3	293.2
+bbox	label	Login request	123.5	94.1	220.5	111.5
+bbox	node	A	0	0	150	73
+bbox	node	A	0	366	150	439
+bbox	node	B	200	0	350	73
+bbox	node	B	200	366	350	439
+bbox	note	Display results	-100	309	50	346
+bbox	note	Subsequent requests use JWT	50	218	300	255
+bbox	note	Validate credentials	300	127	450	164
+canvas	-150	-10	500	480
 message	A	B	solid	filled	GET /data
 message	A	B	solid	filled	Login request
 message	B	A	dashed	filled	Auth token

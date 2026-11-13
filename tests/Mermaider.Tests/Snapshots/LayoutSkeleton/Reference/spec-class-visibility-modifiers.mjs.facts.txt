@@ -6,6 +6,8 @@ attribute	Account	#double protectedField
 attribute	Account	+String publicField
 attribute	Account	-int privateField
 attribute	Account	~bool packageField
+bbox	node	Account	12	12	206.4	273
+canvas	4	4	214.4	281
 class	Account	Account
 method	Account	#reset() : void
 method	Account	+getBalance() : double

@@ -8,6 +8,29 @@ actor	CDN	CDN	participant
 actor	Cache	Cache	participant
 actor	DB	DB	participant
 actor	LB	Load Balancer	participant
+bbox	label	API request	230.2	137.8	313.8	155.3
+bbox	label	Check cache	725.8	225.8	818.2	243.3
+bbox	label	Forward	542.7	181.8	601.3	199.3
+bbox	label	Miss	761.6	269.8	794.4	287.3
+bbox	label	Query	850.2	313.8	893.8	331.5
+bbox	label	Response	242	489.8	314	507.3
+bbox	label	Response	542	445.8	614	463.3
+bbox	label	Result	855.3	357.8	900.7	375.3
+bbox	label	Static assets	126.7	93.8	217.3	111.3
+bbox	label	Store	752.9	401.8	791.1	419.3
+bbox	node	App	600	0	750	73
+bbox	node	App	600	533	750	606
+bbox	node	Browser	0	0	150	73
+bbox	node	Browser	0	533	150	606
+bbox	node	CDN	200	0	350	73
+bbox	node	CDN	200	533	350	606
+bbox	node	Cache	800	0	950	73
+bbox	node	Cache	800	533	950	606
+bbox	node	DB	1000	0	1150	73
+bbox	node	DB	1000	533	1150	606
+bbox	node	LB	400	0	550	73
+bbox	node	LB	400	533	550	606
+canvas	-50	-10	1200	647
 message	App	Cache	solid	filled	Check cache
 message	App	Cache	solid	filled	Store
 message	App	DB	solid	filled	Query

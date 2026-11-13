@@ -4,6 +4,17 @@
 accept	yes
 actor	A	A	participant
 actor	B	B	participant
+bbox	label	Dashed arrow	128.2	138.1	227.8	155.2
+bbox	label	Dashed cross	129.1	314.1	226.9	331.2
+bbox	label	Dashed open	130.4	226.1	225.6	243.3
+bbox	label	Solid arrow	132	94.1	212	111.2
+bbox	label	Solid cross	132.9	270.1	211.1	287.2
+bbox	label	Solid open	134.2	182.1	209.8	199.3
+bbox	node	A	0	0	150	73
+bbox	node	A	0	357	150	430
+bbox	node	B	200	0	350	73
+bbox	node	B	200	357	350	430
+canvas	-50	-10	400	471
 message	A	B	solid	cross	Solid cross
 message	A	B	solid	filled	Solid arrow
 message	A	B	solid	open	Solid open

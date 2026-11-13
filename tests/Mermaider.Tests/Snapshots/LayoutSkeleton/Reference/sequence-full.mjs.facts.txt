@@ -6,8 +6,34 @@ actor	B	Backend	participant
 actor	DB	Database	participant
 actor	F	Frontend	participant
 actor	U	User	actor
+bbox	label	200 JWT	344	362.1	408	379.4
+bbox	label	401 Unauthorized	312.9	498.1	439.1	515.4
+bbox	label	Click login	135.6	94.1	208.4	111.5
+bbox	label	Done	356.9	552.1	395.1	569.4
+bbox	label	Every 30s	360	632.9	440	650.4
+bbox	label	Heartbeat	336.9	685.1	407.1	702.4
+bbox	label	Invalid	347.4	450.9	402.6	468.3
+bbox	label	OK	366.4	729.1	389.6	746.4
+bbox	label	POST /auth	328.4	138.1	411.6	155.4
+bbox	label	Row	562	273.1	594	290.4
+bbox	label	SELECT user	523.3	229.1	621	246.4
+bbox	label	Show dashboard	118	596.1	238	613.4
+bbox	label	Valid	378.4	309.9	421.6	327.3
+bbox	label	alt	240	306	290	341
+bbox	label	loop	264	629	314	664
+bbox	node	B	400	0	550	73
+bbox	node	B	400	782	550	855
+bbox	node	DB	600	0	750	73
+bbox	node	DB	600	782	750	855
+bbox	node	F	200	0	350	73
+bbox	node	F	200	782	350	855
+bbox	node	U	58.1	0	92.1	67.2
+bbox	node	U	58.1	788	92.1	855.2
+bbox	note	Hash & verify	500	171	650	208
+bbox	note	Session established	250	395	500	432
 block	alt	Valid
 block	loop	Every 30s
+canvas	-50	-10	800	896
 divider	Invalid
 message	B	DB	solid	filled	SELECT user
 message	B	F	dashed	filled	200 JWT

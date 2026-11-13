@@ -5,8 +5,27 @@ accept	yes
 actor	API	API	participant
 actor	Client	Client	participant
 actor	DB	DB	participant
+bbox	label	Cache Hit	260.4	131	339.6	148.2
+bbox	label	Cache Miss	228.8	225	321.2	242.2
+bbox	label	Cached Response	112.2	183.1	243.8	200.3
+bbox	label	Fresh Response	119.3	360.1	236.7	377.3
+bbox	label	Health Check	147.5	407	252.5	424.2
+bbox	label	Ping	156	459.1	188	476.5
+bbox	label	Pong	159.3	503.1	196.7	520.5
+bbox	label	Query	350.2	272.1	393.8	289.5
+bbox	label	Request	142.2	94.1	201.8	111.3
+bbox	label	Result	355.3	316.1	400.7	333.2
+bbox	label	alt	64	127	114	162
+bbox	label	loop	64	403	114	438
+bbox	node	API	200	0	350	73
+bbox	node	API	200	556	350	629
+bbox	node	Client	0	0	150	73
+bbox	node	Client	0	556	150	629
+bbox	node	DB	400	0	550	73
+bbox	node	DB	400	556	550	629
 block	alt	Cache Hit
 block	loop	Health Check
+canvas	-50	-10	600	670
 divider	Cache Miss
 message	API	Client	dashed	filled	Cached Response
 message	API	Client	dashed	filled	Fresh Response

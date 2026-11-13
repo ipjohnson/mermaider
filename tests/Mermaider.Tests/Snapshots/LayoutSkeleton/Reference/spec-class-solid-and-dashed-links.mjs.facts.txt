@@ -2,6 +2,12 @@
 # mermaid 12.3.0
 # source 7af02d22852dfede
 accept	yes
+bbox	label	uses	88.2	254	117.8	275
+bbox	node	A	49.1	12	83.2	93
+bbox	node	B	12	133	46.1	214
+bbox	node	C	86.1	133	120.3	214
+bbox	node	D	86.1	315	120.3	396
+canvas	4	4	128.3	404
 class	A	A
 class	B	B
 class	C	C

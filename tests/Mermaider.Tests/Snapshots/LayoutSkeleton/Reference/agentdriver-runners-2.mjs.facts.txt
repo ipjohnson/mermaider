@@ -7,6 +7,26 @@ actor	D	agent-driver runner	participant
 actor	G	GitHub	participant
 actor	R	relay on the runner	participant
 actor	S	serve, on the Mac	participant
+bbox	label	GitHub's answer	195.6	449.6	312.6	467
+bbox	label	accepted or refused	1133.3	317.6	1274.7	335
+bbox	label	git push -u origin, after PushGate allowed it	95.1	94.6	400.9	112
+bbox	label	git push, your credentials	1109.1	273.6	1286.9	291
+bbox	label	hook exits 0 or 1	539.3	405.6	656.7	423
+bbox	label	push call, on the control channel	792.3	182.6	1021.7	200
+bbox	label	reply	895.6	361.6	930.4	379
+bbox	label	the pre-receive hook bundles the commits	443.5	138.6	740.5	156
+bbox	node	A	0	0	150	73
+bbox	node	A	0	492	150	565
+bbox	node	D	689	0	839	73
+bbox	node	D	689	492	839	565
+bbox	node	G	1272	0	1422	73
+bbox	node	G	1272	492	1422	565
+bbox	node	R	351	0	501	73
+bbox	node	R	351	492	501	565
+bbox	node	S	980.5	0	1130.5	73
+bbox	node	S	980.5	492	1130.5	565
+bbox	note	own branch only, unbundle into its clone, value check if a grant is active	814	215	1297	252
+canvas	-50	-10	1472	606
 message	A	R	solid	filled	git push -u origin, after PushGate allowed it
 message	D	R	dashed	filled	hook exits 0 or 1
 message	D	S	solid	filled	push call, on the control channel

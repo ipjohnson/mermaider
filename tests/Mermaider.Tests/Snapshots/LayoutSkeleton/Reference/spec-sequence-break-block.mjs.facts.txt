@@ -4,7 +4,17 @@
 accept	yes
 actor	Client	Client	participant
 actor	Server	Server	participant
+bbox	label	200 OK	163.9	237.1	218.1	254.2
+bbox	label	429 Too Many Requests	104.9	183.1	277.1	200.5
+bbox	label	Request	155.2	94.1	214.8	111.3
+bbox	label	When rate limited	145.8	131	279.2	148.2
+bbox	label	break	64	127	114	162
+bbox	node	Client	0	0	150	73
+bbox	node	Client	0	280	150	353
+bbox	node	Server	225	0	375	73
+bbox	node	Server	225	280	375	353
 block	break	When rate limited
+canvas	-50	-10	425	394
 message	Client	Server	solid	filled	Request
 message	Server	Client	dashed	filled	200 OK
 message	Server	Client	dashed	filled	429 Too Many Requests

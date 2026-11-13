@@ -6,6 +6,8 @@ attribute	MyService	#bool protectedField
 attribute	MyService	+String publicField
 attribute	MyService	-int privateField
 attribute	MyService	~float packageField
+bbox	node	MyService	12	12	197.5	273
+canvas	4	4	205.5	281
 class	MyService	MyService
 method	MyService	#reset() : void
 method	MyService	+getStatus() : String

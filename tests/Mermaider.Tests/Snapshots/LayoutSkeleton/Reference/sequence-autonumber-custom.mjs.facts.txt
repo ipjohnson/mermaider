@@ -5,6 +5,16 @@ accept	yes
 actor	Alice	Alice	participant
 actor	Bob	Bob	participant
 actor	Charlie	Charlie	participant
+bbox	label	First message	121.8	94.1	222.2	111.5
+bbox	label	Second message	310.2	138.1	433.8	155.5
+bbox	label	Third message	225.1	182.1	330.9	199.5
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	225	150	298
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	225	350	298
+bbox	node	Charlie	400	0	550	73
+bbox	node	Charlie	400	225	550	298
+canvas	-50	-10	600	339
 message	Alice	Bob	solid	filled	First message
 message	Bob	Charlie	solid	filled	Second message
 message	Charlie	Alice	dashed	filled	Third message

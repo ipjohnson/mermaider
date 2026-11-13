@@ -2,6 +2,14 @@
 # mermaid 12.3.0
 # source 9661b41b07fef28c
 accept	yes
+bbox	label	2	46.5	396.5	55.5	413
+bbox	label	has	30	335.5	52.6	356.5
+bbox	label	holds	24.5	133	58	154
+bbox	label	many	46.5	194	82.5	210.5
+bbox	node	Duck	12.4	214.5	70.6	295.5
+bbox	node	Pond	12	12	71	93
+bbox	node	Wing	12.5	417	70.5	498
+canvas	4	4	90.5	506
 class	Duck	Duck
 class	Pond	Pond
 class	Wing	Wing

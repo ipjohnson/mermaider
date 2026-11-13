@@ -3,6 +3,12 @@
 # source e45d4b82b3ddccef
 accept	yes
 actor	Service	Service	participant
+bbox	label	Initialize	47.1	94.1	104.9	111.2
+bbox	label	Ready	52.9	242.1	99.1	259.5
+bbox	label	Validate config	24.1	168.1	127.9	185.5
+bbox	node	Service	0	0	150	73
+bbox	node	Service	0	315	150	388
+canvas	-50	-10	201	429
 message	Service	Service	dashed	filled	Ready
 message	Service	Service	solid	filled	Initialize
 message	Service	Service	solid	filled	Validate config

@@ -3,6 +3,8 @@
 # source 5b0703228ee355d9
 accept	yes
 attribute	Worker	+string Default
+bbox	node	Worker	12	12	165.2	210
+canvas	4	4	173.2	218
 class	Worker	Worker
 method	Worker	+Build() : Worker
 method	Worker	+Create()

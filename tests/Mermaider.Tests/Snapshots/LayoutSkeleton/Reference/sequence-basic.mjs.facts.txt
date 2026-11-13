@@ -5,6 +5,18 @@ accept	yes
 actor	A	Alice	participant
 actor	B	Bob	participant
 actor	C	Charlie	participant
+bbox	label	Forward message	308	182.1	436	199.5
+bbox	label	Got it	358.9	226.1	397.1	243.2
+bbox	label	Hello Bob!	135.1	94.1	208.9	111.2
+bbox	label	Hey Alice, Charlie here	196.6	270.1	359.4	287.5
+bbox	label	Hi Alice!	149.1	138.1	206.9	155.2
+bbox	node	A	0	0	150	73
+bbox	node	A	0	313	150	386
+bbox	node	B	200	0	350	73
+bbox	node	B	200	313	350	386
+bbox	node	C	400	0	550	73
+bbox	node	C	400	313	550	386
+canvas	-50	-10	600	427
 message	A	B	solid	filled	Hello Bob!
 message	B	A	dashed	filled	Hi Alice!
 message	B	C	solid	filled	Forward message

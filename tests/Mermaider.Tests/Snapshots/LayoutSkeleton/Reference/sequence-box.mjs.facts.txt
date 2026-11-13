@@ -6,8 +6,23 @@ actor	API	API	participant
 actor	Auth	Auth	participant
 actor	Client	Client	participant
 actor	DB	DB	participant
+bbox	label	Data	266.1	296.5	299.9	314.5
+bbox	label	OK	171.4	208.5	194.6	226.5
+bbox	label	Query	255.2	252.5	298.8	270.5
+bbox	label	Request	363.2	120.5	422.8	138.5
+bbox	label	Response	351	340.5	423	358.5
+bbox	label	Validate	148.7	164.5	205.3	182.5
+bbox	node	API	5	27	155	100
+bbox	node	API	5	384	155	457
+bbox	node	Auth	205	27	355	100
+bbox	node	Auth	205	384	355	457
+bbox	node	Client	625	27	775	100
+bbox	node	Client	625	384	775	457
+bbox	node	DB	405	27	555	100
+bbox	node	DB	405	384	555	457
 box	External	Client
 box	Internal Services	API,Auth,DB
+canvas	-50	-10	830	508
 message	API	Auth	solid	filled	Validate
 message	API	Client	dashed	filled	Response
 message	API	DB	solid	filled	Query

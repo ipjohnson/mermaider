@@ -7,6 +7,10 @@ attribute	Animal	+String name
 attribute	Animal	+int age
 attribute	Cat	+bool indoor
 attribute	Dog	+String breed
+bbox	node	Animal	85.4	12	230.4	210
+bbox	node	Cat	174.8	250	310.1	406
+bbox	node	Dog	12	250	134.8	406
+canvas	4	4	318.1	414
 class	Animal	Animal
 class	Cat	Cat
 class	Dog	Dog

@@ -4,6 +4,14 @@
 accept	yes
 actor	Alice	Alice	participant
 actor	Bob	Bob	participant
+bbox	label	Bye	158.2	182.1	185.8	199.5
+bbox	label	Hello	153.8	94.1	190.2	111.2
+bbox	label	Hi	170.4	138.1	185.6	155.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	225	150	298
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	225	350	298
+canvas	-50	-10	400	339
 message	Alice	Bob	solid	filled	Bye
 message	Alice	Bob	solid	filled	Hello
 message	Bob	Alice	solid	filled	Hi

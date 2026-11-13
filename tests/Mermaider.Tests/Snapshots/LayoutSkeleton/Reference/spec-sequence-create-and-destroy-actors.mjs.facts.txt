@@ -5,6 +5,17 @@ accept	yes
 actor	Alice	Alice	participant
 actor	Bob	Bob	participant
 actor	Carol	Carol	participant
+bbox	label	Goodbye	338.5	263.1	403.5	280.5
+bbox	label	Hello	153.8	94.1	190.2	111.2
+bbox	label	Hi Carol	342.1	138.1	399.9	155.2
+bbox	label	Thanks	389.8	219.1	442.2	236.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	342	150	415
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	342	350	415
+bbox	node	Carol	475	124.5	625	197.5
+bbox	node	Carol	475	249	625	322
+canvas	-50	-10	675	456
 message	Alice	Bob	solid	filled	Hello
 message	Bob	Carol	solid	cross	Goodbye
 message	Bob	Carol	solid	filled	Hi Carol

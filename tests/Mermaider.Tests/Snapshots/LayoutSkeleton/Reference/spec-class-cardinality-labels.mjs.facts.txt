@@ -2,6 +2,21 @@
 # mermaid 12.3.0
 # source 6eec90030571cfd1
 accept	yes
+bbox	label	*	67.7	220.5	76.7	237
+bbox	label	0..*	157.9	97	193.9	113.5
+bbox	label	1	39.6	338	48.6	354.5
+bbox	label	1	45.6	97	54.6	113.5
+bbox	label	1..*	190.4	220.5	226.4	237
+bbox	label	1..*	61.7	461.5	97.7	478
+bbox	label	contains	30.2	400.5	82.3	421.5
+bbox	label	enrolls	158.4	153.5	199.7	174.5
+bbox	label	places	36.2	153.5	76.6	174.5
+bbox	node	Course	143.3	247	215.5	328
+bbox	node	Customer	12	12	101.4	93
+bbox	node	LineItem	15.9	482	97.5	563
+bbox	node	Order	25.6	247	87.7	328
+bbox	node	Student	141.4	12	217.5	93
+canvas	4	4	234.4	571
 class	Course	Course
 class	Customer	Customer
 class	LineItem	LineItem

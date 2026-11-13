@@ -2,6 +2,9 @@
 # mermaid 12.3.0
 # source bd623842df5ac834
 accept	yes
+bbox	node	Implementation	12	12	139.5	93
+bbox	node	Interface	179.5	12	261.8	93
+canvas	4	4	269.8	186
 class	Implementation	Implementation
 class	Interface	Interface
 relation	Implementation	()Interface	none	lollipop	solid

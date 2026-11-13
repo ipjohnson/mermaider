@@ -1,6 +1,8 @@
 // Renders every .mmd in a corpus folder with the mermaid.js pinned in package-lock.json, in one headless page, and writes
 // <name>.mjs.facts.txt per case: whether mermaid.js accepts the source, and when it does, the labels, groups, edges and
 // end markers of flowchart, state, class and sequence diagrams. MjsFactsTests diffs these with Mermaider's own facts.
+// Class and sequence cases also get the drawn canvas and the bounding box of each class, actor, label, note and namespace
+// (`canvas` and `bbox` lines), which OverlapLintTests checks for overlaps.
 //
 //   node scripts/mjs-facts.mjs <corpus-dir> <facts-dir> [svg-dir]
 //
@@ -121,9 +123,64 @@ async function extractFacts(source, name) {
 	const type = diagram.type
 	if (type === 'flowchart-v2' || type === 'flowchart') flowchart()
 	else if (type === 'stateDiagram') state()
-	else if (type === 'classDiagram') classDiagram()
-	else if (type === 'sequence') sequence()
+	else if (type === 'classDiagram') { classDiagram(); classBoxes() }
+	else if (type === 'sequence') { sequence(); sequenceBoxes() }
 	return { facts, svg }
+
+	// Bounding boxes in the SVG's user units, rounded so a refresh on another machine moves few lines.
+	function bbox(el) {
+		if (!el) return null
+		const r = el.getBoundingClientRect()
+		if (r.width === 0 && r.height === 0) return null
+		const m = dom.getScreenCTM().inverse()
+		const p = (x, y) => { const q = dom.createSVGPoint(); q.x = x; q.y = y; return q.matrixTransform(m) }
+		const a = p(r.left, r.top), b = p(r.right, r.bottom)
+		return [a.x, a.y, b.x, b.y].map(v => Math.round(v * 10) / 10)
+	}
+	function box(kind, name, el, parent = '') {
+		const b = bbox(el)
+		if (b) facts.push(tab('bbox', kind, name, ...b.map(String), parent))
+	}
+	function canvas() {
+		const vb = dom.viewBox.baseVal
+		facts.push(tab('canvas', ...[vb.x, vb.y, vb.x + vb.width, vb.y + vb.height].map(v => String(Math.round(v * 10) / 10))))
+	}
+
+	function classBoxes() {
+		canvas()
+		const data = db.getData()
+		const interfaces = new Set((db.interfaces ?? []).map(i => i.id))
+		for (const n of data.nodes) {
+			if (n.isGroup) {
+				const cluster = dom.querySelector(`.clusters [id="${svgId}-${n.id}"]`)
+				box('group', n.id, cluster?.querySelector(':scope > rect') ?? cluster, n.parentId ?? '')
+			} else if (n.shape === 'note') {
+				const el = byDomId(n.domId) ?? dom.querySelector(`[id="${svgId}-${n.id}"]`)
+				box('note', text(el), el)
+			} else if (!interfaces.has(n.id)) box('node', n.id, byDomId(n.domId))
+		}
+		for (const el of dom.querySelectorAll('g.edgeLabel')) {
+			const t = text(el)
+			if (t) box('label', t, el.querySelector('.label') ?? el)
+		}
+		for (const el of dom.querySelectorAll('g.edgeTerminals')) {
+			const t = text(el)
+			if (t) box('label', t, el)
+		}
+	}
+
+	function sequenceBoxes() {
+		canvas()
+		for (const el of dom.querySelectorAll('rect.actor-top, rect.actor-bottom, g.actor-man')) box('node', el.getAttribute('name') ?? el.closest('[data-id]')?.getAttribute('data-id') ?? '', el)
+		// mermaid writes a block's condition as "[condition]"; Mermaider draws it without the brackets.
+		const bare = s => s.replace(/^\[(.*)\]$/, '$1')
+		for (const el of dom.querySelectorAll('text.messageText, text.loopText, text.sectionTitle')) {
+			const t = bare(text(el))
+			if (t) box('label', t, el)
+		}
+		for (const el of dom.querySelectorAll('polygon.labelBox')) box('label', text(el.parentElement?.querySelector('text.labelText')), el)
+		for (const el of dom.querySelectorAll('rect.note')) box('note', text(el.parentElement?.querySelector('text.noteText')), el)
+	}
 
 	function end(t) {
 		switch (t) {

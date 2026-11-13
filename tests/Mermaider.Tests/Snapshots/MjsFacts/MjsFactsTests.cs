@@ -192,7 +192,11 @@ public class MjsFactsTests
 	}
 }
 
-internal sealed record MjsFactsFile(string Version, string SourceHash, IReadOnlyList<string> Facts)
+/// <summary>
+/// A committed mermaid.js facts file. <see cref="Geometry"/> holds its <c>canvas</c> and <c>bbox</c> lines, which
+/// <see cref="LayoutSkeleton.OverlapLint"/> reads; <see cref="Facts"/> holds the rest, which MjsFactsTests diffs.
+/// </summary>
+internal sealed record MjsFactsFile(string Version, string SourceHash, IReadOnlyList<string> Facts, IReadOnlyList<string> Geometry)
 {
 	public const string Suffix = ".mjs.facts.txt";
 
@@ -203,17 +207,20 @@ internal sealed record MjsFactsFile(string Version, string SourceHash, IReadOnly
 			throw new FileNotFoundException($"No mermaid.js facts for '{name}'; run `mise run mjs-facts`", path);
 		string? version = null, hash = null;
 		var facts = new List<string>();
+		var geometry = new List<string>();
 		foreach (var line in File.ReadAllLines(path))
 		{
 			if (line.StartsWith("# mermaid ", StringComparison.Ordinal))
 				version = line["# mermaid ".Length..].Trim();
 			else if (line.StartsWith("# source ", StringComparison.Ordinal))
 				hash = line["# source ".Length..].Trim();
+			else if (line.StartsWith("bbox\t", StringComparison.Ordinal) || line.StartsWith("canvas\t", StringComparison.Ordinal))
+				geometry.Add(line);
 			else if (line.Length > 0 && !line.StartsWith('#'))
 				facts.Add(line);
 		}
 
-		return new MjsFactsFile(version ?? "(none)", hash ?? "(none)", facts);
+		return new MjsFactsFile(version ?? "(none)", hash ?? "(none)", facts, geometry);
 	}
 
 	/// <summary>The mermaid version package-lock.json pins, which scripts/mjs-facts.mjs renders with.</summary>

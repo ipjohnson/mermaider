@@ -2,6 +2,9 @@
 # mermaid 12.3.0
 # source b22dad22700cc2d4
 accept	yes
+bbox	node	Animal	12	12	136.4	93
+bbox	node	Dog	48.6	133	99.8	214
+canvas	4	4	144.4	222
 class	Animal	Living creature
 class	Dog	Dog
 relation	Animal	Dog	triangle	none	solid

@@ -3,6 +3,15 @@
 # source 02becac93f777eb5
 accept	yes
 attribute	Policy	+bool Allowed
+bbox	group	Containers	482.6	85.8	648.8	238.8
+bbox	group	Execution	147.1	12	326.6	329
+bbox	label	launches	376.6	89.5	432.6	110.5
+bbox	label	reads	387.1	237	422.1	258
+bbox	node	DockerEngine	506.6	133.8	624.8	214.8
+bbox	node	LaunchPoint	193.8	60	302.6	141
+bbox	node	Policy	171.1	191	302.6	305
+bbox	note	Restrictions	12	231.5	97.1	264.5
+canvas	4	4	656.8	337
 class	DockerEngine	DockerEngine
 class	LaunchPoint	LaunchPoint
 class	Policy	Policy

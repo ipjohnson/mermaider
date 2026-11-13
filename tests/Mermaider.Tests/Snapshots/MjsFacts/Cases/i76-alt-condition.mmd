@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant A
+    participant B
+    participant C
+    A->>B: request
+    B-->>A: response
+    alt condition one
+        A->>C: do the first thing
+    else condition two
+        A-->>C: do the second thing
+    end

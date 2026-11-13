@@ -5,6 +5,13 @@ accept	yes
 attribute	Order	+int id
 attribute	Product	+String name
 attribute	Product	+double price
+bbox	group	Domain	107.3	264	327.3	666
+bbox	group	Infrastructure	12	12	447.8	204
+bbox	node	Order	131.3	312	262.7	447
+bbox	node	OrderRepo	36	60	216.8	180
+bbox	node	Product	168.4	507	303.3	642
+bbox	node	ProductRepo	266.8	60	423.8	180
+canvas	4	4	455.8	674
 class	Order	Order
 class	OrderRepo	OrderRepo
 class	Product	Product

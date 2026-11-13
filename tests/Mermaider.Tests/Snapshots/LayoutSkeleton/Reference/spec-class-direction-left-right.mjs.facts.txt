@@ -2,6 +2,9 @@
 # mermaid 12.3.0
 # source d46b80328d8844f7
 accept	yes
+bbox	node	A	12	12	46.1	93
+bbox	node	B	86.1	12	120.3	93
+canvas	4	4	128.3	101
 class	A	A
 class	B	B
 relation	A	B	none	arrow	solid

@@ -2,6 +2,9 @@
 # mermaid 12.3.0
 # source d90ceab0168532c7
 accept	yes
+bbox	node	A	12	12	46.1	93
+bbox	node	B	12	133	46.1	214
+canvas	4	4	54.1	222
 class	A	A
 class	B	B
 relation	A	B	triangle	triangle	solid

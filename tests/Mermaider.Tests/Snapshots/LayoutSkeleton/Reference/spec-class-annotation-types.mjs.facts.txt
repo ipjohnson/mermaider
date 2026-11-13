@@ -9,6 +9,12 @@ annotation	Shape	«abstract»
 attribute	Color	BLUE
 attribute	Color	GREEN
 attribute	Color	RED
+bbox	node	Circle	153.4	229	216.4	310
+bbox	node	Color	391.8	12	512.3	189
+bbox	node	Drawable	207.9	48	351.8	189
+bbox	node	EventBus	552.3	30	742	171
+bbox	node	Shape	12	48	167.9	189
+canvas	4	4	750	318
 class	Circle	Circle
 class	Color	Color
 class	Drawable	Drawable

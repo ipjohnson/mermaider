@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c4d9d8b4add51cf1
+accept	yes
+actor	A	A	participant
+actor	J	J	participant
+bbox	label	Fight against hypochondria	179.9	138.1	372.1	155.5
+bbox	label	Great	158	259.1	198	276.2
+bbox	label	hi	165.8	94.1	178.2	111.2
+bbox	node	A	0	0	150	73
+bbox	node	A	0	302	150	375
+bbox	node	J	200	0	350	73
+bbox	node	J	200	302	350	375
+bbox	note	Rational thoughts	300	201	450	238
+canvas	-50	-10	500	416
+message	A	J	solid	filled	hi
+message	J	A	dashed	filled	Great
+message	J	J	solid	filled	Fight against hypochondria
+note	right	J	Rational thoughts

@@ -43,6 +43,11 @@ and sequence gallery examples, spec-test sources and the repros in `MjsFacts/Cas
 differences live in `mjs-facts-baseline.txt` under a reason; a new difference and a vanished one both fail.
 `mise run mjs-facts` (or `scripts/mjs-facts.sh`) re-renders the facts with the mermaid version `package-lock.json` pins.
 
+`OverlapLintTests` (`Snapshots/LayoutSkeleton/OverlapLint.cs`) checks the class and sequence cases of that corpus for labels
+on labels, labels on class or actor boxes, notes on anything, intersecting sibling groups and boxes outside the canvas.
+Mermaider's boxes come from its SVG, mermaid.js's from the `bbox` lines the facts runner records. An overlap counts
+only when mermaid.js does not have it too, and the counts per case must equal `overlap-lint-baseline.txt`.
+
 ## Benchmarks
 
 Run benchmarks with: `dotnet run -c Release --project tests/Mermaider.Benchmarks/Mermaider.Benchmarks.csproj`

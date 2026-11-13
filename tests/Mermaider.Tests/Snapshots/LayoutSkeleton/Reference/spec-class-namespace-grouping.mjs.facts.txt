@@ -4,6 +4,12 @@
 accept	yes
 attribute	Order	+int id
 attribute	User	+String name
+bbox	group	Domain	23.9	12	211	378
+bbox	group	Infrastructure	12	438	222.9	651
+bbox	node	Database	36	486	198.9	627
+bbox	node	Order	47.9	219	187	354
+bbox	node	User	55.5	60	179.5	195
+canvas	4	4	230.9	659
 class	Database	Database
 class	Order	Order
 class	User	User

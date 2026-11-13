@@ -6,6 +6,21 @@ actor	Auth	Auth	participant
 actor	Client	Client	participant
 actor	DB	DB	participant
 actor	Server	Server	participant
+bbox	label	200 JWT	144	314.1	208	331.4
+bbox	label	OK	466.4	270.1	489.6	287.4
+bbox	label	POST /login	127	94.1	213	111.5
+bbox	label	SELECT user	323.3	138.1	421	155.4
+bbox	label	User row	346	182.1	410	199.4
+bbox	label	Validate token	421.9	226.1	522.1	243.4
+bbox	node	Auth	600	0	750	73
+bbox	node	Auth	600	357	750	430
+bbox	node	Client	0	0	150	73
+bbox	node	Client	0	357	150	430
+bbox	node	DB	400	0	550	73
+bbox	node	DB	400	357	550	430
+bbox	node	Server	200	0	350	73
+bbox	node	Server	200	357	350	430
+canvas	-50	-10	800	471
 message	Auth	Server	dashed	filled	OK
 message	Client	Server	solid	filled	POST /login
 message	DB	Server	dashed	filled	User row

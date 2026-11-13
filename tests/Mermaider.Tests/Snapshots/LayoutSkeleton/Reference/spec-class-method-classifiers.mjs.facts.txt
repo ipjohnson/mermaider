@@ -3,6 +3,8 @@
 # source efb8b01c82e83ca0
 accept	yes
 attribute	Animal	+int count
+bbox	node	Animal	12	12	147.7	210
+canvas	4	4	155.7	218
 class	Animal	Animal
 method	Animal	+run()
 method	Animal	+sleep()

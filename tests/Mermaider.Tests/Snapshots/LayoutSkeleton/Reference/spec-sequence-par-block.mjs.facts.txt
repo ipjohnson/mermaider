@@ -5,7 +5,20 @@ accept	yes
 actor	Auth	Auth	participant
 actor	Client	Client	participant
 actor	Data	Data	participant
+bbox	label	Combined result	119.8	306.1	236.3	323.2
+bbox	label	Fetch in parallel	339.1	131	460.9	148.2
+bbox	label	Get permissions	314.2	252.1	429.8	269.3
+bbox	label	Get user profile	317.3	183.1	426.7	200.3
+bbox	label	Validate token	121.9	94.1	222.1	111.2
+bbox	label	par	264	127	314	162
+bbox	node	Auth	200	0	350	73
+bbox	node	Auth	200	349	350	422
+bbox	node	Client	0	0	150	73
+bbox	node	Client	0	349	150	422
+bbox	node	Data	400	0	550	73
+bbox	node	Data	400	349	550	422
 block	par	Fetch in parallel
+canvas	-50	-10	600	463
 divider
 message	Auth	Client	dashed	filled	Combined result
 message	Auth	Data	solid	filled	Get permissions
