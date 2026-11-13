@@ -2,12 +2,13 @@
 # mermaid 12.3.0
 # source 24acf9a4499e7a15
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
 edge	C	D	none	arrow	solid
 edge	E	F	none	arrow	solid	x | y
-node	A	a ] b
-node	B	B
-node	C	C
-node	D	d ] e
-node	E	E
-node	F	F
+node	A	a ] b	rect
+node	B	B	rect
+node	C	C	rect
+node	D	d ] e	rect
+node	E	E	rect
+node	F	F	rect

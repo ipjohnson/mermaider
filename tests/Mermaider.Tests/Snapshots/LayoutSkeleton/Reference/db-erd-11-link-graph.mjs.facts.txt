@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f0d606bf5f3d9efb
+accept	yes
+drawn	yes
+entity	DocumentationSet	DocumentationSet
+entity	LinkManifest	LinkManifest
+entity	LinkRegistry	LinkRegistry
+entity	LinkRegistryEntry	LinkRegistryEntry
+entity	Registry	Registry
+label	DocumentationSet
+label	LinkManifest
+label	LinkRegistry
+label	LinkRegistryEntry
+label	Registry
+label	link-index.json
+label	path
+label	per branch
+label	repository, branch
+relation	DocumentationSet	LinkManifest	one	zero-or-more	identifying	per branch
+relation	LinkRegistry	LinkRegistryEntry	one	zero-or-more	identifying	repository, branch
+relation	LinkRegistryEntry	LinkManifest	one	one	identifying	path
+relation	Registry	LinkRegistry	one	one	identifying	link-index.json

@@ -22,6 +22,7 @@ class	Customer	Customer
 class	LineItem	LineItem
 class	Order	Order
 class	Student	Student
+drawn	yes
 relation	Customer	Order	none	arrow	solid	places	1	*
 relation	Order	LineItem	diamond-filled	none	solid	contains	1	1..*
 relation	Student	Course	none	arrow	solid	enrolls	0..*	1..*

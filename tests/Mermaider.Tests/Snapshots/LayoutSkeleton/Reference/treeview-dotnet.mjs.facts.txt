@@ -1,0 +1,41 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 920780ee6e4b7b98
+accept	yes
+drawn	yes
+label	AuthService.cs
+label	Models
+label	MyApp
+label	MyApp.Core
+label	MyApp.Core.csproj
+label	MyApp.Tests
+label	MyApp.Tests.csproj
+label	MyApp.csproj
+label	MyApp.sln
+label	Program.cs
+label	README.md
+label	Services
+label	User.cs
+label	UserService.cs
+label	UserServiceTests.cs
+label	appsettings.json
+label	src
+label	tests
+node	MyApp.sln	dir
+node	MyApp.sln / README.md	file
+node	MyApp.sln / src	dir
+node	MyApp.sln / src / MyApp	dir
+node	MyApp.sln / src / MyApp / MyApp.csproj	file
+node	MyApp.sln / src / MyApp / Program.cs	file
+node	MyApp.sln / src / MyApp / appsettings.json	file
+node	MyApp.sln / src / MyApp.Core	dir
+node	MyApp.sln / src / MyApp.Core / Models	dir
+node	MyApp.sln / src / MyApp.Core / Models / User.cs	file
+node	MyApp.sln / src / MyApp.Core / MyApp.Core.csproj	file
+node	MyApp.sln / src / MyApp.Core / Services	dir
+node	MyApp.sln / src / MyApp.Core / Services / AuthService.cs	file
+node	MyApp.sln / src / MyApp.Core / Services / UserService.cs	file
+node	MyApp.sln / tests	dir
+node	MyApp.sln / tests / MyApp.Tests	dir
+node	MyApp.sln / tests / MyApp.Tests / MyApp.Tests.csproj	file
+node	MyApp.sln / tests / MyApp.Tests / UserServiceTests.cs	file

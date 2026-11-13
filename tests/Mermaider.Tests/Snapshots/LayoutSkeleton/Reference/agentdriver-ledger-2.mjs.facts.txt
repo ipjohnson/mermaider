@@ -68,6 +68,7 @@ class	SqliteStore	SqliteStore
 class	UsageWatcher	UsageWatcher
 class	Views	Views
 class	WorkMachine	WorkMachine
+drawn	yes
 method	EffectRunner	+ReplayAtStart()
 method	EffectRunner	+Run()
 method	IEffectHandler	+HandleAsync(effect)

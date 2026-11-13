@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f2a5f81e83434856
+accept	yes
+axis	Backend
+axis	Design
+axis	DevOps
+axis	Frontend
+axis	Testing
+curve	Team A	4,3,5,2,4
+curve	Team B	3,5,2,4,3
+drawn	yes
+label	Backend
+label	Design
+label	DevOps
+label	Frontend
+label	Skills Assessment
+label	Team A
+label	Team B
+label	Testing
+title	Skills Assessment

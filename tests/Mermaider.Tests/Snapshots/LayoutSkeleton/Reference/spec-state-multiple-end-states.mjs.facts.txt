@@ -2,14 +2,15 @@
 # mermaid 12.3.0
 # source 1cf905e48d7fbae5
 accept	yes
+drawn	yes
 edge	Active	Closed	none	arrow	solid	close
 edge	Active	Inactive	none	arrow	solid	disable
 edge	Closed	[*]end@root	none	arrow	solid
 edge	Inactive	Active	none	arrow	solid	reactivate
 edge	Inactive	Closed	none	arrow	solid	close
 edge	[*]start@root	Active	none	arrow	solid
-node	Active	Active	state
-node	Closed	Closed	state
-node	Inactive	Inactive	state
-node	[*]end@root		pseudo
-node	[*]start@root		pseudo
+node	Active	Active	rounded
+node	Closed	Closed	rounded
+node	Inactive	Inactive	rounded
+node	[*]end@root		fr-circ
+node	[*]start@root		sm-circ

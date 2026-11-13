@@ -20,6 +20,7 @@ bbox	node	Data	400	349	550	422
 block	par	Fetch in parallel
 canvas	-50	-10	600	463
 divider
+drawn	yes
 message	Auth	Client	dashed	filled	Combined result
 message	Auth	Data	solid	filled	Get permissions
 message	Auth	Data	solid	filled	Get user profile

@@ -33,6 +33,7 @@ class	I	I
 class	J	J
 class	K	K
 class	L	L
+drawn	yes
 relation	A	B	triangle	none	solid	Inheritance
 relation	C	D	diamond-filled	none	solid	Composition
 relation	E	F	diamond	none	solid	Aggregation

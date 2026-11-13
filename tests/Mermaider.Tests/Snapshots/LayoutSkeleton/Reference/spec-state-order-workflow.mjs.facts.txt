@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source d9f2d2f5666a5a78
 accept	yes
+drawn	yes
 edge	Cancelled	[*]end@root	none	arrow	solid
 edge	Confirmed	Shipped	none	arrow	solid	dispatch
 edge	Delivered	[*]end@root	none	arrow	solid
@@ -12,12 +13,12 @@ edge	Returned	Refunded	none	arrow	solid	process_refund
 edge	Shipped	Delivered	none	arrow	solid	deliver
 edge	Shipped	Returned	none	arrow	solid	return_request
 edge	[*]start@root	Pending	none	arrow	solid
-node	Cancelled	Cancelled	state
-node	Confirmed	Confirmed	state
-node	Delivered	Delivered	state
-node	Pending	Pending	state
-node	Refunded	Refunded	state
-node	Returned	Returned	state
-node	Shipped	Shipped	state
-node	[*]end@root		pseudo
-node	[*]start@root		pseudo
+node	Cancelled	Cancelled	rounded
+node	Confirmed	Confirmed	rounded
+node	Delivered	Delivered	rounded
+node	Pending	Pending	rounded
+node	Refunded	Refunded	rounded
+node	Returned	Returned	rounded
+node	Shipped	Shipped	rounded
+node	[*]end@root		fr-circ
+node	[*]start@root		sm-circ

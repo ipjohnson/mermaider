@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2b1d321371272ace
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid
+edge	C	D	none	arrow	solid
+edge	D	E	none	arrow	solid
+edge	E	F	none	arrow	solid
+edge	F	G	none	arrow	solid
+edge	G	H	none	arrow	solid
+edge	H	I	none	arrow	solid
+edge	I	J	none	arrow	solid
+node	A	Rounded	rounded
+node	B	Database	cyl
+node	C	Decide	diam
+node	D	Report	doc
+node	E	Prepare	hex
+node	F	Card	notch-rect
+node	G	Start	circle
+node	H	Terminal	stadium
+node	I	Store	h-cyl
+node	J		bolt

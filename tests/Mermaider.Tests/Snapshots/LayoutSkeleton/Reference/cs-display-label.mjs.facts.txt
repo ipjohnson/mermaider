@@ -7,4 +7,5 @@ bbox	node	Dog	48.6	133	99.8	214
 canvas	4	4	144.4	222
 class	Animal	Living creature
 class	Dog	Dog
+drawn	yes
 relation	Animal	Dog	triangle	none	solid

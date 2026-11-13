@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c6acddf6caf45ab1
+accept	yes
+drawn	yes
+event	2002	LinkedIn
+event	2004	Facebook
+event	2004	Google
+event	2006	Twitter
+event	2010	Instagram
+event	2016	TikTok
+event	2019	Threads
+label	2002
+label	2004
+label	2006
+label	2010
+label	2016
+label	2019
+label	Early Days
+label	Facebook
+label	Google
+label	Growth
+label	History of Social Media
+label	Instagram
+label	LinkedIn
+label	Modern Era
+label	Threads
+label	TikTok
+label	Twitter
+period	Early Days	2002
+period	Early Days	2004
+period	Growth	2006
+period	Growth	2010
+period	Modern Era	2016
+period	Modern Era	2019
+section	Early Days
+section	Growth
+section	Modern Era
+title	History of Social Media

@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 88ac37be776fbca1
+accept	yes
+drawn	yes
+label	Add tests
+label	Build
+label	GA
+label	Implement parser
+label	RC cut
+label	Release train
+label	Ship
+section	Build
+section	Ship
+task	Build	Add tests	p2	2026-01-09 00:00	2026-01-11 00:00	active
+task	Build	Implement parser	p1	2026-01-06 00:00	2026-01-09 00:00	done
+task	Ship	GA	p3	2026-01-11 00:00	2026-01-16 00:00	crit
+task	Ship	RC cut	m1	2026-01-11 00:00	2026-01-11 00:00	milestone
+title	Release train

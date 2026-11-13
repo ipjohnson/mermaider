@@ -2,10 +2,11 @@
 # mermaid 12.3.0
 # source 806153ccc65e972d
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
 edge	B	C	none	arrow	solid
 edge	C	D	none	arrow	solid
-node	A	The cat in the hat
-node	B	Italic emphasis
-node	C	Bold and italic mixed
-node	D	Normal label
+node	A	The cat in the hat	rect
+node	B	Italic emphasis	rect
+node	C	Bold and italic mixed	rect
+node	D	Normal label	rect

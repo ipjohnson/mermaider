@@ -1,0 +1,37 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e3bf8156297ac7c6
+accept	yes
+drawn	yes
+entity	ApiDeclaration	ApiDeclaration
+entity	CrossLinkDeclaration	CrossLinkDeclaration
+entity	DocumentationSet	DocumentationSet
+entity	Product	Product
+entity	Redirect	Redirect
+entity	Registry	Registry
+entity	TableOfContents	TableOfContents
+entity	TocItem	TocItem
+label	ApiDeclaration
+label	CrossLinkDeclaration
+label	DocumentationSet
+label	Product
+label	Redirect
+label	Registry
+label	TableOfContents
+label	TocItem
+label	api
+label	children
+label	cross_links
+label	entries
+label	products
+label	redirects.yml
+label	registry
+label	toc
+relation	DocumentationSet	ApiDeclaration	one	zero-or-more	identifying	api
+relation	DocumentationSet	CrossLinkDeclaration	one	zero-or-more	identifying	cross_links
+relation	DocumentationSet	Product	zero-or-more	zero-or-more	identifying	products
+relation	DocumentationSet	Redirect	one	zero-or-more	identifying	redirects.yml
+relation	DocumentationSet	Registry	zero-or-more	zero-or-one	identifying	registry
+relation	DocumentationSet	TableOfContents	one	one	identifying	toc
+relation	TableOfContents	TocItem	one	zero-or-more	identifying	entries
+relation	TocItem	TocItem	one	zero-or-more	identifying	children

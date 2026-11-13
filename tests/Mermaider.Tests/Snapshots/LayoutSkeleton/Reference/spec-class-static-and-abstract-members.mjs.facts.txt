@@ -6,5 +6,6 @@ attribute	MathUtils	+PI$ double
 bbox	node	MathUtils	12	12	176.1	168
 canvas	4	4	184.1	176
 class	MathUtils	MathUtils
+drawn	yes
 method	MathUtils	+add(a, b) : int
 method	MathUtils	+compute() : void

@@ -7,8 +7,8 @@ using Mermaider.Examples;
 namespace Mermaider.Tests.Snapshots.MjsFacts;
 
 /// <summary>
-/// The sources compared with mermaid.js: the flowchart, state, class and sequence gallery examples, the sources of the
-/// matching spec tests, and the committed repro files in <c>Cases/</c>.
+/// The sources compared with mermaid.js: the gallery examples of every diagram type, the sources of the flowchart, state,
+/// class, sequence, ER and architecture spec tests, and the committed repro files in <c>Cases/</c>.
 /// </summary>
 internal static partial class MjsCorpus
 {
@@ -46,7 +46,15 @@ internal static partial class MjsCorpus
 	public static string SourceHash(string source) =>
 		Convert.ToHexStringLower(SHA256.HashData(Encoding.UTF8.GetBytes(source.Replace("\r\n", "\n", StringComparison.Ordinal))))[..16];
 
-	private static readonly string[] s_specFiles = ["FlowchartSpecTests", "StateSpecTests", "ClassSpecTests", "SequenceSpecTests"];
+	private static readonly string[] s_specFiles =
+	[
+		"FlowchartSpecTests",
+		"StateSpecTests",
+		"ClassSpecTests",
+		"SequenceSpecTests",
+		"ErSpecTests",
+		"ArchitectureSpecTests",
+	];
 
 	private static IReadOnlyList<Case> Load()
 	{
@@ -73,7 +81,7 @@ internal static partial class MjsCorpus
 		return duplicate is not null ? throw new InvalidOperationException($"Two corpus cases are named '{duplicate.Key}'") : cases;
 	}
 
-	/// <summary>Flowchart, state, class and sequence sources; the header is the first line that is not front matter or a comment.</summary>
+	/// <summary>Sources of a diagram type Mermaider draws; the header is the first line that is not front matter or a comment.</summary>
 	public static bool IsCompared(string source)
 	{
 		var inFrontMatter = false;
@@ -109,7 +117,7 @@ internal static partial class MjsCorpus
 	private static string Kebab(string name) =>
 		KebabBoundaryPattern().Replace(name, "-$1").Replace('_', '-').ToLowerInvariant().Replace("--", "-", StringComparison.Ordinal);
 
-	[GeneratedRegex(@"^(flowchart|graph|stateDiagram(-v2)?|classDiagram(-v2)?|sequenceDiagram)\b", RegexOptions.None, TimeoutMs)]
+	[GeneratedRegex(@"^(flowchart|graph|stateDiagram(-v2)?|classDiagram(-v2)?|sequenceDiagram|erDiagram|pie|quadrantChart|timeline|gitGraph|radar-beta|treemap-beta|venn-beta|mindmap|gantt|journey|C4(Context|Container|Component|Dynamic|Deployment)|sankey(-beta)?|xychart(-beta)?|requirementDiagram|packet(-beta)?|kanban|architecture-beta|block(-beta)?|treeView(-beta)?)\b", RegexOptions.None, TimeoutMs)]
 	private static partial Regex HeaderPattern();
 
 	[GeneratedRegex(@"public\s+(?:async\s+Task|void|Task)\s+(?<method>\w+)\(\)(?:(?!public\s)[\s\S])*?""""""\r?\n(?<body>[\s\S]*?)\r?\n(?<indent>[ \t]*)""""""", RegexOptions.None, TimeoutMs)]

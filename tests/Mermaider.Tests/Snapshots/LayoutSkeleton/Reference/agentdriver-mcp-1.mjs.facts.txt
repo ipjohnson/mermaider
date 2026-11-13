@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 26b6ea69f8de7127
 accept	yes
+drawn	yes
 edge	claude	connector	none	arrow	solid	your claude.ai login
 edge	claude	proxy	none	arrow	solid	stdio
 edge	proxy	relay	none	arrow	solid	serve.sock
@@ -11,12 +12,12 @@ edge	resolver	claude	none	arrow	solid	mcp.json and settings at launch, control r
 edge	srt	local	none	arrow	solid
 group	Session	A session on the Mac	claude,local,proxy,srt
 group	serve	serve	library,relay,resolver
-node	claude	claude -p --strict-mcp-config
-node	connector	a claude.ai connector
-node	library	McpLibrary: mcp/ in the driver home
-node	local	the server, from its pinned files
-node	proxy	agent-driver mcp-proxy server
-node	relay	McpRelay: remote servers and servers with secrets
-node	remote	a remote server
-node	resolver	McpResolver: session, Task, workspace and profile
-node	srt	srt: sandbox-exec, or bubblewrap on Linux
+node	claude	claude -p --strict-mcp-config	rect
+node	connector	a claude.ai connector	rect
+node	library	McpLibrary: mcp/ in the driver home	rect
+node	local	the server, from its pinned files	rect
+node	proxy	agent-driver mcp-proxy server	rect
+node	relay	McpRelay: remote servers and servers with secrets	rect
+node	remote	a remote server	rect
+node	resolver	McpResolver: session, Task, workspace and profile	rect
+node	srt	srt: sandbox-exec, or bubblewrap on Linux	rect

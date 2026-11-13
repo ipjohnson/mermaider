@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bf4f132441db0f43
+accept	yes
+drawn	yes
+label	1d
+label	30d
+label	60d
+label	7d
+label	90d
+label	An Example Chart
+label	Current
+label	Seconds
+series	line	112.2,75.3,103,177,180.2,109.4
+series	line	38.2,36.8,39.7,54.5,49,38.4
+series	line	48.1,41.5,45.7,72.8,67.7,59.9
+title	An Example Chart
+x-axis		90d,60d,30d,7d,1d,Current
+y-axis	Seconds

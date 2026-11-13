@@ -1,0 +1,42 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 28dbd88e1c2da6da
+accept	yes
+attribute	cust	int	id	PK
+attribute	cust	string	email	UK
+attribute	cust	string	name
+attribute	li	float	price
+attribute	li	int	id	PK
+attribute	li	int	qty
+attribute	ord	date	created
+attribute	ord	int	id	PK
+attribute	ord	string	status
+drawn	yes
+entity	cust	Customer Account
+entity	li	Line Item
+entity	ord	Order
+label	Customer Account
+label	Line Item
+label	Order
+label	contains
+label	created
+label	date
+label	email
+label	float
+label	id
+label	id
+label	id
+label	int
+label	int
+label	int
+label	int
+label	name
+label	places
+label	price
+label	qty
+label	status
+label	string
+label	string
+label	string
+relation	cust	ord	one	zero-or-more	identifying	places
+relation	ord	li	one	one-or-more	identifying	contains

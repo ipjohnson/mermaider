@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 2f607e7d08350cd5
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
 edge	B	C	none	arrow	solid
 edge	B	D	none	arrow	solid
@@ -10,9 +11,9 @@ edge	D	E	none	arrow	solid
 edge	E	A	none	arrow	solid
 group	bar	Bar SubGraph	E,F
 group	foo	Foo SubGraph	C,D
-node	A	A
-node	B	B
-node	C	C
-node	D	D
-node	E	E
-node	F	F
+node	A	A	rect
+node	B	B	rect
+node	C	C	rect
+node	D	D	rect
+node	E	E	rect
+node	F	F	rect

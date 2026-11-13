@@ -1,0 +1,33 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6517fc238382418a
+accept	yes
+axis	x-left	Beginner
+axis	x-right	Expert
+axis	y-bottom	Low Demand
+axis	y-top	High Demand
+drawn	yes
+label	Beginner
+label	COBOL
+label	Deprioritize
+label	Expert
+label	High Demand
+label	Invest
+label	Kubernetes
+label	Low Demand
+label	Maintain
+label	Phase Out
+label	Python
+label	React
+label	Rust
+label	Technical Skills Matrix
+point	COBOL	0.3	0.1
+point	Kubernetes	0.4	0.9
+point	Python	0.8	0.9
+point	React	0.7	0.8
+point	Rust	0.3	0.7
+quadrant	1	Invest
+quadrant	2	Maintain
+quadrant	3	Deprioritize
+quadrant	4	Phase Out
+title	Technical Skills Matrix

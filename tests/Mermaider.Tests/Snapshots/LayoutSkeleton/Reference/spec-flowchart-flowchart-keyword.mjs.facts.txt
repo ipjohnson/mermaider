@@ -2,8 +2,9 @@
 # mermaid 12.3.0
 # source 335995dcd12c0045
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
 edge	B	C	none	arrow	solid
-node	A	Input
-node	B	Process
-node	C	Output
+node	A	Input	rect
+node	B	Process	diam
+node	C	Output	rect

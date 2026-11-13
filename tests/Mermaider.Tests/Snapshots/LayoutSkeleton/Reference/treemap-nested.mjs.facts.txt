@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source be48b15c9511ce19
+accept	yes
+drawn	yes
+label	Backend
+label	Business
+label	DevOps
+label	Frontend
+label	Marketing
+label	Sales
+label	Technology
+node	Business
+node	Business / Marketing	20
+node	Business / Sales	25
+node	Technology
+node	Technology / Backend	40
+node	Technology / DevOps	15
+node	Technology / Frontend	30

@@ -1,0 +1,93 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2c3744f032ee5f40
+accept	yes
+drawn	yes
+entity	Bundle	Bundle
+entity	BundleAmend	BundleAmend
+entity	BundleNotesAmend	BundleNotesAmend
+entity	BundleProfile	BundleProfile
+entity	BundleRegistry	BundleRegistry
+entity	BundledEntry	BundledEntry
+entity	BundledProduct	BundledProduct
+entity	ChangelogConfiguration	ChangelogConfiguration
+entity	ChangelogEntry	ChangelogEntry
+entity	ChangelogMarker	ChangelogMarker
+entity	ChangelogNote	ChangelogNote
+entity	EntryPool	EntryPool
+entity	NotesIndex	NotesIndex
+entity	Pivot	Pivot
+entity	Product	Product
+entity	ProductDefaults	ProductDefaults
+entity	ProductRelease	ProductRelease
+entity	ReleaseTrigger	ReleaseTrigger
+entity	Repository	Repository
+entity	Rules	Rules
+label	Bundle
+label	BundleAmend
+label	BundleNotesAmend
+label	BundleProfile
+label	BundleRegistry
+label	BundledEntry
+label	BundledProduct
+label	ChangelogConfiguration
+label	ChangelogEntry
+label	ChangelogMarker
+label	ChangelogNote
+label	EntryPool
+label	NotesIndex
+label	Pivot
+label	Product
+label	ProductDefaults
+label	ProductRelease
+label	ReleaseTrigger
+label	Repository
+label	Rules
+label	amend-N
+label	amend-notes
+label	available, default
+label	bundle.profiles
+label	bundle.releases
+label	bundle/{product}/registry.json
+label	bundles[]
+label	changelog.yml
+label	changelog/{org}/{repo}/{branch}/
+label	entries
+label	file.name + checksum
+label	link
+label	note-*.yml
+label	notes[]
+label	pivot
+label	product
+label	product
+label	product
+label	products
+label	products
+label	products
+label	products (versions)
+label	profile name
+label	rules
+relation	Bundle	BundleAmend	one	zero-or-more	identifying	amend-N
+relation	Bundle	BundleNotesAmend	one	zero-or-one	identifying	amend-notes
+relation	Bundle	BundledEntry	one	zero-or-more	identifying	entries
+relation	Bundle	BundledProduct	one	one-or-more	identifying	products
+relation	BundleProfile	Product	zero-or-more	zero-or-one	identifying	product
+relation	BundleRegistry	Bundle	one	zero-or-more	identifying	bundles[]
+relation	BundledEntry	ChangelogEntry	zero-or-more	one	identifying	file.name + checksum
+relation	BundledProduct	Product	zero-or-more	one	identifying	product
+relation	ChangelogConfiguration	BundleProfile	one	zero-or-more	identifying	bundle.profiles
+relation	ChangelogConfiguration	Pivot	one	zero-or-one	identifying	pivot
+relation	ChangelogConfiguration	ProductDefaults	one	zero-or-one	identifying	products
+relation	ChangelogConfiguration	ReleaseTrigger	one	zero-or-more	identifying	bundle.releases
+relation	ChangelogConfiguration	Rules	one	zero-or-one	identifying	rules
+relation	ChangelogEntry	ProductRelease	one	one-or-more	identifying	products
+relation	ChangelogMarker	ChangelogEntry	zero-or-more	one	identifying	link
+relation	ChangelogNote	ProductRelease	one	one-or-more	identifying	products (versions)
+relation	EntryPool	ChangelogEntry	one	zero-or-more	identifying	changelog/{org}/{repo}/{branch}/
+relation	EntryPool	ChangelogNote	one	zero-or-more	identifying	note-*.yml
+relation	NotesIndex	ChangelogNote	one	zero-or-more	identifying	notes[]
+relation	Product	BundleRegistry	one	zero-or-one	identifying	bundle/{product}/registry.json
+relation	ProductDefaults	Product	zero-or-more	zero-or-more	identifying	available, default
+relation	ProductRelease	Product	zero-or-more	one	identifying	product
+relation	ReleaseTrigger	BundleProfile	zero-or-more	one	identifying	profile name
+relation	Repository	ChangelogConfiguration	one	zero-or-one	identifying	changelog.yml

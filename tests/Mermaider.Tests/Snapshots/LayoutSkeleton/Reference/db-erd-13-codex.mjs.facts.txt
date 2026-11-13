@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e3e8237fe8deee81
+accept	yes
+drawn	yes
+entity	CodexDocumentationSet	CodexDocumentationSet
+entity	CodexGroup	CodexGroup
+entity	CodexSite	CodexSite
+entity	DocumentationSet	DocumentationSet
+entity	Registry	Registry
+label	CodexDocumentationSet
+label	CodexGroup
+label	CodexSite
+label	DocumentationSet
+label	Registry
+label	codex.group
+label	docset
+label	environment
+label	from LinkRegistry
+relation	CodexDocumentationSet	CodexGroup	zero-or-more	zero-or-one	identifying	codex.group
+relation	CodexDocumentationSet	DocumentationSet	one	one	identifying	docset
+relation	CodexSite	CodexDocumentationSet	one	zero-or-more	identifying	from LinkRegistry
+relation	CodexSite	Registry	one	one	identifying	environment

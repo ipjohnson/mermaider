@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 02de9d75d0b69e25
 accept	yes
+drawn	yes
 edge	Assembler	Search	none	arrow	solid
 edge	Assembler	Site	none	arrow	solid
 edge	Catalog	DocSet	none	arrow	solid
@@ -28,16 +29,16 @@ group	Build	Build	Assembler,Codex,Isolated
 group	Outputs	Outputs	Links,Notes,Search,Site,SpecIndex
 group	Reference	Reference data (config/)	Catalog
 group	Sources	Sources	Repo
-node	Assembler	Assembler build
-node	Catalog	Products, versioning systems
-node	Changelog	Changelog entries
-node	Codex	Codex build
-node	DocSet	Documentation sets
-node	Isolated	Isolated build
-node	Links	Link graph
-node	Notes	Release note bundles
-node	OpenApi	OpenAPI specs
-node	Repo	Repositories (Git)
-node	Search	Search indices
-node	Site	HTML sites
-node	SpecIndex	OpenAPI repository
+node	Assembler	Assembler build	rect
+node	Catalog	Products, versioning systems	rect
+node	Changelog	Changelog entries	rect
+node	Codex	Codex build	rect
+node	DocSet	Documentation sets	rect
+node	Isolated	Isolated build	rect
+node	Links	Link graph	rect
+node	Notes	Release note bundles	rect
+node	OpenApi	OpenAPI specs	rect
+node	Repo	Repositories (Git)	rect
+node	Search	Search indices	rect
+node	Site	HTML sites	rect
+node	SpecIndex	OpenAPI repository	rect

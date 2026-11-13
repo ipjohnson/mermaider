@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a3a419e94d1a361b
+accept	yes
+drawn	yes
+label	Authenticate
+label	Confirm MFA
+label	Discover
+label	Enter email
+label	First-time login
+label	Open app
+label	Reach dashboard
+label	See welcome
+label	Success
+label	System
+label	User
+section	Authenticate
+section	Discover
+section	Success
+task	Authenticate	Confirm MFA	2	System,User
+task	Authenticate	Enter email	3	User
+task	Discover	Open app	4	User
+task	Discover	See welcome	5	User
+task	Success	Reach dashboard	5	User
+title	First-time login

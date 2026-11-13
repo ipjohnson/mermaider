@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bfd199e39a461838
+accept	yes
+block	In	Input	rect	1
+block	Out	Output	rect	1
+block	Process	Process	rect	1
+block	Store	Store	rect	1
+drawn	yes
+edge	In	Process	none	arrow
+edge	Out	Store	none	arrow
+edge	Process	Out	none	arrow
+label	Input
+label	Output
+label	Process
+label	Store

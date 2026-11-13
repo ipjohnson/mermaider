@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 378555c6d91faed2
+accept	yes
+drawn	yes
+edge	beats	R	ls	L	none	none
+edge	es	R	kbn	L	none	none
+edge	fleet	T	beats	B	none	none
+edge	ls	R	es	L	none	none
+group	stack	Elastic Stack
+icon	beats	elastic:beats
+icon	es	elastic:elasticsearch
+icon	fleet	elastic:fleet
+icon	kbn	elastic:kibana
+icon	ls	elastic:logstash
+icon	stack	cloud
+label	Beats
+label	Elastic Stack
+label	Elasticsearch
+label	Fleet
+label	Kibana
+label	Logstash
+service	beats	Beats	stack
+service	es	Elasticsearch	stack
+service	fleet	Fleet	stack
+service	kbn	Kibana	stack
+service	ls	Logstash	stack

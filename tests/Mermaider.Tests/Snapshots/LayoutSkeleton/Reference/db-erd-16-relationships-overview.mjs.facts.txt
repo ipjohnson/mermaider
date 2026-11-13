@@ -1,0 +1,65 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 255e0b540b4cbe03
+accept	yes
+drawn	yes
+entity	Assembly	Assembly
+entity	Bundle	Bundle
+entity	ChangelogConfiguration	ChangelogConfiguration
+entity	CodexSite	CodexSite
+entity	DocumentationFile	DocumentationFile
+entity	DocumentationSet	DocumentationSet
+entity	LinkManifest	LinkManifest
+entity	LinkRegistry	LinkRegistry
+entity	LinkRegistryEntry	LinkRegistryEntry
+entity	Product	Product
+entity	PublishEnvironment	PublishEnvironment
+entity	Registry	Registry
+entity	Repository	Repository
+entity	TableOfContents	TableOfContents
+entity	VersioningSystem	VersioningSystem
+label	Assembly
+label	Bundle
+label	ChangelogConfiguration
+label	CodexSite
+label	DocumentationFile
+label	DocumentationSet
+label	LinkManifest
+label	LinkRegistry
+label	LinkRegistryEntry
+label	Product
+label	PublishEnvironment
+label	Registry
+label	Repository
+label	TableOfContents
+label	VersioningSystem
+label	changelog.yml
+label	contains
+label	environment
+label	environments
+label	holds (≤1 per Registry)
+label	one per branch
+label	path
+label	products
+label	publishes into
+label	references
+label	registry
+label	released in
+label	repo, branch
+label	toc
+label	versioning
+relation	Assembly	PublishEnvironment	one	one-or-more	identifying	environments
+relation	Assembly	Repository	one	one-or-more	identifying	references
+relation	CodexSite	Registry	one	one	identifying	environment
+relation	DocumentationSet	DocumentationFile	one	zero-or-more	identifying	contains
+relation	DocumentationSet	LinkManifest	one	zero-or-more	identifying	one per branch
+relation	DocumentationSet	Product	zero-or-more	zero-or-more	identifying	products
+relation	DocumentationSet	Registry	zero-or-more	zero-or-one	identifying	registry
+relation	DocumentationSet	TableOfContents	one	one	identifying	toc
+relation	LinkRegistry	LinkRegistryEntry	one	zero-or-more	identifying	repo, branch
+relation	LinkRegistryEntry	LinkManifest	one	one	identifying	path
+relation	Product	Bundle	one	zero-or-more	identifying	released in
+relation	Product	VersioningSystem	zero-or-more	zero-or-one	identifying	versioning
+relation	Registry	LinkRegistry	one	one	identifying	publishes into
+relation	Repository	ChangelogConfiguration	one	zero-or-one	identifying	changelog.yml
+relation	Repository	DocumentationSet	one	zero-or-more	identifying	holds (≤1 per Registry)

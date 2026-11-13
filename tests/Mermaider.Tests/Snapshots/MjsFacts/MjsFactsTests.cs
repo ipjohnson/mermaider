@@ -1,5 +1,6 @@
 using System.Text;
 using System.Text.Json;
+using System.Xml.Linq;
 using AwesomeAssertions;
 
 namespace Mermaider.Tests.Snapshots.MjsFacts;
@@ -90,6 +91,73 @@ public class MjsFactsTests
 		unlisted.Should().Contain("New differences").And.Contain("x + node | A | start").And.NotContain("no longer occur");
 		var vanished = Unexplained("x", differences, [.. differences, "- edge | B | A"]);
 		vanished.Should().Contain("no longer occur").And.Contain("x - edge | B | A").And.NotContain("New differences");
+	}
+
+	/// <summary>
+	/// Mermaider's facts for <paramref name="source"/>, a changed copy of corpus case <paramref name="name"/>, diffed with
+	/// that case's committed mermaid.js facts and baseline: what the comparison would report if Mermaider drew the case
+	/// the way the changed source draws.
+	/// </summary>
+	private static (List<string> Differences, string Report) Compare(string name, string original, string changed)
+	{
+		var source = MjsCorpus.Get(name).Source;
+		source.Should().Contain(original);
+		var differences = Differences(MjsFactsFile.Read(name).Facts, MermaiderFacts.For(source.Replace(original, changed, StringComparison.Ordinal)));
+		var baselined = MjsFactsBaseline.Load().Entries.Where(e => e.Case == name).Select(e => e.Difference).ToList();
+		return (differences, Unexplained(name, differences, baselined));
+	}
+
+	[Test]
+	public void A_node_in_the_wrong_shape_fails()
+	{
+		var (differences, report) = Compare("shape-brackets", "B(rounded)", "B[rounded]");
+		differences.Should().Contain(["- node | B | rounded | rounded", "+ node | B | rounded | rect"]);
+		report.Should().Contain("New differences");
+	}
+
+	[Test]
+	public void A_participant_of_the_wrong_type_fails()
+	{
+		var (differences, report) = Compare("seq-participant-types", "actor U as User", "participant U as User");
+		differences.Should().Contain(["- actor | U | User | actor", "+ actor | U | User | participant"]);
+		report.Should().Contain("New differences");
+	}
+
+	[Test]
+	public void A_missing_icon_fails()
+	{
+		var (differences, report) = Compare("architecture-basic", "service db(database)[Database]", "service db[Database]");
+		differences.Should().Contain("- icon | db | database");
+		report.Should().Contain("New differences");
+	}
+
+	[Test]
+	public void An_empty_drawing_fails()
+	{
+		MermaiderFacts.For("graph TD\n").Should().Contain("drawn\tno");
+		var empty = XDocument.Parse(
+			"""<svg xmlns="http://www.w3.org/2000/svg"><style>text { }</style><defs><marker><path d="M0 0L1 1"/></marker></defs><g><text> </text></g></svg>"""
+		);
+		MermaiderFacts.Drawn(empty).Should().Be("drawn\tno");
+
+		foreach (var name in new[] { "pie-basic", "gitgraph-basic", "treeview-basic", "flowchart-simple" })
+		{
+			var mjs = MjsFactsFile.Read(name).Facts;
+			mjs.Should().Contain("drawn\tyes", $"mermaid.js draws {name}");
+			string[] mermaider = [.. MermaiderFacts.For(MjsCorpus.Get(name).Source).Select(f => f == "drawn\tyes" ? "drawn\tno" : f)];
+			Differences(mjs, mermaider).Should().Contain(["- drawn | yes", "+ drawn | no"]);
+		}
+	}
+
+	[Test]
+	public void Every_diagram_type_has_compared_facts()
+	{
+		var types = MjsCorpus
+			.All
+			.Where(c => MjsFactsFile.Read(c.Name).Facts.Contains(Accepted))
+			.Select(c => Mermaider.Parsing.DiagramDetector.Detect(Mermaider.Parsing.DiagramPreprocessor.Process(c.Source).Item1.AsSpan()))
+			.ToHashSet();
+		types.Should().BeEquivalentTo(Enum.GetValues<Mermaider.Models.DiagramType>(), "every diagram type needs a case mermaid.js accepts");
 	}
 
 	/// <summary>Writes every case's source to <c>MJS_CORPUS_OUT</c> as <c>&lt;case&gt;.mmd</c>, for scripts/mjs-facts.sh.</summary>

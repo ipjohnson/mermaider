@@ -1,0 +1,257 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4a54ccb64bbb0505
+accept	yes
+drawn	yes
+edge	awsCdn	R	awsCache	L	none	none
+edge	awsCompute	B	awsNetworking	T	none	none
+edge	awsCompute	R	awsStorage	L	none	none
+edge	awsDatabase	B	awsLoadBalancer	T	none	none
+edge	awsLoadBalancer	B	awsCache	T	none	none
+edge	awsNetworking	B	awsQueue	T	none	none
+edge	awsNetworking	R	awsServerless	L	none	none
+edge	awsQueue	R	awsCdn	L	none	none
+edge	awsServerless	B	awsCdn	T	none	none
+edge	awsServerless	R	awsLoadBalancer	L	none	none
+edge	awsStorage	B	awsServerless	T	none	none
+edge	awsStorage	R	awsDatabase	L	none	none
+edge	azureCdn	R	azureCache	L	none	none
+edge	azureCompute	B	azureNetworking	T	none	none
+edge	azureCompute	R	azureStorage	L	none	none
+edge	azureDatabase	B	azureLoadBalancer	T	none	none
+edge	azureLoadBalancer	B	azureCache	T	none	none
+edge	azureNetworking	B	azureQueue	T	none	none
+edge	azureNetworking	R	azureServerless	L	none	none
+edge	azureQueue	R	azureCdn	L	none	none
+edge	azureServerless	B	azureCdn	T	none	none
+edge	azureServerless	R	azureLoadBalancer	L	none	none
+edge	azureStorage	B	azureServerless	T	none	none
+edge	azureStorage	R	azureDatabase	L	none	none
+edge	dCloud	B	dDisk	T	none	none
+edge	dCloud	R	dDatabase	L	none	none
+edge	dDatabase	B	dInternet	T	none	none
+edge	dDisk	B	dServer	T	none	none
+edge	dDisk	R	dInternet	L	none	none
+edge	dInternet	B	dGeneric	T	none	none
+edge	dServer	R	dGeneric	L	none	none
+edge	esApm	R	esSecurity	L	none	none
+edge	esBeats	B	esApm	T	none	none
+edge	esBeats	R	esFleet	L	none	none
+edge	esElasticsearch	B	esBeats	T	none	none
+edge	esElasticsearch	R	esKibana	L	none	none
+edge	esFleet	B	esSecurity	T	none	none
+edge	esFleet	R	esServerless	L	none	none
+edge	esKibana	B	esFleet	T	none	none
+edge	esKibana	R	esLogstash	L	none	none
+edge	esLogstash	B	esServerless	T	none	none
+edge	esSecurity	R	esObservability	L	none	none
+edge	esServerless	B	esObservability	T	none	none
+edge	extApi	B	extCdn	T	none	none
+edge	extApi	R	extLoadBalancer	L	none	none
+edge	extApiGateway	B	extPool	T	none	none
+edge	extApiGateway	R	extK8s	L	none	none
+edge	extCdn	R	extCache	L	none	none
+edge	extK8s	B	extReverseProxy	T	none	none
+edge	extLoadBalancer	B	extCache	T	none	none
+edge	extPod	B	extWeb	T	none	none
+edge	extPod	R	extPool	L	none	none
+edge	extPool	B	extApi	T	none	none
+edge	extPool	R	extReverseProxy	L	none	none
+edge	extQueue	R	extCdn	L	none	none
+edge	extReverseProxy	B	extLoadBalancer	T	none	none
+edge	extWaf	B	extPod	T	none	none
+edge	extWaf	R	extApiGateway	L	none	none
+edge	extWeb	B	extQueue	T	none	none
+edge	extWeb	R	extApi	L	none	none
+edge	gcpCdn	R	gcpCache	L	none	none
+edge	gcpCompute	B	gcpNetworking	T	none	none
+edge	gcpCompute	R	gcpStorage	L	none	none
+edge	gcpDatabase	B	gcpLoadBalancer	T	none	none
+edge	gcpLoadBalancer	B	gcpCache	T	none	none
+edge	gcpNetworking	B	gcpQueue	T	none	none
+edge	gcpNetworking	R	gcpServerless	L	none	none
+edge	gcpQueue	R	gcpCdn	L	none	none
+edge	gcpServerless	B	gcpCdn	T	none	none
+edge	gcpServerless	R	gcpLoadBalancer	L	none	none
+edge	gcpStorage	B	gcpServerless	T	none	none
+edge	gcpStorage	R	gcpDatabase	L	none	none
+group	awsPack	AWS Icons
+group	azurePack	Azure Icons
+group	defaultPack	Default Icons
+group	elasticPack	Elastic Icons
+group	extPack	Generic (ext:) Icons
+group	gcpPack	GCP Icons
+icon	awsCache	aws:cache
+icon	awsCdn	aws:cdn
+icon	awsCompute	aws:compute
+icon	awsDatabase	aws:database
+icon	awsLoadBalancer	aws:load-balancer
+icon	awsNetworking	aws:networking
+icon	awsPack	aws:compute
+icon	awsQueue	aws:queue
+icon	awsServerless	aws:serverless
+icon	awsStorage	aws:storage
+icon	azureCache	azure:cache
+icon	azureCdn	azure:cdn
+icon	azureCompute	azure:compute
+icon	azureDatabase	azure:database
+icon	azureLoadBalancer	azure:load-balancer
+icon	azureNetworking	azure:networking
+icon	azurePack	azure:compute
+icon	azureQueue	azure:queue
+icon	azureServerless	azure:serverless
+icon	azureStorage	azure:storage
+icon	dCloud	cloud
+icon	dDatabase	database
+icon	dDisk	disk
+icon	dGeneric	generic
+icon	dInternet	internet
+icon	dServer	server
+icon	defaultPack	cloud
+icon	elasticPack	elastic:elasticsearch
+icon	esApm	elastic:apm
+icon	esBeats	elastic:beats
+icon	esElasticsearch	elastic:elasticsearch
+icon	esFleet	elastic:fleet
+icon	esKibana	elastic:kibana
+icon	esLogstash	elastic:logstash
+icon	esObservability	elastic:observability
+icon	esSecurity	elastic:security
+icon	esServerless	elastic:serverless
+icon	extApi	ext:api
+icon	extApiGateway	ext:api-gateway
+icon	extCache	ext:cache
+icon	extCdn	ext:cdn
+icon	extK8s	ext:k8s
+icon	extLoadBalancer	ext:load-balancer
+icon	extPack	ext:api
+icon	extPod	ext:pod
+icon	extPool	ext:pool
+icon	extQueue	ext:queue
+icon	extReverseProxy	ext:reverse-proxy
+icon	extWaf	ext:waf
+icon	extWeb	ext:web
+icon	gcpCache	gcp:cache
+icon	gcpCdn	gcp:cdn
+icon	gcpCompute	gcp:compute
+icon	gcpDatabase	gcp:database
+icon	gcpLoadBalancer	gcp:load-balancer
+icon	gcpNetworking	gcp:networking
+icon	gcpPack	gcp:compute
+icon	gcpQueue	gcp:queue
+icon	gcpServerless	gcp:serverless
+icon	gcpStorage	gcp:storage
+label	AWS Icons
+label	Azure Icons
+label	Default Icons
+label	Elastic Icons
+label	GCP Icons
+label	Generic (ext:) Icons
+label	aws-cache
+label	aws-cdn
+label	aws-compute
+label	aws-database
+label	aws-load-balancer
+label	aws-networking
+label	aws-queue
+label	aws-serverless
+label	aws-storage
+label	azure-cache
+label	azure-cdn
+label	azure-compute
+label	azure-database
+label	azure-load-balancer
+label	azure-networking
+label	azure-queue
+label	azure-serverless
+label	azure-storage
+label	cloud
+label	database
+label	disk
+label	elastic-apm
+label	elastic-beats
+label	elastic-elasticsearch
+label	elastic-fleet
+label	elastic-kibana
+label	elastic-logstash
+label	elastic-observability
+label	elastic-security
+label	elastic-serverless
+label	ext-api
+label	ext-api-gateway
+label	ext-cache
+label	ext-cdn
+label	ext-k8s
+label	ext-load-balancer
+label	ext-pod
+label	ext-pool
+label	ext-queue
+label	ext-reverse-proxy
+label	ext-waf
+label	ext-web
+label	gcp-cache
+label	gcp-cdn
+label	gcp-compute
+label	gcp-database
+label	gcp-load-balancer
+label	gcp-networking
+label	gcp-queue
+label	gcp-serverless
+label	gcp-storage
+label	generic
+label	internet
+label	server
+service	awsCache	aws-cache	awsPack
+service	awsCdn	aws-cdn	awsPack
+service	awsCompute	aws-compute	awsPack
+service	awsDatabase	aws-database	awsPack
+service	awsLoadBalancer	aws-load-balancer	awsPack
+service	awsNetworking	aws-networking	awsPack
+service	awsQueue	aws-queue	awsPack
+service	awsServerless	aws-serverless	awsPack
+service	awsStorage	aws-storage	awsPack
+service	azureCache	azure-cache	azurePack
+service	azureCdn	azure-cdn	azurePack
+service	azureCompute	azure-compute	azurePack
+service	azureDatabase	azure-database	azurePack
+service	azureLoadBalancer	azure-load-balancer	azurePack
+service	azureNetworking	azure-networking	azurePack
+service	azureQueue	azure-queue	azurePack
+service	azureServerless	azure-serverless	azurePack
+service	azureStorage	azure-storage	azurePack
+service	dCloud	cloud	defaultPack
+service	dDatabase	database	defaultPack
+service	dDisk	disk	defaultPack
+service	dGeneric	generic	defaultPack
+service	dInternet	internet	defaultPack
+service	dServer	server	defaultPack
+service	esApm	elastic-apm	elasticPack
+service	esBeats	elastic-beats	elasticPack
+service	esElasticsearch	elastic-elasticsearch	elasticPack
+service	esFleet	elastic-fleet	elasticPack
+service	esKibana	elastic-kibana	elasticPack
+service	esLogstash	elastic-logstash	elasticPack
+service	esObservability	elastic-observability	elasticPack
+service	esSecurity	elastic-security	elasticPack
+service	esServerless	elastic-serverless	elasticPack
+service	extApi	ext-api	extPack
+service	extApiGateway	ext-api-gateway	extPack
+service	extCache	ext-cache	extPack
+service	extCdn	ext-cdn	extPack
+service	extK8s	ext-k8s	extPack
+service	extLoadBalancer	ext-load-balancer	extPack
+service	extPod	ext-pod	extPack
+service	extPool	ext-pool	extPack
+service	extQueue	ext-queue	extPack
+service	extReverseProxy	ext-reverse-proxy	extPack
+service	extWaf	ext-waf	extPack
+service	extWeb	ext-web	extPack
+service	gcpCache	gcp-cache	gcpPack
+service	gcpCdn	gcp-cdn	gcpPack
+service	gcpCompute	gcp-compute	gcpPack
+service	gcpDatabase	gcp-database	gcpPack
+service	gcpLoadBalancer	gcp-load-balancer	gcpPack
+service	gcpNetworking	gcp-networking	gcpPack
+service	gcpQueue	gcp-queue	gcpPack
+service	gcpServerless	gcp-serverless	gcpPack
+service	gcpStorage	gcp-storage	gcpPack

@@ -13,6 +13,7 @@ canvas	4	4	230.9	659
 class	Database	Database
 class	Order	Order
 class	User	User
+drawn	yes
 method	Database	+connect() : void
 method	Database	+query(sql) : void
 method	Order	+submit() : void

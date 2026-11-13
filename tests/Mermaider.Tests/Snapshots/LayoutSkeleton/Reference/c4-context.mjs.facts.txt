@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a934820ed0582d23
+accept	yes
+drawn	yes
+element	banking	system	internal	Internet Banking System		Allows customers to view accounts and make payments.
+element	customer	person	internal	Banking Customer		A customer of the bank, with personal bank accounts.
+element	mail	system	external	E-mail System		The internal Microsoft Exchange e-mail system.
+element	mainframe	system_db	external	Mainframe Banking System		Stores core banking information.
+label	A customer of the bank, with personal bank accounts.
+label	Allows customers to view accounts and make payments.
+label	Banking Customer
+label	E-mail System
+label	Internet Banking System
+label	Mainframe Banking System
+label	SMTP
+label	Sends e-mails
+label	Stores core banking information.
+label	System Context diagram for Internet Banking System
+label	The internal Microsoft Exchange e-mail system.
+label	Uses
+label	Uses
+rel	banking	mail	one	Sends e-mails	SMTP
+rel	banking	mainframe	one	Uses
+rel	customer	banking	one	Uses
+title	System Context diagram for Internet Banking System

@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 45ddd87c281c015e
+accept	yes
+drawn	yes
+event	1972	C
+event	1983	C++
+event	1991	Python
+event	1995	Java
+event	1995	JavaScript
+event	1995	Ruby
+event	2009	Go
+event	2015	Rust
+event	2016	.NET Core
+label	.NET Core
+label	1972
+label	1983
+label	1991
+label	1995
+label	2009
+label	2015
+label	2016
+label	C
+label	C++
+label	Go
+label	Java
+label	JavaScript
+label	Programming Language Milestones
+label	Python
+label	Ruby
+label	Rust
+period		1972
+period		1983
+period		1991
+period		1995
+period		2009
+period		2015
+period		2016
+title	Programming Language Milestones

@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 9599cc3d846bc0fc
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
-node	A	The cat in the hat
-node	B	Italic text
+node	A	The cat in the hat	rect
+node	B	Italic text	rect

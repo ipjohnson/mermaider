@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 33859bb5fa91e0c1
 accept	yes
+drawn	yes
 edge	Complete	[*]end@root	none	arrow	solid
 edge	Ready	fork_point	none	arrow	solid
 edge	TaskA	join_point	none	arrow	solid
@@ -12,12 +13,12 @@ edge	fork_point	TaskA	none	arrow	solid
 edge	fork_point	TaskB	none	arrow	solid
 edge	fork_point	TaskC	none	arrow	solid
 edge	join_point	Complete	none	arrow	solid
-node	Complete	Complete	state
-node	Ready	Ready	state
-node	TaskA	TaskA	state
-node	TaskB	TaskB	state
-node	TaskC	TaskC	state
-node	[*]end@root		pseudo
-node	[*]start@root		pseudo
+node	Complete	Complete	rounded
+node	Ready	Ready	rounded
+node	TaskA	TaskA	rounded
+node	TaskB	TaskB	rounded
+node	TaskC	TaskC	rounded
+node	[*]end@root		fr-circ
+node	[*]start@root		sm-circ
 node	fork_point		fork
 node	join_point		fork

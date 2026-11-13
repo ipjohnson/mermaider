@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 92bacb0204353525
+accept	yes
+drawn	yes
+field	0	15	Source Port
+field	16	31	Dest Port
+field	32	63	Sequence Number
+field	64	95	Ack Number
+label	Ack Number
+label	Dest Port
+label	Sequence Number
+label	Source Port
+label	TCP Segment (partial)
+title	TCP Segment (partial)

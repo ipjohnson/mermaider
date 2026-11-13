@@ -16,6 +16,7 @@ bbox	node	DB	400	269	550	342
 bbox	node	User	58.1	0	92.1	67
 bbox	node	User	58.1	275	92.1	342
 canvas	-50	-10	600	383
+drawn	yes
 message	API	DB	solid	filled	SELECT *
 message	API	User	dashed	filled	200 OK
 message	DB	API	dashed	filled	rows

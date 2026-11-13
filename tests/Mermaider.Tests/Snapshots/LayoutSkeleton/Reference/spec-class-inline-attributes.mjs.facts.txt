@@ -10,6 +10,7 @@ bbox	node	Dog	34.4	208	156.4	343
 canvas	4	4	186.8	351
 class	Animal	Animal
 class	Dog	Dog
+drawn	yes
 method	Animal	+isMammal() : bool
 method	Dog	+bark() : void
 relation	Animal	Dog	triangle	none	solid

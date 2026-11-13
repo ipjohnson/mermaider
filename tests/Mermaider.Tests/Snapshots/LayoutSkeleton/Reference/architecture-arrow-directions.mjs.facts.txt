@@ -1,0 +1,33 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bdf835373cac38a3
+accept	yes
+drawn	yes
+edge	a	R	b	L	none	none
+edge	c	R	d	L	none	arrow
+edge	e	R	f	L	arrow	none
+edge	g	R	h	L	arrow	arrow
+icon	a	server
+icon	b	server
+icon	c	server
+icon	d	server
+icon	e	server
+icon	f	server
+icon	g	server
+icon	h	server
+label	Client
+label	Follower
+label	Leader
+label	Node A
+label	Node B
+label	Receiver
+label	Sender
+label	Server
+service	a	Client
+service	b	Server
+service	c	Sender
+service	d	Receiver
+service	e	Follower
+service	f	Leader
+service	g	Node A
+service	h	Node B

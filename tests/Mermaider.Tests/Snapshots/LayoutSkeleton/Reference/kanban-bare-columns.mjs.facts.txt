@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9c946ba526801e7f
+accept	yes
+card	Done	t4	Deploy to staging
+card	In Review	t3	PR for auth flow
+card	To Do	t1	Implement feature
+card	To Do	t2	Write unit tests
+column	Done	Done
+column	In Review	In Review
+column	To Do	To Do
+drawn	yes
+label	Deploy to staging
+label	Done
+label	Implement feature
+label	In Review
+label	PR for auth flow
+label	To Do
+label	Write unit tests

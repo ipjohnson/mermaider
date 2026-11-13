@@ -7,4 +7,5 @@ bbox	node	B	86.1	12	120.3	93
 canvas	4	4	128.3	101
 class	A	A
 class	B	B
+drawn	yes
 relation	A	B	none	arrow	solid

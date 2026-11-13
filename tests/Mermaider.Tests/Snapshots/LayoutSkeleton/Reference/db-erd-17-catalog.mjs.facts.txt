@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ecd9cdf38ec9a5a7
+accept	yes
+drawn	yes
+entity	LegacyPage	LegacyPage
+entity	LegacyUrlMapping	LegacyUrlMapping
+entity	Product	Product
+entity	ProductFeatures	ProductFeatures
+entity	QueryRule	QueryRule
+entity	Repository	Repository
+entity	SearchDocument	SearchDocument
+entity	SemVersion	SemVersion
+entity	VersioningSystem	VersioningSystem
+label	LegacyPage
+label	LegacyUrlMapping
+label	Product
+label	ProductFeatures
+label	QueryRule
+label	Repository
+label	SearchDocument
+label	SemVersion
+label	VersioningSystem
+label	actions.ids = path
+label	base
+label	current
+label	features
+label	matched by base URL
+label	product
+label	repository (defaults to id)
+label	versioning (defaults to id)
+relation	LegacyPage	LegacyUrlMapping	zero-or-more	one	identifying	matched by base URL
+relation	LegacyUrlMapping	Product	zero-or-more	one	identifying	product
+relation	Product	ProductFeatures	one	one	identifying	features
+relation	Product	Repository	zero-or-more	zero-or-one	identifying	repository (defaults to id)
+relation	Product	VersioningSystem	zero-or-more	zero-or-one	identifying	versioning (defaults to id)
+relation	QueryRule	SearchDocument	zero-or-more	zero-or-more	identifying	actions.ids = path
+relation	VersioningSystem	SemVersion	one	one	identifying	base
+relation	VersioningSystem	SemVersion	one	one	identifying	current

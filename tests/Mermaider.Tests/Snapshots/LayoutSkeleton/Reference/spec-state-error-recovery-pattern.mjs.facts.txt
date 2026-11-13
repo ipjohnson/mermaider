@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 60d476f8b70fe37f
 accept	yes
+drawn	yes
 edge	Error	Recovering	none	arrow	solid	auto_heal
 edge	Fatal	Stopped	none	arrow	solid	operator
 edge	Recovering	Fatal	none	arrow	solid	max_retries
@@ -10,10 +11,10 @@ edge	Running	Error	none	arrow	solid	exception
 edge	Running	Stopped	none	arrow	solid	shutdown
 edge	Stopped	[*]end@root	none	arrow	solid
 edge	[*]start@root	Running	none	arrow	solid
-node	Error	Error	state
-node	Fatal	Fatal	state
-node	Recovering	Recovering	state
-node	Running	Running	state
-node	Stopped	Stopped	state
-node	[*]end@root		pseudo
-node	[*]start@root		pseudo
+node	Error	Error	rounded
+node	Fatal	Fatal	rounded
+node	Recovering	Recovering	rounded
+node	Running	Running	rounded
+node	Stopped	Stopped	rounded
+node	[*]end@root		fr-circ
+node	[*]start@root		sm-circ

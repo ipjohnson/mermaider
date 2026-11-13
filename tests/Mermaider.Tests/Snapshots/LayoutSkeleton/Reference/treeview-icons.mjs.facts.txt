@@ -1,0 +1,34 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0f9a86ad17da4da0
+accept	yes
+drawn	yes
+icon	repo	folder-open
+icon	repo / .env	file:config
+icon	repo / docs / data.csv	file:data
+icon	repo / docs / guide.md	file:document
+icon	repo / package.json	file:config
+icon	repo / src	folder-open
+icon	repo / src / app.ts	file:code
+icon	repo / src / logo.png	file:image
+icon	repo / src / styles.css	file:code
+label	.env
+label	app.ts
+label	data.csv
+label	docs
+label	guide.md
+label	logo.png
+label	package.json
+label	repo
+label	src
+label	styles.css
+node	repo	dir
+node	repo / .env	file
+node	repo / docs	dir
+node	repo / docs / data.csv	file
+node	repo / docs / guide.md	file
+node	repo / package.json	file
+node	repo / src	dir
+node	repo / src / app.ts	file
+node	repo / src / logo.png	file
+node	repo / src / styles.css	file

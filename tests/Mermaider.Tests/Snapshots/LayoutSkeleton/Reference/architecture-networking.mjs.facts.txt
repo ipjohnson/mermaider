@@ -1,0 +1,35 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fcdc99680de18240
+accept	yes
+drawn	yes
+edge	awsVpc	R	awsCompute	L	none	none
+edge	azureVnet	R	azureCompute	L	none	none
+edge	gcpVpc	R	gcpCompute	L	none	none
+group	awsNet	AWS
+group	azureNet	Azure
+group	gcpNet	GCP
+icon	awsCompute	aws:compute
+icon	awsNet	cloud
+icon	awsVpc	aws:networking
+icon	azureCompute	azure:compute
+icon	azureNet	cloud
+icon	azureVnet	azure:networking
+icon	gcpCompute	gcp:compute
+icon	gcpNet	cloud
+icon	gcpVpc	gcp:networking
+label	AWS
+label	Azure
+label	Compute Engine
+label	EC2
+label	GCP
+label	VM
+label	VNet
+label	VPC
+label	VPC
+service	awsCompute	EC2	awsNet
+service	awsVpc	VPC	awsNet
+service	azureCompute	VM	azureNet
+service	azureVnet	VNet	azureNet
+service	gcpCompute	Compute Engine	gcpNet
+service	gcpVpc	VPC	gcpNet

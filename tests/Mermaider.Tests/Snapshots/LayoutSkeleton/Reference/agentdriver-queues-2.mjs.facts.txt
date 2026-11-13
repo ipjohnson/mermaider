@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source e82d65536578bf71
 accept	yes
+drawn	yes
 edge	bg	free	none	arrow	solid	no
 edge	bg	sbg	none	arrow	solid	yes
 edge	fg	bg	none	arrow	solid	no
@@ -12,14 +13,14 @@ edge	gates	fg	none	arrow	solid	allowed
 edge	gates	held	none	arrow	solid	hold
 edge	ready	gates	none	arrow	solid
 edge	start	full	none	arrow	solid
-node	bg	Can a background entry start?
-node	fg	Can a foreground entry start?
-node	free	The slot stays free
-node	full	Is the pool full?
-node	gates	Ask every gate that applies
-node	held	Held entries wait with the gate's name and reason
-node	none	Nothing starts this pass
-node	ready	Find the ready entries dependencies done, the queue gives a turn
-node	sbg	Start a background entry by the same rule among background queues
-node	sfg	Start a foreground entry from the source with the lowest slot-minutes / weight
-node	start	A slot frees, or work arrives
+node	bg	Can a background entry start?	diam
+node	fg	Can a foreground entry start?	diam
+node	free	The slot stays free	rect
+node	full	Is the pool full?	diam
+node	gates	Ask every gate that applies	rect
+node	held	Held entries wait with the gate's name and reason	rect
+node	none	Nothing starts this pass	rect
+node	ready	Find the ready entries dependencies done, the queue gives a turn	rect
+node	sbg	Start a background entry by the same rule among background queues	rect
+node	sfg	Start a foreground entry from the source with the lowest slot-minutes / weight	rect
+node	start	A slot frees, or work arrives	rect

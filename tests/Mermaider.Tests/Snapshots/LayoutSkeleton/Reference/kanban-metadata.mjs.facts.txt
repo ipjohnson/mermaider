@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1bd5dae9efcc91ee
+accept	yes
+card	done	id5	define getData
+card	todo	docs	Create Documentation
+card	todo	id8	Design grammar	knsv
+card	wip	id4	Create parsing tests	K.Sveidqvist	MC-2038	High
+column	done	Done
+column	todo	To Do
+column	wip	In Progress
+drawn	yes
+label	Create Documentation
+label	Create parsing tests
+label	Design grammar
+label	Done
+label	In Progress
+label	K.Sveidqvist
+label	MC-2038
+label	To Do
+label	define getData
+label	knsv

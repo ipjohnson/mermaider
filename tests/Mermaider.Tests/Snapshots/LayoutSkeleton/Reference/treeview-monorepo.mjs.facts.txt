@@ -1,0 +1,57 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9115f951142ec5f0
+accept	yes
+drawn	yes
+label	App.tsx
+label	Button.tsx
+label	Modal.tsx
+label	api
+label	apps
+label	cli
+label	core
+label	index.ts
+label	main.ts
+label	monorepo
+label	package.json
+label	package.json
+label	package.json
+label	package.json
+label	package.json
+label	package.json
+label	packages
+label	server.ts
+label	src
+label	src
+label	src
+label	src
+label	src
+label	turbo.json
+label	ui
+label	web
+node	monorepo	dir
+node	monorepo / apps	dir
+node	monorepo / apps / api	dir
+node	monorepo / apps / api / package.json	file
+node	monorepo / apps / api / src	dir
+node	monorepo / apps / api / src / server.ts	file
+node	monorepo / apps / web	dir
+node	monorepo / apps / web / package.json	file
+node	monorepo / apps / web / src	dir
+node	monorepo / apps / web / src / App.tsx	file
+node	monorepo / package.json	file
+node	monorepo / packages	dir
+node	monorepo / packages / cli	dir
+node	monorepo / packages / cli / package.json	file
+node	monorepo / packages / cli / src	dir
+node	monorepo / packages / cli / src / main.ts	file
+node	monorepo / packages / core	dir
+node	monorepo / packages / core / package.json	file
+node	monorepo / packages / core / src	dir
+node	monorepo / packages / core / src / index.ts	file
+node	monorepo / packages / ui	dir
+node	monorepo / packages / ui / package.json	file
+node	monorepo / packages / ui / src	dir
+node	monorepo / packages / ui / src / Button.tsx	file
+node	monorepo / packages / ui / src / Modal.tsx	file
+node	monorepo / turbo.json	file

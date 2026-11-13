@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9cc58e614d6e51a2
+accept	yes
+drawn	yes
+entity	CATEGORY	CATEGORY
+entity	CHILD	CHILD
+entity	MEMBER	MEMBER
+entity	PARENT	PARENT
+entity	PRODUCT	PRODUCT
+entity	TEAM	TEAM
+label	CATEGORY
+label	CHILD
+label	MEMBER
+label	PARENT
+label	PRODUCT
+label	TEAM
+label	classifies
+label	has
+label	includes
+relation	CATEGORY	PRODUCT	one	zero-or-more	non-identifying	classifies
+relation	PARENT	CHILD	one	one-or-more	identifying	has
+relation	TEAM	MEMBER	one-or-more	one-or-more	non-identifying	includes

@@ -2,14 +2,15 @@
 # mermaid 12.3.0
 # source f71311be00252b3f
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
 edge	B	C	none	arrow	solid
 edge	C	D	none	arrow	solid
 edge	D	E	none	arrow	solid	Yes
 edge	D	F	none	arrow	solid	No
-node	A	All nodes
-node	B	Get the
-node	C	Default style
-node	D	Unless overridden
-node	E	Special
-node	F	Still default
+node	A	All nodes	rect
+node	B	Get the	rect
+node	C	Default style	rect
+node	D	Unless overridden	diam
+node	E	Special	rect
+node	F	Still default	rect

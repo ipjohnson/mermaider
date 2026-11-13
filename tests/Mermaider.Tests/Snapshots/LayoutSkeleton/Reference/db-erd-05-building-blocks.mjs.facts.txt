@@ -1,0 +1,81 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b69bc2e5e9b184f9
+accept	yes
+drawn	yes
+entity	ApiReference	ApiReference
+entity	Assembly	Assembly
+entity	Catalog	Catalog
+entity	CodexSite	CodexSite
+entity	Content	Content
+entity	DocumentationSet	DocumentationSet
+entity	LinkManifest	LinkManifest
+entity	LinkRegistry	LinkRegistry
+entity	Navigation	Navigation
+entity	OpenApiRepository	OpenApiRepository
+entity	OpenApiSpec	OpenApiSpec
+entity	Registry	Registry
+entity	ReleaseNotes	ReleaseNotes
+entity	Repository	Repository
+entity	SearchIndex	SearchIndex
+entity	SiteNavigation	SiteNavigation
+label	ApiReference
+label	Assembly
+label	Catalog
+label	CodexSite
+label	Content
+label	DocumentationSet
+label	LinkManifest
+label	LinkRegistry
+label	Navigation
+label	OpenApiRepository
+label	OpenApiSpec
+label	Registry
+label	ReleaseNotes
+label	Repository
+label	SearchIndex
+label	SiteNavigation
+label	api
+label	changelog.yml
+label	contains
+label	cross-links resolve through
+label	discovers members from
+label	environment
+label	indexed by
+label	mounts
+label	navigation.yml
+label	one per branch
+label	one per registry
+label	per environment
+label	pins commits from
+label	products
+label	products, versioning
+label	published to
+label	publishes
+label	references
+label	spec + repository
+label	table of contents
+label	{changelog} directive
+label	≤1 per Registry
+relation	ApiReference	OpenApiSpec	zero-or-more	one	identifying	spec + repository
+relation	Assembly	LinkRegistry	zero-or-more	one	identifying	pins commits from
+relation	Assembly	Repository	one	one-or-more	identifying	references
+relation	Assembly	SearchIndex	one	zero-or-more	identifying	per environment
+relation	Assembly	SiteNavigation	one	one	identifying	navigation.yml
+relation	Catalog	DocumentationSet	one	zero-or-more	identifying	products, versioning
+relation	Catalog	ReleaseNotes	one	zero-or-more	identifying	products
+relation	CodexSite	LinkRegistry	zero-or-more	one	identifying	discovers members from
+relation	CodexSite	Registry	one	one	identifying	environment
+relation	Content	LinkManifest	zero-or-more	zero-or-more	identifying	cross-links resolve through
+relation	Content	ReleaseNotes	zero-or-more	zero-or-more	identifying	{changelog} directive
+relation	DocumentationSet	ApiReference	one	zero-or-more	identifying	api
+relation	DocumentationSet	Content	one	one-or-more	identifying	contains
+relation	DocumentationSet	LinkManifest	one	zero-or-more	identifying	one per branch
+relation	DocumentationSet	Navigation	one	one	identifying	table of contents
+relation	LinkManifest	LinkRegistry	zero-or-more	one	identifying	indexed by
+relation	LinkRegistry	Registry	one	one	identifying	one per registry
+relation	OpenApiSpec	OpenApiRepository	zero-or-more	one	identifying	published to
+relation	Repository	DocumentationSet	one	zero-or-more	identifying	≤1 per Registry
+relation	Repository	OpenApiSpec	one	zero-or-more	identifying	publishes
+relation	Repository	ReleaseNotes	one	zero-or-one	identifying	changelog.yml
+relation	SiteNavigation	Navigation	one	one-or-more	identifying	mounts

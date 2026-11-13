@@ -1,0 +1,38 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source cadc725a9b81b84e
+accept	yes
+attribute	SESSION	datetime	expires_at
+attribute	SESSION	int	id	PK
+attribute	SESSION	int	user_id	FK
+attribute	SESSION	string	token	UK
+attribute	USER	date	created_at
+attribute	USER	int	id	PK
+attribute	USER	string	email	UK
+attribute	USER	string	password_hash
+attribute	USER	string	username	UK
+drawn	yes
+entity	SESSION	SESSION
+entity	USER	USER
+label	SESSION
+label	USER
+label	created_at
+label	date
+label	datetime
+label	email
+label	expires_at
+label	has
+label	id
+label	id
+label	int
+label	int
+label	int
+label	password_hash
+label	string
+label	string
+label	string
+label	string
+label	token
+label	user_id
+label	username
+relation	USER	SESSION	one	zero-or-more	identifying	has

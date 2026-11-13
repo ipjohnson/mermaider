@@ -10,5 +10,6 @@ bbox	node	Duck	81.9	133	140.2	214
 canvas	4	4	154.4	222
 class	Animal	Animal
 class	Duck	Duck
+drawn	yes
 relation	Animal	Animal	none	arrow	solid	parent	1	0..*
 relation	Animal	Duck	triangle	none	solid

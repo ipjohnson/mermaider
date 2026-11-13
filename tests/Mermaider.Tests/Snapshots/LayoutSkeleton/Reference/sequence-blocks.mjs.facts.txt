@@ -27,6 +27,7 @@ block	alt	Cache Hit
 block	loop	Health Check
 canvas	-50	-10	600	670
 divider	Cache Miss
+drawn	yes
 message	API	Client	dashed	filled	Cached Response
 message	API	Client	dashed	filled	Fresh Response
 message	API	Client	dashed	filled	Pong

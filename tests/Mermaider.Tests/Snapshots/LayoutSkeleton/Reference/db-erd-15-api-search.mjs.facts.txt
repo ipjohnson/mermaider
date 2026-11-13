@@ -1,0 +1,57 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 472a02b3ca9ece10
+accept	yes
+drawn	yes
+entity	ApiDeclaration	ApiDeclaration
+entity	ApiOperation	ApiOperation
+entity	ApiSpecVersion	ApiSpecVersion
+entity	ApiSupplementalDoc	ApiSupplementalDoc
+entity	ApiTag	ApiTag
+entity	ApiVersionIndex	ApiVersionIndex
+entity	OpenApiRepository	OpenApiRepository
+entity	OpenApiSpec	OpenApiSpec
+entity	Page	Page
+entity	Product	Product
+entity	Repository	Repository
+entity	SearchDocument	SearchDocument
+entity	SearchIndex	SearchIndex
+label	ApiDeclaration
+label	ApiOperation
+label	ApiSpecVersion
+label	ApiSupplementalDoc
+label	ApiTag
+label	ApiVersionIndex
+label	OpenApiRepository
+label	OpenApiSpec
+label	Page
+label	Product
+label	Repository
+label	SearchDocument
+label	SearchIndex
+label	contains
+label	exported
+label	index.json
+label	lists
+label	op-{id}
+label	operations
+label	org/repo/branch/spec
+label	per version
+label	product
+label	publishes
+label	renders
+label	spec + repository
+label	tags
+relation	ApiDeclaration	ApiSpecVersion	one	zero-or-more	identifying	renders
+relation	ApiDeclaration	OpenApiSpec	zero-or-more	one	identifying	spec + repository
+relation	ApiDeclaration	Product	zero-or-more	one	identifying	product
+relation	ApiSpecVersion	ApiTag	one	zero-or-more	identifying	tags
+relation	ApiSupplementalDoc	ApiOperation	zero-or-more	zero-or-one	identifying	op-{id}
+relation	ApiTag	ApiOperation	one	zero-or-more	identifying	operations
+relation	ApiVersionIndex	ApiSpecVersion	one	zero-or-more	identifying	lists
+relation	OpenApiRepository	ApiVersionIndex	one	one	identifying	index.json
+relation	OpenApiRepository	OpenApiSpec	one	zero-or-more	identifying	org/repo/branch/spec
+relation	OpenApiSpec	ApiSpecVersion	one	zero-or-more	identifying	per version
+relation	Page	SearchDocument	one	zero-or-one	identifying	exported
+relation	Repository	OpenApiSpec	one	zero-or-more	identifying	publishes
+relation	SearchIndex	SearchDocument	one	zero-or-more	identifying	contains

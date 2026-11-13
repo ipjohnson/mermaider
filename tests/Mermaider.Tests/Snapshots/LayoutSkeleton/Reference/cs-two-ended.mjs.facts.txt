@@ -7,4 +7,5 @@ bbox	node	B	12	133	46.1	214
 canvas	4	4	54.1	222
 class	A	A
 class	B	B
+drawn	yes
 relation	A	B	triangle	triangle	solid

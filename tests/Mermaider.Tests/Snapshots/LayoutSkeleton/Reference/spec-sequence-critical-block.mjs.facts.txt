@@ -17,6 +17,7 @@ bbox	node	B	200	385	350	458
 block	critical	Establish connection
 canvas	-59	-10	400	499
 divider	Network timeout
+drawn	yes
 message	A	A	solid	filled	Retry
 message	A	B	solid	filled	Connect
 message	B	A	dashed	filled	Ack

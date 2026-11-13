@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source afcc264564711e5e
+accept	yes
+drawn	yes
+flow	Electricity grid	Heating and cooling - homes	113.726
+flow	Electricity grid	Industry	342.165
+flow	Electricity grid	Losses	56.691
+flow	Electricity grid	Over generation / exports	104.453
+flow	Nuclear	Thermal generation	839.978
+flow	Thermal generation	Electricity grid	525.531
+flow	Wind	Electricity grid	289.366
+label	Electricity grid
+label	Heating and cooling - homes
+label	Industry
+label	Losses
+label	Nuclear
+label	Over generation / exports
+label	Thermal generation
+label	Wind

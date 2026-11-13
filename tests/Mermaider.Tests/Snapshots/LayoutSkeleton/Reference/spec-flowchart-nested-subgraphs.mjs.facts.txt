@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source ca33f0cbd27919dd
 accept	yes
+drawn	yes
 edge	A1	A2	none	arrow	solid
 edge	B1	B2	none	arrow	solid
 edge	LB	Inner1	none	arrow	solid
@@ -9,8 +10,8 @@ edge	LB	Inner2	none	arrow	solid
 group	Inner1	Cluster A	A1,A2
 group	Inner2	Cluster B	B1,B2
 group	Outer	Deployment	Inner1,Inner2
-node	A1	Pod 1
-node	A2	Pod 2
-node	B1	Pod 1
-node	B2	Pod 2
-node	LB	Load Balancer
+node	A1	Pod 1	rect
+node	A2	Pod 2	rect
+node	B1	Pod 1	rect
+node	B2	Pod 2	rect
+node	LB	Load Balancer	rect

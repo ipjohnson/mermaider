@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2c0a254647bc2e32
+accept	yes
+drawn	yes
+label	build output
+label	config.ts
+label	dist
+label	entry point
+label	main.js
+label	main.ts
+label	package.json
+label	project
+label	src
+node	project	dir
+node	project / dist	dir
+node	project / dist / main.js	file	build output
+node	project / package.json	file
+node	project / src	dir
+node	project / src / config.ts	file
+node	project / src / main.ts	file	entry point

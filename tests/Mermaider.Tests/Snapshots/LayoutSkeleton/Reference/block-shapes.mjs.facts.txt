@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4ff8e3ec494ddf10
+accept	yes
+block	a	square	rect	1
+block	b	round	rounded	1
+block	c	circle	circle	1
+block	d	diamond	diam	1
+block	e	hexagon	hex	1
+block	f	stadium	stadium	1
+block	g	cylinder	cyl	1
+block	h	subroutine	fr-rect	1
+drawn	yes
+label	circle
+label	cylinder
+label	diamond
+label	hexagon
+label	round
+label	square
+label	stadium
+label	subroutine

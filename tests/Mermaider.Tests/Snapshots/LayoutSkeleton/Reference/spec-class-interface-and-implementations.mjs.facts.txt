@@ -12,6 +12,7 @@ canvas	4	4	443.3	399
 class	ConsoleLogger	ConsoleLogger
 class	FileLogger	FileLogger
 class	ILogger	ILogger
+drawn	yes
 method	ConsoleLogger	+Log(msg) : void
 method	ConsoleLogger	+LogError(ex) : void
 method	FileLogger	+Flush() : void

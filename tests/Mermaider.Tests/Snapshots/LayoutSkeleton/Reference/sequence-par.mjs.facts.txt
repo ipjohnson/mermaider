@@ -20,6 +20,7 @@ bbox	node	John	400	349	550	422
 block	par	this happens in parallel
 canvas	-50	-10	600	463
 divider
+drawn	yes
 message	Alice	Bob	dashed	filled	Parallel message 1
 message	Alice	John	dashed	filled	Parallel message 2
 message	Bob	Alice	dashed	filled	Response 1

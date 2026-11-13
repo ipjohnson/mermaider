@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source b9c32bc8814f7211
 accept	yes
+drawn	yes
 edge	body	parser	none	arrow	solid
 edge	id	agent	none	arrow	solid
 edge	id	app	none	arrow	solid
@@ -10,12 +11,12 @@ edge	id	stored	none	arrow	solid
 edge	parser	resolver	none	arrow	solid
 edge	resolver	id	none	arrow	solid
 edge	typed	parser	none	arrow	solid
-node	agent	To an agent: owner/repo#N and its URL
-node	app	In the app: refLabel by the screen's scope
-node	body	A document: an issue or pull request body
-node	host	To GitHub: #N, owner/repo#N or a URL, by the document's repository
-node	id	RefId: repository, kind, key
-node	parser	RefParser
-node	resolver	RefResolver: the call's repository, the chat's, the workspace's
-node	stored	Stored: canonical text, or a number beside its repository
-node	typed	Input: a URL, owner/repo#N, repo#N or #N
+node	agent	To an agent: owner/repo#N and its URL	rect
+node	app	In the app: refLabel by the screen's scope	rect
+node	body	A document: an issue or pull request body	rect
+node	host	To GitHub: #N, owner/repo#N or a URL, by the document's repository	rect
+node	id	RefId: repository, kind, key	rect
+node	parser	RefParser	rect
+node	resolver	RefResolver: the call's repository, the chat's, the workspace's	rect
+node	stored	Stored: canonical text, or a number beside its repository	rect
+node	typed	Input: a URL, owner/repo#N, repo#N or #N	rect

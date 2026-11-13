@@ -2,13 +2,14 @@
 # mermaid 12.3.0
 # source afce793c8b4b9bd3
 accept	yes
+drawn	yes
 edge	First	Last	none	arrow	solid
 edge	[*]start@First	second	none	arrow	solid
 edge	[*]start@root	First	none	arrow	solid
 edge	second	third	none	arrow	solid
 group	First	First	[*]start@First,second,third
-node	Last	Last	state
-node	[*]start@First		pseudo
-node	[*]start@root		pseudo
-node	second	second	state
-node	third	third	state
+node	Last	Last	rounded
+node	[*]start@First		sm-circ
+node	[*]start@root		sm-circ
+node	second	second	rounded
+node	third	third	rounded

@@ -14,6 +14,7 @@ canvas	4	4	318.1	414
 class	Animal	Animal
 class	Cat	Cat
 class	Dog	Dog
+drawn	yes
 method	Animal	+eat() : void
 method	Animal	+sleep() : void
 method	Cat	+purr() : void

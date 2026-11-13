@@ -1,0 +1,57 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 933ab9099f5f04ab
+accept	yes
+drawn	yes
+label	Brand
+label	Dashboards
+label	Demo env
+label	Design
+label	Docs
+label	Email campaign
+label	Engineering
+label	Feature flags
+label	Finance
+label	Forecast
+label	Landing page
+label	Legal
+label	Load testing
+label	Marketing
+label	On-call
+label	Operations
+label	Playbook
+label	Pricing
+label	Privacy
+label	Product Launch
+label	Runbooks
+label	Sales
+label	Social
+label	Support
+label	Terms
+label	Training
+node	Product Launch	circle
+node	Product Launch / Design	default
+node	Product Launch / Design / Brand	default
+node	Product Launch / Design / Docs	default
+node	Product Launch / Engineering	default
+node	Product Launch / Engineering / Feature flags	default
+node	Product Launch / Engineering / Load testing	default
+node	Product Launch / Finance	default
+node	Product Launch / Finance / Forecast	default
+node	Product Launch / Finance / Pricing	default
+node	Product Launch / Legal	default
+node	Product Launch / Legal / Privacy	default
+node	Product Launch / Legal / Terms	default
+node	Product Launch / Marketing	default
+node	Product Launch / Marketing / Email campaign	default
+node	Product Launch / Marketing / Landing page	default
+node	Product Launch / Marketing / Social	default
+node	Product Launch / Operations	default
+node	Product Launch / Operations / Dashboards	default
+node	Product Launch / Operations / On-call	default
+node	Product Launch / Sales	default
+node	Product Launch / Sales / Demo env	default
+node	Product Launch / Sales / Playbook	default
+node	Product Launch / Support	default
+node	Product Launch / Support / Runbooks	default
+node	Product Launch / Support / Training	default

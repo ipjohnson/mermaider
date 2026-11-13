@@ -1,0 +1,95 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d63a6ade5616d0c8
+accept	yes
+drawn	yes
+entity	ApiDeclaration	ApiDeclaration
+entity	CodexGroup	CodexGroup
+entity	CrossLinkDeclaration	CrossLinkDeclaration
+entity	CrossLinkItem	CrossLinkItem
+entity	CrossLinkUri	CrossLinkUri
+entity	Cta	Cta
+entity	DocumentationSet	DocumentationSet
+entity	FeatureToggle	FeatureToggle
+entity	FileItem	FileItem
+entity	FolderItem	FolderItem
+entity	HintSuppression	HintSuppression
+entity	IndexFileItem	IndexFileItem
+entity	NestedTocItem	NestedTocItem
+entity	Page	Page
+entity	Product	Product
+entity	Redirect	Redirect
+entity	Registry	Registry
+entity	ReleaseNotesSubscription	ReleaseNotesSubscription
+entity	Repository	Repository
+entity	Substitution	Substitution
+entity	TableOfContents	TableOfContents
+entity	TocItem	TocItem
+label	ApiDeclaration
+label	CodexGroup
+label	CrossLinkDeclaration
+label	CrossLinkItem
+label	CrossLinkUri
+label	Cta
+label	DocumentationSet
+label	FeatureToggle
+label	FileItem
+label	FolderItem
+label	HintSuppression
+label	IndexFileItem
+label	NestedTocItem
+label	Page
+label	Product
+label	Redirect
+label	Registry
+label	ReleaseNotesSubscription
+label	Repository
+label	Substitution
+label	TableOfContents
+label	TocItem
+label	api
+label	children
+label	codex.group
+label	cross_links
+label	crosslink
+label	cta
+label	default_cta
+label	default_cta
+label	features
+label	file
+label	index
+label	product
+label	product
+label	products
+label	redirects.yml
+label	registry:// prefix
+label	release_notes
+label	repository name
+label	subs
+label	suppress
+label	toc
+label	toc entries
+label	toc.yml in folder
+relation	ApiDeclaration	Product	zero-or-more	one	identifying	product
+relation	CrossLinkDeclaration	Registry	zero-or-more	zero-or-one	identifying	registry:// prefix
+relation	CrossLinkDeclaration	Repository	zero-or-more	one	identifying	repository name
+relation	CrossLinkItem	CrossLinkUri	zero-or-more	one	identifying	crosslink
+relation	DocumentationSet	ApiDeclaration	one	zero-or-more	identifying	api
+relation	DocumentationSet	CodexGroup	zero-or-more	zero-or-one	identifying	codex.group
+relation	DocumentationSet	CrossLinkDeclaration	one	zero-or-more	identifying	cross_links
+relation	DocumentationSet	Cta	one	zero-or-more	identifying	cta
+relation	DocumentationSet	Cta	zero-or-more	zero-or-one	identifying	default_cta
+relation	DocumentationSet	FeatureToggle	one	zero-or-more	identifying	features
+relation	DocumentationSet	HintSuppression	one	zero-or-more	identifying	suppress
+relation	DocumentationSet	Product	zero-or-more	zero-or-more	identifying	products
+relation	DocumentationSet	Redirect	one	zero-or-more	identifying	redirects.yml
+relation	DocumentationSet	ReleaseNotesSubscription	one	zero-or-more	identifying	release_notes
+relation	DocumentationSet	Substitution	one	zero-or-more	identifying	subs
+relation	DocumentationSet	TableOfContents	one	one	identifying	toc
+relation	FileItem	Page	zero-or-more	one	identifying	file
+relation	FolderItem	IndexFileItem	one	zero-or-one	identifying	index
+relation	NestedTocItem	TableOfContents	one	one	identifying	toc.yml in folder
+relation	ReleaseNotesSubscription	Product	zero-or-more	one	identifying	product
+relation	TableOfContents	TocItem	one	zero-or-more	identifying	toc entries
+relation	TocItem	Cta	zero-or-more	zero-or-one	identifying	default_cta
+relation	TocItem	TocItem	one	zero-or-more	identifying	children

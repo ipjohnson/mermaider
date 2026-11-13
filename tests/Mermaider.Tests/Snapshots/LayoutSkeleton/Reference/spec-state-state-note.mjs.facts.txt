@@ -2,9 +2,10 @@
 # mermaid 12.3.0
 # source bfc0a245000ff0bc
 accept	yes
+drawn	yes
 edge	Active	Inactive	none	arrow	solid
 edge	[*]start@root	Active	none	arrow	solid
-node	Active	Active	state
-node	Inactive	Inactive	state
-node	[*]start@root		pseudo
+node	Active	Active	rounded
+node	Inactive	Inactive	rounded
+node	[*]start@root		sm-circ
 note	Active	Important state

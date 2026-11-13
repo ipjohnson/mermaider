@@ -16,5 +16,6 @@ bbox	node	C	425	27	575	100
 box	External	C
 box	Internal	A,B
 canvas	-50	-10	630	332
+drawn	yes
 message	A	B	solid	filled	Internal msg
 message	B	C	solid	filled	External msg

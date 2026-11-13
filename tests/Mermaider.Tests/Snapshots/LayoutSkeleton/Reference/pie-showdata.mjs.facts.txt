@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9872c740ecae2406
+accept	yes
+drawn	yes
+label	Browser Market Share
+label	Chrome
+label	Edge
+label	Firefox
+label	Other
+label	Safari
+showdata	yes
+slice	Chrome	65.3
+slice	Edge	4.7
+slice	Firefox	3.2
+slice	Other	8
+slice	Safari	18.8
+title	Browser Market Share

@@ -9,6 +9,7 @@ canvas	4	4	559.9	161
 class	Controller	Controller
 class	Repository	Repository
 class	Service	Service
+drawn	yes
 method	Controller	+handle() : void
 method	Repository	+find() : Object
 method	Repository	+save() : void

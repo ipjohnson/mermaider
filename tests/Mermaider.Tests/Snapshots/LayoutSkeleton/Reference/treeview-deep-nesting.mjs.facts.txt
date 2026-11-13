@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0d2fafb14337ea19
+accept	yes
+drawn	yes
+label	CreateUser.cs
+label	GetUserById.cs
+label	ListUsers.cs
+label	Order.cs
+label	PlaceOrder.cs
+label	UpdateUser.cs
+label	User.cs
+label	UserCreated.cs
+label	UserUpdated.cs
+label	app
+label	commands
+label	commands
+label	domain
+label	events
+label	order
+label	queries
+label	user
+node	app	dir
+node	app / domain	dir
+node	app / domain / order	dir
+node	app / domain / order / Order.cs	file
+node	app / domain / order / commands	dir
+node	app / domain / order / commands / PlaceOrder.cs	file
+node	app / domain / user	dir
+node	app / domain / user / User.cs	file
+node	app / domain / user / commands	dir
+node	app / domain / user / commands / CreateUser.cs	file
+node	app / domain / user / commands / UpdateUser.cs	file
+node	app / domain / user / events	dir
+node	app / domain / user / events / UserCreated.cs	file
+node	app / domain / user / events / UserUpdated.cs	file
+node	app / domain / user / queries	dir
+node	app / domain / user / queries / GetUserById.cs	file
+node	app / domain / user / queries / ListUsers.cs	file

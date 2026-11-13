@@ -6,6 +6,7 @@ attribute	Animal	+int count
 bbox	node	Animal	12	12	147.7	210
 canvas	4	4	155.7	218
 class	Animal	Animal
+drawn	yes
 method	Animal	+run()
 method	Animal	+sleep()
 method	Animal	+wake() : bool

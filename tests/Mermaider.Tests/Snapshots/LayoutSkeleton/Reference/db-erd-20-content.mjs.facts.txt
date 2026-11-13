@@ -1,0 +1,113 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ad319d041d947e8c
+accept	yes
+drawn	yes
+entity	Anchor	Anchor
+entity	Applicability	Applicability
+entity	ApplicabilityEntry	ApplicabilityEntry
+entity	ChangelogDirective	ChangelogDirective
+entity	CrossLink	CrossLink
+entity	CrossLinkUri	CrossLinkUri
+entity	Cta	Cta
+entity	Directive	Directive
+entity	DocumentationFile	DocumentationFile
+entity	DocumentationSet	DocumentationSet
+entity	FrontMatter	FrontMatter
+entity	Heading	Heading
+entity	Image	Image
+entity	ImageLink	ImageLink
+entity	IncludeDirective	IncludeDirective
+entity	InternalLink	InternalLink
+entity	LegacyPage	LegacyPage
+entity	Link	Link
+entity	ListingGroup	ListingGroup
+entity	Page	Page
+entity	PageCardDirective	PageCardDirective
+entity	PageSubstitution	PageSubstitution
+entity	Product	Product
+entity	RelatedLearningDirective	RelatedLearningDirective
+entity	RelatedLearningLink	RelatedLearningLink
+entity	SettingsDirective	SettingsDirective
+entity	SettingsReference	SettingsReference
+entity	Snippet	Snippet
+entity	VersionSpec	VersionSpec
+label	## text
+label	#anchor
+label	--- yaml ---
+label	Anchor
+label	Applicability
+label	ApplicabilityEntry
+label	ChangelogDirective
+label	CrossLink
+label	CrossLinkUri
+label	Cta
+label	Directive
+label	DocumentationFile
+label	DocumentationSet
+label	FrontMatter
+label	Heading
+label	Image
+label	ImageLink
+label	IncludeDirective
+label	InternalLink
+label	LegacyPage
+label	Link
+label	ListingGroup
+label	Page
+label	PageCardDirective
+label	PageSubstitution
+label	Product
+label	RelatedLearningDirective
+label	RelatedLearningLink
+label	SettingsDirective
+label	SettingsReference
+label	Snippet
+label	VersionSpec
+label	applies_to
+label	argument
+label	collected
+label	contains
+label	contains
+label	contributes
+label	cta.id
+label	files
+label	ids
+label	listing.group
+label	local link
+label	mapped_pages
+label	path
+label	path
+label	path
+label	per key
+label	products
+label	repo://path
+label	slug
+label	src
+label	sub
+label	version
+relation	Applicability	ApplicabilityEntry	one	zero-or-more	identifying	per key
+relation	ApplicabilityEntry	VersionSpec	zero-or-more	one	identifying	version
+relation	ChangelogDirective	Product	zero-or-more	one	identifying	argument
+relation	CrossLink	CrossLinkUri	zero-or-more	one	identifying	repo://path
+relation	DocumentationSet	DocumentationFile	one	zero-or-more	identifying	files
+relation	FrontMatter	Applicability	one	zero-or-one	identifying	applies_to
+relation	FrontMatter	Cta	zero-or-more	zero-or-one	identifying	cta.id
+relation	FrontMatter	LegacyPage	zero-or-more	zero-or-more	identifying	mapped_pages
+relation	FrontMatter	ListingGroup	zero-or-more	zero-or-one	identifying	listing.group
+relation	FrontMatter	PageSubstitution	one	zero-or-more	identifying	sub
+relation	FrontMatter	Product	zero-or-more	zero-or-more	identifying	products
+relation	Heading	Anchor	one	one	identifying	slug
+relation	ImageLink	Image	zero-or-more	one	identifying	src
+relation	IncludeDirective	Snippet	zero-or-more	one	identifying	path
+relation	InternalLink	Anchor	zero-or-more	zero-or-one	identifying	#anchor
+relation	InternalLink	Page	zero-or-more	one	identifying	path
+relation	Page	Anchor	one	zero-or-more	identifying	collected
+relation	Page	Directive	one	zero-or-more	identifying	contains
+relation	Page	FrontMatter	one	zero-or-one	identifying	--- yaml ---
+relation	Page	Heading	one	zero-or-more	identifying	## text
+relation	Page	Link	one	zero-or-more	identifying	contains
+relation	PageCardDirective	Page	zero-or-more	one	identifying	local link
+relation	RelatedLearningDirective	RelatedLearningLink	zero-or-more	one-or-more	identifying	ids
+relation	SettingsDirective	SettingsReference	zero-or-more	one	identifying	path
+relation	Snippet	Anchor	one	zero-or-more	identifying	contributes

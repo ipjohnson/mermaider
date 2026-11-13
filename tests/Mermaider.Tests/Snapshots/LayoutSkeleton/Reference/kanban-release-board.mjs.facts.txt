@@ -1,0 +1,53 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 13fd987e52e60880
+accept	yes
+card	backlog	a1	Customer export		PRJ-101	Low
+card	backlog	a2	Dark mode polish		PRJ-117	Very Low
+card	backlog	a3	Audit log retention	maria	PRJ-124	High
+card	progress	b1	Billing migration	omar	PRJ-088	Very High
+card	progress	b2	Search relevance tuning	li	PRJ-092
+card	review	c1	Rate limiting	sam	PRJ-077	High
+card	shipped	e1	Webhook retries		PRJ-050
+card	shipped	e2	Onboarding emails		PRJ-061
+card	shipped	e3	Faster CSV import		PRJ-066
+card	testing	d1	SSO login flow	maria	PRJ-070
+card	testing	d2	Mobile layout		PRJ-071	Low
+column	backlog	Backlog
+column	progress	In Progress
+column	review	In Review
+column	shipped	Shipped
+column	testing	Testing
+drawn	yes
+label	Audit log retention
+label	Backlog
+label	Billing migration
+label	Customer export
+label	Dark mode polish
+label	Faster CSV import
+label	In Progress
+label	In Review
+label	Mobile layout
+label	Onboarding emails
+label	PRJ-050
+label	PRJ-061
+label	PRJ-066
+label	PRJ-070
+label	PRJ-071
+label	PRJ-077
+label	PRJ-088
+label	PRJ-092
+label	PRJ-101
+label	PRJ-117
+label	PRJ-124
+label	Rate limiting
+label	SSO login flow
+label	Search relevance tuning
+label	Shipped
+label	Testing
+label	Webhook retries
+label	li
+label	maria
+label	maria
+label	omar
+label	sam

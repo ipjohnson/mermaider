@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8820d4456897471c
+accept	yes
+card	backlog	p1	Security audit			Very High
+card	backlog	p2	Perf regression			High
+card	backlog	p3	Docs update			Low
+card	backlog	p4	Typo fix			Very Low
+card	review	p5	API redesign	alice		High
+card	review	p6	Changelog	bob	CH-99	Very Low
+column	backlog	Backlog
+column	review	Review
+drawn	yes
+label	API redesign
+label	Backlog
+label	CH-99
+label	Changelog
+label	Docs update
+label	Perf regression
+label	Review
+label	Security audit
+label	Typo fix
+label	alice
+label	bob

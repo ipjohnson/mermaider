@@ -13,5 +13,6 @@ canvas	4	4	90.5	506
 class	Duck	Duck
 class	Pond	Pond
 class	Wing	Wing
+drawn	yes
 relation	Duck	Wing	diamond-filled	none	solid	has		2
 relation	Pond	Duck	diamond	none	solid	holds		many

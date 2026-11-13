@@ -1,0 +1,57 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 145f017481e74f0f
+accept	yes
+drawn	yes
+entity	DocumentationSet	DocumentationSet
+entity	DocumentationSetNavigation	DocumentationSetNavigation
+entity	FileNavigation	FileNavigation
+entity	HomeProvider	HomeProvider
+entity	NavigationNode	NavigationNode
+entity	Page	Page
+entity	Phantom	Phantom
+entity	SiteMount	SiteMount
+entity	SiteNavigation	SiteNavigation
+entity	SiteSection	SiteSection
+entity	TableOfContents	TableOfContents
+entity	TocItem	TocItem
+entity	TocNavigation	TocNavigation
+label	DocumentationSet
+label	DocumentationSetNavigation
+label	FileNavigation
+label	HomeProvider
+label	NavigationNode
+label	Page
+label	Phantom
+label	SiteMount
+label	SiteNavigation
+label	SiteSection
+label	TableOfContents
+label	TocItem
+label	TocNavigation
+label	builds
+label	children
+label	children
+label	mirrors
+label	model
+label	phantoms
+label	re-homes subtree
+label	section (preview)
+label	toc
+label	toc
+label	toc.yml
+label	toc: repo://path
+label	tree
+relation	DocumentationSet	DocumentationSetNavigation	one	one	identifying	builds
+relation	DocumentationSetNavigation	NavigationNode	one	zero-or-more	identifying	tree
+relation	FileNavigation	Page	zero-or-more	one	identifying	model
+relation	Phantom	TableOfContents	zero-or-more	one	identifying	toc
+relation	SiteMount	HomeProvider	one	one	identifying	re-homes subtree
+relation	SiteMount	SiteMount	one	zero-or-more	identifying	children
+relation	SiteMount	TocNavigation	zero-or-more	one	identifying	toc: repo://path
+relation	SiteNavigation	Phantom	one	zero-or-more	identifying	phantoms
+relation	SiteNavigation	SiteMount	one	one-or-more	identifying	toc
+relation	SiteNavigation	SiteSection	one	zero-or-more	identifying	section (preview)
+relation	SiteSection	SiteMount	one	zero-or-more	identifying	children
+relation	TocItem	NavigationNode	one	one	identifying	mirrors
+relation	TocNavigation	TableOfContents	one	one	identifying	toc.yml

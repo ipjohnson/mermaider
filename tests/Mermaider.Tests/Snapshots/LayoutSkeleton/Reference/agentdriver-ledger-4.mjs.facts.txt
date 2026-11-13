@@ -2,3 +2,56 @@
 # mermaid 12.3.0
 # source 9c086c3ec1b2ef7f
 accept	yes
+drawn	yes
+entity	ATTACHMENTS	ATTACHMENTS
+entity	COMMANDS	COMMANDS
+entity	EFFECTS	EFFECTS
+entity	ENTRIES	ENTRIES
+entity	INBOX	INBOX
+entity	ITEMS	ITEMS
+entity	ITEM_DEPS	ITEM_DEPS
+entity	PEERS	PEERS
+entity	QUEUES	QUEUES
+entity	REFS	REFS
+entity	SESSIONS	SESSIONS
+entity	TASKS	TASKS
+entity	TRANSITIONS	TRANSITIONS
+label	ATTACHMENTS
+label	COMMANDS
+label	EFFECTS
+label	ENTRIES
+label	INBOX
+label	ITEMS
+label	ITEM_DEPS
+label	PEERS
+label	QUEUES
+label	REFS
+label	SESSIONS
+label	TASKS
+label	TRANSITIONS
+label	asks
+label	asks you
+label	attempts
+label	carries
+label	has
+label	logs
+label	meets
+label	orders
+label	owns under a lease
+label	parent of
+label	placed by
+label	produced
+label	waits on
+relation	COMMANDS	TRANSITIONS	one	zero-or-one	identifying	produced
+relation	ITEMS	ATTACHMENTS	one	zero-or-more	identifying	carries
+relation	ITEMS	INBOX	one	zero-or-more	identifying	asks you
+relation	ITEMS	ITEMS	zero-or-one	zero-or-more	identifying	parent of
+relation	ITEMS	ITEM_DEPS	one	zero-or-more	identifying	waits on
+relation	ITEMS	SESSIONS	one	zero-or-more	identifying	attempts
+relation	ITEMS	TRANSITIONS	one	zero-or-more	identifying	logs
+relation	PEERS	ITEMS	one	zero-or-more	identifying	owns under a lease
+relation	QUEUES	ENTRIES	one	zero-or-more	identifying	orders
+relation	REFS	ITEM_DEPS	one	zero-or-more	identifying	meets
+relation	TASKS	ENTRIES	one	zero-or-one	identifying	placed by
+relation	TASKS	ITEMS	one	one-or-more	identifying	has
+relation	TRANSITIONS	EFFECTS	one	zero-or-more	identifying	asks

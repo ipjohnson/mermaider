@@ -2,8 +2,9 @@
 # mermaid 12.3.0
 # source 0f113602dd519bed
 accept	yes
+drawn	yes
 edge	A	B	none	arrow	solid
 edge	B	C	none	arrow	solid
-node	A	Node A
-node	B	Node B
-node	C	Node C
+node	A	Node A	rect
+node	B	Node B	rect
+node	C	Node C	rect

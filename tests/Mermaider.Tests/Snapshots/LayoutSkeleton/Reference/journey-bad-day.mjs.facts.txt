@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d551df64b5350b86
+accept	yes
+drawn	yes
+label	A rough deployment
+label	CI
+label	Celebrate the fix
+label	Deploy
+label	Dev
+label	Fix flaky test
+label	Merge the change
+label	Ops
+label	Pipeline fails
+label	Postmortem
+label	Recover
+label	Rollback
+section	Deploy
+section	Recover
+task	Deploy	Fix flaky test	2	Dev
+task	Deploy	Merge the change	5	Dev
+task	Deploy	Pipeline fails	1	CI,Dev
+task	Recover	Celebrate the fix	5	Dev
+task	Recover	Postmortem	3	Dev,Ops
+task	Recover	Rollback	2	Dev,Ops
+title	A rough deployment

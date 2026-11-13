@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a951341fa69ffe4a
+accept	yes
+attribute	o	int	customer_id	FK
+attribute	o	int	id	PK
+attribute	p	int	id	PK
+attribute	p	string	name
+drawn	yes
+entity	o	Order
+entity	p	Customer Account
+label	Customer Account
+label	Order
+label	customer_id
+label	id
+label	id
+label	int
+label	int
+label	int
+label	name
+label	places
+label	string
+relation	p	o	one	zero-or-more	identifying	places

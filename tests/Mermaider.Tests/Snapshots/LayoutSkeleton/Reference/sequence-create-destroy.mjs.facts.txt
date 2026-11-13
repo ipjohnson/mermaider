@@ -18,6 +18,7 @@ bbox	node	Bob	200	460	350	533
 bbox	node	Worker	475	124.5	625	197.5
 bbox	node	Worker	475	323	625	396
 canvas	-50	-10	676	574
+drawn	yes
 message	Alice	Bob	solid	filled	Hello Bob
 message	Bob	Alice	dashed	filled	Done
 message	Bob	Worker	solid	cross	Terminate

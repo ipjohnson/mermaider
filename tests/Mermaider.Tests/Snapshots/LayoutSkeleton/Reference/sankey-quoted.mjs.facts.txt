@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1b32f15a25d444ef
+accept	yes
+drawn	yes
+flow	Pumped heat	Heating and cooling, commercial	70.672
+flow	Pumped heat	Heating and cooling, homes	193.026
+flow	Solar thermal	Heating and cooling, commercial	3.3
+flow	Solar thermal	Heating and cooling, homes	11.606
+label	Heating and cooling, commercial
+label	Heating and cooling, homes
+label	Pumped heat
+label	Solar thermal

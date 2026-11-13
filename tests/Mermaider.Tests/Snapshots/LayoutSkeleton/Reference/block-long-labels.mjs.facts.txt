@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 502f84b20a63e569
+accept	yes
+block	A	A block with a rather long label	rect	1
+block	B	Short	rect	1
+block	C	Another long label here	rect	1
+block	D	Short	rect	1
+block	E	Medium length label	rect	1
+block	F	F	rect	1
+drawn	yes
+edge	A	B	none	arrow
+edge	B	C	none	arrow
+edge	C	F	none	arrow
+edge	D	E	none	arrow
+label	A block with a rather long label
+label	Another long label here
+label	F
+label	Medium length label
+label	Short
+label	Short

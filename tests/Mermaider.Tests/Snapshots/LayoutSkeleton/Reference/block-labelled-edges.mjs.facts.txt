@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d2b97fe630ca1b9c
+accept	yes
+block	API	API	rect	1
+block	Client	Client	rect	1
+block	DB	Database	rect	1
+block	Queue	Queue	rect	1
+block	Worker	Worker	rect	1
+drawn	yes
+edge	API	Queue	none	arrow	enqueue
+edge	Client	API	none	arrow	request
+edge	Queue	Worker	none	arrow	pull
+edge	Worker	DB	none	arrow	write
+label	API
+label	Client
+label	Database
+label	Queue
+label	Worker
+label	enqueue
+label	pull
+label	request
+label	write
+space		1
+space		1
+space		1
+space		1

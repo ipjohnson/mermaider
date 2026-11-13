@@ -1,0 +1,33 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f5bb03c5502df455
+accept	yes
+drawn	yes
+entity	AssembledDocumentationSet	AssembledDocumentationSet
+entity	Assembly	Assembly
+entity	Build	Build
+entity	CloudfrontRedirectMap	CloudfrontRedirectMap
+entity	PublishEnvironment	PublishEnvironment
+entity	Repository	Repository
+entity	SearchIndex	SearchIndex
+entity	SyncPlan	SyncPlan
+label	AssembledDocumentationSet
+label	Assembly
+label	Build
+label	CloudfrontRedirectMap
+label	PublishEnvironment
+label	Repository
+label	SearchIndex
+label	SyncPlan
+label	assembles
+label	deploy
+label	environments
+label	index suffix
+label	redirects.json
+label	references
+relation	Assembly	PublishEnvironment	one	one-or-more	identifying	environments
+relation	Assembly	Repository	one	one-or-more	identifying	references
+relation	Build	AssembledDocumentationSet	one	one-or-more	identifying	assembles
+relation	Build	CloudfrontRedirectMap	one	one	identifying	redirects.json
+relation	Build	SyncPlan	one	zero-or-one	identifying	deploy
+relation	PublishEnvironment	SearchIndex	one	zero-or-more	identifying	index suffix

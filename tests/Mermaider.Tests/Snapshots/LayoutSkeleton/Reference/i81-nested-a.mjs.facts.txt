@@ -2,10 +2,11 @@
 # mermaid 12.3.0
 # source a9c92e5838a7b604
 accept	yes
+drawn	yes
 edge	[*]start@R	f	none	arrow	solid
 edge	a	R	none	arrow	solid
 group	P	P	R,a
 group	R	R	[*]start@R,f
-node	[*]start@R		pseudo
-node	a	a	state
-node	f	f	state
+node	[*]start@R		sm-circ
+node	a	a	rounded
+node	f	f	rounded

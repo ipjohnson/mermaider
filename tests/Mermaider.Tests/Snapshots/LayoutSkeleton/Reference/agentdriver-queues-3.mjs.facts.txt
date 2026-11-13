@@ -2,6 +2,7 @@
 # mermaid 12.3.0
 # source 28e88699a5978f9b
 accept	yes
+drawn	yes
 edge	code	steward	none	arrow	solid	needs judgment
 edge	events	code	none	arrow	solid
 edge	inputs	steward	none	arrow	solid
@@ -11,11 +12,11 @@ edge	steward	policy	none	arrow	solid	tool calls
 edge	suggestion	you	none	arrow	solid
 edge	tools	code	none	arrow	solid	changes the queue
 edge	you	events	none	arrow	solid	your input
-node	code	Code: rules and dispatcher park, resume, retry, skip, hold writes events.ndjson
-node	events	Events sessions, the clock, pull requests, you
-node	inputs	Each wake reads the queue brief, the charter, its journal, the decision log
-node	policy	Policy gate checks the autonomy level logs to steward.ndjson
-node	steward	Steward a Claude wake per event reads, decides, ends
-node	suggestion	Suggestion waits in your inbox
-node	tools	Queue tools reorder, retry, answer, propose a gate
-node	you	You answer, approve, undo
+node	code	Code: rules and dispatcher park, resume, retry, skip, hold writes events.ndjson	rect
+node	events	Events sessions, the clock, pull requests, you	rect
+node	inputs	Each wake reads the queue brief, the charter, its journal, the decision log	rect
+node	policy	Policy gate checks the autonomy level logs to steward.ndjson	rect
+node	steward	Steward a Claude wake per event reads, decides, ends	rect
+node	suggestion	Suggestion waits in your inbox	rect
+node	tools	Queue tools reorder, retry, answer, propose a gate	rect
+node	you	You answer, approve, undo	rect

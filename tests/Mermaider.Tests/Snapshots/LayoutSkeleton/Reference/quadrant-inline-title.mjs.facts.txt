@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4a751962bf850f7e
+accept	yes
+axis	x-left	Low Complexity
+axis	x-right	High Complexity
+axis	y-bottom	Low Value
+axis	y-top	High Value
+drawn	yes
+label	AI Suggestions
+label	Big Bets
+label	CSV Export
+label	Dark Mode
+label	Feature Prioritization
+label	Fill-Ins
+label	High Complexity
+label	High Value
+label	Low Complexity
+label	Low Priority
+label	Low Value
+label	Quick Wins
+label	SSO
+point	AI Suggestions	0.9	0.7
+point	CSV Export	0.2	0.4
+point	Dark Mode	0.2	0.8
+point	SSO	0.6	0.9
+quadrant	1	Quick Wins
+quadrant	2	Big Bets
+quadrant	3	Low Priority
+quadrant	4	Fill-Ins
+title	Feature Prioritization

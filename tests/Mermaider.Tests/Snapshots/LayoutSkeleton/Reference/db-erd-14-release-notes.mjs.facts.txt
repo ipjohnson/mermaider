@@ -1,0 +1,37 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4a1deb8db1b3138b
+accept	yes
+drawn	yes
+entity	Bundle	Bundle
+entity	BundleAmend	BundleAmend
+entity	BundleRegistry	BundleRegistry
+entity	BundledEntry	BundledEntry
+entity	ChangelogConfiguration	ChangelogConfiguration
+entity	ChangelogEntry	ChangelogEntry
+entity	Product	Product
+entity	ProductRelease	ProductRelease
+entity	Repository	Repository
+label	Bundle
+label	BundleAmend
+label	BundleRegistry
+label	BundledEntry
+label	ChangelogConfiguration
+label	ChangelogEntry
+label	Product
+label	ProductRelease
+label	Repository
+label	amend-N
+label	changelog.yml
+label	entries
+label	name + checksum
+label	product
+label	products
+label	registry.json
+relation	Bundle	BundleAmend	one	zero-or-more	identifying	amend-N
+relation	Bundle	BundledEntry	one	zero-or-more	identifying	entries
+relation	BundledEntry	ChangelogEntry	zero-or-more	one	identifying	name + checksum
+relation	ChangelogEntry	ProductRelease	one	one-or-more	identifying	products
+relation	Product	BundleRegistry	one	zero-or-one	identifying	registry.json
+relation	ProductRelease	Product	zero-or-more	one	identifying	product
+relation	Repository	ChangelogConfiguration	one	zero-or-one	identifying	changelog.yml
