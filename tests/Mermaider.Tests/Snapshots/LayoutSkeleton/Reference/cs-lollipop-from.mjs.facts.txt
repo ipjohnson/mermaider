@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 82d281174232481a
+accept	yes
+class	Implementation	Implementation
+class	Interface	Interface
+relation	()Interface	Implementation	lollipop	none	solid

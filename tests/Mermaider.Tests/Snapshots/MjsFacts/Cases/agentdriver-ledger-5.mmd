@@ -1,0 +1,24 @@
+stateDiagram-v2
+  direction LR
+  [*] --> proposed
+  [*] --> pending
+  proposed --> pending: approve
+  proposed --> skipped: reject
+  pending --> running: start
+  running --> review: pull request open
+  running --> done: nothing to publish
+  review --> done: merged
+  review --> running: fix round
+  running --> waiting: asked
+  waiting --> running: answered
+  running --> interrupted: driver fault
+  interrupted --> pending: retry due
+  interrupted --> attention: driver budget spent
+  running --> attention: rounds spent or gave up
+  review --> attention: closed without a merge
+  attention --> pending: retry
+  attention --> done: mark done
+  pending --> paused: pause
+  paused --> pending: resume
+  pending --> skipped: skip
+  pending --> cancelled: cancel

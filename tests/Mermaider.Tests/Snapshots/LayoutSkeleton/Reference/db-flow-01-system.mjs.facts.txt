@@ -1,0 +1,43 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 02de9d75d0b69e25
+accept	yes
+edge	Assembler	Search	none	arrow	solid
+edge	Assembler	Site	none	arrow	solid
+edge	Catalog	DocSet	none	arrow	solid
+edge	Changelog	Notes	none	arrow	solid
+edge	Codex	Site	none	arrow	solid
+edge	DocSet	Assembler	none	arrow	solid
+edge	DocSet	Codex	none	arrow	solid
+edge	DocSet	Isolated	none	arrow	solid
+edge	DocSet	SpecIndex	none	arrow	dotted	api: spec + repository
+edge	Isolated	Links	none	arrow	solid
+edge	Isolated	Site	none	arrow	solid
+edge	Links	Assembler	none	arrow	solid
+edge	Links	Codex	none	arrow	solid
+edge	Notes	Site	none	arrow	solid
+edge	OpenApi	DocSet	none	arrow	dotted	api: local spec
+edge	OpenApi	SpecIndex	none	arrow	solid	published per version
+edge	Repo	Changelog	none	arrow	solid
+edge	Repo	DocSet	none	arrow	solid
+edge	Repo	OpenApi	none	arrow	solid
+edge	SpecIndex	Assembler	none	arrow	solid
+edge	SpecIndex	Isolated	none	arrow	solid
+group	Authoring	Authoring (in each repository)	Changelog,DocSet,OpenApi
+group	Build	Build	Assembler,Codex,Isolated
+group	Outputs	Outputs	Links,Notes,Search,Site,SpecIndex
+group	Reference	Reference data (config/)	Catalog
+group	Sources	Sources	Repo
+node	Assembler	Assembler build
+node	Catalog	Products, versioning systems
+node	Changelog	Changelog entries
+node	Codex	Codex build
+node	DocSet	Documentation sets
+node	Isolated	Isolated build
+node	Links	Link graph
+node	Notes	Release note bundles
+node	OpenApi	OpenAPI specs
+node	Repo	Repositories (Git)
+node	Search	Search indices
+node	Site	HTML sites
+node	SpecIndex	OpenAPI repository

@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e45d4b82b3ddccef
+accept	yes
+actor	Service	Service	participant
+message	Service	Service	dashed	filled	Ready
+message	Service	Service	solid	filled	Initialize
+message	Service	Service	solid	filled	Validate config

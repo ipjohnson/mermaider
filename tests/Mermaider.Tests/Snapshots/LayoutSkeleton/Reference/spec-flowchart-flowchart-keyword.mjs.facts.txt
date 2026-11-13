@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 335995dcd12c0045
+accept	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid
+node	A	Input
+node	B	Process
+node	C	Output

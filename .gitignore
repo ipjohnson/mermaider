@@ -1,8 +1,7 @@
 ## Node
 node_modules/
-package-lock.json
 
-## Generated mermaid.js reference SVGs (regenerate with MmdcReferenceTests)
+## Generated mermaid.js reference SVGs (regenerate with `mise run mjs-facts` or MmdcReferenceTests)
 tests/Mermaider.Tests/Snapshots/Reference/
 
 ## Landing page gallery variants (every style x theme), rendered in the docs workflow by scripts/screenshots.cs

@@ -1,0 +1,51 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6f544be817622cab
+accept	yes
+edge	B	Pane	none	arrow	solid
+edge	Bd	Pane	none	arrow	solid
+edge	Chat	T	none	arrow	solid
+edge	D	S	none	arrow	solid
+edge	E	X	none	arrow	solid
+edge	Enq	T	none	arrow	solid
+edge	Intake	T	none	arrow	solid
+edge	Issue	T	none	arrow	solid
+edge	L	Pane	none	arrow	solid
+edge	M	B	none	arrow	solid
+edge	M	Bd	none	arrow	solid
+edge	M	L	none	arrow	solid
+edge	New	T	none	arrow	solid
+edge	P	Inbox	none	arrow	solid	rule asks
+edge	Pool	M	none	arrow	solid
+edge	Q	M	none	arrow	solid
+edge	S	T	none	arrow	solid	add_step
+edge	Sess	M	none	arrow	solid
+edge	Steward	T	none	arrow	solid	add_step
+edge	T	E	none	arrow	solid
+edge	T	M	none	arrow	solid
+edge	T	P	none	arrow	solid
+edge	T	X	none	arrow	solid
+edge	X	D	none	arrow	solid
+edge	You	T	none	arrow	solid	Add step
+node	B	By queue
+node	Bd	Board
+node	Chat	Chat start_session
+node	D	Dispatcher: gates, capacity
+node	E	Queue entry names the Task
+node	Enq	Chat enqueue, Add to queue
+node	Inbox	Sign-off in the inbox
+node	Intake	Queue intake
+node	Issue	Issue with sub-issues
+node	L	List
+node	M	App: WorkModel
+node	New	New in the app
+node	P	Planning policy
+node	Pane	Pane or Page
+node	Pool	GET /api/pool
+node	Q	GET /api/queues
+node	S	Session per item
+node	Sess	GET /api/sessions
+node	Steward	Steward
+node	T	Task with items
+node	X	TaskExecutor offers items
+node	You	You

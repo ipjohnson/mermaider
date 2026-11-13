@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7bbff52b691148bf
+accept	yes
+edge	Cutover	[*]end@root	none	arrow	solid
+edge	NotStarted	ShadowNav	none	arrow	solid	add docset-v2.yml + toc-v2.yml to main
+edge	PhysicalRestructure	Cutover	none	arrow	solid	merge feature branch
+edge	ShadowNav	VirtualRemap	none	arrow	solid	assign new path_prefix in navigation-v2.yml
+edge	VirtualRemap	Cutover	none	arrow	solid	no URL changes needed
+edge	VirtualRemap	PhysicalRestructure	none	arrow	solid	run apply-nav-restructure\n(only if content moves)
+edge	[*]start@root	NotStarted	none	arrow	solid
+node	Cutover	Cutover complete	state
+node	NotStarted	Not started	state
+node	PhysicalRestructure	Physical restructure	state
+node	ShadowNav	Shadow nav created	state
+node	VirtualRemap	Virtual remap active	state
+node	[*]end@root		pseudo
+node	[*]start@root		pseudo

@@ -1,0 +1,38 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4039435d3fe22168
+accept	yes
+edge	[*]start@root	pending	none	arrow	solid
+edge	[*]start@root	proposed	none	arrow	solid
+edge	attention	done	none	arrow	solid	mark done
+edge	attention	pending	none	arrow	solid	retry
+edge	interrupted	attention	none	arrow	solid	driver budget spent
+edge	interrupted	pending	none	arrow	solid	retry due
+edge	paused	pending	none	arrow	solid	resume
+edge	pending	cancelled	none	arrow	solid	cancel
+edge	pending	paused	none	arrow	solid	pause
+edge	pending	running	none	arrow	solid	start
+edge	pending	skipped	none	arrow	solid	skip
+edge	proposed	pending	none	arrow	solid	approve
+edge	proposed	skipped	none	arrow	solid	reject
+edge	review	attention	none	arrow	solid	closed without a merge
+edge	review	done	none	arrow	solid	merged
+edge	review	running	none	arrow	solid	fix round
+edge	running	attention	none	arrow	solid	rounds spent or gave up
+edge	running	done	none	arrow	solid	nothing to publish
+edge	running	interrupted	none	arrow	solid	driver fault
+edge	running	review	none	arrow	solid	pull request open
+edge	running	waiting	none	arrow	solid	asked
+edge	waiting	running	none	arrow	solid	answered
+node	[*]start@root		pseudo
+node	attention	attention	state
+node	cancelled	cancelled	state
+node	done	done	state
+node	interrupted	interrupted	state
+node	paused	paused	state
+node	pending	pending	state
+node	proposed	proposed	state
+node	review	review	state
+node	running	running	state
+node	skipped	skipped	state
+node	waiting	waiting	state

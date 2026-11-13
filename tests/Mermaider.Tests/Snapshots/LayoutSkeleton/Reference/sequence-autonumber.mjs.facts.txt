@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2130e6a2affc37bc
+accept	yes
+actor	API	API	participant
+actor	Client	Client	participant
+actor	DB	DB	participant
+message	API	Client	dashed	filled	200 OK
+message	API	Client	dashed	filled	Auth token
+message	API	DB	solid	filled	Fetch profile
+message	API	DB	solid	filled	Verify user
+message	Client	API	solid	filled	GET /profile
+message	Client	API	solid	filled	Login request
+message	DB	API	dashed	filled	Profile data
+message	DB	API	dashed	filled	User found

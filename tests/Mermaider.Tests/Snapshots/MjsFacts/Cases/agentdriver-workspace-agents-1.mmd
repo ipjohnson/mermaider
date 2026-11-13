@@ -1,0 +1,12 @@
+flowchart LR
+  P[Pollers and external inputs] --> O[Accepted observations and facts]
+  O --> E[Durable events]
+  E --> L[Existing ledger transitions]
+  E --> I[Agent inboxes]
+  I --> A[Activation intents]
+  A --> S[Existing scheduler and dispatcher]
+  L --> S
+  S --> R[Agent session or bounded script]
+  R --> C[Authorized driver commands]
+  C --> L
+  C --> X[Existing durable effect outbox]

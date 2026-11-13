@@ -1,0 +1,26 @@
+sequenceDiagram
+  autonumber
+  participant G as GitHub
+  participant W as GitHubWatcher
+  participant L as Ledger
+  participant E as EffectRunner
+  participant R as SessionRunner
+  W->>G: GET the pull request, If-None-Match from refs
+  G-->>W: mergeable_state dirty
+  W->>L: pr-conflict(item, head)
+  L-->>L: review to running, rounds unchanged for the first conflict, effect handover(fix)
+  L->>E: effects
+  E->>R: prepare the worktree on the branch, launch the fix session
+  R-->>G: git push, through PushGate
+  R->>L: exited(done, commits, pull request)
+  L-->>L: running to review, effect schedule(poll)
+  W->>G: GET the pull request and its check runs
+  G-->>W: mergeable clean, checks success
+  W->>L: pr-mergeable, checks-passed
+  L-->>L: review stays, and under merge ready the merger may act
+  L->>E: effects [github(merge, head sha)]
+  E->>G: PUT merge
+  W->>G: GET the pull request
+  G-->>W: merged
+  W->>L: pr-merged
+  L-->>L: review to done, effects [settle, snapshot, remove-worktree, archive timer]

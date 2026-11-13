@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0a6808a279b1fb38
+accept	yes
+annotation	Color	«enumeration»
+annotation	Drawable	«interface»
+annotation	EventBus	«service»
+annotation	Shape	«abstract»
+attribute	Color	BLUE
+attribute	Color	GREEN
+attribute	Color	RED
+class	Circle	Circle
+class	Color	Color
+class	Drawable	Drawable
+class	EventBus	EventBus
+class	Shape	Shape
+method	Drawable	+draw() : void
+method	EventBus	+publish(event) : void
+method	Shape	+area() : double
+relation	Drawable	Circle	triangle	none	dashed
+relation	Shape	Circle	triangle	none	solid

@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4e0f7a76cc281f32
+accept	yes
+actor	A	Service A	participant
+actor	B	Service B	participant
+actor	C	Service C	participant
+message	A	B	solid	filled-both	Bidirectional sync
+message	A	C	dashed	filled-both	Dashed bidirectional
+message	B	C	solid	filled	Normal one-way
+message	C	B	dashed	filled	Dashed one-way

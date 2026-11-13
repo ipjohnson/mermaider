@@ -1,0 +1,16 @@
+flowchart LR
+  subgraph Mac
+    serve["serve: Dispatcher, inbox, CollisionMonitor"]
+    ssh["ssh: one ControlMaster per runner"]
+    home["driver home: sessions, repos, the clone"]
+  end
+  subgraph Runner["Runner container"]
+    daemon["agent-driver runner: parent of claude, mDNS"]
+    sshd["sshd :7472, only serve's key"]
+    claude["claude -p, as agent"]
+    rhome["runner home: session copies, repos, ~/.claude login"]
+  end
+  daemon -.->|"mDNS: _agent-driver._tcp, one subnet"| serve
+  ssh ==>|"one SSH connection: control, git, reverse forward"| sshd
+  serve -->|"push and API calls, with your token"| github["github.com"]
+  claude -->|"the runner's own login"| anthropic["Anthropic"]

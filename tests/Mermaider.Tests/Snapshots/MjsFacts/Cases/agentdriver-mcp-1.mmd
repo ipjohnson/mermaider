@@ -1,0 +1,18 @@
+flowchart LR
+  subgraph serve
+    library["McpLibrary: mcp/ in the driver home"]
+    resolver["McpResolver: session, Task, workspace and profile"]
+    relay["McpRelay: remote servers and servers with secrets"]
+  end
+  subgraph Session["A session on the Mac"]
+    claude["claude -p --strict-mcp-config"]
+    proxy["agent-driver mcp-proxy server"]
+    srt["srt: sandbox-exec, or bubblewrap on Linux"]
+    local["the server, from its pinned files"]
+  end
+  resolver -->|"mcp.json and settings at launch, control requests while it runs"| claude
+  claude -->|"stdio"| proxy
+  proxy --> srt --> local
+  proxy -->|"serve.sock"| relay
+  relay -->|"with the token"| remote["a remote server"]
+  claude -->|"your claude.ai login"| connector["a claude.ai connector"]

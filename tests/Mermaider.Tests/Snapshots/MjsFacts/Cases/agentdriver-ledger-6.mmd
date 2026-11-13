@@ -1,0 +1,19 @@
+sequenceDiagram
+  autonumber
+  participant V as ServeVerb
+  participant L as Ledger
+  participant R as SessionRunner
+  participant C as claude
+  Note over V,C: serve stops while X prepares, Y runs here, and Z runs on a runner
+  V->>L: serve-stopping
+  L-->>L: stopping is set, and start is a no-op from here
+  V->>R: cut the deadlines, kill the local processes, wait 10 s
+  R--xC: kill Y
+  R->>L: prepare-failed(X, serve stopping), exited(Y, killed)
+  Note over L: X and Y stay running in the ledger, and Z keeps running on its runner
+  Note over V,C: serve starts
+  V->>L: replay the unfinished effects
+  V->>L: serve-started to every item that has not ended
+  L-->>L: X and Y go to interrupted with retry now, and Z stays running with effect adopt
+  L->>R: prepare(X) afresh, launch(Y, resume), adopt(Z)
+  R->>C: claude --resume for Y, claude -p for X

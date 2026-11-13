@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e4fe08ba677e3b69
+accept	yes
+edge	[*]start@root	isPositive	none	arrow	solid
+edge	isPositive	Negative	none	arrow	solid	if n < 0
+edge	isPositive	Positive	none	arrow	solid	if n > 0
+node	Negative	Negative	state
+node	Positive	Positive	state
+node	[*]start@root		pseudo
+node	isPositive		choice

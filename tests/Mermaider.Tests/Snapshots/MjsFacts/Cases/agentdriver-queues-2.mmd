@@ -1,0 +1,11 @@
+flowchart TD
+  start["A slot frees, or work arrives"] --> full{"Is the pool full?"}
+  full -- yes --> none["Nothing starts this pass"]
+  full -- no --> ready["Find the ready entries<br/>dependencies done, the queue gives a turn"]
+  ready --> gates["Ask every gate that applies"]
+  gates -- hold --> held["Held entries wait<br/>with the gate's name and reason"]
+  gates -- allowed --> fg{"Can a foreground entry start?"}
+  fg -- yes --> sfg["Start a foreground entry from the source<br/>with the lowest slot-minutes / weight"]
+  fg -- no --> bg{"Can a background entry start?"}
+  bg -- yes --> sbg["Start a background entry<br/>by the same rule among background queues"]
+  bg -- no --> free["The slot stays free"]

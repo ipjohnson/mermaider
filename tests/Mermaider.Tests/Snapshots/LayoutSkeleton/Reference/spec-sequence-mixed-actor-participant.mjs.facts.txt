@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2846f1c8cfe778c6
+accept	yes
+actor	API	API	participant
+actor	DB	DB	participant
+actor	User	User	actor
+message	API	DB	solid	filled	SELECT *
+message	API	User	dashed	filled	200 OK
+message	DB	API	dashed	filled	rows
+message	User	API	solid	filled	GET /data

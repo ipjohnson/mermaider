@@ -1,0 +1,34 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b27d981c9dfb12a3
+accept	yes
+edge	Bundles	Content	none	arrow	solid	release_notes
+edge	Checkout	DocSet	none	arrow	solid
+edge	Content	Nav	none	arrow	solid
+edge	DocSet	Content	none	arrow	solid
+edge	DocSet	Redirects	none	arrow	solid
+edge	DocSet	Toc	none	arrow	solid
+edge	LinkReg	Content	none	arrow	solid	cross_links
+edge	Manifest	LinkReg	none	arrow	solid	published on push
+edge	Nav	Html	none	arrow	solid
+edge	Nav	Manifest	none	arrow	solid
+edge	OpenApiRepo	Content	none	arrow	solid	api
+edge	Toc	Nav	none	arrow	solid
+edge	Vocab	DocSet	none	arrow	solid
+group	Build	Isolated build	Content,DocSet,Nav,Toc
+group	External	Read from outside, never checked out	Bundles,LinkReg,OpenApiRepo
+group	Inputs	Inputs	Checkout,Vocab
+group	Outputs	Outputs	Html,Manifest,Redirects,State
+node	Bundles	Release note bundles (CDN)
+node	Checkout	Checkout (one repository, one branch)
+node	Content	Content: pages, snippets, images
+node	DocSet	Documentation set (docset.yml)
+node	Html	HTML, llms.txt, Pagefind
+node	LinkReg	Link registry
+node	Manifest	Link manifest (links.json)
+node	Nav	Navigation tree
+node	OpenApiRepo	OpenAPI repository
+node	Redirects	redirects.json
+node	State	Generation state (.doc.state)
+node	Toc	Table of contents
+node	Vocab	Shared vocabulary (config/)

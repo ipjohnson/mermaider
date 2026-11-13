@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f7a37dab13c08f91
+accept	yes
+attribute	MyService	#bool protectedField
+attribute	MyService	+String publicField
+attribute	MyService	-int privateField
+attribute	MyService	~float packageField
+class	MyService	MyService
+method	MyService	#reset() : void
+method	MyService	+getStatus() : String
+method	MyService	-validate() : bool
+method	MyService	~notify() : void

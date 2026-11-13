@@ -1,0 +1,14 @@
+classDiagram
+direction LR
+namespace Execution {
+class LaunchPoint
+class Policy {
++bool Allowed
+}
+}
+namespace Containers {
+class DockerEngine
+}
+LaunchPoint --> DockerEngine : launches
+DockerEngine --> Policy : reads
+note for Policy "Restrictions"

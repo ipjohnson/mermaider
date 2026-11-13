@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bf5b1462553d4d0a
+accept	yes
+actor	API	API	participant
+actor	Auth	Auth	participant
+actor	Client	Client	participant
+actor	DB	DB	participant
+box	External	Client
+box	Internal Services	API,Auth,DB
+message	API	Auth	solid	filled	Validate
+message	API	Client	dashed	filled	Response
+message	API	DB	solid	filled	Query
+message	Auth	API	dashed	filled	OK
+message	Client	API	solid	filled	Request
+message	DB	API	dashed	filled	Data

@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 52c1fe35e1cc1c58
+accept	yes
+edge	disk	uriResolve	none	arrow	solid
+edge	disk	v1Load	none	arrow	solid
+edge	hasV2	loadFallback	none	arrow	solid	No
+edge	hasV2	loadV2	none	arrow	solid	Yes
+edge	loadFallback	v2NodesFallback	none	arrow	solid
+edge	loadV2	v2Nodes	none	arrow	solid
+edge	uriResolve	hasV2	none	arrow	solid
+edge	v1Load	v1Nodes	none	arrow	solid
+node	disk	All repos cloned to disk prior to build
+node	hasV2	docset-v2.yml present?
+node	loadFallback	Use V1 toc nodes as fallback emits migration-progress warning
+node	loadV2	Load toc-v2.yml (required — no fallback to toc.yml)
+node	uriResolve	navigation-v2.yml URI resolved to repo checkout on disk
+node	v1Load	Load docset.yml + toc.yml (every repo)
+node	v1Nodes	V1 TableOfContentNodes
+node	v2Nodes	V2 TableOfContentNodes
+node	v2NodesFallback	V2 TableOfContentNodes (V1 structure)

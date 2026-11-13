@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a059f9e3abf65cce
+accept	yes
+class	Drawable	Drawable
+class	Shape	Shape
+relation	Shape	()Drawable	none	lollipop	solid

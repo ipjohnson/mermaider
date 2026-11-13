@@ -45,6 +45,10 @@ run = [
   "dotnet run --project build/scripts -- validatepackages -s",
 ]
 
+[tasks.mjs-facts]
+description = "Refresh the committed mermaid.js facts from the mermaid version package-lock.json pins (needs Node)"
+run = "scripts/mjs-facts.sh"
+
 [tasks.docs]
 description = "Build the documentation and serve it locally"
 run = "dotnet run --project build/scripts -- docs"

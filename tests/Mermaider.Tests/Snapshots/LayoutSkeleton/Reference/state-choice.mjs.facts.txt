@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 48b724d65c7171fc
+accept	yes
+edge	Evaluate	checkResult	none	arrow	solid
+edge	Negative	Retry	none	arrow	solid
+edge	Neutral	[*]end@root	none	arrow	solid
+edge	Positive	[*]end@root	none	arrow	solid
+edge	Retry	Evaluate	none	arrow	solid
+edge	[*]start@root	Evaluate	none	arrow	solid
+edge	checkResult	Negative	none	arrow	solid	if score < 0
+edge	checkResult	Neutral	none	arrow	solid	if score = 0
+edge	checkResult	Positive	none	arrow	solid	if score > 0
+node	Evaluate	Evaluate	state
+node	Negative	Negative	state
+node	Neutral	Neutral	state
+node	Positive	Positive	state
+node	Retry	Retry	state
+node	[*]end@root		pseudo
+node	[*]start@root		pseudo
+node	checkResult		choice

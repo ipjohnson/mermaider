@@ -1,0 +1,11 @@
+flowchart LR
+  a["Your serve, ledger A<br/>runs the items whose owner is A"]
+  b["A teammate's or a bot's serve, ledger B<br/>runs the items whose owner is B"]
+  r["Room host or parent, ledger R<br/>the Room's record, leases, routing, policy"]
+  g["GitHub<br/>each scheduler uses its own token"]
+  a -- "commands, heartbeat" --> r
+  r -- transitions --> a
+  b -- "commands, heartbeat" --> r
+  r -- transitions --> b
+  a -- "push, pull requests" --> g
+  b -- "push, pull requests" --> g

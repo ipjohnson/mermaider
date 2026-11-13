@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1a93679a0970d0d4
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Carol	Carol	participant
+message	Alice	Bob	solid	filled	Hello
+message	Bob	Carol	solid	cross	Goodbye
+message	Bob	Carol	solid	filled	Hi Carol
+message	Carol	Bob	dashed	filled	Thanks

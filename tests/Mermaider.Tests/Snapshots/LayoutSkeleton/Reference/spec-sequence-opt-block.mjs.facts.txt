@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 80898c455085eed3
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+block	opt	Extra logging
+message	A	B	solid	filled	Request
+message	B	A	dashed	filled	Response
+message	B	B	solid	filled	Write to audit log

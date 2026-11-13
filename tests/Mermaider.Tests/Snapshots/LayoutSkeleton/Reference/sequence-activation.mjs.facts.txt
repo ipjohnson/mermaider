@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5d1d0f1758a955a3
+accept	yes
+actor	Auth	Auth	participant
+actor	Client	Client	participant
+actor	DB	DB	participant
+actor	Server	Server	participant
+message	Auth	Server	dashed	filled	OK
+message	Client	Server	solid	filled	POST /login
+message	DB	Server	dashed	filled	User row
+message	Server	Auth	solid	filled	Validate token
+message	Server	Client	dashed	filled	200 JWT
+message	Server	DB	solid	filled	SELECT user

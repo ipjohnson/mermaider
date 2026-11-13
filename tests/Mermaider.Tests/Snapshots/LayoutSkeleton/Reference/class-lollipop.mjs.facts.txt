@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fc615e2487b1efef
+accept	yes
+annotation	Drawable	«interface»
+annotation	Shape	«interface»
+attribute	Circle	+double radius
+class	Circle	Circle
+class	Drawable	Drawable
+class	Shape	Shape
+method	Circle	+area() : double
+method	Circle	+draw() : void
+method	Drawable	+draw() : void
+method	Shape	+area() : double
+relation	Circle	()Drawable	none	lollipop	solid
+relation	Circle	Shape	none	triangle	dashed

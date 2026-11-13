@@ -1,0 +1,15 @@
+sequenceDiagram
+  participant A as agent on the runner
+  participant R as relay on the runner
+  participant D as agent-driver runner
+  participant S as serve, on the Mac
+  participant G as GitHub
+  A->>R: git push -u origin, after PushGate allowed it
+  R->>D: the pre-receive hook bundles the commits
+  D->>S: push call, on the control channel
+  Note over S: own branch only, unbundle into its clone, value check if a grant is active
+  S->>G: git push, your credentials
+  G-->>S: accepted or refused
+  S-->>D: reply
+  D-->>R: hook exits 0 or 1
+  R-->>A: GitHub's answer

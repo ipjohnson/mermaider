@@ -1,0 +1,10 @@
+flowchart LR
+  events["Events<br/>sessions, the clock, pull requests, you"] --> code["Code: rules and dispatcher<br/>park, resume, retry, skip, hold<br/>writes events.ndjson"]
+  code -- "needs judgment" --> steward["Steward<br/>a Claude wake per event<br/>reads, decides, ends"]
+  inputs["Each wake reads the queue brief,<br/>the charter, its journal, the decision log"] --> steward
+  steward -- "tool calls" --> policy["Policy gate<br/>checks the autonomy level<br/>logs to steward.ndjson"]
+  policy -- allowed --> tools["Queue tools<br/>reorder, retry, answer, propose a gate"]
+  tools -- "changes the queue" --> code
+  policy -- "outside its level" --> suggestion["Suggestion<br/>waits in your inbox"]
+  suggestion --> you["You<br/>answer, approve, undo"]
+  you -- "your input" --> events

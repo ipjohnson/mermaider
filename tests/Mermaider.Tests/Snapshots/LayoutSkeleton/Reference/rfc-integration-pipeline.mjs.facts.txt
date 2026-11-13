@@ -1,0 +1,35 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source acbc362123b3c020
+accept	yes
+edge	assemblerYml	outputLayer	none	arrow	solid	nav-v2 flag
+edge	contentProc	outputLayer	none	arrow	solid
+edge	dualVal	contentProc	none	arrow	solid	both pass
+edge	fileLookup	contentProc	none	arrow	solid
+edge	navAssembly	dualVal	none	arrow	solid
+edge	navAssembly	fileLookup	none	arrow	solid
+edge	navV2Yml	navAssembly	none	arrow	solid
+edge	navYml	navAssembly	none	arrow	solid
+edge	repoCheckouts	contentProc	none	arrow	solid	.md source files
+edge	repoCheckouts	navAssembly	none	arrow	solid
+group	contentProc	Content Processing — per file	images,includes,relLinks,xlinks
+group	dualVal	Dual Validation — both must pass	valV1,valV2
+group	inputs	Inputs	assemblerYml,navV2Yml,navYml,repoCheckouts
+group	navAssembly	Navigation Assembly	fileLookup,v1Nav,v2Nav
+group	outputLayer	Output	outputFiles,pathProvider,sidebarHtml
+node	assemblerYml	assembler.yml env config · feature flags
+node	fileLookup	NavigationDocumentationFileLookup file path → output URL
+node	images	Images validate source-side copy via path provider
+node	includes	Include directives 100% source-based unaffected by path changes
+node	navV2Yml	navigation-v2.yml
+node	navYml	navigation.yml
+node	outputFiles	Output files written at V1 or V2 paths
+node	pathProvider	GlobalNavigationPathProvider flag-injected: V1 or V2 mappings
+node	relLinks	Relative links validate source-side emit URL from nav lookup
+node	repoCheckouts	Repo checkouts docset.yml / docset-v2.yml toc.yml / toc-v2.yml content .md files
+node	sidebarHtml	Sidebar HTML V1 or V2 tree per flag
+node	v1Nav	V1 SiteNavigation + V1 NavigationTocMappings
+node	v2Nav	V2 SiteNavigationV2 + V2 NavigationTocMappings
+node	valV1	V1 path prefixes · completeness · links
+node	valV2	V2 path prefixes · completeness cross-nav aliasing · migration warnings
+node	xlinks	Cross-links repo://path resolved via NavigationTocMappings → V1 or V2 output URL

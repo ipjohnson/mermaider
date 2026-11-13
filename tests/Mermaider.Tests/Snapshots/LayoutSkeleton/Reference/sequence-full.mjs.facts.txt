@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b0593c30fe56f535
+accept	yes
+actor	B	Backend	participant
+actor	DB	Database	participant
+actor	F	Frontend	participant
+actor	U	User	actor
+block	alt	Valid
+block	loop	Every 30s
+divider	Invalid
+message	B	DB	solid	filled	SELECT user
+message	B	F	dashed	filled	200 JWT
+message	B	F	dashed	filled	401 Unauthorized
+message	B	F	dashed	filled	Done
+message	B	F	dashed	filled	OK
+message	DB	B	dashed	filled	Row
+message	F	B	solid	filled	Heartbeat
+message	F	B	solid	filled	POST /auth
+message	F	U	dashed	filled	Show dashboard
+message	U	F	solid	filled	Click login
+note	over	F,B	Session established
+note	right	B	Hash & verify

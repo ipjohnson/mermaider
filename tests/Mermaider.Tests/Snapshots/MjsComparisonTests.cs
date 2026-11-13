@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using AwesomeAssertions;
 using System.Text.RegularExpressions;
 using Mermaider.Examples;
 
@@ -10,8 +11,8 @@ namespace Mermaider.Tests.Snapshots;
 // Two ways to use this class:
 //   1. Run the full suite normally — Summary() prints a quality table to test output whenever
 //      reference SVGs exist at Tests/Snapshots/Reference/mermaidjs/{slug}.svg.
-//   2. Generate references first (once, requires local mmdc):
-//        dotnet run --project tests/Mermaider.Tests -- --treenode-filter "*MmdcReferenceTests*"
+//   2. Generate references first (requires Node): `mise run mjs-facts` writes them for the flowchart, state, class and
+//      sequence examples; MmdcReferenceTests writes them for every example, slowly.
 //      Then re-run normally to see the table.
 public partial class MjsComparisonTests
 {
@@ -24,7 +25,13 @@ public partial class MjsComparisonTests
 
 	private static readonly string ReferenceDir = Path.Combine(GetSourceDirectory(), "Reference", "mermaidjs");
 
-	private static readonly string SnapshotDir = GetSourceDirectory();
+	private static readonly string SnapshotDir = Path.Combine(GetSourceDirectory(), "..", ".snapshots", "Snapshots", "GallerySnapshotTests");
+
+	// Nullean.Snapshots names a gallery snapshot Gallery.<slug>.<hash>.verified.svg; null when there is none.
+	private static string? VerifiedSnapshot(string slug) =>
+		Directory.Exists(SnapshotDir)
+			? Directory.EnumerateFiles(SnapshotDir, $"Gallery.{slug}.*.verified.svg").FirstOrDefault(f => Path.GetFileName(f).Count(c => c == '.') == 4)
+			: null;
 
 	[Test]
 	[Skip("Individual slug comparisons — run Summary() for the full table")]
@@ -32,9 +39,9 @@ public partial class MjsComparisonTests
 	public void Compare(string slug)
 	{
 		var refPath = Path.Combine(ReferenceDir, $"{slug}.svg");
-		var verPath = Path.Combine(SnapshotDir, $"GallerySnapshotTests.Gallery_example={slug}.verified.svg");
+		var verPath = VerifiedSnapshot(slug);
 
-		if (!File.Exists(verPath))
+		if (verPath is null)
 		{
 			Console.WriteLine($"| {slug} | (no verified snapshot) | ? | — | — |");
 			return;
@@ -74,8 +81,8 @@ public partial class MjsComparisonTests
 		foreach (var slug in slugs)
 		{
 			var refPath = Path.Combine(ReferenceDir, $"{slug}.svg");
-			var verPath = Path.Combine(SnapshotDir, $"GallerySnapshotTests.Gallery_example={slug}.verified.svg");
-			if (!File.Exists(verPath))
+			var verPath = VerifiedSnapshot(slug);
+			if (verPath is null)
 				continue;
 			var mjs = ExtractViewBox(File.ReadAllText(refPath));
 			var mer = ExtractViewBox(File.ReadAllText(verPath));
@@ -108,6 +115,10 @@ public partial class MjsComparisonTests
 		Console.WriteLine($"Quality report written to {reportPath}");
 		Console.WriteLine($"✅ {excellent}  ⚠️ {good}  ❌ {poor}  (of {rows.Count})");
 	}
+
+	[Test]
+	public void Every_gallery_example_has_a_verified_snapshot() =>
+		DiagramExamples.All.Where(e => VerifiedSnapshot(e.Slug) is null).Select(e => e.Slug).Should().BeEmpty();
 
 	public static IEnumerable<string> SlugsWithReferences()
 	{

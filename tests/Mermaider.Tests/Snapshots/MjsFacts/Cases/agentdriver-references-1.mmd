@@ -1,0 +1,9 @@
+flowchart LR
+  typed["Input: a URL, owner/repo#N, repo#N or #N"] --> parser[RefParser]
+  body["A document: an issue or pull request body"] --> parser
+  parser --> resolver["RefResolver: the call's repository, the chat's, the workspace's"]
+  resolver --> id["RefId: repository, kind, key"]
+  id --> stored["Stored: canonical text, or a number beside its repository"]
+  id --> agent["To an agent: owner/repo#N and its URL"]
+  id --> host["To GitHub: #N, owner/repo#N or a URL, by the document's repository"]
+  id --> app["In the app: refLabel by the screen's scope"]

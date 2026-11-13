@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0977316da5c45d0f
+accept	yes
+edge	Active	Done	none	arrow	solid	finish
+edge	Active	Paused	none	arrow	solid	pause
+edge	Done	[*]end@root	none	arrow	solid
+edge	Paused	Active	none	arrow	solid	resume
+edge	[*]start@root	Active	none	arrow	solid
+node	Active	Active	state
+node	Done	Done	state
+node	Paused	Paused	state
+node	[*]end@root		pseudo
+node	[*]start@root		pseudo
+note	Active	This is the main working state
+note	Paused	Temporarily suspended

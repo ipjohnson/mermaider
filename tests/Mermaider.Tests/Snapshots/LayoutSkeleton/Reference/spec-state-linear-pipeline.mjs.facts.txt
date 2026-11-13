@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 45c303bd49d1849e
+accept	yes
+edge	Enriched	Stored	none	arrow	solid	persist
+edge	Published	[*]end@root	none	arrow	solid
+edge	Received	Validated	none	arrow	solid	validate
+edge	Stored	Published	none	arrow	solid	notify
+edge	Validated	Enriched	none	arrow	solid	enrich
+edge	[*]start@root	Received	none	arrow	solid
+node	Enriched	Enriched	state
+node	Published	Published	state
+node	Received	Received	state
+node	Stored	Stored	state
+node	Validated	Validated	state
+node	[*]end@root		pseudo
+node	[*]start@root		pseudo

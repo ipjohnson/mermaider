@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8fab50cd93e81a67
+accept	yes
+class	ArrayList	ArrayList
+class	Duck	Duck
+class	List	List<T>
+method	List	+add(T item)
+relation	Duck	List	none	arrow	dashed
+relation	List	ArrayList	triangle	none	solid

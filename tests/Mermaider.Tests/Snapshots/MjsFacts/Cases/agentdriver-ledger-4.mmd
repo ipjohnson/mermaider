@@ -1,0 +1,14 @@
+erDiagram
+  QUEUES ||--o{ ENTRIES : orders
+  TASKS ||--o| ENTRIES : "placed by"
+  TASKS ||--|{ ITEMS : has
+  ITEMS |o--o{ ITEMS : "parent of"
+  ITEMS ||--o{ ITEM_DEPS : "waits on"
+  ITEMS ||--o{ SESSIONS : attempts
+  ITEMS ||--o{ TRANSITIONS : logs
+  TRANSITIONS ||--o{ EFFECTS : asks
+  COMMANDS ||--o| TRANSITIONS : produced
+  ITEMS ||--o{ INBOX : "asks you"
+  ITEMS ||--o{ ATTACHMENTS : carries
+  REFS ||--o{ ITEM_DEPS : meets
+  PEERS ||--o{ ITEMS : "owns under a lease"

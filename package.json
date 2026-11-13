@@ -1,11 +1,19 @@
 {
   "name": "mermaider",
   "version": "1.0.0",
+  "private": true,
   "description": "mermaid.js tooling for Mermaider development",
+  "type": "module",
   "scripts": {
-    "mmdc": "mmdc"
+    "mmdc": "mmdc",
+    "mjs-facts": "node scripts/mjs-facts.mjs"
   },
   "devDependencies": {
-    "@mermaid-js/mermaid-cli": "^12.0.0"
+    "@mermaid-js/mermaid-cli": "12.2.0",
+    "mermaid": "12.3.0",
+    "puppeteer": "25.17.0"
+  },
+  "overrides": {
+    "mermaid": "$mermaid"
   }
 }

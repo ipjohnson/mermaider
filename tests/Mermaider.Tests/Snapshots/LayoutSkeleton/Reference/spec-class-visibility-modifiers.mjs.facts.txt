@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 787370c310dab288
+accept	yes
+attribute	Account	#double protectedField
+attribute	Account	+String publicField
+attribute	Account	-int privateField
+attribute	Account	~bool packageField
+class	Account	Account
+method	Account	#reset() : void
+method	Account	+getBalance() : double
+method	Account	-validate() : bool
+method	Account	~internal() : void

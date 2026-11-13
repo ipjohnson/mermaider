@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d11f2e3e13066324
+accept	yes
+class	Repository	Repository<T>
+class	UserRepository	UserRepository
+relation	Repository	UserRepository	triangle	none	solid

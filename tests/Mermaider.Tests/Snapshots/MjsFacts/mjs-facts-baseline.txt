@@ -1,0 +1,65 @@
+# Accepted differences between Mermaider and mermaid.js, as MjsFactsTests reports them. A "# reason" line explains the
+# entries below it, up to the next blank line. "-" is a fact only mermaid.js has, "+" one only Mermaider has. A new
+# difference fails the test, and so does a listed one that no longer occurs. Write a current list with
+# MJS_FACTS_REPORT=<dir> and the MjsFactsTests/Write_difference_report test.
+
+# By design: Mermaider reads a literal \n in a label as a line break. mermaid.js 12 draws the two characters.
+rfc-path-flow + node | perRepo | Per-repo docset.yml + toc.yml
+rfc-path-flow - node | perRepo | Per-repo\ndocset.yml + toc.yml
+rfc-migration-lifecycle + edge | VirtualRemap | PhysicalRestructure | none | arrow | solid | run apply-nav-restructure (only if content moves)
+rfc-migration-lifecycle - edge | VirtualRemap | PhysicalRestructure | none | arrow | solid | run apply-nav-restructure\n(only if content moves)
+
+# Step mjs-found-divergences: a flowchart node labelled after its first bare reference keeps its id as the label.
+agentdriver-queues-1 + node | bg | bg
+agentdriver-queues-1 + node | d | d
+agentdriver-queues-1 + node | fg | fg
+agentdriver-queues-1 - node | bg | 4. Background queues spare slots only
+agentdriver-queues-1 - node | d | Dispatcher one lock, one pass writes pool.ndjson
+agentdriver-queues-1 - node | fg | 3. Foreground queues and Tasks, shared by weight
+agentdriver-work-1 + node | T | T
+agentdriver-work-1 - node | T | Task with items
+
+# Step mjs-found-divergences: critical/option is parsed as an opt block labelled "ion ...".
+spec-sequence-critical-block + block | opt | ion Network timeout
+spec-sequence-critical-block - block | critical | Establish connection
+spec-sequence-critical-block - divider | Network timeout
+
+# Step mjs-found-divergences: a "State : description" line is not drawn; mermaid.js 12 draws it as the state's label.
+spec-state-state-descriptions + node | Booting | Booting | state
+spec-state-state-descriptions + node | Processing | Processing | state
+spec-state-state-descriptions + node | Ready | Ready | state
+spec-state-state-descriptions - node | Booting | System is starting up | state
+spec-state-state-descriptions - node | Processing | Handling request | state
+spec-state-state-descriptions - node | Ready | Accepting connections | state
+
+# Step mjs-found-divergences: class member types draw ~T~ generics raw instead of <T>.
+spec-class-generics + method | Repository | +findAll() : List~T~
+spec-class-generics - method | Repository | +findAll() : List<T>
+
+# ipjohnson/AgentDriver#4281: class display labels, two-ended relations and reversed lollipops.
+cs-display-label + class | Animal | Animal
+cs-display-label - class | Animal | Living creature
+cs-lollipop-from + relation | Interface | ()Implementation | none | lollipop | solid
+cs-lollipop-from - relation | ()Interface | Implementation | lollipop | none | solid
+cs-two-ended - relation | A | B | triangle | triangle | solid
+
+# ipjohnson/AgentDriver#4282: class namespaces. mermaid.js 12 nests namespaces (One.Two) and moves a class declared
+# in two namespaces to the last one; Mermaider flattens nesting and keeps the first.
+cs-nested-namespace + namespace | Two | A
+cs-nested-namespace - namespace | One | One.Two
+cs-nested-namespace - namespace | One.Two | A
+cs-namespace-duplicate + namespace | One | A
+cs-namespace-duplicate - namespace | One
+
+# ipjohnson/AgentDriver#4283: a flowchart click statement is drawn as a node.
+rs-click + node | click | click
+
+# ipjohnson/AgentDriver#4284: Mermaider renders a source mermaid.js refuses, dropping the lines it cannot read.
+cs-nested-generics + accept | yes
+cs-nested-generics - accept | no
+cs-unclosed-class + accept | yes
+cs-unclosed-class - accept | no
+rs-garbage-line + accept | yes
+rs-garbage-line - accept | no
+rs-unclosed-label + accept | yes
+rs-unclosed-label - accept | no

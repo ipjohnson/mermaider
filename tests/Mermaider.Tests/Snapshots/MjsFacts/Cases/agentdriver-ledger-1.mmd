@@ -1,0 +1,23 @@
+flowchart TB
+  you["You<br/>app, API, MCP tools"]
+  runner["SessionRunner<br/>exit, question, output, lost"]
+  clock["Clock<br/>retry due, park due, time limit"]
+  watcher["GitHub watcher<br/>issues, pull requests, checks"]
+  peer["Peer link<br/>parent or Room, later"]
+  scheduler["Scheduler loop<br/>settle, select, launch, supervise"]
+  ledger["Ledger, the only writer<br/>WorkMachine.Next and Policy"]
+  db[("driver.db<br/>SQLite, WAL, synchronous=FULL")]
+  effects["EffectRunner<br/>runs the committed effects"]
+  targets["SessionRunner, git, GitHub, inbox"]
+  readers["Readers<br/>API, app, hooks"]
+  you --> ledger
+  runner --> ledger
+  clock --> ledger
+  watcher --> ledger
+  peer -.-> ledger
+  scheduler -- start --> ledger
+  ledger -- commit --> db
+  db -. ready items, live sessions .-> scheduler
+  db -. committed effects .-> effects
+  effects --> targets
+  db -.-> readers
