@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 58d05b223eab0fcc
+accept	yes
+drawn	yes
+label	Apr 2022
+label	Apr 2024
+label	Date
+label	Feb 2023
+label	Jul 2023
+label	Parameters (B)
+label	Sep 2023
+label	Smallest AI models scoring above 60% on MMLU
+series	line	540,65,34,7,3.8
+title	Smallest AI models scoring above 60% on MMLU
+x-axis	Date	Apr 2022,Feb 2023,Jul 2023,Sep 2023,Apr 2024
+y-axis	Parameters (B)

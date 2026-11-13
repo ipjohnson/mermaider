@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2134589c75e25712
+accept	yes
+drawn	yes
+flow	Bio-conversion	Gas	81.144
+flow	Bio-conversion	Losses	26.862
+flow	Bio-conversion	Solid	280.322
+label	Bio-conversion
+label	Gas
+label	Losses
+label	Solid

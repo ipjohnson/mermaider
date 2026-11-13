@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1d23e1ff0c7afdda
+accept	yes
+drawn	yes
+icon	my-project / src / App.tsx	logos:react
+label	.env
+label	App.tsx
+label	Dockerfile
+label	entry point
+label	environment variables
+label	index.js
+label	main component
+label	my-project
+label	package.json
+label	src
+node	my-project	dir
+node	my-project / .env	file	environment variables
+node	my-project / Dockerfile	file
+node	my-project / package.json	file
+node	my-project / src	dir
+node	my-project / src / App.tsx	file	main component
+node	my-project / src / index.js	file	entry point

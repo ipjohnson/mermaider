@@ -12,7 +12,8 @@ namespace Mermaider.Tests.Snapshots.MjsFacts;
 /// (ids, group members, shapes, icons, edge ends, markers, line styles, class members, cardinalities, chart data) comes
 /// from the model. For flowchart, state, class and sequence diagrams, label text comes from the SVG's
 /// <c>&lt;text&gt;</c> where an element can be found by its <c>data-*</c> attributes, so a label the renderer draws
-/// differently from the model is caught too; the other types list every drawn text as <c>text</c> facts. Every type gets
+/// differently from the model is caught too. The other types write a <c>label</c> fact for each label of their model the
+/// SVG shows (see <see cref="Labels"/>). Every type gets
 /// <c>drawn</c> from the SVG. Each method mirrors the extractor of the same type in scripts/mjs-facts.mjs.
 /// </summary>
 internal static partial class MermaiderFacts

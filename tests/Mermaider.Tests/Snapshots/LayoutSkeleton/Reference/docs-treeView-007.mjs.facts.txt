@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 713fb18511ddb1cc
+accept	yes
+drawn	yes
+label	App.tsx
+label	Dockerfile
+label	README.md
+label	notes.txt
+label	src
+label	utils.ts
+node	Dockerfile	file
+node	README.md	file
+node	notes.txt	file
+node	src	dir
+node	src / App.tsx	file
+node	src / utils.ts	file

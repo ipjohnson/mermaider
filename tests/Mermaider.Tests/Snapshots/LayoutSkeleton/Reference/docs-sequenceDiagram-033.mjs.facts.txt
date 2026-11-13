@@ -1,0 +1,28 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5556fca9fd13c9cf
+accept	yes
+actor	Alice	Alice	participant
+actor	John	John	participant
+bbox	label	Did you want to go to the game tonight?	93.6	377.1	376.4	394.5
+bbox	label	Hello John, how are you?	144.7	161.1	325.3	178.5
+bbox	label	Hi Alice, I can hear you!	157	269.1	325	286.5
+bbox	label	I feel great!	201	323.1	281	340.5
+bbox	label	John, can you hear me?	149.2	225.1	320.8	242.5
+bbox	label	Yeah! See you there.	166.6	421.1	315.4	438.5
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	464	150	537
+bbox	node	John	329	0	479	73
+bbox	node	John	329	464	479	537
+bbox	note	Alice calls John.	100	103	250	140
+block	rect
+block	rect
+canvas	-50	-10	529	578
+drawn	yes
+message	Alice	John	solid	filled	Did you want to go to the game tonight?
+message	Alice	John	solid	filled	Hello John, how are you?
+message	Alice	John	solid	filled	John, can you hear me?
+message	John	Alice	dashed	filled	Hi Alice, I can hear you!
+message	John	Alice	dashed	filled	I feel great!
+message	John	Alice	dashed	filled	Yeah! See you there.
+note	right	Alice	Alice calls John.

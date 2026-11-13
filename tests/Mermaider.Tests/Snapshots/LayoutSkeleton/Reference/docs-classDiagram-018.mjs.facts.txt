@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 570ea6adde22d184
+accept	yes
+attribute	Rectangle	double height
+attribute	Rectangle	double width
+bbox	group	BaseShapes	12	12	329.2	219
+bbox	node	Rectangle	163.7	60	305.2	195
+bbox	node	Triangle	36	87	113.7	168
+canvas	4	4	337.2	227
+class	Rectangle	Rectangle
+class	Triangle	Triangle
+drawn	yes
+namespace	BaseShapes	Rectangle,Triangle

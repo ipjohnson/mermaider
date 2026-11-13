@@ -1,0 +1,33 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5f697bdc17bc182b
+accept	yes
+boundary	b	container	API Application
+drawn	yes
+element	c1	container	internal	Single-Page Application	JavaScript and Angular	Provides all of the Internet banking functionality to customers via their web browser.
+element	c2	component	internal	Sign In Controller	Spring MVC Rest Controller	Allows users to sign in to the Internet Banking System.	b
+element	c3	component	internal	Security Component	Spring Bean	Provides functionality Related to signing in, changing passwords, etc.	b
+element	c4	container_db	internal	Database	Relational Database Schema	Stores user registration information, hashed authentication credentials, access logs, etc.
+label	API Application
+label	Allows users to sign in to the Internet Banking System.
+label	Calls isAuthenticated() on
+label	Database
+label	Dynamic diagram for Internet Banking System - API Application
+label	JDBC
+label	JSON/HTTPS
+label	JavaScript and Angular
+label	Provides all of the Internet banking functionality to customers via their web browser.
+label	Provides functionality Related to signing in, changing passwords, etc.
+label	Relational Database Schema
+label	Security Component
+label	Sign In Controller
+label	Single-Page Application
+label	Spring Bean
+label	Spring MVC Rest Controller
+label	Stores user registration information, hashed authentication credentials, access logs, etc.
+label	Submits credentials to
+label	select * from users where username = ?
+rel	c1	c2	one	Submits credentials to	JSON/HTTPS
+rel	c2	c3	one	Calls isAuthenticated() on
+rel	c3	c4	one	select * from users where username = ?	JDBC
+title	Dynamic diagram for Internet Banking System - API Application

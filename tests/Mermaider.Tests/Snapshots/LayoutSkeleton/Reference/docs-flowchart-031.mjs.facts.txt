@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6f8583b8b0e2f07e
+accept	yes
+drawn	yes
+node	A	Prepare conditional	hex

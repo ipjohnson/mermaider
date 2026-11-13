@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 523985f9a7ca3ab9
+accept	yes
+drawn	yes
+event	Industry 1.0	Machinery, Water power, Steam power
+event	Industry 2.0	Electricity, Internal combustion engine, Mass production
+event	Industry 3.0	Electronics, Computers, Automation
+event	Industry 4.0	Internet, Robotics, Internet of Things
+event	Industry 5.0	Artificial intelligence, Big data, 3D printing
+label	17th-20th century
+label	21st century
+label	Artificial intelligence, Big data, 3D printing
+label	Electricity, Internal combustion engine, Mass production
+label	Electronics, Computers, Automation
+label	Industry 1.0
+label	Industry 2.0
+label	Industry 3.0
+label	Industry 4.0
+label	Industry 5.0
+label	Internet, Robotics, Internet of Things
+label	Machinery, Water power, Steam power
+label	Timeline of Industrial Revolution
+period	17th-20th century	Industry 1.0
+period	17th-20th century	Industry 2.0
+period	17th-20th century	Industry 3.0
+period	21st century	Industry 4.0
+period	21st century	Industry 5.0
+section	17th-20th century
+section	21st century
+title	Timeline of Industrial Revolution

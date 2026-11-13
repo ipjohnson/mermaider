@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e5ab6951896e8d3c
+accept	yes
+drawn	yes
+edge	B	C	none	arrow	solid
+edge	B	D	none	arrow	solid
+edge	B	E	none	arrow	solid
+icon	B	fa:fa-twitter
+icon	C	fa:fa-ban
+icon	D	fa:fa-spinner
+icon	E	fa:fa-camera-retro
+node	B	for peace	rect
+node	C	forbidden	rect
+node	D		rounded
+node	E	A perhaps?	rounded

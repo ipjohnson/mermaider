@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b748773195c45c55
+accept	yes
+attribute	Animal	-int sizeInFeet
+bbox	node	Animal	12	12	147.3	147
+canvas	4	4	155.3	155
+class	Animal	Animal
+drawn	yes
+method	Animal	-canEat()

@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 25d14aaf879efe22
+accept	yes
+drawn	yes
+label	I am a cloud
+node	I am a cloud	cloud

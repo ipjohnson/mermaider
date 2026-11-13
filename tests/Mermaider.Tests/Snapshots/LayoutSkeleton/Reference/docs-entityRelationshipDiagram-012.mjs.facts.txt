@@ -1,0 +1,54 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0bce57d423be8f2e
+accept	yes
+attribute	CAR	string	make
+attribute	CAR	string	model
+attribute	CAR	string	registrationNumber	PK
+attribute	CAR	string[]	parts
+attribute	NAMED-DRIVER	string	carRegistrationNumber	FK,PK
+attribute	NAMED-DRIVER	string	driverLicence	FK,PK
+attribute	PERSON	int	age
+attribute	PERSON	string	driversLicense	PK	The license #
+attribute	PERSON	string	lastName
+attribute	PERSON	string	phone	UK
+attribute	PERSON	string(99)	firstName		Only 99 characters are allowed
+drawn	yes
+entity	CAR	CAR
+entity	MANUFACTURER	MANUFACTURER
+entity	NAMED-DRIVER	NAMED-DRIVER
+entity	PERSON	PERSON
+label	CAR
+label	MANUFACTURER
+label	NAMED-DRIVER
+label	Only 99 characters are allowed
+label	PERSON
+label	The license #
+label	age
+label	allows
+label	carRegistrationNumber
+label	driverLicence
+label	driversLicense
+label	firstName
+label	int
+label	is
+label	lastName
+label	make
+label	makes
+label	model
+label	parts
+label	phone
+label	registrationNumber
+label	string
+label	string
+label	string
+label	string
+label	string
+label	string
+label	string
+label	string
+label	string(99)
+label	string[]
+relation	CAR	NAMED-DRIVER	one	zero-or-more	identifying	allows
+relation	MANUFACTURER	CAR	one	zero-or-more	identifying	makes
+relation	PERSON	NAMED-DRIVER	one	zero-or-more	identifying	is

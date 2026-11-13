@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 15ddee045061b8df
+accept	yes
+drawn	yes
+label	0
+label	36
+label	5
+label	64
+label	71
+label	9
+label	94
+label	Issue1300
+label	Issue19062
+label	Issue19401
+label	Timeline - Gantt Sampler
+section	Issue1300
+section	Issue19062
+section	Issue19401
+task	Issue1300	0	item0	1918-01-01 00:00	1918-01-01 00:00	milestone
+task	Issue1300	5	item5	1920-01-01 00:00	1925-01-01 00:00
+task	Issue1300	64	workaround	1923-01-01 00:00	1923-01-01 00:00
+task	Issue1300	9		1906-01-01 00:00	1906-01-01 00:00
+task	Issue1300	94	item94	1910-01-01 00:00	1915-01-01 00:00
+task	Issue19062	71	item71	1900-01-01 00:00	1930-01-01 00:00
+task	Issue19401	36	item36	1913-01-01 00:00	1935-01-01 00:00
+title	Timeline - Gantt Sampler

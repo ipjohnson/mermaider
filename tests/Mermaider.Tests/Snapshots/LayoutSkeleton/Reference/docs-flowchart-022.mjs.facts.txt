@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8f6bee2432ba9b4b
+accept	yes
+drawn	yes
+node	A	File Handling	flip-tri
+node	B	User Input	sl-rect
+node	C	Multiple Documents	docs
+node	D	Process Automation	st-rect
+node	E	Paper Records	flag

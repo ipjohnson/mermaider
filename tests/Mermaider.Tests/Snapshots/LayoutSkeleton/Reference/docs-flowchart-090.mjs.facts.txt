@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a9cfb4a66b883b35
+accept	yes
+drawn	yes
+edge	API	Cache	none	arrow	solid
+edge	API	Client	none	arrow	solid
+edge	Cache	DB	none	arrow	solid	miss
+edge	Client	API	none	arrow	solid
+edge	DB	API	none	arrow	solid
+node	API	API	rect
+node	Cache	Cache	rect
+node	Client	Client	rect
+node	DB	DB	rect

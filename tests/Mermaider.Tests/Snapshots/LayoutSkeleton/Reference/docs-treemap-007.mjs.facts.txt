@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 19c01aaa93ab7b48
+accept	yes
+drawn	yes
+label	Advertising
+label	Budget
+label	Equipment
+label	Events
+label	Marketing
+label	Operations
+label	Salaries
+label	Supplies
+node	Budget
+node	Budget / Marketing
+node	Budget / Marketing / Advertising	400000
+node	Budget / Marketing / Events	100000
+node	Budget / Operations
+node	Budget / Operations / Equipment	200000
+node	Budget / Operations / Salaries	700000
+node	Budget / Operations / Supplies	100000

@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 48baec41314cb4f5
+accept	yes
+attribute	a	string	email
+attribute	p	string	firstName
+attribute	p	string	lastName
+drawn	yes
+entity	a	Customer Account
+entity	p	Person
+label	Customer Account
+label	Person
+label	email
+label	firstName
+label	has
+label	lastName
+label	string
+label	string
+label	string
+relation	p	a	one	zero-or-one	identifying	has

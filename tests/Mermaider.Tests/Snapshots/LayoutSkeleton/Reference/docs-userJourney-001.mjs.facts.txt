@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e978837ae6de4a8b
+accept	yes
+drawn	yes
+label	Cat
+label	Do work
+label	Go downstairs
+label	Go home
+label	Go to work
+label	Go upstairs
+label	Make tea
+label	Me
+label	My working day
+label	Sit down
+section	Go home
+section	Go to work
+task	Go home	Go downstairs	5	Me
+task	Go home	Sit down	5	Me
+task	Go to work	Do work	1	Cat,Me
+task	Go to work	Go upstairs	3	Me
+task	Go to work	Make tea	5	Me
+title	My working day

@@ -190,3 +190,944 @@ spec-er-attributes-with-comments - label | Required
 flowchart-fa-label + node | B-- | C[fa:fa-ban forbidden | odd
 flowchart-fa-label - edge | B | C | none | arrow | solid
 flowchart-fa-label - node | C | forbidden | rect
+
+# The examples of mermaid 12.3.0's syntax docs (MjsFacts/Docs, from scripts/mermaid-docs-corpus.py).
+
+# By design: the facts take a flowchart node's label from mermaid.js's DOM, which joins the lines of a Markdown string without a space. Mermaider's facts join them with one.
+docs-flowchart-004 + node | newLines | Line1 Line 2 Line 3 | rect
+docs-flowchart-004 - node | newLines | Line1Line 2Line 3 | rect
+
+# Unsupported, ipjohnson/mermaider#6: flowchart node shapes and properties given with @{ ... }, including view: collapsed, are not read.
+docs-flowchart-022 + node | A | A | rect
+docs-flowchart-022 + node | B | B | rect
+docs-flowchart-022 + node | C | C | rect
+docs-flowchart-022 + node | D | D | rect
+docs-flowchart-022 + node | E | E | rect
+docs-flowchart-022 - node | A | File Handling | flip-tri
+docs-flowchart-022 - node | B | User Input | sl-rect
+docs-flowchart-022 - node | C | Multiple Documents | docs
+docs-flowchart-022 - node | D | Process Automation | st-rect
+docs-flowchart-022 - node | E | Paper Records | flag
+docs-flowchart-023 + node | A | A | rect
+docs-flowchart-023 - node | A | This is a process | rect
+docs-flowchart-024 + node | A | A | rect
+docs-flowchart-024 - node | A | This is an event | rounded
+docs-flowchart-025 + node | A | A | rect
+docs-flowchart-025 - node | A | Terminal point | stadium
+docs-flowchart-026 + node | A | A | rect
+docs-flowchart-026 - node | A | This is a subprocess | fr-rect
+docs-flowchart-027 + node | A | A | rect
+docs-flowchart-027 - node | A | Database | cyl
+docs-flowchart-028 + node | A | A | rect
+docs-flowchart-028 - node | A | Start | circle
+docs-flowchart-029 + node | A | A | rect
+docs-flowchart-029 - node | A | Odd shape | odd
+docs-flowchart-030 + node | A | A | rect
+docs-flowchart-030 - node | A | Decision | diam
+docs-flowchart-031 + node | A | A | rect
+docs-flowchart-031 - node | A | Prepare conditional | hex
+docs-flowchart-032 + node | A | A | rect
+docs-flowchart-032 - node | A | Input/Output | lean-r
+docs-flowchart-033 + node | A | A | rect
+docs-flowchart-033 - node | A | Output/Input | lean-l
+docs-flowchart-034 + node | A | A | rect
+docs-flowchart-034 - node | A | Datastore | datastore
+docs-flowchart-035 + node | A | A | rect
+docs-flowchart-035 - node | A | Priority action | trap-b
+docs-flowchart-036 + node | A | A | rect
+docs-flowchart-036 - node | A | Manual operation | trap-t
+docs-flowchart-037 + node | A | A | rect
+docs-flowchart-037 - node | A | Stop | dbl-circ
+docs-flowchart-038 + node | A | A | rect
+docs-flowchart-038 - node | A | This is a text block | text
+docs-flowchart-039 + node | A | A | rect
+docs-flowchart-039 - node | A | Card | notch-rect
+docs-flowchart-040 + node | A | A | rect
+docs-flowchart-040 - node | A | Lined process | lin-rect
+docs-flowchart-041 + node | A | A | rect
+docs-flowchart-041 - node | A |  | sm-circ
+docs-flowchart-042 + node | A | A | rect
+docs-flowchart-042 - node | A |  | fr-circ
+docs-flowchart-043 + node | A | A | rect
+docs-flowchart-043 - node | A |  | fork
+docs-flowchart-044 + node | A | A | rect
+docs-flowchart-044 - node | A |  | hourglass
+docs-flowchart-045 + node | A | A | rect
+docs-flowchart-045 - node | A | Comment | brace
+docs-flowchart-046 + node | A | A | rect
+docs-flowchart-046 - node | A | Comment | brace-r
+docs-flowchart-047 + node | A | A | rect
+docs-flowchart-047 - node | A | Comment | braces
+docs-flowchart-048 + node | A | A | rect
+docs-flowchart-048 - node | A |  | bolt
+docs-flowchart-049 + node | A | A | rect
+docs-flowchart-049 - node | A | Document | doc
+docs-flowchart-050 + node | A | A | rect
+docs-flowchart-050 - node | A | Delay | delay
+docs-flowchart-051 + node | A | A | rect
+docs-flowchart-051 - node | A | Direct access storage | h-cyl
+docs-flowchart-052 + node | A | A | rect
+docs-flowchart-052 - node | A | Disk storage | lin-cyl
+docs-flowchart-053 + node | A | A | rect
+docs-flowchart-053 - node | A | Display | curv-trap
+docs-flowchart-054 + node | A | A | rect
+docs-flowchart-054 - node | A | Divided process | div-rect
+docs-flowchart-055 + node | A | A | rect
+docs-flowchart-055 - node | A | Extract | tri
+docs-flowchart-056 + node | A | A | rect
+docs-flowchart-056 - node | A | Internal storage | win-pane
+docs-flowchart-057 + node | A | A | rect
+docs-flowchart-057 - node | A |  | f-circ
+docs-flowchart-058 + node | A | A | rect
+docs-flowchart-058 - node | A | Lined document | lin-doc
+docs-flowchart-059 + node | A | A | rect
+docs-flowchart-059 - node | A | Loop limit | notch-pent
+docs-flowchart-060 + node | A | A | rect
+docs-flowchart-060 - node | A | Manual file | flip-tri
+docs-flowchart-061 + node | A | A | rect
+docs-flowchart-061 - node | A | Manual input | sl-rect
+docs-flowchart-062 + node | A | A | rect
+docs-flowchart-062 - node | A | Multiple documents | docs
+docs-flowchart-063 + node | A | A | rect
+docs-flowchart-063 - node | A | Multiple processes | st-rect
+docs-flowchart-064 + node | A | A | rect
+docs-flowchart-064 - node | A | Paper tape | flag
+docs-flowchart-065 + node | A | A | rect
+docs-flowchart-065 - node | A | Stored data | bow-rect
+docs-flowchart-066 + node | A | A | rect
+docs-flowchart-066 - node | A |  | cross-circ
+docs-flowchart-067 + node | A | A | rect
+docs-flowchart-067 - node | A | Tagged document | tag-doc
+docs-flowchart-068 + node | A | A | rect
+docs-flowchart-068 - node | A | Tagged process | tag-rect
+docs-flowchart-104 + edge | A | B | none | arrow | solid
+docs-flowchart-104 + edge | B | C | none | arrow | solid
+docs-flowchart-104 + group | one | My Group | A,B,C
+docs-flowchart-104 + node | A | A | rect
+docs-flowchart-104 + node | B | B | rect
+docs-flowchart-104 + node | C | C | rect
+docs-flowchart-104 - node | one |  | collapsedGroup
+
+# Unsupported, ipjohnson/mermaider#7: flowchart icon and image nodes are not drawn.
+docs-flowchart-069 + node | A | A | rect
+docs-flowchart-069 - icon | A | fa:user
+docs-flowchart-069 - node | A | User Icon | rect
+docs-flowchart-070 + node | A | A | rect
+docs-flowchart-070 - image | A | https://mermaid.js.org/favicon.svg
+docs-flowchart-070 - node | A | My example image label | rect
+
+# ipjohnson/mermaider#5: flowchart edge IDs drop the edge and add a stray node.
+docs-flowchart-086 - edge | A | B | none | arrow | solid
+docs-flowchart-086 - node | B | B | rect
+docs-flowchart-087 + node | e1 | e1 | rect
+docs-flowchart-087 - edge | A | B | none | arrow | thick
+docs-flowchart-087 - node | B | B | rect
+docs-flowchart-088 + node | e1 | e1 | rect
+docs-flowchart-088 - edge | A | B | none | arrow | solid
+docs-flowchart-088 - node | B | B | rect
+docs-flowchart-089 - edge | A | B | none | arrow | solid
+docs-flowchart-089 - node | B | B | rect
+docs-flowchart-090 + node | e1 | e1 | rect
+docs-flowchart-090 + node | e2 | e2 | rect
+docs-flowchart-090 + node | e3 | e3 | rect
+docs-flowchart-090 + node | e4 | e4 | rect
+docs-flowchart-090 + node | e5 | e5 | rect
+docs-flowchart-090 - edge | API | Cache | none | arrow | solid
+docs-flowchart-090 - edge | API | Client | none | arrow | solid
+docs-flowchart-090 - edge | Cache | DB | none | arrow | solid | miss
+docs-flowchart-090 - edge | Client | API | none | arrow | solid
+docs-flowchart-090 - edge | DB | API | none | arrow | solid
+docs-flowchart-091 + node | e1 | e1 | rect
+docs-flowchart-091 + node | e2 | e2 | rect
+docs-flowchart-091 - edge | API | Client | none | arrow | solid
+docs-flowchart-091 - edge | Client | API | none | arrow | solid
+docs-flowchart-109 + node | e1 | e1 | rect
+docs-flowchart-109 + node | e2 | e2 | rect
+docs-flowchart-109 - edge | A | B | none | arrow | thick
+docs-flowchart-109 - edge | A | C | none | arrow | solid
+docs-flowchart-109 - node | B | B | rect
+docs-flowchart-109 - node | C | C | rect
+
+# ipjohnson/mermaider#4: flowchart circle and cross edge ends drop the edge and its target.
+docs-flowchart-092 - edge | A | B | none | circle | solid
+docs-flowchart-092 - node | B | B | rect
+docs-flowchart-093 - edge | A | B | none | cross | solid
+docs-flowchart-093 - node | B | B | rect
+docs-flowchart-094 - edge | A | B | circle | circle | solid
+docs-flowchart-094 - edge | C | D | cross | cross | solid
+docs-flowchart-094 - node | D | D | rect
+
+# ipjohnson/mermaider#20: B-->C[label] without spaces is read as one node. ipjohnson/mermaider#8: fa:fa-name icons are drawn as text.
+docs-flowchart-114 + node | B | fa:fa-twitter for peace | rect
+docs-flowchart-114 + node | B-- | C[fa:fa-ban forbidden | odd
+docs-flowchart-114 + node | D | fa:fa-spinner | rounded
+docs-flowchart-114 + node | E | A fa:fa-camera-retro perhaps? | rounded
+docs-flowchart-114 - edge | B | C | none | arrow | solid
+docs-flowchart-114 - icon | B | fa:fa-twitter
+docs-flowchart-114 - icon | C | fa:fa-ban
+docs-flowchart-114 - icon | D | fa:fa-spinner
+docs-flowchart-114 - icon | E | fa:fa-camera-retro
+docs-flowchart-114 - node | B | for peace | rect
+docs-flowchart-114 - node | C | forbidden | rect
+docs-flowchart-114 - node | D |  | rounded
+docs-flowchart-114 - node | E | A perhaps? | rounded
+docs-flowchart-115 + node | B | fa:fa-twitter for peace | rect
+docs-flowchart-115 + node | B-- | C["fab:fa-truck-bold a custom icon" | odd
+docs-flowchart-115 - edge | B | C | none | arrow | solid
+docs-flowchart-115 - icon | B | fa:fa-twitter
+docs-flowchart-115 - icon | C | fab:fa-truck-bold
+docs-flowchart-115 - node | B | for peace | rect
+docs-flowchart-115 - node | C | a custom icon | rect
+
+# ipjohnson/AgentDriver#4283: a flowchart click statement is drawn as a node named click.
+docs-flowchart-106 + node | click | click | rect
+docs-flowchart-107 + node | click | click | rect
+
+# ipjohnson/mermaider#22: flowchart text links that end in --- or a longer arrow lose the edge and its target.
+docs-flowchart-073 - edge | A | B | none | none | solid | This is the text!
+docs-flowchart-073 - node | B | B | rect
+docs-flowchart-096 - edge | B | E | none | arrow | solid | No
+docs-flowchart-096 - node | E | End | rect
+
+# ipjohnson/mermaider#23: _italic_ in a flowchart Markdown string is drawn with its underscores.
+docs-flowchart-004 + node | markdown | This is _Markdown_ | rect
+docs-flowchart-004 - node | markdown | This is Markdown | rect
+
+# ipjohnson/mermaider#23: a quoted label spanning lines in a ( ) node is split into nodes. ipjohnson/mermaider#9: Markdown subgraph titles keep their backticks.
+docs-flowchart-105 + group | One | One | a,in
+docs-flowchart-105 + group | Two | ` Two ` | c,in
+docs-flowchart-105 + node | a | a | rect
+docs-flowchart-105 + node | c | c | rect
+docs-flowchart-105 + node | in | in | rect
+docs-flowchart-105 - edge | a | b | none | arrow | solid | edge label
+docs-flowchart-105 - edge | c | d | none | arrow | solid | Bold edge label
+docs-flowchart-105 - group | **Two** | Two | c,d
+docs-flowchart-105 - group | One | One | a,b
+docs-flowchart-105 - node | a | The catin the hat | rounded
+docs-flowchart-105 - node | b | The dog in the hog | hex
+docs-flowchart-105 - node | c | The catin the hat | rounded
+docs-flowchart-105 - node | d | The dog in the hog | rounded
+
+# ipjohnson/AgentDriver#4281: class display labels, two-ended relations and reversed lollipops are drawn wrong.
+docs-classDiagram-006 + class | Animal | Animal
+docs-classDiagram-006 + class | Car | Car
+docs-classDiagram-006 - class | Animal | Animal with a label
+docs-classDiagram-006 - class | Car | Car with *! symbols
+docs-classDiagram-015 + drawn | no
+docs-classDiagram-015 - class | Animal | Animal
+docs-classDiagram-015 - class | Zebra | Zebra
+docs-classDiagram-015 - drawn | yes
+docs-classDiagram-015 - relation | Animal | Zebra | triangle | triangle | solid
+docs-classDiagram-016 + class | bar | bar
+docs-classDiagram-016 + relation | bar | ()foo | none | lollipop | solid
+docs-classDiagram-016 - relation | ()bar | foo | lollipop | none | solid
+docs-classDiagram-017 + class | bar | bar
+docs-classDiagram-017 + class | foo | foo
+docs-classDiagram-017 + relation | foo | ()Class01 | none | lollipop | solid
+docs-classDiagram-017 - relation | ()foo | Class01 | lollipop | none | solid
+
+# ipjohnson/AgentDriver#4294: documented examples that draw an empty diagram or fail (backtick class names, inline annotations, quoted ER entities, ER relationship aliases, ER subgraphs, unspaced ER relationships with style, gantt dateFormat X, gitGraph:).
+docs-classDiagram-007 + drawn | no
+docs-classDiagram-007 - class | Animal Class! | Animal Class!
+docs-classDiagram-007 - class | Car Class | Car Class
+docs-classDiagram-007 - drawn | yes
+docs-classDiagram-007 - relation | Animal Class! | Car Class | none | arrow | solid
+docs-classDiagram-024 + drawn | no
+docs-classDiagram-024 - annotation | Shape | «interface»
+docs-classDiagram-024 - class | Shape | Shape
+docs-classDiagram-024 - drawn | yes
+docs-entityRelationshipDiagram-005 + drawn | no
+docs-entityRelationshipDiagram-005 - drawn | yes
+docs-entityRelationshipDiagram-005 - entity | This ❤ Unicode | This ❤ Unicode
+docs-entityRelationshipDiagram-005 - label | This ❤ Unicode
+docs-entityRelationshipDiagram-006 + drawn | no
+docs-entityRelationshipDiagram-006 - drawn | yes
+docs-entityRelationshipDiagram-006 - entity | This **is** _Markdown_ | This **is** _Markdown_
+docs-entityRelationshipDiagram-006 - label | This **is** _Markdown_
+docs-entityRelationshipDiagram-008 + drawn | no
+docs-entityRelationshipDiagram-008 - drawn | yes
+docs-entityRelationshipDiagram-008 - entity | CAR | CAR
+docs-entityRelationshipDiagram-008 - entity | NAMED-DRIVER | NAMED-DRIVER
+docs-entityRelationshipDiagram-008 - entity | PERSON | PERSON
+docs-entityRelationshipDiagram-008 - label | CAR
+docs-entityRelationshipDiagram-008 - label | NAMED-DRIVER
+docs-entityRelationshipDiagram-008 - label | PERSON
+docs-entityRelationshipDiagram-008 - label | allows
+docs-entityRelationshipDiagram-008 - label | is
+docs-entityRelationshipDiagram-008 - relation | CAR | NAMED-DRIVER | one | zero-or-more | identifying | allows
+docs-entityRelationshipDiagram-008 - relation | PERSON | NAMED-DRIVER | zero-or-more | zero-or-more | non-identifying | is
+docs-entityRelationshipDiagram-016 + drawn | no
+docs-entityRelationshipDiagram-016 - drawn | yes
+docs-entityRelationshipDiagram-016 - entity | CUSTOMER | CUSTOMER
+docs-entityRelationshipDiagram-016 - label | CUSTOMER
+docs-entityRelationshipDiagram-017 + drawn | no
+docs-entityRelationshipDiagram-017 - drawn | yes
+docs-entityRelationshipDiagram-017 - entity | CUSTOMER | CUSTOMER
+docs-entityRelationshipDiagram-017 - label | CUSTOMER
+docs-entityRelationshipDiagram-018 + drawn | no
+docs-entityRelationshipDiagram-018 - drawn | yes
+docs-entityRelationshipDiagram-018 - entity | CUSTOMER | CUSTOMER
+docs-entityRelationshipDiagram-018 - label | CUSTOMER
+docs-entityRelationshipDiagram-021 + drawn | no
+docs-entityRelationshipDiagram-021 - drawn | yes
+docs-entityRelationshipDiagram-021 - entity | id1 | id1
+docs-entityRelationshipDiagram-021 - entity | id2 | id2
+docs-entityRelationshipDiagram-021 - label | id1
+docs-entityRelationshipDiagram-021 - label | id2
+docs-entityRelationshipDiagram-021 - label | label
+docs-entityRelationshipDiagram-021 - relation | id1 | id2 | one | one | identifying | label
+docs-gantt-010 + accept | no
+docs-gantt-010 - accept | yes
+docs-gitgraph-021 + accept | no
+docs-gitgraph-021 - accept | yes
+docs-gitgraph-022 + accept | no
+docs-gitgraph-022 - accept | yes
+
+# ipjohnson/mermaider#25: class namespace labels, dotted nested namespaces and standalone <<annotation>> lines are lost.
+docs-classDiagram-019 - namespace | Auth | UserService
+docs-classDiagram-020 + namespace | Company.Engineering | TechLead
+docs-classDiagram-020 - namespace | Company | Company.Engineering
+docs-classDiagram-020 - namespace | Company.Engineering | Company.Engineering.Backend,Company.Engineering.Frontend,TechLead
+docs-classDiagram-021 + namespace | Auth | UserService
+docs-classDiagram-021 + namespace | Data | Repository
+docs-classDiagram-021 - namespace | Platform | Gateway,Platform.Auth,Platform.Data
+docs-classDiagram-021 - namespace | Platform.Auth | UserService
+docs-classDiagram-021 - namespace | Platform.Data | Repository
+docs-classDiagram-025 - annotation | Shape | «interface»
+
+# ipjohnson/mermaider#24: the :::class shorthand stays in the name.
+docs-classDiagram-034 + class | Animal:::someclass | Animal:::someclass
+docs-classDiagram-034 - class | Animal | Animal
+docs-classDiagram-035 + attribute | Animal:::someclass | -int sizeInFeet
+docs-classDiagram-035 + class | Animal:::someclass | Animal:::someclass
+docs-classDiagram-035 + method | Animal:::someclass | -canEat()
+docs-classDiagram-035 - attribute | Animal | -int sizeInFeet
+docs-classDiagram-035 - class | Animal | Animal
+docs-classDiagram-035 - method | Animal | -canEat()
+docs-classDiagram-036 + class | Animal:::pink | Animal:::pink
+docs-classDiagram-036 - class | Animal | Animal
+docs-classDiagram-037 + class | Animal:::styleClass | Animal:::styleClass
+docs-classDiagram-037 - class | Animal | Animal
+docs-entityRelationshipDiagram-022 + attribute | CAR:::someclass | string | make
+docs-entityRelationshipDiagram-022 + attribute | CAR:::someclass | string | model
+docs-entityRelationshipDiagram-022 + attribute | CAR:::someclass | string | registrationNumber
+docs-entityRelationshipDiagram-022 + attribute | PERSON:::someclass | int | age
+docs-entityRelationshipDiagram-022 + attribute | PERSON:::someclass | string | firstName
+docs-entityRelationshipDiagram-022 + attribute | PERSON:::someclass | string | lastName
+docs-entityRelationshipDiagram-022 + entity | CAR:::someclass | CAR:::someclass
+docs-entityRelationshipDiagram-022 + entity | PERSON:::someclass | PERSON:::someclass
+docs-entityRelationshipDiagram-022 + label | CAR:::someclass
+docs-entityRelationshipDiagram-022 + label | PERSON:::someclass
+docs-entityRelationshipDiagram-022 - attribute | CAR | string | make
+docs-entityRelationshipDiagram-022 - attribute | CAR | string | model
+docs-entityRelationshipDiagram-022 - attribute | CAR | string | registrationNumber
+docs-entityRelationshipDiagram-022 - attribute | PERSON | int | age
+docs-entityRelationshipDiagram-022 - attribute | PERSON | string | firstName
+docs-entityRelationshipDiagram-022 - attribute | PERSON | string | lastName
+docs-entityRelationshipDiagram-022 - entity | CAR | CAR
+docs-entityRelationshipDiagram-022 - entity | HOUSE | HOUSE
+docs-entityRelationshipDiagram-022 - entity | PERSON | PERSON
+docs-entityRelationshipDiagram-022 - label | CAR
+docs-entityRelationshipDiagram-022 - label | HOUSE
+docs-entityRelationshipDiagram-022 - label | PERSON
+docs-entityRelationshipDiagram-023 + entity | HOUSE:::bar | HOUSE:::bar
+docs-entityRelationshipDiagram-023 + entity | PERSON:::foo | PERSON:::foo
+docs-entityRelationshipDiagram-023 + label | HOUSE:::bar
+docs-entityRelationshipDiagram-023 + label | PERSON:::foo
+docs-entityRelationshipDiagram-023 + relation | PERSON | HOUSE:::bar | zero-or-more | one | identifying | has
+docs-entityRelationshipDiagram-023 + relation | PERSON:::foo | CAR | one | one | identifying | owns
+docs-entityRelationshipDiagram-023 - entity | HOUSE | HOUSE
+docs-entityRelationshipDiagram-023 - label | HOUSE
+docs-entityRelationshipDiagram-023 - relation | PERSON | CAR | one | one | identifying | owns
+docs-entityRelationshipDiagram-023 - relation | PERSON | HOUSE | zero-or-more | one | identifying | has
+docs-entityRelationshipDiagram-024 + entity | HOUSE:::bar | HOUSE:::bar
+docs-entityRelationshipDiagram-024 + entity | PERSON:::foo | PERSON:::foo
+docs-entityRelationshipDiagram-024 + label | HOUSE:::bar
+docs-entityRelationshipDiagram-024 + label | PERSON:::foo
+docs-entityRelationshipDiagram-024 + relation | PERSON | HOUSE:::bar | zero-or-more | one | identifying | has
+docs-entityRelationshipDiagram-024 + relation | PERSON:::foo | CAR | one | one | identifying | owns
+docs-entityRelationshipDiagram-024 - entity | HOUSE | HOUSE
+docs-entityRelationshipDiagram-024 - label | HOUSE
+docs-entityRelationshipDiagram-024 - relation | PERSON | CAR | one | one | identifying | owns
+docs-entityRelationshipDiagram-024 - relation | PERSON | HOUSE | zero-or-more | one | identifying | has
+docs-quadrantChart-003 + label | Campaign E:::class2
+docs-quadrantChart-003 + point | Campaign E:::class2 | 0.5 | 0.4
+docs-quadrantChart-003 - label | Campaign A
+docs-quadrantChart-003 - label | Campaign B
+docs-quadrantChart-003 - label | Campaign C
+docs-quadrantChart-003 - label | Campaign D
+docs-quadrantChart-003 - label | Campaign E
+docs-quadrantChart-003 - label | Campaign F
+docs-quadrantChart-003 - point | Campaign A | 0.9 | 0
+docs-quadrantChart-003 - point | Campaign B | 0.8 | 0.1
+docs-quadrantChart-003 - point | Campaign C | 0.7 | 0.2
+docs-quadrantChart-003 - point | Campaign D | 0.6 | 0.3
+docs-quadrantChart-003 - point | Campaign E | 0.5 | 0.4
+docs-quadrantChart-003 - point | Campaign F | 0.4 | 0.5
+docs-requirementDiagram-009 + label | test_req:::important
+docs-requirementDiagram-009 + requirement | test_req:::important | requirement | 1 | class styling example | low | test
+docs-requirementDiagram-009 - label | test_req
+docs-requirementDiagram-009 - requirement | test_req | requirement | 1 | class styling example | low | test
+docs-treemap-003 + label | Section 1.2":::class1
+docs-treemap-003 + node | Section 1 / Section 1.2":::class1
+docs-treemap-003 + node | Section 1 / Section 1.2":::class1 / Leaf 1.2.1 | 12
+docs-treemap-003 + node | Section 2 / Leaf 2.1": 20:::class1
+docs-treemap-003 + node | classDef class1 fill:red,color:blue,stroke:#FFD600;
+docs-treemap-003 - label | Leaf 2.1
+docs-treemap-003 - label | Section 1.2
+docs-treemap-003 - node | Section 1 / Section 1.2
+docs-treemap-003 - node | Section 1 / Section 1.2 / Leaf 1.2.1 | 12
+docs-treemap-003 - node | Section 2 / Leaf 2.1 | 20
+docs-treemap-004 + label | B":::important
+docs-treemap-004 + node | Main / B":::important
+docs-treemap-004 + node | Main / B":::important / B1 | 10
+docs-treemap-004 + node | Main / B":::important / B2 | 15
+docs-treemap-004 + node | classDef important fill:#f96,stroke:#333,stroke-width:2px;
+docs-treemap-004 - label | B
+docs-treemap-004 - node | Main / B
+docs-treemap-004 - node | Main / B / B1 | 10
+docs-treemap-004 - node | Main / B / B2 | 15
+
+# Unsupported, ipjohnson/mermaider#10: sequence participant types given with @{ "type": ... } are drawn as plain participants, and their as alias is lost.
+docs-sequenceDiagram-006 + actor | Alice | Alice | participant
+docs-sequenceDiagram-006 - actor | Alice | Alice | boundary
+docs-sequenceDiagram-007 + actor | Alice | Alice | participant
+docs-sequenceDiagram-007 - actor | Alice | Alice | control
+docs-sequenceDiagram-008 + actor | Alice | Alice | participant
+docs-sequenceDiagram-008 - actor | Alice | Alice | entity
+docs-sequenceDiagram-009 + actor | Alice | Alice | participant
+docs-sequenceDiagram-009 - actor | Alice | Alice | database
+docs-sequenceDiagram-010 + actor | Alice | Alice | participant
+docs-sequenceDiagram-010 - actor | Alice | Alice | collections
+docs-sequenceDiagram-011 + actor | Alice | Alice | participant
+docs-sequenceDiagram-011 - actor | Alice | Alice | queue
+docs-sequenceDiagram-013 + actor | API | API | participant
+docs-sequenceDiagram-013 + actor | DB | DB | participant
+docs-sequenceDiagram-013 + actor | Svc | Svc | participant
+docs-sequenceDiagram-013 - actor | API | Public API | boundary
+docs-sequenceDiagram-013 - actor | DB | User Database | database
+docs-sequenceDiagram-013 - actor | Svc | Auth Service | control
+docs-sequenceDiagram-014 + actor | API | API | participant
+docs-sequenceDiagram-014 + actor | Auth | Auth | participant
+docs-sequenceDiagram-014 + actor | DB | DB | participant
+docs-sequenceDiagram-014 - actor | API | Public API | boundary
+docs-sequenceDiagram-014 - actor | Auth | Auth Service | control
+docs-sequenceDiagram-014 - actor | DB | User Database | database
+docs-sequenceDiagram-015 + actor | API | API | participant
+docs-sequenceDiagram-015 + actor | DB | DB | participant
+docs-sequenceDiagram-015 - actor | API | External Name | boundary
+docs-sequenceDiagram-015 - actor | DB | External DB | database
+
+# ipjohnson/mermaider#26: sequence -> draws an arrowhead, spaced ->>+ messages are dropped, box titles lose their first word, and central connections () are not read.
+docs-sequenceDiagram-017 + box | Group | B,C
+docs-sequenceDiagram-017 - box | Another Group | B,C
+docs-sequenceDiagram-018 + actor | ()Alice | ()Alice | participant
+docs-sequenceDiagram-018 + actor | ()John | ()John | participant
+docs-sequenceDiagram-018 + actor | Alice() | Alice() | participant
+docs-sequenceDiagram-018 + actor | John() | John() | participant
+docs-sequenceDiagram-018 + message | Alice | ()John | solid | filled | Hello John
+docs-sequenceDiagram-018 + message | Alice() | John | solid | filled | How are you?
+docs-sequenceDiagram-018 + message | John() | ()Alice | solid | filled | Great!
+docs-sequenceDiagram-018 - message | Alice | John | solid | filled | Hello John
+docs-sequenceDiagram-018 - message | Alice | John | solid | filled | How are you?
+docs-sequenceDiagram-018 - message | John | Alice | solid | filled | Great!
+docs-sequenceDiagram-023 + message | Alice | John | solid | open | Hello John, how are you?
+docs-sequenceDiagram-023 - message | Alice | John | solid | none | Hello John, how are you?
+docs-sequenceDiagram-024 + message | Alice | John | solid | open | Hello John, how are you?
+docs-sequenceDiagram-024 - message | Alice | John | solid | none | Hello John, how are you?
+docs-sequenceDiagram-025 + message | Alice | John | solid | open | Hello John, how are you?
+docs-sequenceDiagram-025 - message | Alice | John | solid | none | Hello John, how are you?
+docs-sequenceDiagram-026 + message | Alice | John | solid | open | Hello John, how are you?
+docs-sequenceDiagram-026 + message | John | Alice | dashed | open | Great!
+docs-sequenceDiagram-026 - message | Alice | John | solid | none | Hello John, how are you?
+docs-sequenceDiagram-026 - message | John | Alice | dashed | none | Great!
+docs-sequenceDiagram-030 + message | Service | DB | dashed | open | connect
+docs-sequenceDiagram-030 + message | Service | Service | dashed | open | Log different error
+docs-sequenceDiagram-030 + message | Service | Service | dashed | open | Log error
+docs-sequenceDiagram-030 - message | Service | DB | dashed | none | connect
+docs-sequenceDiagram-030 - message | Service | Service | dashed | none | Log different error
+docs-sequenceDiagram-030 - message | Service | Service | dashed | none | Log error
+docs-sequenceDiagram-031 + message | Service | DB | dashed | open | connect
+docs-sequenceDiagram-031 - message | Service | DB | dashed | none | connect
+docs-sequenceDiagram-032 + message | API | BillingService | dashed | open | Start billing process
+docs-sequenceDiagram-032 + message | API | BookingService | dashed | open | Start booking process
+docs-sequenceDiagram-032 + message | API | Consumer | dashed | open | show failure
+docs-sequenceDiagram-032 + message | Consumer | API | dashed | open | Book something
+docs-sequenceDiagram-032 - message | API | BillingService | dashed | none | Start billing process
+docs-sequenceDiagram-032 - message | API | BookingService | dashed | none | Start booking process
+docs-sequenceDiagram-032 - message | API | Consumer | dashed | none | show failure
+docs-sequenceDiagram-032 - message | Consumer | API | dashed | none | Book something
+docs-sequenceDiagram-033 - message | Alice | John | solid | filled | Did you want to go to the game tonight?
+docs-sequenceDiagram-033 - message | John | Alice | dashed | filled | Yeah! See you there.
+
+# ipjohnson/mermaider#27: a lone state and a transition with a trailing %% comment draw nothing; composite descriptions and concurrent regions are lost.
+docs-stateDiagram-005 + drawn | no
+docs-stateDiagram-005 - drawn | yes
+docs-stateDiagram-005 - node | stateId | stateId | rounded
+docs-stateDiagram-011 + group | NamedComposite | NamedComposite | [*]end@NamedComposite,[*]start@NamedComposite,namedSimple
+docs-stateDiagram-011 - group | NamedComposite | Another Composite | [*]end@NamedComposite,[*]start@NamedComposite,namedSimple
+docs-stateDiagram-017 + edge | [*]start@Active | CapsLockOff | none | arrow | solid
+docs-stateDiagram-017 + edge | [*]start@Active | NumLockOff | none | arrow | solid
+docs-stateDiagram-017 + edge | [*]start@Active | ScrollLockOff | none | arrow | solid
+docs-stateDiagram-017 + group | Active | Active | CapsLockOff,CapsLockOn,NumLockOff,NumLockOn,ScrollLockOff,ScrollLockOn,[*]start@Active
+docs-stateDiagram-017 + node | [*]start@Active |  | sm-circ
+docs-stateDiagram-017 - edge | [*]start@divider-id-1 | NumLockOff | none | arrow | solid
+docs-stateDiagram-017 - edge | [*]start@divider-id-2 | CapsLockOff | none | arrow | solid
+docs-stateDiagram-017 - edge | [*]start@divider-id-3 | ScrollLockOff | none | arrow | solid
+docs-stateDiagram-017 - group | Active | Active | divider-id-1,divider-id-2,divider-id-3
+docs-stateDiagram-017 - group | divider-id-1 |  | NumLockOff,NumLockOn,[*]start@divider-id-1
+docs-stateDiagram-017 - group | divider-id-2 |  | CapsLockOff,CapsLockOn,[*]start@divider-id-2
+docs-stateDiagram-017 - group | divider-id-3 |  | ScrollLockOff,ScrollLockOn,[*]start@divider-id-3
+docs-stateDiagram-017 - node | [*]start@divider-id-1 |  | sm-circ
+docs-stateDiagram-017 - node | [*]start@divider-id-2 |  | sm-circ
+docs-stateDiagram-017 - node | [*]start@divider-id-3 |  | sm-circ
+docs-stateDiagram-019 - edge | Moving | Still | none | arrow | solid
+
+# ipjohnson/AgentDriver#4294: ER relationship aliases (only one to zero or more) are not read. ipjohnson/mermaider#19: ER attribute comments are not drawn. ipjohnson/mermaider#32: PK, FK keeps only FK.
+docs-entityRelationshipDiagram-012 + attribute | NAMED-DRIVER | string | carRegistrationNumber | FK
+docs-entityRelationshipDiagram-012 + attribute | NAMED-DRIVER | string | driverLicence | FK
+docs-entityRelationshipDiagram-012 - attribute | NAMED-DRIVER | string | carRegistrationNumber | FK,PK
+docs-entityRelationshipDiagram-012 - attribute | NAMED-DRIVER | string | driverLicence | FK,PK
+docs-entityRelationshipDiagram-012 - entity | MANUFACTURER | MANUFACTURER
+docs-entityRelationshipDiagram-012 - label | MANUFACTURER
+docs-entityRelationshipDiagram-012 - label | Only 99 characters are allowed
+docs-entityRelationshipDiagram-012 - label | The license #
+docs-entityRelationshipDiagram-012 - label | makes
+docs-entityRelationshipDiagram-012 - relation | MANUFACTURER | CAR | one | zero-or-more | identifying | makes
+
+# ipjohnson/mermaider#29: gantt until, the vert tag and seconds durations are read wrong.
+docs-gantt-002 + task | Critical tasks | Add to mermaid | until isadded | 2014-01-24 00:00 | 2014-01-27 00:00
+docs-gantt-002 - task | Critical tasks | Add to mermaid |  | 2014-01-24 00:00 | 2014-01-27 00:00
+docs-gantt-003 + task |  | kiwi | d | 2017-07-20 00:00 | 2017-07-21 00:00
+docs-gantt-003 - task |  | kiwi | d | 2017-07-20 00:00 | 2017-07-23 00:00
+docs-gantt-011 + task | Issue1300 | 64 | workaround | 1923-01-01 00:00 | 1923-01-02 00:00
+docs-gantt-011 + task | Issue1300 | 9 | vert | 1906-01-01 00:00 | 1906-01-02 00:00
+docs-gantt-011 - task | Issue1300 | 64 | workaround | 1923-01-01 00:00 | 1923-01-01 00:00
+docs-gantt-011 - task | Issue1300 | 9 |  | 1906-01-01 00:00 | 1906-01-01 00:00
+
+# By design: a gantt date given only as a time (dateFormat HH:mm) falls on 0001-01-01 in Mermaider and on the day mermaid.js runs, which scripts/mjs-facts.mjs fixes at 2000-01-01. The times match.
+docs-gantt-005 + task |  | Final milestone | m2 | 0001-01-01 18:08 | 0001-01-01 18:12 | milestone
+docs-gantt-005 + task |  | Initial milestone | m1 | 0001-01-01 17:49 | 0001-01-01 17:51 | milestone
+docs-gantt-005 + task |  | Task A |  | 0001-01-01 17:51 | 0001-01-01 18:01
+docs-gantt-005 + task |  | Task B |  | 0001-01-01 18:01 | 0001-01-01 18:06
+docs-gantt-005 - task |  | Final milestone | m2 | 2000-01-01 18:08 | 2000-01-01 18:12 | milestone
+docs-gantt-005 - task |  | Initial milestone | m1 | 2000-01-01 17:49 | 2000-01-01 17:51 | milestone
+docs-gantt-005 - task |  | Task A |  | 2000-01-01 17:51 | 2000-01-01 18:01
+docs-gantt-005 - task |  | Task B |  | 2000-01-01 18:01 | 2000-01-01 18:06
+
+# ipjohnson/mermaider#29: the gantt vert tag is read as a task id and laid out as a task. The dates differ by design, as in docs-gantt-005.
+docs-gantt-006 + task |  | Final vert | vert | 0001-01-01 17:41 | 0001-01-01 17:58
+docs-gantt-006 + task |  | Initial vert | vert | 0001-01-01 17:30 | 0001-01-01 17:30
+docs-gantt-006 + task |  | Task A |  | 0001-01-01 17:30 | 0001-01-01 17:33
+docs-gantt-006 + task |  | Task B |  | 0001-01-01 17:33 | 0001-01-01 17:41
+docs-gantt-006 - task |  | Final vert | v2 | 2000-01-01 17:58 | 2000-01-01 18:02
+docs-gantt-006 - task |  | Initial vert | v1 | 2000-01-01 17:30 | 2000-01-01 17:32
+docs-gantt-006 - task |  | Task A |  | 2000-01-01 17:32 | 2000-01-01 17:35
+docs-gantt-006 - task |  | Task B |  | 2000-01-01 17:35 | 2000-01-01 17:43
+
+# By design: a gantt chart with no tasks draws nothing in Mermaider. mermaid.js draws an empty axis.
+docs-gantt-007 + drawn | no
+docs-gantt-007 - drawn | yes
+
+# ipjohnson/mermaider#30: git graph ignores showBranches: false and drops the tag of a cherry-picked merge.
+docs-gitgraph-010 + commit | 6 | release | cherry-pick
+docs-gitgraph-010 - commit | 6 | release | cherry-pick | cherry-pick:MERGE|parent:B
+docs-gitgraph-010 - label | cherry-pick:MERGE|parent:B
+docs-gitgraph-011 + label | develop
+docs-gitgraph-011 + label | featureA
+docs-gitgraph-011 + label | featureB
+docs-gitgraph-011 + label | hotfix
+docs-gitgraph-011 + label | main
+docs-gitgraph-011 + label | release
+docs-gitgraph-014 + label | ash
+docs-gitgraph-014 + label | develop
+docs-gitgraph-014 + label | featureA
+docs-gitgraph-014 + label | featureB
+docs-gitgraph-014 + label | hotfix
+docs-gitgraph-014 + label | main
+docs-gitgraph-014 + label | release
+
+# By design: mermaid.js 12.3.0 refuses its own documented example, because it does not apply mainBranchName from the front matter and then fails on checkout MetroLine1. Mermaider draws it.
+docs-gitgraph-015 + accept | yes
+docs-gitgraph-015 - accept | no
+
+# ipjohnson/mermaider#28: block diagram nested blocks, block arrows, space widths and inline-labelled edges are drawn wrong.
+docs-block-005 + block | D | D | rect | 1
+docs-block-005 + block | block | block | rect | 1
+docs-block-005 + block | end | end | rect | 1
+docs-block-005 + label | block
+docs-block-005 + label | end
+docs-block-005 - block | D | D | rect | 1 | anonymous-1
+docs-block-005 - block | anonymous-1 |  | composite | 1
+docs-block-006 + block | block | block | rect | 1
+docs-block-006 + block | end | end | rect | 1
+docs-block-006 + block | h | h | rect | 1
+docs-block-006 + block | i | i | rect | 1
+docs-block-006 + block | j | j | rect | 1
+docs-block-006 + block | k | k | rect | 1
+docs-block-006 + block | l | l | rect | 1
+docs-block-006 + block | m | m | rect | 1
+docs-block-006 + block | n | n | rect | 1
+docs-block-006 + block | o | o | rect | 1
+docs-block-006 + block | p | p | rect | 1
+docs-block-006 + block | q | q | rect | 1
+docs-block-006 + block | r | r | rect | 1
+docs-block-006 + label | block
+docs-block-006 + label | end
+docs-block-006 - block | group1 |  | composite | 2
+docs-block-006 - block | group2 |  | composite | 3
+docs-block-006 - block | h | h | rect | 1 | group1
+docs-block-006 - block | i | i | rect | 1 | group1
+docs-block-006 - block | j | j | rect | 1 | group1
+docs-block-006 - block | k | k | rect | 1 | group1
+docs-block-006 - block | l | l | rect | 1 | group2
+docs-block-006 - block | m | m | rect | 1 | group2
+docs-block-006 - block | n | n | rect | 1 | group2
+docs-block-006 - block | o | o | rect | 1 | group2
+docs-block-006 - block | p | p | rect | 1 | group2
+docs-block-006 - block | q | q | rect | 1 | group2
+docs-block-006 - block | r | r | rect | 1 | group2
+docs-block-007 + block | a | A label | rect | 1
+docs-block-007 + block | b | b | rect | 1
+docs-block-007 + block | block | block | rect | 1
+docs-block-007 + block | c | c | rect | 1
+docs-block-007 + block | d | d | rect | 1
+docs-block-007 + block | end | end | rect | 1
+docs-block-007 + label | block
+docs-block-007 + label | end
+docs-block-007 - block | a | A label | rect | 1 | anonymous-1
+docs-block-007 - block | anonymous-1 |  | composite | 1
+docs-block-007 - block | b | b | rect | 1 | anonymous-1
+docs-block-007 - block | c | c | rect | 1 | anonymous-1
+docs-block-007 - block | d | d | rect | 1 | anonymous-1
+docs-block-018 + block | blockArrowId | blockArrowId | rect | 1
+docs-block-018 + block | blockArrowId2 | blockArrowId2 | rect | 1
+docs-block-018 + block | blockArrowId3 | blockArrowId3 | rect | 1
+docs-block-018 + block | blockArrowId4 | blockArrowId4 | rect | 1
+docs-block-018 + block | blockArrowId5 | blockArrowId5 | rect | 1
+docs-block-018 + block | blockArrowId6 | blockArrowId6 | rect | 1
+docs-block-018 + block | blockArrowId7 | blockArrowId7 | rect | 1
+docs-block-018 + label | blockArrowId
+docs-block-018 + label | blockArrowId2
+docs-block-018 + label | blockArrowId3
+docs-block-018 + label | blockArrowId4
+docs-block-018 + label | blockArrowId5
+docs-block-018 + label | blockArrowId6
+docs-block-018 + label | blockArrowId7
+docs-block-018 - block | blockArrowId | Label | block_arrow | 1
+docs-block-018 - block | blockArrowId2 | Label | block_arrow | 1
+docs-block-018 - block | blockArrowId3 | Label | block_arrow | 1
+docs-block-018 - block | blockArrowId4 | Label | block_arrow | 1
+docs-block-018 - block | blockArrowId5 | Label | block_arrow | 1
+docs-block-018 - block | blockArrowId6 | Label | block_arrow | 1
+docs-block-018 - block | blockArrowId7 | Label | block_arrow | 1
+docs-block-018 - label | Label
+docs-block-018 - label | Label
+docs-block-018 - label | Label
+docs-block-018 - label | Label
+docs-block-018 - label | Label
+docs-block-018 - label | Label
+docs-block-018 - label | Label
+docs-block-020 - space |  | 3
+docs-block-020 - space |  | 3
+docs-block-022 - space |  | 2
+
+# ipjohnson/mermaider#28: nested blocks, block arrows and space widths. ipjohnson/mermaider#18: bracket shapes. ipjohnson/mermaider#11: style and classDef lines are drawn as blocks.
+docs-block-001 + block | A | A | rect | 1
+docs-block-001 + block | B | A wide one in the middle | rect | 1
+docs-block-001 + block | C | C | rect | 1
+docs-block-001 + block | block | block | rect | 1
+docs-block-001 + block | blockArrowId6 | blockArrowId6 | rect | 1
+docs-block-001 + block | db | ("DB" | rounded | 1
+docs-block-001 + block | end | end | rect | 1
+docs-block-001 + block | fill | fill | rect | 1
+docs-block-001 + block | style | style | rect | 1
+docs-block-001 + label | ("DB"
+docs-block-001 + label | block
+docs-block-001 + label | blockArrowId6
+docs-block-001 + label | end
+docs-block-001 + label | fill
+docs-block-001 + label | style
+docs-block-001 - block | A | A | rect | 1 | ID
+docs-block-001 - block | B | A wide one in the middle | rect | 1 | ID
+docs-block-001 - block | C | C | rect | 1 | ID
+docs-block-001 - block | ID |  | composite | 1
+docs-block-001 - block | blockArrowId6 |  | block_arrow | 1
+docs-block-001 - block | db | DB | circle | 1
+docs-block-001 - label | DB
+docs-block-023 + block | A | A | rect | 1
+docs-block-023 + block | B | A wide one in the middle | rect | 1
+docs-block-023 + block | C | C | rect | 1
+docs-block-023 + block | block | block | rect | 1
+docs-block-023 + block | blockArrowId6 | blockArrowId6 | rect | 1
+docs-block-023 + block | db | ("DB" | rounded | 1
+docs-block-023 + block | end | end | rect | 1
+docs-block-023 + block | fill | fill | rect | 1
+docs-block-023 + block | style | style | rect | 1
+docs-block-023 + label | ("DB"
+docs-block-023 + label | block
+docs-block-023 + label | blockArrowId6
+docs-block-023 + label | end
+docs-block-023 + label | fill
+docs-block-023 + label | style
+docs-block-023 - block | A | A | rect | 1 | ID
+docs-block-023 - block | B | A wide one in the middle | rect | 1 | ID
+docs-block-023 - block | C | C | rect | 1 | ID
+docs-block-023 - block | ID |  | composite | 1
+docs-block-023 - block | blockArrowId6 |  | block_arrow | 1
+docs-block-023 - block | db | DB | circle | 1
+docs-block-023 - label | DB
+docs-block-026 + block | back | back | rect | 1
+docs-block-026 + block | blockArrowId6 | blockArrowId6 | rect | 1
+docs-block-026 + block | class | class | rect | 1
+docs-block-026 + block | classDef | classDef | rect | 1
+docs-block-026 + block | down | down | rect | 1
+docs-block-026 + block | fill | fill | rect | 1
+docs-block-026 + block | front | front | rect | 1
+docs-block-026 + block | left | left | rect | 1
+docs-block-026 + label | back
+docs-block-026 + label | blockArrowId6
+docs-block-026 + label | class
+docs-block-026 + label | classDef
+docs-block-026 + label | down
+docs-block-026 + label | fill
+docs-block-026 + label | front
+docs-block-026 + label | left
+docs-block-026 - block | Database | Database | cyl | 1
+docs-block-026 - block | blockArrowId6 |  | block_arrow | 1
+docs-block-026 - block | down |  | block_arrow | 1
+docs-block-026 - block | left |  | block_arrow | 1
+docs-block-026 - label | Database
+docs-block-026 - space |  | 2
+docs-block-027 + block | Decision | Decision | rect | 1
+docs-block-027 + block | End | End | rect | 1
+docs-block-027 + block | Start | ("Start" | rounded | 1
+docs-block-027 + block | down | down | rect | 1
+docs-block-027 + block | downAgain | downAgain | rect | 1
+docs-block-027 + block | fill | fill | rect | 1
+docs-block-027 + block | r2 | r2 | rect | 1
+docs-block-027 + block | style | style | rect | 1
+docs-block-027 + label | ("Start"
+docs-block-027 + label | Decision
+docs-block-027 + label | down
+docs-block-027 + label | downAgain
+docs-block-027 + label | fill
+docs-block-027 + label | r2
+docs-block-027 + label | style
+docs-block-027 - block | Decision | Make Decision | hex | 1
+docs-block-027 - block | End | End | circle | 1
+docs-block-027 - block | Process1 | Process A | rect | 1
+docs-block-027 - block | Start | Start | circle | 1
+docs-block-027 - block | down |  | block_arrow | 1
+docs-block-027 - block | downAgain | No | block_arrow | 1
+docs-block-027 - block | r2 | Done | block_arrow | 1
+docs-block-027 - block | r3 | Done | block_arrow | 1
+docs-block-027 - block | right | Yes | block_arrow | 1
+docs-block-027 - label | Done
+docs-block-027 - label | Done
+docs-block-027 - label | Make Decision
+docs-block-027 - label | No
+docs-block-027 - label | Process A
+docs-block-027 - label | Start
+docs-block-027 - label | Yes
+docs-block-027 - space |  | 1
+docs-block-027 - space |  | 2
+docs-block-027 - space |  | 2
+docs-block-027 - space |  | 2
+docs-block-027 - space |  | 2
+
+# Unsupported, ipjohnson/mermaider#18: block diagram bracket shapes other than [ ] and ( ) are not read.
+docs-block-009 + block | id1 | ["This is the text in the box"] | rounded | 1
+docs-block-009 + label | ["This is the text in the box"]
+docs-block-009 - block | id1 | This is the text in the box | stadium | 1
+docs-block-009 - label | This is the text in the box
+docs-block-010 + block | id1 | ["This is the text in the box" | rect | 1
+docs-block-010 + label | ["This is the text in the box"
+docs-block-010 - block | id1 | This is the text in the box | fr-rect | 1
+docs-block-010 - label | This is the text in the box
+docs-block-011 + block | id1 | ("Database") | rect | 1
+docs-block-011 + label | ("Database")
+docs-block-011 - block | id1 | Database | cyl | 1
+docs-block-011 - label | Database
+docs-block-012 + block | id1 | ("This is the text in the circle" | rounded | 1
+docs-block-012 + label | ("This is the text in the circle"
+docs-block-012 - block | id1 | This is the text in the circle | circle | 1
+docs-block-012 - label | This is the text in the circle
+docs-block-013 + block | id1 | id1 | rect | 1
+docs-block-013 + label | id1
+docs-block-013 - block | id1 | This is the text in the box | odd | 1
+docs-block-013 - label | This is the text in the box
+docs-block-014 + block | id1 | id1 | rect | 1
+docs-block-014 + label | id1
+docs-block-014 - block | id1 | This is the text in the box | diam | 1
+docs-block-014 - label | This is the text in the box
+docs-block-015 + block | id1 | id1 | rect | 1
+docs-block-015 + label | id1
+docs-block-015 - block | id1 | This is the text in the box | hex | 1
+docs-block-015 - label | This is the text in the box
+docs-block-016 + block | A | /"Christmas"\ | rect | 1
+docs-block-016 + block | B | \"Go shopping"/ | rect | 1
+docs-block-016 + block | id1 | /"This is the text in the box"/ | rect | 1
+docs-block-016 + block | id2 | \"This is the text in the box"\ | rect | 1
+docs-block-016 + label | /"Christmas"\
+docs-block-016 + label | /"This is the text in the box"/
+docs-block-016 + label | \"Go shopping"/
+docs-block-016 + label | \"This is the text in the box"\
+docs-block-016 - block | A | Christmas | trap-b | 1
+docs-block-016 - block | B | Go shopping | trap-t | 1
+docs-block-016 - block | id1 | This is the text in the box | lean-r | 1
+docs-block-016 - block | id2 | This is the text in the box | lean-l | 1
+docs-block-016 - label | Christmas
+docs-block-016 - label | Go shopping
+docs-block-016 - label | This is the text in the box
+docs-block-016 - label | This is the text in the box
+docs-block-017 + block | id1 | (("This is the text in the circle" | rounded | 1
+docs-block-017 + label | (("This is the text in the circle"
+docs-block-017 - block | id1 | This is the text in the circle | dbl-circ | 1
+docs-block-017 - label | This is the text in the circle
+
+# ipjohnson/mermaider#11: block diagram classDef, class and style lines are drawn as blocks.
+docs-block-025 + block | blue | blue | rect | 1
+docs-block-025 + block | class | class | rect | 1
+docs-block-025 + block | classDef | classDef | rect | 1
+docs-block-025 + block | fill | fill | rect | 1
+docs-block-025 + block | style | style | rect | 1
+docs-block-025 + label | blue
+docs-block-025 + label | class
+docs-block-025 + label | classDef
+docs-block-025 + label | fill
+docs-block-025 + label | style
+docs-block-029 + block | fill | fill | rect | 1
+docs-block-029 + block | style | style | rect | 1
+docs-block-029 + label | fill
+docs-block-029 + label | style
+docs-block-030 + block | fill | fill | rect | 1
+docs-block-030 + block | style | style | rect | 1
+docs-block-030 + label | fill
+docs-block-030 + label | style
+
+# ipjohnson/mermaider#28: an edge whose ends declare their labels is dropped. ipjohnson/mermaider#11: style lines are drawn as blocks.
+docs-block-024 + block | fill | fill | rect | 1
+docs-block-024 + block | id1 | id1 | rect | 1
+docs-block-024 + block | id2 | id2 | rect | 1
+docs-block-024 + block | style | style | rect | 1
+docs-block-024 + label | fill
+docs-block-024 + label | id1
+docs-block-024 + label | id2
+docs-block-024 + label | style
+docs-block-024 - block | id1 | Start | rounded | 1
+docs-block-024 - block | id2 | Stop | rounded | 1
+docs-block-024 - edge | id1 | id2 | none | arrow
+docs-block-024 - label | Start
+docs-block-024 - label | Stop
+
+# Facts form: mermaid.js keeps a C4 Rel_Back with its from and to as written and draws the arrowhead at the start. Mermaider swaps the ends and draws the arrowhead at the end. Both draw the same arrow.
+docs-c4-003 + rel | backend_api | database | one | Reads from and writes to | sync, JDBC
+docs-c4-003 - rel | database | backend_api | one | Reads from and writes to | sync, JDBC
+docs-c4-004 + rel | sign | spa | one | Uses | JSON/HTTPS
+docs-c4-004 - rel | spa | sign | one | Uses | JSON/HTTPS
+
+# Facts form: mermaid.js's model holds a C4 deployment node's type as its lower-cased type text, Mermaider's facts hold the kind node. Mermaider draws the type text as mermaid.js does.
+docs-c4-006 + boundary | apache | node | Apache Tomcat | dn
+docs-c4-006 + boundary | apache2 | node | Apache Tomcat | bb2
+docs-c4-006 + boundary | bb2 | node | bigbank-web*** x4 | plc
+docs-c4-006 + boundary | bigbankdb01 | node | bigbank-db01 | plc
+docs-c4-006 + boundary | bigbankdb02 | node | bigbank-db02 | plc
+docs-c4-006 + boundary | browser | node | Web Browser | comp
+docs-c4-006 + boundary | comp | node | Customer's computer
+docs-c4-006 + boundary | dn | node | bigbank-api*** x8 | plc
+docs-c4-006 + boundary | mob | node | Customer's mobile device
+docs-c4-006 + boundary | oracle | node | Oracle - Primary | bigbankdb01
+docs-c4-006 + boundary | oracle2 | node | Oracle - Secondary | bigbankdb02
+docs-c4-006 + boundary | plc | node | Big Bank plc
+docs-c4-006 - boundary | apache | apache tomcat 8.x | Apache Tomcat | dn
+docs-c4-006 - boundary | apache2 | apache tomcat 8.x | Apache Tomcat | bb2
+docs-c4-006 - boundary | bb2 | ubuntu 16.04 lts | bigbank-web*** x4 | plc
+docs-c4-006 - boundary | bigbankdb01 | ubuntu 16.04 lts | bigbank-db01 | plc
+docs-c4-006 - boundary | bigbankdb02 | ubuntu 16.04 lts | bigbank-db02 | plc
+docs-c4-006 - boundary | browser | google chrome, mozilla firefox,<br/> apple safari or microsoft edge | Web Browser | comp
+docs-c4-006 - boundary | comp | microsoft windows or apple macos | Customer's computer
+docs-c4-006 - boundary | dn | ubuntu 16.04 lts | bigbank-api*** x8 | plc
+docs-c4-006 - boundary | mob | apple ios or android | Customer's mobile device
+docs-c4-006 - boundary | oracle | oracle 12c | Oracle - Primary | bigbankdb01
+docs-c4-006 - boundary | oracle2 | oracle 12c | Oracle - Secondary | bigbankdb02
+docs-c4-006 - boundary | plc | big bank plc data center | Big Bank plc
+
+# ipjohnson/mermaider#31: timeline and mindmap draw <br> literally, and mindmap ::icon, ::: and multi-line lines become nodes.
+docs-mindmap-001 + label | fa fa-book
+docs-mindmap-001 + node | mindmap / Origins / fa fa-book | rounded
+docs-mindmap-001 - icon | mindmap / Origins / Long history | fa:fa-book
+docs-mindmap-001 - label | On effectiveness and features
+docs-mindmap-012 + label | fa fa-book
+docs-mindmap-012 + label | mdi mdi-skull-outline
+docs-mindmap-012 + node | Root / fa fa-book | rounded
+docs-mindmap-012 + node | Root / mdi mdi-skull-outline | rounded
+docs-mindmap-012 - icon | Root / A | fa:fa-book
+docs-mindmap-012 - icon | Root / B | mdi:mdi-skull-outline
+docs-mindmap-013 + label | :::urgent large
+docs-mindmap-013 + node | Root / :::urgent large | default
+docs-mindmap-015 + label | id1["` Root with
+docs-mindmap-015 + node | id1["` Root with | default
+docs-mindmap-015 - label | **Root** with a second line Unicode works too: 🤓
+docs-mindmap-015 - label | Regular labels still works
+docs-mindmap-015 - label | The dog in **the** hog... a *very long text* that wraps to a new line
+docs-mindmap-015 - node | **Root** with a second line Unicode works too: 🤓 / Regular labels still works | rect
+docs-mindmap-015 - node | **Root** with a second line Unicode works too: 🤓 / The dog in **the** hog... a *very long text* that wraps to a new line | rect
+docs-mindmap-015 - node | **Root** with a second line Unicode works too: 🤓 | rect
+docs-timeline-003 - label | Machinery, Water power, Steam power
+docs-timeline-004 - label | People arrive from Europe and settle in Britain. They bring farming and metalworking.
+docs-timeline-004 - label | Sea levels rise and Britain becomes an island. The people who live here are hunter-gatherers.
+docs-timeline-004 - label | The last major building works are completed at Stonehenge. People now bury their dead in stone circles.
+docs-timeline-005 - label | 2023 Q1 Release Personal Tier
+docs-timeline-005 - label | 2023 Q2 Release XYZ Tier
+docs-timeline-005 - label | sub-point 3a
+docs-timeline-006 - label | 2023 Q1 Release Personal Tier
+docs-timeline-006 - label | 2023 Q2 Release XYZ Tier
+docs-timeline-006 - label | sub-point 3a
+
+# Facts form: mermaid.js's requirement model keeps the Markdown markers of a text (*italic* **bold**), which both engines draw as formatting. Mermaider's facts hold the text without them.
+docs-requirementDiagram-004 + label | italicized text bold text
+docs-requirementDiagram-004 + requirement | __test_req__ | requirement | 1 | italicized text bold text | high | test
+docs-requirementDiagram-004 - label | *italicized text* **bold text**
+docs-requirementDiagram-004 - requirement | __test_req__ | requirement | 1 | *italicized text* **bold text** | high | test
+
+# Facts form: mermaid.js records an explicit tree view icon(none) as the icon none. Mermaider reads it as no icon and has no fact. Neither draws an icon.
+docs-treeView-009 - icon | src / index.js | none
+
+# ipjohnson/mermaider#32: a small treemap leaf is drawn with its value and without its name.
+docs-treemap-008 - label | Company C
+
+# By design: Mermaider labels a venn set without a [label] by its name. mermaid.js 12.3.0 draws such a set without a label.
+docs-venn-001 + label | Desirable
+docs-venn-001 + label | Feasible
+docs-venn-001 + label | Viable
+docs-venn-001 + set | Desirable | Desirable | 10
+docs-venn-001 + set | Feasible | Feasible | 10
+docs-venn-001 + set | Viable | Viable | 10
+docs-venn-001 - set | Desirable |  | 10
+docs-venn-001 - set | Feasible |  | 10
+docs-venn-001 - set | Viable |  | 10
+docs-venn-002 + label | Desirable
+docs-venn-002 + label | Feasible
+docs-venn-002 + label | Viable
+docs-venn-002 + set | Desirable | Desirable | 10
+docs-venn-002 + set | Feasible | Feasible | 10
+docs-venn-002 + set | Viable | Viable | 10
+docs-venn-002 - set | Desirable |  | 10
+docs-venn-002 - set | Feasible |  | 10
+docs-venn-002 - set | Viable |  | 10
+docs-venn-003 + label | Backend
+docs-venn-003 + label | Frontend
+docs-venn-003 + set | Backend | Backend | 10
+docs-venn-003 + set | Frontend | Frontend | 10
+docs-venn-003 - set | Backend |  | 10
+docs-venn-003 - set | Frontend |  | 10
+docs-venn-005 + label | Desirable
+docs-venn-005 + label | Feasible
+docs-venn-005 + label | Viable
+docs-venn-005 + set | Desirable | Desirable | 10
+docs-venn-005 + set | Feasible | Feasible | 10
+docs-venn-005 + set | Viable | Viable | 10
+docs-venn-005 - set | Desirable |  | 10
+docs-venn-005 - set | Feasible |  | 10
+docs-venn-005 - set | Viable |  | 10

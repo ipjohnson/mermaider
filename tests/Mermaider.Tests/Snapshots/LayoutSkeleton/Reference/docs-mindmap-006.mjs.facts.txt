@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 19a347a297bd5484
+accept	yes
+drawn	yes
+label	I am a bang
+node	I am a bang	bang

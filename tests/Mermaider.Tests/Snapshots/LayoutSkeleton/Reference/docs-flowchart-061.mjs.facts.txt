@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b595757319467b19
+accept	yes
+drawn	yes
+node	A	Manual input	sl-rect

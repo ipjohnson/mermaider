@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source db4aa3083cae19b2
+accept	yes
+drawn	yes
+edge	API	Auth	none	arrow	solid
+edge	API	Orders	none	arrow	solid
+edge	Auth	UI	none	arrow	dotted	token
+edge	Orders	DB	none	arrow	solid
+edge	UI	API	none	arrow	solid
+edge	UI	Cache	none	arrow	solid
+group	Client	Client	Cache,UI
+group	Services	Services	API,Auth,Orders
+group	Storage	Storage	DB
+node	API	API gateway	rect
+node	Auth	Auth service	rect
+node	Cache	Local cache	cyl
+node	DB	Orders DB	cyl
+node	Orders	Order service	rect
+node	UI	Web app	rect

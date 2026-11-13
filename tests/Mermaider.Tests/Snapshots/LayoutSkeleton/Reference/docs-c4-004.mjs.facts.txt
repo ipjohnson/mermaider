@@ -1,0 +1,62 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e233a72687411e6b
+accept	yes
+boundary	api	container	API Application
+drawn	yes
+element	accounts	component	internal	Accounts Summary Controller	MVC Rest Controller	Provides customers with a summary of their bank accounts	api
+element	db	container_db	internal	Database	Relational Database Schema	Stores user registration information, hashed authentication credentials, access logs, etc.
+element	ma	container	internal	Mobile App	Xamarin	Provides a limited subset to the internet banking functionality to customers via their mobile device.
+element	mbs	system	external	Mainframe Banking System		Stores all of the core banking information about customers, accounts, transactions, etc.
+element	mbsfacade	component	internal	Mainframe Banking System Facade	Spring Bean	A facade onto the mainframe banking system.	api
+element	security	component	internal	Security Component	Spring Bean	Provides functionality related to singing in, changing passwords, etc.	api
+element	sign	component	internal	Sign In Controller	MVC Rest Controller	Allows users to sign in to the internet banking system	api
+element	spa	container	internal	Single Page Application	javascript and angular	Provides all the internet banking functionality to customers via their web browser.
+label	A facade onto the mainframe banking system.
+label	API Application
+label	Accounts Summary Controller
+label	Allows users to sign in to the internet banking system
+label	Component diagram for Internet Banking System - API Application
+label	Database
+label	JDBC
+label	JSON/HTTPS
+label	JSON/HTTPS
+label	JSON/HTTPS
+label	JSON/HTTPS
+label	MVC Rest Controller
+label	MVC Rest Controller
+label	Mainframe Banking System
+label	Mainframe Banking System Facade
+label	Mobile App
+label	Provides a limited subset to the internet banking functionality to customers via their mobile device.
+label	Provides all the internet banking functionality to customers via their web browser.
+label	Provides customers with a summary of their bank accounts
+label	Provides functionality related to singing in, changing passwords, etc.
+label	Read & write to
+label	Relational Database Schema
+label	Security Component
+label	Sign In Controller
+label	Single Page Application
+label	Spring Bean
+label	Spring Bean
+label	Stores all of the core banking information about customers, accounts, transactions, etc.
+label	Stores user registration information, hashed authentication credentials, access logs, etc.
+label	Uses
+label	Uses
+label	Uses
+label	Uses
+label	Uses
+label	Uses
+label	Uses
+label	XML/HTTPS
+label	Xamarin
+label	javascript and angular
+rel	accounts	mbsfacade	one	Uses
+rel	ma	accounts	one	Uses	JSON/HTTPS
+rel	ma	sign	one	Uses	JSON/HTTPS
+rel	mbsfacade	mbs	one	Uses	XML/HTTPS
+rel	security	db	one	Read & write to	JDBC
+rel	sign	security	one	Uses
+rel	spa	accounts	one	Uses	JSON/HTTPS
+rel	spa	sign	one	Uses	JSON/HTTPS
+title	Component diagram for Internet Banking System - API Application

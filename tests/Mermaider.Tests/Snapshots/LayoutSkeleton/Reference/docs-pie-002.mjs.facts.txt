@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0618966cc9f61ec4
+accept	yes
+drawn	yes
+label	Calcium
+label	Iron
+label	Key elements in Product X
+label	Magnesium
+label	Potassium
+showdata	yes
+slice	Calcium	42.96
+slice	Iron	5
+slice	Magnesium	10.01
+slice	Potassium	50.05
+title	Key elements in Product X

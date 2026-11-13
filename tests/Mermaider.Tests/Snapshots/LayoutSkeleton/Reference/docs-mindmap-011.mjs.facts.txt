@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source cb6a59b35b4a4c07
+accept	yes
+drawn	yes
+label	British popular psychology author Tony Buzan
+label	Creative techniques
+label	Long history
+label	Origins
+label	Popularisation
+label	Research
+label	Uses
+label	mindmap
+node	mindmap	circle
+node	mindmap / Origins	hex
+node	mindmap / Origins / Long history	rect
+node	mindmap / Origins / Long history / British popular psychology author Tony Buzan	default
+node	mindmap / Origins / Long history / Popularisation	default
+node	mindmap / Research	hex
+node	mindmap / Research / Uses	rect
+node	mindmap / Research / Uses / Creative techniques	default

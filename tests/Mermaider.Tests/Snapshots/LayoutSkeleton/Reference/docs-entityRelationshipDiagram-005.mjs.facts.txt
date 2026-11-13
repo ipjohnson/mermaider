@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 99e1dfb4c158699e
+accept	yes
+drawn	yes
+entity	This ❤ Unicode	This ❤ Unicode
+label	This ❤ Unicode

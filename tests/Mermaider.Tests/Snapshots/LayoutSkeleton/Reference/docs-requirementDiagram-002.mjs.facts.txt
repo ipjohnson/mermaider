@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 344e64eb9718eff0
+accept	yes
+drawn	yes
+element	checkout_service	service
+label	1
+label	1.1
+label	Card payments must be authorised.
+label	Orders must be payable online.
+label	checkout_req
+label	checkout_service
+label	contains
+label	payment_req
+label	satisfies
+label	service
+relation	checkout_req	payment_req	contains
+relation	checkout_service	payment_req	satisfies
+requirement	checkout_req	requirement	1	Orders must be payable online.	high	test
+requirement	payment_req	functional-requirement	1.1	Card payments must be authorised.	high	test

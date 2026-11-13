@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 20b3fefc8d096e4c
+accept	yes
+drawn	yes
+label	Accessories
+label	Clothing
+label	Computers
+label	Electronics
+label	Men's
+label	Phones
+label	Products
+label	Women's
+node	Products
+node	Products / Clothing
+node	Products / Clothing / Men's	40
+node	Products / Clothing / Women's	40
+node	Products / Electronics
+node	Products / Electronics / Accessories	20
+node	Products / Electronics / Computers	30
+node	Products / Electronics / Phones	50

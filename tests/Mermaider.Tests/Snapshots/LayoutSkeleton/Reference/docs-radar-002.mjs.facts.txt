@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d61082d634c469eb
+accept	yes
+axis	Ambiance
+axis	Food Quality
+axis	Price
+axis	Service
+curve	Restaurant A	4,3,2,4
+curve	Restaurant B	3,4,3,3
+curve	Restaurant C	2,3,4,2
+curve	Restaurant D	2,2,4,3
+drawn	yes
+label	Ambiance
+label	Food Quality
+label	Price
+label	Restaurant A
+label	Restaurant B
+label	Restaurant C
+label	Restaurant Comparison
+label	Restaurant D
+label	Service
+title	Restaurant Comparison

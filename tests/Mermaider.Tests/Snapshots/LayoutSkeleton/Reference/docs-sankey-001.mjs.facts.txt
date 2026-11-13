@@ -1,0 +1,121 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c6739c6a83029fbe
+accept	yes
+drawn	yes
+flow	Agricultural 'waste'	Bio-conversion	124.729
+flow	Bio-conversion	Gas	81.144
+flow	Bio-conversion	Liquid	0.597
+flow	Bio-conversion	Losses	26.862
+flow	Bio-conversion	Solid	280.322
+flow	Biofuel imports	Liquid	35
+flow	Biomass imports	Solid	35
+flow	Coal	Solid	75.571
+flow	Coal imports	Coal	11.606
+flow	Coal reserves	Coal	63.965
+flow	District heating	Heating and cooling - commercial	22.505
+flow	District heating	Heating and cooling - homes	46.184
+flow	District heating	Industry	10.639
+flow	Electricity grid	Agriculture	4.412
+flow	Electricity grid	H2 conversion	27.14
+flow	Electricity grid	Heating and cooling - commercial	40.858
+flow	Electricity grid	Heating and cooling - homes	113.726
+flow	Electricity grid	Industry	342.165
+flow	Electricity grid	Lighting & appliances - commercial	90.008
+flow	Electricity grid	Lighting & appliances - homes	93.494
+flow	Electricity grid	Losses	56.691
+flow	Electricity grid	Over generation / exports	104.453
+flow	Electricity grid	Rail transport	7.863
+flow	Electricity grid	Road transport	37.797
+flow	Gas	Agriculture	2.096
+flow	Gas	Heating and cooling - commercial	0.129
+flow	Gas	Industry	48.58
+flow	Gas	Losses	1.401
+flow	Gas	Thermal generation	151.891
+flow	Gas imports	Ngas	40.719
+flow	Gas reserves	Ngas	82.233
+flow	Geothermal	Electricity grid	7.013
+flow	H2	Road transport	20.897
+flow	H2 conversion	H2	20.897
+flow	H2 conversion	Losses	6.242
+flow	Hydro	Electricity grid	6.995
+flow	Liquid	Agriculture	3.64
+flow	Liquid	Domestic aviation	14.458
+flow	Liquid	Industry	121.066
+flow	Liquid	International aviation	206.267
+flow	Liquid	International shipping	128.69
+flow	Liquid	National navigation	33.218
+flow	Liquid	Rail transport	4.413
+flow	Liquid	Road transport	135.835
+flow	Marine algae	Bio-conversion	4.375
+flow	Ngas	Gas	122.952
+flow	Nuclear	Thermal generation	839.978
+flow	Oil	Liquid	611.99
+flow	Oil imports	Oil	504.287
+flow	Oil reserves	Oil	107.703
+flow	Other waste	Bio-conversion	77.81
+flow	Other waste	Solid	56.587
+flow	Pumped heat	Heating and cooling - commercial	70.672
+flow	Pumped heat	Heating and cooling - homes	193.026
+flow	Solar	Solar PV	59.901
+flow	Solar	Solar Thermal	19.263
+flow	Solar PV	Electricity grid	59.901
+flow	Solar Thermal	Heating and cooling - homes	19.263
+flow	Solid	Agriculture	0.882
+flow	Solid	Industry	46.477
+flow	Solid	Thermal generation	400.12
+flow	Thermal generation	District heating	79.329
+flow	Thermal generation	Electricity grid	525.531
+flow	Thermal generation	Losses	787.129
+flow	Tidal	Electricity grid	9.452
+flow	UK land based bioenergy	Bio-conversion	182.01
+flow	Wave	Electricity grid	19.013
+flow	Wind	Electricity grid	289.366
+label	Agricultural 'waste'
+label	Agriculture
+label	Bio-conversion
+label	Biofuel imports
+label	Biomass imports
+label	Coal
+label	Coal imports
+label	Coal reserves
+label	District heating
+label	Domestic aviation
+label	Electricity grid
+label	Gas
+label	Gas imports
+label	Gas reserves
+label	Geothermal
+label	H2
+label	H2 conversion
+label	Heating and cooling - commercial
+label	Heating and cooling - homes
+label	Hydro
+label	Industry
+label	International aviation
+label	International shipping
+label	Lighting & appliances - commercial
+label	Lighting & appliances - homes
+label	Liquid
+label	Losses
+label	Marine algae
+label	National navigation
+label	Ngas
+label	Nuclear
+label	Oil
+label	Oil imports
+label	Oil reserves
+label	Other waste
+label	Over generation / exports
+label	Pumped heat
+label	Rail transport
+label	Road transport
+label	Solar
+label	Solar PV
+label	Solar Thermal
+label	Solid
+label	Thermal generation
+label	Tidal
+label	UK land based bioenergy
+label	Wave
+label	Wind

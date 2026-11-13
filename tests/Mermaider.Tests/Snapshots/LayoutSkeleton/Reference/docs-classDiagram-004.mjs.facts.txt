@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2f728b32041c165b
+accept	yes
+attribute	BankAccount	+Bigdecimal balance
+attribute	BankAccount	+String owner
+bbox	node	BankAccount	12	12	211.5	189
+canvas	4	-46	219.5	197
+class	BankAccount	BankAccount
+drawn	yes
+method	BankAccount	+deposit(amount)
+method	BankAccount	+withdrawal(amount)

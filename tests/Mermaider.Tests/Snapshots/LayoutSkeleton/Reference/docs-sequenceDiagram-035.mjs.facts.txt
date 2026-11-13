@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 942c34f9cb6c3d14
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+bbox	label	I ♥ you ∞ times more!	162.8	138.1	315.3	155.5
+bbox	label	I ♥ you!	206.5	94.1	259.5	111.5
+bbox	node	A	0	0	150	73
+bbox	node	A	0	181	150	254
+bbox	node	B	322	0	472	73
+bbox	node	B	322	181	472	254
+canvas	-50	-10	522	295
+drawn	yes
+message	A	B	solid	filled	I ♥ you!
+message	B	A	solid	filled	I ♥ you ∞ times more!

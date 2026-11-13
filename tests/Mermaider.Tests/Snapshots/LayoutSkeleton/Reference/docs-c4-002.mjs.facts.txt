@@ -1,0 +1,58 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bc80e69a491d5868
+accept	yes
+boundary	b0	enterprise	BankBoundary0
+boundary	b1	enterprise	BankBoundary	b0
+boundary	b2	system	BankBoundary2	b1
+boundary	b3	boundary	BankBoundary3	b1
+drawn	yes
+element	SystemA	system	internal	Banking System A			b2
+element	SystemAA	system	internal	Internet Banking System		Allows customers to view information about their bank accounts, and make payments.	b0
+element	SystemB	system	internal	Banking System B		A system of the bank, with personal bank accounts. next line.	b2
+element	SystemC	system	external	E-mail system		The internal Microsoft Exchange e-mail system.	b1
+element	SystemD	system_db	internal	Banking System D Database		A system of the bank, with personal bank accounts.	b1
+element	SystemE	system_db	external	Mainframe Banking System		Stores all of the core banking information about customers, accounts, transactions, etc.	b1
+element	SystemF	system_queue	internal	Banking System F Queue		A system of the bank.	b3
+element	SystemG	system_queue	external	Banking System G Queue		A system of the bank, with personal bank accounts.	b3
+element	customerA	person	internal	Banking Customer A		A customer of the bank, with personal bank accounts.	b0
+element	customerB	person	internal	Banking Customer B			b0
+element	customerC	person	external	Banking Customer C		desc	b0
+element	customerD	person	internal	Banking Customer D		A customer of the bank, with personal bank accounts.	b0
+label	A customer of the bank, with personal bank accounts.
+label	A customer of the bank, with personal bank accounts.
+label	A system of the bank, with personal bank accounts.
+label	A system of the bank, with personal bank accounts.
+label	A system of the bank, with personal bank accounts. next line.
+label	A system of the bank.
+label	Allows customers to view information about their bank accounts, and make payments.
+label	BankBoundary
+label	BankBoundary0
+label	BankBoundary2
+label	BankBoundary3
+label	Banking Customer A
+label	Banking Customer B
+label	Banking Customer C
+label	Banking Customer D
+label	Banking System A
+label	Banking System B
+label	Banking System D Database
+label	Banking System F Queue
+label	Banking System G Queue
+label	E-mail system
+label	Internet Banking System
+label	Mainframe Banking System
+label	SMTP
+label	Sends e-mails
+label	Sends e-mails to
+label	Stores all of the core banking information about customers, accounts, transactions, etc.
+label	System Context diagram for Internet Banking System
+label	The internal Microsoft Exchange e-mail system.
+label	Uses
+label	Uses
+label	desc
+rel	SystemAA	SystemC	one	Sends e-mails	SMTP
+rel	SystemAA	SystemE	both	Uses
+rel	SystemC	customerA	one	Sends e-mails to
+rel	customerA	SystemAA	both	Uses
+title	System Context diagram for Internet Banking System

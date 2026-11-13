@@ -1,0 +1,32 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ab0098ce21b8fb1a
+accept	yes
+actor	API	API gateway	participant
+actor	Bank	Bank	participant
+actor	Customer	Customer	actor
+actor	Web	Web app	participant
+bbox	label	201 Created	331.6	261	418.4	279.4
+bbox	label	Approved	545.2	217	612.8	235.5
+bbox	label	Authorise payment	508.5	173	643.4	191.5
+bbox	label	Order confirmed	117.7	305	236.3	323.4
+bbox	label	POST /orders	326.6	129	421.4	147.4
+bbox	label	Place order	132.9	85	215.1	103.4
+bbox	node	API	400	0	550	65
+bbox	node	API	400	398	550	463
+bbox	node	Bank	600	0	750	65
+bbox	node	Bank	600	398	750	463
+bbox	node	Customer	41	-5	109	76.7
+bbox	node	Customer	41	393	109	474.7
+bbox	node	Web	200	0	350	65
+bbox	node	Web	200	398	350	463
+bbox	note	One order, one transaction	50	339	700	378
+canvas	-50	-10	800	474
+drawn	yes
+message	API	Bank	solid	filled	Authorise payment
+message	API	Web	dashed	filled	201 Created
+message	Bank	API	dashed	filled	Approved
+message	Customer	Web	solid	filled	Place order
+message	Web	API	solid	filled	POST /orders
+message	Web	Customer	dashed	filled	Order confirmed
+note	over	Customer,Bank	One order, one transaction

@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ae91d8c13908d53c
+accept	yes
+attribute	Square	-List<string> messages
+attribute	Square	List<int> position
+attribute	Square	int id
+bbox	node	Square	12	12	329	273
+canvas	4	4	337	281
+class	Square	Square<Shape>
+drawn	yes
+method	Square	+getDistanceMatrix() : List<List<int>>
+method	Square	+getMessages() : List<string>
+method	Square	+setMessages(List<string> messages)
+method	Square	getPoints() : List<int>
+method	Square	setPoints(List<int> points)
