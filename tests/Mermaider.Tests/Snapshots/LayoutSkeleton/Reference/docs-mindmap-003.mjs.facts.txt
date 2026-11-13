@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 43863c877bb21c72
+accept	yes
+drawn	yes
+label	I am a square
+node	I am a square	rect

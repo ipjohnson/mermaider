@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 389b20dbb0e53539
+accept	yes
+bbox	label	*	67.7	159.5	76.7	176
+bbox	label	1	168.3	97	177.3	113.5
+bbox	label	1	45.6	97	54.6	113.5
+bbox	label	1..*	190.4	159.5	226.4	176
+bbox	label	Contains	264.4	199.8	319.7	220.8
+bbox	label	many	303.4	313	339.4	329.5
+bbox	node	Course	143.3	186	215.5	267
+bbox	node	Customer	12	12	101.4	93
+bbox	node	Galaxy	257.5	12	327.4	93
+bbox	node	Star	266.8	339.5	318.1	420.5
+bbox	node	Student	141.4	12	217.5	93
+bbox	node	Ticket	24.6	186	88.8	267
+canvas	4	4	347.4	428.5
+class	Course	Course
+class	Customer	Customer
+class	Galaxy	Galaxy
+class	Star	Star
+class	Student	Student
+class	Ticket	Ticket
+drawn	yes
+relation	Customer	Ticket	none	arrow	solid		1	*
+relation	Galaxy	Star	none	arrow	solid	Contains		many
+relation	Student	Course	none	arrow	solid		1	1..*

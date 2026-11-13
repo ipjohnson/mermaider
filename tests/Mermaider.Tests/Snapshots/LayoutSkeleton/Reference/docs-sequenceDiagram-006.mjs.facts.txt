@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 09a6b5bea4819db4
+accept	yes
+actor	Alice	Alice	boundary
+actor	Bob	Bob	participant
+bbox	label	Request from boundary	99.4	94.1	266.6	111.5
+bbox	label	Response to boundary	108.5	138.1	269.5	155.5
+bbox	node	Alice	20	0	97	67
+bbox	node	Alice	20	187	97	254
+bbox	node	Bob	221	0	371	73
+bbox	node	Bob	221	181	371	254
+canvas	-50	-10	421	295
+drawn	yes
+message	Alice	Bob	solid	filled	Request from boundary
+message	Bob	Alice	solid	filled	Response to boundary

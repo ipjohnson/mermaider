@@ -1,0 +1,32 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 01f53b9e79db0fe3
+accept	yes
+attribute	Animal	+String gender
+attribute	Animal	+int age
+attribute	Duck	+String beakColor
+attribute	Fish	-int sizeInFeet
+attribute	Zebra	+bool is_wild
+bbox	node	Animal	102.8	12	242.4	189
+bbox	node	Duck	435.9	249	589.5	405
+bbox	node	Fish	12	249	138.3	384
+bbox	node	Zebra	178.3	249	302	384
+bbox	note	From Duck till Zebra	282.4	84	420.4	117
+bbox	note	can fly can swim can dive can help in debugging	460.4	93	609.4	189
+canvas	4	-46	617.4	413
+class	Animal	Animal
+class	Duck	Duck
+class	Fish	Fish
+class	Zebra	Zebra
+drawn	yes
+method	Animal	+isMammal()
+method	Animal	+mate()
+method	Duck	+quack()
+method	Duck	+swim()
+method	Fish	-canEat()
+method	Zebra	+run()
+note		From Duck till Zebra
+note	Duck	can fly can swim can dive can help in debugging
+relation	Animal	Duck	triangle	none	solid
+relation	Animal	Fish	triangle	none	solid
+relation	Animal	Zebra	triangle	none	solid

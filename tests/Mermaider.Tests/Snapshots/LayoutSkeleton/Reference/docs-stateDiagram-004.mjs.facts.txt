@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9921022022234a8b
+accept	yes
+drawn	yes
+edge	Draft	Submitted	none	arrow	solid	submit
+edge	Published	[*]end@root	none	arrow	solid
+edge	Review	Draft	none	arrow	solid	rejected
+edge	Review	Published	none	arrow	solid	approved
+edge	Screening	Decision	none	arrow	solid
+edge	Submitted	Review	none	arrow	solid
+edge	[*]start@Review	Screening	none	arrow	solid
+edge	[*]start@root	Draft	none	arrow	solid
+group	Review	Review	Decision,Screening,[*]start@Review
+node	Decision	Decision	rounded
+node	Draft	Draft	rounded
+node	Published	Published	rounded
+node	Screening	Screening	rounded
+node	Submitted	Submitted	rounded
+node	[*]end@root		fr-circ
+node	[*]start@Review		sm-circ
+node	[*]start@root		sm-circ

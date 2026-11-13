@@ -1,0 +1,65 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 96b1a834b23451a3
+accept	yes
+boundary	c1	container	Internet Banking
+drawn	yes
+element	backend_api	container_db	external	API Application	Java, Docker Container	Provides Internet banking functionality via API	c1
+element	banking_system	system	external	Mainframe Banking System		Stores all of the core banking information about customers, accounts, transactions, etc.
+element	customer	person	internal	Customer		A customer of the bank, with personal bank accounts
+element	database	container_db	internal	Database	SQL Database	Stores user registration information, hashed auth credentials, access logs, etc.	c1
+element	email_system	system	external	E-Mail System		The internal Microsoft Exchange system
+element	mobile_app	container	external	Mobile App	C#, Xamarin	Provides a limited subset of the Internet banking functionality to customers via their mobile device	c1
+element	spa	container	internal	Single-Page App	JavaScript, Angular	Provides all the Internet banking functionality to customers via their web browser	c1
+element	web_app	container	internal	Web Application	Java, Spring MVC	Delivers the static content and the Internet banking SPA	c1
+label	A customer of the bank, with personal bank accounts
+label	API Application
+label	C#, Xamarin
+label	Container diagram for Internet Banking System
+label	Customer
+label	Database
+label	Delivers
+label	Delivers the static content and the Internet banking SPA
+label	E-Mail System
+label	HTTPS
+label	HTTPS
+label	Internet Banking
+label	Java, Docker Container
+label	Java, Spring MVC
+label	JavaScript, Angular
+label	Mainframe Banking System
+label	Mobile App
+label	Provides Internet banking functionality via API
+label	Provides a limited subset of the Internet banking functionality to customers via their mobile device
+label	Provides all the Internet banking functionality to customers via their web browser
+label	Reads from and writes to
+label	SQL Database
+label	Sends e-mails to
+label	Sends e-mails using
+label	Single-Page App
+label	Stores all of the core banking information about customers, accounts, transactions, etc.
+label	Stores user registration information, hashed auth credentials, access logs, etc.
+label	The internal Microsoft Exchange system
+label	Uses
+label	Uses
+label	Uses
+label	Uses
+label	Uses
+label	Uses
+label	Web Application
+label	async, JSON/HTTPS
+label	async, JSON/HTTPS
+label	sync, JDBC
+label	sync, SMTP
+label	sync/async, XML/HTTPS
+rel	backend_api	banking_system	one	Uses	sync/async, XML/HTTPS
+rel	backend_api	email_system	one	Sends e-mails using	sync, SMTP
+rel	customer	mobile_app	one	Uses
+rel	customer	spa	one	Uses	HTTPS
+rel	customer	web_app	one	Uses	HTTPS
+rel	database	backend_api	one	Reads from and writes to	sync, JDBC
+rel	email_system	customer	one	Sends e-mails to
+rel	mobile_app	backend_api	one	Uses	async, JSON/HTTPS
+rel	spa	backend_api	one	Uses	async, JSON/HTTPS
+rel	web_app	spa	one	Delivers
+title	Container diagram for Internet Banking System

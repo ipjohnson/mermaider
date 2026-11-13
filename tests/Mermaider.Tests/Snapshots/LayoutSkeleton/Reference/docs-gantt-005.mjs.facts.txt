@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4cd3811ad968ce17
+accept	yes
+drawn	yes
+label	Final milestone
+label	Initial milestone
+label	Task A
+label	Task B
+task		Final milestone	m2	2000-01-01 18:08	2000-01-01 18:12	milestone
+task		Initial milestone	m1	2000-01-01 17:49	2000-01-01 17:51	milestone
+task		Task A		2000-01-01 17:51	2000-01-01 18:01
+task		Task B		2000-01-01 18:01	2000-01-01 18:06

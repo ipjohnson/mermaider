@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 534a9ea547b5f63e
+accept	yes
+bbox	node	Animal	12	12	82.7	93
+bbox	node	Zebra	16.3	133	78.4	214
+canvas	4	4	90.7	222
+class	Animal	Animal
+class	Zebra	Zebra
+drawn	yes
+relation	Animal	Zebra	triangle	triangle	solid

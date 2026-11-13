@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 885c8b1b173cbaf7
+accept	yes
+drawn	yes
+edge	[*]start@First	second	none	arrow	solid
+edge	[*]start@NamedComposite	namedSimple	none	arrow	solid
+edge	[*]start@root	First	none	arrow	solid
+edge	[*]start@root	NamedComposite	none	arrow	solid
+edge	namedSimple	[*]end@NamedComposite	none	arrow	solid
+edge	second	[*]end@First	none	arrow	solid
+group	First	First	[*]end@First,[*]start@First,second
+group	NamedComposite	Another Composite	[*]end@NamedComposite,[*]start@NamedComposite,namedSimple
+node	[*]end@First		fr-circ
+node	[*]end@NamedComposite		fr-circ
+node	[*]start@First		sm-circ
+node	[*]start@NamedComposite		sm-circ
+node	[*]start@root		sm-circ
+node	namedSimple	Another simple	rounded
+node	second	second	rounded

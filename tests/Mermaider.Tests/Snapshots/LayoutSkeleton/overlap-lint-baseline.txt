@@ -6,3 +6,9 @@
 # ipjohnson/AgentDriver#4282: sibling class namespaces are drawn inside each other.
 cs-namespaces group-overlap 1
 cs-namespace-duplicate group-overlap 1
+docs-classDiagram-020 group-overlap 1
+docs-classDiagram-021 group-overlap 1
+docs-classDiagram-022 group-overlap 1
+
+# ipjohnson/mermaider#33: a free class note overlaps a note for a class.
+docs-classDiagram-001 note-overlap 1

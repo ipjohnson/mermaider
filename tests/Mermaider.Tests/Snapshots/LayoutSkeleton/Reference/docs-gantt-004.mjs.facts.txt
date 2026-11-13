@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 908a1947f25e930b
+accept	yes
+drawn	yes
+label	A Gantt Diagram Excluding Fri - Sat weekends
+label	A task
+label	Another task
+label	Section
+section	Section
+task	Section	A task	a1	2024-01-01 00:00	2024-02-12 00:00
+task	Section	Another task		2024-02-12 00:00	2024-03-11 00:00
+title	A Gantt Diagram Excluding Fri - Sat weekends

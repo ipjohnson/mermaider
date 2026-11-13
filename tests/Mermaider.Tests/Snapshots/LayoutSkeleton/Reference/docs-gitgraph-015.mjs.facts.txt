@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2ea996869e041ddf
+accept	no
+# error Trying to checkout branch which is not yet created. (Help try using "branch MetroLine1")

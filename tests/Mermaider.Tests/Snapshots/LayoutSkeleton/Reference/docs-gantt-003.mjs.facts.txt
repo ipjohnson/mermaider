@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c79e89c00972e73f
+accept	yes
+drawn	yes
+label	apple
+label	banana
+label	cherry
+label	kiwi
+task		apple	a	2017-07-20 00:00	2017-07-27 00:00
+task		banana	b	2017-07-23 00:00	2017-07-24 00:00	crit
+task		cherry	c	2017-07-27 00:00	2017-07-28 00:00	active
+task		kiwi	d	2017-07-20 00:00	2017-07-23 00:00

@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 64765bbdf6549438
+accept	yes
+attribute	PERSON	string	firstName
+attribute	PERSON	string	lastName
+attribute	PERSON	string?	middleName
+drawn	yes
+entity	PERSON	PERSON
+label	PERSON
+label	firstName
+label	lastName
+label	middleName
+label	string
+label	string
+label	string?

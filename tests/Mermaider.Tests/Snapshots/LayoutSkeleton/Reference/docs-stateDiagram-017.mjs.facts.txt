@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 17d68bbfe39896a1
+accept	yes
+drawn	yes
+edge	CapsLockOff	CapsLockOn	none	arrow	solid	EvCapsLockPressed
+edge	CapsLockOn	CapsLockOff	none	arrow	solid	EvCapsLockPressed
+edge	NumLockOff	NumLockOn	none	arrow	solid	EvNumLockPressed
+edge	NumLockOn	NumLockOff	none	arrow	solid	EvNumLockPressed
+edge	ScrollLockOff	ScrollLockOn	none	arrow	solid	EvScrollLockPressed
+edge	ScrollLockOn	ScrollLockOff	none	arrow	solid	EvScrollLockPressed
+edge	[*]start@divider-id-1	NumLockOff	none	arrow	solid
+edge	[*]start@divider-id-2	CapsLockOff	none	arrow	solid
+edge	[*]start@divider-id-3	ScrollLockOff	none	arrow	solid
+edge	[*]start@root	Active	none	arrow	solid
+group	Active	Active	divider-id-1,divider-id-2,divider-id-3
+group	divider-id-1		NumLockOff,NumLockOn,[*]start@divider-id-1
+group	divider-id-2		CapsLockOff,CapsLockOn,[*]start@divider-id-2
+group	divider-id-3		ScrollLockOff,ScrollLockOn,[*]start@divider-id-3
+node	CapsLockOff	CapsLockOff	rounded
+node	CapsLockOn	CapsLockOn	rounded
+node	NumLockOff	NumLockOff	rounded
+node	NumLockOn	NumLockOn	rounded
+node	ScrollLockOff	ScrollLockOff	rounded
+node	ScrollLockOn	ScrollLockOn	rounded
+node	[*]start@divider-id-1		sm-circ
+node	[*]start@divider-id-2		sm-circ
+node	[*]start@divider-id-3		sm-circ
+node	[*]start@root		sm-circ

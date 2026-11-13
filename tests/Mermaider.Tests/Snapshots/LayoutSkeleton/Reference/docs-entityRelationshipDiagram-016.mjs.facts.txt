@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 33d261ba8ae1b647
+accept	yes
+drawn	yes
+entity	CUSTOMER	CUSTOMER
+label	CUSTOMER

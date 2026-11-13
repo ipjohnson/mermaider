@@ -1,0 +1,30 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 07788f7e3ced9064
+accept	yes
+actor	API	API	participant
+actor	BillingService	BillingService	participant
+actor	BookingService	BookingService	participant
+actor	Consumer	Consumer	participant
+bbox	label	Book something	116.6	93.9	231.4	111.5
+bbox	label	Start billing process	408.2	294.9	547.8	312.5
+bbox	label	Start booking process	300.6	137.9	455.4	155.5
+bbox	label	[when the booking	135.1	174.8	264.9	192.4
+bbox	label	break	64	171	114	206
+bbox	label	process fails]	153.3	191.8	246.7	209.3
+bbox	label	show failure	134.3	240.9	219.7	258.4
+bbox	node	API	200	0	350	73
+bbox	node	API	200	338	350	411
+bbox	node	BillingService	609	0	759	73
+bbox	node	BillingService	609	338	759	411
+bbox	node	BookingService	409	0	559	73
+bbox	node	BookingService	409	338	559	411
+bbox	node	Consumer	0	0	150	73
+bbox	node	Consumer	0	338	150	411
+block	break	when the booking process fails
+canvas	-50	-10	809	452
+drawn	yes
+message	API	BillingService	dashed	none	Start billing process
+message	API	BookingService	dashed	none	Start booking process
+message	API	Consumer	dashed	none	show failure
+message	Consumer	API	dashed	none	Book something

@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c8329226c7005848
+accept	yes
+drawn	yes
+node	id1	This is the text in the box	rounded

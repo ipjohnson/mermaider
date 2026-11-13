@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 48358a7c12b012d9
+accept	yes
+drawn	yes
+field	0	15	Source Port
+field	100	105	Reserved
+field	106	106	URG
+field	107	107	ACK
+field	108	108	PSH
+field	109	109	RST
+field	110	110	SYN
+field	111	111	FIN
+field	112	127	Window
+field	128	143	Checksum
+field	144	159	Urgent Pointer
+field	16	31	Destination Port
+field	160	191	(Options and Padding)
+field	192	255	Data (variable length)
+field	32	63	Sequence Number
+field	64	95	Acknowledgment Number
+field	96	99	Data Offset
+label	(Options and Padding)
+label	ACK
+label	Acknowledgment Number
+label	Checksum
+label	Data (variable length)
+label	Data Offset
+label	Destination Port
+label	FIN
+label	PSH
+label	RST
+label	Reserved
+label	SYN
+label	Sequence Number
+label	Source Port
+label	URG
+label	Urgent Pointer
+label	Window

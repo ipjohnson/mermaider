@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1d2ef9d1ea44d352
+accept	yes
+block	id1	This is the text in the circle	dbl-circ	1
+drawn	yes
+label	This is the text in the circle

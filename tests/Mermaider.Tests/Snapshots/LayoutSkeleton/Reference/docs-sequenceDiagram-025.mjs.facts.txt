@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 40a5ae34a0899545
+accept	yes
+actor	Alice	Alice Johnson	participant
+actor	John	John	participant
+bbox	label	Hello John,	135	111.1	215	128.2
+bbox	label	how are you?	127	128.1	223	145.5
+bbox	node	Alice	0	0	150	90
+bbox	node	Alice	0	235	150	325
+bbox	node	John	200	0	350	90
+bbox	node	John	200	235	350	325
+bbox	note	A typical interaction	50	161	300	215
+canvas	-50	-10	400	366
+drawn	yes
+message	Alice	John	solid	none	Hello John, how are you?
+note	over	Alice,John	A typical interaction But now in two lines

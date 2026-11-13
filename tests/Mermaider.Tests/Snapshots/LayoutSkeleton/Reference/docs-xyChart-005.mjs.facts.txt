@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 55d282bc9b85f6b3
+accept	yes
+drawn	yes
+label	Genres in top 100 book survey of 2025
+label	Number of Books
+label	comedy
+label	crime
+label	mystery
+label	non fiction
+label	other
+label	romance
+series	bar	12,2,20,25,17,24
+title	Genres in top 100 book survey of 2025
+x-axis		comedy,romance,mystery,crime,non fiction,other
+y-axis	Number of Books

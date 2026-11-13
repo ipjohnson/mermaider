@@ -8,7 +8,9 @@ namespace Mermaider.Tests.Snapshots.MjsFacts;
 
 /// <summary>
 /// The sources compared with mermaid.js: the gallery examples of every diagram type, the sources of the flowchart, state,
-/// class, sequence, ER and architecture spec tests, and the committed repro files in <c>Cases/</c>.
+/// class, sequence, ER and architecture spec tests, the committed repro files in <c>Cases/</c>, and the examples of
+/// mermaid's syntax docs in <c>Docs/</c> (scripts/mermaid-docs-corpus.py writes them; <c>Docs/SOURCE.txt</c> names the
+/// docs commit).
 /// </summary>
 internal static partial class MjsCorpus
 {
@@ -19,6 +21,8 @@ internal static partial class MjsCorpus
 	private static string Here([CallerFilePath] string path = "") => Path.GetDirectoryName(path)!;
 
 	public static string CasesDir => Path.Combine(Here(), "Cases");
+
+	public static string DocsDir => Path.Combine(Here(), "Docs");
 
 	/// <summary>The mermaid.js facts sit beside the layout skeleton references they share case names with.</summary>
 	public static string FactsDir => Path.GetFullPath(Path.Combine(Here(), "..", "LayoutSkeleton", "Reference"));
@@ -70,12 +74,13 @@ internal static partial class MjsCorpus
 					cases.Add(new Case(prefix + Kebab(method), source));
 		}
 
-		cases.AddRange(
-			Directory
-				.EnumerateFiles(CasesDir, "*.mmd")
-				.Order(StringComparer.Ordinal)
-				.Select(f => new Case(Path.GetFileNameWithoutExtension(f), File.ReadAllText(f)))
-		);
+		foreach (var dir in new[] { CasesDir, DocsDir })
+			cases.AddRange(
+				Directory
+					.EnumerateFiles(dir, "*.mmd")
+					.Order(StringComparer.Ordinal)
+					.Select(f => new Case(Path.GetFileNameWithoutExtension(f), File.ReadAllText(f)))
+			);
 
 		var duplicate = cases.GroupBy(c => c.Name).FirstOrDefault(g => g.Count() > 1);
 		return duplicate is not null ? throw new InvalidOperationException($"Two corpus cases are named '{duplicate.Key}'") : cases;

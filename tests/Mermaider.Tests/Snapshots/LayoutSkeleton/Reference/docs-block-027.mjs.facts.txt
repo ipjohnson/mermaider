@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 668adabdd9df94a6
+accept	yes
+block	Decision	Make Decision	hex	1
+block	End	End	circle	1
+block	Process1	Process A	rect	1
+block	Process2	Process B	rect	1
+block	Start	Start	circle	1
+block	down		block_arrow	1
+block	downAgain	No	block_arrow	1
+block	r2	Done	block_arrow	1
+block	r3	Done	block_arrow	1
+block	right	Yes	block_arrow	1
+drawn	yes
+label	Done
+label	Done
+label	End
+label	Make Decision
+label	No
+label	Process A
+label	Process B
+label	Start
+label	Yes
+space		1
+space		2
+space		2
+space		2
+space		2

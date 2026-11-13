@@ -1,0 +1,44 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1463e787daaa07b2
+accept	yes
+card	In progress	id6	Create renderer so that it works in all cases. We also add some extra text here for testing purposes. And some more just for the extra flare.
+card	Todo	Create Documentation	Create Documentation
+card	Todo	docs	Create Blog about the new diagram
+card	id10	id4	Create parsing tests	K.Sveidqvist	MC-2038	High
+card	id10	id66	last item	knsv		Very Low
+card	id11	id2	Title of diagram is more than 100 chars when user duplicates diagram with 100 char		MC-2036	Very High
+card	id11	id3	Update DB function	knsv	MC-2037	High
+card	id11	id5	define getData
+card	id12	id3	Weird flickering in Firefox
+card	id9	id8	Design grammar	knsv
+column	In progress	In progress
+column	Todo	Todo
+column	id10	Ready for test
+column	id11	Done
+column	id12	Can't reproduce
+column	id9	Ready for deploy
+drawn	yes
+label	Can't reproduce
+label	Create Blog about the new diagram
+label	Create Documentation
+label	Create parsing tests
+label	Create renderer so that it works in all cases. We also add some extra text here for testing purposes. And some more just for the extra flare.
+label	Design grammar
+label	Done
+label	In progress
+label	K.Sveidqvist
+label	MC-2036
+label	MC-2037
+label	MC-2038
+label	Ready for deploy
+label	Ready for test
+label	Title of diagram is more than 100 chars when user duplicates diagram with 100 char
+label	Todo
+label	Update DB function
+label	Weird flickering in Firefox
+label	define getData
+label	knsv
+label	knsv
+label	knsv
+label	last item

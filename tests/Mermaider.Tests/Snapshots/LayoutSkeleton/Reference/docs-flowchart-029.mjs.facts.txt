@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a4bed0a9c19df28f
+accept	yes
+drawn	yes
+node	A	Odd shape	odd

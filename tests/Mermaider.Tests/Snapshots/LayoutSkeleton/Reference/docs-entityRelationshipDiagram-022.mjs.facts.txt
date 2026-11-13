@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 685e5730a5e743fa
+accept	yes
+attribute	CAR	string	make
+attribute	CAR	string	model
+attribute	CAR	string	registrationNumber
+attribute	PERSON	int	age
+attribute	PERSON	string	firstName
+attribute	PERSON	string	lastName
+drawn	yes
+entity	CAR	CAR
+entity	HOUSE	HOUSE
+entity	PERSON	PERSON
+label	CAR
+label	HOUSE
+label	PERSON
+label	age
+label	firstName
+label	int
+label	lastName
+label	make
+label	model
+label	registrationNumber
+label	string
+label	string
+label	string
+label	string
+label	string

@@ -1,0 +1,32 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 686bace011d6cb07
+accept	yes
+annotation	Payment	«interface»
+attribute	Customer	+String email
+attribute	Customer	+String name
+attribute	LineItem	+int quantity
+attribute	Order	+Date placedAt
+attribute	Order	+String id
+bbox	label	*	207.9	200.3	216.9	216.8
+bbox	label	*	95.9	457.3	104.9	473.8
+bbox	label	1	177.1	161.3	186.1	177.8
+bbox	label	1	91.4	388.4	100.4	404.9
+bbox	label	contains	53	419	112.8	443
+bbox	label	places	172.4	177	217.6	201
+bbox	label	settled by	271.1	419	343	443
+bbox	node	Customer	117.9	8	272	152
+bbox	node	LineItem	8	483	157.8	603
+bbox	node	Order	114.4	226	275.5	394
+bbox	node	Payment	207.8	468	406.3	618
+canvas	0	0	414.3	626
+class	Customer	Customer
+class	LineItem	LineItem
+class	Order	Order
+class	Payment	Payment
+drawn	yes
+method	Order	+total() : Money
+method	Payment	+authorise() : bool
+relation	Customer	Order	none	arrow	solid	places	1	*
+relation	Order	LineItem	diamond-filled	none	solid	contains	1	*
+relation	Order	Payment	none	arrow	solid	settled by

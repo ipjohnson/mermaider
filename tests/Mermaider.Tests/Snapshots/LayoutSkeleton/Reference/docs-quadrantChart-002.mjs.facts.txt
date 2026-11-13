@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ba45a7442b75146f
+accept	yes
+axis	x-left	Urgent
+axis	x-right	Not Urgent
+axis	y-bottom	Not Important
+axis	y-top	Important ❤
+drawn	yes
+label	Delegate
+label	Delete
+label	Do
+label	Important ❤
+label	Not Important
+label	Not Urgent
+label	Plan
+label	Urgent
+quadrant	1	Plan
+quadrant	2	Do
+quadrant	3	Delegate
+quadrant	4	Delete

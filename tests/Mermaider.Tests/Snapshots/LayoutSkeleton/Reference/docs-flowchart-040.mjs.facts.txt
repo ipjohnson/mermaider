@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 50674ff2e8365bec
+accept	yes
+drawn	yes
+node	A	Lined process	lin-rect

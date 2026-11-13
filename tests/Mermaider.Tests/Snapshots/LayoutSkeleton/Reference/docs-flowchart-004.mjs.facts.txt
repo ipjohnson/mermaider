@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c73fdea4fca45502
+accept	yes
+drawn	yes
+edge	markdown	newLines	none	arrow	solid
+node	markdown	This is Markdown	rect
+node	newLines	Line1Line 2Line 3	rect

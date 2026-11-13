@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0b4ddacac0cfcf33
+accept	yes
+annotation	Color	«enumeration»
+annotation	Shape	«interface»
+attribute	Color	BLACK
+attribute	Color	BLUE
+attribute	Color	GREEN
+attribute	Color	RED
+attribute	Color	WHITE
+attribute	Shape	noOfVertices
+bbox	node	Color	190.8	12	311.3	231
+bbox	node	Shape	12	43.5	150.8	199.5
+canvas	4	4	319.3	239
+class	Color	Color
+class	Shape	Shape
+drawn	yes
+method	Shape	draw()

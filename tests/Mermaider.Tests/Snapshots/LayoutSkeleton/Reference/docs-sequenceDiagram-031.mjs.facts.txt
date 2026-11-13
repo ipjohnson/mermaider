@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a74c5de6ef55136d
+accept	yes
+actor	DB	DB	participant
+actor	Service	Service	participant
+bbox	label	[Establish a	158.6	87	241.4	104.2
+bbox	label	connect	146	153.1	202	170.2
+bbox	label	connection to the DB]	123.5	104	276.5	121.2
+bbox	label	critical	64	83	114	118
+bbox	node	DB	200	0	350	73
+bbox	node	DB	200	206	350	279
+bbox	node	Service	0	0	150	73
+bbox	node	Service	0	206	150	279
+block	critical	Establish a connection to the DB
+canvas	-50	-10	400	320
+drawn	yes
+message	Service	DB	dashed	none	connect

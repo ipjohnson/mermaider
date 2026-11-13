@@ -1,0 +1,56 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b9d0e63b6c8ae816
+accept	yes
+drawn	yes
+element	test_entity	simulation
+element	test_entity2	word doc	reqs/test_entity
+element	test_entity3	test suite	github.com/all_the_tests
+label	1
+label	1.1
+label	1.2
+label	1.2.1
+label	1.2.2
+label	1.2.3
+label	contains
+label	contains
+label	copies
+label	derives
+label	github.com/all_the_tests
+label	refines
+label	reqs/test_entity
+label	satisfies
+label	simulation
+label	test suite
+label	test_entity
+label	test_entity2
+label	test_entity3
+label	test_req
+label	test_req2
+label	test_req3
+label	test_req4
+label	test_req5
+label	test_req6
+label	the fifth test text.
+label	the fourth test text.
+label	the second test text.
+label	the sixth test text.
+label	the test text.
+label	the third test text.
+label	traces
+label	verifies
+label	word doc
+relation	test_entity	test_req2	satisfies
+relation	test_entity2	test_req	copies
+relation	test_entity3	test_req5	verifies
+relation	test_req	test_req2	traces
+relation	test_req	test_req3	contains
+relation	test_req3	test_req4	contains
+relation	test_req4	test_req5	derives
+relation	test_req5	test_req6	refines
+requirement	test_req	requirement	1	the test text.	high	test
+requirement	test_req2	functional-requirement	1.1	the second test text.	low	inspection
+requirement	test_req3	performance-requirement	1.2	the third test text.	medium	demonstration
+requirement	test_req4	interface-requirement	1.2.1	the fourth test text.	medium	analysis
+requirement	test_req5	physical-requirement	1.2.2	the fifth test text.	medium	analysis
+requirement	test_req6	design-constraint	1.2.3	the sixth test text.	medium	analysis

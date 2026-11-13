@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 09461b572f3e64fd
+accept	yes
+bbox	group	Auth	12	12	180.1	225
+bbox	node	UserService	36	60	156.1	201
+canvas	4	4	188.1	233
+class	UserService	UserService
+drawn	yes
+method	UserService	+login()
+method	UserService	+logout()
+namespace	Auth	UserService
