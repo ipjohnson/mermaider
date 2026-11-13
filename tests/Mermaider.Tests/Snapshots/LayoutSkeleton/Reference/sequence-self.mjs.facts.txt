@@ -4,6 +4,15 @@
 accept	yes
 actor	A	Service	participant
 actor	B	Queue	participant
+bbox	label	Acknowledgement	112.6	286.1	243.4	303.5
+bbox	label	Initialize	47.1	94.1	104.9	111.2
+bbox	label	Process internally	212.9	212.1	339.1	229.5
+bbox	label	Send message	118.6	168.1	225.4	185.5
+bbox	node	A	0	0	150	73
+bbox	node	A	0	329	150	402
+bbox	node	B	200	0	350	73
+bbox	node	B	200	329	350	402
+canvas	-50	-10	401	443
 message	A	A	solid	filled	Initialize
 message	A	B	solid	filled	Send message
 message	B	A	dashed	filled	Acknowledgement

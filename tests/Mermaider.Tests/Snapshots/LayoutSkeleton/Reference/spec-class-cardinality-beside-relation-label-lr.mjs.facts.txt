@@ -2,6 +2,19 @@
 # mermaid 12.3.0
 # source db476fdd8674377c
 accept	yes
+bbox	label	0..*	299.6	25	335.6	41.5
+bbox	label	1	105.4	113.4	114.4	129.9
+bbox	label	1	105.4	93.1	114.4	109.6
+bbox	label	1	157.5	116.5	166.5	133
+bbox	label	1	398.3	63.5	407.3	80
+bbox	label	1..*	542.6	31	578.6	47.5
+bbox	label	contains	450.4	41.5	502.6	62.5
+bbox	label	places	182.3	41.5	222.8	62.5
+bbox	node	Address	173.6	103.5	253.6	184.5
+bbox	node	Customer	12	57.8	101.4	138.8
+bbox	node	LineItem	563.1	12	644.7	93
+bbox	node	Order	326.2	12	388.3	93
+canvas	4	4	652.7	192.5
 class	Address	Address
 class	Customer	Customer
 class	LineItem	LineItem

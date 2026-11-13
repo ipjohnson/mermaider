@@ -2,6 +2,12 @@
 # mermaid 12.3.0
 # source 8f695eb25e59ae2a
 accept	yes
+bbox	label	0..*	29.2	63	65.2	79.5
+bbox	label	1	45.6	40.5	54.6	57
+bbox	label	parent	12	19.5	51.7	40.5
+bbox	node	Animal	75.7	12	146.4	93
+bbox	node	Duck	81.9	133	140.2	214
+canvas	4	4	154.4	222
 class	Animal	Animal
 class	Duck	Duck
 relation	Animal	Animal	none	arrow	solid	parent	1	0..*

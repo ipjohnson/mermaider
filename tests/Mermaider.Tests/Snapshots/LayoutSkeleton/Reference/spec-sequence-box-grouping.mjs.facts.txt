@@ -5,7 +5,16 @@ accept	yes
 actor	A	A	participant
 actor	B	B	participant
 actor	C	C	participant
+bbox	label	External msg	340.3	165.1	433.7	182.5
+bbox	label	Internal msg	133	121.1	221	138.5
+bbox	node	A	5	208	155	281
+bbox	node	A	5	27	155	100
+bbox	node	B	205	208	355	281
+bbox	node	B	205	27	355	100
+bbox	node	C	425	208	575	281
+bbox	node	C	425	27	575	100
 box	External	C
 box	Internal	A,B
+canvas	-50	-10	630	332
 message	A	B	solid	filled	Internal msg
 message	B	C	solid	filled	External msg

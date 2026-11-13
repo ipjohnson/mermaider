@@ -2,6 +2,10 @@
 # mermaid 12.3.0
 # source 8fab50cd93e81a67
 accept	yes
+bbox	node	ArrayList	33.5	293	118.9	374
+bbox	node	Duck	47.1	12	105.3	93
+bbox	node	List	12	133	140.4	253
+canvas	4	4	148.4	382
 class	ArrayList	ArrayList
 class	Duck	Duck
 class	List	List<T>

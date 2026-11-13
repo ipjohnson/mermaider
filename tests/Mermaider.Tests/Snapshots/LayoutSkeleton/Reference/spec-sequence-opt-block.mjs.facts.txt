@@ -4,7 +4,18 @@
 accept	yes
 actor	A	A	participant
 actor	B	B	participant
+bbox	label	Request	142.2	94.1	201.8	111.3
+bbox	label	Response	142	311.1	214	328.3
+bbox	label	Write to audit log	216.1	197.1	335.9	214.5
+bbox	label	[Extra	280.1	131	321.9	148.2
+bbox	label	logging]	273	148	329	165.4
+bbox	label	opt	191	127	241	162
+bbox	node	A	0	0	150	73
+bbox	node	A	0	354	150	427
+bbox	node	B	200	0	350	73
+bbox	node	B	200	354	350	427
 block	opt	Extra logging
+canvas	-50	-10	411	468
 message	A	B	solid	filled	Request
 message	B	A	dashed	filled	Response
 message	B	B	solid	filled	Write to audit log

@@ -4,6 +4,11 @@
 accept	yes
 attribute	User	+String email
 attribute	User	+String name
+bbox	node	User	151.2	266	274.4	401
+bbox	node	UserService	12	85	209.9	226
+bbox	note	Core domain entity	249.9	193	379.4	226
+bbox	note	Handles all user CRUD	32.6	12	189.3	45
+canvas	4	4	387.4	409
 class	User	User
 class	UserService	UserService
 method	UserService	+createUser() : User

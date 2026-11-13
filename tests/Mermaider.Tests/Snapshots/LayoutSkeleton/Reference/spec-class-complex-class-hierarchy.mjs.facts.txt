@@ -10,6 +10,13 @@ attribute	Engine	+int horsepower
 attribute	Truck	+double payload
 attribute	Vehicle	+String make
 attribute	Vehicle	+int year
+bbox	label	optional	76.4	302.5	125.5	323.5
+bbox	node	Car	57.8	452	178.7	587
+bbox	node	Electric	12	12	190.9	174
+bbox	node	Engine	44.6	627	191.9	762
+bbox	node	Truck	218.7	452	364.5	587
+bbox	node	Vehicle	201.9	214	341.5	412
+canvas	4	4	372.5	770
 class	Car	Car
 class	Electric	Electric
 class	Engine	Engine

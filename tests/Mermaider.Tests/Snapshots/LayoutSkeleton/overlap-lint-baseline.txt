@@ -1,0 +1,13 @@
+# Overlaps Mermaider draws in class and sequence diagrams that mermaid.js avoids, as OverlapLintTests counts them:
+# <case> <check> <count>. A "# reason" line explains the lines below it, up to the next blank line. The count must
+# match: a new overlap fails, and so does a fixed one until its line is lowered or removed. Write the current counts
+# and a report of each overlap with OVERLAP_LINT_OUT=<dir> and the OverlapLintTests/Write_baseline_and_report test.
+
+# ipjohnson/AgentDriver#4282: sibling class namespaces are drawn inside each other.
+cs-namespaces group-overlap 1
+cs-namespace-duplicate group-overlap 1
+
+# ipjohnson/AgentDriver#4309: a sequence note covers the next message's label, consecutive notes share a row, and a
+# class note covers a relation label.
+agentdriver-ledger-6 note-overlap 2
+cs-namespaces note-overlap 1

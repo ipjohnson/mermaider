@@ -4,6 +4,15 @@
 accept	yes
 actor	A	A	participant
 actor	B	B	participant
+bbox	label	Hello	153.8	141.1	190.2	158.2
+bbox	node	A	0	0	150	73
+bbox	node	A	0	278	150	351
+bbox	node	B	200	0	350	73
+bbox	node	B	200	278	350	351
+bbox	note	Left note	-100	83	50	120
+bbox	note	Right note	300	174	450	211
+bbox	note	Spanning note	50	221	300	258
+canvas	-150	-10	500	392
 message	A	B	solid	filled	Hello
 note	left	A	Left note
 note	over	A,B	Spanning note

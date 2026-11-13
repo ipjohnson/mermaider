@@ -2,6 +2,11 @@
 # mermaid 12.3.0
 # source 735fe9900c46f5b3
 accept	yes
+bbox	node	A	12	12	46.1	93
+bbox	node	B	12	133	46.1	214
+bbox	node	C	86.1	12	120.3	93
+bbox	node	D	86.1	133	120.3	214
+canvas	4	4	128.3	222
 class	A	A
 class	B	B
 class	C	C

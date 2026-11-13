@@ -3,6 +3,8 @@
 # source 60f41b0484033728
 accept	yes
 attribute	MathUtils	+PI$ double
+bbox	node	MathUtils	12	12	176.1	168
+canvas	4	4	184.1	176
 class	MathUtils	MathUtils
 method	MathUtils	+add(a, b) : int
 method	MathUtils	+compute() : void

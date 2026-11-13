@@ -5,6 +5,10 @@ accept	yes
 annotation	ILogger	«interface»
 attribute	ConsoleLogger	-bool verbose
 attribute	FileLogger	-String path
+bbox	node	ConsoleLogger	12	214	211.4	370
+bbox	node	FileLogger	251.4	214	435.3	391
+bbox	node	ILogger	136.2	12	318.9	174
+canvas	4	4	443.3	399
 class	ConsoleLogger	ConsoleLogger
 class	FileLogger	FileLogger
 class	ILogger	ILogger

@@ -2,6 +2,10 @@
 # mermaid 12.3.0
 # source 2164dc469e99b072
 accept	yes
+bbox	node	Controller	12	22.5	166.4	142.5
+bbox	node	Repository	399.1	12	551.9	153
+bbox	node	Service	206.4	22.5	359.1	142.5
+canvas	4	4	559.9	161
 class	Controller	Controller
 class	Repository	Repository
 class	Service	Service

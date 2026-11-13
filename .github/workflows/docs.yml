@@ -32,6 +32,7 @@ jobs:
           cache: false # this workflow publishes what it builds; never restore a cache a PR could have written
         env:
           MISE_JOBS: "1" # dotnet versions share one DOTNET_ROOT; installing them in parallel races
+          MISE_HTTP_TIMEOUT: "120s" # dot.net downloads time out at the 30s default on hosted runners
 
       - name: Render screenshots
         run: dotnet run scripts/screenshots.cs

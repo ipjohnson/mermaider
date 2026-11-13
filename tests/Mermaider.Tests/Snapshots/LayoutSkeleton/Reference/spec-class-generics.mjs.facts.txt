@@ -2,6 +2,9 @@
 # mermaid 12.3.0
 # source 3073f6a1cc41765d
 accept	yes
+bbox	node	Repository	12	12	202.9	174
+bbox	node	UserRepo	20.4	214	194.5	334
+canvas	4	4	210.9	342
 class	Repository	Repository<T>
 class	UserRepo	UserRepo
 method	Repository	+findAll() : List<T>

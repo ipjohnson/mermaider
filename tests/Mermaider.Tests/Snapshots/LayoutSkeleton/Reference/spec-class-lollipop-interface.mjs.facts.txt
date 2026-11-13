@@ -2,6 +2,9 @@
 # mermaid 12.3.0
 # source a059f9e3abf65cce
 accept	yes
+bbox	node	Drawable	130.6	12	216.8	93
+bbox	node	Shape	24.6	12	90.6	93
+canvas	4	4	224.8	186
 class	Drawable	Drawable
 class	Shape	Shape
 relation	Shape	()Drawable	none	lollipop	solid

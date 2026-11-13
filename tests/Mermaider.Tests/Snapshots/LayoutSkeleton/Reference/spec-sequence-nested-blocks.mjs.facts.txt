@@ -5,8 +5,26 @@ accept	yes
 actor	API	API	participant
 actor	Client	Client	participant
 actor	DB	DB	participant
+bbox	label	Cache Hit	302.9	87	382.1	104.2
+bbox	label	Cache Miss	271.3	181	363.7	198.2
+bbox	label	Cached	150.4	139.1	205.6	156.2
+bbox	label	Fresh	157.5	489.1	198.5	506.2
+bbox	label	Process	447.1	331.1	504.9	348.2
+bbox	label	Query	350.2	228.1	393.8	245.5
+bbox	label	Result	355.3	445.1	400.7	462.2
+bbox	label	[Retry on	468.5	265	533.5	282.4
+bbox	label	alt	64	83	114	118
+bbox	label	failure]	477	282	525	299.2
+bbox	label	loop	391	261	441	296
+bbox	node	API	200	0	350	73
+bbox	node	API	200	542	350	615
+bbox	node	Client	0	0	150	73
+bbox	node	Client	0	542	150	615
+bbox	node	DB	400	0	550	73
+bbox	node	DB	400	542	550	615
 block	alt	Cache Hit
 block	loop	Retry on failure
+canvas	-50	-10	621	656
 divider	Cache Miss
 message	API	Client	dashed	filled	Cached
 message	API	Client	dashed	filled	Fresh

@@ -5,6 +5,17 @@ accept	yes
 actor	A	Service A	participant
 actor	B	Service B	participant
 actor	C	Service C	participant
+bbox	label	Bidirectional sync	112.8	94.1	237.3	111.5
+bbox	label	Dashed bidirectional	202.5	138.1	347.5	155.2
+bbox	label	Dashed one-way	318	226.1	438	243.5
+bbox	label	Normal one-way	313.8	182.1	430.2	199.5
+bbox	node	A	0	0	150	73
+bbox	node	A	0	269	150	342
+bbox	node	B	200	0	350	73
+bbox	node	B	200	269	350	342
+bbox	node	C	400	0	550	73
+bbox	node	C	400	269	550	342
+canvas	-50	-10	600	383
 message	A	B	solid	filled-both	Bidirectional sync
 message	A	C	dashed	filled-both	Dashed bidirectional
 message	B	C	solid	filled	Normal one-way

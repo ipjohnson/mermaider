@@ -7,6 +7,36 @@ actor	G	GitHub	participant
 actor	L	Ledger	participant
 actor	R	SessionRunner	participant
 actor	W	GitHubWatcher	participant
+bbox	label	GET the pull request	190.9	843.6	337.1	862.3
+bbox	label	GET the pull request and its check runs	124.2	549.6	403.8	568.3
+bbox	label	GET the pull request, If-None-Match from refs	102.1	93.6	425.9	112.3
+bbox	label	PUT merge	506.3	799.6	587.7	818.3
+bbox	label	effects	829.6	299.6	876.4	318.3
+bbox	label	effects [github(merge, head sha)]	735.9	755.6	970.1	774.3
+bbox	label	exited(done, commits, pull request)	954.6	431.6	1203.4	450.3
+bbox	label	git push, through PushGate	669.7	387.6	864.3	406.3
+bbox	label	mergeable clean, checks success	138.5	593.6	377.5	612.3
+bbox	label	mergeable_state dirty	181.2	137.6	334.8	156.3
+bbox	label	merged	230.9	887.6	285.1	906.3
+bbox	label	pr-conflict(item, head)	492.7	181.6	647.3	200.3
+bbox	label	pr-mergeable, checks-passed	464.7	637.6	675.3	656.3
+bbox	label	pr-merged	533.1	931.6	606.9	950.3
+bbox	label	prepare the worktree on the branch, launch the fix session	1023.4	343.6	1434.6	362.3
+bbox	label	review stays, and under merge ready the merger may act	498.5	681.6	903.5	700.3
+bbox	label	review to done, effects [settle, snapshot, remove-worktree, archive timer]	444	975.6	958	994.3
+bbox	label	review to running, rounds unchanged for the first conflict, effect handover(fix)	429.8	225.6	972.2	244.3
+bbox	label	running to review, effect schedule(poll)	564.8	475.6	837.2	494.3
+bbox	node	E	937	0	1087	73
+bbox	node	E	937	1049	1087	1122
+bbox	node	G	0	0	150	73
+bbox	node	G	0	1049	150	1122
+bbox	node	L	625	0	775	73
+bbox	node	L	625	1049	775	1122
+bbox	node	R	1377	0	1527	73
+bbox	node	R	1377	1049	1527	1122
+bbox	node	W	371	0	521	73
+bbox	node	W	371	1049	521	1122
+canvas	-50	-10	1577	1163
 message	E	G	solid	filled	PUT merge
 message	E	R	solid	filled	prepare the worktree on the branch, launch the fix session
 message	G	W	dashed	filled	mergeable clean, checks success

@@ -6,6 +6,28 @@ actor	C	claude	participant
 actor	L	Ledger	participant
 actor	R	SessionRunner	participant
 actor	V	ServeVerb	participant
+bbox	label	X and Y go to interrupted with retry now, and Z stays running with effect adopt	161.4	572	710.6	590.5
+bbox	label	claude --resume for Y, claude -p for X	851.9	690	1116.1	708.5
+bbox	label	cut the deadlines, kill the local processes, wait 10 s	269.1	258	630.9	276.5
+bbox	label	kill Y	967.3	302	1000.7	320.5
+bbox	label	prepare(X) afresh, launch(Y, resume), adopt(Z)	464	646	796	664.5
+bbox	label	prepare-failed(X, serve stopping), exited(Y, killed)	461.5	346	810.5	364.5
+bbox	label	replay the unfinished effects	152.6	484	351.4	502.5
+bbox	label	serve-started to every item that has not ended	88.9	528	415.1	546.5
+bbox	label	serve-stopping	199.6	140	304.4	158.5
+bbox	label	stopping is set, and start is a no-op from here	275.6	184	596.4	202.5
+bbox	node	C	1068	0	1218	73
+bbox	node	C	1068	734	1218	807
+bbox	node	L	360	0	510	73
+bbox	node	L	360	734	510	807
+bbox	node	R	755	0	905	73
+bbox	node	R	755	734	905	807
+bbox	node	V	0	0	150	73
+bbox	node	V	0	734	150	807
+bbox	note	X and Y stay running in the ledger, and Z keeps running on its runner	203	380	667	417
+bbox	note	serve starts	50	427	1168	464
+bbox	note	serve stops while X prepares, Y runs here, and Z runs on a runner	50	83	1168	120
+canvas	-50	-10	1268	848
 message	L	L	dashed	filled	X and Y go to interrupted with retry now, and Z stays running with effect adopt
 message	L	L	dashed	filled	stopping is set, and start is a no-op from here
 message	L	R	solid	filled	prepare(X) afresh, launch(Y, resume), adopt(Z)

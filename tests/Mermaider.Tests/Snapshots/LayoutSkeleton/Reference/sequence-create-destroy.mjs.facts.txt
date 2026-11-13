@@ -5,6 +5,19 @@ accept	yes
 actor	Alice	Alice	participant
 actor	Bob	Bob	participant
 actor	Worker	Worker	participant
+bbox	label	Done	158.9	417.1	197.1	434.2
+bbox	label	Hello Bob	137.3	94.1	206.7	111.2
+bbox	label	Process	522.1	219.1	579.9	236.2
+bbox	label	Result	393.3	293.1	438.7	310.2
+bbox	label	Spawn task	329.6	138.1	412.4	155.3
+bbox	label	Terminate	335.9	337.1	406.1	354.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	460	150	533
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	460	350	533
+bbox	node	Worker	475	124.5	625	197.5
+bbox	node	Worker	475	323	625	396
+canvas	-50	-10	676	574
 message	Alice	Bob	solid	filled	Hello Bob
 message	Bob	Alice	dashed	filled	Done
 message	Bob	Worker	solid	cross	Terminate
