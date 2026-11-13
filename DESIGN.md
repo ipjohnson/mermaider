@@ -109,7 +109,7 @@ Flowchart / state (reference: `SvgRenderer.NodeFamily`), and the same order ever
 1. non-strict author styling (`style`, `classDef`, inline colours) wins as a paint override;
 2. a role class (`:::success`, `:::failure`, `:::warning`, `:::info`) → role family;
 3. a shape with a meaning (`VisualLanguage.ShapeFamily`): decision / `<<choice>>` → accent, stadium (terminal) and
-   cylinder (data store) → neutral;
+   data stores (cylinder, `lin-cyl`, `h-cyl`, `datastore`) → neutral;
 4. the cluster family: each connected cluster of nodes / entities / classes gets one auto-palette family
    (`ClusterPalette.Build(...).WithTint(ds.TintStrength)`); containers alternate through the palette in document
    order and never take the family of a member;

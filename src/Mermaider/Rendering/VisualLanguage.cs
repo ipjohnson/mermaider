@@ -47,7 +47,7 @@ internal static class VisualLanguage
 	internal static ColorFamily? ShapeFamily(NodeShape shape, double tint = 1.0) => shape switch
 	{
 		NodeShape.Diamond => ColorFamily.Accent(tint),
-		NodeShape.Stadium or NodeShape.Cylinder => ColorFamily.Neutral(tint),
+		NodeShape.Stadium or NodeShape.Cylinder or NodeShape.LinedCylinder or NodeShape.HorizontalCylinder or NodeShape.DataStore => ColorFamily.Neutral(tint),
 		_ => null,
 	};
 

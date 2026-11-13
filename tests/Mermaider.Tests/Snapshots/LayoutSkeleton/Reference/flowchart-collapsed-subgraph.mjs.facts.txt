@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c98c84882c2b5392
+accept	yes
+drawn	yes
+edge	Client	backend	none	arrow	solid
+edge	backend	Mail	none	arrow	solid
+node	Client	Client	rect
+node	Mail	Receipt	doc
+node	backend	Backend services	collapsedGroup

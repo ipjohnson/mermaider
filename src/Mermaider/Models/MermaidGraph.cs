@@ -55,6 +55,9 @@ public sealed record MermaidGraph
 	} = ReadOnlyDictionary<int, (string? SourceSubgraph, string? TargetSubgraph)>.Empty;
 
 	public IReadOnlyList<GraphNote> Notes { get; init; } = [];
+
+	/// <summary>Set by the flowchart parser, so a flowchart's small circles are not taken for state pseudo-states.</summary>
+	internal bool IsFlowchart { get; init; }
 }
 
 public sealed record GraphNote(string TargetNodeId, string Text, GraphNotePosition Position);

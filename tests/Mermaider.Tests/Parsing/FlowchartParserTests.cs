@@ -205,4 +205,81 @@ public class FlowchartParserTests
 		graph.Nodes["T"].Shape.Should().Be(NodeShape.Rectangle);
 		graph.Nodes.Keys.Should().Equal("A", "T", "D");
 	}
+
+	[Test]
+	public void Shape_properties_set_shape_and_label()
+	{
+		var graph = MermaidRenderer.Parse(
+			"""
+			flowchart LR
+			  A@{ shape: rounded, label: "Rounded" } --> B@{ shape: database, label: "Store, with comma" }
+			  B --> C@{ shape: manual-file }
+			  D@{ label: "Only a label" }
+			  E@{
+			    shape: docs
+			    label: "Multi-line block"
+			  }
+			"""
+		);
+
+		graph.Edges.Select(e => (e.Source, e.Target)).Should().Equal(("A", "B"), ("B", "C"));
+		graph.Nodes["A"].Should().Be(new MermaidNode("A", "Rounded", NodeShape.Rounded));
+		graph.Nodes["B"].Should().Be(new MermaidNode("B", "Store, with comma", NodeShape.Cylinder));
+		graph.Nodes["C"].Should().Be(new MermaidNode("C", "C", NodeShape.FlippedTriangle));
+		graph.Nodes["D"].Should().Be(new MermaidNode("D", "Only a label", NodeShape.Rectangle));
+		graph.Nodes["E"].Should().Be(new MermaidNode("E", "Multi-line block", NodeShape.StackedDocument));
+	}
+
+	[Test]
+	public void Marker_shapes_drop_their_label()
+	{
+		var graph = MermaidRenderer.Parse("flowchart TD\n  A@{ shape: f-circ, label: \"Junction\" } --> B@{ shape: sm-circ, label: \"Start\" }");
+
+		graph.Nodes["A"].Should().Be(new MermaidNode("A", "", NodeShape.FilledCircle));
+		graph.Nodes["B"].Should().Be(new MermaidNode("B", "", NodeShape.StateStart));
+	}
+
+	[Test]
+	public void Every_shape_name_of_mermaid_12_3_resolves()
+	{
+		var names = Mermaider.Parsing.FlowchartShapeNames.All.ToList();
+
+		names.Should().OnlyHaveUniqueItems();
+		Mermaider.Parsing.FlowchartShapeNames.ShortNames.Should().HaveCount(53);
+		Mermaider.Parsing.FlowchartShapeNames.ShortNames.Select(s => s.Shape).Should().OnlyHaveUniqueItems();
+		foreach (var name in names)
+		{
+			var graph = MermaidRenderer.Parse($"flowchart TD\n  A@{{ shape: {name}, label: \"x\" }}");
+			var shape = graph.Nodes["A"].Shape;
+			(shape != NodeShape.Rectangle || name is "rect" or "proc" or "process" or "rectangle" or "squareRect").Should().BeTrue(name);
+		}
+	}
+
+	[Test]
+	public void Collapsed_subgraph_becomes_one_node()
+	{
+		var graph = MermaidRenderer.Parse(
+			"""
+			flowchart TD
+			    Start --> one
+			    subgraph one [My Group]
+			        A --> B
+			        subgraph inner
+			            C
+			        end
+			        B --> C
+			    end
+			    one --> End
+			    C --> End
+			    one@{ view: collapsed }
+			    linkStyle 4 stroke:red
+			"""
+		);
+
+		graph.Subgraphs.Should().BeEmpty();
+		graph.Nodes.Keys.Should().BeEquivalentTo("Start", "one", "End");
+		graph.Nodes["one"].Should().Be(new MermaidNode("one", "My Group", NodeShape.CollapsedGroup));
+		graph.Edges.Select(e => (e.Source, e.Target)).Should().Equal(("Start", "one"), ("one", "End"), ("one", "End"));
+		graph.EdgeStyles.Keys.Should().Equal(2);
+	}
 }

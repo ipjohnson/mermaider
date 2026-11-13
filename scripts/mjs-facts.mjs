@@ -303,7 +303,8 @@ async function extractFacts(source, name, shapes) {
 				facts.push(tab('group', n.id, clusterLabel(n.id), childrenOf(n.id)))
 				continue
 			}
-			const el = byDomId(n.domId)
+			// A collapsed subgraph is drawn under the subgraph's id, not a node domId.
+			const el = byDomId(n.domId) ?? dom.querySelector(`[id="${svgId}-${n.id}"]`)
 			// An icon or image node's shape is its frame; the icon or image is its own fact.
 			const s = n.icon || n.img ? 'rect' : shape(n.shape)
 			facts.push(tab('node', n.id, text(el?.querySelector('.label')), s))

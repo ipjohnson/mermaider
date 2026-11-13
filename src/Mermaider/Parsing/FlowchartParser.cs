@@ -139,6 +139,15 @@ internal static partial class FlowchartParser
 						break;
 				}
 			}
+			else if (line.IndexOf("@{", StringComparison.Ordinal) is >= 0 and var open && line.IndexOf('}', open) < 0)
+			{
+				while (++i < lines.Length)
+				{
+					line = line + "\n" + lines[i];
+					if (lines[i].Contains('}'))
+						break;
+				}
+			}
 			result.Add(line);
 		}
 		return result.ToArray();
@@ -161,6 +170,7 @@ internal static partial class FlowchartParser
 		var edgeStyles = new Dictionary<int, Dictionary<string, string>>();
 		IReadOnlyDictionary<string, string>? defaultEdgeStyle = null;
 		var subgraphStack = new Stack<(string Id, string Label, List<string> NodeIds, List<MermaidSubgraph> Children, Direction? Dir)>();
+		var collapsedIds = new HashSet<string>(StringComparer.Ordinal);
 
 		for (var i = 1; i < lines.Length; i++)
 		{
@@ -288,7 +298,14 @@ internal static partial class FlowchartParser
 				continue;
 			}
 
-			ParseEdgeLine(line, nodes, edges, classAssignments, subgraphStack);
+			ParseEdgeLine(line, nodes, edges, classAssignments, subgraphStack, collapsedIds);
+		}
+
+		if (collapsedIds.Count > 0)
+		{
+			var owners = new Dictionary<string, string>(StringComparer.Ordinal);
+			subgraphs = CollapseSubgraphs(subgraphs, collapsedIds, nodes, owners).Subgraphs;
+			edgeStyles = RedirectIntoCollapsed(edges, edgeStyles, owners);
 		}
 
 		var subgraphMap = new Dictionary<string, MermaidSubgraph>();
@@ -336,7 +353,8 @@ internal static partial class FlowchartParser
 			NodeStyles = nodeStyles.ToDictionary(kvp => kvp.Key, kvp => (IReadOnlyDictionary<string, string>)kvp.Value),
 			EdgeStyles = edgeStyles.ToDictionary(kvp => kvp.Key, kvp => (IReadOnlyDictionary<string, string>)kvp.Value),
 			DefaultEdgeStyle = defaultEdgeStyle,
-			SubgraphEdgeRedirections = redirections
+			SubgraphEdgeRedirections = redirections,
+			IsFlowchart = true
 		};
 	}
 
@@ -374,12 +392,13 @@ internal static partial class FlowchartParser
 		Dictionary<string, MermaidNode> nodes,
 		List<MermaidEdge> edges,
 		Dictionary<string, string> classAssignments,
-		Stack<(string Id, string Label, List<string> NodeIds, List<MermaidSubgraph> Children, Direction? Dir)> subgraphStack
+		Stack<(string Id, string Label, List<string> NodeIds, List<MermaidSubgraph> Children, Direction? Dir)> subgraphStack,
+		HashSet<string> collapsedIds
 	)
 	{
 		var remaining = line.Trim();
 
-		var (firstIds, rest) = ConsumeNodeGroup(remaining, nodes, classAssignments, subgraphStack);
+		var (firstIds, rest) = ConsumeNodeGroup(remaining, nodes, classAssignments, subgraphStack, collapsedIds);
 		if (firstIds.Count == 0)
 			return;
 
@@ -421,7 +440,7 @@ internal static partial class FlowchartParser
 			var hasArrowEnd = arrowOp.EndsWith('>');
 			var minLength = 1; // mermaid.js v12: extra dashes (----> vs -->) are visual-only, not layout rank
 
-			var (nextIds, nextRest) = ConsumeNodeGroup(remaining, nodes, classAssignments, subgraphStack);
+			var (nextIds, nextRest) = ConsumeNodeGroup(remaining, nodes, classAssignments, subgraphStack, collapsedIds);
 			if (nextIds.Count == 0)
 				break;
 
@@ -443,10 +462,11 @@ internal static partial class FlowchartParser
 		string text,
 		Dictionary<string, MermaidNode> nodes,
 		Dictionary<string, string> classAssignments,
-		Stack<(string Id, string Label, List<string> NodeIds, List<MermaidSubgraph> Children, Direction? Dir)> subgraphStack
+		Stack<(string Id, string Label, List<string> NodeIds, List<MermaidSubgraph> Children, Direction? Dir)> subgraphStack,
+		HashSet<string> collapsedIds
 	)
 	{
-		var (firstId, rest) = ConsumeNode(text, nodes, classAssignments, subgraphStack);
+		var (firstId, rest) = ConsumeNode(text, nodes, classAssignments, subgraphStack, collapsedIds);
 		if (firstId is null)
 			return ([], text);
 
@@ -456,7 +476,7 @@ internal static partial class FlowchartParser
 		while (remaining.StartsWith('&'))
 		{
 			remaining = remaining[1..].Trim();
-			var (nextId, nextRest) = ConsumeNode(remaining, nodes, classAssignments, subgraphStack);
+			var (nextId, nextRest) = ConsumeNode(remaining, nodes, classAssignments, subgraphStack, collapsedIds);
 			if (nextId is null)
 				break;
 			ids.Add(nextId);
@@ -470,7 +490,8 @@ internal static partial class FlowchartParser
 		string text,
 		Dictionary<string, MermaidNode> nodes,
 		Dictionary<string, string> classAssignments,
-		Stack<(string Id, string Label, List<string> NodeIds, List<MermaidSubgraph> Children, Direction? Dir)> subgraphStack
+		Stack<(string Id, string Label, List<string> NodeIds, List<MermaidSubgraph> Children, Direction? Dir)> subgraphStack,
+		HashSet<string> collapsedIds
 	)
 	{
 		string? id = null;
@@ -482,13 +503,7 @@ internal static partial class FlowchartParser
 			if (match.Success)
 			{
 				id = match.Groups[1].Value;
-				var rawLabel = match.Groups[2].Value;
-				if (rawLabel.Length >= 2 && rawLabel[0] == '"' && rawLabel[^1] == '"')
-					rawLabel = rawLabel[1..^1];
-				var isMarkdown = rawLabel.StartsWith('`') && rawLabel.EndsWith('`');
-				var label = isMarkdown
-					? MultilineUtils.DecodeEntities(rawLabel[1..^1].Trim().Replace("\\n", "\n"))
-					: MultilineUtils.NormalizeBrTags(rawLabel).Replace("\\n", "\n");
+				var (label, isMarkdown) = ReadLabel(match.Groups[2].Value);
 				// mermaid.js lets the latest shaped definition set the label and shape, even after a bare reference.
 				nodes[id] = new MermaidNode(id, label, shape, isMarkdown);
 				AddToCurrentSubgraph(subgraphStack, id);
@@ -508,6 +523,12 @@ internal static partial class FlowchartParser
 				else
 					RegisterNode(nodes, subgraphStack, new MermaidNode(id, id, NodeShape.Rectangle));
 				remaining = text[bareMatch.Length..];
+
+				if (remaining.StartsWith("@{", StringComparison.Ordinal) && ReadProperties(remaining) is { } parsed)
+				{
+					remaining = remaining[parsed.Length..];
+					ApplyProperties(id, parsed.Props, nodes, collapsedIds);
+				}
 			}
 		}
 
@@ -594,6 +615,167 @@ internal static partial class FlowchartParser
 				break;
 		}
 		return id;
+	}
+
+	private static (string Label, bool IsMarkdown) ReadLabel(string rawLabel)
+	{
+		if (rawLabel.Length >= 2 && rawLabel[0] == '"' && rawLabel[^1] == '"')
+			rawLabel = rawLabel[1..^1];
+		var isMarkdown = rawLabel.Length >= 2 && rawLabel.StartsWith('`') && rawLabel.EndsWith('`');
+		var label = isMarkdown
+			? MultilineUtils.DecodeEntities(rawLabel[1..^1].Trim().Replace("\\n", "\n"))
+			: MultilineUtils.NormalizeBrTags(rawLabel).Replace("\\n", "\n");
+		return (label, isMarkdown);
+	}
+
+	/// <summary>
+	/// Reads the <c>@{ key: value, ... }</c> block at the start of <paramref name="text"/>. Values may be quoted, and a
+	/// quoted value may hold commas and braces. Null when the block is not closed.
+	/// </summary>
+	internal static (Dictionary<string, string> Props, int Length)? ReadProperties(string text)
+	{
+		var props = new Dictionary<string, string>(StringComparer.Ordinal);
+		var entry = new System.Text.StringBuilder();
+		var quote = '\0';
+		for (var i = 2; i < text.Length; i++)
+		{
+			var c = text[i];
+			if (quote != '\0')
+			{
+				if (c == quote)
+					quote = '\0';
+				_ = entry.Append(c);
+				continue;
+			}
+			switch (c)
+			{
+				case '"' or '\'':
+					quote = c;
+					_ = entry.Append(c);
+					break;
+				case ',' or '\n':
+					AddProperty(props, entry.ToString());
+					_ = entry.Clear();
+					break;
+				case '}':
+					AddProperty(props, entry.ToString());
+					return (props, i + 1);
+				default:
+					_ = entry.Append(c);
+					break;
+			}
+		}
+		return null;
+	}
+
+	private static void AddProperty(Dictionary<string, string> props, string entry)
+	{
+		var colon = entry.IndexOf(':');
+		if (colon <= 0)
+			return;
+		var key = entry[..colon].Trim().Trim('"', '\'');
+		var value = entry[(colon + 1)..].Trim();
+		if (value.Length >= 2 && value[0] == '\'' && value[^1] == '\'')
+			value = value[1..^1];
+		if (key.Length > 0)
+			props[key] = value;
+	}
+
+	/// <summary>
+	/// Applies <c>shape</c> and <c>label</c> to the node, and records <c>view: collapsed</c>. Other keys (icon and image
+	/// settings, edge animation) are not read here.
+	/// </summary>
+	private static void ApplyProperties(string id, Dictionary<string, string> props, Dictionary<string, MermaidNode> nodes, HashSet<string> collapsedIds)
+	{
+		if (props.TryGetValue("view", out var view) && view.Trim('"') == "collapsed")
+			_ = collapsedIds.Add(id);
+
+		var hasShape = props.TryGetValue("shape", out var shapeName);
+		var hasLabel = props.TryGetValue("label", out var rawLabel);
+		if (!hasShape && !hasLabel)
+			return;
+
+		var node = nodes[id];
+		var shape = hasShape && FlowchartShapeNames.TryGet(shapeName!.Trim('"'), out var named) ? named : node.Shape;
+		var (label, isMarkdown) = hasLabel ? ReadLabel(rawLabel!) : (node.Label, node.IsMarkdown);
+		if (!FlowchartShapeNames.DrawsLabel(shape))
+			(label, isMarkdown) = (string.Empty, false);
+		nodes[id] = new MermaidNode(id, label, shape, isMarkdown);
+	}
+
+	/// <summary>
+	/// Replaces each collapsed subgraph with one <see cref="NodeShape.CollapsedGroup"/> node carrying its title, in the
+	/// parent's place. A collapse inside a collapsed subgraph resolves to the outermost one. <paramref name="owners"/>
+	/// gets every hidden node and subgraph id, mapped to the collapsed node that replaces it.
+	/// </summary>
+	private static (List<MermaidSubgraph> Subgraphs, List<string> Promoted) CollapseSubgraphs(
+		IReadOnlyList<MermaidSubgraph> subgraphs,
+		HashSet<string> collapsedIds,
+		Dictionary<string, MermaidNode> nodes,
+		Dictionary<string, string> owners
+	)
+	{
+		var kept = new List<MermaidSubgraph>(subgraphs.Count);
+		var promoted = new List<string>();
+		foreach (var sg in subgraphs)
+		{
+			if (collapsedIds.Contains(sg.Id))
+			{
+				foreach (var hidden in Descendants(sg))
+				{
+					owners[hidden] = sg.Id;
+					if (hidden != sg.Id)
+						_ = nodes.Remove(hidden);
+				}
+				nodes[sg.Id] = new MermaidNode(sg.Id, sg.Label, NodeShape.CollapsedGroup);
+				promoted.Add(sg.Id);
+				continue;
+			}
+			var (children, fromChildren) = CollapseSubgraphs(sg.Children, collapsedIds, nodes, owners);
+			var nodeIds = sg.NodeIds.Where(n => !owners.ContainsKey(n) || owners[n] == n).Concat(fromChildren).Distinct().ToList();
+			kept.Add(sg with { Children = children, NodeIds = nodeIds });
+		}
+		return (kept, promoted);
+	}
+
+	private static IEnumerable<string> Descendants(MermaidSubgraph sg)
+	{
+		foreach (var id in sg.NodeIds)
+			yield return id;
+		foreach (var child in sg.Children)
+		{
+			yield return child.Id;
+			foreach (var id in Descendants(child))
+				yield return id;
+		}
+	}
+
+	/// <summary>
+	/// Points every edge end inside a collapsed subgraph at its collapsed node and drops the edges that end up inside one,
+	/// then moves the <c>linkStyle</c> indexes with the edges that remain.
+	/// </summary>
+	private static Dictionary<int, Dictionary<string, string>> RedirectIntoCollapsed(
+		List<MermaidEdge> edges,
+		Dictionary<int, Dictionary<string, string>> edgeStyles,
+		Dictionary<string, string> owners
+	)
+	{
+		var restyled = new Dictionary<int, Dictionary<string, string>>();
+		var kept = new List<MermaidEdge>(edges.Count);
+		for (var i = 0; i < edges.Count; i++)
+		{
+			var edge = edges[i];
+			var source = owners.GetValueOrDefault(edge.Source, edge.Source);
+			var target = owners.GetValueOrDefault(edge.Target, edge.Target);
+			if (source == target && (source != edge.Source || target != edge.Target))
+				continue;
+			if (edgeStyles.TryGetValue(i, out var style))
+				restyled[kept.Count] = style;
+			kept.Add(edge with { Source = source, Target = target });
+		}
+		edges.Clear();
+		edges.AddRange(kept);
+		return restyled;
 	}
 
 	private static IReadOnlyDictionary<string, string> ParseStyleProps(string propsStr)

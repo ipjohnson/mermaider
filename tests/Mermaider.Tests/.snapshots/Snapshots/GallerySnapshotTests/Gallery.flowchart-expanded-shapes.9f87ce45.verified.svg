@@ -1,0 +1,322 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.664 2027.728" width="509.664" height="2027.728" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<g class="node" data-id="a1" data-label="rect" data-shape="rectangle">
+  <rect x="33.556" y="16" width="67.636" height="42.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="67.37" y="37.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">rect</text>
+</g>
+<g class="node" data-id="a2" data-label="rounded" data-shape="rounded">
+  <rect x="19.191999999999993" y="98.2" width="96.364" height="42.2" rx="14" ry="14" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="67.37" y="119.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">rounded</text>
+</g>
+<g class="node" data-id="a3" data-label="stadium" data-shape="stadium">
+  <rect x="22.384" y="180.4" width="89.97999999999999" height="42.2" rx="21.1" ry="21.1" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.75" />
+  <text x="67.37" y="201.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">stadium</text>
+</g>
+<g class="node" data-id="a4" data-label="fr-rect" data-shape="subroutine">
+  <rect x="26.772999999999996" y="262.6" width="81.202" height="42.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+<line x1="34.772999999999996" y1="262.6" x2="34.772999999999996" y2="304.8" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+<line x1="99.975" y1="262.6" x2="99.975" y2="304.8" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="67.37" y="283.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">fr-rect</text>
+</g>
+<g class="node" data-id="a5" data-label="cyl" data-shape="cylinder">
+  <rect x="35.373999999999995" y="351.8" width="64" height="42.2" fill="url(#m1814eb8b-ng-n)" stroke="none" />
+<line x1="35.373999999999995" y1="351.8" x2="35.373999999999995" y2="394" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+<line x1="99.374" y1="351.8" x2="99.374" y2="394" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+<ellipse cx="67.374" cy="394" rx="32" ry="7" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+<ellipse cx="67.374" cy="351.8" rx="32" ry="7" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+  <text x="67.37" y="372.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">cyl</text>
+</g>
+<g class="node" data-id="a6" data-label="datastore" data-shape="datastore">
+  
+<path d="M16,441 H118.748 V483.2 H16 Z" fill="url(#m1814eb8b-ng-n)" stroke="none" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M16,441 H118.748 M16,483.2 H118.748" fill="none" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="67.37" y="462.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">datastore</text>
+</g>
+<g class="node" data-id="a7" data-label="folder" data-shape="folder">
+  
+<path d="M27.97,523.2 H59.493 L65.493,531.2 H106.778 V573.4 H27.97 Z" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="67.37" y="552.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">folder</text>
+</g>
+<g class="node" data-id="a8" data-label="bucket" data-shape="bucket">
+  
+<path d="M24.778,619.4 L31.593,663.6 A35.781,6 0 0 0 103.155,663.6 L109.97,619.4" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<ellipse cx="67.374" cy="619.4" rx="42.596" ry="6" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="67.37" y="644.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">bucket</text>
+</g>
+<g class="node" data-id="b1" data-label="console" data-shape="console">
+  
+<rect x="173.172" y="16" width="93.172" height="56.2" rx="8" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+<path d="M173.172,30 H266.344 M181.172,20 L185.172,23 L181.172,26 M187.172,26 H192.172" fill="none" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="219.76" y="51.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">console</text>
+</g>
+<g class="node" data-id="b2" data-label="browser" data-shape="browser">
+  
+<rect x="171.576" y="112.2" width="96.364" height="56.2" rx="8" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+<path d="M171.576,126.2 H267.94" fill="none" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<circle cx="179.576" cy="119.2" r="2" fill="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke="none" stroke-width="0" />
+<circle cx="186.576" cy="119.2" r="2" fill="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke="none" stroke-width="0" />
+<circle cx="193.576" cy="119.2" r="2" fill="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke="none" stroke-width="0" />
+  <text x="219.76" y="147.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">browser</text>
+</g>
+<g class="node" data-id="b3" data-label="person" data-shape="person">
+  
+<circle cx="219.758" cy="218.4" r="8" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+<path d="M203.758,242.4 Q203.758,228.4 219.758,228.4 Q235.758,228.4 235.758,242.4 Z" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="219.76" y="265.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">person</text>
+</g>
+<g class="node" data-id="b4" data-label="circle" data-shape="circle">
+  <circle cx="219.75799999999998" cy="375.6" r="49" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="219.76" y="375.6" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">circle</text>
+</g>
+<g class="node" data-id="b5" data-label="bang" data-shape="bang">
+  
+<path d="M219.758,464.6 L230.46,472.762 L246.263,469.035 L248.995,479.444 L265.666,481.15 L259.697,491.018 L272.768,497.7 L259.697,504.382 L265.666,514.25 L248.995,515.956 L246.263,526.365 L230.46,522.638 L219.758,530.8 L209.056,522.638 L193.253,526.365 L190.521,515.956 L173.85,514.25 L179.819,504.382 L166.748,497.7 L179.819,491.018 L173.85,481.15 L190.521,479.444 L193.253,469.035 L209.056,472.762 Z" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="219.76" y="497.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">bang</text>
+</g>
+<g class="node" data-id="b6" data-label="cloud" data-shape="cloud">
+  
+<path d="M219.758,574.8 A19.128,19.128 0 0 1 251.001,581.14 A13.866,13.866 0 0 1 267.626,597.194 A11.488,11.488 0 0 1 261.852,615.45 A16.872,16.872 0 0 1 236.382,627.366 A19.949,19.949 0 0 1 203.134,627.366 A16.872,16.872 0 0 1 177.664,615.45 A11.488,11.488 0 0 1 171.89,597.194 A13.866,13.866 0 0 1 188.515,581.14 A19.128,19.128 0 0 1 219.758,574.8 Z" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="219.76" y="601.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">cloud</text>
+</g>
+<g class="node" data-id="b7" data-label="diam" data-shape="diamond">
+  <polygon points="219.75799999999998,673.0000000000001 255.17199999999997,708.4140000000001 219.75799999999998,743.8280000000001 184.344,708.4140000000001" fill="url(#m1814eb8b-ng-a)" stroke="color-mix(in srgb, var(--accent, var(--fg)) 74%, var(--fg))" stroke-width="1.25" />
+  <text x="219.76" y="708.41" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">diam</text>
+</g>
+<g class="node" data-id="b8" data-label="hex" data-shape="hexagon">
+  <polygon points="187.288,783.8280000000001 252.228,783.8280000000001 262.778,804.9280000000001 252.228,826.0280000000001 187.288,826.0280000000001 176.738,804.9280000000001" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="219.76" y="804.93" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">hex</text>
+</g>
+<g class="node" data-id="c1" data-label="lean-r" data-shape="parallelogram">
+  <polygon points="346.4059,16 431.07099999999997,16 416.13009999999997,58.2 331.465,58.2" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" />
+  <text x="381.27" y="37.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">lean-r</text>
+</g>
+<g class="node" data-id="c2" data-label="lean-l" data-shape="parallelogramalt">
+  <polygon points="333.061,98.2 415.01289999999995,98.2 429.47499999999997,140.4 347.5231,140.4" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" />
+  <text x="381.27" y="119.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">lean-l</text>
+</g>
+<g class="node" data-id="c3" data-label="trap-b" data-shape="trapezoid">
+  <polygon points="346.4059,180.4 416.13009999999997,180.4 431.07099999999997,222.60000000000002 331.465,222.60000000000002" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" />
+  <text x="381.27" y="201.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">trap-b</text>
+</g>
+<g class="node" data-id="c4" data-label="trap-t" data-shape="trapezoidalt">
+  <polygon points="333.859,262.6 428.677,262.6 414.45430000000005,304.8 348.08169999999996,304.8" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" />
+  <text x="381.27" y="283.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">trap-t</text>
+</g>
+<g class="node" data-id="c5" data-label="dbl-circ" data-shape="doublecircle">
+  <circle cx="381.268" cy="405.3" r="60.5" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" />
+<circle cx="381.268" cy="405.3" r="55.5" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" />
+  <text x="381.27" y="405.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">dbl-circ</text>
+</g>
+<g class="node" data-id="c6" data-label="text" data-shape="text">
+  
+  <text x="381.27" y="526.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">text</text>
+</g>
+<g class="node" data-id="c7" data-label="notch-rect" data-shape="notchedrectangle">
+  
+<path d="M334.899,588 H439.637 V630.2 H322.899 V600 Z" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="381.27" y="609.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">notch-rect</text>
+</g>
+<g class="node" data-id="c8" data-label="lin-rect" data-shape="linedrectangle">
+  
+<rect x="333.273" y="670.2" width="95.99" height="42.2" rx="0" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" />
+<path d="M343.273,670.2 V712.4" fill="none" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="386.27" y="691.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">lin-rect</text>
+</g>
+<g class="node" data-id="d1" data-label="" data-shape="statestart">
+  <circle cx="76" cy="886.0280000000001" r="10" fill="var(--accent, var(--fg))" />
+  
+</g>
+<g class="node" data-id="d2" data-label="" data-shape="stateend">
+  <circle cx="76" cy="950.0280000000001" r="10" fill="none" stroke="var(--accent, var(--fg))" stroke-width="2" />
+<circle cx="76" cy="950.0280000000001" r="6" fill="var(--accent, var(--fg))" />
+  
+</g>
+<g class="node" data-id="d3" data-label="" data-shape="forkjoin">
+  <rect x="16" y="1002.0280000000001" width="120" height="8" rx="2" ry="2" fill="var(--_line-strong)" stroke="none" />
+  
+</g>
+<g class="node" data-id="d4" data-label="" data-shape="hourglass">
+  
+<path d="M58,1050.028 H94 L58,1086.028 H94 Z" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  
+</g>
+<g class="node" data-id="d5" data-label="brace" data-shape="braceleft">
+  
+<path d="M41.798,1126.028 Q36.798,1126.028 36.798,1132.028 V1141.128 Q36.798,1147.128 31.798,1147.128 Q36.798,1147.128 36.798,1153.128 V1162.228 Q36.798,1168.228 41.798,1168.228" fill="none" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="76" y="1147.13" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">brace</text>
+</g>
+<g class="node" data-id="d6" data-label="brace-r" data-shape="braceright">
+  
+<path d="M115.389,1208.228 Q120.389,1208.228 120.389,1214.228 V1223.328 Q120.389,1229.328 125.389,1229.328 Q120.389,1229.328 120.389,1235.328 V1244.428 Q120.389,1250.428 115.389,1250.428" fill="none" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="76" y="1229.33" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">brace-r</text>
+</g>
+<g class="node" data-id="d7" data-label="braces" data-shape="braces">
+  
+<path d="M31.808,1290.428 Q26.808,1290.428 26.808,1296.428 V1305.528 Q26.808,1311.528 21.808,1311.528 Q26.808,1311.528 26.808,1317.528 V1326.628 Q26.808,1332.628 31.808,1332.628" fill="none" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M120.192,1290.428 Q125.192,1290.428 125.192,1296.428 V1305.528 Q125.192,1311.528 130.192,1311.528 Q125.192,1311.528 125.192,1317.528 V1326.628 Q125.192,1332.628 120.192,1332.628" fill="none" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="76" y="1311.53" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">braces</text>
+</g>
+<g class="node" data-id="d8" data-label="" data-shape="lightningbolt">
+  
+<path d="M79.84,1372.628 L60,1399.508 H74.4 L71.52,1420.628 L92,1392.788 H77.92 Z" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  
+</g>
+<g class="node" data-id="e1" data-label="doc" data-shape="document">
+  
+<path d="M211.955,874.028 H277.995 V921.228 C261.485,911.228 228.465,931.228 211.955,921.228 Z" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="244.98" y="895.13" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">doc</text>
+</g>
+<g class="node" data-id="e2" data-label="delay" data-shape="delay">
+  
+<path d="M196.369,966.228 H272.481 A21.1,21.1 0 0 1 272.481,1008.428 H196.369 Z" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="244.98" y="987.33" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">delay</text>
+</g>
+<g class="node" data-id="e3" data-label="h-cyl" data-shape="horizontalcylinder">
+  
+<path d="M208.364,1048.428 H281.586 A7,21.1 0 0 1 281.586,1090.628 H208.364 A7,21.1 0 0 1 208.364,1048.428 Z" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<ellipse cx="281.586" cy="1069.528" rx="7" ry="21.1" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+  <text x="244.98" y="1069.53" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">h-cyl</text>
+</g>
+<g class="node" data-id="e4" data-label="lin-cyl" data-shape="linedcylinder">
+  
+<path d="M205.172,1137.628 V1185.828 A39.803,7 0 0 0 284.778,1185.828 V1137.628" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<ellipse cx="244.975" cy="1137.628" rx="39.803" ry="7" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+<path d="M205.172,1143.628 A39.803,7 0 0 0 284.778,1143.628" fill="none" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="244.98" y="1161.73" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">lin-cyl</text>
+</g>
+<g class="node" data-id="e5" data-label="curv-trap" data-shape="curvedtrapezoid">
+  
+<path d="M198.067,1232.828 H284.85 A21.1,21.1 0 0 1 284.85,1275.028 H198.067 L184,1253.928 Z" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="244.98" y="1253.93" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">curv-trap</text>
+</g>
+<g class="node" data-id="e6" data-label="div-rect" data-shape="dividedrectangle">
+  
+<rect x="199.586" y="1315.028" width="90.778" height="52.2" rx="0" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" />
+<path d="M199.586,1325.028 H290.364" fill="none" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="244.98" y="1346.13" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">div-rect</text>
+</g>
+<g class="node" data-id="e7" data-label="tri" data-shape="triangle">
+  
+<path d="M244.975,1407.228 L304.059,1470.528 H185.891 Z" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="244.98" y="1449.43" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">tri</text>
+</g>
+<g class="node" data-id="e8" data-label="win-pane" data-shape="windowpane">
+  
+<rect x="190.596" y="1510.528" width="108.758" height="52.2" rx="0" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" />
+<path d="M200.596,1510.528 V1562.728 M190.596,1520.528 H299.354" fill="none" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="249.98" y="1541.63" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">win-pane</text>
+</g>
+<g class="node" data-id="f1" data-label="" data-shape="filledcircle">
+  
+<circle cx="423.807" cy="882.028" r="8" fill="var(--_line-strong)" stroke="none" stroke-width="0" />
+  
+</g>
+<g class="node" data-id="f2" data-label="notch-pent" data-shape="notchedpentagon">
+  
+<path d="M374.64,930.028 H472.974 L482.974,940.028 V972.228 H364.64 V940.028 Z" fill="url(#m1814eb8b-ng-p5)" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="423.81" y="951.13" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">notch-pent</text>
+</g>
+<g class="node" data-id="f3" data-label="flip-tri" data-shape="flippedtriangle">
+  
+<path d="M353.95,1012.228 H493.664 L423.807,1075.528 Z" fill="url(#m1814eb8b-ng-p5)" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="423.81" y="1033.33" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">flip-tri</text>
+</g>
+<g class="node" data-id="f4" data-label="sl-rect" data-shape="slopedrectangle">
+  
+<path d="M382.408,1125.528 L465.206,1115.528 V1167.728 H382.408 Z" fill="url(#m1814eb8b-ng-p5)" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="423.81" y="1146.63" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">sl-rect</text>
+</g>
+<g class="node" data-id="f5" data-label="docs" data-shape="stackeddocument">
+  
+<path d="M391.797,1207.728 H465.817 V1254.928 C447.312,1244.928 410.302,1264.928 391.797,1254.928 Z" fill="url(#m1814eb8b-ng-p5)" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M386.797,1212.728 H460.817 V1259.928 C442.312,1249.928 405.302,1269.928 386.797,1259.928 Z" fill="url(#m1814eb8b-ng-p5)" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M381.797,1217.728 H455.817 V1264.928 C437.312,1254.928 400.302,1274.928 381.797,1264.928 Z" fill="url(#m1814eb8b-ng-p5)" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="418.81" y="1238.83" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">docs</text>
+</g>
+<g class="node" data-id="f6" data-label="st-rect" data-shape="stackedrectangle">
+  
+<rect x="387.408" y="1309.928" width="82.798" height="42.2" rx="0" fill="url(#m1814eb8b-ng-p5)" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" />
+<rect x="382.408" y="1314.928" width="82.798" height="42.2" rx="0" fill="url(#m1814eb8b-ng-p5)" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" />
+<rect x="377.408" y="1319.928" width="82.798" height="42.2" rx="0" fill="url(#m1814eb8b-ng-p5)" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" />
+  <text x="418.81" y="1341.03" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">st-rect</text>
+</g>
+<g class="node" data-id="f7" data-label="bow-rect" data-shape="bowtierectangle">
+  
+<path d="M373.226,1402.128 H482.388 A8,21.1 0 0 0 482.388,1444.328 H373.226 A8,21.1 0 0 1 373.226,1402.128 Z" fill="url(#m1814eb8b-ng-p5)" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="423.81" y="1423.23" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">bow-rect</text>
+</g>
+<g class="node" data-id="f8" data-label="" data-shape="crossedcircle">
+  
+<circle cx="423.807" cy="1502.328" r="18" fill="url(#m1814eb8b-ng-p5)" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" />
+<path d="M411.079,1489.6 L436.535,1515.056 M436.535,1489.6 L411.079,1515.056" fill="none" stroke="color-mix(in srgb, #bab0ac 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  
+</g>
+<g class="node" data-id="g1" data-label="tag-doc" data-shape="taggeddocument">
+  
+<path d="M18.606,1610.728 H107.788 V1657.928 C85.492,1647.928 40.902,1667.928 18.606,1657.928 Z" fill="url(#m1814eb8b-ng-p6)" stroke="color-mix(in srgb, #86bcb6 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M93.788,1655.928 L107.788,1643.928" fill="none" stroke="color-mix(in srgb, #86bcb6 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="63.2" y="1631.83" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">tag-doc</text>
+</g>
+<g class="node" data-id="g2" data-label="tag-rect" data-shape="taggedrectangle">
+  
+<rect x="17.808" y="1702.928" width="90.778" height="42.2" rx="0" fill="url(#m1814eb8b-ng-p6)" stroke="color-mix(in srgb, #86bcb6 74%, var(--fg))" stroke-width="1.25" />
+<path d="M94.586,1745.128 L108.586,1731.128" fill="none" stroke="color-mix(in srgb, #86bcb6 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="63.2" y="1724.03" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">tag-rect</text>
+</g>
+<g class="node" data-id="g3" data-label="flag" data-shape="flag">
+  
+<path d="M30.975,1790.128 C47.086,1800.128 79.308,1780.128 95.419,1790.128 V1832.328 C79.308,1822.328 47.086,1842.328 30.975,1832.328 Z" fill="url(#m1814eb8b-ng-p6)" stroke="color-mix(in srgb, #86bcb6 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="63.2" y="1811.23" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">flag</text>
+</g>
+<g class="node" data-id="g4" data-label="odd" data-shape="asymmetric">
+  <polygon points="36.17700000000001,1877.328 102.217,1877.328 102.217,1919.528 36.17700000000001,1919.528 24.177000000000007,1898.4279999999999" fill="url(#m1814eb8b-ng-p6)" stroke="color-mix(in srgb, #86bcb6 74%, var(--fg))" stroke-width="1.25" />
+  <text x="63.2" y="1898.43" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">odd</text>
+</g>
+<g class="node" data-id="g5" data-label="lin-doc" data-shape="lineddocument">
+  
+<path d="M16,1959.528 H110.394 V2006.728 C86.796,1996.728 39.598,2016.728 16,2006.728 Z" fill="url(#m1814eb8b-ng-p6)" stroke="color-mix(in srgb, #86bcb6 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M26,1959.528 V2006.728" fill="none" stroke="color-mix(in srgb, #86bcb6 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="68.2" y="1980.63" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">lin-doc</text>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-ng-a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, var(--accent, var(--fg)) 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-n" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, var(--_line) 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, var(--_line) 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #f28e2b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #f28e2b 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #76b7b2 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #76b7b2 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #b07aa1 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #b07aa1 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #9c755f 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #9c755f 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #bab0ac 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #bab0ac 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #86bcb6 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #86bcb6 7%, var(--bg))" /></linearGradient>
+</defs>
+</svg>

@@ -94,40 +94,9 @@ rs-garbage-line - accept | no
 rs-unclosed-label + accept | yes
 rs-unclosed-label - accept | no
 
-# ipjohnson/mermaider#6: flowchart nodes given with @{ shape: ..., label: ... } are drawn as rectangles labelled with
-# their id, and the first edge of the line is dropped.
-shape-at-syntax + node | A | A | rect
-shape-at-syntax + node | B | B | rect
-shape-at-syntax + node | C | C | rect
-shape-at-syntax + node | D | D | rect
-shape-at-syntax + node | E | E | rect
-shape-at-syntax + node | F | F | rect
-shape-at-syntax + node | G | G | rect
-shape-at-syntax + node | H | H | rect
-shape-at-syntax + node | I | I | rect
-shape-at-syntax + node | J | J | rect
-shape-at-syntax - edge | A | B | none | arrow | solid
-shape-at-syntax - node | A | Rounded | rounded
-shape-at-syntax - node | B | Database | cyl
-shape-at-syntax - node | C | Decide | diam
-shape-at-syntax - node | D | Report | doc
-shape-at-syntax - node | E | Prepare | hex
-shape-at-syntax - node | F | Card | notch-rect
-shape-at-syntax - node | G | Start | circle
-shape-at-syntax - node | H | Terminal | stadium
-shape-at-syntax - node | I | Store | h-cyl
-shape-at-syntax - node | J |  | bolt
-
-# ipjohnson/mermaider#7: flowchart icon and image nodes draw no icon or image and show their id as the label.
-flowchart-icon-image + node | A | A | rect
-flowchart-icon-image + node | B | B | rect
-flowchart-icon-image + node | C | C | rect
-flowchart-icon-image - edge | A | B | none | arrow | solid
+# ipjohnson/mermaider#7: flowchart icon and image nodes draw no icon or image.
 flowchart-icon-image - icon | A | fa:user
 flowchart-icon-image - image | C | https://mermaid.js.org/favicon.svg
-flowchart-icon-image - node | A | User | rect
-flowchart-icon-image - node | B | Plain | rect
-flowchart-icon-image - node | C | Logo | rect
 
 # ipjohnson/mermaider#8: FontAwesome references are drawn as their fa:fa-name text instead of an icon, and a mindmap
 # ::icon(...) line becomes a child node.
@@ -197,124 +166,9 @@ flowchart-fa-label - node | C | forbidden | rect
 docs-flowchart-004 + node | newLines | Line1 Line 2 Line 3 | rect
 docs-flowchart-004 - node | newLines | Line1Line 2Line 3 | rect
 
-# Unsupported, ipjohnson/mermaider#6: flowchart node shapes and properties given with @{ ... }, including view: collapsed, are not read.
-docs-flowchart-022 + node | A | A | rect
-docs-flowchart-022 + node | B | B | rect
-docs-flowchart-022 + node | C | C | rect
-docs-flowchart-022 + node | D | D | rect
-docs-flowchart-022 + node | E | E | rect
-docs-flowchart-022 - node | A | File Handling | flip-tri
-docs-flowchart-022 - node | B | User Input | sl-rect
-docs-flowchart-022 - node | C | Multiple Documents | docs
-docs-flowchart-022 - node | D | Process Automation | st-rect
-docs-flowchart-022 - node | E | Paper Records | flag
-docs-flowchart-023 + node | A | A | rect
-docs-flowchart-023 - node | A | This is a process | rect
-docs-flowchart-024 + node | A | A | rect
-docs-flowchart-024 - node | A | This is an event | rounded
-docs-flowchart-025 + node | A | A | rect
-docs-flowchart-025 - node | A | Terminal point | stadium
-docs-flowchart-026 + node | A | A | rect
-docs-flowchart-026 - node | A | This is a subprocess | fr-rect
-docs-flowchart-027 + node | A | A | rect
-docs-flowchart-027 - node | A | Database | cyl
-docs-flowchart-028 + node | A | A | rect
-docs-flowchart-028 - node | A | Start | circle
-docs-flowchart-029 + node | A | A | rect
-docs-flowchart-029 - node | A | Odd shape | odd
-docs-flowchart-030 + node | A | A | rect
-docs-flowchart-030 - node | A | Decision | diam
-docs-flowchart-031 + node | A | A | rect
-docs-flowchart-031 - node | A | Prepare conditional | hex
-docs-flowchart-032 + node | A | A | rect
-docs-flowchart-032 - node | A | Input/Output | lean-r
-docs-flowchart-033 + node | A | A | rect
-docs-flowchart-033 - node | A | Output/Input | lean-l
-docs-flowchart-034 + node | A | A | rect
-docs-flowchart-034 - node | A | Datastore | datastore
-docs-flowchart-035 + node | A | A | rect
-docs-flowchart-035 - node | A | Priority action | trap-b
-docs-flowchart-036 + node | A | A | rect
-docs-flowchart-036 - node | A | Manual operation | trap-t
-docs-flowchart-037 + node | A | A | rect
-docs-flowchart-037 - node | A | Stop | dbl-circ
-docs-flowchart-038 + node | A | A | rect
-docs-flowchart-038 - node | A | This is a text block | text
-docs-flowchart-039 + node | A | A | rect
-docs-flowchart-039 - node | A | Card | notch-rect
-docs-flowchart-040 + node | A | A | rect
-docs-flowchart-040 - node | A | Lined process | lin-rect
-docs-flowchart-041 + node | A | A | rect
-docs-flowchart-041 - node | A |  | sm-circ
-docs-flowchart-042 + node | A | A | rect
-docs-flowchart-042 - node | A |  | fr-circ
-docs-flowchart-043 + node | A | A | rect
-docs-flowchart-043 - node | A |  | fork
-docs-flowchart-044 + node | A | A | rect
-docs-flowchart-044 - node | A |  | hourglass
-docs-flowchart-045 + node | A | A | rect
-docs-flowchart-045 - node | A | Comment | brace
-docs-flowchart-046 + node | A | A | rect
-docs-flowchart-046 - node | A | Comment | brace-r
-docs-flowchart-047 + node | A | A | rect
-docs-flowchart-047 - node | A | Comment | braces
-docs-flowchart-048 + node | A | A | rect
-docs-flowchart-048 - node | A |  | bolt
-docs-flowchart-049 + node | A | A | rect
-docs-flowchart-049 - node | A | Document | doc
-docs-flowchart-050 + node | A | A | rect
-docs-flowchart-050 - node | A | Delay | delay
-docs-flowchart-051 + node | A | A | rect
-docs-flowchart-051 - node | A | Direct access storage | h-cyl
-docs-flowchart-052 + node | A | A | rect
-docs-flowchart-052 - node | A | Disk storage | lin-cyl
-docs-flowchart-053 + node | A | A | rect
-docs-flowchart-053 - node | A | Display | curv-trap
-docs-flowchart-054 + node | A | A | rect
-docs-flowchart-054 - node | A | Divided process | div-rect
-docs-flowchart-055 + node | A | A | rect
-docs-flowchart-055 - node | A | Extract | tri
-docs-flowchart-056 + node | A | A | rect
-docs-flowchart-056 - node | A | Internal storage | win-pane
-docs-flowchart-057 + node | A | A | rect
-docs-flowchart-057 - node | A |  | f-circ
-docs-flowchart-058 + node | A | A | rect
-docs-flowchart-058 - node | A | Lined document | lin-doc
-docs-flowchart-059 + node | A | A | rect
-docs-flowchart-059 - node | A | Loop limit | notch-pent
-docs-flowchart-060 + node | A | A | rect
-docs-flowchart-060 - node | A | Manual file | flip-tri
-docs-flowchart-061 + node | A | A | rect
-docs-flowchart-061 - node | A | Manual input | sl-rect
-docs-flowchart-062 + node | A | A | rect
-docs-flowchart-062 - node | A | Multiple documents | docs
-docs-flowchart-063 + node | A | A | rect
-docs-flowchart-063 - node | A | Multiple processes | st-rect
-docs-flowchart-064 + node | A | A | rect
-docs-flowchart-064 - node | A | Paper tape | flag
-docs-flowchart-065 + node | A | A | rect
-docs-flowchart-065 - node | A | Stored data | bow-rect
-docs-flowchart-066 + node | A | A | rect
-docs-flowchart-066 - node | A |  | cross-circ
-docs-flowchart-067 + node | A | A | rect
-docs-flowchart-067 - node | A | Tagged document | tag-doc
-docs-flowchart-068 + node | A | A | rect
-docs-flowchart-068 - node | A | Tagged process | tag-rect
-docs-flowchart-104 + edge | A | B | none | arrow | solid
-docs-flowchart-104 + edge | B | C | none | arrow | solid
-docs-flowchart-104 + group | one | My Group | A,B,C
-docs-flowchart-104 + node | A | A | rect
-docs-flowchart-104 + node | B | B | rect
-docs-flowchart-104 + node | C | C | rect
-docs-flowchart-104 - node | one |  | collapsedGroup
-
 # Unsupported, ipjohnson/mermaider#7: flowchart icon and image nodes are not drawn.
-docs-flowchart-069 + node | A | A | rect
 docs-flowchart-069 - icon | A | fa:user
-docs-flowchart-069 - node | A | User Icon | rect
-docs-flowchart-070 + node | A | A | rect
 docs-flowchart-070 - image | A | https://mermaid.js.org/favicon.svg
-docs-flowchart-070 - node | A | My example image label | rect
 
 # ipjohnson/mermaider#5: flowchart edge IDs drop the edge and add a stray node.
 docs-flowchart-086 - edge | A | B | none | arrow | solid
