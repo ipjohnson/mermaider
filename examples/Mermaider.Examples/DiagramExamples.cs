@@ -27,6 +27,7 @@ public enum DiagramCategory
 	Block,
 	TreeView,
 	Usecase,
+	Wardley,
 	RealWorld
 }
 
@@ -1634,6 +1635,7 @@ public static partial class DiagramExamples
 			.. CreateRequirementExamples(),
 			.. CreateTreeViewExamples(),
 			.. CreateUsecaseExamples(),
+			.. CreateWardleyExamples(),
 			.. CreateRealWorldExamples(),
 		];
 
@@ -1665,6 +1667,7 @@ public static partial class DiagramExamples
 		DiagramCategory.Architecture => "Architecture",
 		DiagramCategory.Block => "Block",
 		DiagramCategory.Usecase => "Use Case",
+		DiagramCategory.Wardley => "Wardley Map",
 		DiagramCategory.RealWorld => "Real World",
 		_ => c.ToString(),
 	};
@@ -1695,6 +1698,7 @@ public static partial class DiagramExamples
 		DiagramCategory.Architecture => "architecture",
 		DiagramCategory.Block => "block",
 		DiagramCategory.Usecase => "usecase",
+		DiagramCategory.Wardley => "wardley",
 		DiagramCategory.RealWorld => "real-world",
 		_ => c.ToString().ToLowerInvariant(),
 	};

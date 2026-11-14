@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c8a676b374edb468
+accept	yes
+drawn	yes
+label	Coordinate Examples
+label	Infrastructure
+label	Product
+label	User Need
+node	Infrastructure	Infrastructure	component	20	30
+node	Product	Product	component	60	70
+node	User Need	User Need	component	95	90
+title	Coordinate Examples

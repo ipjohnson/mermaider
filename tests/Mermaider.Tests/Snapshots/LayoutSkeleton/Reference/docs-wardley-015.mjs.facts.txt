@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6ba6230ffb4f7a61
+accept	yes
+drawn	yes
+label	API
+label	Critical decision point
+label	Database
+label	High risk area
+label	Notes
+link	API	Database		none
+node	API	API	component	70	60
+node	Database	Database	component	50	40
+note	Critical decision point	55	65
+note	High risk area	35	40
+title	Notes

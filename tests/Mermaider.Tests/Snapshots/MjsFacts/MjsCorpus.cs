@@ -122,7 +122,7 @@ internal static partial class MjsCorpus
 	private static string Kebab(string name) =>
 		KebabBoundaryPattern().Replace(name, "-$1").Replace('_', '-').ToLowerInvariant().Replace("--", "-", StringComparison.Ordinal);
 
-	[GeneratedRegex(@"^(flowchart|graph|stateDiagram(-v2)?|classDiagram(-v2)?|sequenceDiagram|erDiagram|pie|quadrantChart|timeline|gitGraph|radar-beta|treemap-beta|venn-beta|mindmap|gantt|journey|C4(Context|Container|Component|Dynamic|Deployment)|sankey(-beta)?|xychart(-beta)?|requirementDiagram|packet(-beta)?|kanban|architecture-beta|block(-beta)?|treeView(-beta)?|usecase-beta)\b", RegexOptions.None, TimeoutMs)]
+	[GeneratedRegex(@"^(flowchart|graph|stateDiagram(-v2)?|classDiagram(-v2)?|sequenceDiagram|erDiagram|pie|quadrantChart|timeline|gitGraph|radar-beta|treemap-beta|venn-beta|mindmap|gantt|journey|C4(Context|Container|Component|Dynamic|Deployment)|sankey(-beta)?|xychart(-beta)?|requirementDiagram|packet(-beta)?|kanban|architecture-beta|block(-beta)?|treeView(-beta)?|usecase-beta|wardley-beta)\b", RegexOptions.None, TimeoutMs)]
 	private static partial Regex HeaderPattern();
 
 	[GeneratedRegex(@"public\s+(?:async\s+Task|void|Task)\s+(?<method>\w+)\(\)(?:(?!public\s)[\s\S])*?""""""\r?\n(?<body>[\s\S]*?)\r?\n(?<indent>[ \t]*)""""""", RegexOptions.None, TimeoutMs)]

@@ -1,0 +1,28 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ee7968c51b2dfc94
+accept	yes
+drawn	yes
+label	Business
+label	Cup of Tea
+label	Hot Water
+label	Kettle
+label	Power
+label	Standardising power allows Kettles to evolve faster
+label	Tea
+label	Tea Shop Value Chain
+link	Business	Cup of Tea		none
+link	Cup of Tea	Hot Water		none
+link	Cup of Tea	Tea		none
+link	Hot Water	Kettle		none
+link	Kettle	Power		none
+node	Business	Business	anchor	63	95
+node	Cup of Tea	Cup of Tea	component	61	79
+node	Hot Water	Hot Water	component	80	52
+node	Kettle	Kettle	component	35	43
+node	Power	Power	component	70	10
+node	Tea	Tea	component	81	63
+note	Standardising power allows Kettles to evolve faster	49	30
+title	Tea Shop Value Chain
+trend	Kettle	62	43
+trend	Power	89	10

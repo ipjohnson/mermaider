@@ -22,7 +22,7 @@ header = re.compile(
     r'^(flowchart|graph|stateDiagram(-v2)?|classDiagram(-v2)?|sequenceDiagram|erDiagram|pie|quadrantChart|timeline'
     r'|gitGraph|radar-beta|treemap-beta|venn-beta|mindmap|gantt|journey|C4(Context|Container|Component|Dynamic|Deployment)'
     r'|sankey(-beta)?|xychart(-beta)?|requirementDiagram|packet(-beta)?|kanban|architecture-beta|block(-beta)?'
-    r'|treeView(-beta)?|usecase-beta)\b')
+    r'|treeView(-beta)?|usecase-beta|wardley-beta)\b')
 
 
 def first_line(body):

@@ -84,6 +84,9 @@ internal static partial class DiagramDetector
 	[GeneratedRegex(@"^usecase-beta(?:\s|$)", RegexOptions.None, TimeoutMs)]
 	private static partial Regex UsecaseHeader();
 
+	[GeneratedRegex(@"^wardley-beta", RegexOptions.IgnoreCase, TimeoutMs)]
+	private static partial Regex WardleyHeader();
+
 	internal static DiagramType Detect(ReadOnlySpan<char> text)
 	{
 		var firstLineEnd = text.IndexOf('\n');
@@ -139,6 +142,8 @@ internal static partial class DiagramDetector
 			return DiagramType.TreeView;
 		if (UsecaseHeader().IsMatch(firstLineStr))
 			return DiagramType.Usecase;
+		if (WardleyHeader().IsMatch(firstLineStr))
+			return DiagramType.Wardley;
 
 		return DiagramType.Flowchart;
 	}

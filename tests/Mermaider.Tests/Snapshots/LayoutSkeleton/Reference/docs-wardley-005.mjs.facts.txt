@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f8939bf3c47509e8
+accept	yes
+drawn	yes
+label	Hyphenated Names
+label	end-user
+label	real-time processing
+link	end-user	real-time processing		none
+node	end-user	end-user	component	95	90
+node	real-time processing	real-time processing	component	40	55
+title	Hyphenated Names

@@ -116,6 +116,9 @@ internal static partial class MermaiderFacts
 			case DiagramType.Usecase:
 				Usecase(UsecaseParser.Parse(cleaned), doc, facts);
 				break;
+			case DiagramType.Wardley:
+				Wardley(WardleyParser.Parse(source), doc, facts);
+				break;
 			default:
 				throw new InvalidOperationException("MermaiderFacts has no extractor for this diagram type; add one with its scripts/mjs-facts.mjs twin");
 		}
@@ -1058,6 +1061,88 @@ internal static partial class MermaiderFacts
 
 	[GeneratedRegex(@"\*\*|\*|~~", RegexOptions.None, TimeoutMs)]
 	private static partial Regex MarkdownMarkerPattern();
+
+	private static void Wardley(WardleyDiagram map, XDocument doc, List<string> facts)
+	{
+		static string Yes(bool v) => v ? "yes" : string.Empty;
+
+		var shown = new List<string?>();
+		if (!string.IsNullOrEmpty(map.Title))
+		{
+			facts.Add(Fact("title", map.Title));
+			shown.Add(map.Title);
+		}
+
+		if (map.Size is { } size)
+			facts.Add(Fact("size", Int(size.Width), Int(size.Height)));
+		for (var i = 0; i < map.Stages.Count; i++)
+		{
+			facts.Add(Fact("stage", Int(i), map.Stages[i]));
+			shown.Add(map.Stages[i]);
+		}
+
+		if (map.StageBoundaries.Count > 0)
+			facts.Add(Fact("boundaries", string.Join(',', map.StageBoundaries.Select(b => Num(b)))));
+		foreach (var n in map.Nodes)
+		{
+			var kind = n.Kind switch
+			{
+				WardleyNodeKind.Anchor => "anchor",
+				WardleyNodeKind.PipelineComponent => "pipeline-component",
+				_ => "component",
+			};
+			var sourcing = n.Sourcing == WardleySourcing.None ? string.Empty : n.Sourcing.ToString().ToLowerInvariant();
+			facts.Add(
+				Fact(
+					"node",
+					n.Id,
+					n.Label,
+					kind,
+					Num(n.Position.Evolution),
+					Num(n.Position.Visibility),
+					Num(n.LabelOffsetX),
+					Num(n.LabelOffsetY),
+					Yes(n.Inertia),
+					sourcing,
+					Yes(n.IsPipelineParent)
+				)
+			);
+			shown.Add(n.Label);
+		}
+
+		foreach (var l in map.Links)
+		{
+			facts.Add(Fact("link", l.Source, l.Target, Yes(l.Dashed), l.Flow.ToString().ToLowerInvariant(), l.Label));
+			shown.Add(l.Label);
+		}
+
+		var visibility = map.Nodes.ToDictionary(n => n.Id, n => n.Position.Visibility, StringComparer.Ordinal);
+		foreach (var t in map.Trends)
+			facts.Add(Fact("trend", t.NodeId, Num(t.TargetEvolution), Num(visibility[t.NodeId])));
+		foreach (var p in map.Pipelines)
+			facts.Add(Fact("pipeline", p.NodeId, string.Join(',', p.ComponentIds)));
+		foreach (var n in map.Notes)
+		{
+			facts.Add(Fact("note", n.Text, Num(n.Position.Evolution), Num(n.Position.Visibility)));
+			shown.Add(n.Text);
+		}
+
+		foreach (var a in map.Annotations)
+		{
+			facts.Add(Fact("annotation", Int(a.Number), Num(a.Position.Evolution), Num(a.Position.Visibility), a.Text));
+			shown.Add(a.Text);
+		}
+
+		if (map.AnnotationsBox is { } box)
+			facts.Add(Fact("annotations", Num(box.Evolution), Num(box.Visibility)));
+		foreach (var f in map.Forces)
+		{
+			facts.Add(Fact(f.Deaccelerator ? "deaccelerator" : "accelerator", f.Name, Num(f.Position.Evolution), Num(f.Position.Visibility)));
+			shown.Add(f.Name);
+		}
+
+		Labels(doc, facts, shown);
+	}
 
 	private static void TreeView(TreeViewDiagram diagram, XDocument doc, List<string> facts)
 	{

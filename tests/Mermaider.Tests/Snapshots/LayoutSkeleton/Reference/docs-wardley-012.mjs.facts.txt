@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 29e13a0716dacc33
+accept	yes
+drawn	yes
+label	Analysis
+label	Convergent
+label	Custom Stages
+label	Divergent
+label	Modelled
+label	Raw Data
+label	Reports
+label	Unmodelled
+node	Analysis	Analysis	component	50	45
+node	Raw Data	Raw Data	component	20	15
+node	Reports	Reports	component	70	75
+stage	0	Unmodelled
+stage	1	Divergent
+stage	2	Convergent
+stage	3	Modelled
+title	Custom Stages

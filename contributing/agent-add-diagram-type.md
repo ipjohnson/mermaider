@@ -421,3 +421,16 @@ test_entity - satisfies -> test_req
   ipjohnson/AgentDriver#4284 exist.
 - The facts extractor reads mermaid's db (`getActors`, `getUseCases`, `getSystemBoundaries`, `getRelationships`,
   `getNotes`) and the JSON rows from `getData()`.
+
+### Wardley map (2026-11)
+
+- Detector: `^wardley-beta`, case-insensitive like mermaid's; the parser then requires the exact keyword.
+- mermaid's grammar is Langium with ordered terminals and no word boundaries, so the parser lexes with the same order
+  (punctuation, then `WARDLEY_NUMBER`, arrows, ports, `;label`, strategies, keywords, `NAME_WITH_SPACES`, the common
+  terminals). A name starting with `note`, `label`, `buy`, … is split and refused exactly as mermaid does.
+- Coordinates are `[visibility, evolution]` for every statement, including annotations and forces; the model keeps
+  mermaid's percent values. Component coordinates must be decimals; `annotations` also takes integers.
+- Draw at mermaid's geometry (900 × 600, 48px margin) so positions match; widen the canvas, never the plot, for labels.
+  Measure captions with `DesignSystem.XsWidth` so Blueprint's mono text fits without a preset branch.
+- Valid input mermaid does not draw goes to `WardleyDiagram.Unused` with its line, until ipjohnson/AgentDriver#4284.
+- The facts extractor reads `db.getWardleyData()`.

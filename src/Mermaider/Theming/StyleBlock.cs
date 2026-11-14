@@ -205,6 +205,7 @@ internal static class StyleBlock
 		DiagramType.Block => "block diagram",
 		DiagramType.TreeView => "tree view",
 		DiagramType.Usecase => "use case diagram",
+		DiagramType.Wardley => "Wardley map",
 		_ => "diagram"
 	};
 
