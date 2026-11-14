@@ -1,0 +1,41 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d2280fedda14e5f9
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+actor	C	C	participant
+bbox	label	Every minute	248.9	87	351.1	104.4
+bbox	label	Give up	238	523	302	540.2
+bbox	label	Ping B	272	132	328	149.4
+bbox	label	Ping C	246.5	226	303.5	243.4
+bbox	label	Retry	271.4	374	318.6	391.4
+bbox	label	Same messages	136	419	264	436.4
+bbox	label	again	152.4	471.1	191.6	488.5
+bbox	label	alt	54	370	104	405
+bbox	label	loop	54	83	104	118
+bbox	label	opt	64	415	114	450
+bbox	label	par	64	128	114	163
+bbox	label	ping	156.9	184.1	187.1	201.5
+bbox	label	ping	256.9	273.1	287.1	290.5
+bbox	label	pong	260.2	327.1	295.8	344.5
+bbox	label	stop	256.9	570.1	287.1	587.3
+bbox	node	A	0	0	150	73
+bbox	node	A	0	623	150	696
+bbox	node	B	200	0	350	73
+bbox	node	B	200	623	350	696
+bbox	node	C	400	0	550	73
+bbox	node	C	400	623	550	696
+block	alt	Retry
+block	loop	Every minute
+block	opt	Same messages
+block	par	Ping B
+canvas	-50	-10	600	737
+divider	Give up
+divider	Ping C
+drawn	yes
+message	A	B	solid	filled	again
+message	A	B	solid	filled	ping
+message	A	C	solid	filled	ping
+message	A	C	solid	filled	stop
+message	C	A	dashed	filled	pong
