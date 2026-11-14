@@ -1,5 +1,6 @@
 using System.Text;
 using Mermaider.Models;
+using Mermaider.Text;
 using Mermaider.Theming;
 
 namespace Mermaider.Rendering;
@@ -23,8 +24,11 @@ internal static class FlowchartShapes
 	/// <summary>Height of a collapsed subgraph's indicator row, below its title.</summary>
 	private const double IndicatorRow = 28;
 
-	/// <summary>Height of the figure above a person's label.</summary>
-	private const double Figure = 36;
+	/// <summary>Part of a person's head radius that overlaps the top of the body.</summary>
+	private const double HeadOverlap = 0.27;
+
+	/// <summary>Space between a label and the outline edges clip to on a shape that draws no outline there.</summary>
+	private const double OpenSidePadding = 7.5;
 
 	/// <summary>Size of the shapes drawn as markers, without their label.</summary>
 	internal static (double Width, double Height)? FixedSize(NodeShape shape) => shape switch
@@ -55,7 +59,7 @@ internal static class FlowchartShapes
 		NodeShape.Folder => (width, height + 8),
 		NodeShape.Bucket => (width, height + 14),
 		NodeShape.Console or NodeShape.Browser => (width, height + 14),
-		NodeShape.Person => (Math.Max(width, 56), height + Figure),
+		NodeShape.Person => (Math.Max(width, 100), height + ((2 - HeadOverlap) * HeadRadius(Math.Max(width, 100)))),
 		NodeShape.Bang => (width + 32, height + 24),
 		NodeShape.Cloud => (width + 28, height + 20),
 		NodeShape.BraceLeft or NodeShape.BraceRight => (width + 12, height),
@@ -66,7 +70,7 @@ internal static class FlowchartShapes
 	};
 
 	/// <summary>Where the label's centre sits, relative to the centre of the box.</summary>
-	internal static (double Dx, double Dy) LabelOffset(NodeShape shape, double h) => shape switch
+	internal static (double Dx, double Dy) LabelOffset(NodeShape shape, double w, double h) => shape switch
 	{
 		NodeShape.Document or NodeShape.TaggedDocument => (0, -Wave),
 		NodeShape.LinedDocument => (Rule / 2, -Wave),
@@ -78,7 +82,7 @@ internal static class FlowchartShapes
 		NodeShape.Folder => (0, 4),
 		NodeShape.Bucket => (0, 3),
 		NodeShape.Console or NodeShape.Browser => (0, 7),
-		NodeShape.Person => (0, Figure / 2),
+		NodeShape.Person => (0, (2 - HeadOverlap) * HeadRadius(w) / 2),
 		NodeShape.Triangle => (0, h / 6),
 		NodeShape.FlippedTriangle => (0, -h / 6),
 		NodeShape.CollapsedGroup => (0, -IndicatorRow / 2),
@@ -138,15 +142,12 @@ internal static class FlowchartShapes
 					Circle(sb, x + 8 + (i * 7), y + 7, 2, stroke, "none", "0");
 				return true;
 			case NodeShape.Person:
-				Circle(sb, cx, y + 10, 8, fill, stroke, sw);
-				Path(
-					sb,
-					new PathData().M(cx - 16, y + Figure - 2).Q(cx - 16, y + 20, cx, y + 20).Q(cx + 16, y + 20, cx + 16, y + Figure - 2).Z(),
-					fill,
-					stroke,
-					sw
-				);
-				return true;
+				{
+					var f = PersonFigure.Of(y, w, h);
+					Rect(sb, x, f.BodyTop, w, b - f.BodyTop, f.BodyRadius, fill, stroke, sw);
+					Circle(sb, cx, f.HeadCy, f.HeadRadius, fill, stroke, sw);
+					return true;
+				}
 			case NodeShape.Bang:
 				Path(sb, Star(cx, cy, w / 2, h / 2, 12, 0.78), fill, stroke, sw);
 				return true;
@@ -326,6 +327,146 @@ internal static class FlowchartShapes
 			.Q(arm, mid, arm, mid + 6)
 			.V(bottom - 6)
 			.Q(arm, bottom, edge + (s * 10), bottom);
+	}
+
+	/// <summary>
+	/// The outline an edge ending at this shape stops on, as closed polygons in absolute coordinates, as mermaid.js
+	/// intersects it. Null when the bounding box is the outline, or when the edge router already handles the shape.
+	/// Open sides of the text and brace shapes stop at the label, padded like mermaid's text box.
+	/// </summary>
+	internal static IReadOnlyList<IReadOnlyList<(double X, double Y)>>? Outline(NodeShape shape, string label, double x, double y, double w, double h)
+	{
+		var (r, b, cx, cy) = (x + w, y + h, x + (w / 2), y + (h / 2));
+		switch (shape)
+		{
+			case NodeShape.Triangle:
+				return [[(cx, y), (r, b), (x, b)]];
+			case NodeShape.FlippedTriangle:
+				return [[(x, y), (r, y), (cx, b)]];
+			case NodeShape.Person:
+				{
+					var f = PersonFigure.Of(y, w, h);
+					return [CirclePoints(cx, f.HeadCy, f.HeadRadius), RoundedRectPoints(x, f.BodyTop, w, b - f.BodyTop, f.BodyRadius)];
+				}
+			case NodeShape.Text:
+				{
+					var (lx, ly, lr, lb) = PaddedLabel(label, x, y, w, h);
+					return [[(lx, ly), (lr, ly), (lr, lb), (lx, lb)]];
+				}
+			case NodeShape.BraceLeft:
+				{
+					var (_, _, lr, _) = PaddedLabel(label, x, y, w, h);
+					var pts = BracePoints(x + 2, y, b, left: true);
+					pts.Add((lr, b));
+					pts.Add((lr, y));
+					return [pts];
+				}
+			case NodeShape.BraceRight:
+				{
+					var (lx, _, _, _) = PaddedLabel(label, x, y, w, h);
+					var pts = BracePoints(r - 2, y, b, left: false);
+					pts.Add((lx, b));
+					pts.Add((lx, y));
+					return [pts];
+				}
+			case NodeShape.Braces:
+				{
+					var pts = BracePoints(x + 2, y, b, left: true);
+					var right = BracePoints(r - 2, y, b, left: false);
+					right.Reverse();
+					pts.AddRange(right);
+					return [pts];
+				}
+			default:
+				return null;
+		}
+	}
+
+	/// <summary>The label's box grown by <see cref="OpenSidePadding"/>, kept inside the node.</summary>
+	private static (double X, double Y, double Right, double Bottom) PaddedLabel(string label, double x, double y, double w, double h)
+	{
+		var m = TextMetrics.MeasureMultiline(NodeSizing.WrapLabel(label).AsSpan(), RenderConstants.FontSizes.NodeLabel, RenderConstants.FontWeights.NodeLabel);
+		var (cx, cy) = (x + (w / 2), y + (h / 2));
+		var hw = Math.Min(w / 2, (m.Width / 2) + OpenSidePadding);
+		var hh = Math.Min(h / 2, (m.Height / 2) + OpenSidePadding);
+		return (cx - hw, cy - hh, cx + hw, cy + hh);
+	}
+
+	/// <summary>Points along <see cref="Brace"/>, top to bottom.</summary>
+	private static List<(double X, double Y)> BracePoints(double edge, double top, double bottom, bool left)
+	{
+		var s = left ? 1 : -1;
+		var mid = (top + bottom) / 2;
+		var arm = edge + (s * 5);
+		var pts = new List<(double X, double Y)> { (edge + (s * 10), top) };
+		Quad(pts, (arm, top), (arm, top + 6));
+		pts.Add((arm, mid - 6));
+		Quad(pts, (arm, mid), (edge, mid));
+		Quad(pts, (arm, mid), (arm, mid + 6));
+		pts.Add((arm, bottom - 6));
+		Quad(pts, (arm, bottom), (edge + (s * 10), bottom));
+		return pts;
+	}
+
+	/// <summary>Appends points along a quadratic curve from the last point in <paramref name="pts"/>.</summary>
+	private static void Quad(List<(double X, double Y)> pts, (double X, double Y) c, (double X, double Y) end)
+	{
+		const int steps = 8;
+		var start = pts[^1];
+		for (var i = 1; i <= steps; i++)
+		{
+			var t = (double)i / steps;
+			var (a, k, e) = ((1 - t) * (1 - t), 2 * (1 - t) * t, t * t);
+			pts.Add(((a * start.X) + (k * c.X) + (e * end.X), (a * start.Y) + (k * c.Y) + (e * end.Y)));
+		}
+	}
+
+	private static List<(double X, double Y)> CirclePoints(double cx, double cy, double radius)
+	{
+		const int steps = 48;
+		var pts = new List<(double X, double Y)>(steps);
+		for (var i = 0; i < steps; i++)
+		{
+			var a = 2 * Math.PI * i / steps;
+			pts.Add((cx + (radius * Math.Cos(a)), cy + (radius * Math.Sin(a))));
+		}
+		return pts;
+	}
+
+	private static List<(double X, double Y)> RoundedRectPoints(double x, double y, double w, double h, double radius)
+	{
+		const int steps = 8;
+		var pts = new List<(double X, double Y)>(4 * (steps + 1));
+		(double X, double Y, double Start)[] corners =
+		[
+			(x + w - radius, y + radius, -Math.PI / 2),
+			(x + w - radius, y + h - radius, 0),
+			(x + radius, y + h - radius, Math.PI / 2),
+			(x + radius, y + radius, Math.PI),
+		];
+		foreach (var (ccx, ccy, start) in corners)
+		{
+			for (var i = 0; i <= steps; i++)
+			{
+				var a = start + (Math.PI / 2 * i / steps);
+				pts.Add((ccx + (radius * Math.Cos(a)), ccy + (radius * Math.Sin(a))));
+			}
+		}
+		return pts;
+	}
+
+	/// <summary>Head radius of a person <paramref name="w"/> wide, as mermaid.js sizes it.</summary>
+	private static double HeadRadius(double w) => Math.Min(Math.Max(w * 0.23, 16), 56);
+
+	/// <summary>A person as mermaid.js draws it: a head circle overlapping the top of a rounded body that holds the label.</summary>
+	private readonly record struct PersonFigure(double HeadCy, double HeadRadius, double BodyTop, double BodyRadius)
+	{
+		internal static PersonFigure Of(double y, double w, double h)
+		{
+			var head = FlowchartShapes.HeadRadius(w);
+			var bodyTop = y + ((2 - HeadOverlap) * head);
+			return new PersonFigure(y + head, head, bodyTop, Math.Min(w * 0.177, (y + h - bodyTop) * 0.45));
+		}
 	}
 
 	/// <summary>A star of <paramref name="points"/> spikes on an ellipse, its valleys at <paramref name="inner"/> of the radius.</summary>
