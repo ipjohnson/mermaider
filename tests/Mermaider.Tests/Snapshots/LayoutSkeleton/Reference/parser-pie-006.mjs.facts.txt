@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 01c3863d4d8bc98f
+accept	yes
+drawn	yes
+label	a neat chart
+label	ash
+label	bat
+slice	ash	60
+slice	bat	40
+title	a neat chart

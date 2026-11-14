@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 45e2f277d3591968
+accept	yes
+drawn	yes
+edge	S1	S2	none	arrow	solid	long line using should work
+edge	S1	S3	none	arrow	solid	long line using should work
+edge	S1	S4	none	arrow	solid	long line using \nshould work
+edge	[*]start@root	S1	none	arrow	solid
+node	S1	S1	rounded
+node	S2	S2	rounded
+node	S3	S3	rounded
+node	S4	S4	rounded
+node	[*]start@root		sm-circ

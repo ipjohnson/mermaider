@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3b111e119d91137f
+accept	yes
+axis	x-left	Low Reach
+axis	x-right	High Reach
+axis	y-bottom	Low Engagement
+axis	y-top	High Engagement
+drawn	yes
+label	High Engagement
+label	High Reach
+label	Low Engagement
+label	Low Reach
+label	May be improved
+label	Need to promote
+label	Re-evaluate
+label	Reach and engagement of campaigns
+label	We should expand
+quadrant	1	We should expand
+quadrant	2	Need to promote
+quadrant	3	Re-evaluate
+quadrant	4	May be improved
+title	Reach and engagement of campaigns

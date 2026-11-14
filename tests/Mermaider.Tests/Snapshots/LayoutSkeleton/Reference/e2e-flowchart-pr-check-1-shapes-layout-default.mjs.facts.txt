@@ -1,0 +1,32 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6b466c55329891d8
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid
+edge	C	D	none	arrow	solid
+edge	D	E	none	arrow	solid
+edge	E	F	none	arrow	solid
+edge	F	G	none	arrow	solid
+edge	G	H	none	arrow	solid
+edge	H	I	none	arrow	solid
+edge	I	J	none	arrow	solid
+edge	J	K	none	arrow	solid
+edge	K	L	none	arrow	solid
+edge	L	M	none	arrow	solid
+edge	M	N	none	arrow	solid
+node	A	Rectangle	rect
+node	B	Rounded	rounded
+node	C	Stadium	stadium
+node	D	Subroutine	fr-rect
+node	E	Database	cyl
+node	F	Circle	circle
+node	G	Asymmetric	odd
+node	H	Decision	diam
+node	I	Hexagon	hex
+node	J	Parallelogram	lean-r
+node	K	Parallelogram alt	lean-l
+node	L	Trapezoid	trap-b
+node	M	Trapezoid alt	trap-t
+node	N	Double circle	dbl-circ

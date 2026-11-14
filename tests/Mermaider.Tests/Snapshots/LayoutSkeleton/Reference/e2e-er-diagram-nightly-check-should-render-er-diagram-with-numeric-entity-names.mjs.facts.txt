@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 308f4ae7998065f3
+accept	yes
+drawn	yes
+entity	1	1
+entity	2	2
+entity	3.5	3.5
+entity	ORDER	ORDER
+label	1
+label	2
+label	3.5
+label	ORDER
+label	contains
+label	places
+label	references
+relation	1	ORDER	one	one	identifying	places
+relation	2	3.5	one	zero-or-more	identifying	references
+relation	ORDER	2	one	one-or-more	identifying	contains

@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7e29a4621891e3f9
+accept	yes
+drawn	yes
+label	Geography
+label	Landscape
+label	Mountains
+label	Photograph
+label	Rocks
+label	Waterfall
+label	root
+node	root	default
+node	root / Geography	default
+node	root / Geography / Mountains	default
+node	root / Geography / Rocks	default
+node	root / Photograph	default
+node	root / Photograph / Landscape	default
+node	root / Photograph / Waterfall	default

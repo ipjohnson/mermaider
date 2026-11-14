@@ -1,0 +1,8 @@
+usecase-beta
+actor Extra
+systemBoundary sb1["Payment service"]
+  actor Clerk
+end
+systemBoundary sb2["Shipping"]
+  Dispatch("Dispatch order")
+end

@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 676d69c3250b7b4e
+accept	yes
+drawn	yes
+edge	A	B	none	cross	solid	text including R TD space
+node	A	A	rect
+node	B	B	rect

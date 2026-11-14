@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1d672cab6f3f9d14
+accept	yes
+boundary	e	enterprise	Enterprise
+boundary	s	system	System	e
+drawn	yes
+element	sys	system	internal	System		deeply nested	s
+label	Enterprise
+label	Nested boundaries
+label	System
+label	System
+label	deeply nested
+title	Nested boundaries

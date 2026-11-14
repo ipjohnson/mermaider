@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9b85ef4cb76928db
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Charlie	Charlie	participant
+bbox	label	Close arrow with circle at destination	93.9	269.2	364.1	288.2
+bbox	label	Cross arrow with circle at destination	94.2	225.2	363.8	244.2
+bbox	label	Dotted arrow with circle at destination	88.5	137.2	369.5	156.2
+bbox	label	Open arrow with circle at destination	97.3	181.2	366.7	200.2
+bbox	label	Solid arrow with circle at destination	95.6	93.2	362.4	112.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	313	150	386
+bbox	node	Bob	317	0	467	73
+bbox	node	Bob	317	313	467	386
+bbox	node	Charlie	517	0	667	73
+bbox	node	Charlie	517	313	667	386
+canvas	-50	-10	717	427
+drawn	yes
+message	Alice	Bob	dashed	cross	Cross arrow with circle at destination
+message	Alice	Bob	dashed	filled	Dotted arrow with circle at destination
+message	Alice	Bob	dashed	open	Close arrow with circle at destination
+message	Alice	Bob	solid	filled	Solid arrow with circle at destination
+message	Alice	Bob	solid	none	Open arrow with circle at destination

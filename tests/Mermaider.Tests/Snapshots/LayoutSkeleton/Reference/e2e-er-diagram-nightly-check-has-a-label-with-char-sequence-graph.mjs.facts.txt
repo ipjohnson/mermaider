@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3e9339518289795b
+accept	yes
+attribute	p	date	dateCreated
+attribute	p	varchar(12)	jobId
+drawn	yes
+entity	p	Photograph
+label	Photograph
+label	date
+label	dateCreated
+label	jobId
+label	varchar(12)

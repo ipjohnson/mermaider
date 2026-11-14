@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 45c8f7418803dc41
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Charlie	Charlie	participant
+bbox	label	Dotted solid bottom reverse self-reference	322.1	463.2	629.9	482.2
+bbox	label	Dotted solid top reverse self-reference	136.2	389.2	415.8	408.2
+bbox	label	Dotted stick bottom reverse self-reference	122	611.2	430	630.2
+bbox	label	Dotted stick top reverse self-reference	-63.9	537.2	215.9	556.2
+bbox	label	Solid bottom reverse self-reference	148.2	167.2	403.8	186.2
+bbox	label	Solid top reverse self-reference	-37.7	93.2	189.7	112.2
+bbox	label	Stick bottom reverse self-reference	-51.8	315.2	203.8	334.2
+bbox	label	Stick top reverse self-reference	362.3	241.2	589.7	260.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	685	150	758
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	685	350	758
+bbox	node	Charlie	400	0	550	73
+bbox	node	Charlie	400	685	550	758
+canvas	-96	-10	661	799
+drawn	yes

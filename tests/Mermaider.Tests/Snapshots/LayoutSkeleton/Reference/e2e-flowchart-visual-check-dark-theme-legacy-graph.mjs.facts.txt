@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6b7bae6e81bb2125
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid	Get money
+edge	B	C	none	arrow	solid
+edge	B	G	none	arrow	solid
+edge	C	D	none	arrow	thick	One
+edge	C	E	none	arrow	solid	Two
+edge	C	F	none	arrow	solid	Three
+group	section	section	C,D,E,F,G
+icon	F	fa:fa-car
+node	A	Christmas	rect
+node	B	Go shopping	rounded
+node	C	Let me think	diam
+node	D	Laptop	rect
+node	E	iPhone	rect
+node	F	Car	rect
+node	G	Another	lean-r

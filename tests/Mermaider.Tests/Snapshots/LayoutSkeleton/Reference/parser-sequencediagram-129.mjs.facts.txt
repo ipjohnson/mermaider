@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a1c3af772df2e7e6
+accept	yes
+actor	A	Service A	boundary
+actor	B	Service B	control
+actor	C	C	database
+bbox	label	Query	350.2	138.1	393.8	155.5
+bbox	label	Request	142.2	94.1	201.8	111.3
+bbox	node	A	20	0	108.8	67
+bbox	node	A	20	187	108.8	254
+bbox	node	B	240.8	0	309.2	67
+bbox	node	B	240.8	187	309.2	254
+canvas	-50	-10	600	295
+drawn	yes
+message	A	B	solid	filled	Request
+message	B	C	solid	filled	Query

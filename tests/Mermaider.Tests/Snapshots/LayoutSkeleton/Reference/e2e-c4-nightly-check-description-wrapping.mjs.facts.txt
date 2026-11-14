@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source da72d567cc593063
+accept	yes
+drawn	yes
+element	p	person	internal	Person		A customer of the bank with personal bank accounts and a long description that should wrap across multiple lines
+element	s	system	internal	System		Allows customers to view information about their bank accounts and make payments
+label	A customer of the bank with personal bank accounts and a long description that should wrap across multiple lines
+label	Allows customers to view information about their bank accounts and make payments
+label	Description wrapping
+label	Person
+label	System
+label	Uses
+rel	p	s	one	Uses
+title	Description wrapping

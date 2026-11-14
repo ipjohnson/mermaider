@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f31f501900069526
+accept	yes
+drawn	yes
+label	Item
+label	Items Sold
+label	Keyboard
+label	Monitor
+label	Mouse
+label	Number of Sales
+series	bar	51,72,36
+title	Items Sold
+x-axis	Item	Monitor,Mouse,Keyboard
+y-axis	Number of Sales

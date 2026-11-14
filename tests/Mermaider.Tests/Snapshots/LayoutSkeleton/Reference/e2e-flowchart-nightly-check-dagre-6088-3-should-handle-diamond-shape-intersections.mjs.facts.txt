@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 849e43023271a471
+accept	yes
+drawn	yes
+edge	D	I	none	arrow	solid
+edge	D	I	none	arrow	solid
+edge	D	I	none	arrow	solid	Mermaid js
+icon	I	fa:fa-code
+node	D	Use the editor	diam
+node	I	Text	diam
+node	a	a	rect

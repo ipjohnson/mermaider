@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 38d902385de64dc2
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+bbox	label	Hello Bob, how are you?	102.8	94.1	277.2	111.5
+bbox	label	I am good thanks!	128.4	230.1	255.6	247.5
+bbox	label	Perhaps a happy response	114.9	178	315.1	195.4
+bbox	label	opt	64	174	114	209
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	283	150	356
+bbox	node	Bob	230	0	380	73
+bbox	node	Bob	230	283	380	356
+bbox	note	Bob thinks	330	127	480	164
+block	opt	Perhaps a happy response
+canvas	-50	-10	530	397
+drawn	yes
+message	Alice	Bob	solid	none	Hello Bob, how are you?
+message	Bob	Alice	dashed	none	I am good thanks!
+note	right	Bob	Bob thinks

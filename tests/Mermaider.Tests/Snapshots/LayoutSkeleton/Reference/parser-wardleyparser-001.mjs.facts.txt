@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 432c9e5f42a6f409
+accept	yes
+drawn	yes

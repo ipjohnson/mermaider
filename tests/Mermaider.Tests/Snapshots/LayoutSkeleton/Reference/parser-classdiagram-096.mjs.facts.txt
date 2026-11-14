@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5121631082a673c1
+accept	yes
+bbox	label	1	295.3	171.5	304.3	188
+bbox	label	1	33.3	103	42.3	119.5
+bbox	label	aggregation	130.4	211.8	204.4	232.8
+bbox	label	contains	24	211.8	76.1	232.8
+bbox	label	many	55.5	319	91.5	335.5
+bbox	node	Class02	12	339.5	88.9	420.5
+bbox	node	Class03	128.9	12	205.9	93
+bbox	node	Class04	128.9	339.5	205.9	420.5
+bbox	node	Class05	245.9	12	322.8	93
+bbox	node	Class06	245.9	198	322.8	279
+bbox	node	Class1	15.9	12	85	93
+canvas	4	4	330.8	428.5
+class	Class02	Class02
+class	Class03	Class03
+class	Class04	Class04
+class	Class05	Class05
+class	Class06	Class06
+class	Class1	Class1
+drawn	yes
+relation	Class03	Class04	diamond	none	solid	aggregation
+relation	Class05	Class06	none	arrow	solid			1
+relation	Class1	Class02	diamond-filled	none	solid	contains	1	many

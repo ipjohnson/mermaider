@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 104ccbc8526468a2
+accept	yes
+drawn	yes
+label	Unsafe props test
+label	__proto__
+label	constructor
+label	prototype
+slice	__proto__	386
+slice	constructor	85
+slice	prototype	15
+title	Unsafe props test

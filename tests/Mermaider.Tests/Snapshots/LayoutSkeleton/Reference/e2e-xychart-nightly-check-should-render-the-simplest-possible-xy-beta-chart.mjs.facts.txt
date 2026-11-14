@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source aeca40923d2505de
+accept	yes
+drawn	yes
+series	line	10,30,20
+x-axis
+y-axis

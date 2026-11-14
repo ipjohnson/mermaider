@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 77df0b037f497b61
+accept	yes
+direction	LR
+drawn	yes
+label	A
+label	B
+label	C
+label	D
+label	E
+label	long
+relation	A	B	association	none	arrow		1
+relation	B	C	association	none	arrow		2
+relation	C	D	association	none	arrow		4
+relation	D	E	association	none	arrow	long	3
+usecase	A	A	ellipse
+usecase	B	B	ellipse
+usecase	C	C	ellipse
+usecase	D	D	ellipse
+usecase	E	E	ellipse

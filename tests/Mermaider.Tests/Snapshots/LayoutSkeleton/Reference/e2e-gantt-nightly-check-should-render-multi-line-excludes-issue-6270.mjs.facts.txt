@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 76ca4fb47d7a3794
+accept	yes
+drawn	yes
+label	A section
+label	Multi-line excludes
+label	Task across closures
+section	A section
+task	A section	Task across closures	a1	2014-01-13 00:00	2014-02-05 00:00
+title	Multi-line excludes

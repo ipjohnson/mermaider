@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 74b6133c5fae78a8
+accept	yes
+drawn	yes
+edge	Crash	[*]end@apa	none	arrow	solid
+edge	Moving	Crash	none	arrow	solid
+edge	Moving	Still	none	arrow	solid
+edge	Still	Moving	none	arrow	solid
+edge	Still	[*]end@apa	none	arrow	solid
+edge	[*]start@apa	Still	none	arrow	solid
+group	apa	apa	Crash,Moving,Still,[*]end@apa,[*]start@apa
+node	Crash	Crash	rounded
+node	Moving	Moving	rounded
+node	Still	Still	rounded
+node	[*]end@apa		fr-circ
+node	[*]start@apa		sm-circ

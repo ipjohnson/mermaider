@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4151c69bedef3b86
+accept	yes
+axis	x-left	低覆盖率
+axis	x-right	高覆盖率
+axis	y-bottom	低参与度
+axis	y-top	高参与度
+drawn	yes
+label	产品A
+label	产品B
+label	低参与度
+label	低覆盖率
+label	分析象限图
+label	可以改进
+label	重新评估
+label	需要扩展
+label	需要推广
+label	高参与度
+label	高覆盖率
+point	产品A	0.3	0.6
+point	产品B	0.45	0.23
+quadrant	1	需要扩展
+quadrant	2	需要推广
+quadrant	3	重新评估
+quadrant	4	可以改进
+title	分析象限图

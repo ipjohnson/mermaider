@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9e82919d3a85538c
+accept	yes
+drawn	yes
+edge	c	d	none	arrow	solid
+group	uid1	text of doom	c,d
+node	c	c	rect
+node	d	d	rect

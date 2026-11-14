@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1c70de7d464e3c77
+accept	yes
+drawn	yes
+edge	bottom_disk	T	center_disk	B	none	arrow	group
+edge	left_disk	R	center_disk	L	none	arrow	group
+edge	right_disk	L	center_disk	R	none	arrow	group
+edge	top_disk	B	center_disk	T	none	arrow	group
+group	bottom_group	Bottom
+group	center_group	Center
+group	left_group	Left
+group	right_group	Right
+group	top_group	Top
+icon	bottom_disk	disk
+icon	bottom_group	cloud
+icon	center_disk	disk
+icon	center_group	cloud
+icon	left_disk	disk
+icon	left_group	cloud
+icon	right_disk	disk
+icon	right_group	cloud
+icon	top_disk	disk
+icon	top_group	cloud
+label	Bottom
+label	Center
+label	Disk
+label	Disk
+label	Disk
+label	Disk
+label	Disk
+label	Left
+label	Right
+label	Top
+service	bottom_disk	Disk	bottom_group
+service	center_disk	Disk	center_group
+service	left_disk	Disk	left_group
+service	right_disk	Disk	right_group
+service	top_disk	Disk	top_group

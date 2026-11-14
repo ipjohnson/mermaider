@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d6c30543ebfce1d5
+accept	yes
+drawn	yes
+section	Order from website

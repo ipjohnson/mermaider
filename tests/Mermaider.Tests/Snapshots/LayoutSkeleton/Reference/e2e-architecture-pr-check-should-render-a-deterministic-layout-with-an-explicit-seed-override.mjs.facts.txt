@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5632241778db8005
+accept	yes
+drawn	yes
+edge	vm1	R	web	L	none	arrow
+edge	web	R	db	L	none	arrow
+group	sub1	Subscription A
+group	sub2	Subscription B
+group	vnet1	VNet A	sub1
+icon	db	database
+icon	sub1	cloud
+icon	sub2	cloud
+icon	vm1	server
+icon	vnet1	cloud
+icon	web	server
+label	Registry
+label	Subscription A
+label	Subscription B
+label	VM
+label	VNet A
+label	Web App
+service	db	Registry	sub2
+service	vm1	VM	vnet1
+service	web	Web App	sub2

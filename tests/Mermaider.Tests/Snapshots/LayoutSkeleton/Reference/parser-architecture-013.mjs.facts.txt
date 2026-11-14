@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3d5ab9409dbcd476
+accept	yes
+drawn	yes
+icon	a	server
+icon	b	server
+label	A
+label	B
+service	a	A
+service	b	B

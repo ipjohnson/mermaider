@@ -1,0 +1,50 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5baaaaca372acdb9
+accept	yes
+actor	Audit	Audit Trail	collections
+actor	Auth	Auth Service	control
+actor	Queue	Event Queue	queue
+actor	UserDB	User DB	database
+actor	Web	Web Portal	boundary
+bbox	label	Access denied	123	695.4	227	714.2
+bbox	label	Event queued	429.6	395.4	528.4	414.2
+bbox	label	Invalid credentials	411.5	560.3	548.5	579
+bbox	label	Log failure	538.7	607.4	613.3	626.2
+bbox	label	Log success	531.6	306.4	620.4	325.2
+bbox	label	Logged	552.3	464.4	605.7	483.2
+bbox	label	Logged	552.3	651.4	605.7	670.2
+bbox	label	Login request	125.5	85.4	222.5	104.2
+bbox	label	Parallel processing	526	343.3	670	362
+bbox	label	Publish login event	408.9	262.4	543.1	281.2
+bbox	label	Success token	123	518.4	227	537.2
+bbox	label	User found	337.9	173.4	416.1	192.2
+bbox	label	Valid credentials	442.5	210.3	567.5	229
+bbox	label	Verify credentials	315.1	129.4	436.9	148.2
+bbox	label	alt	64	207	114	227
+bbox	label	par	260	340	310	360
+bbox	node	Audit	800	0	950	65
+bbox	node	Audit	800	796	950	861
+bbox	node	Auth	229.6	10	320.3	75.9
+bbox	node	Auth	229.6	806	320.3	874.4
+bbox	node	Web	20	11	114.4	77.9
+bbox	node	Web	20	807	114.4	873.4
+bbox	note	All interactions logged	50	739	900	776
+block	alt	Valid credentials
+block	par	Parallel processing
+canvas	-50	-10	1000	891
+divider
+divider	Invalid credentials
+drawn	yes
+message	Audit	Auth	dashed	filled	Logged
+message	Audit	Auth	dashed	filled	Logged
+message	Auth	Audit	solid	filled	Log failure
+message	Auth	Audit	solid	filled	Log success
+message	Auth	Queue	solid	filled	Publish login event
+message	Auth	UserDB	solid	filled	Verify credentials
+message	Auth	Web	dashed	cross	Access denied
+message	Auth	Web	dashed	filled	Success token
+message	Queue	Auth	dashed	filled	Event queued
+message	UserDB	Auth	dashed	filled	User found
+message	Web	Auth	solid	filled	Login request
+note	over	Web,Audit	All interactions logged

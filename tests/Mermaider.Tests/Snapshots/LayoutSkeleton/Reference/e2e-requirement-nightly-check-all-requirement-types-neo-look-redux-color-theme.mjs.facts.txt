@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4efc40e9e588d0ca
+accept	yes
+drawn	yes
+label	1
+label	2
+label	3
+label	4
+label	5
+label	6
+label	basic requirement.
+label	design constraint.
+label	functional requirement.
+label	interface requirement.
+label	performance requirement.
+label	physical requirement.
+label	req1
+label	req2
+label	req3
+label	req4
+label	req5
+label	req6
+requirement	req1	requirement	1	basic requirement.	low	analysis
+requirement	req2	functional-requirement	2	functional requirement.	medium	demonstration
+requirement	req3	interface-requirement	3	interface requirement.	high	inspection
+requirement	req4	performance-requirement	4	performance requirement.	medium	test
+requirement	req5	physical-requirement	5	physical requirement.	low	analysis
+requirement	req6	design-constraint	6	design constraint.	high	test

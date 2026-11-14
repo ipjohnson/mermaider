@@ -1,0 +1,61 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1f1a81fb1851ac4c
+accept	yes
+actor	AuditLogs	AuditLogs	collections
+actor	AuthService	AuthService	control
+actor	LoginUI	LoginUI	boundary
+actor	Order	Order	entity
+actor	OrderQueue	OrderQueue	queue
+actor	User	User	actor
+actor	UserDB	UserDB	database
+bbox	label	Enter credentials	117	120.7	237	138.2
+bbox	label	Failure	358.6	829.7	407.4	847.2
+bbox	label	Invalid credentials	621.5	782.6	758.5	800.2
+bbox	label	New order	450.1	474.7	524.1	492.2
+bbox	label	Notification	453.4	730.7	532.6	748.2
+bbox	label	Place order	669.7	422.6	760.3	440.2
+bbox	label	Process	968.1	518.7	1025.9	536.2
+bbox	label	Query user	537.4	208.7	616.8	226.5
+bbox	label	Record	1071.2	587.7	1122.8	605.2
+bbox	label	Retry	163.9	873.7	202.1	891.5
+bbox	label	Success	352.8	341.7	413.2	359.2
+bbox	label	Until confirmed	557.2	634.6	672.8	652.2
+bbox	label	Update status	953.7	686.7	1052.3	704.3
+bbox	label	User data	548.3	252.7	617.7	270.2
+bbox	label	Valid credentials	652.5	289.6	777.5	307.2
+bbox	label	Validate	348.7	164.7	405.3	182.2
+bbox	label	Welcome	149.8	385.7	216.2	403.2
+bbox	label	alt	59	286	109	321
+bbox	label	loop	69	631	119	666
+bbox	label	par	69	419	119	454
+bbox	node	AuditLogs	1225	27	1375	94
+bbox	node	AuditLogs	1225	927	1375	994
+bbox	node	AuthService	436.9	27	523.1	94.2
+bbox	node	AuthService	436.9	933	523.1	1000.2
+bbox	node	LoginUI	225	27	307.6	94.5
+bbox	node	LoginUI	225	933	307.6	1000.5
+bbox	node	User	63.1	27	97.1	94.2
+bbox	node	User	63.1	933	97.1	1000.2
+block	alt	Valid credentials
+block	loop	Until confirmed
+block	par	Place order
+box	Authentication	AuthService,LoginUI,User,UserDB
+box	Order Processing	AuditLogs,Order,OrderQueue
+canvas	-50	-10	1430	1051
+divider
+divider	Invalid credentials
+drawn	yes
+message	AuthService	LoginUI	dashed	cross	Failure
+message	AuthService	LoginUI	dashed	filled	Success
+message	AuthService	UserDB	solid	filled	Query user
+message	LoginUI	AuthService	solid	filled	Validate
+message	LoginUI	User	dashed	cross	Retry
+message	LoginUI	User	dashed	filled	Welcome
+message	Order	AuditLogs	solid	filled	Record
+message	Order	OrderQueue	solid	filled	Process
+message	Order	User	dashed	filled	Notification
+message	OrderQueue	Order	solid	filled	Update status
+message	User	LoginUI	solid	filled	Enter credentials
+message	User	Order	solid	filled	New order
+message	UserDB	AuthService	dashed	filled	User data

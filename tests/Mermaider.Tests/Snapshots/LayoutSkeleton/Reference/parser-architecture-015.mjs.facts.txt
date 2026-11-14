@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9e62e13b9108107d
+accept	no
+# error align row lists [a] more than once

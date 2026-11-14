@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 07384a6be4baa922
+accept	yes
+actor	Alice	Alice	participant
+actor	John	John	participant
+bbox	label	Great	158	155.1	198	172.2
+bbox	label	Hello John	134.2	94.1	209.8	111.2
+bbox	label	day!	162.9	189.1	193.1	206.5
+bbox	label	​	172	111.1	172	128.2
+bbox	label	​	178	172.1	178	189.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	232	150	305
+bbox	node	John	200	0	350	73
+bbox	node	John	200	232	350	305
+canvas	-50	-10	400	346
+drawn	yes
+message	Alice	John	solid	filled	Hello John
+message	John	Alice	dashed	filled	Great day!

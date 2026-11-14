@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 85b21c6be74ff501
+accept	no
+# error Parse error on line 4:

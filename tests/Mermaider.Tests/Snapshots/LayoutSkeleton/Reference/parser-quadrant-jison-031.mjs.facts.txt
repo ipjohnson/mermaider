@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source dc0fcdfaf592d0ed
+accept	yes
+axis	x-left	Café
+axis	x-right	Größe
+drawn	yes
+label	Café
+label	Größe

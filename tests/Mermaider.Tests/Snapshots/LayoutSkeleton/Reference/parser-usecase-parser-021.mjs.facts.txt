@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4938606c1254d3f3
+accept	no
+# error Actor 'User' cannot combine icon with type 'awesome' at line 2, column 7 [19,23)

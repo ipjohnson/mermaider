@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4874a7e5f50d8417
+accept	yes
+drawn	yes
+entity	CAR	CAR
+entity	DRIVER	DRIVER
+label	CAR
+label	DRIVER
+label	insured for
+relation	CAR	DRIVER	one	zero-or-more	identifying	insured for

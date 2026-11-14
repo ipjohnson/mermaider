@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 830444eda54bcb61
+accept	yes
+drawn	yes
+label	A
+label	B
+label	C
+label	Categories
+label	Decimal and Negative Values
+orientation	horizontal
+series	bar	-2.5,0.75,5.1
+title	Decimal and Negative Values
+x-axis	Categories	A,B,C
+y-axis

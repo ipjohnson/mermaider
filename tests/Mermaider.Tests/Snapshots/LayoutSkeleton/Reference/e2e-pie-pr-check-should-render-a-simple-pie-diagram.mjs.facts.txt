@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 41e12fdff5e90954
+accept	yes
+drawn	yes
+label	Bandy
+label	Football
+label	Ice-Hockey
+label	Sports in Sweden
+slice	Bandy	40
+slice	Football	90
+slice	Ice-Hockey	80
+title	Sports in Sweden

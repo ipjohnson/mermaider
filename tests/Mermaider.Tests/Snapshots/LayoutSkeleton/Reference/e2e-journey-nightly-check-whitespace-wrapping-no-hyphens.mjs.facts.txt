@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5b4b994c929f3fbf
+accept	yes
+drawn	yes
+label	Gustavo Fring is played by Giancarlo Esposito and is a character in Breaking Bad.
+label	Test
+label	TextWithSpaces
+label	Whitespace Test
+section	Test
+task	Test	TextWithSpaces	5	Gustavo Fring is played by Giancarlo Esposito and is a character in Breaking Bad.
+title	Whitespace Test

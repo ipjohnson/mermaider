@@ -1,0 +1,51 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7c5a0b08ae5304e7
+accept	yes
+drawn	yes
+event	1957	First artificial satellite
+event	1957	Sputnik 1 launched
+event	1961	First human in orbit
+event	1961	Yuri Gagarin in space
+event	1969	Apollo 11 moon landing
+event	1969	Neil Armstrong's first steps
+event	1972	Last Apollo mission
+event	2012	Curiosity rover on Mars
+event	2020	Commercial spaceflight
+event	2020	SpaceX Crew Dragon
+event	2021	James Webb Space Telescope
+event	2021	Perseverance rover on Mars
+label	1957
+label	1961
+label	1969
+label	1972
+label	2012
+label	2020
+label	2021
+label	Apollo 11 moon landing
+label	Commercial spaceflight
+label	Curiosity rover on Mars
+label	Early Era
+label	First artificial satellite
+label	First human in orbit
+label	James Webb Space Telescope
+label	Last Apollo mission
+label	Modern Era
+label	Moon Era
+label	Neil Armstrong's first steps
+label	Perseverance rover on Mars
+label	Space Exploration Milestones
+label	SpaceX Crew Dragon
+label	Sputnik 1 launched
+label	Yuri Gagarin in space
+period	Early Era	1957
+period	Early Era	1961
+period	Modern Era	2012
+period	Modern Era	2020
+period	Modern Era	2021
+period	Moon Era	1969
+period	Moon Era	1972
+section	Early Era
+section	Modern Era
+section	Moon Era
+title	Space Exploration Milestones

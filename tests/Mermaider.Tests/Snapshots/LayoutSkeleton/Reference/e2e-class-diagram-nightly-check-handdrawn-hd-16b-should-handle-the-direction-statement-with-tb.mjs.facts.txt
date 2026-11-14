@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c7689014be64aa9e
+accept	yes
+attribute	Bike	-id : int
+attribute	Bike	-name : string
+attribute	IdCard	-id : int
+attribute	IdCard	-name : string
+attribute	Student	-idCard : IdCard
+bbox	label	1	132.9	132.9	141.9	149.4
+bbox	label	1	177.3	132.9	186.3	149.4
+bbox	label	1	263.4	256.4	272.4	272.9
+bbox	label	1	91.1	256.4	100.1	272.9
+bbox	label	carries	58.6	189.4	100.6	210.4
+bbox	label	rides	236.9	189.4	267.3	210.4
+bbox	node	Bike	188.9	283	317.5	421.1
+bbox	node	IdCard	12.3	282.8	148.4	421.2
+bbox	node	Student	90	12	243.3	128.9
+canvas	4.3	4	325.5	429.2
+class	Bike	Bike
+class	IdCard	IdCard
+class	Student	Student
+drawn	yes
+relation	Student	Bike	none	diamond	solid	rides	1	1
+relation	Student	IdCard	none	diamond	solid	carries	1	1

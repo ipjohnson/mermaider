@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9104c629aecd7e85
+accept	no
+# error unknown set identifier: Buz

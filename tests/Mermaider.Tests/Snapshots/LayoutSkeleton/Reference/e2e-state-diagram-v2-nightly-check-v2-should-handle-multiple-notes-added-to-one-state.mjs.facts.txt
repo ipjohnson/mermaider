@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8434de39937b9274
+accept	yes
+drawn	yes
+node	MyState	MyState	rounded
+note	MyState	I am a lefty
+note	MyState	I am a righty

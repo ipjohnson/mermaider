@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 432d8273f33f27eb
+accept	yes
+attribute	A	#double bop
+attribute	A	+String boop
+attribute	A	-Int beep
+bbox	node	A	12	12	149.6	189
+bbox	node	B	189.6	19.5	346.7	181.5
+canvas	4	4	354.7	197
+class	A	This has a newline!
+class	B	This title also has a newline
+drawn	yes
+method	B	+with(more)
+method	B	-methods()

@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fcc18dafd415bab6
+accept	yes
+actor	B	Single	boundary
+actor	C	Two lines	control
+actor	DB	Database	database
+actor	P	Plain	participant
+actor	U	Multi line actor	actor
+bbox	label	and one end	615.5	171.6	704.5	189.1
+bbox	label	the lifelines should share one start	94.6	127.6	337.4	145.1
+bbox	node	B	508	221	585.2	288.7
+bbox	node	B	508	34	585.2	101.7
+bbox	node	C	741	17	785	100.7
+bbox	node	C	741	221	785	304.7
+bbox	node	P	288	0	438	107
+bbox	node	P	288	215	438	322
+bbox	node	U	57.2	0	93	100.2
+bbox	node	U	57.2	221	93	321.2
+canvas	-50	-10	1088	363
+drawn	yes
+message	P	DB	solid	filled	and one end
+message	U	P	solid	filled	the lifelines should share one start

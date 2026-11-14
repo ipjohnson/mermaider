@@ -1,0 +1,36 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d9b81f9d4163cfd4
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	John	John Second Line	participant
+bbox	label	Checking with John...	116	297.5	268	315.5
+bbox	label	Hello Bob, how are you?	99.9	110.5	274.1	128.5
+bbox	label	Hey John -	383.3	423.5	460.7	441.5
+bbox	label	How about you John?	344.6	154.5	499.4	172.5
+bbox	label	John! Are you still debating about how	287.3	548.5	556.7	566.5
+bbox	label	how you're doing	361.8	458.5	482.2	476.5
+bbox	label	we're still waiting to know	332.5	440.5	511.5	458.5
+bbox	label	you're doing? How long does it take??	286.7	565.5	557.3	583.5
+bbox	node	Alice	0	0	150	90
+bbox	node	Alice	0	673	150	763
+bbox	node	Bob	230	0	380	90
+bbox	node	Bob	230	673	380	763
+bbox	node	John	470	0	620	90
+bbox	node	John	470	673	620	763
+bbox	note	After a few more moments, John	429.5	599	660.5	653
+bbox	note	John looks like he's	470	331	620	403
+bbox	note	John thinks a long	570	188	720	277
+bbox	note	John's trying hard not to break his train of thought.	372.5	491	717.5	528
+canvas	-50	-10	770	804
+drawn	yes
+message	Alice	Bob	solid	filled	Hello Bob, how are you?
+message	Bob	Alice	dashed	none	Checking with John...
+message	Bob	John	dashed	filled	How about you John?
+message	Bob	John	solid	cross	Hey John - we're still waiting to know how you're doing
+message	Bob	John	solid	cross	John! Are you still debating about how you're doing? How long does it take??
+note	over	John	After a few more moments, John finally snaps out of it.
+note	over	John	John looks like he's still thinking, so Bob prods him a bit.
+note	over	John	John's trying hard not to break his train of thought.
+note	right	John	John thinks a long long time, so long that the text does not fit on a row.

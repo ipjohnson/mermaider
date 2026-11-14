@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a499daed88bb4cd1
+accept	yes
+branch	main
+commit	0	main	reverse	test tag		1111
+drawn	yes
+label	1111
+label	main
+label	test tag

@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0f140efe58a64ff4
+accept	yes
+drawn	yes
+edge	process_A	process_B	none	arrow	solid
+edge	process_A	process_C	none	arrow	solid	messages
+edge	process_B	container_Beta	none	arrow	solid	via_AWSBatch
+edge	process_C	Process_D	none	arrow	solid
+group	container_Alpha	container_Alpha	process_A,process_B
+group	container_Beta	container_Beta	Process_D,process_C
+node	Process_D	Process_D	rect
+node	process_A	process_A	rect
+node	process_B	process_B	rect
+node	process_C	process_C	rect

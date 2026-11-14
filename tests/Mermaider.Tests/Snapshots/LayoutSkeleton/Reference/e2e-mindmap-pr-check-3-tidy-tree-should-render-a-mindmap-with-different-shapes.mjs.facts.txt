@@ -1,0 +1,38 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7c6023dc0ae1e8bf
+accept	yes
+drawn	yes
+icon	mindmap / Origins / Long history	fa:fa-book
+label	Argument mapping
+label	British popular psychology author Tony Buzan
+label	Creative techniques
+label	I am a bang
+label	I am a cloud
+label	Long history
+label	On Automatic creation
+label	On effectiveness<br/>and features
+label	Origins
+label	Popularisation
+label	Research
+label	Strategic planning
+label	Tools
+label	Tools
+label	Uses
+label	mindmap
+node	mindmap	circle
+node	mindmap / Origins	default
+node	mindmap / Origins / Long history	default
+node	mindmap / Origins / Popularisation	default
+node	mindmap / Origins / Popularisation / British popular psychology author Tony Buzan	default
+node	mindmap / Research	default
+node	mindmap / Research / On Automatic creation	default
+node	mindmap / Research / On Automatic creation / Uses	default
+node	mindmap / Research / On Automatic creation / Uses / Argument mapping	default
+node	mindmap / Research / On Automatic creation / Uses / Creative techniques	default
+node	mindmap / Research / On Automatic creation / Uses / Strategic planning	default
+node	mindmap / Research / On effectiveness<br/>and features	default
+node	mindmap / Tools	default
+node	mindmap / Tools / I am a cloud	cloud
+node	mindmap / Tools / I am a cloud / I am a bang	bang
+node	mindmap / Tools / I am a cloud / I am a bang / Tools	default

@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0738f637a9677281
+accept	yes
+actor	Operator	Operator	normal
+direction	LR
+drawn	yes
+label	Animate true
+label	Animation disabled
+label	Fast animation
+label	Operator
+label	Slow animation
+relation	Operator	A	association	none	arrow		1
+relation	Operator	B	association	none	arrow		1
+relation	Operator	C	association	none	arrow		1
+relation	Operator	D	association	none	arrow		1
+usecase	A	Animate true	ellipse
+usecase	B	Fast animation	ellipse
+usecase	C	Slow animation	ellipse
+usecase	D	Animation disabled	ellipse

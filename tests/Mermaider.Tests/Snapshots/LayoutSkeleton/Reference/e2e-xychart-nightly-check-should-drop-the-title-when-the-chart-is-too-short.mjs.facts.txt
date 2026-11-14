@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b2735f4436f20e52
+accept	yes
+drawn	yes
+label	Percentage (%)
+series	line	10,20,30,40,50,60,70,80,90,100
+title	Too short for a title
+x-axis	Elapsed Time
+y-axis	Percentage (%)

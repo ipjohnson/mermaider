@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source dd5bc95d2c550e19
+accept	yes
+drawn	yes
+icon	columnar	server
+icon	rowspan	server
+label	Columnar
+label	Rowspan
+service	columnar	Columnar
+service	rowspan	Rowspan

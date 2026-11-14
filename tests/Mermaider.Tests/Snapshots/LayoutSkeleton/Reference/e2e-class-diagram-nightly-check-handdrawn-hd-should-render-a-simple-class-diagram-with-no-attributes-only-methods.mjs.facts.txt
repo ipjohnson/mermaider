@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5d20f8b251ec264d
+accept	yes
+bbox	node	Duck	12.2	12.1	111.9	156.4
+canvas	4.2	4.1	119.9	164.4
+class	Duck	Duck
+drawn	yes
+method	Duck	+quack()
+method	Duck	+swim()

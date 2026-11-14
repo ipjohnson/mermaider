@@ -1,0 +1,37 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source da47d198428b05bf
+accept	yes
+actor	Business	Business	normal	yes
+actor	Hollow	Hollow	hollow
+actor	Normal	Normal User	normal
+boundary	Authentication_System	Authentication System	rect	Login,Reset
+direction	LR
+drawn	yes
+json	Payload
+label	Authentication System
+label	Business
+label	Checkout
+label	Green
+label	Hollow
+label	Normal User
+label	Payload
+label	Red
+label	Requires an active session
+label	Reset password
+label	Sign in
+label	eu
+label	region
+label	tags
+note	Login	Requires an active session
+relation	Business	Checkout	association	none	arrow		1
+relation	Checkout	Payload	association	none	arrow		1
+relation	Hollow	Reset	association	none	circle		1
+relation	Login	Checkout	include	none	arrow		1
+relation	Normal	Login	association	none	arrow		1
+row	Payload	0	region	eu
+row	Payload	1	tags	Red
+row	Payload	2		Green
+usecase	Checkout	Checkout	ellipse	yes
+usecase	Login	Sign in	ellipse			Authentication_System
+usecase	Reset	Reset password	rect			Authentication_System

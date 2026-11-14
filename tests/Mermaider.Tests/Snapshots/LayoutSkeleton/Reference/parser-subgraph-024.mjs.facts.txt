@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bbf8afb147cf76a9
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid	Get money
+group	1test	1test	A
+node	A	Christmas	rect
+node	B	Go shopping	rounded

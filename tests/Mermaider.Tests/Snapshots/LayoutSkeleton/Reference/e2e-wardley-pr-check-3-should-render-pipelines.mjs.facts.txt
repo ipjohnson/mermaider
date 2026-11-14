@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8f96c4d1d0c4bb24
+accept	yes
+drawn	yes
+label	Campfire Kettle
+label	Electric Kettle
+label	Kettle
+label	Kettle Evolution Pipeline
+label	Power
+label	Smart Kettle
+label	User
+link	Kettle	Power		none
+link	Kettle_Campfire Kettle	Kettle		none
+link	Kettle_Electric Kettle	Kettle		none
+link	Kettle_Smart Kettle	Kettle		none
+link	User	Kettle_Electric Kettle		none
+node	Kettle	Kettle	component	45	57					yes
+node	Kettle_Campfire Kettle	Campfire Kettle	pipeline-component	35	57	-60	35
+node	Kettle_Electric Kettle	Electric Kettle	pipeline-component	53	57	-60	35
+node	Kettle_Smart Kettle	Smart Kettle	pipeline-component	72	57	-30	35
+node	Power	Power	component	70	10
+node	User	User	component	50	95
+pipeline	Kettle	Kettle_Campfire Kettle,Kettle_Electric Kettle,Kettle_Smart Kettle
+size	1100	800
+title	Kettle Evolution Pipeline

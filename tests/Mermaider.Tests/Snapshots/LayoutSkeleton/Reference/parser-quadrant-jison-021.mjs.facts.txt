@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source dfe3e9ff866d52b6
+accept	no
+# error style named fill is not supported.

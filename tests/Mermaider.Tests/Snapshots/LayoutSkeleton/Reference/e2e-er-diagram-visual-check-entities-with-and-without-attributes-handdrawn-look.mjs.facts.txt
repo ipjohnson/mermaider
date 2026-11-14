@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e6a014ff630ae88c
+accept	yes
+attribute	BOOK	float	price
+attribute	BOOK	string	title
+drawn	yes
+entity	AUTHOR	AUTHOR
+entity	BOOK	BOOK
+label	AUTHOR
+label	BOOK
+label	float
+label	price
+label	string
+label	title
+label	writes
+relation	AUTHOR	BOOK	one-or-more	one-or-more	non-identifying	writes

@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a194d95f2d926b7e
+accept	yes
+drawn	yes
+edge	default-index.js	dot.template.js	none	arrow	solid
+edge	index.js	module-utl.js	none	arrow	solid
+node	default-index.js	default-index.js	rect
+node	dot.template.js	dot.template.js	rect
+node	index.js	index.js	rect
+node	module-utl.js	module-utl.js	rect

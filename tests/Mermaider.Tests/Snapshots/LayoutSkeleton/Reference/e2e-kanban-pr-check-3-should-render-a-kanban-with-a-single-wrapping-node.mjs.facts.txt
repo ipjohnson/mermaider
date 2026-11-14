@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d42f3df1c8f6b305
+accept	yes
+column	id1	Todo
+column	id2	Title of diagram is more than 100 chars when user duplicates diagram with 100 char, wrapping
+drawn	yes
+label	Title of diagram is more than 100 chars when user duplicates diagram with 100 char, wrapping
+label	Todo

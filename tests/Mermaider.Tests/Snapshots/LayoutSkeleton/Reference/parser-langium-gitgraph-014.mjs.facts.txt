@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 85efbbcafb8d67f9
+accept	no
+# error Incorrect usage of "merge". Current branch (main)has no commits

@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 53143bc5fdbd9e5f
+accept	yes
+drawn	yes
+edge	a	b	none	arrow	solid	1o
+edge	a	c	none	arrow	solid	2o
+edge	a	d	none	arrow	solid	3o
+edge	b	d	none	arrow	solid
+edge	c	d	none	arrow	solid
+edge	d	a	none	arrow	solid	1i
+edge	g	a	none	arrow	solid	2i
+edge	h	a	none	arrow	solid	3i
+node	a	The cat in the hat	diam
+node	b	b	rect
+node	c	c	rect
+node	d	The dog in the hog	rounded
+node	g	g	rect
+node	h	h	rect

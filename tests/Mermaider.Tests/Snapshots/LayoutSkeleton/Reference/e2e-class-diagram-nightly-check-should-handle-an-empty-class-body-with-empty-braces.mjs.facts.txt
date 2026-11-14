@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 71816048f71fcda5
+accept	yes
+attribute	Bar	+Zip
+bbox	node	Ba	45.1	187	87	268
+bbox	node	Bar	160	12	237.3	147
+bbox	node	FooBase	12	66	120	147
+canvas	4	4	245.3	276
+class	Ba	Ba
+class	Bar	Bar
+class	FooBase	FooBase<T>
+drawn	yes
+method	Bar	+Zap()
+relation	FooBase	Ba	triangle	none	solid

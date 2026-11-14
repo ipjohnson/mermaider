@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2e07acb858202587
+accept	yes
+drawn	yes
+icon	unknown	iconnamedoesntexist
+label	Unknown Icon
+service	unknown	Unknown Icon

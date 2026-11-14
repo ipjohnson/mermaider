@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9a7a82dbd0bf13f9
+accept	yes
+block	anonymous-1		composite	1
+block	anonymous-2		composite	1	anonymous-1
+block	id1	id1	rect	1	anonymous-1
+block	id2	id2	rect	1	anonymous-1
+block	id3	Wider then	rounded	1	anonymous-2
+block	id4	id4	rect	1
+block	id5	id5	circle	1	anonymous-2
+drawn	yes
+label	Wider then
+label	id1
+label	id2
+label	id4
+label	id5

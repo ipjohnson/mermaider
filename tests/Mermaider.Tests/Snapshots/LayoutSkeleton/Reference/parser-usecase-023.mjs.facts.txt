@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 96718dcd4137bcae
+accept	yes
+actor	Hollow	Hollow	hollow	yes
+actor	Normal	Normal	normal
+direction	LR
+drawn	yes
+label	Business
+label	Ellipse
+label	Hollow
+label	Normal
+label	Rectangle
+usecase	Business	Business	ellipse	yes
+usecase	Ellipse	Ellipse	ellipse
+usecase	RectCase	Rectangle	rect

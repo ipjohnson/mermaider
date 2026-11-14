@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 38e665e1c837aafb
+accept	yes
+drawn	yes
+element	a	container	internal	Browser	Tech	single-page app
+element	b	container	internal	Terminal	Tech	server-side app
+label	Browser
+label	Sprite attribute (not shown by current renderer)
+label	Tech
+label	Tech
+label	Terminal
+label	server-side app
+label	single-page app
+title	Sprite attribute (not shown by current renderer)

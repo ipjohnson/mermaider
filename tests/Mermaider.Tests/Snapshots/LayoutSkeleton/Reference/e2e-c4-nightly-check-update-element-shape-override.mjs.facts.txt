@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7b5b4bf337c44bda
+accept	yes
+drawn	yes
+element	a	container	internal	Default	Tech	no override
+element	b	container	internal	As Folder	Tech	shape override
+element	c	container	internal	As Cylinder	Tech	shape override
+label	As Cylinder
+label	As Folder
+label	Default
+label	Tech
+label	Tech
+label	Tech
+label	UpdateElementStyle shape override (folder not yet supported)
+label	no override
+label	shape override
+label	shape override
+title	UpdateElementStyle shape override (folder not yet supported)

@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e6bf72728f785c8b
+accept	yes
+bbox	group	Platform	10.6	10.7	443.7	540.4
+bbox	group	Platform.Auth	34.6	296.4	209.4	516	Platform
+bbox	group	Platform.Data	255.9	296.7	418.9	516	Platform
+bbox	label	delegates	306.8	243	367.6	264
+bbox	label	delegates	91.2	243	151.9	264
+bbox	node	Gateway	176.3	60.1	283.1	183.2
+bbox	node	Repository	281.6	346.2	393.6	490.5
+bbox	node	UserService	60.2	346.1	183.6	490.3
+canvas	2.6	2.7	451.7	548.4
+class	Gateway	Gateway
+class	Repository	Repository
+class	UserService	UserService
+drawn	yes
+method	Gateway	+route()
+method	Repository	+find()
+method	Repository	+save()
+method	UserService	+login()
+method	UserService	+logout()
+namespace	Platform	Gateway,Platform.Auth,Platform.Data
+namespace	Platform.Auth	UserService
+namespace	Platform.Data	Repository
+relation	Gateway	Repository	none	arrow	solid	delegates
+relation	Gateway	UserService	none	arrow	solid	delegates

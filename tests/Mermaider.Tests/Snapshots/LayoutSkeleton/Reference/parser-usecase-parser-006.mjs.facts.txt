@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ad276a53e5c088c5
+accept	no
+# error Note target 'Missing' is unresolved at line 4, column 10 [52,59)

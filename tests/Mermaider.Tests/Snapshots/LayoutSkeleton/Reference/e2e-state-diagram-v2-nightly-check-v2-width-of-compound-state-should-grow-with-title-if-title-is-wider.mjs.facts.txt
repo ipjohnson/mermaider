@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6afd11481ca16c98
+accept	yes
+drawn	yes
+edge	a	b	none	arrow	solid
+group	NotShooting	Long state name 2	a,b
+node	a	a	rounded
+node	b	b	rounded

@@ -1,0 +1,7 @@
+sequenceDiagram
+  participant Service
+  participant Queue
+  Service->>Service: Initialize
+  Service->>Queue: Send
+  Queue->>Queue: Process internally
+  Queue-->>Service: Ack

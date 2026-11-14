@@ -1,0 +1,35 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 059f3a587a846c99
+accept	yes
+column	docs	Create Blog about the new diagram
+column	docs	Create Documentation
+column	id1	Todo
+column	id10	Ready for test
+column	id11	Done
+column	id12	Can't reproduce
+column	id2	Title of diagram is more than 100 chars when user duplicates diagram with 100 char
+column	id3	Update DB function
+column	id4	Create parsing tests
+column	id5	define getData
+column	id6	Create renderer so that it works in all cases. We also add some extra text here for testing purposes. And some more just for the extra flare.
+column	id66	last item
+column	id7	In progress
+column	id8	Design grammar
+column	id9	Ready for deploy
+drawn	yes
+label	Can't reproduce
+label	Create Blog about the new diagram
+label	Create Documentation
+label	Create parsing tests
+label	Create renderer so that it works in all cases. We also add some extra text here for testing purposes. And some more just for the extra flare.
+label	Design grammar
+label	Done
+label	In progress
+label	Ready for deploy
+label	Ready for test
+label	Title of diagram is more than 100 chars when user duplicates diagram with 100 char
+label	Todo
+label	Update DB function
+label	define getData
+label	last item

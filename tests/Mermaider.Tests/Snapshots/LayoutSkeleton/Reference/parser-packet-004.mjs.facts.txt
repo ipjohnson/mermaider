@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f7943b532085954c
+accept	yes
+drawn	yes
+field	0	10	test
+field	11	11	single
+label	single
+label	test

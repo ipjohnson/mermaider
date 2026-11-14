@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source af45ed244881bbfc
+accept	yes
+drawn	yes
+label	Parse JSON p1
+label	Pipeline
+label	Process time profile (ms)
+section	Pipeline
+task	Pipeline	Parse JSON p1		1970-01-01 00:00	1970-01-01 00:02
+title	Process time profile (ms)

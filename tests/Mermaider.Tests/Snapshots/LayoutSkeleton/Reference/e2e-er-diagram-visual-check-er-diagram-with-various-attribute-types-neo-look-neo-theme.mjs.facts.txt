@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 49a0ffbc760ba310
+accept	yes
+attribute	PRODUCT	float	price
+attribute	PRODUCT	int	id	PK
+attribute	PRODUCT	string	name
+attribute	PRODUCT	string[]	tags
+attribute	PRODUCT	type~T~	genericType
+attribute	PRODUCT	varchar(255)	description
+drawn	yes
+entity	PRODUCT	PRODUCT
+label	PRODUCT
+label	description
+label	float
+label	genericType
+label	id
+label	int
+label	name
+label	price
+label	string
+label	string[]
+label	tags
+label	type~T~
+label	varchar(255)

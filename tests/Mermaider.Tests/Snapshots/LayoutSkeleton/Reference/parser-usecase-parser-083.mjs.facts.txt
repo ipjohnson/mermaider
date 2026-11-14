@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b5488477c102b9e4
+accept	no
+# error Error parsing usecase diagram: Expecting: one of these possible Token sequences:

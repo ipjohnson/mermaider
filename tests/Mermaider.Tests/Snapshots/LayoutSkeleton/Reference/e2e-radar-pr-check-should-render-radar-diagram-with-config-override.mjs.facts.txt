@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 24e9872fbdfb0bbb
+accept	yes
+axis	A
+axis	B
+axis	C
+curve	mycurve	1,2,3
+drawn	yes
+label	A
+label	B
+label	Best Radar Ever
+label	C
+label	mycurve
+title	Best Radar Ever

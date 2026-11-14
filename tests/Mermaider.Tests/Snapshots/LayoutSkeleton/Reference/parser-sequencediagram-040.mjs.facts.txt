@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a852f3c7dfa321b7
+accept	no
+# error Trying to inactivate an inactive participant (Server)

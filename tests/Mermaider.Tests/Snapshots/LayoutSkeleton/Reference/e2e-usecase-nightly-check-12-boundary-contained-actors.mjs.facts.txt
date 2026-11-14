@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9c6319d0034b6ae3
+accept	yes
+actor	Chef	Chef	normal			Professional_Services
+actor	Guest	Restaurant guest	normal
+boundary	Professional_Services	Professional Services	package	Chef,PrepareMeal,ReviewMeal
+direction	LR
+drawn	yes
+label	Chef
+label	Prepare meal
+label	Professional Services
+label	Restaurant guest
+label	Review meal
+relation	Chef	PrepareMeal	association	none	arrow		1
+relation	Chef	ReviewMeal	association	none	arrow		1
+relation	Guest	ReviewMeal	association	none	arrow		1
+usecase	PrepareMeal	Prepare meal	ellipse			Professional_Services
+usecase	ReviewMeal	Review meal	ellipse			Professional_Services

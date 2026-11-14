@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f7d7308aa5598d9b
+accept	yes
+drawn	yes
+label	需要扩展
+quadrant	1	需要扩展

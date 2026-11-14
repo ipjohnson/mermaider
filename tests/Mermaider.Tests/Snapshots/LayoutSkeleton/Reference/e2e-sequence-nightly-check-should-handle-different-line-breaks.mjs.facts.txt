@@ -1,0 +1,38 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ff99e85f3bb50d58
+accept	yes
+actor	1	multiline using <br>	participant
+actor	2	multiline using <br/>	participant
+actor	3	multiline using <br />	participant
+actor	4	multiline using <br />	participant
+bbox	label	multiline	151.7	111.1	210.3	129
+bbox	label	multiline	363.7	236.1	422.3	254
+bbox	label	multiline	369.7	486.1	428.3	504
+bbox	label	multiline	575.7	361.1	634.3	379
+bbox	label	using <br />	356.8	503.1	441.2	521
+bbox	label	using <br />	562.8	378.1	647.2	396
+bbox	label	using <br/>	353	253.1	433	271
+bbox	label	using <br>	143.2	128.1	218.8	146
+bbox	node	1	0	0	154	90
+bbox	node	1	0	610	154	700
+bbox	node	2	210.5	0	369.5	90
+bbox	node	2	210.5	610	369.5	700
+bbox	node	3	419.5	0	582.5	90
+bbox	node	3	419.5	610	582.5	700
+bbox	node	4	632.5	0	795.5	90
+bbox	node	4	632.5	610	795.5	700
+bbox	note	multiline	102	536	265	590
+bbox	note	multiline	315	161	474	215
+bbox	note	multiline	526	286	689	340
+bbox	note	multiline	739	411	902	465
+canvas	-50	-10	952	741
+drawn	yes
+message	1	2	solid	filled	multiline using <br>
+message	2	3	solid	filled	multiline using <br/>
+message	3	4	solid	filled	multiline using <br />
+message	4	1	solid	filled	multiline using <br />
+note	right	1	multiline using <br />
+note	right	2	multiline using <br>
+note	right	3	multiline using <br/>
+note	right	4	multiline using <br />

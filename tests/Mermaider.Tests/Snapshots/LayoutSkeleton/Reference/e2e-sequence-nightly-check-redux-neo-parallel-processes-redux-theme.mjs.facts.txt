@@ -1,0 +1,45 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bfc6693b6338b866
+accept	yes
+actor	Customer	Customer	actor
+actor	Frontend	Frontend	participant
+actor	InventoryManager	InventoryManager	control
+actor	NotificationQueue	NotificationQueue	queue
+actor	Order	Order	entity
+actor	OrdersDB	OrdersDB	database
+actor	PaymentService	PaymentService	boundary
+bbox	label	Create order	527.1	137.4	617.1	155.9
+bbox	label	Items reserved	719.1	393.4	824.9	411.9
+bbox	label	Order confirmation	611.8	569.4	744.3	587.9
+bbox	label	Order saved	934	481.4	1022	499.9
+bbox	label	Parallel Processing	627.1	174.2	772.9	192.7
+bbox	label	Payment confirmed	603.1	349.4	740.9	367.9
+bbox	label	Place order	131.1	93.4	213.1	111.9
+bbox	label	Process payment	616.2	226.4	739.8	244.9
+bbox	label	Reserve items	726.9	295.4	829.1	313.9
+bbox	label	Save finalized order	901.3	437.4	1042.9	455.9
+bbox	label	Send confirmation	1007.5	525.4	1136.5	543.9
+bbox	label	par	464	171	514	206
+bbox	node	Customer	40.3	0	109.9	67.7
+bbox	node	Customer	40.3	619	109.9	686.7
+bbox	node	Frontend	200	0	350	73
+bbox	node	Frontend	200	613	350	686
+bbox	node	InventoryManager	610.5	0	739.7	67.7
+bbox	node	InventoryManager	610.5	619	739.7	686.7
+bbox	node	PaymentService	416.8	0	533.2	67.7
+bbox	node	PaymentService	416.8	619	533.2	686.7
+block	par	Parallel Processing
+canvas	-50	-10	1400	727
+divider
+drawn	yes
+message	Customer	Frontend	solid	filled	Place order
+message	Frontend	Order	solid	filled	Create order
+message	InventoryManager	Order	dashed	filled	Items reserved
+message	NotificationQueue	Customer	dashed	filled	Order confirmation
+message	Order	InventoryManager	solid	filled	Reserve items
+message	Order	NotificationQueue	solid	filled	Send confirmation
+message	Order	OrdersDB	solid	filled	Save finalized order
+message	Order	PaymentService	solid	filled	Process payment
+message	OrdersDB	Order	dashed	filled	Order saved
+message	PaymentService	Order	dashed	filled	Payment confirmed

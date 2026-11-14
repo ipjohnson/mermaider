@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f5d27d07be8c9f1c
+accept	yes
+actor	User	User	normal
+boundary	Account	Account	rect	Profile
+direction	LR
+drawn	yes
+json	Session
+label	Account
+label	Edit profile
+label	Session
+label	Sign in
+label	User
+label	active
+label	true
+relation	Login	Profile	association	none	arrow		1
+relation	Profile	Session	association	none	arrow		1
+relation	User	Login	association	none	arrow		1
+row	Session	0	active	true
+usecase	Login	Sign in	ellipse
+usecase	Profile	Edit profile	rect			Account

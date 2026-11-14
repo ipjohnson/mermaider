@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 44d75d9bb8f958b6
+accept	yes
+actor	actor1	actor1	actor
+actor	boundary2	boundary2	boundary
+actor	control3	control3	control
+actor	participant0	participant0	participant
+bbox	label	Message 0	134.9	131.1	213.1	148.5
+bbox	label	Message 2	534.9	200.1	613.1	217.5
+bbox	label	Parallel actions	341.3	78.9	458.7	96.3
+bbox	label	par	64	75	114	95
+bbox	node	actor1	252.8	-5	297.2	76.2
+bbox	node	actor1	252.8	248	297.2	329.2
+bbox	node	boundary2	420	11	512.8	77.3
+bbox	node	boundary2	420	264	512.8	329.8
+bbox	node	control3	646.5	10	703.5	75.2
+bbox	node	control3	646.5	263	703.5	330.7
+bbox	node	participant0	0	0	150	65
+bbox	node	participant0	0	253	150	318
+block	par	Parallel actions
+canvas	-50	-10	800	348
+divider
+divider
+drawn	yes
+message	boundary2	control3	solid	filled	Message 2
+message	participant0	actor1	solid	filled	Message 0

@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a2c7b77c44f921c4
+accept	yes
+drawn	yes
+edge	eat	sleep	none	arrow	solid
+edge	sleep	work	none	arrow	solid
+edge	work	eat	none	arrow	solid
+edge	work	sleep	none	arrow	solid
+node	eat	eat	rect
+node	sleep	sleep	rect
+node	work	work	rect

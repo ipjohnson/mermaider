@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source cadaf88df040bbdd
+accept	no
+# error Parsing failed: Lexer error on line 4, column 10: unexpected character: ->@<- at offset: 42, skipped 1 characters. Parse error on line 4, column 3: Expecting token of type 'EOF' but found `invalid`.

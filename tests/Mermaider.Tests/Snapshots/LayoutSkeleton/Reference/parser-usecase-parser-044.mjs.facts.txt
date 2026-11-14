@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7396ff06c0a09411
+accept	yes
+actor	User	User	hollow		Human	Auth
+boundary	Auth	Auth	package	Login,User
+direction	LR
+drawn	yes
+json	Payload
+label	Auth
+label	Human
+label	Payload
+label	Remember
+label	Sign in
+label	User
+label	ok
+label	true
+note	Login	Remember
+relation	Login	Login	include	none	arrow		1
+row	Payload	0	ok	true
+usecase	Login	Sign in	rect			Auth

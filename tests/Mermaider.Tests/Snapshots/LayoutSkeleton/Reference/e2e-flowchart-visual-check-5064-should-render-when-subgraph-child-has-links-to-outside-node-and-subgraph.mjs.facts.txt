@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a0ab1c8f8393cb9a
+accept	yes
+drawn	yes
+edge	Out	In	none	arrow	solid
+edge	Sub	In	none	arrow	solid
+group	Sub	Sub	In
+node	In	In	rect
+node	Out	Out	rect

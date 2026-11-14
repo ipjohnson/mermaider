@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a6c497ec1354e5dd
+accept	yes
+block	A1	Opening tag	hex	1
+block	A3	Closing tag	hex	1
+block	B1	<tagname>	rect	1
+block	B2	content	rect	1
+block	B3	</tagname>	rect	1
+block	C	Element	hex	3
+drawn	yes
+label	</tagname>
+label	<tagname>
+label	Closing tag
+label	Element
+label	Opening tag
+label	content
+space		1

@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source da532c5dc0b59e08
+accept	yes
+drawn	yes
+set	JavaScript		10
+set	Python		10
+set	TypeScript		10
+union	JavaScript,TypeScript		2.5

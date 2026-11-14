@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c60d9eab4324b679
+accept	no
+# error Error parsing usecase diagram: Expecting token of type --> FOR <-- but found --> 'left' <-- at line 2, column 6 [18,22)

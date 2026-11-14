@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 79622b23eebce2dd
+accept	yes
+bbox	group	Company	12	12	223.6	459
+bbox	group	Company.Project	36	60	199.6	435	Company
+bbox	group	Company.Project.Module	60	108	175.6	411	Company.Project
+bbox	label	manages	88.8	261	146.4	282
+bbox	node	Admin	84	156	151.6	237
+bbox	node	User	90.2	306	145.4	387
+canvas	4	4	231.6	467
+class	Admin	Admin
+class	User	User
+drawn	yes
+namespace	Company	Company.Project
+namespace	Company.Project	Company.Project.Module
+namespace	Company.Project.Module	Admin,User
+relation	Admin	User	none	arrow	solid	manages

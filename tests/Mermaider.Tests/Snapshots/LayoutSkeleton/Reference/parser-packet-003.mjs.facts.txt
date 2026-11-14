@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ac937f84e709cd17
+accept	yes
+drawn	yes
+field	0	10	test
+label	Packet diagram
+label	test
+title	Packet diagram

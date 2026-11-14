@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8a9d16b33715e0c9
+accept	yes
+drawn	yes
+label	Comparison
+label	Q1
+label	Q2
+label	Q3
+label	Q4
+label	Value
+series	line	20,40,60,80
+series	line	30,50,70,95
+title	Comparison
+x-axis		Q1,Q2,Q3,Q4
+y-axis	Value

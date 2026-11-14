@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e4ffc6a04734084c
+accept	yes
+drawn	yes
+label	Scientific Values
+label	Value 3
+node	Scientific Values
+node	Scientific Values / Value 1	1234567
+node	Scientific Values / Value 2	0
+node	Scientific Values / Value 3	1000000000

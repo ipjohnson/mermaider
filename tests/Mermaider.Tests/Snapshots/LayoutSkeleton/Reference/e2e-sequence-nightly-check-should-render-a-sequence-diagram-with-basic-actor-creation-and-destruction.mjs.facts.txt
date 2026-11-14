@@ -1,0 +1,41 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source caa0d994e5bffc1f
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Ola1	Ola	actor
+actor	Ola2	Ola	participant
+actor	Polo	Polo	participant
+bbox	label	And now?	156.4	467	227.6	485.5
+bbox	label	Bye for me!	601.1	591	682.9	609.5
+bbox	label	Bye!	441	386	473	404.5
+bbox	label	Fine, thank you. And you?	105.6	137	290.4	155.5
+bbox	label	Hello Bob, how are you ?	102.7	93	281.3	111.5
+bbox	label	Hello again	526	511	606	529.5
+bbox	label	Hi Polo!	263	181	319	199.5
+bbox	label	Hi too	452.1	342	493.9	360.5
+bbox	label	Hiii	702.9	262	725.1	280.5
+bbox	label	The end	738.7	672	797.3	690.5
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	578.5	150	651.5
+bbox	node	Bob	240	0	390	73
+bbox	node	Bob	240	659	390	732
+bbox	node	Ola1	852.6	249	877.4	316.7
+bbox	node	Ola1	852.6	379.5	877.4	447.2
+bbox	node	Ola2	1065	498	1215	571
+bbox	node	Ola2	1065	752	1215	825
+bbox	node	Polo	515	168.5	665	241.5
+bbox	node	Polo	515	752	665	825
+canvas	-50	-10	1265	866
+drawn	yes
+message	Alice	Bob	solid	filled	And now?
+message	Alice	Bob	solid	filled	Hello Bob, how are you ?
+message	Alice	Ola1	dashed	cross	Bye!
+message	Alice	Ola2	dashed	cross	Bye for me!
+message	Alice	Ola2	solid	filled	Hello again
+message	Alice	Polo	solid	filled	Hi Polo!
+message	Bob	Alice	solid	filled	Fine, thank you. And you?
+message	Ola1	Alice	solid	filled	Hi too
+message	Ola2	Bob	dashed	none	The end
+message	Polo	Ola1	solid	filled	Hiii

@@ -1,0 +1,30 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2797e73a07aae407
+accept	yes
+actor	Customer	Customer	normal
+actor	Support	Support agent	normal
+boundary	Storefront	Storefront	rect	Browse,Order,Track
+boundary	admin	Admin Panel	package	Process,Returns
+direction	LR
+drawn	yes
+label	Admin Panel
+label	Browse products
+label	Customer
+label	Handle returns
+label	Place order
+label	Process orders
+label	Storefront
+label	Support agent
+label	Track order
+relation	Customer	Browse	association	none	arrow		1
+relation	Customer	Order	association	none	arrow		1
+relation	Customer	Track	association	none	arrow		1
+relation	Order	Process	association	none	arrow		1
+relation	Support	Process	association	none	arrow		1
+relation	Support	Returns	association	none	arrow		1
+usecase	Browse	Browse products	ellipse			Storefront
+usecase	Order	Place order	ellipse			Storefront
+usecase	Process	Process orders	rect			admin
+usecase	Returns	Handle returns	rect			admin
+usecase	Track	Track order	ellipse			Storefront

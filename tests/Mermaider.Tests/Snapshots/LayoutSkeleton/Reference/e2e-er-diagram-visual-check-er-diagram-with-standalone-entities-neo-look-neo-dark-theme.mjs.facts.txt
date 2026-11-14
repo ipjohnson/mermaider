@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 278fa7722e19ac73
+accept	yes
+attribute	ISOLATED_ENTITY	string	data
+attribute	ISOLATED_ENTITY	string	id	PK
+drawn	yes
+entity	ACTIVE_ENTITY	ACTIVE_ENTITY
+entity	CONNECTED_A	CONNECTED_A
+entity	CONNECTED_B	CONNECTED_B
+entity	ISOLATED_ENTITY	ISOLATED_ENTITY
+label	ACTIVE_ENTITY
+label	CONNECTED_A
+label	CONNECTED_B
+label	ISOLATED_ENTITY
+label	data
+label	id
+label	relates
+label	string
+label	string
+relation	CONNECTED_A	CONNECTED_B	one	one	identifying	relates

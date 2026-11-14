@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source db10bf1af34c581a
+accept	yes
+drawn	yes
+icon	src / alarm.txt	bell
+label	alarm.txt
+label	index.js
+label	src
+node	src	dir
+node	src / alarm.txt	file
+node	src / index.js	file

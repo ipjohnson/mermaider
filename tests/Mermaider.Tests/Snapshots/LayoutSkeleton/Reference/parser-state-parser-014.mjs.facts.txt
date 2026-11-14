@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3fe9f8dc25adf7f5
+accept	yes
+drawn	yes
+edge	State1	State2	none	arrow	solid
+node	State1	State1	rounded
+node	State2	State2	rounded
+note	State1	this sentence contains end note as part of the note text

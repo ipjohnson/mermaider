@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d0f0e0482f2a7264
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	John	John	participant
+bbox	label	Action 1	281.7	86	352.3	105
+bbox	label	Action 2	256.7	180	327.3	199
+bbox	label	Every minute	163.9	499	270.1	518
+bbox	label	Great!	170.8	551.2	217.2	570.2
+bbox	label	Hello Bob, how are you?	202.7	227.2	375.3	246.2
+bbox	label	Hello John, how are you?	97.1	281.2	276.9	300.2
+bbox	label	Hello John, how are you?	99.1	138.2	278.9	157.2
+bbox	label	Hi Alice, I can hear you!	106.9	369.2	279.1	388.2
+bbox	label	I feel great!	150.1	462.2	235.9	481.2
+bbox	label	John, can you hear me?	102.4	325.2	271.6	344.2
+bbox	label	loop	64	496	114	531
+bbox	label	par	64	83	114	118
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	605	150	678
+bbox	node	Bob	434	0	584	73
+bbox	node	Bob	434	605	584	678
+bbox	node	John	234	0	384	73
+bbox	node	John	234	605	384	678
+bbox	note	John is perceptive	334	403	484	442
+block	loop	Every minute
+block	par	Action 1
+canvas	-50	-10	634	719
+divider	Action 2
+drawn	yes
+message	Alice	Bob	solid	filled	Hello Bob, how are you?
+message	Alice	John	solid	filled	Hello John, how are you?
+message	Alice	John	solid	filled	Hello John, how are you?
+message	Alice	John	solid	filled	John, can you hear me?
+message	John	Alice	dashed	filled	Hi Alice, I can hear you!
+message	John	Alice	dashed	filled	I feel great!
+message	John	Alice	dashed	none	Great!
+note	right	John	John is perceptive

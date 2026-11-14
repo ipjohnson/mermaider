@@ -1,0 +1,121 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 19cf85bf89f54af2
+accept	yes
+annotation	1	16	57	Alternative algos in research
+annotation	2	76	57	Most popular, but not the most efficient
+annotation	3	30	20	Ensure balanced token vocabulary
+annotation	4	28	60	Required for delimiters
+annotation	5	50	70	A structured approach for achieving a goal
+annotations	0	100
+deaccelerator	License Play	78	13
+drawn	yes
+label	A structured approach for achieving a goal
+label	Alternative algos in research
+label	Ensure balanced token vocabulary
+label	GPT Tokeniser
+label	GPT Tokeniser
+label	GPT2
+label	GPT3
+label	GPT4
+label	GPT5
+label	GPT6
+label	GPT7
+label	IDE
+label	License Play
+label	MEGABYTE
+label	Most popular, but not the most efficient
+label	Required for delimiters
+label	UTF8
+label	Unicode Consortium
+label	Unicode License v3
+label	Voting members: Adobe, Amazon, Apple, Google, Meta, Microsoft, Netflix, Salesforce
+label	algo
+label	algo v1
+label	algo v2
+label	byte pair encoding (BPE)
+label	code data
+label	decoder
+label	encoder
+label	english text data
+label	foreign text data
+label	inference code
+label	methodology
+label	methodology v1
+label	methodology v2
+label	python
+label	security framework
+label	sentencepiece
+label	special tokens
+label	text merging rules
+label	token vocabulary
+label	tokeniser
+label	tokeniser training data
+label	tokeniser v1
+label	tokeniser v2
+label	training code
+link	GPT Tokeniser	tokeniser		none
+link	MEGABYTE	UTF8		none
+link	UTF8	Unicode License v3		none
+link	Unicode License v3	Unicode Consortium		none
+link	algo	token vocabulary		none
+link	algo	tokeniser training data		none
+link	byte pair encoding (BPE)	UTF8		none
+link	decoder	algo		none
+link	encoder	algo		none
+link	inference code	decoder		none
+link	methodology	inference code		none
+link	methodology	security framework		none
+link	methodology	training code		none
+link	python	IDE		none
+link	python	sentencepiece		none
+link	tokeniser	methodology		none
+link	tokeniser training data	code data		none
+link	tokeniser training data	english text data		none
+link	tokeniser training data	foreign text data		none
+link	training code	encoder		none
+link	training code	python		none
+link	training code	special tokens		none
+link	training code	text merging rules		none
+node	GPT Tokeniser	GPT Tokeniser	anchor	58	90
+node	GPT2	GPT2	component	65	81	-14	27
+node	GPT3	GPT3	component	73	81	-15	27
+node	GPT4	GPT4	component	77	81	-14	28
+node	GPT5	GPT5	component	37	81	-10	28
+node	GPT6	GPT6	component	17	81	-20	28
+node	GPT7	GPT7	component	13	81	-13	27
+node	IDE	IDE	component	86	27
+node	MEGABYTE	MEGABYTE	component	18	53	-28	28
+node	UTF8	UTF8	component	74	17
+node	Unicode Consortium	Unicode Consortium	component	55	6
+node	Unicode License v3	Unicode License v3	component	72	13	-29	11
+node	algo	algo	component	50	53	-15	-17			yes
+node	algo_algo v1	algo v1	pipeline-component	14	53
+node	algo_algo v2	algo v2	pipeline-component	80	53
+node	byte pair encoding (BPE)	byte pair encoding (BPE)	component	76	53	-27	19
+node	code data	code data	component	30	15	-31	23
+node	decoder	decoder	component	72	60
+node	encoder	encoder	component	32	60	1	-9
+node	english text data	english text data	component	37	15	0	10
+node	foreign text data	foreign text data	component	23	15	-51	18
+node	inference code	inference code	component	37	65	-50	-12
+node	methodology	methodology	component	53	72					yes
+node	methodology_methodology v1	methodology v1	pipeline-component	20	72
+node	methodology_methodology v2	methodology v2	pipeline-component	80	72
+node	python	python	component	84	35
+node	security framework	security framework	component	58	67	-27	10
+node	sentencepiece	sentencepiece	component	80	25	-49	19
+node	special tokens	special tokens	component	26	59	-61	15
+node	text merging rules	text merging rules	component	21	60	-64	-10
+node	token vocabulary	token vocabulary	component	56	41	-25	16
+node	tokeniser	tokeniser	component	58	81					yes
+node	tokeniser training data	tokeniser training data	component	34	29	-74	-32
+node	tokeniser_tokeniser v1	tokeniser v1	pipeline-component	11	81
+node	tokeniser_tokeniser v2	tokeniser v2	pipeline-component	80	81
+node	training code	training code	component	26	68	-90	2
+note	Voting members: Adobe, Amazon, Apple, Google, Meta, Microsoft, Netflix, Salesforce	35	4
+pipeline	algo	algo_algo v1,algo_algo v2
+pipeline	methodology	methodology_methodology v1,methodology_methodology v2
+pipeline	tokeniser	tokeniser_tokeniser v1,tokeniser_tokeniser v2
+size	1100	800
+title	GPT Tokeniser

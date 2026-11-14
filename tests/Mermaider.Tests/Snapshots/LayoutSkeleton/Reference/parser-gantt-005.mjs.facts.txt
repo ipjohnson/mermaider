@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 83c8045a49cb0abc
+accept	yes
+drawn	yes
+label	#Gantt diagram titles support hashtags
+title	#Gantt diagram titles support hashtags

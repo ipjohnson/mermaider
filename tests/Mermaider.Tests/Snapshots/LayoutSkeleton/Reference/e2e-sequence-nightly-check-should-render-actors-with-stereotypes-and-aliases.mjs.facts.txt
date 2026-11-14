@@ -1,0 +1,28 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4c3ce1dc4d018b13
+accept	yes
+actor	A	API Gateway	boundary
+actor	D	Data Store	database
+actor	S	Service Layer	control
+actor	U	End User	actor
+bbox	label	Persist	549.6	174.1	598.4	191.4
+bbox	label	Process	345.1	130.1	402.9	147.4
+bbox	label	Response	341	262.1	413	279.4
+bbox	label	Result	154.3	306.1	199.7	323.4
+bbox	label	Send request	126.4	86.1	221.6	103.4
+bbox	label	Success	546.8	218.1	607.2	235.4
+bbox	node	A	220	11	321.7	77.3
+bbox	node	A	220	360	321.7	425.8
+bbox	node	S	426.1	10	524.1	75.3
+bbox	node	S	426.1	359	524.1	426.8
+bbox	node	U	41.7	-5	108.5	76.2
+bbox	node	U	41.7	344	108.5	425.2
+canvas	-50	-10	800	444
+drawn	yes
+message	A	S	solid	filled	Process
+message	A	U	dashed	filled	Result
+message	D	S	dashed	filled	Success
+message	S	A	dashed	filled	Response
+message	S	D	solid	filled	Persist
+message	U	A	solid	filled	Send request

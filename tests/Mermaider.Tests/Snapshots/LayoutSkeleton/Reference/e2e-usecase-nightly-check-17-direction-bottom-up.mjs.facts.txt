@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6c83ff06a61d38a6
+accept	yes
+actor	Customer	Customer	normal
+direction	BT
+drawn	yes
+label	Browse catalog
+label	Checkout
+label	Customer
+label	Download receipt
+relation	Browse	Checkout	association	none	arrow		1
+relation	Checkout	Receipt	association	none	arrow		1
+relation	Customer	Browse	association	none	arrow		1
+usecase	Browse	Browse catalog	ellipse
+usecase	Checkout	Checkout	ellipse
+usecase	Receipt	Download receipt	rect

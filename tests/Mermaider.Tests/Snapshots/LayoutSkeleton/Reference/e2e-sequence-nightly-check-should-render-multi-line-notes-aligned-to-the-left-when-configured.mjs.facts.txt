@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2a2482ffc239a4f7
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+bbox	label	I'm short	141.6	94.1	202.4	111.2
+bbox	label	Short as well	132.2	219.1	223.8	236.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	262	150	335
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	262	350	335
+bbox	note	I am left aligned	-100	127	50	198
+canvas	-150	-10	400	376
+drawn	yes
+message	Alice	Bob	solid	filled	I'm short
+message	Bob	Alice	solid	filled	Short as well
+note	left	Alice	I am left aligned but also multiline

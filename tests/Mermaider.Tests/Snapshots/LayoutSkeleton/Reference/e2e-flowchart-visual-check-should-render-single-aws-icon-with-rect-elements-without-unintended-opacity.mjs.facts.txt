@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c704955bc9b9fdc1
+accept	yes
+drawn	yes
+icon	Cloudwatch	aws:arch-amazon-cloudwatch
+node	Cloudwatch		rect

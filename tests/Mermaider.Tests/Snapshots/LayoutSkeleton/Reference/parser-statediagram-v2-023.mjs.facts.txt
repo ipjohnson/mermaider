@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8c67e50101835c8f
+accept	yes
+drawn	yes
+edge	Active	Inactive	none	arrow	solid
+edge	[*]start@root	Active	none	arrow	solid
+node	Active	Active	rounded
+node	Inactive	Inactive	rounded
+node	[*]start@root		sm-circ
+note	Active	this is a short note
+note	Inactive	A note can also be defined on several lines

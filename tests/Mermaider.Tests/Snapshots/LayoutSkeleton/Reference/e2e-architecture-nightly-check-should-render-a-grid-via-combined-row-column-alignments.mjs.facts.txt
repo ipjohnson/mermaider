@@ -1,0 +1,32 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d491f51cec9dc61f
+accept	yes
+drawn	yes
+edge	a1	B	b1	T	none	arrow
+edge	a2	B	b2	T	none	arrow
+edge	a3	B	b3	T	none	arrow
+group	tier1	Tier 1
+group	tier2	Tier 2
+icon	a1	server
+icon	a2	server
+icon	a3	server
+icon	b1	database
+icon	b2	database
+icon	b3	database
+icon	tier1	cloud
+icon	tier2	database
+label	A1
+label	A2
+label	A3
+label	B1
+label	B2
+label	B3
+label	Tier 1
+label	Tier 2
+service	a1	A1	tier1
+service	a2	A2	tier1
+service	a3	A3	tier1
+service	b1	B1	tier2
+service	b2	B2	tier2
+service	b3	B3	tier2

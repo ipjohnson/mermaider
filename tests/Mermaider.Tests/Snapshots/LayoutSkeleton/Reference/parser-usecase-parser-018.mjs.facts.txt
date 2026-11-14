@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6373d3e685a1bcb8
+accept	no
+# error ID 'link' is declared more than once (edge and edge) at line 3, column 3 [28,32); previous declaration at line 2, column 3 [15,19)

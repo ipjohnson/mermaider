@@ -1,0 +1,19 @@
+classDiagram
+  class ILogger {
+    <<interface>>
+    +Log(string message) void
+    +LogError(Exception ex) void
+  }
+  class ConsoleLogger {
+    -bool _verbose
+    +Log(string message) void
+    +LogError(Exception ex) void
+  }
+  class FileLogger {
+    -string _path
+    +Log(string message) void
+    +LogError(Exception ex) void
+    +Flush() void
+  }
+  ILogger <|.. ConsoleLogger
+  ILogger <|.. FileLogger

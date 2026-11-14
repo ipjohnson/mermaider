@@ -1,0 +1,16 @@
+sequenceDiagram
+  participant Client
+  participant API
+  participant DB
+  Client->>API: Request
+  alt Cache Hit
+    API-->>Client: Cached Response
+  else Cache Miss
+    API->>DB: Query
+    DB-->>API: Result
+    API-->>Client: Fresh Response
+  end
+  loop Health Check
+    Client->>API: Ping
+    API-->>Client: Pong
+  end

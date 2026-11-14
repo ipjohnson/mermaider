@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e1bd0381245d693f
+accept	yes
+drawn	yes
+node	n0	trap-b	trap-b
+node	n1	trapezoid-bottom	trap-b
+node	n2	priority	trap-b

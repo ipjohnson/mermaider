@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 70561d1ad93f8b62
+accept	yes
+drawn	yes
+edge	[*]start@First	A	none	arrow	solid
+edge	[*]start@Second	B	none	arrow	solid
+edge	[*]start@Third	C	none	arrow	solid
+group	First	First	A,[*]start@First
+group	Second	Second	B,[*]start@Second
+group	Third	Third	C,[*]start@Third
+node	A	A	rounded
+node	B	B	rounded
+node	C	C	rounded
+node	[*]start@First		sm-circ
+node	[*]start@Second		sm-circ
+node	[*]start@Third		sm-circ

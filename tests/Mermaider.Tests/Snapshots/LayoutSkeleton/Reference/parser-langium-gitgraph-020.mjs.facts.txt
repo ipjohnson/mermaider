@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 40e319261ca08779
+accept	no
+# error Trying to checkout branch which is not yet created. (Help try using "branch release-2021")

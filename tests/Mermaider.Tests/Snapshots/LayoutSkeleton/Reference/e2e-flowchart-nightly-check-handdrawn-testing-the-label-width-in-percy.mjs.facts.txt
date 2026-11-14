@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 38d4cbad533b67d2
+accept	yes
+drawn	yes
+node	A	Christmas	rect

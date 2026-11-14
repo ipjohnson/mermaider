@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 863c6ad95744b6f6
+accept	yes
+actor	Support	Support	normal
+actor	User	User	normal
+direction	LR
+drawn	yes
+label	Finish workflow
+label	Start workflow
+label	Support
+label	User
+relation	Finish	Support	association	cross	none		1
+relation	Start	Finish	association	none	none		1
+relation	Start	Support	association	arrow	none		1
+relation	Start	Support	association	circle	none		1
+relation	User	Finish	association	none	circle		1
+relation	User	Finish	association	none	cross		1
+relation	User	Start	association	none	arrow		1
+usecase	Finish	Finish workflow	ellipse
+usecase	Start	Start workflow	ellipse

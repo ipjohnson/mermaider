@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b6b69a767cd04614
+accept	yes
+attribute	CLUSTER	string(255)	description
+attribute	CLUSTER	varchar(99)	name
+drawn	yes
+entity	CLUSTER	CLUSTER
+label	CLUSTER
+label	description
+label	name
+label	string(255)
+label	varchar(99)

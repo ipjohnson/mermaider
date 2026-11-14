@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 543dd1c2296e2d31
+accept	yes
+attribute	Class1	int : test
+attribute	Class1	string : foo
+bbox	group	Namespace1	12	12	291.1	261
+bbox	node	Class1	36	60	148	237
+bbox	node	Class2	198	108	267.1	189
+canvas	4	4	299.1	269
+class	Class1	Class1
+class	Class2	Class2
+drawn	yes
+method	Class1	foo()
+method	Class1	test()
+namespace	Namespace1	Class1,Class2

@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c50b90ca7aab91bb
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Charlie	Charlie	participant
+bbox	label	Central at end with bidirectional	159.1	241.2	394.9	260.2
+bbox	label	Central at start with bidirectional	161.4	285.2	404.6	304.2
+bbox	label	Dual central with bidirectional dotted	146.7	167.2	419.3	186.2
+bbox	label	Dual central with bidirectional solid	-46	93.2	212	112.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	359	150	432
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	359	350	432
+bbox	node	Charlie	400	0	550	73
+bbox	node	Charlie	400	359	550	432
+canvas	-82.5	-10	600	473
+drawn	yes
+message	Alice	Alice	solid	filled-both	Dual central with bidirectional solid
+message	Bob	Bob	dashed	filled-both	Dual central with bidirectional dotted
+message	Bob	Bob	solid	filled-both	Central at start with bidirectional
+message	Charlie	Alice	solid	filled-both	Central at end with bidirectional

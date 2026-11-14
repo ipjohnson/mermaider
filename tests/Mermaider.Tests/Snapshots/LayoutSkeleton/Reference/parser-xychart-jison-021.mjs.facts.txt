@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e3e4e23312c69b6b
+accept	no
+# error Cannot read properties of undefined (reading 'data')

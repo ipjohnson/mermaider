@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 63fbbcab2f6c8c37
+accept	yes
+drawn	yes
+label	0
+label	1
+label	2
+label	3
+label	ALPHA
+label	ALPHA
+label	DIGIT
+label	digit
+label	scheme
+rule	digit	("0" | "1" | "2" | "3")
+rule	scheme	(<ALPHA> {(<ALPHA> | <DIGIT> | "+" | "-" | ".")}0..)

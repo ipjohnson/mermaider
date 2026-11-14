@@ -1,0 +1,35 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f6e12972357cf8c7
+accept	yes
+drawn	yes
+label	Argument mapping
+label	British popular psychology author Tony Buzan
+label	Creative techniques
+label	Long history
+label	Mermaid
+label	On Automatic creation
+label	On effectiveness and features
+label	Origins
+label	Pen and paper
+label	Popularisation
+label	Research
+label	Strategic planning
+label	Tools
+label	Uses
+label	mindmap
+node	mindmap	circle
+node	mindmap / Origins	hex
+node	mindmap / Origins / Long history	rect
+node	mindmap / Origins / Popularisation	rect
+node	mindmap / Origins / Popularisation / British popular psychology author Tony Buzan	default
+node	mindmap / Research	hex
+node	mindmap / Research / On Automatic creation	rect
+node	mindmap / Research / On Automatic creation / Uses	rect
+node	mindmap / Research / On Automatic creation / Uses / Argument mapping	default
+node	mindmap / Research / On Automatic creation / Uses / Creative techniques	default
+node	mindmap / Research / On Automatic creation / Uses / Strategic planning	default
+node	mindmap / Research / On effectiveness and features	rect
+node	mindmap / Tools	hex
+node	mindmap / Tools / Mermaid	default
+node	mindmap / Tools / Pen and paper	default

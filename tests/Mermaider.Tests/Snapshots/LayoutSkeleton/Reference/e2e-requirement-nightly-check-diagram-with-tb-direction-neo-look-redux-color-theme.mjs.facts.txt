@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0d42ab0b9f019392
+accept	yes
+drawn	yes
+label	1
+label	2
+label	derives
+label	req A.
+label	req B.
+label	req_a
+label	req_b
+relation	req_a	req_b	derives
+requirement	req_a	requirement	1	req A.	low	analysis
+requirement	req_b	requirement	2	req B.	medium	inspection

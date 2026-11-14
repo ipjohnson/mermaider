@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8708b623ff99a768
+accept	yes
+drawn	yes
+label	A
+label	Test Size
+node	A	A	component	50	50
+size	1200	900
+title	Test Size

@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a84e5e4c92f87471
+accept	yes
+drawn	yes
+element	default	person	internal	default		default
+label	default
+label	default

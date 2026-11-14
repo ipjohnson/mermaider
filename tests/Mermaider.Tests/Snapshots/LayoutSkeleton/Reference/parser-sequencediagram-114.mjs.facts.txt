@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c907d38263198295
+accept	yes
+actor	L	L	collections
+bbox	label	test	63.1	94.1	88.9	111.2
+bbox	node	L	0	0	150	67
+bbox	node	L	0	167	150	234
+canvas	-50	-10	201	281
+drawn	yes
+message	L	L	solid	none	test

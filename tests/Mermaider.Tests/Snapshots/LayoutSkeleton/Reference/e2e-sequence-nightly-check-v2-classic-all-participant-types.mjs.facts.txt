@@ -1,0 +1,38 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b859fc82fa596fb8
+accept	yes
+actor	actor1	actor1	actor
+actor	boundary2	boundary2	boundary
+actor	collections6	collections6	collections
+actor	control3	control3	control
+actor	database5	database5	database
+actor	entity4	entity4	entity
+actor	participant0	participant0	participant
+actor	queue7	queue7	queue
+bbox	label	Message 0	134.9	85.4	213.1	104.4
+bbox	label	Message 1	334.9	129.4	413.1	148.4
+bbox	label	Message 2	534.9	173.4	613.1	192.4
+bbox	label	Message 3	734.9	217.4	813.1	236.4
+bbox	label	Message 4	934.9	261.4	1013.1	280.4
+bbox	label	Message 5	1134.9	305.4	1213.1	324.4
+bbox	label	Message 6	1334.9	349.4	1413.1	368.4
+bbox	node	actor1	252.8	-5	297.2	77
+bbox	node	actor1	252.8	388	297.2	470
+bbox	node	boundary2	420	11	512.8	78
+bbox	node	boundary2	420	404	512.8	470.5
+bbox	node	collections6	1200	0	1350	65
+bbox	node	collections6	1200	393	1350	458
+bbox	node	control3	646.5	10	703.5	76
+bbox	node	control3	646.5	403	703.5	471.5
+bbox	node	participant0	0	0	150	65
+bbox	node	participant0	0	393	150	458
+canvas	-50	-10	1600	488
+drawn	yes
+message	actor1	boundary2	solid	filled	Message 1
+message	boundary2	control3	solid	filled	Message 2
+message	collections6	queue7	solid	filled	Message 6
+message	control3	entity4	solid	filled	Message 3
+message	database5	collections6	solid	filled	Message 5
+message	entity4	database5	solid	filled	Message 4
+message	participant0	actor1	solid	filled	Message 0

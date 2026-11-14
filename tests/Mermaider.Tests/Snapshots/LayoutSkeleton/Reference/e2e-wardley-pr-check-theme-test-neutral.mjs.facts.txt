@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 29c381273d695862
+accept	yes
+drawn	yes
+label	API
+label	App
+label	Cache
+label	Database
+label	Theme Test - neutral
+label	User
+link	API	Cache		none
+link	API	Database		none
+link	App	API		none
+link	User	App		none
+node	API	API	component	55	55
+node	App	App	component	70	75
+node	Cache	Cache	component	40	50
+node	Database	Database	component	60	30
+node	User	User	anchor	85	95
+size	1100	800
+title	Theme Test - neutral
+trend	Database	80	30

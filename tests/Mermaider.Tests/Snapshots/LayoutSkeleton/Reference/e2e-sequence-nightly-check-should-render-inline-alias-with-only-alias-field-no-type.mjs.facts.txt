@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0fd1de342eeb5c86
+accept	yes
+actor	API	Public API	participant
+actor	Auth	Auth Service	participant
+bbox	label	Request	144.2	86.1	203.8	103.3
+bbox	label	Response	141	130.1	213	147.3
+bbox	node	API	0	0	150	65
+bbox	node	API	0	173	150	238
+bbox	node	Auth	200	0	350	65
+bbox	node	Auth	200	173	350	238
+canvas	-50	-10	400	249
+drawn	yes
+message	API	Auth	solid	filled	Request
+message	Auth	API	dashed	filled	Response

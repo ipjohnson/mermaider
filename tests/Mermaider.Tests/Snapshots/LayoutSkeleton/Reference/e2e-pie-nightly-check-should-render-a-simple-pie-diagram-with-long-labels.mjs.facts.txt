@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9b515d1c744ef17a
+accept	yes
+drawn	yes
+label	NETFLIX
+label	Time spent looking for movie
+label	Time spent watching it
+slice	Time spent looking for movie	90
+slice	Time spent watching it	10
+title	NETFLIX

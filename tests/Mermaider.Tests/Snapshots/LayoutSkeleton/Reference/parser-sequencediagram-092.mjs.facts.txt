@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1c0d2c8359e4fcf3
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+bbox	label	Fine!	160.2	236.1	195.8	253.2
+bbox	label	Hello Bob, how are you? If you	63	94.1	281	111.5
+bbox	label	are not available right now, I can	57.3	111.1	286.7	128.5
+bbox	label	back to me as soon as you can!	59.5	146.1	284.5	163.5
+bbox	label	leave you a message. Please get	54.1	129.1	289.9	146.5
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	279	150	352
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	279	350	352
+bbox	note	Bob thinks	-100	178	50	215
+canvas	-150	-10	400	393
+drawn	yes
+message	Alice	Bob	solid	filled	Hello Bob, how are you? If you are not available right now, I can leave you a message. Please get back to me as soon as you can!
+message	Bob	Alice	solid	filled	Fine!
+note	left	Alice	Bob thinks

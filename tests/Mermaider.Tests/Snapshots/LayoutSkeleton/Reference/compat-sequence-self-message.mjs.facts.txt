@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e88b986370a6f021
+accept	yes
+actor	Queue	Queue	participant
+actor	Service	Service	participant
+bbox	label	Ack	164.6	286.1	191.3	303.2
+bbox	label	Initialize	47.1	94.1	104.9	111.2
+bbox	label	Process internally	212.9	212.1	339.1	229.5
+bbox	label	Send	153.3	168.1	190.7	185.2
+bbox	node	Queue	200	0	350	73
+bbox	node	Queue	200	329	350	402
+bbox	node	Service	0	0	150	73
+bbox	node	Service	0	329	150	402
+canvas	-50	-10	401	443
+drawn	yes
+message	Queue	Queue	solid	filled	Process internally
+message	Queue	Service	dashed	filled	Ack
+message	Service	Queue	solid	filled	Send
+message	Service	Service	solid	filled	Initialize

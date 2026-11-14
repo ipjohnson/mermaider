@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 11c251bd82893de5
+accept	yes
+drawn	yes
+edge	Concurrent	Finish	none	arrow	solid
+edge	[*]start@Deep	Done	none	arrow	solid
+edge	[*]start@Finish	Flush	none	arrow	solid
+edge	[*]start@divider-id-1	Left	none	arrow	solid
+edge	[*]start@divider-id-63	Right	none	arrow	solid
+group	Concurrent	Concurrent	divider-id-1,divider-id-63
+group	Deep	Deep	Done,[*]start@Deep
+group	Finish	Finish	Deep,Flush,[*]start@Finish
+group	Machine	Machine	Concurrent,Finish
+group	divider-id-1		Left,[*]start@divider-id-1
+group	divider-id-63		Right,[*]start@divider-id-63
+node	Done	Done	rounded
+node	Flush	Flush	rounded
+node	Left	Left	rounded
+node	Right	Right	rounded
+node	[*]start@Deep		sm-circ
+node	[*]start@Finish		sm-circ
+node	[*]start@divider-id-1		sm-circ
+node	[*]start@divider-id-63		sm-circ

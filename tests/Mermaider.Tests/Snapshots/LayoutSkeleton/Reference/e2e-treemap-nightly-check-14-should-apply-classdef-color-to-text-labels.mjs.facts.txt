@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 57b413e794adbb37
+accept	yes
+drawn	yes
+label	Chairs
+label	Electronics
+label	Furniture
+label	Laptops
+label	Phones
+label	Products
+label	Tables
+node	Products
+node	Products / Electronics
+node	Products / Electronics / Laptops	30
+node	Products / Electronics / Phones	40
+node	Products / Furniture
+node	Products / Furniture / Chairs	25
+node	Products / Furniture / Tables	20

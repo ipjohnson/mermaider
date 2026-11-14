@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6ccdc164d8677929
+accept	yes
+drawn	yes
+label	Browse Features
+label	Browse Features
+label	Engagement
+label	Onboarding
+label	Sign Up
+label	This is a long label that will be split into multiple lines to test the wrapping functionality
+label	This is another long label that will be split into multiple lines to test the wrapping functionality
+label	This is yet another long label that will be split into multiple lines to test the wrapping functionality
+label	Use Core Functionality
+label	Use Core Functionality
+label	User Journey Example
+section	Engagement
+section	Onboarding
+task	Engagement	Browse Features	3
+task	Engagement	Use Core Functionality	4
+task	Onboarding	Browse Features	3	This is another long label that will be split into multiple lines to test the wrapping functionality
+task	Onboarding	Sign Up	5	This is a long label that will be split into multiple lines to test the wrapping functionality
+task	Onboarding	Use Core Functionality	4	This is yet another long label that will be split into multiple lines to test the wrapping functionality
+title	User Journey Example

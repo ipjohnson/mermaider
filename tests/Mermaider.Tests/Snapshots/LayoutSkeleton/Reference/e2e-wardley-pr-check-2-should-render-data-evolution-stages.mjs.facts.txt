@@ -1,0 +1,32 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 51aab1407c0d1f3d
+accept	yes
+drawn	yes
+label	Commodity Storage
+label	Convergent
+label	Custom Analytics
+label	Data Collection
+label	Data Evolution Pipeline
+label	Divergent
+label	Modelled
+label	Standardized Reports
+label	Unmodelled
+label	User Needs
+link	Custom Analytics	Standardized Reports		none
+link	Data Collection	Custom Analytics		none
+link	Standardized Reports	Commodity Storage		none
+link	User Needs	Data Collection		none
+node	Commodity Storage	Commodity Storage	component	85	60
+node	Custom Analytics	Custom Analytics	component	35	70
+node	Data Collection	Data Collection	component	15	80
+node	Standardized Reports	Standardized Reports	component	65	65
+node	User Needs	User Needs	component	5	95
+size	1100	800
+stage	0	Unmodelled
+stage	1	Divergent
+stage	2	Convergent
+stage	3	Modelled
+title	Data Evolution Pipeline
+trend	Custom Analytics	60	70
+trend	Standardized Reports	85	65

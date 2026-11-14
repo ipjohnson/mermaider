@@ -9,6 +9,50 @@ cs-namespace-duplicate group-overlap 1
 docs-classDiagram-020 group-overlap 1
 docs-classDiagram-021 group-overlap 1
 docs-classDiagram-022 group-overlap 1
+e2e-class-diagram-nightly-check-dagre-dagre-should-render-compact-mode-with-hierarchicalnamespaces-false group-overlap 1
+e2e-class-diagram-nightly-check-dagre-dagre-should-render-nested-namespaces-with-dot-notation group-overlap 1
+e2e-class-diagram-nightly-check-dagre-dagre-should-render-syntactically-nested-namespaces group-overlap 1
+e2e-class-diagram-nightly-check-handdrawn-hd-should-render-compact-mode-with-hierarchicalnamespaces-false group-overlap 1
+e2e-class-diagram-nightly-check-handdrawn-hd-should-render-nested-namespaces-with-dot-notation group-overlap 1
+e2e-class-diagram-nightly-check-handdrawn-hd-should-render-syntactically-nested-namespaces group-overlap 1
+e2e-class-diagram-nightly-check-renders-compact-mode-with-hierarchicalnamespaces-false group-overlap 1
+e2e-class-diagram-nightly-check-should-render-nested-namespaces-with-dot-notation group-overlap 1
+e2e-class-diagram-nightly-check-should-render-syntactically-nested-namespaces group-overlap 1
+parser-classdiagram-001 group-overlap 1
+parser-classdiagram-005 group-overlap 1
+parser-classdiagram-006 group-overlap 1
 
 # ipjohnson/mermaider#33: a free class note overlaps a note for a class.
 docs-classDiagram-001 note-overlap 1
+
+# ipjohnson/mermaider#26: sequence central connections () are not read, so block titles overlap the actors and a label
+# leaves the canvas.
+e2e-sequence-pr-check-should-render-central-connections-with-loops-and-alternatives canvas 1
+e2e-sequence-pr-check-should-render-central-connections-with-loops-and-alternatives label-node 2
+
+# ipjohnson/mermaider#50: a nowrap: note keeps its prefix as text and grows over the message above it.
+e2e-sequence-nightly-check-should-handle-line-breaks-and-wrap-annotations note-overlap 1
+
+# ipjohnson/mermaider#63: long message labels leave the canvas, multi-line messages overlap, a message label covers a
+# created actor, and a class cardinality covers a relation label.
+e2e-class-diagram-nightly-check-dagre-dagre-2-should-render-a-simple-class-diagrams-with-cardinality label-label 1
+e2e-class-diagram-pr-check-2-should-render-a-simple-class-diagrams-with-cardinality-3 label-label 1
+e2e-sequence-nightly-check-should-render-a-sequence-diagram-with-actor-creation-and-destruction-coupled-with-backgrounds-loops-and-notes label-node 1
+e2e-sequence-nightly-check-should-render-different-participant-types-with-wrapping-text canvas 1
+e2e-sequence-nightly-check-should-render-long-messages-from-an-actor-to-the-left-to-one-to-the-right canvas 1
+e2e-sequence-nightly-check-should-render-long-messages-from-an-actor-to-the-right-to-one-to-the-left canvas 1
+e2e-sequence-nightly-check-should-render-long-messages-from-database-to-collections canvas 1
+e2e-sequence-nightly-check-should-render-long-messages-from-queue-to-boundary canvas 1
+e2e-sequence-nightly-check-should-render-long-messages-wrapped-inline-from-an-actor-to-the-left-to-one-to-the-right canvas 1
+e2e-sequence-nightly-check-should-render-long-messages-wrapped-inline-from-an-actor-to-the-right-to-one-to-the-left canvas 1
+e2e-sequence-nightly-check-should-render-loops-with-a-slight-margin canvas 1
+e2e-sequence-nightly-check-should-render-multi-line-messages-aligned-to-the-left-when-configured label-label 1
+e2e-sequence-nightly-check-should-render-multi-line-messages-aligned-to-the-right-when-configured label-label 1
+e2e-sequence-nightly-check-should-render-with-an-init-directive canvas 1
+e2e-sequence-nightly-check-should-render-with-wrapping-enabled canvas 4
+e2e-sequence-nightly-check-should-render-wrapped-long-messages-from-actor-to-database canvas 1
+e2e-sequence-nightly-check-should-render-wrapped-long-messages-from-control-to-entity canvas 1
+parser-sequencediagram-092 canvas 1
+parser-sequencediagram-093 canvas 1
+parser-sequencediagram-094 canvas 1
+parser-sequencediagram-095 canvas 1

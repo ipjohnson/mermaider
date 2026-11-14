@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1a4de96fc6b44ffd
+accept	yes
+drawn	yes
+label	A section
+label	Active task
+label	Completed task
+label	Completed task in the critical line
+label	Create tests for parser
+label	Critical tasks
+label	Future task
+label	Gantt dark mode done-task readability
+label	Implement parser and jison
+section	A section
+section	Critical tasks
+task	A section	Active task	des2	2014-01-09 00:00	2014-01-14 00:00	active
+task	A section	Completed task	des1	2014-01-06 00:00	2014-01-08 00:00	done
+task	A section	Future task	des3	2014-01-14 00:00	2014-01-21 00:00
+task	Critical tasks	Completed task in the critical line		2014-01-06 00:00	2014-01-07 00:00	done,crit
+task	Critical tasks	Create tests for parser		2014-01-10 00:00	2014-01-15 00:00	active,crit
+task	Critical tasks	Implement parser and jison		2014-01-08 00:00	2014-01-10 00:00	done,crit
+title	Gantt dark mode done-task readability

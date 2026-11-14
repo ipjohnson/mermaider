@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 436a71a89f828ee8
+accept	yes
+drawn	yes
+element	p	person	internal	Internal Person		An authenticated user
+element	pe	person	external	External Person		An anonymous visitor
+label	An anonymous visitor
+label	An authenticated user
+label	Contacts
+label	External Person
+label	Internal Person
+label	Person elements
+rel	pe	p	one	Contacts
+title	Person elements

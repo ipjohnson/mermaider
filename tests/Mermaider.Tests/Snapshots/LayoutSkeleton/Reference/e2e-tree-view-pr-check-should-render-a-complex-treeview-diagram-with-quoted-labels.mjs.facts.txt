@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 906a3dc74456f3f1
+accept	yes
+drawn	yes
+label	file1.js
+label	file2.ts
+label	file3.spec.ts
+label	file4.ts
+label	file5.ts
+label	file6.ts
+label	file7.ts
+label	folder1
+label	folder2
+label	folder3
+label	folder4
+label	root
+node	file7.ts	file
+node	folder1	file
+node	folder1 / file1.js	file
+node	folder1 / file2.ts	file
+node	folder2	file
+node	folder2 / file3.spec.ts	file
+node	folder2 / folder3	file
+node	folder2 / folder3 / file4.ts	file
+node	folder2 / folder3 / file5.ts	file
+node	folder2 / folder3 / folder4	file
+node	folder2 / folder3 / folder4 / file6.ts	file
+node	root	file

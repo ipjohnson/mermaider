@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 62fe762a3e110621
+accept	yes
+drawn	yes
+icon	MindMap	mdi:fire
+icon	MindMap / I am a bang	mdi:fire
+icon	MindMap / I am a circle	mdi:fire
+icon	MindMap / I am a cloud	mdi:fire
+icon	MindMap / I am a hexagon	mdi:fire
+icon	MindMap / I am a rounded square	mdi:fire
+icon	MindMap / I am a square	mdi:fire
+icon	MindMap / I am the default shape	mdi:fire
+label	I am a bang
+label	I am a circle
+label	I am a cloud
+label	I am a hexagon
+label	I am a rounded square
+label	I am a square
+label	I am the default shape
+label	MindMap
+node	MindMap	circle
+node	MindMap / I am a bang	bang
+node	MindMap / I am a circle	circle
+node	MindMap / I am a cloud	cloud
+node	MindMap / I am a hexagon	hex
+node	MindMap / I am a rounded square	rounded
+node	MindMap / I am a square	rect
+node	MindMap / I am the default shape	default

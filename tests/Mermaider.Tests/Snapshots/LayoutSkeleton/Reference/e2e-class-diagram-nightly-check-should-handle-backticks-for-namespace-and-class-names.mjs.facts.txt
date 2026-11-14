@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2cc3dea2a3472b22
+accept	yes
+bbox	group	A::B	14.9	143	167	296
+bbox	node	IPC::Sender	38.9	191	143	272
+bbox	node	RenderProcessHost	12	12	169.8	93
+canvas	4	4	177.8	304
+class	IPC::Sender	IPC::Sender
+class	RenderProcessHost	RenderProcessHost
+drawn	yes
+namespace	A::B	IPC::Sender
+relation	RenderProcessHost	IPC::Sender	none	triangle	solid

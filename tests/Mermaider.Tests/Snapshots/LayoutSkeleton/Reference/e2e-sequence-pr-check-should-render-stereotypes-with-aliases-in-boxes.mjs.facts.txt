@@ -1,0 +1,45 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c431ee03060a0f5f
+accept	yes
+actor	API	REST API	boundary
+actor	Cache	Cache Store	entity
+actor	DB	Primary DB	database
+actor	Svc	Business Logic	control
+actor	UI	User Interface	boundary
+actor	User	End User	actor
+bbox	label	Cache miss	870.2	288.2	953.8	306.5
+bbox	label	Check cache	862.8	244.2	955.2	262.5
+bbox	label	Click button	137.2	112.2	220.8	130.5
+bbox	label	Data	375.1	508.2	408.9	526.5
+bbox	label	Data	795.1	376.2	828.9	394.5
+bbox	label	Display	155.8	552.2	208.2	570.5
+bbox	label	HTTP request	339.4	156.2	438.6	174.5
+bbox	label	Process	570.1	200.2	627.9	218.5
+bbox	label	Query data	769.4	332.2	848.6	350.5
+bbox	label	Response	566	464.2	638	482.5
+bbox	label	Update cache	859.7	420.2	958.3	438.5
+bbox	node	API	445	38	535.8	104.6
+bbox	node	API	445	607	535.8	673.1
+bbox	node	Svc	646.2	37	753.8	102.7
+bbox	node	Svc	646.2	606	753.8	674.2
+bbox	node	UI	225	38	330.2	104.6
+bbox	node	UI	225	607	330.2	673.1
+bbox	node	User	46.7	22	113.5	103.6
+bbox	node	User	46.7	591	113.5	672.6
+box	Backend Layer	API,Svc
+box	Data Layer	Cache,DB
+box	Frontend Layer	UI,User
+canvas	-50	-10	1250	701
+drawn	yes
+message	API	Svc	solid	filled	Process
+message	API	UI	dashed	filled	Data
+message	Cache	Svc	dashed	filled	Cache miss
+message	DB	Svc	dashed	filled	Data
+message	Svc	API	dashed	filled	Response
+message	Svc	Cache	solid	filled	Check cache
+message	Svc	Cache	solid	filled	Update cache
+message	Svc	DB	solid	filled	Query data
+message	UI	API	solid	filled	HTTP request
+message	UI	User	dashed	filled	Display
+message	User	UI	solid	filled	Click button

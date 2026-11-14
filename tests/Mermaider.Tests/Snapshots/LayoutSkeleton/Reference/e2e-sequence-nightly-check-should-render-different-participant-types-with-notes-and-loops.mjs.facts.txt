@@ -1,0 +1,49 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 16144a6af98e8ac7
+accept	yes
+actor	Admin	Admin	actor
+actor	AuthService	AuthService	boundary
+actor	Dashboard	Dashboard	participant
+actor	Logs	Logs	database
+actor	UserDB	UserDB	database
+actor	UserManager	UserManager	control
+actor	UserProfile	UserProfile	entity
+bbox	label	Access granted	343.9	240.1	454.1	258.9
+bbox	label	Audit trail	655.7	667.1	722.3	685.9
+bbox	label	Display users	451	579.1	547	597.9
+bbox	label	Format profiles	739.7	491.1	846.3	509.9
+bbox	label	Formatted data	744.8	535.1	853.2	553.9
+bbox	label	List users	458.8	294.1	527.2	312.9
+bbox	label	Open user management	96.8	93.1	269.2	111.9
+bbox	label	Query users	849.5	338.1	936.5	356.9
+bbox	label	Record access	740.1	623.1	845.9	641.9
+bbox	label	Return user data	839.5	382.1	958.5	400.9
+bbox	label	Verify admin rights	327.2	196.1	458.8	214.9
+bbox	label	[Authentication	368.1	130	473.9	148.8
+bbox	label	check]	397.9	147	444.1	165.8
+bbox	label	loop	285	127	335	162
+bbox	node	Admin	52.3	0	97.7	67.9
+bbox	node	Admin	52.3	717	97.7	784.9
+bbox	node	AuthService	441	0	539.1	67.9
+bbox	node	AuthService	441	717	539.1	784.9
+bbox	node	Dashboard	221	0	371	73
+bbox	node	Dashboard	221	711	371	784
+bbox	node	UserManager	647.6	0	744.6	67.9
+bbox	node	UserManager	647.6	717	744.6	784.9
+bbox	note	Encrypted data	1121	416	1271	471
+block	loop	Authentication check
+canvas	-50	-10	1421	825
+drawn	yes
+message	Admin	Dashboard	solid	filled	Open user management
+message	AuthService	Dashboard	solid	filled	Access granted
+message	Dashboard	AuthService	solid	filled	Verify admin rights
+message	Dashboard	Logs	solid	filled	Record access
+message	Dashboard	UserManager	solid	filled	List users
+message	Logs	Admin	solid	filled	Audit trail
+message	UserDB	UserManager	solid	filled	Return user data
+message	UserManager	Dashboard	solid	filled	Display users
+message	UserManager	UserDB	solid	filled	Query users
+message	UserManager	UserProfile	solid	filled	Format profiles
+message	UserProfile	UserManager	solid	filled	Formatted data
+note	right	UserDB	Encrypted data requires decryption

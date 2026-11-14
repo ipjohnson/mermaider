@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 58984f5ed25071f2
+accept	yes
+drawn	yes
+label	Adding journey diagram functionality to mermaid
+section	Order from website
+title	Adding journey diagram functionality to mermaid

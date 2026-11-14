@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d4434f5dc75b67b0
+accept	yes
+column	h	High
+column	id2	In progress
+column	l	Low
+column	m	Default priority
+column	vh	Very High
+column	vl	Very Low
+drawn	yes
+label	Default priority
+label	High
+label	In progress
+label	Low
+label	Very High
+label	Very Low

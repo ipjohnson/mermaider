@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9368c25e81612da0
+accept	yes
+actor	Alice	Alice	participant
+actor	John	John	participant
+bbox	label	Fight against hypochondria	213.9	183.1	406.1	200.5
+bbox	label	Great!	172.8	297.1	217.2	314.2
+bbox	label	Healthcheck	286.5	131	383.5	148.2
+bbox	label	Hello John, how are you?	98.7	94.1	279.3	111.5
+bbox	label	loop	212.5	127	262.5	162
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	340	150	413
+bbox	node	John	234	0	384	73
+bbox	node	John	234	340	384	413
+block	loop	Healthcheck
+canvas	-50	-10	457.5	454
+drawn	yes
+message	Alice	John	solid	filled	Hello John, how are you?
+message	John	Alice	dashed	filled	Great!
+message	John	John	solid	filled	Fight against hypochondria

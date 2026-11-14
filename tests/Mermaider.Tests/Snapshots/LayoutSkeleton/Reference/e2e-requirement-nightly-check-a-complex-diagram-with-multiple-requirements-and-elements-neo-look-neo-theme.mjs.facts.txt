@@ -1,0 +1,35 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 94ccd0d86c0bd962
+accept	yes
+drawn	yes
+element	hw_element	hardware	specs/hw_spec.pdf
+element	sw_element	software	github.com/org/repo
+label	1
+label	1.1
+label	1.2
+label	contains
+label	contains
+label	func_req
+label	github.com/org/repo
+label	hardware
+label	hw_element
+label	perf_req
+label	satisfies
+label	software
+label	specs/hw_spec.pdf
+label	sw_element
+label	sys_req
+label	the system shall perform the action.
+label	the system shall respond within 100ms.
+label	throughput must exceed 1000 requests per second.
+label	traces
+label	verifies
+relation	func_req	perf_req	traces
+relation	hw_element	sys_req	satisfies
+relation	sw_element	func_req	verifies
+relation	sys_req	func_req	contains
+relation	sys_req	perf_req	contains
+requirement	func_req	functional-requirement	1.1	the system shall respond within 100ms.	medium	demonstration
+requirement	perf_req	performance-requirement	1.2	throughput must exceed 1000 requests per second.	high	test
+requirement	sys_req	requirement	1	the system shall perform the action.	high	test

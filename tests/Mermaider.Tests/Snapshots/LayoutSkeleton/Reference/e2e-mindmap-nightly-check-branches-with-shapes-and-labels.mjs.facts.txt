@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 009f22977b33e65a
+accept	yes
+drawn	yes
+icon	root / Square / grand child 6	mdi:mdi-fire
+icon	root / Square / grandchild 5	mdi:mdi-fire
+label	Circle
+label	Round rectangle
+label	Square
+label	grand child 6
+label	grandchild 1
+label	grandchild 2
+label	grandchild 3
+label	grandchild 4
+label	grandchild 5
+label	root
+node	root	default
+node	root / Circle	circle
+node	root / Circle / grandchild 1	default
+node	root / Circle / grandchild 2	default
+node	root / Round rectangle	rounded
+node	root / Round rectangle / grandchild 3	default
+node	root / Round rectangle / grandchild 4	default
+node	root / Square	rect
+node	root / Square / grand child 6	circle
+node	root / Square / grandchild 5	default

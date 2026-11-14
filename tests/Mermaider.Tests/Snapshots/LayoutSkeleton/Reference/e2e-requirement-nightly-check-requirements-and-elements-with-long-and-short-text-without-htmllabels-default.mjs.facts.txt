@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0f79cb301ffa67d1
+accept	yes
+drawn	yes
+element	test_entity_name_that_is_extra_long
+label	1
+label	test_entity_name_that_is_extra_long
+label	test_req
+label	the test text that is long and takes up a lot of space.
+requirement	test_req	requirement	1	the test text that is long and takes up a lot of space.	high	test

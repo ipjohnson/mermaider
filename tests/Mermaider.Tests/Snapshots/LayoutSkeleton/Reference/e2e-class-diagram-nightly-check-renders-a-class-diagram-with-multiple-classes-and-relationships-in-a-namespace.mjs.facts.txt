@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 02a39e38dd571800
+accept	yes
+bbox	group	Company	12	12	755.1	636
+bbox	group	Company.Project	36	60	731.1	612	Company
+bbox	group	Company.Project.Module	60	108	707.1	588	Company.Project
+bbox	label	generates	529.7	378	592	399
+bbox	label	manages	207.7	378	265.2	399
+bbox	node	Admin	296.9	156	501	318
+bbox	node	Report	439.3	423	683.1	564
+bbox	node	User	84	423	389.3	564
+canvas	4	4	763.1	644
+class	Admin	Admin
+class	Report	Report
+class	User	User
+drawn	yes
+method	Admin	+addUser(user: User)
+method	Admin	+generateReport()
+method	Admin	+removeUser(user: User)
+method	Report	+generateCSV(reportData: List)
+method	Report	+generatePDF(reportData: List)
+method	User	+login(username: String, password: String)
+method	User	+logout()
+namespace	Company	Company.Project
+namespace	Company.Project	Company.Project.Module
+namespace	Company.Project.Module	Admin,Report,User
+relation	Admin	Report	none	arrow	solid	generates
+relation	Admin	User	none	arrow	solid	manages

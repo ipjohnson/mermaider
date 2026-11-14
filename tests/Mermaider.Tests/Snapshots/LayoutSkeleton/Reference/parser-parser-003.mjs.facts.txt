@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 14f505c49a67198e
+accept	yes
+drawn	yes
+label	Button.tsx
+label	Modal.tsx
+label	README.md
+label	components
+label	helpers.ts
+label	src
+label	utils
+node	README.md	file
+node	src	dir
+node	src / components	dir
+node	src / components / Button.tsx	file
+node	src / components / Modal.tsx	file
+node	src / utils	dir
+node	src / utils / helpers.ts	file

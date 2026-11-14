@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 435327ca01324e36
+accept	yes
+drawn	yes
+icon	src / index.js	unregistered:icon
+label	index.js
+label	src
+node	src	dir
+node	src / index.js	file

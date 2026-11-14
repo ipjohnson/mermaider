@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e0a7836e6a1b1234
+accept	yes
+drawn	yes
+label	Basic
+label	Enterprise
+label	Premium
+label	Product Prices
+label	Standard
+node	Product Prices
+node	Product Prices / Basic	19.99
+node	Product Prices / Enterprise	199.99
+node	Product Prices / Premium	99.99
+node	Product Prices / Standard	49.99

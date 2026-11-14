@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e8bd2ab80b0727d0
+accept	yes
+annotation	Shape	«interface»
+bbox	node	Shape	12	12	105.3	114
+canvas	4	4	113.3	122
+class	Shape	Shape
+drawn	yes

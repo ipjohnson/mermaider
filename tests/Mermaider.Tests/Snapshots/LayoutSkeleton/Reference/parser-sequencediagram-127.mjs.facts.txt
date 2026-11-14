@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ad0510ddfd47f226
+accept	yes
+actor	API	External Name	boundary
+bbox	label	test	63.1	94.1	88.9	111.2
+bbox	node	API	20	0	127.9	67
+bbox	node	API	20	173	127.9	240
+canvas	-50	-10	201	281
+drawn	yes
+message	API	API	solid	filled	test

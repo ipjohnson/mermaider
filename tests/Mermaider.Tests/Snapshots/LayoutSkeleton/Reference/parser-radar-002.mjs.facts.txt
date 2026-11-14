@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 50fd31af7d1f7f63
+accept	yes
+axis	Axis A
+axis	Axis B
+axis	Axis C
+curve	My Curve	1,2,3
+drawn	yes
+label	Axis A
+label	Axis B
+label	Axis C
+label	My Curve
+label	Radar diagram
+title	Radar diagram

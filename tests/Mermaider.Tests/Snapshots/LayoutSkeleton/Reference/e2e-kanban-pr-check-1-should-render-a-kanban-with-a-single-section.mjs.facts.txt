@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 61a95c6b98ce2aba
+accept	yes
+column	docs	Create Blog about the new diagram
+column	docs	Create Documentation
+column	id1	Todo
+drawn	yes
+label	Create Blog about the new diagram
+label	Create Documentation
+label	Todo

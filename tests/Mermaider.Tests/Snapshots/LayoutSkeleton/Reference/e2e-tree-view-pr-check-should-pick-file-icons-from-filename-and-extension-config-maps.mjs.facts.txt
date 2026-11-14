@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c6071943517bbafc
+accept	yes
+drawn	yes
+label	README.md
+label	data.xyz
+label	index.ts
+label	main.py
+label	src
+label	unmapped.bin
+node	README.md	file
+node	src	dir
+node	src / data.xyz	file
+node	src / index.ts	file
+node	src / main.py	file
+node	src / unmapped.bin	file

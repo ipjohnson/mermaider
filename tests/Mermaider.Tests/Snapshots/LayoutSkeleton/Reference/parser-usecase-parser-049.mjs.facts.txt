@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 10cc86985824ddac
+accept	yes
+actor	User	User	normal
+direction	LR
+drawn	yes
+label	User

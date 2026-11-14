@@ -1,0 +1,41 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bb9e08f1bb11a8d3
+accept	yes
+attribute	a	string	email
+attribute	b	string	email
+attribute	c	string	email
+attribute	d	string	email
+attribute	p	string	firstName
+attribute	p	string	lastName
+drawn	yes
+entity	a	Customer Account
+entity	b	Customer Account Secondary
+entity	c	Customer Account Tertiary
+entity	d	Customer Account Nth
+entity	p	Person
+label	Customer Account
+label	Customer Account Nth
+label	Customer Account Secondary
+label	Customer Account Tertiary
+label	Person
+label	email
+label	email
+label	email
+label	email
+label	firstName
+label	has one
+label	has one two
+label	has one two three
+label	has one two three ... Nth
+label	lastName
+label	string
+label	string
+label	string
+label	string
+label	string
+label	string
+relation	p	a	one	zero-or-one	identifying	has one
+relation	p	b	one	zero-or-one	identifying	has one two
+relation	p	c	one	zero-or-one	identifying	has one two three
+relation	p	d	one	zero-or-one	identifying	has one two three ... Nth

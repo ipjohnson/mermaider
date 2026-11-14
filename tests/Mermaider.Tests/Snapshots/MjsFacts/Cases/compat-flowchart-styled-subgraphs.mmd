@@ -1,0 +1,17 @@
+flowchart TB
+  A
+  B
+  subgraph foo[Foo SubGraph]
+    C
+    D
+  end
+  subgraph bar[Bar SubGraph]
+    E
+    F
+  end
+  A-->B
+  B-->C
+  C-->D
+  B-->D
+  D-->E
+  E-->A

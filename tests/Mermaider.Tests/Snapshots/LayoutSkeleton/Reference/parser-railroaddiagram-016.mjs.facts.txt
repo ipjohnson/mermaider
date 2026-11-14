@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d13b313adcf27ff4
+accept	no
+# error Parsing failed: Lexer error on line 2, column 17: unexpected character: ->"<- at offset: 30, skipped 1 characters. Parse error on line 2, column 18: Expecting token of type 'RR_STRING' but found `unclosed`.

@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6732776d3393a16d
+accept	yes
+bbox	label	Cool	67.9	172	96.7	193
+bbox	node	AveryLongClass	15.4	233	149.4	314
+bbox	node	Class01	12	12	152.7	132
+canvas	4	4	160.7	322
+class	AveryLongClass	AveryLongClass
+class	Class01	Class01
+drawn	yes
+method	Class01	someMethod()
+relation	Class01	AveryLongClass	triangle	none	solid	Cool

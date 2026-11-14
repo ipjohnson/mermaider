@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9efb47054a07c08a
+accept	yes
+drawn	yes
+edge	Failed	Idle	none	arrow	solid	retry
+edge	Failed	[*]end@root	none	arrow	solid
+edge	Fetching	Parsing	none	arrow	solid	bytes ready
+edge	Idle	Working	none	arrow	solid	start
+edge	Parsing	[*]end@Working	none	arrow	solid
+edge	Working	Failed	none	arrow	solid	error
+edge	Working	Idle	none	arrow	solid	done
+edge	[*]start@Working	Fetching	none	arrow	solid
+edge	[*]start@root	Idle	none	arrow	solid
+group	Working	Working	Fetching,Parsing,[*]end@Working,[*]start@Working
+node	Failed	Failed	rounded
+node	Fetching	Fetching	rounded
+node	Idle	Idle	rounded
+node	Parsing	Parsing	rounded
+node	[*]end@Working		fr-circ
+node	[*]end@root		fr-circ
+node	[*]start@Working		sm-circ
+node	[*]start@root		sm-circ

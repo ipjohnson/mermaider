@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 151cb4217518cc7f
+accept	yes
+drawn	yes
+edge	n00	n11	none	arrow	solid
+edge	n00	n22	none	arrow	solid
+edge	n00	n33	none	arrow	solid
+edge	n00	n44	none	arrow	solid
+edge	n00	n55	none	arrow	solid
+edge	n11	n22	none	arrow	solid
+edge	n11	n33	none	arrow	solid
+edge	n11	n44	none	arrow	solid
+edge	n11	n55	none	arrow	solid
+edge	n22	n33	none	arrow	solid
+edge	n22	n44	none	arrow	solid
+edge	n22	n55	none	arrow	solid
+edge	n33	n44	none	arrow	solid
+edge	n33	n55	none	arrow	solid
+edge	n44	n55	none	arrow	solid
+node	n00	This is a label for lined-document shape	lin-doc
+node	n11	This is a label for tagged-document shape	tag-doc
+node	n22	This is a label for brace-l shape	brace
+node	n33	This is a label for comment shape	brace
+node	n44	This is a label for braces shape	braces
+node	n55	This is a label for brace-r shape	brace-r

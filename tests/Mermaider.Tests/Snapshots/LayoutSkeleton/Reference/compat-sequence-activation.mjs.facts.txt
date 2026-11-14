@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3e056715ab82665d
+accept	yes
+actor	Client	Client	participant
+actor	DB	DB	participant
+actor	Server	Server	participant
+bbox	label	200 JWT	144	226.1	208	243.2
+bbox	label	POST /login	127	94.1	213	111.5
+bbox	label	SELECT user	323.2	138.1	421	155.2
+bbox	label	User row	346	182.1	410	199.2
+bbox	node	Client	0	0	150	73
+bbox	node	Client	0	269	150	342
+bbox	node	DB	400	0	550	73
+bbox	node	DB	400	269	550	342
+bbox	node	Server	200	0	350	73
+bbox	node	Server	200	269	350	342
+canvas	-50	-10	600	383
+drawn	yes
+message	Client	Server	solid	filled	POST /login
+message	DB	Server	dashed	filled	User row
+message	Server	Client	dashed	filled	200 JWT
+message	Server	DB	solid	filled	SELECT user
