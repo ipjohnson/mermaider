@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d8ead8f62367856a
+accept	yes
+drawn	yes
+label	any character except a line break
+label	bare
+label	bare
+label	char
+label	char
+label	char
+label	char
+label	field
+label	field
+label	field
+label	quoted
+label	quoted
+label	record
+rule	bare	[(<char> {<char>}0..)]
+rule	char	?any character except a line break?
+rule	field	(<quoted> | <bare>)
+rule	quoted	(""" {((<char> "-" """) | """")}0.. """)
+rule	record	(<field> {("," <field>)}0..)
+title	CSV Record

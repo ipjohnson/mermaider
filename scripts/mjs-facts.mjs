@@ -182,6 +182,7 @@ async function extractFacts(source, name, shapes) {
 		sequence: () => { sequence(); sequenceBoxes() },
 		er, pie, quadrantChart: quadrant, timeline, gitGraph, radar, treemap, venn, mindmap, gantt, journey, c4, sankey,
 		xychart, requirement, packet, kanban, architecture, block, treeView, usecase, wardley, zenuml,
+		railroad, railroadEbnf: railroad, railroadAbnf: railroad, railroadPeg: railroad,
 	}
 	const extract = extractors[type]
 	if (!extract) return { unknownType: type }
@@ -528,6 +529,32 @@ async function extractFacts(source, name, shapes) {
 		if (db.getDiagramTitle()) { facts.push(tab('title', decode(db.getDiagramTitle()))); shown.push(decode(db.getDiagramTitle())) }
 		for (const a of db.getAxes()) { facts.push(tab('axis', decode(a.label))); shown.push(decode(a.label)) }
 		for (const c of db.getCurves()) { facts.push(tab('curve', decode(c.label), c.entries.map(num).join(','))); shown.push(decode(c.label)) }
+		labels(shown)
+	}
+
+	// Model: title and each rule with its expression, written the way MermaiderFacts writes it: "terminal", <nonterminal>,
+	// ?special?, (a b) for a sequence, (a | b) for a choice, [a] for an optional and {a}min..max for a repetition, with max
+	// left out when unbounded. Labels: rule names, terminal values, nonterminal names and special texts.
+	function railroad() {
+		const shown = []
+		const title = db.getDiagramTitle()
+		if (title) facts.push(tab('title', decode(title)))
+		const expr = n => {
+			switch (n.type) {
+				case 'terminal': shown.push(decode(n.value)); return '"' + decode(n.value) + '"'
+				case 'nonterminal': shown.push(decode(n.name)); return '<' + decode(n.name) + '>'
+				case 'special': shown.push(decode(n.text)); return '?' + decode(n.text) + '?'
+				case 'sequence': return '(' + n.elements.map(expr).join(' ') + ')'
+				case 'choice': return '(' + n.alternatives.map(expr).join(' | ') + ')'
+				case 'optional': return '[' + expr(n.element) + ']'
+				case 'repetition': return '{' + expr(n.element) + '}' + n.min + '..' + (n.max === Infinity ? '' : n.max)
+				default: return '!' + n.type
+			}
+		}
+		for (const r of db.getRules()) {
+			facts.push(tab('rule', decode(r.name), expr(r.definition)))
+			shown.push(decode(r.name))
+		}
 		labels(shown)
 	}
 

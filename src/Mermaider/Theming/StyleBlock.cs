@@ -207,6 +207,7 @@ internal static class StyleBlock
 		DiagramType.Usecase => "use case diagram",
 		DiagramType.Wardley => "Wardley map",
 		DiagramType.ZenUml => "ZenUML sequence diagram",
+		DiagramType.Railroad => "railroad diagram",
 		_ => "diagram"
 	};
 

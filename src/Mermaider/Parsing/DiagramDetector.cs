@@ -91,6 +91,10 @@ internal static partial class DiagramDetector
 	[GeneratedRegex(@"^zenuml", RegexOptions.None, TimeoutMs)]
 	private static partial Regex ZenUmlHeader();
 
+	// mermaid's four railroad detectors (/^\s*railroad-beta/i, /^\s*railroad-ebnf-beta/i, …) have no word boundary
+	[GeneratedRegex(@"^railroad-(?:ebnf-|abnf-|peg-)?beta", RegexOptions.IgnoreCase, TimeoutMs)]
+	private static partial Regex RailroadHeader();
+
 	internal static DiagramType Detect(ReadOnlySpan<char> text)
 	{
 		var firstLineEnd = text.IndexOf('\n');
@@ -150,6 +154,8 @@ internal static partial class DiagramDetector
 			return DiagramType.Wardley;
 		if (ZenUmlHeader().IsMatch(firstLineStr))
 			return DiagramType.ZenUml;
+		if (RailroadHeader().IsMatch(firstLineStr))
+			return DiagramType.Railroad;
 
 		return DiagramType.Flowchart;
 	}

@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 810aec6cab006297
+accept	yes
+drawn	yes
+label	&B
+label	A
+label	B
+label	C
+label	x
+label	y
+rule	A	(?!(...)? ?&B? ?.? {<C>}0..)
+rule	B	("x" | "y")

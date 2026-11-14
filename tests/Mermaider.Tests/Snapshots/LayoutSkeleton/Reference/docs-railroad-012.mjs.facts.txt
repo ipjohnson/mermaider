@@ -1,0 +1,33 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e825d5ab3c9b8fcf
+accept	yes
+drawn	yes
+label	0
+label	1
+label	2
+label	3
+label	4
+label	5
+label	6
+label	7
+label	8
+label	9
+label	Digit
+label	Digit
+label	Expression
+label	Expression
+label	Factor
+label	Factor
+label	Factor
+label	Number
+label	Number
+label	Term
+label	Term
+label	Term
+rule	Digit	("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")
+rule	Expression	(<Term> {(("+" | "-") <Term>)}0..)
+rule	Factor	(<Number> | ("(" <Expression> ")"))
+rule	Number	{<Digit>}1..
+rule	Term	(<Factor> {(("*" | "/") <Factor>)}0..)
+title	Calculator Grammar

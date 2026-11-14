@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 540bb216173348d2
+accept	yes
+drawn	yes
+label	block
+label	block
+label	block
+label	block
+label	else
+label	expr
+label	expr
+label	expr
+label	if
+label	statement
+label	statement
+label	while
+rule	block	("{" {<statement>}0.. "}")
+rule	statement	(("if" <expr> <block> [("else" <block>)]) | ("while" <expr> <block>) | (<expr> ";"))
+title	Statement

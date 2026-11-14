@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4fd489c56037a812
+accept	yes
+drawn	yes
+label	!EndOfLine
+label	Comment
+label	Digit
+label	Digit
+label	Item
+label	Item
+label	Item
+label	Letter
+label	List
+label	Number
+label	Number
+label	Word
+label	Word
+rule	Comment	("#" {(?!EndOfLine? ?.?)}0..)
+rule	Item	(?!","? (<Word> | <Number>))
+rule	List	(<Item> {("," <Item>)}0.. [","])
+rule	Number	({<Digit>}1.. [("." {<Digit>}1..)])
+rule	Word	{<Letter>}1..
+title	Comma Separated List

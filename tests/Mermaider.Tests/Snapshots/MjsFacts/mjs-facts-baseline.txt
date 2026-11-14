@@ -989,3 +989,21 @@ zenuml-icons - icon | Svc
 zenuml-unused-input - fragment | opt
 zenuml-unused-input - label | finally
 zenuml-unused-input - section | try | finally
+
+# By design: Mermaider draws a railroad diagram's title, as it does every other type's. mermaid.js 12.3.0 keeps the title
+# in its db but its railroad renderer does not draw it.
+docs-railroad-001 + label | Digit Definition
+docs-railroad-005 + label | Optional Sign
+docs-railroad-006 + label | Identifier with Repetition
+docs-railroad-008 + label | Arithmetic Expression Grammar
+docs-railroad-009 + label | JSON Grammar
+docs-railroad-010 + label | Email Address
+docs-railroad-011 + label | Phone Number
+docs-railroad-012 + label | Calculator Grammar
+docs-railroad-013 + label | Identifiers (keywords excluded)
+docs-railroad-014 + label | Expression Grammar
+railroad-abnf-uri + label | URI Scheme and Port
+railroad-ebnf-edge-cases + label | Edge cases
+railroad-ebnf-csv + label | CSV Record
+railroad-ir-statement + label | Statement
+railroad-peg-list + label | Comma Separated List

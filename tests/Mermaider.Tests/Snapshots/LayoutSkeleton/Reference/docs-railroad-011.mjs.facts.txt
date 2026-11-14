@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e5b8b271aac85395
+accept	yes
+drawn	yes
+label	DIGIT
+label	DIGIT
+label	country-code
+label	country-code
+label	phone
+label	subscriber
+label	subscriber
+rule	country-code	{<DIGIT>}1..
+rule	phone	([("+" <country-code>)] <subscriber>)
+rule	subscriber	{(<DIGIT> | "-" | "")}1..
+title	Phone Number
