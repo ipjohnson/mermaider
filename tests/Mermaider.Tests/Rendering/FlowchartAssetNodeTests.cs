@@ -1,9 +1,11 @@
+using System.Buffers.Binary;
 using System.Globalization;
 using System.Text;
 using System.Xml.Linq;
 using AwesomeAssertions;
 using Mermaider.Icons;
 using Mermaider.Models;
+using Mermaider.Rendering;
 
 namespace Mermaider.Tests.Rendering;
 
@@ -107,6 +109,70 @@ public class FlowchartAssetNodeTests
 		((string)image.Attribute("width")!).Should().Be("80");
 		((string)image.Attribute("height")!).Should().Be("40");
 		diagnostics.Should().BeEmpty();
+	}
+
+	/// <summary>A PNG header that declares <paramref name="width"/> by <paramref name="height"/>. The sanitizer checks the signature only.</summary>
+	private static string PngOfSize(uint width, uint height)
+	{
+		var bytes = new byte[33];
+		new byte[] { 0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A, 0, 0, 0, 13, (byte)'I', (byte)'H', (byte)'D', (byte)'R' }.CopyTo(bytes, 0);
+		BinaryPrimitives.WriteUInt32BigEndian(bytes.AsSpan(16), width);
+		BinaryPrimitives.WriteUInt32BigEndian(bytes.AsSpan(20), height);
+		return "data:image/png;base64," + Convert.ToBase64String(bytes);
+	}
+
+	private static double Attr(XElement e, string name) => double.Parse((string)e.Attribute(name)!, CultureInfo.InvariantCulture);
+
+	[Test]
+	[Arguments(1000u, 1u, "w: 1000, h: 1000, constraint: \"on\"", 1000, 1)]
+	[Arguments(1u, 1000u, "w: 1000, h: 1000, constraint: \"on\"", 1, 1000)]
+	[Arguments(1000u, 1u, "h: 1000, constraint: \"on\"", 1000, 1)]
+	[Arguments(1u, 1000u, "w: 1000, constraint: \"on\"", 1, 1000)]
+	[Arguments(1000u, 1u, "w: 1000, h: 1000, constraint: \"off\"", 1000, 1000)]
+	[Arguments(1u, 1000u, "w: 1000, h: 1000", 1000, 1000)]
+	[Arguments(1000u, 1u, "", 1000, 1)]
+	[Arguments(1u, 1000u, "", 1, 1000)]
+	public void Image_never_exceeds_the_size_cap(uint pngWidth, uint pngHeight, string props, double width, double height)
+	{
+		var extra = props.Length > 0 ? ", " + props : "";
+		var (svg, _) = Render($"flowchart TD\n  A@{{ img: \"{PngOfSize(pngWidth, pngHeight)}\"{extra} }} --> B");
+
+		var image = NodeGroup(svg, "A").Descendants().Single(e => e.Name.LocalName == "image");
+		Attr(image, "width").Should().Be(width);
+		Attr(image, "height").Should().Be(height);
+		var viewBox = ((string)XDocument.Parse(svg).Root!.Attribute("viewBox")!)
+			.Split(' ')
+			.Select(s => double.Parse(s, CultureInfo.InvariantCulture))
+			.ToArray();
+		viewBox[2].Should().BeLessThan(1200, "one image node cannot widen the drawing past the cap");
+	}
+
+	[Test]
+	public void Each_image_is_decoded_once_per_render()
+	{
+		var uri = PngOfSize(321, 123);
+		var decodes = 0;
+		NodeAssets.Decoded += Count;
+		try
+		{
+			var (svg, diagnostics) = Render(
+				$"flowchart TD\n  A@{{ img: \"{uri}\", label: \"One\", constraint: \"on\", h: 40 }} --> B@{{ img: \"{uri}\", label: \"Two\" }}\n  B --> C@{{ img: \"https://example.com/a.png\" }}"
+			);
+
+			XDocument.Parse(svg).Descendants().Count(e => e.Name.LocalName == "image").Should().Be(2);
+			diagnostics.Should().ContainSingle();
+			decodes.Should().Be(1);
+		}
+		finally
+		{
+			NodeAssets.Decoded -= Count;
+		}
+
+		void Count(string source)
+		{
+			if (source == uri)
+				_ = Interlocked.Increment(ref decodes);
+		}
 	}
 
 	[Test]

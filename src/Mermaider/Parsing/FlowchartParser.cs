@@ -333,6 +333,8 @@ internal static partial class FlowchartParser
 				_ = nodes.Remove(sgId);
 		}
 
+		ShareImageSources(nodes);
+
 		if (classDefs.ContainsKey("default"))
 		{
 			foreach (var nodeId in nodes.Keys)
@@ -356,6 +358,23 @@ internal static partial class FlowchartParser
 			SubgraphEdgeRedirections = redirections,
 			IsFlowchart = true
 		};
+	}
+
+	/// <summary>Gives image nodes with equal sources one source string, so the renderer decodes that image once.</summary>
+	private static void ShareImageSources(Dictionary<string, MermaidNode> nodes)
+	{
+		Dictionary<string, string>? sources = null;
+		List<MermaidNode>? shared = null;
+		foreach (var node in nodes.Values)
+		{
+			if (node.Asset is not { Kind: NodeAssetKind.Image } asset)
+				continue;
+			sources ??= [];
+			if (!sources.TryAdd(asset.Source, asset.Source) && !ReferenceEquals(sources[asset.Source], asset.Source))
+				(shared ??= []).Add(node with { Asset = asset with { Source = sources[asset.Source] } });
+		}
+		foreach (var node in shared ?? [])
+			nodes[node.Id] = node;
 	}
 
 	// Subgraph members come first (alphabetical by subgraph ID), matching dagre's
