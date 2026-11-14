@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d1f89162a665f281
+accept	yes
+drawn	yes
+label	API
+label	App
+label	Cache
+label	Database
+label	Link Types
+label	User
+label	backup
+link	API	Cache		bidirectional
+link	API	Database		none
+link	App	API		forward
+link	Cache	Database		forward	backup
+link	User	App		none
+node	API	API	component	60	60
+node	App	App	component	75	75
+node	Cache	Cache	component	45	65
+node	Database	Database	component	80	15
+node	User	User	component	95	90
+title	Link Types

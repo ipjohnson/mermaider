@@ -1,0 +1,30 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2cae778e430f1ab6
+accept	yes
+annotation	1	50	84	Self-service reporting
+annotation	2	60	36	Consolidate storage
+annotations	5	20
+drawn	yes
+label	Analyst
+label	Consolidate storage
+label	Dashboards
+label	Data Platform
+label	File Store
+label	Lakehouse
+label	Self-service reporting
+label	Storage
+label	Warehouse
+label	queries
+label	reads
+link	Analyst	Dashboards		none
+link	Dashboards	Storage	yes	none	reads
+link	Dashboards	Storage_Warehouse		forward	queries
+node	Analyst	Analyst	anchor	60	95
+node	Dashboards	Dashboards	component	55	80
+node	Storage	Storage	component	60	45					yes
+node	Storage_File Store	File Store	pipeline-component	30	45
+node	Storage_Lakehouse	Lakehouse	pipeline-component	80	45
+node	Storage_Warehouse	Warehouse	pipeline-component	60	45
+pipeline	Storage	Storage_File Store,Storage_Warehouse,Storage_Lakehouse
+title	Data Platform

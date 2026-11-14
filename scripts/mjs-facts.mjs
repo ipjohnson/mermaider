@@ -68,8 +68,19 @@ await page.addScriptTag({
 	content: `{ const now = Date.UTC(2000, 0, 1); const D = Date;
 	globalThis.Date = class extends D { constructor(...a) { super(...(a.length ? a : [now])) } static now() { return now } } }`,
 })
+// @zenuml/core reads localStorage, which a page made with setContent may not touch; an in-memory store stands in.
+await page.addScriptTag({
+	content: `{ const m = new Map(); Object.defineProperty(window, 'localStorage', { value: {
+		getItem: k => m.get(k) ?? null, setItem: (k, v) => m.set(k, String(v)), removeItem: k => m.delete(k), clear: () => m.clear(),
+		key: i => [...m.keys()][i] ?? null, get length() { return m.size } } }) }`,
+})
 await page.addScriptTag({ path: path.join(mermaidDir, 'dist', 'mermaid.min.js') })
-await page.evaluate(() => mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' }))
+// ZenUML is an external diagram: mermaid-cli registers @mermaid-js/mermaid-zenuml, so the facts do too.
+await page.addScriptTag({ path: path.join(root, 'node_modules', '@mermaid-js', 'mermaid-zenuml', 'dist', 'mermaid-zenuml.min.js') })
+await page.evaluate(async () => {
+	await mermaid.registerExternalDiagrams([globalThis.__esbuild_esm_mermaid_nm['mermaid-zenuml'].default])
+	mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' })
+})
 
 fs.mkdirSync(factsDir, { recursive: true })
 if (svgDir) fs.mkdirSync(svgDir, { recursive: true })
@@ -172,7 +183,7 @@ async function extractFacts(source, name, shapes) {
 		classDiagram: () => { classDiagram(); classBoxes() },
 		sequence: () => { sequence(); sequenceBoxes() },
 		er, pie, quadrantChart: quadrant, timeline, gitGraph, radar, treemap, venn, mindmap, gantt, journey, c4, sankey,
-		xychart, requirement, packet, kanban, architecture, block, treeView,
+		xychart, requirement, packet, kanban, architecture, block, treeView, usecase, wardley, zenuml,
 	}
 	const extract = extractors[type]
 	if (!extract) return { unknownType: type }
@@ -305,7 +316,8 @@ async function extractFacts(source, name, shapes) {
 				facts.push(tab('group', n.id, clusterLabel(n.id), childrenOf(n.id)))
 				continue
 			}
-			const el = byDomId(n.domId)
+			// A collapsed subgraph is drawn under the subgraph's id, not a node domId.
+			const el = byDomId(n.domId) ?? dom.querySelector(`[id="${svgId}-${n.id}"]`)
 			// An icon or image node's shape is its frame; the icon or image is its own fact.
 			const s = n.icon || n.img ? 'rect' : shape(n.shape)
 			facts.push(tab('node', n.id, text(el?.querySelector('.label')), s))
@@ -521,6 +533,99 @@ async function extractFacts(source, name, shapes) {
 		labels(shown)
 	}
 
+	// Model: title, size, evolution stages and their boundaries, nodes with kind, position in percent, label offset,
+	// inertia, sourcing and pipeline parent flag, links with dashes, flow and label, trends, pipelines and their members,
+	// notes, annotations, the annotations position, accelerators and deaccelerators. Labels: title, stages, node and link
+	// labels, notes, annotation texts and force names.
+	function wardley() {
+		const d = db.getWardleyData()
+		const shown = []
+		const yes = v => v ? 'yes' : ''
+		const title = db.getDiagramTitle()
+		if (title) { facts.push(tab('title', decode(title))); shown.push(decode(title)) }
+		if (d.size) facts.push(tab('size', num(d.size.width), num(d.size.height)))
+		for (const [i, s] of (d.axes.stages ?? []).entries()) { facts.push(tab('stage', String(i), s)); shown.push(s) }
+		if (d.axes.stageBoundaries?.length) facts.push(tab('boundaries', d.axes.stageBoundaries.map(num).join(',')))
+		for (const n of d.nodes) {
+			facts.push(tab('node', n.id, n.label, n.className, num(n.x), num(n.y), num(n.labelOffsetX), num(n.labelOffsetY), yes(n.inertia), n.sourceStrategy ?? '', yes(n.isPipelineParent)))
+			shown.push(n.label)
+		}
+		for (const l of d.links) {
+			facts.push(tab('link', l.source, l.target, yes(l.dashed), l.flow ?? 'none', l.label ?? ''))
+			shown.push(l.label)
+		}
+		for (const t of d.trends) facts.push(tab('trend', t.nodeId, num(t.targetX), num(t.targetY)))
+		for (const p of d.pipelines) facts.push(tab('pipeline', p.nodeId, p.componentIds.join(',')))
+		for (const n of d.notes) { facts.push(tab('note', n.text, num(n.x), num(n.y))); shown.push(n.text) }
+		for (const a of d.annotations) {
+			for (const c of a.coordinates) facts.push(tab('annotation', String(a.number), num(c.x), num(c.y), a.text ?? ''))
+			shown.push(a.text)
+		}
+		if (d.annotationsBox) facts.push(tab('annotations', num(d.annotationsBox.x), num(d.annotationsBox.y)))
+		for (const a of d.accelerators) { facts.push(tab('accelerator', a.name, num(a.x), num(a.y))); shown.push(a.name) }
+		for (const a of d.deaccelerators) { facts.push(tab('deaccelerator', a.name, num(a.x), num(a.y))); shown.push(a.name) }
+		labels(shown)
+	}
+
+	// DOM only: the plugin's db is empty, because @zenuml/core parses and draws in one call. Title; participants left to
+	// right with their label and whether an icon is drawn; groups with their members; messages by kind (a closed arrow head
+	// is a sync call) with the participants nearest their ends; fragments with their condition and each later section's
+	// label; comments and dividers. Labels: all of those texts.
+	function zenuml() {
+		const shown = []
+		const n = (el, a) => Number(el.getAttribute(a))
+		const title = text(dom.querySelector('.frame-title'))
+		if (title) { facts.push(tab('title', title)); shown.push(title) }
+		const parts = [...dom.querySelectorAll('g.participant')].map(g => {
+			const r = g.querySelector('rect.participant-box')
+			return { id: g.dataset.participant, label: text(g.querySelector('.participant-label')), icon: !!g.querySelector('.participant-icon'), x: n(r, 'x') + n(r, 'width') / 2, top: n(r, 'y'), bottom: n(r, 'y') + n(r, 'height') }
+		}).sort((a, b) => a.x - b.x)
+		parts.forEach((p, i) => {
+			facts.push(tab('participant', String(i), p.id, p.label))
+			if (p.icon) facts.push(tab('icon', p.id))
+			shown.push(p.label)
+		})
+		const near = x => parts.reduce((best, p) => Math.abs(p.x - x) < Math.abs(best.x - x) ? p : best).id
+		for (const g of dom.querySelectorAll('g.participant-group')) {
+			const r = g.querySelector('rect.group-outline')
+			const name = text(g.querySelector('.group-title-text'))
+			const members = parts.filter(p => p.x > n(r, 'x') && p.x < n(r, 'x') + n(r, 'width')).map(p => p.id)
+			facts.push(tab('group', name, members.join(',')))
+			shown.push(name)
+		}
+		for (const g of dom.querySelectorAll('g.message, g.creation, g.return')) {
+			const head = g.querySelector('.arrow-head path, :scope svg svg path')?.getAttribute('d') ?? ''
+			const kind = g.classList.contains('creation') ? 'create' : g.classList.contains('return') ? 'return' : /Z\s*$/.test(head) ? 'sync' : 'async'
+			const labelEl = g.querySelector('.message-label, .return-label')
+			const line = g.querySelector(':scope > line')
+			// a creation ends at the edge of the new participant's box, drawn level with it
+			const created = kind === 'create' && parts.find(p => p.top <= n(line, 'y1') && n(line, 'y1') <= p.bottom)
+			const [from, to] = line ? [near(n(line, 'x1')), created ? created.id : near(n(line, 'x2'))] : [near(n(labelEl, 'x')), near(n(labelEl, 'x'))]
+			facts.push(tab('message', kind, from, to, text(labelEl)))
+			shown.push(text(labelEl))
+		}
+		const unbracket = s => s.replace(/^\[(.*)\]$/, '$1')
+		for (const g of dom.querySelectorAll('g.fragment')) {
+			const kind = { tcf: 'try' }[[...g.classList].find(c => c.startsWith('fragment-')).slice(9)] ?? [...g.classList].find(c => c.startsWith('fragment-')).slice(9)
+			const condition = unbracket([...g.querySelectorAll('.fragment-condition')].filter(el => el.closest('g.fragment') === g).map(text).join(''))
+			facts.push(tab('fragment', kind, condition))
+			shown.push(condition)
+			const sections = []
+			for (const el of g.children) {
+				if (el.matches('line.fragment-separator')) sections.push([])
+				else if (sections.length) sections.at(-1).push(...[...(el.matches('.fragment-section-label') ? [el] : el.querySelectorAll('.fragment-section-label'))].map(text).filter(Boolean))
+			}
+			for (const parts of sections) {
+				const label = unbracket(parts[0] === 'catch' && parts.length > 1 ? `catch(${parts.slice(1).join(' ')})` : parts.join(''))
+				facts.push(tab('section', kind, label))
+				shown.push(label)
+			}
+		}
+		for (const el of dom.querySelectorAll('.comment-text')) { facts.push(tab('comment', text(el))); shown.push(text(el)) }
+		for (const el of dom.querySelectorAll('.divider-label')) { facts.push(tab('divider', text(el))); shown.push(text(el)) }
+		labels(shown)
+	}
+
 	// Model: each node by its path of names, with the value a leaf is given. Labels: node names.
 	function treemap() {
 		const shown = []
@@ -732,6 +837,55 @@ async function extractFacts(source, name, shapes) {
 		for (const e of db.getEdges()) {
 			facts.push(tab('edge', e.start, e.end, end(e.arrowTypeStart), end(e.arrowTypeEnd), decode(e.label)))
 			shown.push(decode(e.label))
+		}
+		labels(shown)
+	}
+
+	// Model: direction, actors with type, icon, business flag, stereotype and boundary; use cases with shape, business
+	// flag, stereotype and boundary; boundaries with type and members; relationships with type, ends, association label and
+	// minimum length; notes; JSON tables and their rows. A Markdown label's markers are dropped, as both engines draw them
+	// as formatting. Labels: every label, stereotype, JSON table id, key and value.
+	function usecase() {
+		const shown = []
+		const plain = (label, type) => { const d = decode(label); return type === 'markdown' ? d.replace(/\*\*|\*|~~/g, '') : d }
+		const yes = v => v ? 'yes' : ''
+		const dir = db.getDirection()
+		facts.push(tab('direction', dir === 'TB' ? 'TD' : dir))
+		for (const a of db.getActors().values()) {
+			facts.push(tab('actor', a.id, plain(a.label, a.labelType), a.type, yes(a.business), decode(a.stereotype), a.parentId ?? ''))
+			if (a.icon) facts.push(tab('icon', a.id, a.icon))
+			shown.push(plain(a.label, a.labelType), decode(a.stereotype))
+		}
+		for (const u of db.getUseCases().values()) {
+			facts.push(tab('usecase', u.id, plain(u.label, u.labelType), u.shape, yes(u.business), decode(u.stereotype), u.parentId ?? ''))
+			shown.push(plain(u.label, u.labelType), decode(u.stereotype))
+		}
+		for (const b of db.getSystemBoundaries().values()) {
+			facts.push(tab('boundary', b.id, plain(b.label, b.labelType), b.type, b.members.slice().sort().join(',')))
+			shown.push(plain(b.label, b.labelType))
+		}
+		const ends = {
+			0: ['none', 'arrow'], 1: ['arrow', 'none'], 2: ['none', 'none'], 3: ['none', 'circle'], 4: ['none', 'cross'],
+			5: ['circle', 'none'], 6: ['cross', 'none'],
+		}
+		for (const r of db.getRelationships()) {
+			const [start, finish] = r.type === 'association' ? ends[r.arrowType] : r.type === 'generalization' ? ['none', 'triangle'] : ['none', 'arrow']
+			const label = r.type === 'association' ? plain(r.label, r.labelType) : ''
+			facts.push(tab('relation', r.source, r.target, r.type, start, finish, label, String(r.minlen)))
+			shown.push(label)
+		}
+		for (const n of db.getNotes().values()) {
+			facts.push(tab('note', n.target, plain(n.label, n.labelType)))
+			shown.push(plain(n.label, n.labelType))
+		}
+		for (const n of db.getData().nodes) {
+			if (n.shape !== 'usecaseJsonTable') continue
+			facts.push(tab('json', n.id))
+			shown.push(n.id)
+			for (const [i, row] of (n.jsonRows ?? []).entries()) {
+				facts.push(tab('row', n.id, String(i), decode(row.key), decode(row.value)))
+				shown.push(decode(row.key), decode(row.value))
+			}
 		}
 		labels(shown)
 	}

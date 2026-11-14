@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3990eb5c588f585c
+accept	yes
+drawn	yes
+group	Backend	A,B
+label	A
+label	B
+label	Backend
+label	C
+label	hi
+label	x
+message	async	A	B	x
+message	async	C	A	hi
+participant	0	A	A
+participant	1	B	B
+participant	2	C	C

@@ -57,6 +57,17 @@ internal static partial class MultilineUtils
 		return DecodeEntities(result);
 	}
 
+	/// <summary>Turns Markdown bold, italic and strikethrough markers into the format tags <see cref="AppendLineContent"/> draws.</summary>
+	internal static string MarkdownToTags(string text)
+	{
+		var result = MarkdownBoldPattern().Replace(text, "<b>$1</b>");
+		result = MarkdownItalicPattern().Replace(result, "<i>$1</i>");
+		return MarkdownStrikethroughPattern().Replace(result, "<s>$1</s>");
+	}
+
+	/// <summary>The text a label shows once its format tags are drawn: the tags removed.</summary>
+	internal static string StripFormatTags(string text) => FormatTagPattern().Replace(text, "");
+
 	/// <summary>
 	/// Decodes Mermaid entity codes: <c>#quot;</c> by HTML entity name and <c>#35;</c> by decimal
 	/// code point. A code with no matching entity is left as written.

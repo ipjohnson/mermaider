@@ -1,0 +1,14 @@
+wardley-beta
+title Accepted but not drawn
+size [800, 500]
+size [900, 600]
+evolution Genesis@0.3 -> Custom -> Product -> Commodity
+component Database [0.40, 0.60]
+component App [0.80, 0.50]
+pipeline Database {
+  component "SQL DB" [0.50]
+}
+App -> Ghost
+SQL DB -> Database
+evolve Ghost 0.9
+annotation 1,[0.60, 0.65] "No list position"

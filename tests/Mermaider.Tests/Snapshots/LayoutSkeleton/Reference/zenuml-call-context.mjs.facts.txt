@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f1d1812ccfa9756e
+accept	yes
+drawn	yes
+icon	_STARTER_
+label	A
+label	B
+label	done
+label	inner async
+label	m()
+label	top
+message	async	A	B	inner async
+message	return	A	_STARTER_	done
+message	return	_STARTER_	_STARTER_	top
+message	sync	_STARTER_	A	m()
+participant	0	_STARTER_
+participant	1	A	A
+participant	2	B	B

@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6ac86d29b6ee9eca
+accept	yes
+drawn	yes
+label	Cloud Platform
+label	Custom App
+label	Customer
+label	Managed Service
+label	Off-the-shelf Tool
+label	Sourcing Strategy
+link	Custom App	Managed Service		none
+link	Custom App	Off-the-shelf Tool		none
+link	Customer	Custom App		none
+link	Off-the-shelf Tool	Cloud Platform		none
+node	Cloud Platform	Cloud Platform	component	25	95				market
+node	Custom App	Custom App	component	85	45				build
+node	Customer	Customer	anchor	95	80
+node	Managed Service	Managed Service	component	40	60				outsource
+node	Off-the-shelf Tool	Off-the-shelf Tool	component	65	85				buy
+title	Sourcing Strategy

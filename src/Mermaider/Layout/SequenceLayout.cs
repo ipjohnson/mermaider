@@ -20,6 +20,8 @@ internal static class SequenceLayout
 	private const double BlockPadBottom = 8;
 	private const double BlockHeaderExtra = 46;
 	private const double DividerExtra = 36;
+	// gap between a nested frame and its parent on each side the two would otherwise share
+	private const double FrameInset = 8;
 	private const double NoteWidth = 120;
 	private const double NoteVPad = 12;
 	private const double NoteHPad = 14;
@@ -27,8 +29,20 @@ internal static class SequenceLayout
 	private const double NoteFontSize = 14;
 	private const double NestingOffset = 4;
 	private const double BoxHeaderRoom = 16;
+	private const double ActivationTail = 16;
 
-	internal static PositionedSequenceDiagram Layout(SequenceDiagram diagram)
+	/// <summary>
+	/// Lays out <paramref name="diagram"/>. <paramref name="top"/> moves everything down, for a title above the
+	/// participants. Each of <paramref name="activationEnds"/> closes the actor's newest activation just below the message
+	/// at that index, for a call that ends without a message back. With <paramref name="notesBelowFrames"/>, a note after
+	/// the last message of a frame goes below the frame's bottom edge instead of over it.
+	/// </summary>
+	internal static PositionedSequenceDiagram Layout(
+		SequenceDiagram diagram,
+		double top = 0,
+		IReadOnlyList<(string ActorId, int AfterIndex)>? activationEnds = null,
+		bool notesBelowFrames = false
+	)
 	{
 		if (diagram.Actors.Count == 0)
 		{
@@ -72,7 +86,7 @@ internal static class SequenceLayout
 			actorIndex[diagram.Actors[i].Id] = i;
 
 		// boxes put a header strip above the participants
-		var actorY = Padding + (diagram.Boxes.Count > 0 ? BoxHeaderRoom : 0);
+		var actorY = top + Padding + (diagram.Boxes.Count > 0 ? BoxHeaderRoom : 0);
 		var actors = new PositionedSequenceActor[diagram.Actors.Count];
 		for (var i = 0; i < diagram.Actors.Count; i++)
 		{
@@ -99,17 +113,25 @@ internal static class SequenceLayout
 		var messageY = actorY + ActorHeight + HeaderGap;
 		var messages = new List<PositionedSequenceMessage>(diagram.Messages.Count);
 
-		var extraSpaceBefore = new Dictionary<int, double>();
+		// frames that start at the same message nest, so each needs its own header band above it; a separator there sits
+		// above all of them
+		var framesStartingAt = new Dictionary<int, int>();
+		var framesEndingAt = new Dictionary<int, int>();
+		var dividerAt = new HashSet<int>();
 		foreach (var block in diagram.Blocks)
 		{
-			_ = extraSpaceBefore.TryGetValue(block.StartIndex, out var prev);
-			extraSpaceBefore[block.StartIndex] = Math.Max(prev, BlockHeaderExtra);
-
+			framesStartingAt[block.StartIndex] = framesStartingAt.GetValueOrDefault(block.StartIndex) + 1;
+			framesEndingAt[block.EndIndex] = framesEndingAt.GetValueOrDefault(block.EndIndex) + 1;
 			foreach (var div in block.Dividers)
-			{
-				_ = extraSpaceBefore.TryGetValue(div.Index, out var prevDiv);
-				extraSpaceBefore[div.Index] = Math.Max(prevDiv, DividerExtra);
-			}
+				_ = dividerAt.Add(div.Index);
+		}
+
+		var extraSpaceBefore = new Dictionary<int, double>();
+		foreach (var (index, count) in framesStartingAt)
+			extraSpaceBefore[index] = count * BlockHeaderExtra;
+		foreach (var index in dividerAt)
+		{
+			extraSpaceBefore[index] = framesStartingAt.TryGetValue(index, out var count) ? (count * BlockHeaderExtra) + DividerExtra : DividerExtra;
 		}
 
 		var notesByAfterIndex = new Dictionary<int, List<int>>();
@@ -142,6 +164,16 @@ internal static class SequenceLayout
 
 		var activationStacks = new Dictionary<string, Stack<(double StartY, int Depth)>>();
 		var activations = new List<Activation>();
+		var endsAfter = new Dictionary<int, List<string>>();
+		foreach (var (actorId, afterIndex) in activationEnds ?? [])
+		{
+			if (!endsAfter.TryGetValue(afterIndex, out var ending))
+			{
+				ending = [];
+				endsAfter[afterIndex] = ending;
+			}
+			ending.Add(actorId);
+		}
 
 		for (var msgIdx = 0; msgIdx < diagram.Messages.Count; msgIdx++)
 		{
@@ -191,9 +223,35 @@ internal static class SequenceLayout
 				});
 			}
 
+			if (endsAfter.TryGetValue(msgIdx, out var endingHere))
+			{
+				foreach (var actorId in endingHere)
+				{
+					if (!activationStacks.TryGetValue(actorId, out var endStack) || endStack.Count == 0)
+						continue;
+					var (startY, depth) = endStack.Pop();
+					_ = actorIndex.TryGetValue(actorId, out var idx);
+					activations.Add(new Activation
+					{
+						ActorId = actorId,
+						X = actorCenterX[idx] - (ActivationWidth / 2) + (depth * NestingOffset),
+						TopY = startY,
+						BottomY = messageY + (isSelf ? SelfMessageHeight : 0) + ActivationTail,
+						Width = ActivationWidth,
+					});
+				}
+			}
+
 			// a note after a self-message sits below its loop, not on top of the loop's label
-			messageY += PlaceNotes(msgIdx, messageY + (isSelf ? SelfMessageHeight : 0) + 10);
+			// each frame that ends here around another one ends a frame inset lower
+			var endExtra = Math.Max(framesEndingAt.GetValueOrDefault(msgIdx) - 1, 0) * FrameInset;
+			var clearance = notesBelowFrames && notesByAfterIndex.ContainsKey(msgIdx) && framesEndingAt.ContainsKey(msgIdx)
+				? BlockPadBottom + 12 + endExtra
+				: 0;
+			messageY += PlaceNotes(msgIdx, messageY + (isSelf ? SelfMessageHeight : 0) + 10 + clearance) + clearance;
 			messageY += isSelf ? SelfMessageHeight + MessageRowHeight : MessageRowHeight;
+			if (clearance == 0)
+				messageY += endExtra;
 		}
 
 		foreach (var (actorId, stack) in activationStacks)
@@ -270,7 +328,7 @@ internal static class SequenceLayout
 			{
 				var dMsg = d.Index < messages.Count ? messages[d.Index] : null;
 				var msgY = dMsg?.Y ?? messageY;
-				var offset = d.Label.Length > 0 ? 62.0 : 38.0;
+				var offset = (d.Label.Length > 0 ? 62.0 : 38.0) + (framesStartingAt.GetValueOrDefault(d.Index) * BlockHeaderExtra);
 
 				dividers.Add(new PositionedBlockDivider(msgY - offset, d.Label));
 			}
@@ -286,6 +344,8 @@ internal static class SequenceLayout
 				Dividers = dividers,
 			});
 		}
+
+		InsetNestedFrames(diagram.Blocks, blocks);
 
 		var notes = new List<PositionedSequenceNote>(diagram.Notes.Count);
 		for (var ni = 0; ni < diagram.Notes.Count; ni++)
@@ -484,5 +544,54 @@ internal static class SequenceLayout
 			Boxes = positionedBoxes,
 			DestroyMarkers = destroyMarkers,
 		};
+	}
+
+	/// <summary>
+	/// Grows every frame around the frames nested in it, so a nested frame never shares an edge or a header band with
+	/// its parent. A frame's parent is the smallest frame whose messages contain its own; of two frames over the same
+	/// messages the later one is the parent, because both parsers add a frame when it closes.
+	/// </summary>
+	private static void InsetNestedFrames(IReadOnlyList<SequenceBlock> source, List<PositionedSequenceBlock> blocks)
+	{
+		var count = source.Count;
+		var parent = new int[count];
+		for (var i = 0; i < count; i++)
+		{
+			parent[i] = -1;
+			for (var j = 0; j < count; j++)
+			{
+				if (j == i || source[j].StartIndex > source[i].StartIndex || source[j].EndIndex < source[i].EndIndex)
+					continue;
+				if (Span(source[j]) == Span(source[i]) && j < i)
+					continue;
+				if (parent[i] < 0 || Span(source[j]) < Span(source[parent[i]]) || (Span(source[j]) == Span(source[parent[i]]) && j < parent[i]))
+					parent[i] = j;
+			}
+		}
+
+		var depth = new int[count];
+		for (var i = 0; i < count; i++)
+		{
+			for (var p = parent[i]; p >= 0 && depth[i] < count; p = parent[p])
+				depth[i]++;
+		}
+
+		foreach (var i in Enumerable.Range(0, count).OrderByDescending(i => depth[i]))
+		{
+			var p = parent[i];
+			if (p < 0)
+				continue;
+			var child = blocks[i];
+			var outer = blocks[p];
+			var left = Math.Min(outer.X, child.X - FrameInset);
+			var right = Math.Max(outer.X + outer.Width, child.X + child.Width + FrameInset);
+			var top = source[p].StartIndex == source[i].StartIndex ? Math.Min(outer.Y, child.Y - BlockHeaderExtra) : outer.Y;
+			var bottom = source[p].EndIndex == source[i].EndIndex
+				? Math.Max(outer.Y + outer.Height, child.Y + child.Height + FrameInset)
+				: outer.Y + outer.Height;
+			blocks[p] = outer with { X = left, Y = top, Width = right - left, Height = bottom - top };
+		}
+
+		static int Span(SequenceBlock b) => b.EndIndex - b.StartIndex;
 	}
 }

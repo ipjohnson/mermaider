@@ -1,0 +1,104 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 23301f55f2538bde
+accept	yes
+drawn	yes
+edge	a1	a2	none	none	invisible
+edge	a2	a3	none	none	invisible
+edge	a3	a4	none	none	invisible
+edge	a4	a5	none	none	invisible
+edge	a5	a6	none	none	invisible
+edge	a6	a7	none	none	invisible
+edge	a7	a8	none	none	invisible
+edge	b1	b2	none	none	invisible
+edge	b2	b3	none	none	invisible
+edge	b3	b4	none	none	invisible
+edge	b4	b5	none	none	invisible
+edge	b5	b6	none	none	invisible
+edge	b6	b7	none	none	invisible
+edge	b7	b8	none	none	invisible
+edge	c1	c2	none	none	invisible
+edge	c2	c3	none	none	invisible
+edge	c3	c4	none	none	invisible
+edge	c4	c5	none	none	invisible
+edge	c5	c6	none	none	invisible
+edge	c6	c7	none	none	invisible
+edge	c7	c8	none	none	invisible
+edge	d1	d2	none	none	invisible
+edge	d2	d3	none	none	invisible
+edge	d3	d4	none	none	invisible
+edge	d4	d5	none	none	invisible
+edge	d5	d6	none	none	invisible
+edge	d6	d7	none	none	invisible
+edge	d7	d8	none	none	invisible
+edge	e1	e2	none	none	invisible
+edge	e2	e3	none	none	invisible
+edge	e3	e4	none	none	invisible
+edge	e4	e5	none	none	invisible
+edge	e5	e6	none	none	invisible
+edge	e6	e7	none	none	invisible
+edge	e7	e8	none	none	invisible
+edge	f1	f2	none	none	invisible
+edge	f2	f3	none	none	invisible
+edge	f3	f4	none	none	invisible
+edge	f4	f5	none	none	invisible
+edge	f5	f6	none	none	invisible
+edge	f6	f7	none	none	invisible
+edge	f7	f8	none	none	invisible
+edge	g1	g2	none	none	invisible
+edge	g2	g3	none	none	invisible
+edge	g3	g4	none	none	invisible
+edge	g4	g5	none	none	invisible
+node	a1	rect	rect
+node	a2	rounded	rounded
+node	a3	stadium	stadium
+node	a4	fr-rect	fr-rect
+node	a5	cyl	cyl
+node	a6	datastore	datastore
+node	a7	folder	folder
+node	a8	bucket	bucket
+node	b1	console	console
+node	b2	browser	browser
+node	b3	person	person
+node	b4	circle	circle
+node	b5	bang	bang
+node	b6	cloud	cloud
+node	b7	diam	diam
+node	b8	hex	hex
+node	c1	lean-r	lean-r
+node	c2	lean-l	lean-l
+node	c3	trap-b	trap-b
+node	c4	trap-t	trap-t
+node	c5	dbl-circ	dbl-circ
+node	c6	text	text
+node	c7	notch-rect	notch-rect
+node	c8	lin-rect	lin-rect
+node	d1		sm-circ
+node	d2		fr-circ
+node	d3		fork
+node	d4		hourglass
+node	d5	brace	brace
+node	d6	brace-r	brace-r
+node	d7	braces	braces
+node	d8		bolt
+node	e1	doc	doc
+node	e2	delay	delay
+node	e3	h-cyl	h-cyl
+node	e4	lin-cyl	lin-cyl
+node	e5	curv-trap	curv-trap
+node	e6	div-rect	div-rect
+node	e7	tri	tri
+node	e8	win-pane	win-pane
+node	f1		f-circ
+node	f2	notch-pent	notch-pent
+node	f3	flip-tri	flip-tri
+node	f4	sl-rect	sl-rect
+node	f5	docs	docs
+node	f6	st-rect	st-rect
+node	f7	bow-rect	bow-rect
+node	f8		cross-circ
+node	g1	tag-doc	tag-doc
+node	g2	tag-rect	tag-rect
+node	g3	flag	flag
+node	g4	odd	odd
+node	g5	lin-doc	lin-doc

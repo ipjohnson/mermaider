@@ -1,0 +1,41 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a77aca89d95cdd7f
+accept	yes
+direction	LR
+drawn	yes
+json	Payload
+label	1
+label	2
+label	3
+label	Book
+label	Green
+label	Inspect payload
+label	Oslo
+label	Payload
+label	Red
+label	address.city
+label	colors
+label	count
+label	emptyArray
+label	emptyObject
+label	enabled
+label	first after 2
+label	items[0].name
+label	missing
+label	null
+label	second in source
+label	true
+relation	Inspect	Payload	association	none	arrow		1
+row	Payload	0	2	second in source
+row	Payload	1	1	first after 2
+row	Payload	10	emptyArray	[]
+row	Payload	2	enabled	true
+row	Payload	3	count	3
+row	Payload	4	missing	null
+row	Payload	5	colors	Red
+row	Payload	6		Green
+row	Payload	7	address.city	Oslo
+row	Payload	8	items[0].name	Book
+row	Payload	9	emptyObject	{}
+usecase	Inspect	Inspect payload	ellipse

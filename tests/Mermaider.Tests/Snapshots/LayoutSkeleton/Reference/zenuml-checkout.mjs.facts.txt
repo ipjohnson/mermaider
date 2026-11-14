@@ -1,0 +1,38 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d9e21bfadc30e172
+accept	yes
+comment	reserve before charging
+drawn	yes
+fragment	alt	ok
+icon	Customer
+label	Checkout
+label	Customer
+label	Inventory
+label	Mailer
+label	Payments
+label	Web Shop
+label	charge(card,total)
+label	checkout(cart)
+label	else
+label	ok
+label	ok
+label	out of stock
+label	receipt
+label	reserve before charging
+label	reserve(items)
+label	send receipt
+message	async	Shop	Mailer	send receipt
+message	return	Inventory	Shop	ok
+message	return	Payments	Shop	receipt
+message	return	Shop	Customer	out of stock
+message	sync	Customer	Shop	checkout(cart)
+message	sync	Shop	Inventory	reserve(items)
+message	sync	Shop	Payments	charge(card,total)
+participant	0	Customer	Customer
+participant	1	Shop	Web Shop
+participant	2	Inventory	Inventory
+participant	3	Payments	Payments
+participant	4	Mailer	Mailer
+section	alt	else
+title	Checkout

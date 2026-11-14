@@ -467,7 +467,12 @@ public static partial class SvgSanitizer
 		return true;
 	}
 
-	private static bool IsSafeImageDataUri(string value, int nestedImageDepth)
+	/// <summary>The decoded image when <paramref name="value"/> is an <c>&lt;image&gt;</c> href this sanitizer keeps; null otherwise.</summary>
+	internal static (byte[] Bytes, bool IsPng)? DecodeSafeImageHref(string value) => DecodeSafeImageDataUri(value, 0);
+
+	private static bool IsSafeImageDataUri(string value, int nestedImageDepth) => DecodeSafeImageDataUri(value, nestedImageDepth) is not null;
+
+	private static (byte[] Bytes, bool IsPng)? DecodeSafeImageDataUri(string value, int nestedImageDepth)
 	{
 		Match match;
 		try
@@ -476,10 +481,10 @@ public static partial class SvgSanitizer
 		}
 		catch (RegexMatchTimeoutException)
 		{
-			return false;
+			return null;
 		}
 		if (!match.Success || match.Groups["payload"].Length == 0)
-			return false;
+			return null;
 
 		byte[] bytes;
 		try
@@ -488,17 +493,17 @@ public static partial class SvgSanitizer
 		}
 		catch (FormatException)
 		{
-			return false;
+			return null;
 		}
 
 		if (match.Groups["type"].Value == "png")
 		{
 			ReadOnlySpan<byte> pngSignature = [0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A];
-			return bytes.AsSpan().StartsWith(pngSignature);
+			return bytes.AsSpan().StartsWith(pngSignature) ? (bytes, true) : null;
 		}
 
 		if (nestedImageDepth >= MaxNestedImageDepth)
-			return false;
+			return null;
 
 		string nestedSvg;
 		try
@@ -507,11 +512,11 @@ public static partial class SvgSanitizer
 		}
 		catch (DecoderFallbackException)
 		{
-			return false;
+			return null;
 		}
 
 		var nestedResult = Sanitize(nestedSvg, DefaultAllowedElements, DefaultAllowedAttributes, allowRendererStyles: false, nestedImageDepth + 1);
-		return !nestedResult.HasViolations;
+		return nestedResult.HasViolations ? null : (bytes, false);
 	}
 
 	private static bool IsSafeRendererStyleElement(XElement element) =>

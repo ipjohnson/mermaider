@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 419.4282509939086 422.48225099390856" width="419.4282509939086" height="422.48225099390856" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<path class="edge" data-from="user" data-to="api" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M213.54175099390858,118.2 L213.54175099390858,158.2" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="api" data-to="db" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M194.3417509939086,222.2 L194.3417509939086,264.9 Q194.3417509939086,272.9 186.3417509939086,272.9 L61.941125496954285,272.9 Q53.941125496954285,272.9 53.941125496954285,280.9 L53.941125496954285,304.4" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="api" data-to="cloud" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M207.14175099390857,248.4 L207.14175099390857,263.4 Q207.14175099390857,271.4 199.14175099390857,271.4 L167.65525099390857,271.4 Q159.65525099390857,271.4 159.65525099390857,279.4 L159.65525099390857,304.4" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="api" data-to="logo" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M219.94175099390858,248.4 L219.94175099390858,271.9 Q219.94175099390858,279.9 227.94175099390858,279.9 L259.4282509939086,279.9 Q267.4282509939086,279.9 267.4282509939086,287.9 L267.4282509939086,304.4" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="api" data-to="remote" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M232.74175099390857,222.2 L232.74175099390857,263.4 Q232.74175099390857,271.4 240.74175099390857,271.4 L365.4282509939086,271.4 Q373.4282509939086,271.4 373.4282509939086,279.4 L373.4282509939086,304.4" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<g class="node" data-id="user" data-label="User" data-shape="icon">
+  <rect x="175.542" y="42.2" width="76" height="76" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" /><g transform="translate(213.542 80.2) scale(2.727)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="-8" y="-8" width="16" height="16" rx="3" /><circle cx="0" cy="0" r="1.5" /></g>
+  <text x="213.54" y="25.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">User</text>
+</g>
+<g class="node" data-id="api" data-label="API" data-shape="icon">
+  <rect x="181.542" y="158.2" width="64" height="64" rx="12.8" ry="12.8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" /><g transform="translate(213.542 190.2) scale(2.182)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="-10" y="-9" width="20" height="7" rx="2" /><rect x="-10" y="2" width="20" height="7" rx="2" /><path d="M-5 -5.5 H-4 M-5 5.5 H-4" /></g>
+  <text x="213.54" y="239.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">API</text>
+</g>
+<g class="node" data-id="db" data-label="Orders" data-shape="icon">
+  <circle cx="53.941" cy="342.341" r="37.941" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" /><g transform="translate(53.941 342.341) scale(2.182)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="0" cy="-8" rx="9" ry="3.5" /><path d="M-9 -8 V8 C-9 10 9 10 9 8 V-8 M-9 0 C-9 2 9 2 9 0" /></g>
+  <text x="53.94" y="397.38" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Orders</text>
+</g>
+<g class="node" data-id="cloud" data-label="Bare icon" data-shape="icon">
+  <g transform="translate(159.655 328.4) scale(2.182)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-7 4.5 C-11 4.5 -11 -1.5 -6 -1.5 C-6 -6.5 3 -7.5 4 -1.5 C10 -2.5 11 4.5 6 4.5Z" /></g>
+  <text x="159.66" y="369.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Bare icon</text>
+</g>
+<g class="node" data-id="logo" data-label="Data URI" data-shape="image">
+  <image x="227.428" y="304.4" width="80" height="40" preserveAspectRatio="xMidYMid meet" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDgwIDQwIj48cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iNDAiIHJ4PSI2IiBmaWxsPSIjM2I4MmY2IiAvPjwvc3ZnPg==" />
+  <text x="267.43" y="361.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Data URI</text>
+</g>
+<g class="node" data-id="remote" data-label="Remote" data-shape="image">
+  <rect x="343.428" y="330.6" width="60" height="60" fill="color-mix(in srgb, #64748b 26%, var(--bg))" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1" stroke-dasharray="5 4" /><g transform="translate(373.428 360.6) scale(1.364)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="-8" y="-8" width="16" height="16" rx="3" /><circle cx="0" cy="0" r="1.5" /></g>
+  <text x="373.43" y="313.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Remote</text>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <marker id="m1814eb8b-mk-arrow" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <polygon points="0,1.5 10,6 0,10.5" fill="var(--_line)" stroke="var(--_line)" stroke-width="1" stroke-linejoin="miter" />
+  </marker>
+</defs>
+</svg>

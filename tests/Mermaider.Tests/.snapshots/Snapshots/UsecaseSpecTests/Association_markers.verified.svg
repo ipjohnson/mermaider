@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 569.172 139" width="569.172" height="139" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<path class="edge relationship" data-type="association" data-source="User" data-target="Start" d="M72,62.13333333333334 L91.93333333333334,62.13333333333334 Q99,62.13333333333334 99,55.06666666666667 L99,55.06666666666667 Q99,48 106.06666666666666,48 L136,48" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge relationship" data-type="association" data-source="Start" data-target="Support" d="M243,40 L452,40 L452,40 L484,40" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-start="url(#m1814eb8b-mk-arrow-s)" />
+<path class="edge relationship" data-type="association" data-source="Start" data-target="Finish" d="M243,56 L270,56 Q278,56 278,64 L278,75 Q278,83 286,83 L313,83" fill="none" stroke="var(--_line)" stroke-width="1.5" />
+<path class="edge relationship" data-type="association" data-source="User" data-target="Start" d="M72,69.5 L95,69.5 Q99,69.5 99,65.5 L99,65.5 Q99,61.5 103,61.5 L145.5,61.5" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-circle)" />
+<path class="edge relationship" data-type="association" data-source="User" data-target="Finish" d="M72,84.86666666666667 L92.93333333333334,84.86666666666667 Q100,84.86666666666667 100,91.93333333333334 L100,91.93333333333334 Q100,99 107.06666666666666,99 L313,99" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-cross)" />
+<path class="edge relationship" data-type="association" data-source="Finish" data-target="Support" d="M420,91 L452,91 L452,91 L484,91" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-start="url(#m1814eb8b-mk-cross-s)" />
+<g class="node usecase-actor" data-id="User" data-kind="actor">
+  <circle cx="48" cy="46.4" r="7" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.5" />
+  <path d="M48,53.4 L48,69.4 M35,59.4 L61,59.4 M48,69.4 L37,83.4 M48,69.4 L59,83.4" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.5" stroke-linecap="round" />
+  <text x="48" y="98.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">User</text>
+</g>
+<g class="node usecase-actor" data-id="Support" data-kind="actor">
+  <circle cx="514.586" cy="38.4" r="7" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.5" />
+  <path d="M514.586,45.4 L514.586,61.4 M501.586,51.4 L527.586,51.4 M514.586,61.4 L503.586,75.4 M514.586,61.4 L525.586,75.4" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.5" stroke-linecap="round" />
+  <text x="514.59" y="90.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Support</text>
+</g>
+<g class="node usecase" data-id="Start" data-kind="usecase">
+  <ellipse cx="191" cy="48" rx="55" ry="24" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="191" y="48" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Start</text>
+</g>
+<g class="node usecase" data-id="Finish" data-kind="usecase">
+  <ellipse cx="365" cy="91" rx="55" ry="24" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="365" y="91" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Finish</text>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <marker id="m1814eb8b-mk-arrow" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <polygon points="0,1.5 10,6 0,10.5" fill="var(--_line)" stroke="var(--_line)" stroke-width="1" stroke-linejoin="miter" />
+  </marker>
+  <marker id="m1814eb8b-mk-arrow-s" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="0" refY="6" orient="auto">
+    <polygon points="10,1.5 0,6 10,10.5" fill="var(--_line)" stroke="var(--_line)" stroke-width="1" stroke-linejoin="miter" />
+  </marker>
+  <marker id="m1814eb8b-mk-circle" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="12" refX="12" refY="6" orient="auto">
+    <circle cx="6" cy="6" r="4.5" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.25" />
+  </marker>
+  <marker id="m1814eb8b-mk-cross" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="12" refX="12" refY="6" orient="auto">
+    <path d="M1.5,1.5 L10.5,10.5 M1.5,10.5 L10.5,1.5" fill="none" stroke="var(--_line)" stroke-width="1.25" stroke-linecap="round" />
+  </marker>
+  <marker id="m1814eb8b-mk-cross-s" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="12" refX="0" refY="6" orient="auto">
+    <path d="M1.5,1.5 L10.5,10.5 M1.5,10.5 L10.5,1.5" fill="none" stroke="var(--_line)" stroke-width="1.25" stroke-linecap="round" />
+  </marker>
+</defs>
+</svg>

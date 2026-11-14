@@ -64,6 +64,24 @@ var options = new RenderOptions
 
 The callback receives every violation found in a single render call. It is not called when there are no violations.
 
+### External images
+
+A flowchart image node, `A@{ img: "..." }`, reaches the SVG only when its URL is a base64 `data:image/svg+xml` or
+`data:image/png` URI that the sanitizer keeps; an embedded SVG is checked against the same allowlist. Mermaider never
+fetches an `http(s)` image and never writes its URL into the SVG. It draws a placeholder box instead and reports a
+`MermaidDiagnostic` through `RenderOptions.OnDiagnostics`:
+
+```csharp
+var options = new RenderOptions
+{
+    OnDiagnostics = diagnostics =>
+    {
+        foreach (var d in diagnostics)
+            logger.LogWarning("{Kind} on {Node}: {Message}", d.Kind, d.ElementId, d.Message);
+    }
+};
+```
+
 ## Strict styling
 
 By default Mermaider allows diagram-source styling directives (`classDef`, `style`, `linkStyle`, C4 `Update*Style`, and `theme` / `themeVariables` in `%%{init}%%`). In strict mode these are **rejected**: only caller-defined class names and colours reach the stylesheet.

@@ -205,4 +205,131 @@ public class FlowchartParserTests
 		graph.Nodes["T"].Shape.Should().Be(NodeShape.Rectangle);
 		graph.Nodes.Keys.Should().Equal("A", "T", "D");
 	}
+
+	[Test]
+	public void Shape_properties_set_shape_and_label()
+	{
+		var graph = MermaidRenderer.Parse(
+			"""
+			flowchart LR
+			  A@{ shape: rounded, label: "Rounded" } --> B@{ shape: database, label: "Store, with comma" }
+			  B --> C@{ shape: manual-file }
+			  D@{ label: "Only a label" }
+			  E@{
+			    shape: docs
+			    label: "Multi-line block"
+			  }
+			"""
+		);
+
+		graph.Edges.Select(e => (e.Source, e.Target)).Should().Equal(("A", "B"), ("B", "C"));
+		graph.Nodes["A"].Should().Be(new MermaidNode("A", "Rounded", NodeShape.Rounded));
+		graph.Nodes["B"].Should().Be(new MermaidNode("B", "Store, with comma", NodeShape.Cylinder));
+		graph.Nodes["C"].Should().Be(new MermaidNode("C", "C", NodeShape.FlippedTriangle));
+		graph.Nodes["D"].Should().Be(new MermaidNode("D", "Only a label", NodeShape.Rectangle));
+		graph.Nodes["E"].Should().Be(new MermaidNode("E", "Multi-line block", NodeShape.StackedDocument));
+	}
+
+	[Test]
+	public void Marker_shapes_drop_their_label()
+	{
+		var graph = MermaidRenderer.Parse("flowchart TD\n  A@{ shape: f-circ, label: \"Junction\" } --> B@{ shape: sm-circ, label: \"Start\" }");
+
+		graph.Nodes["A"].Should().Be(new MermaidNode("A", "", NodeShape.FilledCircle));
+		graph.Nodes["B"].Should().Be(new MermaidNode("B", "", NodeShape.StateStart));
+	}
+
+	[Test]
+	public void Every_shape_name_of_mermaid_12_3_resolves()
+	{
+		var names = Mermaider.Parsing.FlowchartShapeNames.All.ToList();
+
+		names.Should().OnlyHaveUniqueItems();
+		Mermaider.Parsing.FlowchartShapeNames.ShortNames.Should().HaveCount(53);
+		Mermaider.Parsing.FlowchartShapeNames.ShortNames.Select(s => s.Shape).Should().OnlyHaveUniqueItems();
+		foreach (var name in names)
+		{
+			var graph = MermaidRenderer.Parse($"flowchart TD\n  A@{{ shape: {name}, label: \"x\" }}");
+			var shape = graph.Nodes["A"].Shape;
+			(shape != NodeShape.Rectangle || name is "rect" or "proc" or "process" or "rectangle" or "squareRect").Should().BeTrue(name);
+		}
+	}
+
+	[Test]
+	public void Collapsed_subgraph_becomes_one_node()
+	{
+		var graph = MermaidRenderer.Parse(
+			"""
+			flowchart TD
+			    Start --> one
+			    subgraph one [My Group]
+			        A --> B
+			        subgraph inner
+			            C
+			        end
+			        B --> C
+			    end
+			    one --> End
+			    C --> End
+			    one@{ view: collapsed }
+			    linkStyle 4 stroke:red
+			"""
+		);
+
+		graph.Subgraphs.Should().BeEmpty();
+		graph.Nodes.Keys.Should().BeEquivalentTo("Start", "one", "End");
+		graph.Nodes["one"].Should().Be(new MermaidNode("one", "My Group", NodeShape.CollapsedGroup));
+		graph.Edges.Select(e => (e.Source, e.Target)).Should().Equal(("Start", "one"), ("one", "End"), ("one", "End"));
+		graph.EdgeStyles.Keys.Should().Equal(2);
+	}
+
+	[Test]
+	public void Icon_properties_make_an_icon_node()
+	{
+		var graph = MermaidRenderer.Parse("flowchart TD\n  A@{ icon: \"fa:user\", form: \"square\", label: \"User\", pos: \"t\", h: 60 }");
+
+		graph
+			.Nodes["A"]
+			.Should()
+			.Be(new MermaidNode("A", "User", NodeShape.Icon)
+			{
+				Asset = new NodeAsset(NodeAssetKind.Icon, "fa:user") { Form = IconForm.Square, LabelOnTop = true, Height = 60 },
+			});
+	}
+
+	[Test]
+	public void Image_properties_make_an_image_node_that_wins_over_icon_and_shape()
+	{
+		var graph = MermaidRenderer.Parse(
+			"flowchart TD\n  A@{ shape: diam, icon: \"database\", img: \"https://example.com/a.png\", w: 60, h: 40, constraint: \"on\" }"
+		);
+
+		graph
+			.Nodes["A"]
+			.Should()
+			.Be(new MermaidNode("A", "", NodeShape.Image)
+			{
+				Asset = new NodeAsset(NodeAssetKind.Image, "https://example.com/a.png") { Width = 60, Height = 40, KeepAspectRatio = true },
+			});
+	}
+
+	[Test]
+	public void Icon_node_keeps_an_explicit_label_and_drops_its_id()
+	{
+		var graph = MermaidRenderer.Parse("flowchart TD\n  A[Shown]\n  A@{ icon: \"server\" }\n  B@{ icon: \"server\" }");
+
+		graph.Nodes["A"].Label.Should().Be("Shown");
+		graph.Nodes["B"].Label.Should().BeEmpty();
+	}
+
+	[Test]
+	public void Asset_sizes_that_are_not_positive_numbers_are_ignored_and_large_ones_capped()
+	{
+		var graph = MermaidRenderer.Parse("flowchart TD\n  A@{ icon: \"server\", w: -5, h: 1e9 }\n  B@{ icon: \"server\", w: \"wide\", h: NaN }");
+
+		graph.Nodes["A"].Asset!.Width.Should().BeNull();
+		graph.Nodes["A"].Asset!.Height.Should().Be(1000);
+		graph.Nodes["B"].Asset!.Width.Should().BeNull();
+		graph.Nodes["B"].Asset!.Height.Should().BeNull();
+	}
 }

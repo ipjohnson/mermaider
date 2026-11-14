@@ -1,0 +1,33 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 61f4bc1d82a3c094
+accept	yes
+comment	1. assign a variable from a sync message.
+comment	1.1. optionally give the variable a type
+comment	2. use return keyword
+comment	3. use @return or @reply annotator on an async message
+drawn	yes
+icon	_STARTER_
+label	1. assign a variable from a sync message.
+label	1.1. optionally give the variable a type
+label	2. use return keyword
+label	3. use @return or @reply annotator on an async message
+label	A
+label	B
+label	SyncMessage()
+label	SyncMessage()
+label	SyncMessage()
+label	a
+label	a
+label	result
+label	result
+message	return	A	B	result
+message	return	A	_STARTER_	a
+message	return	A	_STARTER_	a
+message	return	A	_STARTER_	result
+message	sync	_STARTER_	A	SyncMessage()
+message	sync	_STARTER_	A	SyncMessage()
+message	sync	_STARTER_	A	SyncMessage()
+participant	0	_STARTER_
+participant	1	A	A
+participant	2	B	B

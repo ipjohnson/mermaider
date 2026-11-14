@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fbd11c586d99cb4d
+accept	no
+# error Parsing failed: Lexer error on line 4, column 11: unexpected character: ->.<- at offset: 104, skipped 1 characters. Parse error on line 4, column 10: Expecting: one of these possible Token sequences:

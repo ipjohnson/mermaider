@@ -223,6 +223,35 @@ public class SequenceSpecTests
 			.MatchSnapshot(SvgSnapshotFormat.Instance);
 
 	[Test]
+	public void Nested_blocks_starting_at_the_same_message() =>
+		MermaidRenderer
+			.RenderSvg(
+				"""
+			sequenceDiagram
+			participant A
+			participant B
+			participant C
+			loop Every minute
+			par Ping B
+			A->>B: ping
+			and Ping C
+			A->>C: ping
+			end
+			C-->>A: pong
+			end
+			alt Retry
+			opt Same messages
+			A->>B: again
+			end
+			else Give up
+			A->>C: stop
+			end
+			"""
+			)
+			.Should()
+			.MatchSnapshot(SvgSnapshotFormat.Instance);
+
+	[Test]
 	public void Many_participants() =>
 		MermaidRenderer
 			.RenderSvg(

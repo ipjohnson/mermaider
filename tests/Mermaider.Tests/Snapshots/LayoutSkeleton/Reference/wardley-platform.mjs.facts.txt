@@ -1,0 +1,38 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a4d7b721d6560001
+accept	yes
+accelerator	Cloud native	55	25
+boundaries	0.25,0.5,0.75,1
+drawn	yes
+label	API Gateway
+label	Auth Service
+label	Cloud native
+label	Commodity
+label	Compute
+label	Custom
+label	Customer
+label	Database
+label	Genesis
+label	Migrate to a managed database
+label	Mobile App
+label	Product
+label	Software Platform Strategy
+link	API Gateway	Auth Service		none
+link	API Gateway	Database		none
+link	Customer	Mobile App		none
+link	Database	Compute		none
+link	Mobile App	API Gateway		none
+node	API Gateway	API Gateway	component	68	65				buy
+node	Auth Service	Auth Service	component	80	52				outsource
+node	Compute	Compute	component	92	18				market
+node	Customer	Customer	anchor	72	92
+node	Database	Database	component	45	40			yes	buy
+node	Mobile App	Mobile App	component	55	80				build
+note	Migrate to a managed database	30	30
+stage	0	Genesis
+stage	1	Custom
+stage	2	Product
+stage	3	Commodity
+title	Software Platform Strategy
+trend	Database	78	40

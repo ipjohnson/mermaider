@@ -81,6 +81,16 @@ internal static partial class DiagramDetector
 	[GeneratedRegex(@"^treeView(?:-beta)?(?:\s|$)", RegexOptions.IgnoreCase, TimeoutMs)]
 	private static partial Regex TreeViewHeader();
 
+	[GeneratedRegex(@"^usecase-beta(?:\s|$)", RegexOptions.None, TimeoutMs)]
+	private static partial Regex UsecaseHeader();
+
+	[GeneratedRegex(@"^wardley-beta", RegexOptions.IgnoreCase, TimeoutMs)]
+	private static partial Regex WardleyHeader();
+
+	// mermaid-zenuml's detector, /^\s*zenuml/, has no word boundary
+	[GeneratedRegex(@"^zenuml", RegexOptions.None, TimeoutMs)]
+	private static partial Regex ZenUmlHeader();
+
 	internal static DiagramType Detect(ReadOnlySpan<char> text)
 	{
 		var firstLineEnd = text.IndexOf('\n');
@@ -134,6 +144,12 @@ internal static partial class DiagramDetector
 			return DiagramType.Block;
 		if (TreeViewHeader().IsMatch(firstLineStr))
 			return DiagramType.TreeView;
+		if (UsecaseHeader().IsMatch(firstLineStr))
+			return DiagramType.Usecase;
+		if (WardleyHeader().IsMatch(firstLineStr))
+			return DiagramType.Wardley;
+		if (ZenUmlHeader().IsMatch(firstLineStr))
+			return DiagramType.ZenUml;
 
 		return DiagramType.Flowchart;
 	}

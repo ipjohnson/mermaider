@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fcf464d599f56ace
+accept	yes
+accelerator	AI Adoption	25	55
+deaccelerator	Legacy Constraints	75	15
+drawn	yes
+label	AI
+label	AI Adoption
+label	Forces
+label	Legacy
+label	Legacy Constraints
+label	Modern
+link	Legacy	Modern		none
+link	Modern	AI		none
+node	AI	AI	component	35	70
+node	Legacy	Legacy	component	85	20
+node	Modern	Modern	component	60	55
+title	Forces

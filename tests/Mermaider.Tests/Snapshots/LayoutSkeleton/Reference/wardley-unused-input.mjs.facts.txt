@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4f4f2ecaf79389de
+accept	yes
+annotation	1	65	60	No list position
+boundaries	0.3
+drawn	yes
+label	Accepted but not drawn
+label	App
+label	Commodity
+label	Custom
+label	Database
+label	Genesis
+label	Product
+label	SQL DB
+link	App	Ghost		none
+link	Database_SQL DB	Database		none
+node	App	App	component	50	80
+node	Database	Database	component	60	40					yes
+node	Database_SQL DB	SQL DB	pipeline-component	50	40
+pipeline	Database	Database_SQL DB
+size	900	600
+stage	0	Genesis
+stage	1	Custom
+stage	2	Product
+stage	3	Commodity
+title	Accepted but not drawn

@@ -1,0 +1,6 @@
+Layer 0: Client
+Layer 1: backend
+Layer 2: Mail
+Edges:
+  Client ----> backend [Right->Left] [R]
+  backend ----> Mail [Right->Left] [R]

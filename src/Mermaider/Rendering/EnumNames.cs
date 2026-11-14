@@ -66,6 +66,7 @@ internal static class EnumNames
 		SequenceBlockType.Par => "par",
 		SequenceBlockType.Critical => "critical",
 		SequenceBlockType.Break => "break",
+		SequenceBlockType.Try => "try",
 		_ => t.ToString().ToLowerInvariant(),
 	};
 

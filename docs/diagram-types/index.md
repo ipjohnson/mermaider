@@ -1,6 +1,6 @@
 # Diagram types
 
-Mermaider renders 24 Mermaid diagram types. Every type shares the same design system: set `Bg`, `Fg` and `Accent` once in `RenderOptions`, or pick a [theme or style preset](../theming/index.md), and the change applies everywhere.
+Mermaider renders 26 Mermaid diagram types. Every type shares the same design system: set `Bg`, `Fg` and `Accent` once in `RenderOptions`, or pick a [theme or style preset](../theming/index.md), and the change applies everywhere.
 
 Each image below renders the source under it, in the default Quiet style with the `zinc-light` theme.
 
@@ -8,7 +8,16 @@ Each image below renders the source under it, in the default Quiet style with th
 
 ### Flowchart
 
-General-purpose directed graphs (`flowchart` or `graph`). Supports the `TD`, `LR`, `RL` and `BT` directions, nested subgraphs, and the Mermaid node shapes.
+General-purpose directed graphs (`flowchart` or `graph`). Supports the `TD`, `LR`, `RL` and `BT` directions, nested subgraphs, and the Mermaid node shapes: the bracket forms and every shape name and alias of
+`A@{ shape: doc, label: "Report" }`. A subgraph given `id@{ view: collapsed }` is drawn as one box with its title.
+
+Icon nodes, `A@{ icon: "server", form: "square", label: "API", pos: "t", h: 60 }`, draw an icon from `IconRegistry` with
+its label above (`pos: "t"`) or below it. `form` is `square`, `rounded`, `circle` or none, and `w` and `h` set the icon's
+size (48px by default). An icon the registry does not have draws the `generic` glyph and is reported. Image nodes,
+`A@{ img: "data:image/png;base64,...", label: "Logo", w: 60, h: 60, constraint: "on" }`, draw base64
+`data:image/svg+xml` and `data:image/png` URIs; `constraint: "on"` keeps the image's aspect ratio. An `http(s)` image is
+never fetched and never written to the SVG: it is drawn as a dashed placeholder box with its label, and reported. Reports
+reach `RenderOptions.OnDiagnostics`, and the CLI prints them as warnings.
 
 ![Flowchart](../images/diagrams/flowchart.svg)
 
@@ -527,6 +536,136 @@ treeView-beta
         turbo.json
         package.json
 ```
+
+
+### Use case (`usecase-beta`)
+
+UML use case diagrams (`usecase-beta`): actors, use cases, system boundaries, notes, JSON tables and include, extend and
+generalization relationships, laid out by the same layered engine as flowcharts with each boundary as a group.
+
+![Use case](../images/diagrams/usecase.svg)
+
+```text
+usecase-beta
+direction LR
+actor Customer
+actor Staff("Order staff")@{ type: hollow }
+systemBoundary ordering["Ordering system"]@{ type: package }
+  Browse("Browse products")
+  Checkout("Checkout") <<Core>>
+  Payment("Process payment")
+  Review[Review order]
+end
+note for Checkout "Validates the cart before payment"
+Customer --> Browse
+Customer -- "places order" ---> Checkout
+Checkout ..> : include Payment
+Staff --> Review
+```
+
+- Actors: `actor Id`, `actor Id("Label")`, with `@{ type: hollow | awesome }`, `@{ icon: "name" }` (resolved through
+  `IconRegistry`, with its fallback glyph) and `@{ business: true }`.
+- Use cases: `Id("Label")` is an ellipse, `Id[Label]` a rectangle, and an endpoint never declared is an ellipse. A quoted
+  declaration such as `"Reset password"` gets the id `Reset_password`.
+- Labels: unquoted text, `"plain strings"` and `` "`Markdown strings`" ``, which may span lines. Entity codes such as
+  `#quot;` are decoded.
+- Relationships: `-->`, `<--`, `--`, `--o`, `o--`, `--x`, `x--`, labelled as `A -- label --> B`, longer with extra dashes
+  (`--->`), plus `..> : include`, `..> : extend` and `--|>`. `id@-->` names an edge for `class` and `style`.
+- Styling: `classDef`, `class`, `style` and `:::`, applied as `default`, then classes, then `style`. Strict styling drops
+  all of them.
+- Input mermaid refuses, such as PlantUML statements, a second statement on a line or an include between actors, throws
+  a `MermaidParseException` naming the line. Edge animation (`animate`, `animation`), the keys of the `usecase` config
+  section in front matter or `%%{init}%%` (`colorScheme`, the font keys, `nodeSpacing`, `rankSpacing`,
+  `diagramPadding`) and an actor icon that is not registered are accepted and not used. The parser lists each of them
+  with its line and the reason; an unregistered icon is drawn as the fallback glyph.
+
+### Wardley map (`wardley-beta`)
+
+Wardley maps (`wardley-beta`): components placed by visibility (bottom to top) and evolution (left to right), their
+dependencies, evolution trends, pipelines, notes, numbered annotations and the forces on them. Positions are the
+author's, so there is no automatic layout; the canvas is mermaid's 900 × 600 (or `size [w, h]`) with a 48px margin, and
+it grows to the right when a label would run past the edge.
+
+![Wardley map](../images/diagrams/wardley.svg)
+
+```text
+wardley-beta
+title Tea Shop Value Chain
+anchor Business [0.95, 0.63]
+component Cup of Tea [0.79, 0.61]
+component Tea [0.63, 0.81]
+component Hot Water [0.52, 0.80]
+component Kettle [0.43, 0.35] (build)
+component Power [0.10, 0.70] (market)
+Business -> Cup of Tea
+Cup of Tea -> Tea
+Cup of Tea -> Hot Water
+Hot Water -> Kettle
+Kettle -> Power
+evolve Kettle 0.62
+note "Standardising power lets kettles evolve" [0.30, 0.49]
+```
+
+- Coordinates are `[visibility, evolution]`, decimals such as `0.5`. A value above 1 is read as a percent, and one above
+  100 is refused. `annotation`, `annotations`, `accelerator` and `deaccelerator` take the same order.
+- Components: `component Name [v, e]`, then optionally `label [x, y]`, one of `(build)`, `(buy)`, `(outsource)` and
+  `(market)`, and `(inertia)`. Names may contain spaces and hyphens; quote a name that starts with something else.
+  As in mermaid, a name that starts with a keyword (`note…`, `label…`, `buy…`) is refused.
+- Links: `A -> B`, `A --> B`, `A -.-> B` (dashed), `A +> B`, `A +< B`, `A +<> B` (flow arrows), `A +'text'> B`
+  (labelled flow) and `A -> B; label`. A link finds a pipeline component by its name.
+- `evolve Name 0.8` draws a dashed accent arrow to the new evolution. `pipeline Name { component X [e] … }` puts
+  components on the parent's visibility in a box with the parent's square above it.
+- `evolution A -> B -> C -> D` names the stages; `A@0.25` sets where a stage ends (used when every stage has one) and
+  `A / B` gives a stage a second name.
+- Input mermaid refuses, such as integer coordinates, an unquoted note or the `Component -.- (x, y)` trend form from
+  mermaid's syntax notes, throws a `MermaidParseException` naming the line. Input mermaid accepts but does not draw is
+  listed on the parsed model's `Unused` with its line and the reason: a link to a name that is not declared, a link from a
+  pipeline component to its own pipeline, `evolve` of an undeclared name, a `size`, `evolution`, `evolve`, pipeline or
+  declaration replaced by a later one, `annotations` after the first, `@` widths on only some stages, and annotation text
+  without an `annotations` position to list it at.
+
+### ZenUML (`zenuml`)
+
+ZenUML is another way to write a sequence diagram, with calls written like code. mermaid draws it through the
+`@mermaid-js/mermaid-zenuml` plugin, and Mermaider draws it with its sequence diagram layout and renderer: sync calls
+are solid arrows that activate their target until their last nested message, async messages have an open head, and
+creations and returns are dashed.
+
+![ZenUML](../images/diagrams/zenuml.svg)
+
+```text
+zenuml
+title Checkout
+@Actor Customer
+Shop as "Web Shop"
+Customer->Shop.checkout(cart) {
+  // reserve before charging
+  ok = Inventory.reserve(items)
+  if(ok) {
+    receipt = Payments.charge(card, total)
+    Shop->Mailer: send receipt
+  } else {
+    return "out of stock"
+  }
+}
+```
+
+- Participants are drawn in the order they are declared or first met. `A as Label` gives a label, `@Actor A` a person
+  glyph, and `group Name { A B }` a box around them. A call with no source comes from the starter, drawn as a person
+  without a name, or from `@Starter(X)`.
+- Messages: `A.method(args)` or `A->B.method()` is a sync call, and statements in its `{ … }` are sent from `A`.
+  `A->B: text` (or `B: text` inside a call) is async. `new A(args)` creates `A` level with the message. `x = A.m()` and
+  `x = new A()` add a return labelled `x`; `x = new A()` names the new participant `x:A`. `return value` returns to the
+  caller, and `@return A->B: text` draws a return between any two participants.
+- Fragments: `if (…)` / `else if (…)` / `else`, `while`, `for`, `forEach` and `loop (…)`, `opt`, `par` (a separator
+  between each statement) and `try` / `catch (…)` / `finally`.
+- `// comments` above a message or fragment are drawn as a note over it, with Markdown markers removed. `== text ==` is
+  a divider across every lifeline.
+- Input the grammar refuses, such as an unclosed `{` or a stray `}`, throws a `MermaidParseException` naming the line.
+  Input ZenUML accepts but Mermaider does not draw is listed on the parsed model's `Unused` with its line and the reason:
+  annotator icons other than `@Actor` (the participant is drawn as a box), stereotypes, widths and colours, the
+  modifiers `const`, `readonly`, `static` and `await`, a comment anywhere but above a message or fragment, a fragment or
+  section without a message, and incomplete messages such as `A->` or `x =`.
 
 ### Treemap
 

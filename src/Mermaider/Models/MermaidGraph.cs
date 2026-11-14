@@ -55,6 +55,9 @@ public sealed record MermaidGraph
 	} = ReadOnlyDictionary<int, (string? SourceSubgraph, string? TargetSubgraph)>.Empty;
 
 	public IReadOnlyList<GraphNote> Notes { get; init; } = [];
+
+	/// <summary>Set by the flowchart parser, so a flowchart's small circles are not taken for state pseudo-states.</summary>
+	internal bool IsFlowchart { get; init; }
 }
 
 public sealed record GraphNote(string TargetNodeId, string Text, GraphNotePosition Position);
@@ -66,7 +69,11 @@ public enum GraphNotePosition
 }
 
 /// <summary>A single node in the parsed graph.</summary>
-public readonly record struct MermaidNode(string Id, string Label, NodeShape Shape, bool IsMarkdown = false);
+public readonly record struct MermaidNode(string Id, string Label, NodeShape Shape, bool IsMarkdown = false)
+{
+	/// <summary>The icon or image of a <see cref="NodeShape.Icon"/> or <see cref="NodeShape.Image"/> node; null otherwise.</summary>
+	public NodeAsset? Asset { get; init; }
+}
 
 /// <summary>A directed edge between two nodes.</summary>
 public sealed record MermaidEdge(string Source, string Target, string? Label, EdgeStyle Style, bool HasArrowStart, bool HasArrowEnd, int MinLength = 1);

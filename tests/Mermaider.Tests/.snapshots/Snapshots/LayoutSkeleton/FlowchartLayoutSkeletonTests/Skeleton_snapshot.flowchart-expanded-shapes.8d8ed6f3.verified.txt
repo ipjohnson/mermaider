@@ -1,0 +1,73 @@
+Layer 0: a1, b1, c1
+Layer 1: a2, b2, c2
+Layer 2: a3, c3
+Layer 3: a4, b3, c4
+Layer 4: a5, a6, b4, c5
+Layer 5: a7, b5, c6
+Layer 6: b6, c7
+Layer 7: a8
+Layer 8: b7, c8
+Layer 9: b8
+Layer 10: d1, e1, f1
+Layer 11: d2, f2
+Layer 12: d3, e2
+Layer 13: d4, e3, f3
+Layer 14: d5, e4, f4
+Layer 15: d6, e5, f5
+Layer 16: d7, e6, f6
+Layer 17: d8
+Layer 18: e7, f7
+Layer 19: f8
+Layer 20: e8
+Layer 21: g1
+Layer 22: g2
+Layer 23: g3
+Layer 24: g4
+Layer 25: g5
+Edges:
+  a1 ----> a2 [Bottom->Top] [D]
+  a2 ----> a3 [Bottom->Top] [D]
+  a3 ----> a4 [Bottom->Top] [D]
+  a4 ----> a5 [Bottom->Top] [D]
+  a5 ----> a6 [Bottom->Top] [D]
+  a6 ----> a7 [Bottom->Top] [D]
+  a7 ----> a8 [Bottom->Top] [D]
+  b1 ----> b2 [Bottom->Top] [D]
+  b2 ----> b3 [Bottom->Top] [D]
+  b3 ----> b4 [Bottom->Top] [D]
+  b4 ----> b5 [Bottom->Top] [D]
+  b5 ----> b6 [Bottom->Top] [D]
+  b6 ----> b7 [Bottom->Top] [D]
+  b7 ----> b8 [Bottom->Top] [D]
+  c1 ----> c2 [Bottom->Top] [D]
+  c2 ----> c3 [Bottom->Top] [D]
+  c3 ----> c4 [Bottom->Top] [D]
+  c4 ----> c5 [Bottom->Top] [D]
+  c5 ----> c6 [Bottom->Top] [D]
+  c6 ----> c7 [Bottom->Top] [D]
+  c7 ----> c8 [Bottom->Top] [D]
+  d1 ----> d2 [Bottom->Top] [D]
+  d2 ----> d3 [Bottom->Top] [D]
+  d3 ----> d4 [Bottom->Top] [D]
+  d4 ----> d5 [Bottom->Top] [D]
+  d5 ----> d6 [Bottom->Top] [D]
+  d6 ----> d7 [Bottom->Top] [D]
+  d7 ----> d8 [Bottom->Top] [D]
+  e1 ----> e2 [Bottom->Top] [D]
+  e2 ----> e3 [Bottom->Top] [D]
+  e3 ----> e4 [Bottom->Top] [D]
+  e4 ----> e5 [Bottom->Top] [D]
+  e5 ----> e6 [Bottom->Top] [D]
+  e6 ----> e7 [Bottom->Top] [D]
+  e7 ----> e8 [Bottom->Top] [D]
+  f1 ----> f2 [Bottom->Top] [D]
+  f2 ----> f3 [Bottom->Top] [D]
+  f3 ----> f4 [Bottom->Top] [D]
+  f4 ----> f5 [Bottom->Top] [D]
+  f5 ----> f6 [Bottom->Top] [D]
+  f6 ----> f7 [Bottom->Top] [D]
+  f7 ----> f8 [Bottom->Top] [D]
+  g1 ----> g2 [Bottom->Top] [D]
+  g2 ----> g3 [Bottom->Top] [D]
+  g3 ----> g4 [Bottom->Top] [D]
+  g4 ----> g5 [Bottom->Top] [D]

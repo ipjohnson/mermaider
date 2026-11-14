@@ -55,6 +55,110 @@ internal static partial class DiagramPreprocessor
 		return (cleaned, metadata);
 	}
 
+	/// <summary>
+	/// Blank the front matter and <c>%%{init:...}%%</c> lines of <paramref name="text"/> so that the remaining
+	/// lines keep their source line numbers, and return every leaf key of the <paramref name="section"/>
+	/// config section with the 1-based line it was written on.
+	/// </summary>
+	internal static (string Text, IReadOnlyList<(int Line, string Key, string Value)> Config) BlankConfig(string text, string section)
+	{
+		var lines = text.Replace("\r\n", "\n", StringComparison.Ordinal).Replace('\r', '\n').Split('\n');
+		var config = new List<(int Line, string Key, string Value)>();
+
+		var first = 0;
+		while (first < lines.Length && string.IsNullOrWhiteSpace(lines[first]))
+			first++;
+		if (first < lines.Length && lines[first].Trim() is "---")
+		{
+			var close = Array.FindIndex(lines, first + 1, l => l.Trim() is "---");
+			if (close > first)
+			{
+				ReadYamlSection(lines, first + 1, close, section, config);
+				for (var i = first; i <= close; i++)
+					lines[i] = "";
+			}
+		}
+
+		for (var i = 0; i < lines.Length; i++)
+		{
+			var match = InitDirectiveRegex().Match(lines[i].Trim());
+			if (!match.Success)
+				continue;
+			try
+			{
+				using var doc = JsonDocument.Parse(match.Groups[1].Value);
+				if (doc.RootElement.TryGetProperty(section, out var element))
+					AddJsonLeaves(element, section, i + 1, config);
+			}
+			catch (JsonException)
+			{
+				// Malformed JSON in init directive: nothing to report, the line is still blanked
+			}
+			lines[i] = "";
+		}
+
+		return (string.Join('\n', lines), config);
+	}
+
+	private static void ReadYamlSection(string[] lines, int start, int end, string section, List<(int Line, string Key, string Value)> config)
+	{
+		static int Indent(string line) => line.Length - line.TrimStart().Length;
+
+		var configIndent = -1;
+		var sectionIndent = -1;
+		var path = new List<(int Indent, string Key)>();
+		for (var i = start; i < end; i++)
+		{
+			var line = lines[i];
+			var trimmed = line.Trim();
+			if (trimmed.Length == 0 || trimmed.StartsWith('#'))
+				continue;
+			var indent = Indent(line);
+			var colon = trimmed.IndexOf(':');
+			var key = colon > 0 ? trimmed[..colon].Trim().Trim('"', '\'') : trimmed;
+			var value = colon > 0 ? trimmed[(colon + 1)..].Trim() : "";
+
+			if (sectionIndent >= 0)
+			{
+				if (indent <= sectionIndent)
+				{
+					sectionIndent = -1;
+					path.Clear();
+				}
+				else
+				{
+					while (path.Count > 0 && path[^1].Indent >= indent)
+						path.RemoveAt(path.Count - 1);
+					if (value.Length == 0)
+						path.Add((indent, key));
+					else
+						config.Add((i + 1, string.Join('.', [section, .. path.Select(p => p.Key), key]), value));
+					continue;
+				}
+			}
+
+			if (configIndent >= 0 && indent <= configIndent)
+				configIndent = -1;
+			if (configIndent < 0 && key == "config" && value.Length == 0)
+				configIndent = indent;
+			else if (configIndent >= 0 && key == section && value.Length == 0)
+				sectionIndent = indent;
+			else if (configIndent >= 0 && key == section)
+				config.Add((i + 1, section, value));
+		}
+	}
+
+	private static void AddJsonLeaves(JsonElement element, string path, int line, List<(int Line, string Key, string Value)> config)
+	{
+		if (element.ValueKind == JsonValueKind.Object)
+		{
+			foreach (var property in element.EnumerateObject())
+				AddJsonLeaves(property.Value, path + "." + property.Name, line, config);
+			return;
+		}
+		config.Add((line, path, element.ValueKind == JsonValueKind.String ? element.GetString()! : element.GetRawText()));
+	}
+
 	private static (string CleanedText, string? Title) StripFrontmatter(string text)
 	{
 		var span = text.AsSpan().TrimStart();

@@ -1,6 +1,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
+using Mermaider.Layout;
 using Mermaider.Models;
 using Mermaider.Parsing;
 using Mermaider.Text;
@@ -118,6 +119,15 @@ internal static partial class MermaiderFacts
 			case DiagramType.TreeView:
 				TreeView(TreeViewParser.Parse(Indented()), doc, facts);
 				break;
+			case DiagramType.Usecase:
+				Usecase(UsecaseParser.Parse(cleaned), doc, facts);
+				break;
+			case DiagramType.Wardley:
+				Wardley(WardleyParser.Parse(source), doc, facts);
+				break;
+			case DiagramType.ZenUml:
+				ZenUml(ZenUmlParser.Parse(source), doc, facts);
+				break;
 			default:
 				throw new InvalidOperationException("MermaiderFacts has no extractor for this diagram type; add one with its scripts/mjs-facts.mjs twin");
 		}
@@ -205,6 +215,34 @@ internal static partial class MermaiderFacts
 		NodeShape.StateStart => "sm-circ",
 		NodeShape.StateEnd => "fr-circ",
 		NodeShape.ForkJoin => "fork",
+		NodeShape.DataStore => "datastore",
+		NodeShape.Text => "text",
+		NodeShape.NotchedRectangle => "notch-rect",
+		NodeShape.LinedRectangle => "lin-rect",
+		NodeShape.BraceLeft => "brace",
+		NodeShape.BraceRight => "brace-r",
+		NodeShape.LightningBolt => "bolt",
+		NodeShape.Document => "doc",
+		NodeShape.HorizontalCylinder => "h-cyl",
+		NodeShape.LinedCylinder => "lin-cyl",
+		NodeShape.CurvedTrapezoid => "curv-trap",
+		NodeShape.DividedRectangle => "div-rect",
+		NodeShape.Triangle => "tri",
+		NodeShape.WindowPane => "win-pane",
+		NodeShape.FilledCircle => "f-circ",
+		NodeShape.NotchedPentagon => "notch-pent",
+		NodeShape.FlippedTriangle => "flip-tri",
+		NodeShape.SlopedRectangle => "sl-rect",
+		NodeShape.StackedDocument => "docs",
+		NodeShape.StackedRectangle => "st-rect",
+		NodeShape.BowTieRectangle => "bow-rect",
+		NodeShape.CrossedCircle => "cross-circ",
+		NodeShape.TaggedDocument => "tag-doc",
+		NodeShape.TaggedRectangle => "tag-rect",
+		NodeShape.LinedDocument => "lin-doc",
+		NodeShape.CollapsedGroup => "collapsedGroup",
+		// the facts give an icon or image node's frame as rect, and the icon or image as its own fact
+		NodeShape.Icon or NodeShape.Image => "rect",
 		_ => shape.ToString().ToLowerInvariant(),
 	};
 
@@ -287,6 +325,8 @@ internal static partial class MermaiderFacts
 		{
 			var drawn = nodeGroups.TryGetValue(node.Id, out var g) ? DrawnText(g) : Display(node.Label);
 			facts.Add(Fact("node", node.Id, drawn, Shape(node.Shape)));
+			if (node.Asset is { } asset)
+				facts.Add(Fact(asset.Kind == NodeAssetKind.Icon ? "icon" : "image", node.Id, asset.Source));
 		}
 
 		var label = EdgeLabels(doc, "edge-label");
@@ -972,6 +1012,237 @@ internal static partial class MermaiderFacts
 		foreach (var e in diagram.Edges)
 			facts.Add(Fact("edge", e.From, e.To, "none", "arrow", Display(e.Label)));
 		Labels(doc, facts, [.. diagram.Nodes.Where(b => !b.IsSpace).Select(b => Display(b.Label)), .. diagram.Edges.Select(e => Display(e.Label))]);
+	}
+
+	private static void Usecase(UsecaseDiagram diagram, XDocument doc, List<string> facts)
+	{
+		static string Plain(UsecaseLabel? label) =>
+			label is null ? string.Empty : label.IsMarkdown ? MarkdownMarkerPattern().Replace(label.Text, string.Empty) : label.Text;
+
+		static string Yes(bool v) => v ? "yes" : string.Empty;
+
+		static string End(UsecaseEnd e) => e.ToString().ToLowerInvariant();
+
+		var shown = new List<string?>();
+		facts.Add(Fact("direction", diagram.Direction == Direction.TB ? "TD" : diagram.Direction.ToString()));
+		foreach (var a in diagram.Actors)
+		{
+			facts.Add(Fact("actor", a.Id, Plain(a.Label), a.Type.ToString().ToLowerInvariant(), Yes(a.Business), a.Stereotype, a.Boundary));
+			if (a.Icon is { } icon)
+				facts.Add(Fact("icon", a.Id, icon));
+			shown.AddRange([Plain(a.Label), a.Stereotype]);
+		}
+
+		foreach (var u in diagram.UseCases)
+		{
+			facts.Add(Fact("usecase", u.Id, Plain(u.Label), u.Shape.ToString().ToLowerInvariant(), Yes(u.Business), u.Stereotype, u.Boundary));
+			shown.AddRange([Plain(u.Label), u.Stereotype]);
+		}
+
+		foreach (var b in diagram.Boundaries)
+		{
+			facts.Add(Fact("boundary", b.Id, Plain(b.Label), b.Type.ToString().ToLowerInvariant(), string.Join(',', b.Members.Order(StringComparer.Ordinal))));
+			shown.Add(Plain(b.Label));
+		}
+
+		foreach (var r in diagram.Relationships)
+		{
+			var label = r.Type == UsecaseRelationshipType.Association ? Plain(r.Label) : string.Empty;
+			facts.Add(Fact("relation", r.Source, r.Target, r.Type.ToString().ToLowerInvariant(), End(r.StartEnd), End(r.EndEnd), label, Int(r.MinLength)));
+			shown.Add(label);
+		}
+
+		foreach (var n in diagram.Notes)
+		{
+			facts.Add(Fact("note", n.Target, Plain(n.Label)));
+			shown.Add(Plain(n.Label));
+		}
+
+		foreach (var j in diagram.JsonTables)
+		{
+			facts.Add(Fact("json", j.Id));
+			shown.Add(j.Id);
+			for (var i = 0; i < j.Rows.Count; i++)
+			{
+				facts.Add(Fact("row", j.Id, Int(i), j.Rows[i].Key, j.Rows[i].Value));
+				shown.AddRange([j.Rows[i].Key, j.Rows[i].Value]);
+			}
+		}
+
+		Labels(doc, facts, shown);
+	}
+
+	[GeneratedRegex(@"\*\*|\*|~~", RegexOptions.None, TimeoutMs)]
+	private static partial Regex MarkdownMarkerPattern();
+
+	private static void Wardley(WardleyDiagram map, XDocument doc, List<string> facts)
+	{
+		static string Yes(bool v) => v ? "yes" : string.Empty;
+
+		var shown = new List<string?>();
+		if (!string.IsNullOrEmpty(map.Title))
+		{
+			facts.Add(Fact("title", map.Title));
+			shown.Add(map.Title);
+		}
+
+		if (map.Size is { } size)
+			facts.Add(Fact("size", Int(size.Width), Int(size.Height)));
+		for (var i = 0; i < map.Stages.Count; i++)
+		{
+			facts.Add(Fact("stage", Int(i), map.Stages[i]));
+			shown.Add(map.Stages[i]);
+		}
+
+		if (map.StageBoundaries.Count > 0)
+			facts.Add(Fact("boundaries", string.Join(',', map.StageBoundaries.Select(b => Num(b)))));
+		foreach (var n in map.Nodes)
+		{
+			var kind = n.Kind switch
+			{
+				WardleyNodeKind.Anchor => "anchor",
+				WardleyNodeKind.PipelineComponent => "pipeline-component",
+				_ => "component",
+			};
+			var sourcing = n.Sourcing == WardleySourcing.None ? string.Empty : n.Sourcing.ToString().ToLowerInvariant();
+			facts.Add(
+				Fact(
+					"node",
+					n.Id,
+					n.Label,
+					kind,
+					Num(n.Position.Evolution),
+					Num(n.Position.Visibility),
+					Num(n.LabelOffsetX),
+					Num(n.LabelOffsetY),
+					Yes(n.Inertia),
+					sourcing,
+					Yes(n.IsPipelineParent)
+				)
+			);
+			shown.Add(n.Label);
+		}
+
+		foreach (var l in map.Links)
+		{
+			facts.Add(Fact("link", l.Source, l.Target, Yes(l.Dashed), l.Flow.ToString().ToLowerInvariant(), l.Label));
+			shown.Add(l.Label);
+		}
+
+		var visibility = map.Nodes.ToDictionary(n => n.Id, n => n.Position.Visibility, StringComparer.Ordinal);
+		foreach (var t in map.Trends)
+			facts.Add(Fact("trend", t.NodeId, Num(t.TargetEvolution), Num(visibility[t.NodeId])));
+		foreach (var p in map.Pipelines)
+			facts.Add(Fact("pipeline", p.NodeId, string.Join(',', p.ComponentIds)));
+		foreach (var n in map.Notes)
+		{
+			facts.Add(Fact("note", n.Text, Num(n.Position.Evolution), Num(n.Position.Visibility)));
+			shown.Add(n.Text);
+		}
+
+		foreach (var a in map.Annotations)
+		{
+			facts.Add(Fact("annotation", Int(a.Number), Num(a.Position.Evolution), Num(a.Position.Visibility), a.Text));
+			shown.Add(a.Text);
+		}
+
+		if (map.AnnotationsBox is { } box)
+			facts.Add(Fact("annotations", Num(box.Evolution), Num(box.Visibility)));
+		foreach (var f in map.Forces)
+		{
+			facts.Add(Fact(f.Deaccelerator ? "deaccelerator" : "accelerator", f.Name, Num(f.Position.Evolution), Num(f.Position.Visibility)));
+			shown.Add(f.Name);
+		}
+
+		Labels(doc, facts, shown);
+	}
+
+	private static void ZenUml(ZenUmlDiagram diagram, XDocument doc, List<string> facts)
+	{
+		var shown = new List<string?>();
+		if (!string.IsNullOrEmpty(diagram.Title))
+		{
+			facts.Add(Fact("title", diagram.Title));
+			shown.Add(diagram.Title);
+		}
+
+		for (var i = 0; i < diagram.Participants.Count; i++)
+		{
+			var p = diagram.Participants[i];
+			var label = p.IsStarter ? string.Empty : p.Label;
+			facts.Add(Fact("participant", Int(i), p.Id, label));
+			if (ZenUmlLayout.IsPerson(p))
+				facts.Add(Fact("icon", p.Id));
+			shown.Add(label);
+		}
+
+		foreach (var g in diagram.Groups.Where(g => g.ParticipantIds.Count > 0))
+		{
+			var members = diagram.Participants.Select(p => p.Id).Where(g.ParticipantIds.Contains);
+			facts.Add(Fact("group", g.Name, string.Join(',', members)));
+			shown.Add(g.Name);
+		}
+
+		void Walk(IReadOnlyList<ZenUmlStatement> statements)
+		{
+			foreach (var s in statements)
+			{
+				if (s.Comment is { } comment && ZenUmlParser.HasMessage([s]))
+				{
+					facts.Add(Fact("comment", ZenUmlParser.PlainComment(comment)));
+					shown.Add(ZenUmlParser.PlainComment(comment));
+				}
+
+				switch (s)
+				{
+					case ZenUmlMessage m:
+						facts.Add(Fact("message", m.Kind.ToString().ToLowerInvariant(), m.From, m.To, m.Label));
+						shown.Add(m.Label);
+						Walk(m.Body);
+						if (m.Assignee is { } assignee)
+						{
+							facts.Add(Fact("message", "return", m.To, m.From, assignee));
+							shown.Add(assignee);
+						}
+						break;
+					case ZenUmlFragment f when ZenUmlParser.HasMessage([f]):
+						var kind = f.Kind.ToString().ToLowerInvariant();
+						facts.Add(Fact("fragment", kind, f.Condition));
+						shown.Add(f.Condition);
+						var seen = false;
+						foreach (var section in f.Sections)
+						{
+							if (f.Kind == ZenUmlFragmentKind.Par)
+							{
+								foreach (var inner in section.Statements.Where(i => ZenUmlParser.HasMessage([i])))
+								{
+									if (seen)
+										facts.Add(Fact("section", kind, string.Empty));
+									seen = true;
+								}
+							}
+							else if (ZenUmlParser.HasMessage(section.Statements))
+							{
+								if (seen)
+								{
+									facts.Add(Fact("section", kind, section.Label));
+									shown.Add(section.Label);
+								}
+								seen = true;
+							}
+							Walk(section.Statements);
+						}
+						break;
+					case ZenUmlDivider d:
+						facts.Add(Fact("divider", d.Text));
+						shown.Add(d.Text);
+						break;
+				}
+			}
+		}
+
+		Walk(diagram.Statements);
+		Labels(doc, facts, shown);
 	}
 
 	private static void TreeView(TreeViewDiagram diagram, XDocument doc, List<string> facts)

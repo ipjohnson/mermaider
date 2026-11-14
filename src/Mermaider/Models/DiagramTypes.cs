@@ -44,19 +44,22 @@ public enum DiagramTypes : long
 	Architecture = 1L << 21,
 	Block = 1L << 22,
 	TreeView = 1L << 23,
+	Usecase = 1L << 24,
+	Wardley = 1L << 25,
+	ZenUml = 1L << 26,
 
 	/// <summary>
 	/// Diagram types with stable, non-beta Mermaid syntax.
 	/// Flowchart, Sequence, State, Class, ER, Pie, Quadrant, Timeline, GitGraph,
-	/// Mindmap, Gantt, Journey, C4, Requirement, Kanban.
+	/// Mindmap, Gantt, Journey, C4, Requirement, Kanban, ZenUml.
 	/// </summary>
-	Stable = Flowchart | Sequence | State | Class | Er | Pie | Quadrant | Timeline | GitGraph | Mindmap | Gantt | Journey | C4 | Requirement | Kanban,
+	Stable = Flowchart | Sequence | State | Class | Er | Pie | Quadrant | Timeline | GitGraph | Mindmap | Gantt | Journey | C4 | Requirement | Kanban | ZenUml,
 
 	/// <summary>
 	/// Diagram types that use a <c>-beta</c> keyword in Mermaid source.
-	/// Radar, Treemap, Venn, Sankey, XyChart, Packet, Architecture, Block, TreeView.
+	/// Radar, Treemap, Venn, Sankey, XyChart, Packet, Architecture, Block, TreeView, Usecase, Wardley.
 	/// </summary>
-	Beta = Radar | Treemap | Venn | Sankey | XyChart | Packet | Architecture | Block | TreeView,
+	Beta = Radar | Treemap | Venn | Sankey | XyChart | Packet | Architecture | Block | TreeView | Usecase | Wardley,
 
 	/// <summary>All diagram types — both <see cref="Stable"/> and <see cref="Beta"/>. This is the default.</summary>
 	All = Stable | Beta,
@@ -90,6 +93,9 @@ internal static class DiagramTypeExtensions
 		DiagramType.Architecture => DiagramTypes.Architecture,
 		DiagramType.Block => DiagramTypes.Block,
 		DiagramType.TreeView => DiagramTypes.TreeView,
+		DiagramType.Usecase => DiagramTypes.Usecase,
+		DiagramType.Wardley => DiagramTypes.Wardley,
+		DiagramType.ZenUml => DiagramTypes.ZenUml,
 		_ => 0,
 	};
 }

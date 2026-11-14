@@ -27,4 +27,7 @@ public enum DiagramType
 	Architecture,
 	Block,
 	TreeView,
+	Usecase,
+	Wardley,
+	ZenUml,
 }

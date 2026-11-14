@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Text;
 using Mermaider.Models;
+using Mermaider.Parsing;
 using Mermaider.Text;
 using Mermaider.Theming;
 using static Mermaider.Rendering.RenderConstants;
@@ -512,6 +513,12 @@ internal static class SvgRenderer
 			case NodeShape.ForkJoin:
 				AppendForkJoin(sb, x, y, w, h);
 				break;
+			case NodeShape.Icon or NodeShape.Image when node.Asset is { } asset:
+				NodeAssets.Append(sb, ds, family, node, asset, fill, stroke, sw);
+				break;
+			default:
+				_ = FlowchartShapes.TryAppend(sb, ds, family, node.Shape, x, y, w, h, fill, stroke, sw);
+				break;
 		}
 	}
 
@@ -914,11 +921,13 @@ internal static class SvgRenderer
 
 	private static void AppendNodeLabel(StringBuilder sb, DesignSystem ds, PositionedNode node)
 	{
-		if (node.Shape is NodeShape.StateStart or NodeShape.StateEnd or NodeShape.ForkJoin && string.IsNullOrEmpty(node.Label))
+		if (!FlowchartShapeNames.DrawsLabel(node.Shape) && string.IsNullOrEmpty(node.Label))
 			return;
 
-		var cx = node.X + (node.Width / 2);
-		var cy = node.Y + (node.Height / 2);
+		var (dx, dy) = FlowchartShapes.LabelOffset(node.Shape, node.Width, node.Height);
+		var (cx, cy) = node.Asset is { } asset && NodeAssets.Place(node, asset) is var placed
+			? (placed.LabelCx, placed.LabelCy)
+			: (node.X + (node.Width / 2) + dx, node.Y + (node.Height / 2) + dy);
 		var textColor = InlineStyleValue(node.InlineStyle, "color") ?? "var(--_text)";
 
 		if (node.IsMarkdown)

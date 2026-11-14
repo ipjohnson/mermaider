@@ -407,3 +407,48 @@ test_entity - satisfies -> test_req
 - Upstream: https://github.com/mermaid-js/mermaid  
 - Spec/examples: mermaid.js.org/syntax/  
 - Stress fixture: winprint `testfiles/mermaid.md`  
+
+### Use case (2026-11)
+
+- Detector: `^usecase-beta(?:\s|$)`. Parse `CleanedSource`, not trimmed lines: Markdown strings, `@{ … }` metadata, JSON
+  objects and `accDescr { … }` span lines, so the parser is a cursor over the text that skips accessibility lines itself.
+- Declarations are order independent: collect drafts, resolve kinds (actor only by an `actor` statement, any other
+  endpoint is an ellipse use case) and metadata at the end, then apply mermaid's semantic checks.
+- Keyword tokens (`end`, `TD`, `for`, `include`, …) are not identifiers; `o--` and `x--` are operators only at a token start.
+- Layout: `HierarchicalLayout.Compute` directly with boundaries as `LayoutSubgraph`s and `PortOutline.Ellipse` for
+  ellipse use cases. Notes are layout nodes with an edge to their target.
+- Valid input that is not drawn (edge animation) goes to `UsecaseDiagram.Unused` with its line, until the diagnostics of
+  ipjohnson/AgentDriver#4284 exist.
+- The facts extractor reads mermaid's db (`getActors`, `getUseCases`, `getSystemBoundaries`, `getRelationships`,
+  `getNotes`) and the JSON rows from `getData()`.
+
+### Wardley map (2026-11)
+
+- Detector: `^wardley-beta`, case-insensitive like mermaid's; the parser then requires the exact keyword.
+- mermaid's grammar is Langium with ordered terminals and no word boundaries, so the parser lexes with the same order
+  (punctuation, then `WARDLEY_NUMBER`, arrows, ports, `;label`, strategies, keywords, `NAME_WITH_SPACES`, the common
+  terminals). A name starting with `note`, `label`, `buy`, … is split and refused exactly as mermaid does.
+- Coordinates are `[visibility, evolution]` for every statement, including annotations and forces; the model keeps
+  mermaid's percent values. Component coordinates must be decimals; `annotations` also takes integers.
+- Draw at mermaid's geometry (900 × 600, 48px margin) so positions match; widen the canvas, never the plot, for labels.
+  Measure captions with `DesignSystem.XsWidth` so Blueprint's mono text fits without a preset branch.
+- Valid input mermaid does not draw goes to `WardleyDiagram.Unused` with its line, until ipjohnson/AgentDriver#4284.
+- The facts extractor reads `db.getWardleyData()`.
+
+### ZenUML (2026-11)
+
+- mermaid draws ZenUML through the external `@mermaid-js/mermaid-zenuml` plugin, whose parser is a no-op: `@zenuml/core`
+  parses and draws in one call. Its grammar is ANTLR (`src/g4/sequenceLexer.g4` and `sequenceParser.g4` in ZenUml/core)
+  with line breaks hidden, so the parser is a token lexer and a recursive-descent reader, not a line parser. Only the
+  text after `:` and a `title` run to the end of the line, which is why `A->B: x }` keeps the brace in its label.
+- Detector: `^zenuml` with no word boundary, like mermaid's `/^\s*zenuml/`. The renderer removes that match, so the
+  rest of the header line is source.
+- Reuse the sequence diagram: `ZenUmlLayout.ToSequence` maps statements onto `SequenceDiagram` and draws with
+  `SequenceLayout` and `SequenceSvgRenderer`. Sync calls need explicit activation ends because ZenUML draws an occurrence
+  for every call, so `SequenceLayout.Layout` takes `activationEnds`, a `top` for the title band and `notesBelowFrames`.
+- The facts extractor loads the plugin into the page (with an in-memory `localStorage`, which `@zenuml/core` reads) and
+  reads the DOM, because the plugin's db is empty: `g.participant[data-participant]`, `g.message` (a closed arrow head
+  path is sync), `g.creation`, `g.return`, `g.fragment.fragment-*`, `.comment-text`, `.divider-label` and
+  `g.participant-group`. Message ends are the participants nearest the line's ends; a creation ends at the box drawn
+  level with it.
+- Valid input that is not drawn goes to `ZenUmlDiagram.Unused` with its line, until ipjohnson/AgentDriver#4284.

@@ -7,4 +7,4 @@ edge	Start	one	none	arrow	solid
 edge	one	End	none	arrow	solid
 node	End	End	rect
 node	Start	Start	rect
-node	one		collapsedGroup
+node	one	My Group	collapsedGroup

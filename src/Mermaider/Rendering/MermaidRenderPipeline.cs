@@ -57,7 +57,10 @@ internal static class MermaidRenderPipeline
 			}
 			token.ThrowIfCancellationRequested();
 
-			return SvgSanitizationStage.Apply(rawSvg, options?.SanitizeMode ?? SanitizeMode.Strip, options?.OnSanitized);
+			var svg = SvgSanitizationStage.Apply(rawSvg, options?.SanitizeMode ?? SanitizeMode.Strip, options?.OnSanitized);
+			if (request.Diagnostics.Count > 0)
+				options?.OnDiagnostics?.Invoke(request.Diagnostics);
+			return svg;
 		}
 		finally
 		{
@@ -84,6 +87,7 @@ internal static class MermaidRenderPipeline
 }
 
 internal sealed record PreparedDiagram(
+	string Source,
 	string CleanedSource,
 	DiagramMetadata Metadata,
 	string[] Lines,
@@ -110,7 +114,11 @@ internal sealed record NormalizedRenderRequest(
 	RenderOptions? Options,
 	ResourceLimits Limits,
 	CancellationToken CancellationToken
-);
+)
+{
+	/// <summary>Filled by the render stage; handed to <see cref="RenderOptions.OnDiagnostics"/> after sanitizing.</summary>
+	internal List<MermaidDiagnostic> Diagnostics { get; init; } = [];
+}
 
 /// <summary>Normalized rendering inputs shared by every SVG renderer.</summary>
 internal readonly record struct SvgRenderContext(
@@ -143,7 +151,7 @@ internal static class DiagramPreparationStage
 			);
 
 		var (accessibility, filteredLines) = AccessibilityParser.Extract(lines);
-		return new PreparedDiagram(cleaned, metadata, lines, filteredLines, diagramType, accessibility);
+		return new PreparedDiagram(text, cleaned, metadata, lines, filteredLines, diagramType, accessibility);
 	}
 }
 
@@ -414,12 +422,43 @@ internal static class DiagramSvgStage
 					);
 					break;
 				}
+			case DiagramType.Usecase:
+				{
+					var parsed = UsecaseParser.Parse(diagram.Source);
+					ResourceGuard.CheckElements(
+						parsed.Actors.Count + parsed.UseCases.Count + parsed.Notes.Count + parsed.JsonTables.Count + parsed.Relationships.Count,
+						limits
+					);
+					ct.ThrowIfCancellationRequested();
+					sb = UsecaseSvgRenderer.RenderToBuilder(parsed, context, ct);
+					break;
+				}
+			case DiagramType.Wardley:
+				{
+					var parsed = WardleyParser.Parse(diagram.Source);
+					ResourceGuard.CheckElements(
+						parsed.Nodes.Count + parsed.Links.Count + parsed.Notes.Count + parsed.Annotations.Count + parsed.Forces.Count + parsed.Trends.Count,
+						limits
+					);
+					ct.ThrowIfCancellationRequested();
+					sb = WardleySvgRenderer.RenderToBuilder(parsed, context);
+					break;
+				}
+			case DiagramType.ZenUml:
+				{
+					var parsed = ZenUmlParser.Parse(diagram.Source);
+					ResourceGuard.CheckElements(parsed.Participants.Count + ZenUmlParser.CountStatements(parsed.Statements), limits);
+					ct.ThrowIfCancellationRequested();
+					sb = ZenUmlSvgRenderer.RenderToBuilder(parsed, context);
+					break;
+				}
 			default:
 				{
 					// Flowchart, State — primary Sugiyama path, most DoS-critical
 					var parsed = MermaidRenderer.ParseInternal(lines, diagramType);
 					ResourceGuard.CheckElements(parsed.Nodes.Count + parsed.Edges.Count, limits);
 					ct.ThrowIfCancellationRequested();
+					request.Diagnostics.AddRange(NodeAssets.Diagnose(parsed));
 
 					// For the built-in layout provider, thread the token and node cap directly into
 					// Sugiyama so hot loops can be interrupted. Custom providers get the pre-call check only.

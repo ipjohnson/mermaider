@@ -56,6 +56,9 @@ internal enum MarkerShape
 
 	/// <summary>Hollow circle (lollipop / contains).</summary>
 	Circle,
+
+	/// <summary>Cross (use case <c>--x</c> association).</summary>
+	Cross,
 }
 
 /// <summary>
@@ -493,12 +496,14 @@ internal sealed partial class DesignSystem
 				$"<polygon points=\"{Pt(0, cy)} {Pt((size / 2) + 1, cy - half)} {Pt(size + 2, cy)} {Pt((size / 2) + 1, cy + half)}\" fill=\"{color}\" stroke=\"{color}\" stroke-width=\"{Num(sw)}\" stroke-linejoin=\"{join}\" />",
 			MarkerShape.DiamondHollow =>
 				$"<polygon points=\"{Pt(0, cy)} {Pt((size / 2) + 1, cy - half)} {Pt(size + 2, cy)} {Pt((size / 2) + 1, cy + half)}\" fill=\"var(--bg)\" stroke=\"{color}\" stroke-width=\"{Num(sw + 0.25)}\" stroke-linejoin=\"{join}\" />",
+			MarkerShape.Cross =>
+				$"<path d=\"M{Pt((size / 2) + 1 - half, cy - half)} L{Pt((size / 2) + 1 + half, cy + half)} M{Pt((size / 2) + 1 - half, cy + half)} L{Pt((size / 2) + 1 + half, cy - half)}\" fill=\"none\" stroke=\"{color}\" stroke-width=\"{Num(sw + 0.25)}\" stroke-linecap=\"round\" />",
 			_ =>
 				$"<circle cx=\"{Num((size / 2) + 1)}\" cy=\"{Num(cy)}\" r=\"{Num(half)}\" fill=\"var(--bg)\" stroke=\"{color}\" stroke-width=\"{Num(sw + 0.25)}\" />",
 		};
 
-		var w = shape is MarkerShape.Diamond or MarkerShape.DiamondHollow or MarkerShape.Circle ? size + 2 : size;
-		var refX = shape is MarkerShape.Diamond or MarkerShape.DiamondHollow or MarkerShape.Circle ? (atStart ? 0 : w) : tip;
+		var w = shape is MarkerShape.Diamond or MarkerShape.DiamondHollow or MarkerShape.Circle or MarkerShape.Cross ? size + 2 : size;
+		var refX = shape is MarkerShape.Diamond or MarkerShape.DiamondHollow or MarkerShape.Circle or MarkerShape.Cross ? (atStart ? 0 : w) : tip;
 		return $"  <marker id=\"{id}\" markerUnits=\"userSpaceOnUse\" markerWidth=\"{Num(w + 1)}\" markerHeight=\"12\" refX=\"{Num(refX)}\" refY=\"{Num(cy)}\" orient=\"auto\">\n    {body}\n  </marker>";
 	}
 

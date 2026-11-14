@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5e2ceaa9a657fdc2
+accept	yes
+actor	Broker	Broker	hollow	yes
+actor	SalesAgent	Sales agent	normal	yes	Employee
+direction	LR
+drawn	yes
+label	Archive quote
+label	Broker
+label	Core
+label	Employee
+label	Prepare quote
+label	Record
+label	Sales agent
+relation	Broker	Quote	association	none	arrow		1
+relation	Quote	Archive	association	none	arrow		1
+relation	SalesAgent	Quote	association	none	arrow		1
+usecase	Archive	Archive quote	rect		Record
+usecase	Quote	Prepare quote	ellipse	yes	Core

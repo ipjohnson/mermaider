@@ -32,6 +32,9 @@ public sealed record PositionedNode
 
 	/// <summary>Semantic role the node opted into with the class <c>success</c>, <c>failure</c>, <c>warning</c> or <c>info</c>; null otherwise.</summary>
 	public string? SemanticRole { get; init; }
+
+	/// <summary>The icon or image of a <see cref="NodeShape.Icon"/> or <see cref="NodeShape.Image"/> node; null otherwise.</summary>
+	public NodeAsset? Asset { get; init; }
 }
 
 /// <summary>A positioned edge with a full polyline path.</summary>
