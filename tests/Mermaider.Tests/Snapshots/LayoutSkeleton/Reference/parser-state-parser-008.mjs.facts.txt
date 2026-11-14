@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9f721cb5d99f9e6d
+accept	yes
+drawn	yes
+edge	namedState1	bigState1	none	arrow	solid	should point to \nBig State 1 container
+edge	namedState2	bigState2	none	arrow	solid	should point to \nbigState2 container
+group	bigState1	Big State 1	bigState1InternalState
+group	bigState2	bigState2	bigState2InternalState
+node	bigState1InternalState	bigState1InternalState	rounded
+node	bigState2InternalState	bigState2InternalState	rounded
+node	namedState1	Small State 1	rounded
+node	namedState2	Small State 2	rounded

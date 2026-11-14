@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1427c8c1069fe9de
+accept	yes
+drawn	yes
+label	East
+label	North
+label	Sales by Region
+label	South
+label	West
+node	Sales by Region
+node	Sales by Region / East	4567890
+node	Sales by Region / North	1234567
+node	Sales by Region / South	7654321
+node	Sales by Region / West	9876543

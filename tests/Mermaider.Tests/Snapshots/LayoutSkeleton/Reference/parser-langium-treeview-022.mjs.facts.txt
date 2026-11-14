@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source dc34281d7f94c232
+accept	yes
+drawn	yes
+label	docker-compose.yml
+node	docker-compose.yml	file

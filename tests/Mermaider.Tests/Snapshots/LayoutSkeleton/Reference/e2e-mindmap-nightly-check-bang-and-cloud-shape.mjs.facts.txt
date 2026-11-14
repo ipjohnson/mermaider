@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a841ad433e2a9ae8
+accept	yes
+drawn	yes
+icon	bang	mdi:mdi-fire
+icon	bang / A cloud	mdi:mdi-fire
+icon	bang / Another bang	mdi:mdi-fire
+label	A cloud
+label	Another bang
+label	bang
+node	bang	bang
+node	bang / A cloud	cloud
+node	bang / Another bang	bang

@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c72366235b9d32a2
+accept	yes
+branch	feature
+branch	main
+branch	release
+commit	0	main	normal			ZERO
+commit	1	feature	normal			A
+commit	2	feature	normal			B
+commit	3	main	merge		feature	M
+commit	4	release	cherry-pick	cherry-pick:M|parent:B
+drawn	yes
+label	A
+label	B
+label	M
+label	ZERO
+label	cherry-pick:M|parent:B
+label	feature
+label	main
+label	release

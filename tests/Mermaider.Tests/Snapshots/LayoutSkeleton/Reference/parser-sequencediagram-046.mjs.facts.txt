@@ -1,0 +1,30 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bc30b1a6955bc2a1
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	John	John	participant
+bbox	label	Fight against hypochondria	379.9	183.1	572.1	200.5
+bbox	label	Great!	254.8	362.1	299.2	379.2
+bbox	label	Healthcheck	452.5	131	549.5	148.2
+bbox	label	Hello John, how are you?	184.7	94.1	365.3	111.5
+bbox	label	How about you?	317.2	406.1	432.8	423.5
+bbox	label	Jolly good!	335.8	450.1	412.3	467.5
+bbox	label	loop	378.5	127	428.5	162
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	493	150	566
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	493	350	566
+bbox	node	John	400	0	550	73
+bbox	node	John	400	493	550	566
+bbox	note	Rational thoughts	500	286	650	341
+block	loop	Healthcheck
+canvas	-50	-10	700	607
+drawn	yes
+message	Alice	John	solid	none	Hello John, how are you?
+message	Bob	John	dashed	none	Jolly good!
+message	John	Alice	dashed	none	Great!
+message	John	Bob	solid	none	How about you?
+message	John	John	solid	none	Fight against hypochondria
+note	right	John	Rational thoughts prevail...

@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7ea2572fbd6df147
+accept	yes
+drawn	yes
+label	Budget
+label	Critical
+label	Marketing
+label	Normal
+label	Office Supplies
+label	Salaries
+label	Server Costs
+node	Budget
+node	Budget / Critical
+node	Budget / Critical / Salaries	80000
+node	Budget / Critical / Server Costs	50000
+node	Budget / Normal
+node	Budget / Normal / Marketing	15000
+node	Budget / Normal / Office Supplies	5000

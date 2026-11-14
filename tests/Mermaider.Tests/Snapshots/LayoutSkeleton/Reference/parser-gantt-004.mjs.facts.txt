@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0e12225e01eaf29d
+accept	yes
+drawn	yes
+label	;Gantt diagram titles support semicolons
+title	;Gantt diagram titles support semicolons

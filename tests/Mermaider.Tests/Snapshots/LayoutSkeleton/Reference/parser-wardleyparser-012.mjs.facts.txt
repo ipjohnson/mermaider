@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 075fcd3f1880bdee
+accept	yes
+accelerator	Cloud Native	85	20
+annotation	1	65	60	Critical component
+annotations	90	10
+deaccelerator	Legacy Data	35	40
+drawn	yes
+label	API
+label	Check dependencies
+label	Cloud Native
+label	Coordinate Handling
+label	Critical component
+label	Legacy Data
+label	Mobile App
+label	constraint
+link	Mobile App	API		bidirectional	constraint
+node	API	API	component	50	30
+node	Mobile App	Mobile App	component	40	20			yes	build
+note	Check dependencies	45	25
+title	Coordinate Handling

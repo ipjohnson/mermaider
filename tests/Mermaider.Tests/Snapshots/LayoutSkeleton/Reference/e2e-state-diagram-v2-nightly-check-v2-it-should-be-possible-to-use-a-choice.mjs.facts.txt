@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f26e04c9435aecbd
+accept	yes
+drawn	yes
+edge	Finished	[*]end@root	none	arrow	solid
+edge	MyChoice	Drying	none	arrow	solid
+edge	MyChoice	Washing	none	arrow	solid
+edge	Off	On	none	arrow	solid
+edge	On	MyChoice	none	arrow	solid
+edge	Washing	Finished	none	arrow	solid
+edge	[*]start@root	Off	none	arrow	solid
+node	Drying	Drying	rounded
+node	Finished	Finished	rounded
+node	MyChoice		diam
+node	Off	Off	rounded
+node	On	On	rounded
+node	Washing	Washing	rounded
+node	[*]end@root		fr-circ
+node	[*]start@root		sm-circ

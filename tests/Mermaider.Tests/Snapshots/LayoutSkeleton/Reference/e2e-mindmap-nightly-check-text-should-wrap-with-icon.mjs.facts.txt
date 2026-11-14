@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3170766345ca188e
+accept	yes
+drawn	yes
+label	A node with an icon and with a long text that wraps to keep the node size in check
+label	root
+node	root	default
+node	root / A node with an icon and with a long text that wraps to keep the node size in check	rounded

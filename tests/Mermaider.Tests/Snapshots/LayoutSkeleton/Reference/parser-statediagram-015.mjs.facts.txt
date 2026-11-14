@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2d9a7cf7fc4c0527
+accept	yes
+drawn	yes
+edge	NewValuePreview	NewValueSelection	none	arrow	solid	EvNewValueRejected
+edge	NewValuePreview	NewValueSelection	none	arrow	solid	EvNewValueSaved
+edge	NewValueSelection	NewValuePreview	none	arrow	solid	EvNewValue
+edge	State1	State2	none	arrow	solid
+edge	[*]start@Configuring	NewValueSelection	none	arrow	solid
+group	Configuring	Configuring	NewValuePreview,NewValueSelection,[*]start@Configuring
+group	NewValuePreview	NewValuePreview	State1,State2
+node	NewValueSelection	NewValueSelection	rounded
+node	State1	State1	rounded
+node	State2	State2	rounded
+node	[*]start@Configuring		sm-circ

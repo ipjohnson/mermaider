@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 689fdb8c1b7f6950
+accept	yes
+boundary	b	group	Group
+drawn	yes
+element	s	system	internal	System		inside a generic boundary	b
+label	Generic boundary
+label	Group
+label	System
+label	inside a generic boundary
+title	Generic boundary

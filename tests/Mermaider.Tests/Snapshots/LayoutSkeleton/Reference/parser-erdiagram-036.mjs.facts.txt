@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1a89a04aa8b346bb
+accept	yes
+drawn	yes
+entity	HOUSE	HOUSE
+entity	ROOM	ROOM
+label	HOUSE
+label	ROOM
+label	contains
+relation	HOUSE	ROOM	one	one	identifying	contains

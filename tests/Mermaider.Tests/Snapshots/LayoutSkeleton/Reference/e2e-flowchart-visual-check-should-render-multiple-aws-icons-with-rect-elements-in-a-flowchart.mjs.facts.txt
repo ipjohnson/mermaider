@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 05c2fad25f09a848
+accept	yes
+drawn	yes
+edge	Cloudfront	Route53	none	arrow	solid
+edge	Cloudwatch	Cloudfront	none	arrow	solid
+icon	Cloudfront	aws:arch-amazon-route-53
+icon	Cloudwatch	aws:arch-amazon-cloudwatch
+icon	Route53	aws:arch-amazon-eks-cloud
+node	Cloudfront		rect
+node	Cloudwatch		rect
+node	Route53		rect

@@ -1,0 +1,28 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 28147e3fec29fe76
+accept	yes
+drawn	yes
+edge	bottom_disk	T	juncC	B	none	none
+edge	bottom_gateway	T	juncR	B	none	none
+edge	juncC	R	juncR	L	none	none
+edge	left_disk	R	juncC	L	none	none
+edge	top_disk	B	juncC	T	none	none
+edge	top_gateway	B	juncR	T	none	none
+icon	bottom_disk	disk
+icon	bottom_gateway	internet
+icon	left_disk	disk
+icon	top_disk	disk
+icon	top_gateway	internet
+junction	juncC
+junction	juncR
+label	Disk
+label	Disk
+label	Disk
+label	Gateway
+label	Gateway
+service	bottom_disk	Disk
+service	bottom_gateway	Gateway
+service	left_disk	Disk
+service	top_disk	Disk
+service	top_gateway	Gateway

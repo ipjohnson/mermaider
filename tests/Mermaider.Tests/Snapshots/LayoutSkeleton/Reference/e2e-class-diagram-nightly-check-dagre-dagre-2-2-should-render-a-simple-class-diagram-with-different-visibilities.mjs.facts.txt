@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source acddeb5c4a3d3d0c
+accept	yes
+attribute	Class01	#int protectedMarmoset
+attribute	Class01	+int publicGorilla
+attribute	Class01	-int privateChimp
+attribute	Class01	<<interface>>
+bbox	label	Cool	92.4	273	121.2	294
+bbox	node	AveryLongClass	39.8	319	173.8	400
+bbox	node	Class01	8	8	205.5	248
+canvas	0	0	213.5	408
+class	AveryLongClass	AveryLongClass
+class	Class01	Class01
+drawn	yes
+method	Class01	#protectedMethod()
+method	Class01	+publicMethod()
+method	Class01	-privateMethod()
+relation	Class01	AveryLongClass	triangle	none	solid	Cool

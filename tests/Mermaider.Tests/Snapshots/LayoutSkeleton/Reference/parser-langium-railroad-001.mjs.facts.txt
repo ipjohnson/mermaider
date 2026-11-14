@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1c634c6b50ef967e
+accept	yes
+drawn	yes
+label	a
+label	rule
+rule	rule	"a"
+title	Example Grammar

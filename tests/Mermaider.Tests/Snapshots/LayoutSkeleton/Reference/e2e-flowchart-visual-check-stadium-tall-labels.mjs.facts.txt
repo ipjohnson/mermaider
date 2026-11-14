@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 54cf1e8ceba7ffc4
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid
+edge	B	R	none	arrow	solid
+edge	C	D	none	arrow	solid
+edge	C	E	none	arrow	solid
+node	A	Short	stadium
+node	B	A long stadiumlabel thatwraps intomany lineswithout losingits circularend caps orletting textcross theborder	stadium
+node	C	OneTwoThreeFourFiveSixSevenEightNineTenElevenTwelve	stadium
+node	D	Done	stadium
+node	E	Another path	stadium
+node	R	A long stadiumlabel thatwraps intomany lineswithout losingits circularend caps orletting textcross theborder	rect

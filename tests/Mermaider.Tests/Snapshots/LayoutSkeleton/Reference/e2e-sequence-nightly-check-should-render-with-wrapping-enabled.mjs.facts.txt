@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 523a58a98fa46f9e
+accept	yes
+actor	A	Alice, the talkative one	participant
+actor	John	John	participant
+bbox	label	Hello John, how are you today?	59.9	111.1	284.1	128.5
+bbox	label	Hi Alice, I can hear you! I was	73.1	250.1	282.9	267.5
+bbox	label	I feel great! I was not ignoring	73	328.1	283	345.5
+bbox	label	I'm feeling quite verbose today.	62.1	128.1	281.9	145.5
+bbox	label	John, can you hear me? If you	64.4	172.1	279.6	189.5
+bbox	label	are not available, we can talk	68.8	189.1	275.2	206.2
+bbox	label	finishing up an important	90.8	267.1	265.2	284.5
+bbox	label	for a response.	124.6	363.1	231.4	380.3
+bbox	label	later.	154.7	206.1	189.3	223.2
+bbox	label	meeting.	147.3	285.1	208.7	302.5
+bbox	label	you. I am sorry you had to wait	69.1	345.1	286.9	362.5
+bbox	node	A	0	0	150	90
+bbox	node	A	0	405	150	495
+bbox	node	John	200	0	350	90
+bbox	node	John	200	405	350	495
+canvas	-50	-10	400	536
+drawn	yes
+message	A	John	solid	filled	Hello John, how are you today? I'm feeling quite verbose today.
+message	A	John	solid	filled	John, can you hear me? If you are not available, we can talk later.
+message	John	A	dashed	filled	Hi Alice, I can hear you! I was finishing up an important meeting.
+message	John	A	dashed	filled	I feel great! I was not ignoring you. I am sorry you had to wait for a response.

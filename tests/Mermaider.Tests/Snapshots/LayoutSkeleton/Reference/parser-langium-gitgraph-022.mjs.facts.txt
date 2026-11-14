@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1ba858b0aa7368e1
+accept	no
+# error Incorrect usage of "cherryPick". Source commit id should exist and provided

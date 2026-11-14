@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5d0fb4e56f5146d5
+accept	yes
+drawn	yes
+label	API
+label	Cache
+label	Database
+label	Test Decorators
+node	API	API	component	70	60				build
+node	Cache	Cache	component	60	50				outsource
+node	Database	Database	component	50	40				buy
+title	Test Decorators

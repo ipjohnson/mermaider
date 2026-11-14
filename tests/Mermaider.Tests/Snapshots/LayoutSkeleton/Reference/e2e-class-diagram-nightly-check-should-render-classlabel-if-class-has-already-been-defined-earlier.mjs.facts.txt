@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7a93a47f8874d17c
+accept	yes
+bbox	node	Animal	54	12	124.7	93
+bbox	node	Duck	12	133	166.7	214
+canvas	4	4	174.7	222
+class	Animal	Animal
+class	Duck	Duck with text label
+drawn	yes
+relation	Animal	Duck	triangle	none	solid

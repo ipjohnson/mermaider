@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ba9be1c7408f169c
+accept	yes
+drawn	yes
+label	Kettle
+label	Test Evolve
+node	Kettle	Kettle	component	43	35
+title	Test Evolve
+trend	Kettle	62	35

@@ -161,15 +161,17 @@ async function extractFacts(source, name, shapes) {
 		for (const br of copy.querySelectorAll('br')) br.replaceWith(' ')
 		return norm(copy.textContent)
 	}
+	// Ids from the source can hold quotes and newlines, so they are escaped before they go into a selector.
+	const esc = s => CSS.escape(String(s))
 	// A domId ends in a counter that moves between parses, so fall back to the same id with any counter.
 	const byDomId = domId => {
-		const exact = dom.querySelector(`[id="${svgId}-${domId}"]`)
+		const exact = dom.querySelector(`[id="${esc(`${svgId}-${domId}`)}"]`)
 		if (exact || !domId) return exact
 		const stem = `${svgId}-${domId.replace(/-\d+$/, '')}-`
 		return [...dom.querySelectorAll('[id]')].find(el => el.id.startsWith(stem) && /^\d+$/.test(el.id.slice(stem.length))) ?? null
 	}
-	const edgeLabel = id => text(dom.querySelector(`.edgeLabel .label[data-id="${id}"]`))
-	const clusterLabel = id => text(dom.querySelector(`.clusters [data-id="${id}"] .cluster-label`) ?? dom.querySelector(`.clusters [id="${svgId}-${id}"] .cluster-label`))
+	const edgeLabel = id => text(dom.querySelector(`.edgeLabel .label[data-id="${esc(id)}"]`))
+	const clusterLabel = id => text(dom.querySelector(`.clusters [data-id="${esc(id)}"] .cluster-label`) ?? dom.querySelector(`.clusters [id="${esc(`${svgId}-${id}`)}"] .cluster-label`))
 	// An icon class list such as "fa fa-book" or "fab fa-twitter", written as mermaid's source writes it: "fa:fa-book".
 	const iconName = s => norm(s).split(' ').filter(c => c && c !== 'fa-fw').slice(0, 2).join(':')
 
@@ -177,7 +179,7 @@ async function extractFacts(source, name, shapes) {
 	const facts = []
 	const type = diagram.type
 	const extractors = {
-		'flowchart-v2': flowchart, flowchart, stateDiagram: state,
+		'flowchart-v2': flowchart, 'flowchart-elk': flowchart, flowchart, stateDiagram: state,
 		classDiagram: () => { classDiagram(); classBoxes() },
 		sequence: () => { sequence(); sequenceBoxes() },
 		er, pie, quadrantChart: quadrant, timeline, gitGraph, radar, treemap, venn, mindmap, gantt, journey, c4, sankey,
@@ -249,10 +251,10 @@ async function extractFacts(source, name, shapes) {
 		const interfaces = new Set((db.interfaces ?? []).map(i => i.id))
 		for (const n of data.nodes) {
 			if (n.isGroup) {
-				const cluster = dom.querySelector(`.clusters [id="${svgId}-${n.id}"]`)
+				const cluster = dom.querySelector(`.clusters [id="${esc(`${svgId}-${n.id}`)}"]`)
 				box('group', n.id, cluster?.querySelector(':scope > rect') ?? cluster, n.parentId ?? '')
 			} else if (n.shape === 'note') {
-				const el = byDomId(n.domId) ?? dom.querySelector(`[id="${svgId}-${n.id}"]`)
+				const el = byDomId(n.domId) ?? dom.querySelector(`[id="${esc(`${svgId}-${n.id}`)}"]`)
 				box('note', text(el), el)
 			} else if (!interfaces.has(n.id)) box('node', n.id, byDomId(n.domId))
 		}
@@ -690,7 +692,8 @@ async function extractFacts(source, name, shapes) {
 			if (n.icon) facts.push(tab('icon', p.join(' / '), iconName(n.icon)))
 			for (const c of n.children ?? []) walk(c, p)
 		}
-		walk(db.getMindmap(), [])
+		const root = db.getMindmap()
+		if (root) walk(root, [])
 		labels(shown)
 	}
 

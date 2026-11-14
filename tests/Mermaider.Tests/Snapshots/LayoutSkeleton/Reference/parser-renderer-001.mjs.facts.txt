@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f4455441d0cd5699
+accept	no
+# error Parsing failed: Lexer error on line 1, column 1: unexpected character: ->p<- at offset: 0, skipped 6 characters.

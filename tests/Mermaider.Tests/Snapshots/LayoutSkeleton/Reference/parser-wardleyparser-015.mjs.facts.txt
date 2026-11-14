@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 59a7fb537208e1bb
+accept	yes
+drawn	yes
+label	on-call engineer
+node	on-call engineer	on-call engineer	anchor	95	90

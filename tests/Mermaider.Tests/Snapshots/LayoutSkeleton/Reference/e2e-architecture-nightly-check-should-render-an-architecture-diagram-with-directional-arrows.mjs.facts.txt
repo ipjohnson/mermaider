@@ -1,0 +1,28 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d967d640300f1ef8
+accept	yes
+drawn	yes
+edge	servC	B	servB	T	none	arrow
+edge	servC	L	servL	R	none	arrow
+edge	servC	R	servR	L	none	arrow
+edge	servC	T	servT	B	none	arrow
+edge	servL	B	servB	L	none	arrow
+edge	servL	T	servT	L	none	arrow
+edge	servR	B	servB	R	none	arrow
+edge	servR	T	servT	R	none	arrow
+icon	servB	server
+icon	servC	server
+icon	servL	server
+icon	servR	server
+icon	servT	server
+label	Server 1
+label	Server 2
+label	Server 3
+label	Server 4
+label	Server 5
+service	servB	Server 5
+service	servC	Server 1
+service	servL	Server 2
+service	servR	Server 3
+service	servT	Server 4

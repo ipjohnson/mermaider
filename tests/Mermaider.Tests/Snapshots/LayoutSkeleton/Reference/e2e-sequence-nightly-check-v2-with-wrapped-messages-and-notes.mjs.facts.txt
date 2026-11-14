@@ -1,0 +1,35 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d534cb78203b61cc
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+bbox	label	Message in loop	122.7	566.1	239.3	583.5
+bbox	label	Parallel message 1	113	299.1	249	316.5
+bbox	label	Parallel message 2	119	385.1	255	402.5
+bbox	label	This is a very long message that	66.3	94.1	295.7	111.5
+bbox	label	Wrapped loop	241.9	449	350.1	466.2
+bbox	label	Wrapped parallel	144.2	247	273.8	264.2
+bbox	label	loop	64	445	114	480
+bbox	label	par	64	243	114	278
+bbox	label	rendering	147.2	129.1	214.8	146.5
+bbox	label	should wrap properly in the diagram	53.8	111.1	308.2	128.5
+bbox	label	with explicit line break	103.2	316.1	258.8	333.3
+bbox	label	with explicit line break	109.2	402.1	264.8	419.3
+bbox	node	A	0	0	150	73
+bbox	node	A	0	619	150	692
+bbox	node	B	218	0	368	73
+bbox	node	B	218	619	368	692
+bbox	note	This is a long note	318	490	468	545
+bbox	note	This is a very long note that should	50	161	318	233
+block	loop	Wrapped loop
+block	par	Wrapped parallel
+canvas	-50	-10	528	733
+divider
+drawn	yes
+message	A	B	solid	filled	Message in loop
+message	A	B	solid	filled	Parallel message 1 with explicit line break
+message	A	B	solid	filled	This is a very long message that should wrap properly in the diagram rendering
+message	B	A	solid	filled	Parallel message 2 with explicit line break
+note	over	A,B	This is a very long note that should also wrap properly when rendered in the diagram
+note	right	B	This is a long note in a loop

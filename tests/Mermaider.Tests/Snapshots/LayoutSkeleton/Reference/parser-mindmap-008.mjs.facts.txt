@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 97356c75f654bde6
+accept	yes
+drawn	yes
+label	child1
+label	root
+node	root	default
+node	root / child1	rounded

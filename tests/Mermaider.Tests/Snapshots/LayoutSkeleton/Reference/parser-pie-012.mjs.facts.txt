@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 049ff77f842ed6ba
+accept	no
+# error "dogs" has invalid value: -60.67. Negative values are not allowed in pie charts. All slice values must be >= 0.

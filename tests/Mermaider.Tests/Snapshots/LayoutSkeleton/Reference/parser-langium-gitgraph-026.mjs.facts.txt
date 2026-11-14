@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1ee60a0d7e3b7308
+accept	no
+# error Parsing failed:  Parse error on line 2, column 10: Expecting: one of these possible Token sequences:

@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5833bcf4872cbe5f
+accept	yes
+attribute	Flight	datetime departureTime
+attribute	Flight	int flightNumber
+bbox	node	Flight	12	12	242.1	168
+canvas	4	4	250.1	176
+class	Flight	Flight
+drawn	yes
+method	Flight	getDepartureTime() : datetime

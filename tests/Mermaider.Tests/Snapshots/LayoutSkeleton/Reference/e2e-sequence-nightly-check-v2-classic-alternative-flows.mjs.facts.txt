@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 12d818ef2dcfd048
+accept	yes
+actor	A	A	actor
+actor	B	B	boundary
+bbox	label	Failure	152.5	308.1	201.5	325.2
+bbox	label	Failure case	127	217	223	234.2
+bbox	label	Request	144.2	131.1	203.8	148.3
+bbox	label	Request	144.2	264.1	203.8	281.3
+bbox	label	Success	146.8	175.1	207.2	192.2
+bbox	label	Successful case	137.8	79	262.3	96.2
+bbox	label	alt	64	75	114	95
+bbox	node	A	57	-5	93	76
+bbox	node	A	57	356	93	437
+bbox	node	B	220	11	297	77
+bbox	node	B	220	372	297	437.5
+block	alt	Successful case
+canvas	-50	-10	400	437
+divider	Failure case
+drawn	yes
+message	A	B	solid	filled	Request
+message	A	B	solid	filled	Request
+message	B	A	dashed	cross	Failure
+message	B	A	dashed	filled	Success

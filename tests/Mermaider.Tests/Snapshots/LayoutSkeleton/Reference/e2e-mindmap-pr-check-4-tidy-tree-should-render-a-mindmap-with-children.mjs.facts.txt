@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4f213e279f2e9d57
+accept	yes
+drawn	yes
+label	This is a mindmap
+label	child1
+label	child2
+label	child3
+label	grandchild 1
+label	grandchild 2
+label	grandchild 3
+label	grandchild 4
+label	grandchild 5
+label	grandchild 6
+node	This is a mindmap	circle
+node	This is a mindmap / child1	default
+node	This is a mindmap / child1 / grandchild 1	default
+node	This is a mindmap / child1 / grandchild 2	default
+node	This is a mindmap / child2	default
+node	This is a mindmap / child2 / grandchild 3	default
+node	This is a mindmap / child2 / grandchild 4	default
+node	This is a mindmap / child3	default
+node	This is a mindmap / child3 / grandchild 5	default
+node	This is a mindmap / child3 / grandchild 6	default

@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5ff7ac1038ac3227
+accept	no
+# error Parsing failed:  Parse error on line 7, column 1: Expecting token of type 'EOF' but found `reset`.

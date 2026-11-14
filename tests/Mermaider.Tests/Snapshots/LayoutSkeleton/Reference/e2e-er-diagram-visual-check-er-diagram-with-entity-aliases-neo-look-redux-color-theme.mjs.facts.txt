@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1e110a771e036e2c
+accept	yes
+attribute	c	varchar(128)	email
+attribute	o	int	orderNumber
+attribute	p	varchar(64)	firstName
+attribute	p	varchar(64)	lastName
+drawn	yes
+entity	c	Customer Account
+entity	o	Order
+entity	p	Person
+label	Customer Account
+label	Order
+label	Person
+label	email
+label	firstName
+label	has
+label	int
+label	lastName
+label	orderNumber
+label	places
+label	varchar(128)
+label	varchar(64)
+label	varchar(64)
+relation	c	o	one	zero-or-more	identifying	places
+relation	p	c	one	zero-or-one	identifying	has

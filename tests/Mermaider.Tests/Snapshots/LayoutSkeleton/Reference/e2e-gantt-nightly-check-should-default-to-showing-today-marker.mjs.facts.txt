@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ea880baf17926038
+accept	yes
+drawn	yes
+label	Section1
+label	Show today marker (vertical line should be visible)
+label	Today
+label	Yesterday
+section	Section1
+task	Section1	Today		1010-10-10 00:00	1010-10-11 00:00
+task	Section1	Yesterday		1010-10-09 00:00	1010-10-10 00:00
+title	Show today marker (vertical line should be visible)

@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1b60e56597570fa9
+accept	yes
+drawn	yes
+edge	a	b	none	arrow	solid
+node	a	Lorem 'ipsum' dolor 'sit' amet, 'consectetur' adipiscing 'elit'.	hex
+node	b	Lorem "ipsum" dolor "sit" amet,"consectetur" adipiscing "elit".	hex

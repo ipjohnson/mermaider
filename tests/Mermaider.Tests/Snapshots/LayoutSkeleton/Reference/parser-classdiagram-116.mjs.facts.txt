@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c08c584e4e2e56d6
+accept	yes
+attribute	A1	+foo : string
+attribute	A2	+bar : int
+attribute	B1	+foo : bool
+attribute	B2	+bar : float
+bbox	group	A	12	12	304.3	198
+bbox	group	B	13.9	258	310.2	444
+bbox	node	A1	36	60	142.5	174
+bbox	node	A2	192.5	60	280.3	174
+bbox	node	B1	37.9	306	136.7	420
+bbox	node	B2	186.7	306	286.2	420
+canvas	4	4	318.2	452
+class	A1	A1
+class	A2	A2
+class	B1	B1
+class	B2	B2
+drawn	yes
+namespace	A	A1,A2
+namespace	B	B1,B2
+relation	A1	B1	none	arrow	solid
+relation	A2	B2	none	arrow	solid

@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3ab22619feaed7ac
+accept	yes
+drawn	yes
+label	Bang
+label	Cell
+label	Cloud
+label	Default
+label	Hexagon
+label	Rounded
+label	Square
+node	Cell	circle
+node	Cell / Bang	bang
+node	Cell / Cloud	cloud
+node	Cell / Default	default
+node	Cell / Hexagon	hex
+node	Cell / Rounded	rounded
+node	Cell / Square	rect

@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 26707367608d39c2
+accept	yes
+attribute	HOTEL	DECIMAL(10,2)	price_per_night
+attribute	HOTEL	GEOMETRY(point,4326)	location
+attribute	HOTEL	string	address
+attribute	ROOM	int	room.number
+attribute	ROOM	string	bed.type
+drawn	yes
+entity	HOTEL	HOTEL
+entity	ROOM	ROOM
+label	DECIMAL(10,2)
+label	GEOMETRY(point,4326)
+label	HOTEL
+label	ROOM
+label	address
+label	bed.type
+label	has
+label	int
+label	location
+label	price_per_night
+label	room.number
+label	string
+label	string
+relation	HOTEL	ROOM	one	zero-or-more	identifying	has

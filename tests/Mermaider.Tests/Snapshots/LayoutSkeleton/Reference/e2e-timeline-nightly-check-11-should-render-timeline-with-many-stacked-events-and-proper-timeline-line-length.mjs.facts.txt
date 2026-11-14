@@ -1,0 +1,57 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 67755ad4ab7c645d
+accept	yes
+drawn	yes
+event	Management Responsibility	Human Resources
+event	Management Responsibility	Planning Activities
+event	Post-Production Activities	Adverse Events
+event	Post-Production Activities	Complaints
+event	Post-Production Activities	Feedback
+event	Post-Production Activities	Installation Activities
+event	Post-Production Activities	Post-Market Surveillance
+event	Post-Production Activities	Production Activities
+event	Post-Production Activities	Purchasing Activities
+event	Post-Production Activities	Research and Development
+event	Post-Production Activities	Servicing Activities
+event	Product Realization Activities	Customer-related Processes
+event	Product Realization Activities	Planning Activities
+event	Quality Management System	Regulatory Compliance
+event	Quality Management System	Risk Management
+event	Resource Management	Infrastructure
+event	Resource Management	Management Reviews
+label	Adverse Events
+label	Complaints
+label	Customer-related Processes
+label	Development
+label	Feedback
+label	Human Resources
+label	Infrastructure
+label	Installation Activities
+label	Management Responsibility
+label	Management Reviews
+label	Medical Device Lifecycle
+label	Planning Activities
+label	Planning Activities
+label	Post-Development
+label	Post-Market Surveillance
+label	Post-Production Activities
+label	Pre-Development
+label	Product Realization Activities
+label	Production Activities
+label	Purchasing Activities
+label	Quality Management System
+label	Regulatory Compliance
+label	Research and Development
+label	Resource Management
+label	Risk Management
+label	Servicing Activities
+period	Development	Management Responsibility
+period	Development	Resource Management
+period	Post-Development	Post-Production Activities
+period	Post-Development	Product Realization Activities
+period	Pre-Development	Quality Management System
+section	Development
+section	Post-Development
+section	Pre-Development
+title	Medical Device Lifecycle

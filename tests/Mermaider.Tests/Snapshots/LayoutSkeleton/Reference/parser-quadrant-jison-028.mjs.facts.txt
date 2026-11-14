@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5e09985113aa72b7
+accept	yes
+axis	x-left	低い
+axis	x-right	高い
+drawn	yes
+label	低い
+label	拡張が必要
+label	高い
+quadrant	1	拡張が必要

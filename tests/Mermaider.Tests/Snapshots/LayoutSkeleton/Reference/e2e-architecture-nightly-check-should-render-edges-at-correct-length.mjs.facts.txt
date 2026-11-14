@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 41b2e6a87ce7bfdd
+accept	yes
+drawn	yes
+edge	cell	B	rowspan	T	none	arrow
+edge	cell	R	colspan	L	none	arrow
+label	Table Cell
+label	colspan
+label	rowspan
+service	cell	Table Cell
+service	colspan	colspan
+service	rowspan	rowspan

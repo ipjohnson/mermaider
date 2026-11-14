@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bfb2f64658d4e3ea
+accept	yes
+drawn	yes
+edge	A	B1	none	arrow	solid	Get money
+edge	A	B2	none	arrow	solid	Get money
+edge	A	B3	none	arrow	solid	Get money
+edge	B1	C	none	arrow	solid
+edge	B2	C	none	arrow	solid
+edge	B3	C	none	arrow	solid
+edge	C	D	none	arrow	solid	One
+edge	C	E	none	arrow	solid	Two
+edge	C	F	none	arrow	solid	Three
+node	A	cylindrical shape test	cyl
+node	B1	Go shopping 1	cyl
+node	B2	Go shopping 2	cyl
+node	B3	Go shopping 3	cyl
+node	C	Let me think... Do I want something for work, something to spend every free second with, or something to get around?	cyl
+node	D	Laptop	cyl
+node	E	iPhone	cyl
+node	F	Car	cyl

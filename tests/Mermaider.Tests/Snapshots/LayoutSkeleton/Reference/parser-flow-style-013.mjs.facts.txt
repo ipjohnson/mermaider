@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1969e0b081e3a04a
+accept	no
+# error Cannot set properties of undefined (setting 'style')

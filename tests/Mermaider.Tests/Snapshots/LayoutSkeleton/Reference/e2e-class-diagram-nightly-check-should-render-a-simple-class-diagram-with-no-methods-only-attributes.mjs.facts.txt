@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9e08fc3835ff6be2
+accept	yes
+attribute	Duck	+String beakColor
+attribute	Duck	+float weight
+attribute	Duck	+int age
+bbox	node	Duck	12	12	165.6	168
+canvas	4	4	173.6	176
+class	Duck	Duck
+drawn	yes

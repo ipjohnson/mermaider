@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c1f53d3fa17239e8
+accept	yes
+drawn	yes
+label	Bond
+label	Cash
+label	Portfolio Holdings
+label	Stock
+slice	Bond	30
+slice	Cash	10
+slice	Stock	60
+title	Portfolio Holdings

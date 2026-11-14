@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c520d4dd23c3e8c1
+accept	yes
+bbox	node	Car	12	12	90.1	132
+canvas	4	4	98.1	140
+class	Car	Car
+drawn	yes
+method	Car	+size()

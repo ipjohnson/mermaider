@@ -1,0 +1,48 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 71d316733ce73fe9
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	John	John Second Line	participant
+bbox	label	Checking with John...	116	386	268	403.5
+bbox	label	Hello Bob, how are you?	99.9	111	274.1	128.5
+bbox	label	How about you John?	329.6	155	484.4	172.5
+bbox	label	I am good thanks!	129.4	199	256.6	216.5
+bbox	label	I am good thanks!	343.4	243	470.6	260.5
+bbox	label	Maybe	271	653	319	670.5
+bbox	label	No	281.8	564	302.2	581.2
+bbox	label	Parallel message 1	119	752	255	769.5
+bbox	label	Parallel message 2	224	821	360	838.5
+bbox	label	Yes	279	475	305	492.2
+bbox	label	alt	64	419	114	454
+bbox	label	either this	280.9	422.9	359.1	440.2
+bbox	label	or this	268.8	516.9	321.2	534.2
+bbox	label	or this will happen	226.5	605.9	363.5	623.2
+bbox	label	par	64	696	114	731
+bbox	label	this happens in parallel	233.8	699.9	406.2	717.2
+bbox	node	Alice	0	0	150	90
+bbox	node	Alice	0	874	150	964
+bbox	node	Bob	230	0	380	90
+bbox	node	Bob	230	874	380	964
+bbox	node	John	440	0	590	90
+bbox	node	John	440	874	590	964
+bbox	note	Bob thinks a long	540	276	690	365
+block	alt	either this
+block	par	this happens in parallel
+canvas	-50	-10	740	1005
+divider
+divider	or this
+divider	or this will happen
+drawn	yes
+message	Alice	Bob	dashed	filled	Parallel message 1
+message	Alice	Bob	solid	filled	Hello Bob, how are you?
+message	Alice	John	dashed	filled	Parallel message 2
+message	Alice	John	solid	filled	No
+message	Alice	John	solid	filled	Yes
+message	Alice	John	solid	none	Maybe
+message	Bob	Alice	dashed	cross	I am good thanks!
+message	Bob	Alice	dashed	none	Checking with John...
+message	Bob	John	dashed	filled	How about you John?
+message	Bob	John	solid	cross	I am good thanks!
+note	right	John	Bob thinks a long long time, so long that the text does not fit on a row.

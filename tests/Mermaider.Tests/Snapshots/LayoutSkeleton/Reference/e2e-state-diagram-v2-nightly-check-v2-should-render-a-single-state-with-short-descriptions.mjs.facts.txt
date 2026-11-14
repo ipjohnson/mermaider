@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9ad3a525971be491
+accept	yes
+drawn	yes
+node	long1	A long long name	rounded
+node	longlonglongid	A	rounded

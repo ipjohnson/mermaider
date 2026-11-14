@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 894ffb08c207d23d
+accept	yes
+actor	API	External Name	boundary
+actor	DB	External DB	database
+bbox	label	Query	152.2	86.1	195.8	103.5
+bbox	label	Result	154.3	130.1	199.7	147.2
+bbox	node	API	20	11	127.9	77
+bbox	node	API	20	184	127.9	249.5
+canvas	-50	-10	400	254
+drawn	yes
+message	API	DB	solid	filled	Query
+message	DB	API	dashed	filled	Result

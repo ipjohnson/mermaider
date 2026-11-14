@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9b3b0c902d5583a2
+accept	yes
+actor	1	1	participant
+actor	2	2	participant
+actor	3	3	participant
+actor	4	4	participant
+bbox	label	multiline	342.7	185.1	401.3	202.4
+bbox	label	single-line text	120.9	94.1	223.1	111.5
+bbox	label	text	359.1	202.1	384.9	219.4
+bbox	node	1	0	0	150	73
+bbox	node	1	0	309	150	382
+bbox	node	2	200	0	350	73
+bbox	node	2	200	309	350	382
+bbox	node	3	400	0	550	73
+bbox	node	3	400	309	550	382
+bbox	node	4	600	0	750	73
+bbox	node	4	600	309	750	382
+bbox	note	multiline	500	235	650	289
+bbox	note	single-line text	300	127	450	164
+canvas	-50	-10	800	423
+drawn	yes
+message	1	2	solid	filled	single-line text
+message	2	3	solid	filled	multiline text
+note	right	2	single-line text
+note	right	3	multiline text

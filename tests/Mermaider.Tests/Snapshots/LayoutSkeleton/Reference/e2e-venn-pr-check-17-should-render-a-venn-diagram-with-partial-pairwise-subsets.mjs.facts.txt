@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e04e05a78b587248
+accept	yes
+drawn	yes
+label	AB
+label	ABC
+label	BC
+set	A		10
+set	B		10
+set	C		10
+union	A,B	AB	2.5
+union	A,B,C	ABC	1.111
+union	B,C	BC	2.5

@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3d191875ec2b1d46
+accept	yes
+drawn	yes
+element	a	container	internal	A	Tech
+element	b	container	internal	B	Tech
+label	A
+label	B
+label	JDBC
+label	Rel_Back
+label	Tech
+label	Tech
+label	reads from
+rel	a	b	one	reads from	JDBC
+title	Rel_Back

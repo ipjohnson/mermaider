@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 183e2511c066934a
+accept	yes
+drawn	yes
+label	Eat
+label	Roam
+label	Sleep
+label	What Koalas Do In A Day
+slice	Eat	3
+slice	Roam	1
+slice	Sleep	20
+title	What Koalas Do In A Day

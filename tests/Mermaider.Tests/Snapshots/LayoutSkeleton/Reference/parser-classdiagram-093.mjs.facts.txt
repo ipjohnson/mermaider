@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 40511c1a96304cca
+accept	yes
+bbox	label	< owns	130.5	315	175.2	336
+bbox	label	drives >	73.8	133	123.2	154
+bbox	label	have 4 >	17.1	315	71.2	336
+bbox	node	Car	75.1	194	122.5	275
+bbox	node	Driver	66.6	12	131	93
+bbox	node	Person	117.2	376	188.7	457
+bbox	node	Wheel	12	376	77.2	457
+canvas	4	4	196.7	465
+class	Car	Car
+class	Driver	Driver
+class	Person	Person
+class	Wheel	Wheel
+drawn	yes
+relation	Car	Person	none	none	solid	< owns
+relation	Car	Wheel	diamond-filled	none	solid	have 4 >
+relation	Driver	Car	none	none	solid	drives >

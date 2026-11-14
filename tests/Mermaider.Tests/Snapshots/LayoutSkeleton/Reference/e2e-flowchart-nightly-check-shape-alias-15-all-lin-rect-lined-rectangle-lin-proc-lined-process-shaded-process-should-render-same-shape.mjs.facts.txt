@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 58a715b473ef21cf
+accept	yes
+drawn	yes
+node	n0	lin-rect	lin-rect
+node	n1	lined-rectangle	lin-rect
+node	n2	lin-proc	lin-rect
+node	n3	lined-process	lin-rect
+node	n4	shaded-process	lin-rect

@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2085576940433186
+accept	yes
+boundary	api	container	API Application
+drawn	yes
+element	sign	component	internal	Sign In Controller	MVC Rest Controller	Allows users to sign in to the internet banking system	api
+element	spa	container	internal	Single Page Application	javascript and angular	Provides all the internet banking functionality to customers via their web browser.
+label	API Application
+label	Allows users to sign in to the internet banking system
+label	Component diagram for Internet Banking System - API Application
+label	JSON/HTTPS
+label	MVC Rest Controller
+label	Provides all the internet banking functionality to customers via their web browser.
+label	Sign In Controller
+label	Single Page Application
+label	Uses
+label	javascript and angular
+rel	spa	sign	one	Uses	JSON/HTTPS
+title	Component diagram for Internet Banking System - API Application

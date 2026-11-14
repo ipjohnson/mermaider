@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c0d84d372b6f1ef8
+accept	yes
+block	also_overflow	also_overflow	rect	2
+block	fit	fit	rect	2
+block	overflow	overflow	rect	3
+block	short	short	rect	1
+drawn	yes
+label	also_overflow
+label	fit
+label	overflow
+label	short

@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f846d3eb35b250fc
+accept	yes
+drawn	yes
+element	a	system	internal	A
+element	b	system	internal	B
+label	A
+label	B
+label	HTTPS
+label	Makes API calls to
+label	Relationship technology and description
+rel	a	b	one	Makes API calls to	HTTPS
+title	Relationship technology and description

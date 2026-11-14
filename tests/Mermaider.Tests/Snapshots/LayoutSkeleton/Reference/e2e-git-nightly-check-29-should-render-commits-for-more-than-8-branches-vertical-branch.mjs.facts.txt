@@ -1,0 +1,53 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2a6f16398a0e6501
+accept	yes
+branch	branch1
+branch	branch2
+branch	branch3
+branch	branch4
+branch	branch5
+branch	branch6
+branch	branch7
+branch	branch8
+branch	branch9
+branch	main
+commit	0	main	normal			1-abcdefg
+commit	1	branch1	normal			2-abcdefg
+commit	10	main	merge		branch5
+commit	11	branch6	normal			7-abcdefg
+commit	12	main	merge		branch6
+commit	13	branch7	normal			8-abcdefg
+commit	14	main	merge		branch7
+commit	15	branch8	normal			9-abcdefg
+commit	16	main	merge		branch8
+commit	17	branch9	normal			10-abcdefg
+commit	2	main	merge		branch1
+commit	3	branch2	normal			3-abcdefg
+commit	4	main	merge		branch2
+commit	5	branch3	normal			4-abcdefg
+commit	6	main	merge		branch3
+commit	7	branch4	normal			5-abcdefg
+commit	8	main	merge		branch4
+commit	9	branch5	normal			6-abcdefg
+drawn	yes
+label	1-abcdefg
+label	10-abcdefg
+label	2-abcdefg
+label	3-abcdefg
+label	4-abcdefg
+label	5-abcdefg
+label	6-abcdefg
+label	7-abcdefg
+label	8-abcdefg
+label	9-abcdefg
+label	branch1
+label	branch2
+label	branch3
+label	branch4
+label	branch5
+label	branch6
+label	branch7
+label	branch8
+label	branch9
+label	main

@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5d14c5c8bf929df5
+accept	yes
+drawn	yes
+icon	Root / Child	mdi:fire
+label	Child
+label	Root
+node	Root	default
+node	Root / Child	rect

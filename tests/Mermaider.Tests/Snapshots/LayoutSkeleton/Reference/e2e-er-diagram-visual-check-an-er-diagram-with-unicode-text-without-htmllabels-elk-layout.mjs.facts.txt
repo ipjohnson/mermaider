@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3cb59ec0ee0c7f85
+accept	yes
+attribute	_**testẽζ➕Ø😀㌕ぼ**_	*__List~List~int~~sdfds__*	**driversLicense**	PK	***The l😀icense #***
+attribute	_**testẽζ➕Ø😀㌕ぼ**_	*string(99)~T~~~~~~*	firstName		Only __99__ characters are a llowed dsfsdfsdfsdfs
+attribute	_**testẽζ➕Ø😀㌕ぼ**_	int	_age_
+attribute	_**testẽζ➕Ø😀㌕ぼ**_	string	__phone__	UK
+attribute	_**testẽζ➕Ø😀㌕ぼ**_	string	last*Name*
+drawn	yes
+entity	_**testẽζ➕Ø😀㌕ぼ**_	_**testẽζ➕Ø😀㌕ぼ**_
+label	***The l😀icense #***
+label	**driversLicense**
+label	*__List~List~int~~sdfds__*
+label	*string(99)~T~~~~~~*
+label	Only __99__ characters are a llowed dsfsdfsdfsdfs
+label	_**testẽζ➕Ø😀㌕ぼ**_
+label	__phone__
+label	_age_
+label	firstName
+label	int
+label	last*Name*
+label	string
+label	string

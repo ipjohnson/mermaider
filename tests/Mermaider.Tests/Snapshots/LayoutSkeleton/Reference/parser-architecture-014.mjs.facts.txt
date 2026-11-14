@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fbccf5f036ad8943
+accept	no
+# error align row references [ghost], which is not a service or junction

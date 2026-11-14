@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 923294d4de5fa94a
+accept	yes
+drawn	yes
+label	Bounce Rate
+label	Click-through Rate
+label	Conversion Rate
+label	Engagement
+label	Metrics
+node	Metrics
+node	Metrics / Bounce Rate	0.672
+node	Metrics / Click-through Rate	0.129
+node	Metrics / Conversion Rate	0.057
+node	Metrics / Engagement	0.452

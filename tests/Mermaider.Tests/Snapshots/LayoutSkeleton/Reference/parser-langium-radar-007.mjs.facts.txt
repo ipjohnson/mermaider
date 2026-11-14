@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d88192b83a2d842a
+accept	no
+# error Parsing failed:  Parse error on line 2, column 39: Expecting token of type '{' but found `

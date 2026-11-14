@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3a674412bb0ff823
+accept	no
+# error Metadata property 'animate' is invalid for boundary 'sb1' at line 2, column 41 [53,60)

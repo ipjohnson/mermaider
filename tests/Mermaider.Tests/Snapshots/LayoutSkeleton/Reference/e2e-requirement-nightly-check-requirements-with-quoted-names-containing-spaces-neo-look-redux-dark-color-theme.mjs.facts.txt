@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 44a6f72f0d4f3127
+accept	yes
+drawn	yes
+element	test harness component	test suite	docs/test_harness.md
+label	1
+label	docs/test_harness.md
+label	system performance requirement
+label	test harness component
+label	test suite
+label	the system shall meet performance targets.
+label	verifies
+relation	test harness component	system performance requirement	verifies
+requirement	system performance requirement	requirement	1	the system shall meet performance targets.	medium	test

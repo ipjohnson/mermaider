@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 750e5833e05ee4c3
+accept	yes
+drawn	yes
+label	Basic xychart
+label	category 2
+label	category1
+label	category3
+label	this is x axis
+label	yaxisText
+orientation	horizontal
+series	bar	13,42,56.89
+series	bar	23,45,56.6
+series	line	11,45.5,67
+series	line	45,99,12
+title	Basic xychart
+x-axis	this is x axis	category1,category 2,category3
+y-axis	yaxisText

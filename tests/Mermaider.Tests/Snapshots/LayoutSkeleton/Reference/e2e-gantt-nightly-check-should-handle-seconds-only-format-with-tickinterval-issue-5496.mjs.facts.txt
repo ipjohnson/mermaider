@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source dfb240d9594adcf8
+accept	yes
+drawn	yes
+label	Network Request
+label	RTT
+section	Network Request
+task	Network Request	RTT	rtt	2000-01-01 00:00	2000-01-01 00:00

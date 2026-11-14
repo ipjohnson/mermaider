@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1a2baf7df47e9c01
+accept	yes
+drawn	yes
+entity	A	A
+entity	B	B
+entity	C	C
+label	A
+label	B
+label	C
+label	likes
+label	likes
+label	likes
+relation	A	B	one	one-or-more	identifying	likes
+relation	B	C	one	one-or-more	identifying	likes
+relation	C	A	one	one-or-more	identifying	likes

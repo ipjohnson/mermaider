@@ -1,0 +1,45 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 548f98f0a32bfaa4
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+actor	C	C	participant
+actor	D	D	participant
+actor	E	E	participant
+actor	G	G	participant
+bbox	label	Complete	343.8	595.8	412.2	613.3
+bbox	label	Return	354	201.8	402	219.3
+bbox	label	Return	954	427.8	1002	445.3
+bbox	label	Task 1	146.9	93.8	193.1	111.3
+bbox	label	Task 2	348.9	157.8	395.1	175.3
+bbox	label	Task 3	348.9	255.8	395.1	273.3
+bbox	label	Task 4	746.9	319.8	793.1	337.3
+bbox	label	Task 5	948.9	383.8	995.1	401.3
+bbox	label	Task 6	856.9	481.8	903.1	499.3
+bbox	node	A	0	0	150	73
+bbox	node	A	0	639	150	712
+bbox	node	B	200	0	350	73
+bbox	node	B	200	639	350	712
+bbox	node	C	400	0	550	73
+bbox	node	C	400	639	550	712
+bbox	node	D	600	0	750	73
+bbox	node	D	600	639	750	712
+bbox	node	E	800	0	950	73
+bbox	node	E	800	639	950	712
+bbox	node	G	1000	0	1150	73
+bbox	node	G	1000	639	1150	712
+block	rect
+block	rect
+block	rect
+canvas	-50	-10	1200	753
+drawn	yes
+message	A	B	solid	filled	Task 1
+message	A	D	solid	filled	Task 3
+message	B	C	solid	filled	Task 2
+message	C	B	dashed	filled	Return
+message	D	A	dashed	filled	Complete
+message	D	E	solid	filled	Task 4
+message	E	E	solid	filled	Task 6
+message	E	G	solid	filled	Task 5
+message	G	E	dashed	filled	Return

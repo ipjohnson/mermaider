@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6b468d3f0c347a95
+accept	yes
+bbox	group	Namespace1	12	95	412.6	341
+bbox	node	C1	330.6	236	372.5	317
+bbox	note	This is a inner note	36	143	166.3	176
+bbox	note	This is a inner note for C1	216.3	143	388.6	176
+bbox	note	This is a outer note	143	12	274.1	45
+bbox	note	This is a outer note for C1	314.1	12	487.1	45
+canvas	4	4	495.1	349
+class	C1	C1
+drawn	yes
+namespace	Namespace1	C1,note2,note3
+note		This is a inner note
+note		This is a outer note
+note	C1	This is a inner note for C1
+note	C1	This is a outer note for C1

@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 16fb3ea1a3ba93b5
+accept	no
+# error Note target 'Auth' must be an actor or use case, not boundary at line 5, column 10 [52,56); previous declaration at line 2, column 16 [28,32)

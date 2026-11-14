@@ -1,0 +1,28 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2f33960772f20a70
+accept	yes
+drawn	yes
+edge	Alive	Dead	none	arrow	solid
+edge	Dead	Alive	none	arrow	solid
+edge	Off	On	none	arrow	solid	Turn on
+edge	Off2	On2	none	arrow	solid	Turn on
+edge	On	Off	none	arrow	solid	Turn off
+edge	On2	Off2	none	arrow	solid	Turn off
+edge	On2	Playing	none	arrow	solid
+edge	TV	Console	none	arrow	solid
+edge	[*]start@Console	Off2	none	arrow	solid	Off to start with
+edge	[*]start@TV	Off	none	arrow	solid	Off to start with
+edge	[*]start@root	TV	none	arrow	solid
+group	Console	Console	Off2,On2,Playing,[*]start@Console
+group	Playing	Playing	Alive,Dead
+group	TV	TV	Off,On,[*]start@TV
+node	Alive	Alive	rounded
+node	Dead	Dead	rounded
+node	Off	Off	rounded
+node	Off2	Off2	rounded
+node	On	On	rounded
+node	On2	On2	rounded
+node	[*]start@Console		sm-circ
+node	[*]start@TV		sm-circ
+node	[*]start@root		sm-circ

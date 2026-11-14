@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 248a8bde768b095b
+accept	no
+# error Parsing failed:  Parse error on line 2, column 24: Expecting token of type 'INT' but found `xyz`.

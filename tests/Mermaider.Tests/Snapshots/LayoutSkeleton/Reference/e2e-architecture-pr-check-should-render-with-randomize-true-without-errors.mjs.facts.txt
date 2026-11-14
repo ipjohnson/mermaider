@@ -1,0 +1,74 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 75f29a101b163df9
+accept	yes
+drawn	yes
+edge	asp	R	web	L	none	arrow
+edge	nsg	R	asp	L	none	arrow
+edge	pe1	R	storage	L	none	arrow
+edge	pe2	R	bus	L	none	arrow
+edge	reg	B	web	T	none	arrow
+edge	storage	B	container	T	none	arrow
+edge	vm1	R	pe2	L	none	arrow
+edge	web	B	pe2	T	none	arrow
+edge	web	R	pe1	L	none	arrow
+group	env	Environment	sub2
+group	shared	Shared	sub2
+group	snet1	App Subnet	vnet
+group	snet2	PE Subnet	vnet
+group	sub1	Subscription A
+group	sub2	Subscription B
+group	vnet	VNet	env
+group	vnet1	VNet A	sub1
+icon	asp	server
+icon	bus	server
+icon	client	internet
+icon	container	disk
+icon	dns	server
+icon	env	cloud
+icon	nsg	server
+icon	pe1	server
+icon	pe2	server
+icon	reg	database
+icon	shared	cloud
+icon	snet1	cloud
+icon	snet2	cloud
+icon	storage	disk
+icon	sub1	cloud
+icon	sub2	cloud
+icon	vm1	server
+icon	vnet	cloud
+icon	vnet1	cloud
+icon	web	server
+label	App Plan
+label	App Subnet
+label	Client
+label	Container
+label	DNS Zone
+label	Environment
+label	NSG
+label	PE Blob
+label	PE Bus
+label	PE Subnet
+label	Registry
+label	Service Bus
+label	Shared
+label	Storage
+label	Subscription A
+label	Subscription B
+label	VM
+label	VNet
+label	VNet A
+label	Web App
+service	asp	App Plan	snet1
+service	bus	Service Bus	env
+service	client	Client
+service	container	Container	env
+service	dns	DNS Zone	env
+service	nsg	NSG	snet1
+service	pe1	PE Blob	snet2
+service	pe2	PE Bus	snet2
+service	reg	Registry	shared
+service	storage	Storage	env
+service	vm1	VM	vnet1
+service	web	Web App	snet1

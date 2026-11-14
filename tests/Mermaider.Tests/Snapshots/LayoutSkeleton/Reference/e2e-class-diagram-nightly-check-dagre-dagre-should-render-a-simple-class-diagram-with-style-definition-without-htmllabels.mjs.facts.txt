@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 813c0221b1087444
+accept	yes
+bbox	node	Class10	8	8	84.9	84
+canvas	0	0	92.9	92
+class	Class10	Class10
+drawn	yes

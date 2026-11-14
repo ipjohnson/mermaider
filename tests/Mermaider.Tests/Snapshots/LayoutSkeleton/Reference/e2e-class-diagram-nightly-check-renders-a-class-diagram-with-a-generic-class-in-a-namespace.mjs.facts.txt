@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2bdf732b122fe46b
+accept	yes
+bbox	group	Company	12	12	347.8	369
+bbox	group	Company.Project	36	60	323.8	345	Company
+bbox	group	Company.Project.Module	60	108	299.8	321	Company.Project
+bbox	node	GenericClass	84	156	275.8	297
+canvas	4	4	355.8	377
+class	GenericClass	GenericClass<T>
+drawn	yes
+method	GenericClass	+addItem(item: T)
+method	GenericClass	+getItem() : T
+namespace	Company	Company.Project
+namespace	Company.Project	Company.Project.Module
+namespace	Company.Project.Module	GenericClass

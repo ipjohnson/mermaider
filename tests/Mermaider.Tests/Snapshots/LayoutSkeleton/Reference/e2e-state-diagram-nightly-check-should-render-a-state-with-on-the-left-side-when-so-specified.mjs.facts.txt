@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 203bc05d8fa5afc4
+accept	yes
+drawn	yes
+node	State1	The state with a note with minus - and plus + in it	rounded
+note	State1	Important information! You can write notes with . and in them.

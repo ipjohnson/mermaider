@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c39a0b6319699213
+accept	yes
+drawn	yes
+label	Model A
+label	Model B
+label	Model C
+label	Model Sizes
+label	Parameters
+orientation	horizontal
+series	line	20,50,90
+title	Model Sizes
+x-axis		Model A,Model B,Model C
+y-axis	Parameters

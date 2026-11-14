@@ -1,0 +1,33 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3dfefbf81bd09658
+accept	yes
+drawn	yes
+label	0
+label	1
+label	2
+label	a
+label	b
+label	c
+label	character
+label	character
+label	digit
+label	digit
+label	digit
+label	false
+label	letter
+label	letter
+label	null
+label	number
+label	number
+label	string
+label	string
+label	true
+label	value
+rule	character	(<letter> | <digit>)
+rule	digit	("0" | "1" | "2")
+rule	letter	("a" | "b" | "c")
+rule	number	{<digit>}1..
+rule	string	(""" {<character>}0.. """)
+rule	value	(<string> | <number> | "true" | "false" | "null")
+title	JSON Subset

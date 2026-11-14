@@ -1,0 +1,30 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 94669fa45a654bbd
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+actor	C	C	participant
+bbox	label	0	471.5	342.1	480.5	359.2
+bbox	label	1	167.5	94.1	176.5	111.2
+bbox	label	1	471.5	203.1	480.5	220.2
+bbox	label	Return	154	476.1	202	493.2
+bbox	label	critical	381	147	431	182
+bbox	label	no	462.7	275	489.3	292.2
+bbox	label	yes	484.1	151	517.9	168.4
+bbox	node	A	0	0	150	73
+bbox	node	A	0	519	150	592
+bbox	node	B	200	0	350	73
+bbox	node	B	200	519	350	592
+bbox	node	C	400	0	550	73
+bbox	node	C	400	519	550	592
+block	critical	yes
+block	rect
+block	rect
+canvas	-50	-10	631	633
+divider	no
+drawn	yes
+message	A	B	solid	filled	1
+message	B	A	solid	filled	Return
+message	C	C	solid	filled	0
+message	C	C	solid	filled	1

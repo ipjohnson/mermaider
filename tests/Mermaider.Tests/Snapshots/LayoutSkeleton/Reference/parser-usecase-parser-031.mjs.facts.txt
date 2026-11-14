@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 09e260d890b2b3c4
+accept	no
+# error Note target 'link' must be an actor or use case, not edge at line 3, column 10 [35,39); previous declaration at line 2, column 3 [15,19)

@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 87e0bba1f640bdc8
+accept	yes
+attribute	HOTEL	string	address
+attribute	HOTEL	string	check-in date	PK	ISO 8601
+attribute	HOTEL	string	geo.accuracy
+attribute	ROOM	int	room.number
+attribute	ROOM	string	bed.type
+drawn	yes
+entity	HOTEL	HOTEL
+entity	ROOM	ROOM
+label	HOTEL
+label	ISO 8601
+label	ROOM
+label	address
+label	bed.type
+label	check-in date
+label	geo.accuracy
+label	has
+label	int
+label	room.number
+label	string
+label	string
+label	string
+label	string
+relation	HOTEL	ROOM	one	zero-or-more	identifying	has

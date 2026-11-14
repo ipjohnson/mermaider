@@ -1,0 +1,68 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5b1587184abc4813
+accept	yes
+drawn	yes
+element	elem_0	system
+element	elem_1	system
+element	elem_2	system
+element	elem_3	system
+element	elem_4	system
+element	elem_5	system
+element	elem_6	system
+label	0
+label	1
+label	2
+label	3
+label	4
+label	5
+label	6
+label	contains
+label	copies
+label	derives
+label	elem_0
+label	elem_1
+label	elem_2
+label	elem_3
+label	elem_4
+label	elem_5
+label	elem_6
+label	refines
+label	req 0.
+label	req 1.
+label	req 2.
+label	req 3.
+label	req 4.
+label	req 5.
+label	req 6.
+label	req_0
+label	req_1
+label	req_2
+label	req_3
+label	req_4
+label	req_5
+label	req_6
+label	satisfies
+label	system
+label	system
+label	system
+label	system
+label	system
+label	system
+label	system
+label	traces
+label	verifies
+relation	elem_0	req_0	contains
+relation	elem_1	req_1	copies
+relation	elem_2	req_2	derives
+relation	elem_3	req_3	satisfies
+relation	elem_4	req_4	verifies
+relation	elem_5	req_5	refines
+relation	elem_6	req_6	traces
+requirement	req_0	requirement	0	req 0.	low	test
+requirement	req_1	requirement	1	req 1.	low	test
+requirement	req_2	requirement	2	req 2.	low	test
+requirement	req_3	requirement	3	req 3.	low	test
+requirement	req_4	requirement	4	req 4.	low	test
+requirement	req_5	requirement	5	req 5.	low	test
+requirement	req_6	requirement	6	req 6.	low	test

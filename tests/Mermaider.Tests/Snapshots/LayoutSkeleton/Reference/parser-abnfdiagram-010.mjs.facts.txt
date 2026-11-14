@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ce307bcc03a48c3e
+accept	yes
+drawn	yes
+label	ALPHA
+label	ALPHA
+label	DIGIT
+label	URI
+label	authority
+label	hier-part
+label	hier-part
+label	path-abempty
+label	scheme
+label	scheme
+rule	URI	(<scheme> ":" <hier-part>)
+rule	hier-part	("//" <authority> <path-abempty>)
+rule	scheme	(<ALPHA> {(<ALPHA> | <DIGIT> | "+" | "-" | ".")}0..)
+title	URI

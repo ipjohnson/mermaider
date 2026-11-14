@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 89a5d23aee98fddb
+accept	yes
+bbox	group	Company	12	12	715.4	369
+bbox	group	Company.Project	36	60	691.4	345	Company
+bbox	group	Company.Project.Module	60	108	312.1	321	Company.Project
+bbox	node	Admin	84	156	288.1	297
+bbox	node	User	362.1	144	667.4	285
+canvas	4	4	723.4	377
+class	Admin	Admin
+class	User	User
+drawn	yes
+method	Admin	+addUser(user: User)
+method	Admin	+removeUser(user: User)
+method	User	+login(username: String, password: String)
+method	User	+logout()
+namespace	Company	Company.Project
+namespace	Company.Project	Company.Project.Module,User
+namespace	Company.Project.Module	Admin

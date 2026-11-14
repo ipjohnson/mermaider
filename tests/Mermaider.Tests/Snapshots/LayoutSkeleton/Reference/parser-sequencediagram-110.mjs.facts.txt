@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9096ddb20609feee
+accept	yes
+actor	boundary	boundary	boundary
+bbox	label	test	63.1	94.1	88.9	111.2
+bbox	node	boundary	20	0	108.4	67.4
+bbox	node	boundary	20	173	108.4	240.4
+canvas	-50	-10	201	281
+drawn	yes
+message	boundary	boundary	solid	none	test

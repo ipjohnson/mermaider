@@ -1,0 +1,49 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d92f0ab04e0d536a
+accept	yes
+drawn	yes
+label	CEL
+label	DEX
+label	DevCon
+label	ETHBoston
+label	Events
+label	Exit
+label	History zkSNARK
+label	OVM
+label	Plasma
+label	Plasma Calls & updates
+label	Plasma Implementation (Rust)
+label	Plasma call 26
+label	Plasma call 27
+label	Plasma call 28
+label	PlasmaIntegration
+label	PredicateSpec
+label	Predicates (Atomic Swap)
+label	Projects Timeline
+label	Rollup
+label	asdf
+label	plasma-chamber
+label	specs
+section	CEL
+section	DEX
+section	Events
+section	Plasma Calls & updates
+section	asdf
+task	CEL	Plasma Implementation (Rust)	por	2019-06-20 00:00	2019-10-18 00:00
+task	CEL	Predicates (Atomic Swap)	pred	2019-07-20 00:00	2019-09-18 00:00
+task	CEL	plasma-chamber	:pc	2019-05-20 00:00	2019-07-19 00:00	done
+task	DEX	Exit	vs	2019-09-19 00:00	2019-11-18 00:00
+task	DEX	History zkSNARK	hs	2019-08-10 00:00	2019-09-19 00:00
+task	DEX	PlasmaIntegration	pi	2019-09-21 00:00	2019-10-31 00:00
+task	DEX	PredicateSpec	ps	2019-09-01 00:00	2019-09-21 00:00
+task	Events	DevCon	:dc	2019-10-08 00:00	2019-10-11 00:00	active
+task	Events	ETHBoston	:eb	2019-09-08 00:00	2019-09-11 00:00	done
+task	Plasma Calls & updates	OVM	ovm	2019-07-12 00:00	2019-11-09 00:00
+task	Plasma Calls & updates	Plasma call 26	pc26	2019-08-21 00:00	2019-08-22 00:00
+task	Plasma Calls & updates	Plasma call 27	pc27	2019-09-03 00:00	2019-09-04 00:00
+task	Plasma Calls & updates	Plasma call 28	pc28	2019-09-17 00:00	2019-09-18 00:00
+task	asdf	Plasma	pc	2019-06-20 00:00	2019-08-19 00:00
+task	asdf	Rollup	or	2019-08-20 00:00	2019-10-09 00:00
+task	asdf	specs	:ps	2019-05-10 00:00	2019-06-29 00:00	done
+title	Projects Timeline

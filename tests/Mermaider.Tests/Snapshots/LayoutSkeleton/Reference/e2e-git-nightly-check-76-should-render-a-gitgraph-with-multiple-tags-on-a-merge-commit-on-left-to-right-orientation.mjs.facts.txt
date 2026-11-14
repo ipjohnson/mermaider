@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 03d8c22b9cd9bf2a
+accept	yes
+branch	develop
+branch	main
+commit	0	main	normal			ZERO
+commit	1	develop	normal			A
+commit	2	main	normal			ONE
+commit	3	develop	normal			B
+commit	4	main	merge	SAML v2.0,OpenID v1.1	develop	Release 1.0
+commit	5	main	normal			TWO
+commit	6	develop	normal			C
+drawn	yes
+label	A
+label	B
+label	C
+label	ONE
+label	OpenID v1.1
+label	Release 1.0
+label	SAML v2.0
+label	TWO
+label	ZERO
+label	develop
+label	main

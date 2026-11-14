@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5b2fa49fc779d92e
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+bbox	label	Dotted cross	129.1	218.1	218.9	235.2
+bbox	label	Dotted open arrow	108.2	130.1	239.8	147.3
+bbox	label	Solid arrow	135	262.1	215	279.2
+bbox	label	Solid cross	134.9	174.1	213.1	191.2
+bbox	label	Solid open arrow	114	86.1	234	103.3
+bbox	node	Alice	0	0	150	65
+bbox	node	Alice	0	305	150	370
+bbox	node	Bob	200	0	350	65
+bbox	node	Bob	200	305	350	370
+canvas	-50	-10	400	381
+drawn	yes
+message	Alice	Bob	dashed	cross	Dotted cross
+message	Alice	Bob	dashed	filled	Dotted open arrow
+message	Alice	Bob	solid	cross	Solid cross
+message	Alice	Bob	solid	filled	Solid open arrow
+message	Alice	Bob	solid	none	Solid arrow

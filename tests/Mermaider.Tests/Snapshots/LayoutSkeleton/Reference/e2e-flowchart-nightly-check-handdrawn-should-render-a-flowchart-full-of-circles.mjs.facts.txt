@@ -1,0 +1,39 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5e462ad4376490ca
+accept	yes
+drawn	yes
+edge	35	39	none	arrow	solid
+edge	35	45	none	arrow	solid
+edge	35	47	none	arrow	solid
+edge	36	39	none	arrow	solid
+edge	37	48	none	arrow	solid
+edge	38	47	none	arrow	solid
+edge	39	40	none	arrow	solid
+edge	39	41	none	arrow	solid
+edge	39	42	none	arrow	solid
+edge	39	43	none	arrow	solid
+edge	40	47	none	arrow	solid
+edge	41	44	none	arrow	solid
+edge	41	45	none	arrow	solid
+edge	41	47	none	arrow	solid
+edge	42	47	none	arrow	solid
+edge	43	47	none	arrow	solid
+edge	44	47	none	arrow	solid
+edge	45	46	none	arrow	solid
+edge	46	47	none	arrow	solid
+edge	47	48	none	arrow	solid
+node	35	SAM.CommonFA.PopulationFME	rounded
+node	36	SAM.CommonFA.PremetricCost	rounded
+node	37	SAM.CommonFA.BudgetSubserviceLineVolume	rounded
+node	38	SAM.CommonFA.CommonFAFinanceRefund	rounded
+node	39	SAM.CommonFA.ChargeDetails	rounded
+node	40	SAM.CommonFA.OPVisits	rounded
+node	41	SAM.CommonFA.MetricCost	rounded
+node	42	SAM.CommonFA.CommonFAFinanceNurseryDays	rounded
+node	43	SAM.CommonFA.CommonFAFinancePicuDays	rounded
+node	44	SAM.CommonFA.MetricOutliers	rounded
+node	45	SAM.CommonFA.MetricPreOpportunity	rounded
+node	46	SAM.CommonFA.MetricOpportunity	rounded
+node	47	SAM.CommonFA.FMESummary	rounded
+node	48	SAM.CommonFA.CommonFAFinanceBudget	rounded

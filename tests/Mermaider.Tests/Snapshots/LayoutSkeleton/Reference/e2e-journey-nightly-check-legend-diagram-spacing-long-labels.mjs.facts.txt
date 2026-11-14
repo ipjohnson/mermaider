@@ -1,0 +1,34 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source dc499b08daad0644
+accept	yes
+drawn	yes
+label	Darkoob
+label	Darkoob
+label	Darkoob user
+label	Darkoob userf deliberately increasing the size of this label to check if distance between legend and diagram is maintained
+label	DarkoobAPI
+label	External Service
+label	External Service
+label	Make preBuilt
+label	Map slug to a Prebuilt Job
+label	Web hook life cycle
+label	admin Exjjjnjjjj qwerty
+label	call darkoob endpoint
+label	check for inputs
+label	listen to the events
+label	register slug
+label	run the prebuilt job
+label	set Darkoob slug as hook for an Event
+section	Darkoob
+section	Darkoob
+section	External Service
+task	Darkoob	Make preBuilt	5	Darkoob user
+task	Darkoob	Map slug to a Prebuilt Job	5	Darkoob user
+task	Darkoob	check for inputs	5	DarkoobAPI
+task	Darkoob	register slug	5	Darkoob userf deliberately increasing the size of this label to check if distance between legend and diagram is maintained
+task	Darkoob	run the prebuilt job	5	DarkoobAPI
+task	External Service	call darkoob endpoint	5	External Service
+task	External Service	listen to the events	5	External Service
+task	External Service	set Darkoob slug as hook for an Event	5	admin Exjjjnjjjj qwerty
+title	Web hook life cycle

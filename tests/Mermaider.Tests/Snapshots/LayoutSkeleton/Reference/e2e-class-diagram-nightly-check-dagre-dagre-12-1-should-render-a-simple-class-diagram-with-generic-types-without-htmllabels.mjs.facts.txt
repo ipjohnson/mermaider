@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9a39837a8afe1418
+accept	yes
+attribute	Class10	List<int> ids
+attribute	Class10	int[] id
+bbox	node	Class10	8	8	253.8	166
+canvas	0	0	261.8	174
+class	Class10	Class10<T>
+drawn	yes
+method	Class10	test(List<int> ids) : List<bool>
+method	Class10	testArray() : bool[]

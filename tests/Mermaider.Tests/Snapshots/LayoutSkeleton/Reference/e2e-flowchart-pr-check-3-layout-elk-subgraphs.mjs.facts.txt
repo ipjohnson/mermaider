@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5efd39abba7d2514
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid
+edge	B	E	none	arrow	solid
+edge	C	D	none	arrow	solid
+edge	E	F	none	arrow	solid
+group	Auth	Auth	E,F
+group	Backend	Backend	C,D
+group	Frontend	Frontend	A,B
+node	A	Client	rect
+node	B	Cache	rect
+node	C	API	rect
+node	D	Database	cyl
+node	E	Auth Service	rect
+node	F	Sessions	cyl

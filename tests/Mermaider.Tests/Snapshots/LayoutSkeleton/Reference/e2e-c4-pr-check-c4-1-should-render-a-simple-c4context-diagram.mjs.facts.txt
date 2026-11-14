@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a36ef92fe3052d0f
+accept	yes
+boundary	b0	enterprise	BankBoundary0
+boundary	b1	enterprise	BankBoundary	b0
+drawn	yes
+element	SystemAA	system	internal	Internet Banking System		Allows customers to view information about their bank accounts, and make payments.	b0
+element	SystemC	system	external	E-mail system		The internal Microsoft Exchange e-mail system.	b1
+element	customerA	person	internal	Banking Customer A		A customer of the bank, with personal bank accounts.	b0
+label	A customer of the bank, with personal bank accounts.
+label	Allows customers to view information about their bank accounts, and make payments.
+label	BankBoundary
+label	BankBoundary0
+label	Banking Customer A
+label	E-mail system
+label	Internet Banking System
+label	SMTP
+label	Sends e-mails
+label	Sends e-mails to
+label	System Context diagram for Internet Banking System
+label	The internal Microsoft Exchange e-mail system.
+label	Uses
+rel	SystemAA	SystemC	one	Sends e-mails	SMTP
+rel	SystemC	customerA	one	Sends e-mails to
+rel	customerA	SystemAA	both	Uses
+title	System Context diagram for Internet Banking System

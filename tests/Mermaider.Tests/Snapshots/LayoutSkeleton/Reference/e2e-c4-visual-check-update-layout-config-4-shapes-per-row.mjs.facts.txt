@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5cb0b6e1428f225d
+accept	yes
+drawn	yes
+element	a	system	internal	A
+element	b	system	internal	B
+element	c	system	internal	C
+element	d	system	internal	D
+label	A
+label	B
+label	C
+label	D
+label	UpdateLayoutConfig ($c4ShapeInRow=4)
+title	UpdateLayoutConfig ($c4ShapeInRow=4)

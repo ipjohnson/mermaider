@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f6191d86b05c8b65
+accept	yes
+drawn	yes
+element	*my italicized name*	**Bolded type** _italicized type_	*Italicized* __Bolded__
+label	**Bolded text** _italicized text_
+label	**Bolded type** _italicized type_
+label	*Italicized* __Bolded__
+label	*my italicized name*
+label	1
+label	__my bolded name__
+requirement	__my bolded name__	requirement	1	**Bolded text** _italicized text_	high	test

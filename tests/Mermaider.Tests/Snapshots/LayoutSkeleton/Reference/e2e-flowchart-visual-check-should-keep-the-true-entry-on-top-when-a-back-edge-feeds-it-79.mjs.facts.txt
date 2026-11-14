@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 725504fa514cd8dc
+accept	yes
+drawn	yes
+edge	decide	end_decision	none	arrow	solid
+edge	end_decision	format_json	none	arrow	solid	Yes
+edge	end_decision	stockholm	none	arrow	solid	No
+edge	new_york	san_francisco	none	arrow	solid
+edge	san_francisco	decide	none	arrow	solid
+edge	stockholm	new_york	none	arrow	solid
+node	decide	Propose a meeting slot	rect
+node	end_decision	End?	diam
+node	format_json	Format JSON	rect
+node	new_york	Check New York time	rect
+node	san_francisco	Check San Francisco time	rect
+node	stockholm	Check the current local time in Stockholm	rect

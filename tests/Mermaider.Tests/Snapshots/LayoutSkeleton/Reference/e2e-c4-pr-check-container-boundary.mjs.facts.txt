@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source aa0726000d5d6327
+accept	yes
+boundary	b	container	Container
+drawn	yes
+element	c	component	internal	Component	Tech	inside the container boundary	b
+label	Component
+label	Container
+label	Container boundary
+label	Tech
+label	inside the container boundary
+title	Container boundary

@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 779ad9e916d73161
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Charlie	Charlie	participant
+bbox	label	Cross arrow self-reference	181	389.2	371	408.2
+bbox	label	Dotted arrow self-reference	175.3	167.2	376.7	186.2
+bbox	label	Dotted cross self-reference	378.2	463.2	573.8	482.2
+bbox	label	Dotted open arrow self-reference	-44.6	315.2	196.6	334.2
+bbox	label	Open arrow self-reference	381.1	241.2	570.9	260.2
+bbox	label	Solid arrow self-reference	-17.5	93.2	169.5	112.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	537	150	610
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	537	350	610
+bbox	node	Charlie	400	0	550	73
+bbox	node	Charlie	400	537	550	610
+canvas	-80	-10	612	651
+drawn	yes
+message	Alice	Alice	dashed	none	Dotted open arrow self-reference
+message	Alice	Alice	solid	filled	Solid arrow self-reference
+message	Bob	Bob	dashed	filled	Dotted arrow self-reference
+message	Bob	Bob	solid	cross	Cross arrow self-reference
+message	Charlie	Charlie	dashed	cross	Dotted cross self-reference
+message	Charlie	Charlie	solid	none	Open arrow self-reference

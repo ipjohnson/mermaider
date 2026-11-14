@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5ad23b30c3d239ad
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Charlie	Charlie	participant
+bbox	label	Central connection	337.3	130.1	470.7	147.2
+bbox	label	Dual central connection	103.4	218.1	270.6	235.2
+bbox	label	Normal cross message	322.2	262.1	485.8	279.5
+bbox	label	Normal dotted message	210.1	174.1	379.9	191.5
+bbox	label	Normal message	124.5	86.1	245.5	103.5
+bbox	node	Alice	0	0	150	65
+bbox	node	Alice	0	305	150	370
+bbox	node	Bob	223	0	373	65
+bbox	node	Bob	223	305	373	370
+bbox	node	Charlie	437	0	587	65
+bbox	node	Charlie	437	305	587	370
+canvas	-50	-10	637	381
+drawn	yes
+message	Alice	Bob	dashed	filled-both	Dual central connection
+message	Alice	Bob	solid	filled	Normal message
+message	Bob	Charlie	solid	cross	Normal cross message
+message	Bob	Charlie	solid	filled	Central connection
+message	Charlie	Alice	dashed	filled	Normal dotted message

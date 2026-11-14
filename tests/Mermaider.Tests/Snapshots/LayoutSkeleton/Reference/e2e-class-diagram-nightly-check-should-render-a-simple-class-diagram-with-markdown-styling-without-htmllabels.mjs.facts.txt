@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5a86817fa7425085
+accept	yes
+attribute	Class10	+attribute italic
+attribute	Class10	~attribute bold
+bbox	node	Class10	12	12	157.8	208
+canvas	4	4	165.8	216
+class	Class10	Class10
+drawn	yes
+method	Class10	+ swim () : a
+method	Class10	+quack() : test
+method	Class10	boldmethod ()
+method	Class10	italicmethod ()

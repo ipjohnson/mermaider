@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a0022fd277a817cc
+accept	no
+# error The service [db]'s parent does not exist. Please make sure the parent is created before this service

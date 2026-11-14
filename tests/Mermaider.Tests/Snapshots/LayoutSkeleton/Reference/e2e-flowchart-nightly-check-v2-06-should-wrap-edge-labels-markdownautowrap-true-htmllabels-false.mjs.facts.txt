@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1a1c65163ec96b5c
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid	Plain text **labels** inflowcharts will autowrap,likenode labels.Newline characters work too.
+edge	B	C	none	arrow	solid	Markdown edge labels willautowrap, unlessmarkdownAutoWrap: false isset
+node	A	This is a really longline of plain textthat will autowrapand supportnewlines too.	rect
+node	B	This is a really longline of markdowntext that willautowrap, unlessmarkdownAutoWrap:false is set.	rect
+node	C	C	rect

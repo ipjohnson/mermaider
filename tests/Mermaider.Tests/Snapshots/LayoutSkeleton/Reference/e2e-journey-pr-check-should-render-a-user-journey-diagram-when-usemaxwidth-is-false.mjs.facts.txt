@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9c587a03aa6be23f
+accept	yes
+drawn	yes
+label	Add payment details
+label	Add to cart
+label	Checkout from website
+label	E-Commerce
+label	Me
+label	Order from website
+section	Checkout from website
+section	Order from website
+task	Checkout from website	Add payment details	5	Me
+task	Order from website	Add to cart	5	Me
+title	E-Commerce

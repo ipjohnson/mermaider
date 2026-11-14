@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0613188926072df0
+accept	yes
+drawn	yes
+label	hello world
+label	rule
+rule	rule	"hello world"

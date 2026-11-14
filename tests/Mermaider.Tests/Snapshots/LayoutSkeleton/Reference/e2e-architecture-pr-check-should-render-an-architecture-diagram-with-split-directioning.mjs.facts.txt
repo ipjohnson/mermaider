@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a3d9d522c50bb49b
+accept	yes
+drawn	yes
+edge	db	L	s3	R	none	none
+edge	serv1	L	s3	T	none	none
+edge	serv1	T	disk	B	none	none
+edge	serv2	L	s3	B	none	none
+icon	db	database
+icon	disk	disk
+icon	s3	disk
+icon	serv1	server
+icon	serv2	server
+label	Database
+label	Disk
+label	Server 1
+label	Server 2
+label	Storage
+service	db	Database
+service	disk	Disk
+service	s3	Storage
+service	serv1	Server 1
+service	serv2	Server 2

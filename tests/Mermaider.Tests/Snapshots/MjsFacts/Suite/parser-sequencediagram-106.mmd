@@ -1,0 +1,5 @@
+sequenceDiagram
+    actor lead-actor@{ "type" : "database" }
+    participant order-svc@{ "type" : "queue" }
+    actor kebab-case@{ "type" : "control" } as Kebab-Cased
+    participant web-ui@{ "type" : "entity" } as Web UI

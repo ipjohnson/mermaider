@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 888e780602033e2d
+accept	yes
+attribute	Dummy_Class	String data
+attribute	Flight	departureTime : Date
+attribute	Flight	flightNumber : Integer
+bbox	node	Dummy_Class	12	12	189.3	147
+bbox	node	Flight	229.3	12	407	147
+canvas	4	4	415	155
+class	Dummy_Class	Dummy_Class<T>
+class	Flight	Flight
+drawn	yes
+method	Dummy_Class	void methods()

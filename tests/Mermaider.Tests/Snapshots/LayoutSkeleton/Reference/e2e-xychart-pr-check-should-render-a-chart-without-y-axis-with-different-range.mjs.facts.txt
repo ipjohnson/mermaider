@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c36ea36eca005186
+accept	yes
+drawn	yes
+label	Months
+label	apr
+label	aug
+label	dec
+label	feb
+label	jan
+label	jul
+label	jun
+label	mar
+label	may
+label	nov
+label	oct
+label	sep
+series	bar	5000,6000,7500,8200,9500,10500,14000,3200,9200,9900,3400,6000
+series	line	2000,7000,6500,9200,9500,7500,11000,10200,3200,8500,7000,8800
+x-axis	Months	jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec
+y-axis

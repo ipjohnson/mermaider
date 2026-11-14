@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e83976b523a89181
+accept	yes
+actor	User	User	normal
+direction	LR
+drawn	yes
+label	Login
+label	Logout
+label	User
+relation	User	Login	association	none	arrow		1
+relation	User	Logout	association	none	arrow		1
+usecase	Login	Login	ellipse
+usecase	Logout	Logout	ellipse

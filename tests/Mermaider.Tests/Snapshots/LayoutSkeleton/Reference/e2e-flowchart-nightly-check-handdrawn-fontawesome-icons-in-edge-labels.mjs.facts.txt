@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a0725e07cecd9a98
+accept	yes
+drawn	yes
+edge	C	F	none	arrow	solid	Car
+icon	F	fa:fa-car
+node	C	C	rect
+node	F	Car	rect

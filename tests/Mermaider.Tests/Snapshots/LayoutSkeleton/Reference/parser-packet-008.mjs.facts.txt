@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b749604700c1e116
+accept	no
+# error Packet block 18 - 20 is not contiguous. It should start from 17.

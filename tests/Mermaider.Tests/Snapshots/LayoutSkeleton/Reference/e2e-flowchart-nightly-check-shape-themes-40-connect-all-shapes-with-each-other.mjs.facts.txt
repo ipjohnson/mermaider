@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 989599b86a73509a
+accept	yes
+drawn	yes
+edge	n00	n11	none	arrow	solid
+edge	n00	n22	none	arrow	solid
+edge	n00	n33	none	arrow	solid
+edge	n00	n44	none	arrow	solid
+edge	n11	n22	none	arrow	solid
+edge	n11	n33	none	arrow	solid
+edge	n11	n44	none	arrow	solid
+edge	n22	n33	none	arrow	solid
+edge	n22	n44	none	arrow	solid
+edge	n33	n44	none	arrow	solid
+node	n00		anchor
+node	n11	This is a label for lean-r shape	lean-r
+node	n22	This is a label for lean-l shape	lean-l
+node	n33	This is a label for trap-t shape	trap-t
+node	n44	This is a label for trap-b shape	trap-b

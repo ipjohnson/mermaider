@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e75871cb288fa639
+accept	yes
+drawn	yes
+edge	c1	c2	none	arrow	solid
+edge	c2	c3	none	arrow	solid
+edge	c3	cb	none	arrow	solid
+edge	circles	doubles	none	none	invisible
+edge	ct	c1	none	arrow	solid
+edge	d1	d2	none	arrow	solid
+edge	d2	d3	none	arrow	solid
+edge	d3	db	none	arrow	solid
+edge	dt	d1	none	arrow	solid
+group	circles	circle	c1,c2,c3,cb,ct
+group	doubles	dbl-circ	d1,d2,d3,db,dt
+node	c1	a	circle
+node	c2	Circle	circle
+node	c3	A considerably longer circle label that wraps	circle
+node	cb	End	rounded
+node	ct	Start	rect
+node	d1	a	dbl-circ
+node	d2	Circle	dbl-circ
+node	d3	A considerably longer circle label that wraps	dbl-circ
+node	db	End	rounded
+node	dt	Start	rect

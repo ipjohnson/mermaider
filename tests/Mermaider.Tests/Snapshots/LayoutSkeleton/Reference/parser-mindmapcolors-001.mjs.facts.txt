@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a87ea9462a152168
+accept	yes
+drawn	yes
+label	Leaf A
+label	Leaf B
+label	Leaf C
+label	Owner A
+label	Owner B
+label	Repo A
+label	Repo B
+label	Root
+node	Root	circle
+node	Root / Owner A	hex
+node	Root / Owner A / Repo A	rect
+node	Root / Owner A / Repo A / Leaf A	rect
+node	Root / Owner A / Repo A / Leaf B	rect
+node	Root / Owner B	hex
+node	Root / Owner B / Repo B	rect
+node	Root / Owner B / Repo B / Leaf C	rect

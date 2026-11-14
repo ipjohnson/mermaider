@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 83ac558208fd3bda
+accept	yes
+actor	A	A	normal
+actor	B	B	normal
+direction	LR
+drawn	yes
+label	A
+label	A use case between the two actors
+label	B
+usecase	Middle	A use case between the two actors	ellipse

@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9d51e104745d6908
+accept	yes
+drawn	yes
+edge	broken	B	none	arrow	solid
+edge	mermaid	v10	none	arrow	solid
+edge	mermaid	v11	none	arrow	solid
+edge	v10	fine	none	arrow	solid	< 1 1
+edge	v11	broken	none	arrow	solid	= v11
+group	subgraph1	How to fix fix	B,broken
+node	B	B	rect
+node	a	1.	rect
+node	b	- x	rect
+node	broken	Affected byhttps://github.com/mermaid-js/mermaid/issues/5824	rect
+node	fine	No bug	rect
+node	githost	Github, Gitlab,BitBucket, etc.	rect
+node	githost2	Github, Gitlab,BitBucket, etc.	rect
+node	mermaid	What isyourmermaidversion?	diam
+node	v10	<11	rect
+node	v11	= v11	rect

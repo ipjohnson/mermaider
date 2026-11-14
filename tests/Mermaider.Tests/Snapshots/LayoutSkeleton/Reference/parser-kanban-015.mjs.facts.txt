@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 562eb2dce611cbb5
+accept	yes
+card	root	child1	String containing ()
+column	root	String containing []
+drawn	yes
+label	String containing ()
+label	String containing []

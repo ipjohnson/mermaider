@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 94406dde78fdac8e
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+bbox	label	This is a bidirectional message	99.6	94.1	318.4	111.5
+bbox	label	This is a normal message	117.9	138.1	300.1	155.5
+bbox	node	A	0	0	150	73
+bbox	node	A	0	181	150	254
+bbox	node	B	267	0	417	73
+bbox	node	B	267	181	417	254
+canvas	-50	-10	467	295
+drawn	yes
+message	A	B	solid	filled-both	This is a bidirectional message
+message	A	B	solid	none	This is a normal message

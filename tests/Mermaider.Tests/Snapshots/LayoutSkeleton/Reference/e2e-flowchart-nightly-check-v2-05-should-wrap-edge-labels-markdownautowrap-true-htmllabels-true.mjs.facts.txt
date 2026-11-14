@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2c4f2a29464b0271
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid	Plain text **labels** in flowcharts will autowrap,like node labels. Newline characters work too.
+edge	B	C	none	arrow	solid	Markdown edge labels will autowrap, unless markdownAutoWrap: false is set
+node	A	This is a really long line of plain text that will autowrap and support newlines too.	rect
+node	B	This is a really long line of markdown text that will autowrap, unless markdownAutoWrap:false is set.	rect
+node	C	C	rect

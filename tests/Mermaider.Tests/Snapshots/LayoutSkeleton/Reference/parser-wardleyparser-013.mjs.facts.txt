@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 22eb14393b0f15cf
+accept	yes
+drawn	yes
+label	end-user
+label	real-time processing
+node	end-user	end-user	component	90	80
+node	real-time processing	real-time processing	component	50	50

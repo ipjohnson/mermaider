@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 32755f0e130d6618
+accept	yes
+drawn	yes
+element	c	container	internal	Container	Tech	A container
+element	cdb	container_db	internal	ContainerDb	Tech	A database container
+element	cdbe	container_db	external	ContainerDb_Ext	Tech	An external database container
+element	ce	container	external	Container_Ext	Tech	An external container
+element	cq	container_queue	internal	ContainerQueue	Tech	A queue container
+element	cqe	container_queue	external	ContainerQueue_Ext	Tech	An external queue container
+label	A container
+label	A database container
+label	A queue container
+label	An external container
+label	An external database container
+label	An external queue container
+label	Container
+label	Container variants
+label	ContainerDb
+label	ContainerDb_Ext
+label	ContainerQueue
+label	ContainerQueue_Ext
+label	Container_Ext
+label	Tech
+label	Tech
+label	Tech
+label	Tech
+label	Tech
+label	Tech
+title	Container variants

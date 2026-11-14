@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fd82f5e428fdfe5e
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid	(((((−b±b2−4ac2a)))))
+edge	A	C	none	arrow	solid	a+b+c⏞note
+edge	B	D	none	arrow	solid
+edge	C	E	none	arrow	solid
+node	A	f(x)=∫−∞∞f^(ξ) e2πiξx dξ	rect
+node	B	1+e−2π1+e−4π1+e−6π1+e−8π1+⋯	rounded
+node	C	−78∘	rounded
+node	D	x={aif b cif d	rounded
+node	E	x(t)=c1[−cos⁡t+sin⁡t 2cos⁡t]e2t	rounded

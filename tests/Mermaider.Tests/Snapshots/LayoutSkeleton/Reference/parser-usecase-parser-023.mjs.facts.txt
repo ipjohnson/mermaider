@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 44608ba2e8334bf4
+accept	no
+# error include relationship requires use-case endpoints at line 4, column 6 [41,60)

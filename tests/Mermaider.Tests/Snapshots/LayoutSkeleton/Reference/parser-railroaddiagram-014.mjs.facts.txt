@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9a83ce38e4694adb
+accept	yes
+drawn	yes
+label	0
+label	1
+label	2
+label	3
+label	4
+label	5
+label	6
+label	7
+label	8
+label	9
+label	digit
+label	digit
+label	number
+rule	digit	("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")
+rule	number	{<digit>}1..

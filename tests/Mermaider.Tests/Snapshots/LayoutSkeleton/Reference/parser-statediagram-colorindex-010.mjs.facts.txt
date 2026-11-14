@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 330b2d93e12c5899
+accept	yes
+drawn	yes
+edge	Loop	Exit	none	arrow	solid
+edge	Loop	Loop	none	arrow	solid
+edge	[*]start@Exit	Bye	none	arrow	solid
+edge	[*]start@Loop	Spin	none	arrow	solid
+edge	[*]start@root	Loop	none	arrow	solid
+group	Exit	Exit	Bye,[*]start@Exit
+group	Loop	Loop	Spin,[*]start@Loop
+node	Bye	Bye	rounded
+node	Spin	Spin	rounded
+node	[*]start@Exit		sm-circ
+node	[*]start@Loop		sm-circ
+node	[*]start@root		sm-circ

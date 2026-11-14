@@ -1,0 +1,46 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 611fe7429bd035b0
+accept	yes
+actor	B	B	boundary
+actor	C	C	control
+actor	COL	COL	collections
+actor	DB	DB	database
+actor	E	E	entity
+actor	FE	FE	participant
+actor	LongNameUser	LongNameUser	participant
+actor	Q	Q	queue
+bbox	label	Another long message	597.9	93.4	758	112.4
+bbox	label	Final response with confirmation of all actions taken	1088.9	523.4	1455.1	542.4
+bbox	label	Forward	942.7	479.4	1001.3	498.4
+bbox	label	Log	558.6	435.4	585.4	454.4
+bbox	label	Process data	731.3	215.4	824.7	234.4
+bbox	label	Response message that is also quite long and needs to wrap	455.9	171.4	888.1	190.4
+bbox	label	Save	453.8	347.4	490.2	366.4
+bbox	label	Save result	438	391.4	518	410.4
+bbox	label	Validate	343.7	259.4	400.3	278.4
+bbox	label	Validation result	321.7	303.4	434.3	322.4
+bbox	label	line breaks	639.3	128.4	716.7	147.4
+bbox	label	with explicit	637.1	110.4	718.9	129.4
+bbox	node	B	20	0	97	68
+bbox	node	B	20	573	97	641
+bbox	node	C	253	0	297	68
+bbox	node	C	253	573	297	641
+bbox	node	COL	800	0	950	67
+bbox	node	COL	800	567	950	634
+bbox	node	FE	1200	0	1350	73
+bbox	node	FE	1200	567	1350	640
+bbox	node	LongNameUser	1400	0	1550	73
+bbox	node	LongNameUser	1400	567	1550	640
+canvas	-50	-10	1600	681
+drawn	yes
+message	B	FE	dashed	filled	Response message that is also quite long and needs to wrap
+message	C	COL	solid	filled	Log
+message	C	DB	solid	filled	Save
+message	C	E	solid	filled	Validate
+message	COL	Q	dashed	filled	Forward
+message	DB	C	dashed	filled	Save result
+message	E	C	dashed	filled	Validation result
+message	FE	B	solid	filled	Another long message with explicit line breaks
+message	FE	C	solid	filled	Process data
+message	Q	LongNameUser	dashed	filled	Final response with confirmation of all actions taken

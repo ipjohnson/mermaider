@@ -1,0 +1,30 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2b20e24b4d205113
+accept	yes
+bbox	node	C1	12.2	12.6	102.4	96.9
+bbox	node	C10	1288.9	12.4	1439.3	96.9
+bbox	node	C11	1479.1	12.7	1631	97.1
+bbox	node	C12	1671.4	12.4	1863.5	97.2
+bbox	node	C13	1903.2	12.3	2112.4	97.2
+bbox	node	C2	142.5	12.5	261.1	97
+bbox	node	C3	300.6	12.3	431.5	97.2
+bbox	node	C4	472.4	12.5	603.3	97.1
+bbox	node	C5	643	12.3	775.4	97.1
+bbox	node	C7	815.3	12.5	940.8	96.8
+bbox	node	C8	980.4	12.3	1104	97.1
+bbox	node	C9	1144	12.7	1248.3	97
+canvas	4.2	4.3	2120.4	105.2
+class	C1	OneWord
+class	C10	With _ underscore
+class	C11	With ' single quote
+class	C12	With ~!@#$%^&*()_+=-/?
+class	C13	With Città foreign language
+class	C2	With, Comma
+class	C3	With (Brackets)
+class	C4	With [Brackets]
+class	C5	With {Brackets}
+class	C7	With 1 number
+class	C8	With . period...
+class	C9	With - dash
+drawn	yes

@@ -1,0 +1,44 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f0c5bc53bd140f3c
+accept	yes
+actor	AuthService	AuthService	control
+actor	MongoDB	MongoDB	database
+actor	OrderController	OrderController	control
+actor	OrderQueue	OrderQueue	queue
+actor	Product	Product	entity
+actor	Products	Products	collections
+actor	UI	UI	boundary
+actor	User	User	actor
+bbox	label	Authentication token	302.6	181.4	447.4	200.4
+bbox	label	Available	750.7	313.4	815.3	332.4
+bbox	label	Check availability	715.3	269.4	838.7	288.4
+bbox	label	Login request	226.6	93.4	323.4	112.4
+bbox	label	Order confirmation	714.8	489.4	847.2	508.4
+bbox	label	Order saved	839	401.4	927	420.4
+bbox	label	Place order	536.1	225.4	618.1	244.4
+bbox	label	Process payment	1015.3	445.4	1138.7	464.4
+bbox	label	Save order	837.9	357.4	916.3	376.4
+bbox	label	Validate credentials	311.8	137.4	450.2	156.4
+bbox	node	AuthService	231.9	0	318.1	68
+bbox	node	AuthService	231.9	539	318.1	607
+bbox	node	OrderController	624.9	0	735.3	68
+bbox	node	OrderController	624.9	539	735.3	607
+bbox	node	Products	1205	0	1355	67
+bbox	node	Products	1205	533	1355	600
+bbox	node	UI	425	0	502	68
+bbox	node	UI	425	539	502	607
+bbox	node	User	58.1	0	92.1	68
+bbox	node	User	58.1	539	92.1	607
+canvas	-50	-10	1605	647
+drawn	yes
+message	AuthService	UI	dashed	filled	Authentication token
+message	MongoDB	OrderController	dashed	filled	Order saved
+message	OrderController	MongoDB	solid	filled	Save order
+message	OrderController	OrderQueue	solid	filled	Process payment
+message	OrderController	Product	solid	filled	Check availability
+message	OrderQueue	User	dashed	filled	Order confirmation
+message	Product	OrderController	dashed	filled	Available
+message	UI	AuthService	solid	filled	Validate credentials
+message	UI	OrderController	solid	filled	Place order
+message	User	UI	solid	filled	Login request

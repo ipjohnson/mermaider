@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8c6efc27547fc975
+accept	yes
+actor	Admin	Main Administrator	hollow	yes	Human
+actor	System_Administrator	System Administrator	normal
+actor	__Automation__	Automation	normal
+direction	LR
+drawn	yes
+label	Automation
+label	Generate report
+label	Human
+label	Main Administrator
+label	Markdown use case
+label	Primary
+label	Reset password
+label	Sign in
+label	System Administrator
+usecase	Login	Sign in	ellipse		Primary
+usecase	Report	Generate report	rect
+usecase	Reset_password	Reset password	ellipse
+usecase	__Markdown___use_case	Markdown use case	ellipse

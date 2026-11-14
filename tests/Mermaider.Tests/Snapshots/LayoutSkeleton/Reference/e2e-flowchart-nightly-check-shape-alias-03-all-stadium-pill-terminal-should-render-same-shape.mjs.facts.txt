@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5e52a9a22ef65b16
+accept	yes
+drawn	yes
+node	n0	stadium	stadium
+node	n1	pill	stadium
+node	n2	terminal	stadium

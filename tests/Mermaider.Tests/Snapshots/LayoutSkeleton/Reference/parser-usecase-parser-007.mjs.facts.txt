@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4b00380908e4a8fc
+accept	yes
+actor	Second	Second	normal
+direction	LR
+drawn	yes
+label	Done
+label	Second
+label	Second note
+note	Done	Second note
+relation	Second	Done	association	none	arrow		1
+usecase	Done	Done	ellipse

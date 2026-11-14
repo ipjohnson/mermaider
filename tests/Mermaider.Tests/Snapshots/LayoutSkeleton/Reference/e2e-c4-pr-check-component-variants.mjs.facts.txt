@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a729f646f13208a4
+accept	yes
+drawn	yes
+element	c	component	internal	Component	Tech	A component
+element	cdb	component_db	internal	ComponentDb	Tech	A database component
+element	cdbe	component_db	external	ComponentDb_Ext	Tech	An external database component
+element	ce	component	external	Component_Ext	Tech	An external component
+element	cq	component_queue	internal	ComponentQueue	Tech	A queue component
+element	cqe	component_queue	external	ComponentQueue_Ext	Tech	An external queue component
+label	A component
+label	A database component
+label	A queue component
+label	An external component
+label	An external database component
+label	An external queue component
+label	Component
+label	Component variants
+label	ComponentDb
+label	ComponentDb_Ext
+label	ComponentQueue
+label	ComponentQueue_Ext
+label	Component_Ext
+label	Tech
+label	Tech
+label	Tech
+label	Tech
+label	Tech
+label	Tech
+title	Component variants

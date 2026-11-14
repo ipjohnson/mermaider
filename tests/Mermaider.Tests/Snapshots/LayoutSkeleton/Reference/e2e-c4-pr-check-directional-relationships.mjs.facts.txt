@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 53704fccb9830d99
+accept	yes
+drawn	yes
+element	a	system	internal	A
+element	b	system	internal	B
+element	c	system	internal	C
+element	d	system	internal	D
+element	e	system	internal	E
+label	A
+label	B
+label	C
+label	D
+label	E
+label	Rel (default)
+label	Rel_D
+label	Rel_L
+label	Rel_R
+label	Rel_U
+label	Relationship directions
+rel	a	b	one	Rel (default)
+rel	a	c	one	Rel_U
+rel	a	d	one	Rel_D
+rel	a	e	one	Rel_L
+rel	b	c	one	Rel_R
+title	Relationship directions

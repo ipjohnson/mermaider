@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2ac6fab015b8396d
+accept	yes
+attribute	Foo1	--
+attribute	Foo1	..
+attribute	Foo1	==
+attribute	Foo1	End of class
+attribute	Foo1	You can have as many groups
+attribute	Foo1	You can use
+attribute	Foo1	__
+attribute	Foo1	and group
+attribute	Foo1	as you want
+attribute	Foo1	as you want
+attribute	Foo1	several lines
+attribute	Foo1	things together.
+attribute	User	-- encrypted --
+attribute	User	.. Simple Getter ..
+attribute	User	.. Some setter ..
+attribute	User	String password
+attribute	User	__ private data __
+attribute	User	int age
+bbox	node	Foo1	12	12	240.6	357
+bbox	node	User	280.6	43.5	432.2	325.5
+canvas	4	4	440.2	365
+class	Foo1	Foo1
+class	User	User
+drawn	yes
+method	User	+ getAddress()
+method	User	+ getName()
+method	User	+ setName()

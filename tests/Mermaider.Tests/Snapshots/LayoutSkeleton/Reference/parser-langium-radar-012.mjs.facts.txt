@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4909d8cc851ba03c
+accept	no
+# error Parsing failed:  Parse error on line 3, column 30: Expecting token of type '}' but found `ax2`.

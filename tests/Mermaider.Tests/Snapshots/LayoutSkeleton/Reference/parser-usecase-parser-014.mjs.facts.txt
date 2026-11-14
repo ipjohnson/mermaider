@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0d22453f15c55cf1
+accept	no
+# error Generated ID 'A_B' collides with another declaration at line 3, column 2 [20,23) (label "A B"); previous declaration at line 2, column 2 [14,17) (label "A-B")

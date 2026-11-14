@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9156ed52d68c78cb
+accept	yes
+actor	1	Customer	normal
+actor	1mg	Milligram	normal
+direction	LR
+drawn	yes
+json	4
+label	1
+label	4
+label	Customer
+label	Milligram
+label	Place order
+label	Third party
+label	a
+relation	1	2	association	none	arrow		1
+relation	1mg	3rd	association	none	arrow		1
+relation	2	4	association	none	arrow		1
+row	4	0	a	1
+usecase	2	Place order	ellipse
+usecase	3rd	Third party	ellipse

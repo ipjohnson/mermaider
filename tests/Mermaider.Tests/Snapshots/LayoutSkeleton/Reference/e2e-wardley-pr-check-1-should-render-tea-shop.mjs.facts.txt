@@ -1,0 +1,42 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 85cef20adc3672a4
+accept	yes
+drawn	yes
+label	A generic note appeared
+label	Business
+label	Cup
+label	Cup of Tea
+label	Hot Water
+label	Hot water is obvious and well known
+label	Kettle
+label	Power
+label	Public
+label	Standardising power allows Kettles to evolve faster
+label	Tea
+label	Tea Shop
+label	Water
+link	Business	Cup of Tea		none
+link	Cup of Tea	Cup		none
+link	Cup of Tea	Hot Water		none
+link	Cup of Tea	Tea		none
+link	Hot Water	Kettle		none
+link	Hot Water	Water		none
+link	Kettle	Power		none
+link	Public	Cup of Tea		none
+node	Business	Business	anchor	63	95
+node	Cup	Cup	component	78	73
+node	Cup of Tea	Cup of Tea	component	61	79	19	-4
+node	Hot Water	Hot Water	component	80	52
+node	Kettle	Kettle	component	35	43	-57	4
+node	Power	Power	component	70	10	-27	20
+node	Public	Public	anchor	78	95
+node	Tea	Tea	component	81	63
+node	Water	Water	component	82	38
+note	A generic note appeared	33	23
+note	Hot water is obvious and well known	80	48
+note	Standardising power allows Kettles to evolve faster	49	30
+size	1100	800
+title	Tea Shop
+trend	Kettle	62	43
+trend	Power	89	10

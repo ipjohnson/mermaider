@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6c412c6b3c0e1fee
+accept	yes
+drawn	yes
+label	API
+label	Critical decision point
+label	Test Notes
+node	API	API	component	70	60
+note	Critical decision point	55	65
+title	Test Notes

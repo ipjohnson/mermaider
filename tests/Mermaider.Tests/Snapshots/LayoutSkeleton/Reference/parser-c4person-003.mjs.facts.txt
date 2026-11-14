@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a02ec03dbc3b36ae
+accept	yes
+drawn	yes
+element	customerA	person	internal			A customer of the bank, with personal bank accounts.
+label	A customer of the bank, with personal bank accounts.

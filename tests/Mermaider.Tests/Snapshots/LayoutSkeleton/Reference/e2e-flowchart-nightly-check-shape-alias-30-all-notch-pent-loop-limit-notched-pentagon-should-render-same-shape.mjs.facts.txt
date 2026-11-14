@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e499f36a4443f37c
+accept	yes
+drawn	yes
+node	n0	notch-pent	notch-pent
+node	n1	loop-limit	notch-pent
+node	n2	notched-pentagon	notch-pent

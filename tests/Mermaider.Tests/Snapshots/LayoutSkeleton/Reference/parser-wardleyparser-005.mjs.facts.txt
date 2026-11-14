@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d045651a276236d3
+accept	yes
+boundaries	0.3,0.6,0.85,1
+drawn	yes
+label	A
+label	Commodity
+label	Custom
+label	Genesis
+label	Product
+label	Test Custom Widths
+node	A	A	component	50	50
+stage	0	Genesis
+stage	1	Custom
+stage	2	Product
+stage	3	Commodity
+title	Test Custom Widths

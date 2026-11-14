@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3156c5b273876bc9
+accept	yes
+drawn	yes
+element	customerA	person	internal	[object Object]

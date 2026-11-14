@@ -1,0 +1,10 @@
+sequenceDiagram
+  actor User
+  participant Plain as Plain
+  participant B@{ "type" : "boundary" } as Bound
+  participant C@{ "type" : "control" } as Ctrl
+  participant E@{ "type" : "entity" } as Ent
+  participant DB@{ "type" : "database" } as Database
+  participant Q@{ "type" : "queue" } as Que
+  participant Co@{ "type" : "collections" } as Coll
+  User ->> DB: query

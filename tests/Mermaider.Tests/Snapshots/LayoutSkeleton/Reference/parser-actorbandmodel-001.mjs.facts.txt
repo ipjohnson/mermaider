@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0a925440eb2750e8
+accept	yes
+actor	B	Bound	boundary
+actor	C	Ctrl	control
+actor	Co	Coll	collections
+actor	DB	Database	database
+actor	E	Ent	entity
+actor	Plain	Plain	participant
+actor	Q	Que	queue
+actor	User	User	actor
+bbox	label	query	552	93.4	592	112.4
+bbox	node	B	420	0	498.1	68
+bbox	node	B	420	143	498.1	211
+bbox	node	C	653	0	697	68
+bbox	node	C	653	143	697	211
+bbox	node	Co	1400	0	1550	67
+bbox	node	Co	1400	137	1550	204
+bbox	node	Plain	200	0	350	73
+bbox	node	Plain	200	137	350	210
+bbox	node	User	58.1	0	92.1	68
+bbox	node	User	58.1	143	92.1	211
+canvas	-50	-10	1600	251
+drawn	yes
+message	User	DB	solid	filled	query

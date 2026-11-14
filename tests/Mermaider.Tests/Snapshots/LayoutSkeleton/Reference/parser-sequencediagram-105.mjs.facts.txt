@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source afb1ab930bad1b66
+accept	yes
+actor	API	API	participant
+actor	Database	Database	participant
+actor	dsa	dsa	queue
+actor	lead	lead	participant
+bbox	label	getUserb	537.5	94.1	602.5	111.5
+bbox	label	hello	457.1	182.1	490.9	199.4
+bbox	label	userb	556	138.1	596	155.4
+bbox	node	API	400	0	550	73
+bbox	node	API	400	225	550	298
+bbox	node	Database	600	0	750	73
+bbox	node	Database	600	225	750	298
+bbox	node	lead	0	0	150	73
+bbox	node	lead	0	225	150	298
+canvas	-50	-10	800	339
+drawn	yes
+message	API	Database	solid	filled	getUserb
+message	Database	API	dashed	filled	userb
+message	dsa	Database	dashed	none	hello

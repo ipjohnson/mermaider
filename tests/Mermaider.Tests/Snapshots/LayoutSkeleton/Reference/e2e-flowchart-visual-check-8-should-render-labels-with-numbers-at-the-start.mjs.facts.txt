@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 305c5077895becee
+accept	yes
+drawn	yes
+group	subGraph0	number as labels	1
+node	1	1	rect

@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a0431665b41c1e32
+accept	yes
+annotation	1	65	60	Critical component
+annotation	2	50	50	Performance layer
+annotations	90	10
+drawn	yes
+label	API
+label	Critical component
+label	Performance layer
+label	Test Annotations
+node	API	API	component	70	60
+title	Test Annotations

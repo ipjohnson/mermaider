@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fabdb8ae303c62e1
+accept	yes
+drawn	yes
+element	elem_b	service
+label	2
+label	elem_b
+label	req B with shorthand class.
+label	req_b
+label	service
+label	verifies
+relation	elem_b	req_b	verifies
+requirement	req_b	requirement	2	req B with shorthand class.	high	test

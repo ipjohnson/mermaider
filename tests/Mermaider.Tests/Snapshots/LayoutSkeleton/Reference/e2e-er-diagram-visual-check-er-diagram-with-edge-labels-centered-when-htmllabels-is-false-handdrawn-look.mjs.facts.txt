@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9d69b6885d9b2d5f
+accept	yes
+drawn	yes
+entity	ADDRESS	ADDRESS
+entity	CUSTOMER	CUSTOMER
+entity	INVOICE	INVOICE
+entity	LINE-ITEM	LINE-ITEM
+entity	ORDER	ORDER
+label	ADDRESS
+label	CUSTOMER
+label	INVOICE
+label	LINE-ITEM
+label	ORDER
+label	contains
+label	invoiced at
+label	liable for
+label	places
+label	receives goods at
+relation	CUSTOMER	ADDRESS	one	one-or-more	identifying	invoiced at
+relation	CUSTOMER	ADDRESS	one	one-or-more	identifying	receives goods at
+relation	CUSTOMER	ORDER	one	zero-or-more	identifying	places
+relation	ORDER	INVOICE	one	zero-or-more	identifying	liable for
+relation	ORDER	LINE-ITEM	one	one-or-more	identifying	contains

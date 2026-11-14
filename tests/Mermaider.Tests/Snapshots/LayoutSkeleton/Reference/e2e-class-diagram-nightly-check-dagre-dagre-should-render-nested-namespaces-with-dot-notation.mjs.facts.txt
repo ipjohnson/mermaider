@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source dd7ec050e994f80d
+accept	yes
+bbox	group	Company	0	8	572.8	639
+bbox	group	Company.Engineering	29.5	43	527.3	604	Company
+bbox	group	Company.Engineering.Backend	49.5	334	257.9	554	Company.Engineering
+bbox	group	Company.Engineering.Frontend	277.9	334	507.3	554	Company.Engineering
+bbox	label	leads	137	263	170.4	284
+bbox	label	leads	375.8	263	409.3	284
+bbox	node	Designer	312.9	384	472.3	504
+bbox	node	Developer	84.5	384	222.9	504
+bbox	node	TechLead	204.8	93	341.5	213
+canvas	-8	0	580.8	647
+class	Designer	Designer
+class	Developer	Developer
+class	TechLead	TechLead
+drawn	yes
+method	Designer	+createMockup()
+method	Developer	+writeCode()
+method	TechLead	+planSprint()
+namespace	Company	Company.Engineering
+namespace	Company.Engineering	Company.Engineering.Backend,Company.Engineering.Frontend,TechLead
+namespace	Company.Engineering.Backend	Developer
+namespace	Company.Engineering.Frontend	Designer
+relation	TechLead	Designer	none	arrow	solid	leads
+relation	TechLead	Developer	none	arrow	solid	leads

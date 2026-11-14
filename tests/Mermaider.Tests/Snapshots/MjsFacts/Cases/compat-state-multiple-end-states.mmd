@@ -1,0 +1,7 @@
+stateDiagram-v2
+  [*] --> Active
+  Active --> Inactive : disable
+  Active --> Closed : close
+  Inactive --> Active : reactivate
+  Inactive --> Closed : close
+  Closed --> [*]

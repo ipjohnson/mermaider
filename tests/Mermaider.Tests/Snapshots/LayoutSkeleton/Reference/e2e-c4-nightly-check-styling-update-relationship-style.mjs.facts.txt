@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d898649710215eb3
+accept	yes
+drawn	yes
+element	a	system	internal	A
+element	b	system	internal	B
+label	A
+label	B
+label	UpdateRelStyle
+label	Uses
+rel	a	b	one	Uses
+title	UpdateRelStyle

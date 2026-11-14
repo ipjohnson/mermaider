@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 681fe51dbea155df
+accept	yes
+drawn	yes
+label	catégoría
+label	naïve
+quadrant	1	catégoría
+quadrant	2	naïve

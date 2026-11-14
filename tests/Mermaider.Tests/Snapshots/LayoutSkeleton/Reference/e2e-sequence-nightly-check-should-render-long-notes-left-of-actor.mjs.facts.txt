@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0b4a5e7b4d8fdda8
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+bbox	label	Hola	155.5	93.9	188.5	111.3
+bbox	label	I'm short though	120.9	184.9	235.1	202.5
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	228	150	301
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	228	350	301
+bbox	note	Extremely utterly long line of longness which had previously overflown the actor box as it is much longer than what it should be	-794	127	50	164
+canvas	-844	-10	400	342
+drawn	yes
+message	Alice	Bob	solid	filled	Hola
+message	Bob	Alice	solid	filled	I'm short though
+note	left	Alice	Extremely utterly long line of longness which had previously overflown the actor box as it is much longer than what it should be

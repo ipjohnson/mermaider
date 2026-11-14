@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4c8065692bca3324
+accept	yes
+drawn	yes
+edge	TITLE	A	none	arrow	solid
+edge	TITLE	B	none	arrow	solid
+edge	TITLE	C	none	arrow	solid
+edge	TITLE	D	none	arrow	solid
+edge	TITLE	E	none	arrow	solid
+edge	TITLE	F	none	arrow	solid
+node	A	link test (open in same tab)	rect
+node	B	link test (open in new tab)	rect
+node	C	anchor test	rect
+node	D	mailto test	rect
+node	E	other protocol test	rect
+node	F	script test	rect
+node	TITLE	Link Click Events (click the nodes below)	rect

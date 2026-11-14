@@ -1,0 +1,64 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7319f0e75b2e1686
+accept	yes
+drawn	yes
+edge	1Leftofmid	B	db1	T	none	none
+edge	1Leftofmid	R	mid	L	none	none
+edge	1RightOfMid	B	db4	T	none	none
+edge	1RightOfMid	R	2RightOfMid	L	none	none
+edge	2Leftofmid	B	db2	T	none	none
+edge	2Leftofmid	R	1Leftofmid	L	none	none
+edge	2RightOfMid	B	db5	T	none	none
+edge	2RightOfMid	R	3RightOfMid	L	none	none
+edge	3Leftofmid	B	db3	T	none	none
+edge	3Leftofmid	R	2Leftofmid	L	none	none
+edge	3RightOfMid	B	db6	T	none	none
+edge	edge	R	firewall	L	none	none
+edge	firewall	R	server	L	none	none
+edge	mid	R	1RightOfMid	L	none	none
+edge	server	B	mid	T	none	none
+edge	server1	R	edge	L	none	none
+group	federated	Federated Environment
+group	on_prem	Hub
+icon	db1	database
+icon	db2	database
+icon	db3	database
+icon	db4	database
+icon	db5	database
+icon	db6	database
+icon	edge	server
+icon	federated	cloud
+icon	firewall	server
+icon	on_prem	cloud
+icon	server	server
+icon	server1	server
+junction	1Leftofmid	on_prem
+junction	1RightOfMid	on_prem
+junction	2Leftofmid	on_prem
+junction	2RightOfMid	on_prem
+junction	3Leftofmid	on_prem
+junction	3RightOfMid	on_prem
+junction	mid	on_prem
+label	Edge Device
+label	Federated Environment
+label	Firewall Device
+label	Hub
+label	Server
+label	System
+label	db1
+label	db2
+label	db3
+label	db4
+label	db5
+label	db6
+service	db1	db1	on_prem
+service	db2	db2	on_prem
+service	db3	db3	on_prem
+service	db4	db4	on_prem
+service	db5	db5	on_prem
+service	db6	db6	on_prem
+service	edge	Edge Device	federated
+service	firewall	Firewall Device	on_prem
+service	server	Server	on_prem
+service	server1	System	federated

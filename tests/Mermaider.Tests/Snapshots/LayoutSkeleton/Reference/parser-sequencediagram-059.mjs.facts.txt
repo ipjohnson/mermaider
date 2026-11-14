@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7f9322af85ce7730
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+bbox	label	Are you OK?	151.2	272.1	242.8	289.5
+bbox	label	Fine!	185.2	316.1	220.8	333.2
+bbox	label	Hello Bob, how are you?	109.8	139.1	284.2	156.5
+bbox	label	I am good thanks!	139.4	183.1	266.6	200.5
+bbox	label	It's good!	170.8	449.1	235.2	466.5
+bbox	label	Parallel one	177.8	87	271.2	104.2
+bbox	label	Parallel three	147.9	358	251.1	375.2
+bbox	label	Parallel two	153.7	225	245.3	242.2
+bbox	label	What do you think about it?	100	405.1	294	422.5
+bbox	label	par	64	83	114	118
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	502	150	575
+bbox	node	Bob	249	0	399	73
+bbox	node	Bob	249	502	399	575
+block	par	Parallel one
+canvas	-50	-10	449	616
+divider	Parallel three
+divider	Parallel two
+drawn	yes
+message	Alice	Bob	solid	filled	Are you OK?
+message	Alice	Bob	solid	filled	Hello Bob, how are you?
+message	Alice	Bob	solid	filled	What do you think about it?
+message	Bob	Alice	dashed	filled	Fine!
+message	Bob	Alice	dashed	filled	I am good thanks!
+message	Bob	Alice	dashed	filled	It's good!

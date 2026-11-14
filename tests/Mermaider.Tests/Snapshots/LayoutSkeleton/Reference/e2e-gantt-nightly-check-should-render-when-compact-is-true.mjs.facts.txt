@@ -1,0 +1,43 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 164b5ecfa58534d3
+accept	yes
+drawn	yes
+label	A
+label	B
+label	C
+label	Clean
+label	Clean
+label	Clean
+label	Clean
+label	Clean
+label	Clean
+label	Clean
+label	D
+label	DB Clean
+label	E
+label	F
+label	G
+label	GANTT compact
+label	H
+label	I
+label	Sessions
+section	DB Clean
+section	Sessions
+task	DB Clean	Clean		2000-01-01 12:00	2000-01-01 12:10
+task	DB Clean	Clean		2000-01-01 12:30	2000-01-01 12:42
+task	DB Clean	Clean		2000-01-01 13:00	2000-01-01 13:08
+task	DB Clean	Clean		2000-01-01 13:30	2000-01-01 13:39
+task	DB Clean	Clean		2000-01-01 14:00	2000-01-01 14:13
+task	DB Clean	Clean		2000-01-01 14:30	2000-01-01 14:40
+task	DB Clean	Clean		2000-01-01 15:00	2000-01-01 15:11
+task	Sessions	A		2000-01-01 12:00	2000-01-01 13:03
+task	Sessions	B		2000-01-01 12:30	2000-01-01 12:42
+task	Sessions	C		2000-01-01 13:05	2000-01-01 13:17
+task	Sessions	D		2000-01-01 13:06	2000-01-01 13:39
+task	Sessions	E		2000-01-01 13:15	2000-01-01 14:10
+task	Sessions	F		2000-01-01 13:20	2000-01-01 13:32
+task	Sessions	G		2000-01-01 13:32	2000-01-01 13:50
+task	Sessions	H		2000-01-01 13:50	2000-01-01 14:10
+task	Sessions	I		2000-01-01 14:10	2000-01-01 14:20
+title	GANTT compact

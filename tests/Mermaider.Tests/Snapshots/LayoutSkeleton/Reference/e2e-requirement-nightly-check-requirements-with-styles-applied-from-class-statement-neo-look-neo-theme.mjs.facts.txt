@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a3098c49e8f2a4da
+accept	yes
+drawn	yes
+element	elem_a	module
+label	1
+label	elem_a
+label	module
+label	refines
+label	req A.
+label	req_a
+relation	elem_a	req_a	refines
+requirement	req_a	requirement	1	req A.	low	analysis

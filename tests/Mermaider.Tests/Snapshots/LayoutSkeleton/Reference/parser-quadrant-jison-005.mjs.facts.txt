@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c9b45360f5be9e70
+accept	yes
+axis	x-left	Urgent(* +=[❤
+drawn	yes
+label	Urgent(* +=[❤

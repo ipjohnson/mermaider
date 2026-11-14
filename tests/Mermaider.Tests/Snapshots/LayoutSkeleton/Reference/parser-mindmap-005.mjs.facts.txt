@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f732ab5a9cd2e0d4
+accept	no
+# error There can be only one root. No parent could be found for ("fakeRoot")

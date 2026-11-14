@@ -1,0 +1,73 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4814bc421d5a64bd
+accept	yes
+drawn	yes
+event	Installation (7.5.3)	Installation Activities (7.5.3)
+event	Management Resposibility (5)	Management Reviews (5.6)
+event	Management Resposibility (5)	Planning Activities (5.4)
+event	Post-Market Activities (8)	Adverse Events (8.2.3)
+event	Post-Market Activities (8)	Complaints (8.2.2)
+event	Post-Market Activities (8)	Feedback (8.2.1)
+event	Production (7.5)	Production Activities (7.5.1)
+event	Production (7.5)	Production Feedback (8.2.1)
+event	Purchasing (7.4)	Purchasing Information (7.4.2)
+event	Purchasing (7.4)	Purchasing Process (7.4.1)
+event	Quality Management System (4)	Regulatory Compliance (4.1.1)
+event	Quality Management System (4)	Risk Management (4.1.2)
+event	Research and Development (7.3)	Inputs (7.3.3)
+event	Research and Development (7.3)	Outputs (7.3.4)
+event	Research and Development (7.3)	Review (7.3.5)
+event	Research and Development (7.3)	RnD Planning (7.3.2)
+event	Research and Development (7.3)	Validation (7.3.7)
+event	Research and Development (7.3)	Verification (7.3.6)
+event	Resource Management (6)	Human Resources (6.2)
+event	Resource Management (6)	Infrastructure (6.3)
+event	Servicing (7.5.4)	Servicing Activities (7.5.4)
+label	Adverse Events (8.2.3)
+label	Complaints (8.2.2)
+label	Feedback (8.2.1)
+label	Human Resources (6.2)
+label	Infrastructure (6.3)
+label	Inputs (7.3.3)
+label	Installation (7.5.3)
+label	Installation Activities (7.5.3)
+label	Management Resposibility (5)
+label	Management Reviews (5.6)
+label	Medical Device Lifecycle
+label	Outputs (7.3.4)
+label	Planning
+label	Planning Activities (5.4)
+label	Post-Market Activities (8)
+label	Post-Production
+label	Production (7.5)
+label	Production Activities (7.5.1)
+label	Production Feedback (8.2.1)
+label	Purchasing (7.4)
+label	Purchasing Information (7.4.2)
+label	Purchasing Process (7.4.1)
+label	Quality Management System (4)
+label	Realization
+label	Regulatory Compliance (4.1.1)
+label	Research and Development (7.3)
+label	Resource Management (6)
+label	Review (7.3.5)
+label	Risk Management (4.1.2)
+label	RnD Planning (7.3.2)
+label	Servicing (7.5.4)
+label	Servicing Activities (7.5.4)
+label	Validation (7.3.7)
+label	Verification (7.3.6)
+period	Planning	Management Resposibility (5)
+period	Planning	Quality Management System (4)
+period	Planning	Resource Management (6)
+period	Post-Production	Post-Market Activities (8)
+period	Realization	Installation (7.5.3)
+period	Realization	Production (7.5)
+period	Realization	Purchasing (7.4)
+period	Realization	Research and Development (7.3)
+period	Realization	Servicing (7.5.4)
+section	Planning
+section	Post-Production
+section	Realization
+title	Medical Device Lifecycle

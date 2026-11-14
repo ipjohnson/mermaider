@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9d6f9c01198a0a80
+accept	yes
+drawn	yes
+entity	PERSON	PERSON
+entity	POSSESSION	POSSESSION
+label	PERSON
+label	POSSESSION
+label	owns
+relation	PERSON	POSSESSION	zero-or-more	zero-or-more	non-identifying	owns
