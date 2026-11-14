@@ -921,7 +921,7 @@ internal static class SvgRenderer
 		if (!FlowchartShapeNames.DrawsLabel(node.Shape) && string.IsNullOrEmpty(node.Label))
 			return;
 
-		var (dx, dy) = FlowchartShapes.LabelOffset(node.Shape, node.Height);
+		var (dx, dy) = FlowchartShapes.LabelOffset(node.Shape, node.Width, node.Height);
 		var cx = node.X + (node.Width / 2) + dx;
 		var cy = node.Y + (node.Height / 2) + dy;
 		var textColor = InlineStyleValue(node.InlineStyle, "color") ?? "var(--_text)";

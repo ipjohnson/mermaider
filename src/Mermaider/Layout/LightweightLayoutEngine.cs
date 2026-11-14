@@ -159,6 +159,8 @@ internal static class LightweightLayoutEngine
 		if (graph.SubgraphEdgeRedirections.Count > 0)
 			ClipSubgraphEdges(positioned, graph);
 
+		ShapeOutlineClipper.Clip(positioned);
+
 		if (graph.Notes.Count > 0)
 			positioned = AttachNotes(positioned, graph);
 
