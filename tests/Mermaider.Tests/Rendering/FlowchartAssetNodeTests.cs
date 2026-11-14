@@ -140,7 +140,10 @@ public class FlowchartAssetNodeTests
 		var image = NodeGroup(svg, "A").Descendants().Single(e => e.Name.LocalName == "image");
 		Attr(image, "width").Should().Be(width);
 		Attr(image, "height").Should().Be(height);
-		var viewBox = ((string)XDocument.Parse(svg).Root!.Attribute("viewBox")!).Split(' ').Select(s => double.Parse(s, CultureInfo.InvariantCulture)).ToArray();
+		var viewBox = ((string)XDocument.Parse(svg).Root!.Attribute("viewBox")!)
+			.Split(' ')
+			.Select(s => double.Parse(s, CultureInfo.InvariantCulture))
+			.ToArray();
 		viewBox[2].Should().BeLessThan(1200, "one image node cannot widen the drawing past the cap");
 	}
 
