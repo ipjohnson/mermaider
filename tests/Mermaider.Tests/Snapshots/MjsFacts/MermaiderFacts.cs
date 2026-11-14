@@ -232,6 +232,8 @@ internal static partial class MermaiderFacts
 		NodeShape.TaggedRectangle => "tag-rect",
 		NodeShape.LinedDocument => "lin-doc",
 		NodeShape.CollapsedGroup => "collapsedGroup",
+		// the facts give an icon or image node's frame as rect, and the icon or image as its own fact
+		NodeShape.Icon or NodeShape.Image => "rect",
 		_ => shape.ToString().ToLowerInvariant(),
 	};
 
@@ -314,6 +316,8 @@ internal static partial class MermaiderFacts
 		{
 			var drawn = nodeGroups.TryGetValue(node.Id, out var g) ? DrawnText(g) : Display(node.Label);
 			facts.Add(Fact("node", node.Id, drawn, Shape(node.Shape)));
+			if (node.Asset is { } asset)
+				facts.Add(Fact(asset.Kind == NodeAssetKind.Icon ? "icon" : "image", node.Id, asset.Source));
 		}
 
 		var label = EdgeLabels(doc, "edge-label");

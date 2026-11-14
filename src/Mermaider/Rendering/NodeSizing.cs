@@ -51,8 +51,11 @@ internal static class NodeSizing
 	/// <param name="label">The node's label.</param>
 	/// <param name="shape">The node's shape.</param>
 	/// <param name="acrossFlow">True in a left-to-right or right-to-left flowchart, where a fork bar stands upright.</param>
-	internal static (double Width, double Height) Estimate(string label, NodeShape shape, bool acrossFlow = false)
+	/// <param name="asset">The icon or image of an icon or image node.</param>
+	internal static (double Width, double Height) Estimate(string label, NodeShape shape, bool acrossFlow = false, NodeAsset? asset = null)
 	{
+		if (asset is not null)
+			return NodeAssets.Size(asset, label);
 		if (shape == NodeShape.ForkJoin && acrossFlow)
 			return (8, 120);
 		if (FlowchartShapes.FixedSize(shape) is { } fixedSize)

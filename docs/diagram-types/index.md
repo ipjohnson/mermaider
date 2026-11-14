@@ -11,6 +11,14 @@ Each image below renders the source under it, in the default Quiet style with th
 General-purpose directed graphs (`flowchart` or `graph`). Supports the `TD`, `LR`, `RL` and `BT` directions, nested subgraphs, and the Mermaid node shapes: the bracket forms and every shape name and alias of
 `A@{ shape: doc, label: "Report" }`. A subgraph given `id@{ view: collapsed }` is drawn as one box with its title.
 
+Icon nodes, `A@{ icon: "server", form: "square", label: "API", pos: "t", h: 60 }`, draw an icon from `IconRegistry` with
+its label above (`pos: "t"`) or below it. `form` is `square`, `rounded`, `circle` or none, and `w` and `h` set the icon's
+size (48px by default). An icon the registry does not have draws the `generic` glyph and is reported. Image nodes,
+`A@{ img: "data:image/png;base64,...", label: "Logo", w: 60, h: 60, constraint: "on" }`, draw base64
+`data:image/svg+xml` and `data:image/png` URIs; `constraint: "on"` keeps the image's aspect ratio. An `http(s)` image is
+never fetched and never written to the SVG: it is drawn as a dashed placeholder box with its label, and reported. Reports
+reach `RenderOptions.OnDiagnostics`, and the CLI prints them as warnings.
+
 ![Flowchart](../images/diagrams/flowchart.svg)
 
 ```text

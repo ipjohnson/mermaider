@@ -134,5 +134,11 @@ public enum NodeShape
 	LinedDocument,
 
 	/// <summary>A subgraph given <c>@{ view: collapsed }</c>, drawn as one box with its title.</summary>
-	CollapsedGroup
+	CollapsedGroup,
+
+	/// <summary><c>@{ icon: "fa:user" }</c>: an icon from the <see cref="Icons.IconRegistry"/>, with its label above or below. See <see cref="MermaidNode.Asset"/>.</summary>
+	Icon,
+
+	/// <summary><c>@{ img: "data:image/png;base64,..." }</c>: an image, with its label above or below. See <see cref="MermaidNode.Asset"/>.</summary>
+	Image
 }

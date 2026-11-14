@@ -94,10 +94,6 @@ rs-garbage-line - accept | no
 rs-unclosed-label + accept | yes
 rs-unclosed-label - accept | no
 
-# ipjohnson/mermaider#7: flowchart icon and image nodes draw no icon or image.
-flowchart-icon-image - icon | A | fa:user
-flowchart-icon-image - image | C | https://mermaid.js.org/favicon.svg
-
 # ipjohnson/mermaider#8: FontAwesome references are drawn as their fa:fa-name text instead of an icon, and a mindmap
 # ::icon(...) line becomes a child node.
 flowchart-fa-label + node | B | fa:fa-twitter for peace | rect
@@ -165,10 +161,6 @@ flowchart-fa-label - node | C | forbidden | rect
 # By design: the facts take a flowchart node's label from mermaid.js's DOM, which joins the lines of a Markdown string without a space. Mermaider's facts join them with one.
 docs-flowchart-004 + node | newLines | Line1 Line 2 Line 3 | rect
 docs-flowchart-004 - node | newLines | Line1Line 2Line 3 | rect
-
-# Unsupported, ipjohnson/mermaider#7: flowchart icon and image nodes are not drawn.
-docs-flowchart-069 - icon | A | fa:user
-docs-flowchart-070 - image | A | https://mermaid.js.org/favicon.svg
 
 # ipjohnson/mermaider#5: flowchart edge IDs drop the edge and add a stray node.
 docs-flowchart-086 - edge | A | B | none | arrow | solid

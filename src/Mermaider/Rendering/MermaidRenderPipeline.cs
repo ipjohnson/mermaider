@@ -57,7 +57,10 @@ internal static class MermaidRenderPipeline
 			}
 			token.ThrowIfCancellationRequested();
 
-			return SvgSanitizationStage.Apply(rawSvg, options?.SanitizeMode ?? SanitizeMode.Strip, options?.OnSanitized);
+			var svg = SvgSanitizationStage.Apply(rawSvg, options?.SanitizeMode ?? SanitizeMode.Strip, options?.OnSanitized);
+			if (request.Diagnostics.Count > 0)
+				options?.OnDiagnostics?.Invoke(request.Diagnostics);
+			return svg;
 		}
 		finally
 		{
@@ -111,7 +114,11 @@ internal sealed record NormalizedRenderRequest(
 	RenderOptions? Options,
 	ResourceLimits Limits,
 	CancellationToken CancellationToken
-);
+)
+{
+	/// <summary>Filled by the render stage; handed to <see cref="RenderOptions.OnDiagnostics"/> after sanitizing.</summary>
+	internal List<MermaidDiagnostic> Diagnostics { get; init; } = [];
+}
 
 /// <summary>Normalized rendering inputs shared by every SVG renderer.</summary>
 internal readonly record struct SvgRenderContext(
@@ -443,6 +450,7 @@ internal static class DiagramSvgStage
 					var parsed = MermaidRenderer.ParseInternal(lines, diagramType);
 					ResourceGuard.CheckElements(parsed.Nodes.Count + parsed.Edges.Count, limits);
 					ct.ThrowIfCancellationRequested();
+					request.Diagnostics.AddRange(NodeAssets.Diagnose(parsed));
 
 					// For the built-in layout provider, thread the token and node cap directly into
 					// Sugiyama so hot loops can be interrupted. Custom providers get the pre-call check only.

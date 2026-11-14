@@ -25,7 +25,7 @@ internal static class MsaglFlowchartLayout
 
 		foreach (var (id, node) in graph.Nodes)
 		{
-			var (w, h) = NodeSizing.Estimate(node.Label, node.Shape);
+			var (w, h) = NodeSizing.Estimate(node.Label, node.Shape, asset: node.Asset);
 			var msaglNode = new MsaglNode(CurveFactory.CreateRectangle(w, h, new MsaglPoint(0, 0)), id);
 			msaglNodes[id] = msaglNode;
 			geometryGraph.Nodes.Add(msaglNode);
@@ -105,6 +105,7 @@ internal static class MsaglFlowchartLayout
 				// sized for the wrapped label (NodeSizing.Estimate wraps), so draw the wrapped label like the built-in layout does
 				Label = NodeSizing.WrapLabel(node.Label),
 				Shape = node.Shape,
+				Asset = node.Asset,
 				X = center.X - (w / 2) + offsetX,
 				Y = center.Y - (h / 2) + offsetY,
 				Width = w,
