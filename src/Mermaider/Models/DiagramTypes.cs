@@ -45,6 +45,7 @@ public enum DiagramTypes : long
 	Block = 1L << 22,
 	TreeView = 1L << 23,
 	Usecase = 1L << 24,
+	Wardley = 1L << 25,
 
 	/// <summary>
 	/// Diagram types with stable, non-beta Mermaid syntax.
@@ -55,9 +56,9 @@ public enum DiagramTypes : long
 
 	/// <summary>
 	/// Diagram types that use a <c>-beta</c> keyword in Mermaid source.
-	/// Radar, Treemap, Venn, Sankey, XyChart, Packet, Architecture, Block, TreeView, Usecase.
+	/// Radar, Treemap, Venn, Sankey, XyChart, Packet, Architecture, Block, TreeView, Usecase, Wardley.
 	/// </summary>
-	Beta = Radar | Treemap | Venn | Sankey | XyChart | Packet | Architecture | Block | TreeView | Usecase,
+	Beta = Radar | Treemap | Venn | Sankey | XyChart | Packet | Architecture | Block | TreeView | Usecase | Wardley,
 
 	/// <summary>All diagram types — both <see cref="Stable"/> and <see cref="Beta"/>. This is the default.</summary>
 	All = Stable | Beta,
@@ -92,6 +93,7 @@ internal static class DiagramTypeExtensions
 		DiagramType.Block => DiagramTypes.Block,
 		DiagramType.TreeView => DiagramTypes.TreeView,
 		DiagramType.Usecase => DiagramTypes.Usecase,
+		DiagramType.Wardley => DiagramTypes.Wardley,
 		_ => 0,
 	};
 }

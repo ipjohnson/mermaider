@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0dba7eb5e8a69ad3
+accept	yes
+drawn	yes
+label	Anchors
+label	Business
+label	Customer
+label	Service
+link	Business	Service		none
+link	Customer	Service		none
+node	Business	Business	anchor	90	85
+node	Customer	Customer	anchor	95	90
+node	Service	Service	component	75	70
+title	Anchors

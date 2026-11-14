@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" style="--bg:#18181B;--fg:#FAFAFA;--line:#AFBAC9;--accent:#60a5fa">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, color-mix(in srgb, var(--bg) 35%, black) 55%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, color-mix(in srgb, var(--bg) 35%, black) 35%, transparent)); }
+</style>
+
+<g class="diagram-title">
+  <rect x="48" y="19.5" width="9" height="9" rx="2" ry="2" fill="var(--accent, var(--fg))" />
+  <text x="64" y="24" text-anchor="start" font-size="var(--fs-l)" font-weight="700" fill="var(--_text)" dy="6.3">Tea Shop Value Chain</text>
+</g>
+<g class="wardley-axes">
+  <line x1="48" y1="552" x2="852" y2="552" stroke="var(--_line)" stroke-width="1.25" />
+  <line x1="48" y1="48" x2="48" y2="552" stroke="var(--_line)" stroke-width="1.25" />
+  <text x="450" y="584" text-anchor="middle" font-size="var(--fs-xs)" font-weight="700" fill="var(--_text)" dy="4.2">Evolution</text>
+  <g transform="translate(16 300) rotate(-90)"><text x="0" y="0" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">Visibility</text></g>
+</g>
+<g class="wardley-stages">
+  <text x="148.5" y="564" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text-sec)" dy="4.2">Genesis</text>
+  <line x1="249" y1="48" x2="249" y2="552" stroke="var(--_line)" stroke-width="1" stroke-dasharray="5 4" />
+  <text x="349.5" y="564" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text-sec)" dy="4.2">Custom Built</text>
+  <line x1="450" y1="48" x2="450" y2="552" stroke="var(--_line)" stroke-width="1" stroke-dasharray="5 4" />
+  <text x="550.5" y="564" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text-sec)" dy="4.2">Product</text>
+  <line x1="651" y1="48" x2="651" y2="552" stroke="var(--_line)" stroke-width="1" stroke-dasharray="5 4" />
+  <text x="751.5" y="564" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text-sec)" dy="4.2">Commodity</text>
+</g>
+<g class="edge wardley-link" data-from="Business" data-to="Cup of Tea">
+  <line x1="553.347" y1="79.084" x2="539.613" y2="147.956" stroke="var(--_line)" stroke-width="1.5" />
+</g>
+<g class="edge wardley-link" data-from="Cup of Tea" data-to="Tea">
+  <line x1="543.803" y1="156.53" x2="693.877" y2="231.79" stroke="var(--_line)" stroke-width="1.5" />
+</g>
+<g class="edge wardley-link" data-from="Cup of Tea" data-to="Hot Water">
+  <line x1="542.92" y1="157.831" x2="686.72" y2="285.929" stroke="var(--_line)" stroke-width="1.5" />
+</g>
+<g class="edge wardley-link" data-from="Hot Water" data-to="Kettle">
+  <line x1="685.247" y1="290.666" x2="335.353" y2="334.534" stroke="var(--_line)" stroke-width="1.5" />
+</g>
+<g class="edge wardley-link" data-from="Kettle" data-to="Power">
+  <line x1="334.565" y1="338.333" x2="605.635" y2="498.547" stroke="var(--_line)" stroke-width="1.5" />
+</g>
+<g class="wardley-trend" data-id="Kettle">
+  <line x1="329.4" y1="335.28" x2="538.48" y2="335.28" stroke="var(--accent, var(--fg))" stroke-width="1.25" stroke-dasharray="5 4" marker-end="url(#mf0d69919-mk-arrow-a)" />
+</g>
+<g class="node wardley-node" data-id="Business" data-kind="anchor">
+  <text x="554.52" y="70.2" text-anchor="middle" font-size="var(--fs-s)" font-weight="700" fill="var(--_text)" stroke="var(--bg)" stroke-width="4" stroke-linejoin="round" paint-order="stroke" dy="4.9">Business</text>
+</g>
+<g class="node wardley-node" data-id="Cup of Tea" data-kind="component">
+  <circle cx="538.44" cy="153.84" r="6" fill="var(--bg)" stroke="var(--_text)" stroke-width="1.25" />
+  <text x="546.44" y="141.84" text-anchor="start" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" stroke="var(--bg)" stroke-width="4" stroke-linejoin="round" paint-order="stroke" dy="4.2">Cup of Tea</text>
+</g>
+<g class="node wardley-node" data-id="Tea" data-kind="component">
+  <circle cx="699.24" cy="234.48" r="6" fill="var(--bg)" stroke="var(--_text)" stroke-width="1.25" />
+  <text x="707.24" y="222.48" text-anchor="start" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" stroke="var(--bg)" stroke-width="4" stroke-linejoin="round" paint-order="stroke" dy="4.2">Tea</text>
+</g>
+<g class="node wardley-node" data-id="Hot Water" data-kind="component">
+  <circle cx="691.2" cy="289.92" r="6" fill="var(--bg)" stroke="var(--_text)" stroke-width="1.25" />
+  <text x="699.2" y="277.92" text-anchor="start" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" stroke="var(--bg)" stroke-width="4" stroke-linejoin="round" paint-order="stroke" dy="4.2">Hot Water</text>
+</g>
+<g class="node wardley-node" data-id="Kettle" data-kind="component" data-sourcing="build">
+  <circle cx="329.4" cy="335.28" r="12" fill="color-mix(in srgb, var(--_line) 6%, var(--bg))" stroke="var(--_text)" stroke-width="1" />
+  <circle cx="329.4" cy="335.28" r="6" fill="var(--bg)" stroke="var(--_text)" stroke-width="1.25" />
+  <text x="347.4" y="313.28" text-anchor="start" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" stroke="var(--bg)" stroke-width="4" stroke-linejoin="round" paint-order="stroke" dy="4.2">Kettle</text>
+</g>
+<g class="node wardley-node" data-id="Power" data-kind="component" data-sourcing="market">
+  <circle cx="610.8" cy="501.6" r="12" fill="var(--bg)" stroke="var(--_text)" stroke-width="1" />
+  <line x1="610.8" y1="494.4" x2="604.565" y2="505.2" stroke="var(--_text)" stroke-width="1" />
+  <line x1="604.565" y1="505.2" x2="617.035" y2="505.2" stroke="var(--_text)" stroke-width="1" />
+  <line x1="617.035" y1="505.2" x2="610.8" y2="494.4" stroke="var(--_text)" stroke-width="1" />
+  <circle cx="610.8" cy="494.4" r="4.2" fill="var(--bg)" stroke="var(--_text)" stroke-width="2" />
+  <circle cx="604.565" cy="505.2" r="4.2" fill="var(--bg)" stroke="var(--_text)" stroke-width="2" />
+  <circle cx="617.035" cy="505.2" r="4.2" fill="var(--bg)" stroke="var(--_text)" stroke-width="2" />
+  <text x="628.8" y="479.6" text-anchor="start" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" stroke="var(--bg)" stroke-width="4" stroke-linejoin="round" paint-order="stroke" dy="4.2">Power</text>
+</g>
+<g class="wardley-note">
+  <text x="441.96" y="396.8" text-anchor="start" font-size="var(--fs-xs)" font-weight="700" fill="var(--_text)" stroke="var(--bg)" stroke-width="4" stroke-linejoin="round" paint-order="stroke" dy="4.2">Standardising power lets kettles evolve</text>
+</g>
+<defs>
+  <marker id="mf0d69919-mk-arrow-a" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <polygon points="0,1.5 10,6 0,10.5" fill="var(--accent, var(--fg))" stroke="var(--accent, var(--fg))" stroke-width="1" stroke-linejoin="miter" />
+  </marker>
+</defs>
+</svg>

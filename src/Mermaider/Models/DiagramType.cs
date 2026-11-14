@@ -28,4 +28,5 @@ public enum DiagramType
 	Block,
 	TreeView,
 	Usecase,
+	Wardley,
 }

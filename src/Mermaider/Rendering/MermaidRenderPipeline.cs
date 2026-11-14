@@ -426,6 +426,17 @@ internal static class DiagramSvgStage
 					sb = UsecaseSvgRenderer.RenderToBuilder(parsed, context, ct);
 					break;
 				}
+			case DiagramType.Wardley:
+				{
+					var parsed = WardleyParser.Parse(diagram.Source);
+					ResourceGuard.CheckElements(
+						parsed.Nodes.Count + parsed.Links.Count + parsed.Notes.Count + parsed.Annotations.Count + parsed.Forces.Count + parsed.Trends.Count,
+						limits
+					);
+					ct.ThrowIfCancellationRequested();
+					sb = WardleySvgRenderer.RenderToBuilder(parsed, context);
+					break;
+				}
 			default:
 				{
 					// Flowchart, State — primary Sugiyama path, most DoS-critical

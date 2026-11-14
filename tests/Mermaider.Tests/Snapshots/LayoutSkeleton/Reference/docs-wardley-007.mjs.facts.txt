@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source eaade9886d10fc14
+accept	yes
+drawn	yes
+label	Inertia
+label	Legacy System
+label	New Platform
+link	Legacy System	New Platform		none
+node	Legacy System	Legacy System	component	40	45			yes
+node	New Platform	New Platform	component	45	65
+title	Inertia

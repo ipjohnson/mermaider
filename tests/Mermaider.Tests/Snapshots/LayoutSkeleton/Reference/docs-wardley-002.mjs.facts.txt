@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 30bd5186b8416c3f
+accept	yes
+drawn	yes
+label	Your Map Title
+size	1100	600
+title	Your Map Title

@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bd99ec4274a9f135
+accept	yes
+drawn	yes
+label	API
+label	Database
+label	Evolution
+link	Database	API		none
+node	API	API	component	60	55
+node	Database	Database	component	50	40
+title	Evolution
+trend	API	80	55
+trend	Database	75	40

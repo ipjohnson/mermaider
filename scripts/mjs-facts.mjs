@@ -170,7 +170,7 @@ async function extractFacts(source, name, shapes) {
 		classDiagram: () => { classDiagram(); classBoxes() },
 		sequence: () => { sequence(); sequenceBoxes() },
 		er, pie, quadrantChart: quadrant, timeline, gitGraph, radar, treemap, venn, mindmap, gantt, journey, c4, sankey,
-		xychart, requirement, packet, kanban, architecture, block, treeView, usecase,
+		xychart, requirement, packet, kanban, architecture, block, treeView, usecase, wardley,
 	}
 	const extract = extractors[type]
 	if (!extract) return { unknownType: type }
@@ -517,6 +517,40 @@ async function extractFacts(source, name, shapes) {
 		if (db.getDiagramTitle()) { facts.push(tab('title', decode(db.getDiagramTitle()))); shown.push(decode(db.getDiagramTitle())) }
 		for (const a of db.getAxes()) { facts.push(tab('axis', decode(a.label))); shown.push(decode(a.label)) }
 		for (const c of db.getCurves()) { facts.push(tab('curve', decode(c.label), c.entries.map(num).join(','))); shown.push(decode(c.label)) }
+		labels(shown)
+	}
+
+	// Model: title, size, evolution stages and their boundaries, nodes with kind, position in percent, label offset,
+	// inertia, sourcing and pipeline parent flag, links with dashes, flow and label, trends, pipelines and their members,
+	// notes, annotations, the annotations position, accelerators and deaccelerators. Labels: title, stages, node and link
+	// labels, notes, annotation texts and force names.
+	function wardley() {
+		const d = db.getWardleyData()
+		const shown = []
+		const yes = v => v ? 'yes' : ''
+		const title = db.getDiagramTitle()
+		if (title) { facts.push(tab('title', decode(title))); shown.push(decode(title)) }
+		if (d.size) facts.push(tab('size', num(d.size.width), num(d.size.height)))
+		for (const [i, s] of (d.axes.stages ?? []).entries()) { facts.push(tab('stage', String(i), s)); shown.push(s) }
+		if (d.axes.stageBoundaries?.length) facts.push(tab('boundaries', d.axes.stageBoundaries.map(num).join(',')))
+		for (const n of d.nodes) {
+			facts.push(tab('node', n.id, n.label, n.className, num(n.x), num(n.y), num(n.labelOffsetX), num(n.labelOffsetY), yes(n.inertia), n.sourceStrategy ?? '', yes(n.isPipelineParent)))
+			shown.push(n.label)
+		}
+		for (const l of d.links) {
+			facts.push(tab('link', l.source, l.target, yes(l.dashed), l.flow ?? 'none', l.label ?? ''))
+			shown.push(l.label)
+		}
+		for (const t of d.trends) facts.push(tab('trend', t.nodeId, num(t.targetX), num(t.targetY)))
+		for (const p of d.pipelines) facts.push(tab('pipeline', p.nodeId, p.componentIds.join(',')))
+		for (const n of d.notes) { facts.push(tab('note', n.text, num(n.x), num(n.y))); shown.push(n.text) }
+		for (const a of d.annotations) {
+			for (const c of a.coordinates) facts.push(tab('annotation', String(a.number), num(c.x), num(c.y), a.text ?? ''))
+			shown.push(a.text)
+		}
+		if (d.annotationsBox) facts.push(tab('annotations', num(d.annotationsBox.x), num(d.annotationsBox.y)))
+		for (const a of d.accelerators) { facts.push(tab('accelerator', a.name, num(a.x), num(a.y))); shown.push(a.name) }
+		for (const a of d.deaccelerators) { facts.push(tab('deaccelerator', a.name, num(a.x), num(a.y))); shown.push(a.name) }
 		labels(shown)
 	}
 

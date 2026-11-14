@@ -78,7 +78,7 @@ one theming model, consistent output regardless of diagram type.
 - **[Pure .NET, zero interop](#pure-net-parsing-and-rendering):** just a NuGet reference. No Chromium, no Node.js, no subprocess management.
 - **[Native AOT](#native-aot):** every public API proven in CI on Linux, macOS, and Windows.
 - **[Built-in layout engine](#built-in-layout-engine):** zero-dependency layered layout with compound subgraphs and an orthogonal edge router.
-- **[25 diagram types](#supported-diagrams):** one API, one theming model for all of them.
+- **[26 diagram types](#supported-diagrams):** one API, one theming model for all of them.
 - **[Unified theming](#theming):** 15 themes, live-switchable via CSS custom properties.
 - **[Always-on SVG sanitization](#svg-sanitization):** allowlist-only, no opt-out.
 - **[Strict styling mode](#strict-styling):** enforce your design system on user-authored diagrams.
@@ -146,7 +146,7 @@ Coverage: [unit tests](tests/Mermaider.Tests/Rendering/SvgSanitizerTests.cs) and
 
 #### Visual consistency
 
-All 25 diagram types render from the same [`RenderOptions`](#render-options). A single set of values controls:
+All 26 diagram types render from the same [`RenderOptions`](#render-options). A single set of values controls:
 
 - **Colors**: `Bg`, `Fg`, `Accent`, `Muted`, `Surface`, `Border`, `Line`
 - **Style preset**: `Style` (Quiet, Blueprint, Tonal) plus `Gradient`, `Tint` and `Elevation`
@@ -332,9 +332,9 @@ Named sets:
 
 | Set | Contents |
 |-----|----------|
-| `DiagramTypes.All` | All 25 diagram types (default) |
+| `DiagramTypes.All` | All 26 diagram types (default) |
 | `DiagramTypes.Stable` | 15 types with stable Mermaid syntax (no `-beta` keyword) |
-| `DiagramTypes.Beta` | 10 types that use a `-beta` keyword (`radar-beta`, `architecture-beta`, etc.) |
+| `DiagramTypes.Beta` | 11 types that use a `-beta` keyword (`radar-beta`, `architecture-beta`, etc.) |
 
 ### Edge rounding
 
@@ -1149,11 +1149,42 @@ association operators with labels and extra dashes for length, `..> : include`, 
 `<<stereotypes>>`, `json` tables, and `classDef` / `class` / `style` / `:::`. Input mermaid refuses throws a
 `MermaidParseException` naming the line. Edge animation is accepted but not drawn.
 
+### Wardley Map
+
+```csharp
+MermaidRenderer.RenderSvg("""
+    wardley-beta
+    title Tea Shop Value Chain
+    anchor Business [0.95, 0.63]
+    component Cup of Tea [0.79, 0.61]
+    component Tea [0.63, 0.81]
+    component Hot Water [0.52, 0.80]
+    component Kettle [0.43, 0.35] (build)
+    component Power [0.10, 0.70] (market)
+    Business -> Cup of Tea
+    Cup of Tea -> Tea
+    Cup of Tea -> Hot Water
+    Hot Water -> Kettle
+    Kettle -> Power
+    evolve Kettle 0.62
+    note "Standardising power lets kettles evolve" [0.30, 0.49]
+    """);
+```
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nullean/mermaider/main/.github/readme/wardley.dark.svg" /><img src="https://raw.githubusercontent.com/nullean/mermaider/main/.github/readme/wardley.light.svg" alt="Wardley Map" /></picture></p>
+
+Follows mermaid 12.3.0's `wardley-beta` syntax: `component` and `anchor` at `[visibility, evolution]`, `label [x, y]`
+offsets, `(build)`, `(buy)`, `(outsource)`, `(market)` and `(inertia)`, the link forms (`->`, `-->`, `-.->`, `+>`,
+`+<`, `+<>`, `+'label'>`, `; label`), `evolve`, `pipeline … { … }`, `evolution` stages with `@` widths and `/` second
+names, `note`, `annotations` / `annotation`, `accelerator`, `deaccelerator` and `size`. Input mermaid refuses throws a
+`MermaidParseException` naming the line. Input mermaid accepts but does not draw, such as a link to an undeclared
+name, is listed on the parsed model with its line.
+
 ## Packages
 
 | Package | What it is | |
 |---|---|---|
-| [`Mermaider`](src/Mermaider/README.md) | the parser, layout and SVG and text renderer for all 25 diagram types | [![NuGet](https://img.shields.io/nuget/v/Mermaider?style=flat-square)](https://www.nuget.org/packages/Mermaider) |
+| [`Mermaider`](src/Mermaider/README.md) | the parser, layout and SVG and text renderer for all 26 diagram types | [![NuGet](https://img.shields.io/nuget/v/Mermaider?style=flat-square)](https://www.nuget.org/packages/Mermaider) |
 | [`Mermaider.Cli`](src/Mermaider.Cli/README.md) | the `mermaid` command line tool | [![NuGet](https://img.shields.io/nuget/v/Mermaider.Cli?style=flat-square)](https://www.nuget.org/packages/Mermaider.Cli) |
 | [`Sugiyama`](src/Sugiyama/README.md) | the zero-dependency layered layout engine underneath, usable on its own | [![NuGet](https://img.shields.io/nuget/v/Sugiyama?style=flat-square)](https://www.nuget.org/packages/Sugiyama) |
 | [`Mermaider.Layout.Msagl`](src/Mermaider.Layout.Msagl/README.md) | optional, legacy-compatible MSAGL layout provider | [![NuGet](https://img.shields.io/nuget/v/Mermaider.Layout.Msagl?style=flat-square)](https://www.nuget.org/packages/Mermaider.Layout.Msagl) |

@@ -1,6 +1,6 @@
 # Diagram types
 
-Mermaider renders 25 Mermaid diagram types. Every type shares the same design system: set `Bg`, `Fg` and `Accent` once in `RenderOptions`, or pick a [theme or style preset](../theming/index.md), and the change applies everywhere.
+Mermaider renders 26 Mermaid diagram types. Every type shares the same design system: set `Bg`, `Fg` and `Accent` once in `RenderOptions`, or pick a [theme or style preset](../theming/index.md), and the change applies everywhere.
 
 Each image below renders the source under it, in the default Quiet style with the `zinc-light` theme.
 
@@ -570,6 +570,51 @@ Staff --> Review
   section in front matter or `%%{init}%%` (`colorScheme`, the font keys, `nodeSpacing`, `rankSpacing`,
   `diagramPadding`) and an actor icon that is not registered are accepted and not used. The parser lists each of them
   with its line and the reason; an unregistered icon is drawn as the fallback glyph.
+
+### Wardley map (`wardley-beta`)
+
+Wardley maps (`wardley-beta`): components placed by visibility (bottom to top) and evolution (left to right), their
+dependencies, evolution trends, pipelines, notes, numbered annotations and the forces on them. Positions are the
+author's, so there is no automatic layout; the canvas is mermaid's 900 × 600 (or `size [w, h]`) with a 48px margin, and
+it grows to the right when a label would run past the edge.
+
+![Wardley map](../images/diagrams/wardley.svg)
+
+```text
+wardley-beta
+title Tea Shop Value Chain
+anchor Business [0.95, 0.63]
+component Cup of Tea [0.79, 0.61]
+component Tea [0.63, 0.81]
+component Hot Water [0.52, 0.80]
+component Kettle [0.43, 0.35] (build)
+component Power [0.10, 0.70] (market)
+Business -> Cup of Tea
+Cup of Tea -> Tea
+Cup of Tea -> Hot Water
+Hot Water -> Kettle
+Kettle -> Power
+evolve Kettle 0.62
+note "Standardising power lets kettles evolve" [0.30, 0.49]
+```
+
+- Coordinates are `[visibility, evolution]`, decimals such as `0.5`. A value above 1 is read as a percent, and one above
+  100 is refused. `annotation`, `annotations`, `accelerator` and `deaccelerator` take the same order.
+- Components: `component Name [v, e]`, then optionally `label [x, y]`, one of `(build)`, `(buy)`, `(outsource)` and
+  `(market)`, and `(inertia)`. Names may contain spaces and hyphens; quote a name that starts with something else.
+  As in mermaid, a name that starts with a keyword (`note…`, `label…`, `buy…`) is refused.
+- Links: `A -> B`, `A --> B`, `A -.-> B` (dashed), `A +> B`, `A +< B`, `A +<> B` (flow arrows), `A +'text'> B`
+  (labelled flow) and `A -> B; label`. A link finds a pipeline component by its name.
+- `evolve Name 0.8` draws a dashed accent arrow to the new evolution. `pipeline Name { component X [e] … }` puts
+  components on the parent's visibility in a box with the parent's square above it.
+- `evolution A -> B -> C -> D` names the stages; `A@0.25` sets where a stage ends (used when every stage has one) and
+  `A / B` gives a stage a second name.
+- Input mermaid refuses, such as integer coordinates, an unquoted note or the `Component -.- (x, y)` trend form from
+  mermaid's syntax notes, throws a `MermaidParseException` naming the line. Input mermaid accepts but does not draw is
+  listed on the parsed model's `Unused` with its line and the reason: a link to a name that is not declared, a link from a
+  pipeline component to its own pipeline, `evolve` of an undeclared name, a `size`, `evolution`, `evolve`, pipeline or
+  declaration replaced by a later one, `annotations` after the first, `@` widths on only some stages, and annotation text
+  without an `annotations` position to list it at.
 
 ### Treemap
 

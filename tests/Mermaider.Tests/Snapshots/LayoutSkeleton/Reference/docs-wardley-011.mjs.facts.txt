@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 16bd41b8a1695cac
+accept	yes
+drawn	yes
+label	Cloud DB
+label	Database
+label	File System
+label	NoSQL
+label	Pipeline Evolution
+label	SQL DB
+node	Database	Database	component	60	40					yes
+node	Database_Cloud DB	Cloud DB	pipeline-component	85	40
+node	Database_File System	File System	pipeline-component	25	40
+node	Database_NoSQL	NoSQL	pipeline-component	70	40
+node	Database_SQL DB	SQL DB	pipeline-component	50	40
+pipeline	Database	Database_File System,Database_SQL DB,Database_NoSQL,Database_Cloud DB
+title	Pipeline Evolution
