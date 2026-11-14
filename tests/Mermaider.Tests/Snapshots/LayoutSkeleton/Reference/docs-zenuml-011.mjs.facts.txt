@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 42e03255a8014dd4
+accept	yes
+comment	a comment on a message. Markdown is supported.
+drawn	yes
+icon	_STARTER_
+label	BookService
+label	a comment on a message. Markdown is supported.
+label	getBook()
+message	sync	_STARTER_	BookService	getBook()
+participant	0	_STARTER_
+participant	1	BookService	BookService

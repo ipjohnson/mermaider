@@ -616,6 +616,49 @@ note "Standardising power lets kettles evolve" [0.30, 0.49]
   declaration replaced by a later one, `annotations` after the first, `@` widths on only some stages, and annotation text
   without an `annotations` position to list it at.
 
+### ZenUML (`zenuml`)
+
+ZenUML is another way to write a sequence diagram, with calls written like code. mermaid draws it through the
+`@mermaid-js/mermaid-zenuml` plugin, and Mermaider draws it with its sequence diagram layout and renderer: sync calls
+are solid arrows that activate their target until their last nested message, async messages have an open head, and
+creations and returns are dashed.
+
+![ZenUML](../images/diagrams/zenuml.svg)
+
+```text
+zenuml
+title Checkout
+@Actor Customer
+Shop as "Web Shop"
+Customer->Shop.checkout(cart) {
+  // reserve before charging
+  ok = Inventory.reserve(items)
+  if(ok) {
+    receipt = Payments.charge(card, total)
+    Shop->Mailer: send receipt
+  } else {
+    return "out of stock"
+  }
+}
+```
+
+- Participants are drawn in the order they are declared or first met. `A as Label` gives a label, `@Actor A` a person
+  glyph, and `group Name { A B }` a box around them. A call with no source comes from the starter, drawn as a person
+  without a name, or from `@Starter(X)`.
+- Messages: `A.method(args)` or `A->B.method()` is a sync call, and statements in its `{ … }` are sent from `A`.
+  `A->B: text` (or `B: text` inside a call) is async. `new A(args)` creates `A` level with the message. `x = A.m()` and
+  `x = new A()` add a return labelled `x`; `x = new A()` names the new participant `x:A`. `return value` returns to the
+  caller, and `@return A->B: text` draws a return between any two participants.
+- Fragments: `if (…)` / `else if (…)` / `else`, `while`, `for`, `forEach` and `loop (…)`, `opt`, `par` (a separator
+  between each statement) and `try` / `catch (…)` / `finally`.
+- `// comments` above a message or fragment are drawn as a note over it, with Markdown markers removed. `== text ==` is
+  a divider across every lifeline.
+- Input the grammar refuses, such as an unclosed `{` or a stray `}`, throws a `MermaidParseException` naming the line.
+  Input ZenUML accepts but Mermaider does not draw is listed on the parsed model's `Unused` with its line and the reason:
+  annotator icons other than `@Actor` (the participant is drawn as a box), stereotypes, widths and colours, the
+  modifiers `const`, `readonly`, `static` and `await`, a comment anywhere but above a message or fragment, a fragment or
+  section without a message, and incomplete messages such as `A->` or `x =`.
+
 ### Treemap
 
 Space-filling hierarchical area charts (`treemap-beta`).

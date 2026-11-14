@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 885.448 980" width="885.448" height="980" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<g class="diagram-title">
+  <rect x="30" y="25.5" width="9" height="9" rx="2" ry="2" fill="var(--accent, var(--fg))" />
+  <text x="46" y="30" text-anchor="start" font-size="var(--fs-l)" font-weight="700" fill="var(--_text)" dy="6.3">Booking</text>
+</g>
+<g class="box" data-label="Backend">
+  <rect x="22" y="52" width="273.84000000000003" height="904" rx="12" ry="12" fill="url(#m1814eb8b-cw-p1-0)" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" />
+  <path d="M22,80 L22,64 Q22,52 34,52 L283.84000000000003,52 Q295.84000000000003,52 295.84000000000003,64 L295.84000000000003,80 Z" fill="color-mix(in srgb, #f28e2b 22%, var(--bg))" />
+  <line x1="22" y1="80" x2="295.84000000000003" y2="80" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" />
+</g>
+<text x="34" y="66" text-anchor="start" font-size="var(--fs-s)" font-weight="600" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">Backend</text>
+<g class="block" data-type="try">
+  <rect x="30" y="308" width="678.872" height="346" rx="10" ry="10" fill="color-mix(in srgb, #76b7b2 6%, var(--bg))" stroke="color-mix(in srgb, #76b7b2 42%, var(--bg))" stroke-width="1.25" />
+  <path d="M30,330 L30,318 Q30,308 40,308 L67.64,308 L67.64,330 Z" fill="color-mix(in srgb, #76b7b2 22%, var(--bg))" stroke="color-mix(in srgb, #76b7b2 42%, var(--bg))" stroke-width="1.25" />
+  <text x="48.82" y="319" text-anchor="middle" font-size="var(--fs-xs)" font-weight="600" fill="color-mix(in srgb, #76b7b2 44%, var(--fg))" dy="4.2">try</text>
+  <line x1="30" y1="486" x2="708.872" y2="486" stroke="color-mix(in srgb, #76b7b2 42%, var(--bg))" stroke-width="1.25" stroke-dasharray="5 4" />
+  <text x="369.44" y="500" text-anchor="middle" font-size="var(--fs-s)" font-weight="600" fill="color-mix(in srgb, #76b7b2 44%, var(--fg))" dy="4.9">catch(Timeout e)</text>
+  <line x1="30" y1="572" x2="708.872" y2="572" stroke="color-mix(in srgb, #76b7b2 42%, var(--bg))" stroke-width="1.25" stroke-dasharray="5 4" />
+  <text x="369.44" y="586" text-anchor="middle" font-size="var(--fs-s)" font-weight="600" fill="color-mix(in srgb, #76b7b2 44%, var(--fg))" dy="4.9">finally</text>
+</g>
+<g class="block" data-type="par">
+  <rect x="30" y="672" width="825.448" height="164" rx="10" ry="10" fill="color-mix(in srgb, #b07aa1 6%, var(--bg))" stroke="color-mix(in srgb, #b07aa1 42%, var(--bg))" stroke-width="1.25" />
+  <path d="M30,694 L30,682 Q30,672 40,672 L71.96,672 L71.96,694 Z" fill="color-mix(in srgb, #b07aa1 22%, var(--bg))" stroke="color-mix(in srgb, #b07aa1 42%, var(--bg))" stroke-width="1.25" />
+  <text x="50.98" y="683" text-anchor="middle" font-size="var(--fs-xs)" font-weight="600" fill="color-mix(in srgb, #b07aa1 44%, var(--fg))" dy="4.2">par</text>
+  <line x1="30" y1="778" x2="855.448" y2="778" stroke="color-mix(in srgb, #b07aa1 42%, var(--bg))" stroke-width="1.25" stroke-dasharray="5 4" />
+</g>
+<g class="block" data-type="loop" data-label="attempts &lt; 3">
+  <rect x="30" y="404" width="257.84000000000003" height="78" rx="10" ry="10" fill="color-mix(in srgb, #f28e2b 6%, var(--bg))" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" />
+  <path d="M30,426 L30,414 Q30,404 40,404 L76.28,404 L76.28,426 Z" fill="color-mix(in srgb, #f28e2b 22%, var(--bg))" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" />
+  <text x="53.14" y="415" text-anchor="middle" font-size="var(--fs-xs)" font-weight="600" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.2">loop</text>
+  <text x="158.92" y="415" text-anchor="middle" font-size="var(--fs-s)" font-weight="600" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">attempts &lt; 3</text>
+</g>
+<line class="lifeline" data-actor="API" x1="70" y1="126" x2="70" y2="910" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="BookingService" x1="218.92000000000002" y1="126" x2="218.92000000000002" y2="910" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="Client" x1="367.84000000000003" y1="126" x2="367.84000000000003" y2="910" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="booking:Booking" x1="518.356" y1="240" x2="518.356" y2="910" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="Audit" x1="668.872" y1="126" x2="668.872" y2="910" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="Calendar" x1="808.872" y1="126" x2="808.872" y2="910" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<rect class="activation" data-actor="booking:Booking" x="513.356" y="220" width="10" height="66" rx="3" ry="3" fill="color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg))" stroke="color-mix(in srgb, var(--accent, var(--fg)) 74%, var(--fg))" stroke-width="1.25" />
+<rect class="activation" data-actor="BookingService" x="213.92000000000002" y="462" width="10" height="16" rx="3" ry="3" fill="color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg))" stroke="color-mix(in srgb, var(--accent, var(--fg)) 74%, var(--fg))" stroke-width="1.25" />
+<rect class="activation" data-actor="API" x="65" y="170" width="10" height="662" rx="3" ry="3" fill="color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg))" stroke="color-mix(in srgb, var(--accent, var(--fg)) 74%, var(--fg))" stroke-width="1.25" />
+<g class="message" data-from="Client" data-to="API" data-label="book(slot)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="367.84000000000003" y1="170" x2="70" y2="170" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+  <rect x="183.34400000000002" y="145.2" width="71.15199999999999" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="218.92" y="156" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">book(slot)</text>
+</g>
+<g class="message" data-from="API" data-to="booking:Booking" data-label="«slot»" data-line-style="dashed" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="220" x2="447.84000000000003" y2="220" stroke="var(--_line)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="233.604" y="195.2" width="50.63199999999999" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="258.92" y="206" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">«slot»</text>
+</g>
+<g class="message" data-from="booking:Booking" data-to="API" data-label="booking" data-line-style="dashed" data-arrow-head="open" data-self="false">
+  <line x1="518.356" y1="270" x2="70" y2="270" stroke="var(--_line)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="263.39" y="245.2" width="61.576" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="294.18" y="256" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">booking</text>
+</g>
+<g class="message" data-from="API" data-to="Audit" data-label="start attempts" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="366" x2="668.872" y2="366" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="325.30999999999995" y="341.2" width="88.25200000000001" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="369.44" y="352" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">start attempts</text>
+</g>
+<g class="message" data-from="API" data-to="BookingService" data-label="confirm(booking)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="70" y1="462" x2="218.92000000000002" y2="462" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+  <rect x="90.41600000000001" y="437.2" width="108.088" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="144.46" y="448" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">confirm(booking)</text>
+</g>
+<g class="message" data-from="API" data-to="Client" data-label="retry later" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="548" x2="367.84000000000003" y2="548" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="183.002" y="523.2" width="71.836" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="218.92" y="534" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">retry later</text>
+</g>
+<g class="message" data-from="API" data-to="Audit" data-label="log attempt" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="634" x2="668.872" y2="634" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="332.834" y="609.2" width="73.20399999999998" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="369.44" y="620" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">log attempt</text>
+</g>
+<g class="message" data-from="API" data-to="Client" data-label="confirmed" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="730" x2="367.84000000000003" y2="730" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="183.34400000000002" y="705.2" width="71.15199999999999" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="218.92" y="716" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">confirmed</text>
+</g>
+<g class="message" data-from="API" data-to="Calendar" data-label="block slot" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="816" x2="808.872" y2="816" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="404.88599999999997" y="791.2" width="69.1" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="439.44" y="802" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">block slot</text>
+</g>
+<g class="actor" data-id="API" data-label="API" data-type="participant">
+  <rect x="30" y="86" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="70" y="106" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">API</text>
+</g>
+<g class="actor" data-id="BookingService" data-label="BookingService" data-type="participant">
+  <rect x="150" y="86" width="137.84" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="218.92" y="106" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">BookingService</text>
+</g>
+<g class="actor" data-id="Client" data-label="Client" data-type="participant">
+  <rect x="327.84000000000003" y="86" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="367.84" y="106" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Client</text>
+</g>
+<g class="actor" data-id="booking:Booking" data-label="booking:Booking" data-type="participant">
+  <rect x="447.84000000000003" y="200" width="141.03199999999998" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="518.36" y="220" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">booking:Booking</text>
+</g>
+<g class="actor" data-id="Audit" data-label="Audit" data-type="participant">
+  <rect x="628.872" y="86" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="668.87" y="106" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Audit</text>
+</g>
+<g class="actor" data-id="Calendar" data-label="Calendar" data-type="participant">
+  <rect x="762.2959999999999" y="86" width="93.15199999999999" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="808.87" y="106" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Calendar</text>
+</g>
+<g class="actor actor-bottom" data-id="API" data-label="API" data-type="participant">
+  <rect x="30" y="910" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="70" y="930" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">API</text>
+</g>
+<g class="actor actor-bottom" data-id="BookingService" data-label="BookingService" data-type="participant">
+  <rect x="150" y="910" width="137.84" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="218.92" y="930" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">BookingService</text>
+</g>
+<g class="actor actor-bottom" data-id="Client" data-label="Client" data-type="participant">
+  <rect x="327.84000000000003" y="910" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="367.84" y="930" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Client</text>
+</g>
+<g class="actor actor-bottom" data-id="booking:Booking" data-label="booking:Booking" data-type="participant">
+  <rect x="447.84000000000003" y="910" width="141.03199999999998" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="518.36" y="930" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">booking:Booking</text>
+</g>
+<g class="actor actor-bottom" data-id="Audit" data-label="Audit" data-type="participant">
+  <rect x="628.872" y="910" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="668.87" y="930" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Audit</text>
+</g>
+<g class="actor actor-bottom" data-id="Calendar" data-label="Calendar" data-type="participant">
+  <rect x="762.2959999999999" y="910" width="93.15199999999999" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="808.87" y="930" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Calendar</text>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-cw-p1-0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #f28e2b 2.1%, var(--bg))" /><stop offset="0.55" stop-color="color-mix(in srgb, #f28e2b 6%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #f28e2b 6%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <marker id="m1814eb8b-mk-arrow" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <polygon points="0,1.5 10,6 0,10.5" fill="var(--_line)" stroke="var(--_line)" stroke-width="1" stroke-linejoin="miter" />
+  </marker>
+  <marker id="m1814eb8b-mk-open" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0,1.5 L10,6 L0,10.5" fill="none" stroke="var(--_line)" stroke-width="1.25" stroke-linejoin="miter" stroke-linecap="round" />
+  </marker>
+</defs>
+</svg>

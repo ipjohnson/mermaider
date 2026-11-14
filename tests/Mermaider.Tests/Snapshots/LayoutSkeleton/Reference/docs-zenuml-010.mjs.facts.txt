@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e029287589941728
+accept	yes
+drawn	yes
+icon	_STARTER_
+label	A
+label	B
+label	C
+label	method()
+label	nested async message
+label	nested_sync_method()
+message	async	B	C	nested async message
+message	sync	A	B	nested_sync_method()
+message	sync	_STARTER_	A	method()
+participant	0	_STARTER_
+participant	1	A	A
+participant	2	B	B
+participant	3	C	C

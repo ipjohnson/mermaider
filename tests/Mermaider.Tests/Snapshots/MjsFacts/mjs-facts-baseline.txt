@@ -985,3 +985,15 @@ docs-venn-005 + set | Viable | Viable | 10
 docs-venn-005 - set | Desirable |  | 10
 docs-venn-005 - set | Feasible |  | 10
 docs-venn-005 - set | Viable |  | 10
+
+# ipjohnson/AgentDriver#4407: ZenUML annotators other than @Actor (@Database, @EC2, ...) are drawn as plain participants;
+# ZenUmlDiagram.Unused lists each one.
+docs-zenuml-003 - icon | Bob
+zenuml-icons - icon | DB
+zenuml-icons - icon | Svc
+
+# By design: ZenUML draws a fragment or a section that holds no message as an empty frame. Mermaider's sequence layout
+# places a frame by its messages, so it draws neither and lists each in ZenUmlDiagram.Unused.
+zenuml-unused-input - fragment | opt
+zenuml-unused-input - label | finally
+zenuml-unused-input - section | try | finally

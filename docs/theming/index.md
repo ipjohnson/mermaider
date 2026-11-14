@@ -50,7 +50,7 @@ Colours resolve in this order, each step overriding the previous one:
 
 ## Style presets
 
-Three presets restyle all 26 diagram types, light and dark. They only change paint: layout, colours and font sizes are identical, so switching preset never moves a box.
+Three presets restyle all 27 diagram types, light and dark. They only change paint: layout, colours and font sizes are identical, so switching preset never moves a box.
 
 | Preset | Look |
 |---|---|

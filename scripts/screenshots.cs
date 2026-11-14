@@ -51,6 +51,7 @@ var root = FindRoot();
 	("journey", "journey-onboarding"),
 	("usecase", "usecase-ordering"),
 	("wardley", "wardley-platform"),
+	("zenuml", "zenuml-checkout"),
 ];
 
 // Landing page theme picker: each entry is a light / dark pair of built-in themes.
