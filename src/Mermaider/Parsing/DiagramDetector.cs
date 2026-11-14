@@ -81,6 +81,9 @@ internal static partial class DiagramDetector
 	[GeneratedRegex(@"^treeView(?:-beta)?(?:\s|$)", RegexOptions.IgnoreCase, TimeoutMs)]
 	private static partial Regex TreeViewHeader();
 
+	[GeneratedRegex(@"^usecase-beta(?:\s|$)", RegexOptions.None, TimeoutMs)]
+	private static partial Regex UsecaseHeader();
+
 	internal static DiagramType Detect(ReadOnlySpan<char> text)
 	{
 		var firstLineEnd = text.IndexOf('\n');
@@ -134,6 +137,8 @@ internal static partial class DiagramDetector
 			return DiagramType.Block;
 		if (TreeViewHeader().IsMatch(firstLineStr))
 			return DiagramType.TreeView;
+		if (UsecaseHeader().IsMatch(firstLineStr))
+			return DiagramType.Usecase;
 
 		return DiagramType.Flowchart;
 	}

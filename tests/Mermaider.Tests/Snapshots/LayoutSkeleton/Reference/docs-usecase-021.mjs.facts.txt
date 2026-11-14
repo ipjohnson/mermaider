@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 38e641131baa1707
+accept	yes
+actor	Customer	Customer	normal
+direction	LR
+drawn	yes
+label	Browse catalog
+label	Customer
+relation	Customer	Browse	association	none	arrow		1
+usecase	Browse	Browse catalog	ellipse

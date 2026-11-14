@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e30205185984ab8a
+accept	yes
+actor	Analyst	*Analyst*	normal
+direction	LR
+drawn	yes
+label	**Literal markers**
+label	*Analyst*
+label	Costs 19.95 EUR — VAT included!
+label	files R&D report
+relation	Analyst	Literal	association	none	arrow	files R&D report	1
+relation	Analyst	Priced	association	none	arrow		1
+usecase	Literal	**Literal markers**	ellipse
+usecase	Priced	Costs 19.95 EUR — VAT included!	rect

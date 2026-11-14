@@ -1,0 +1,28 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ae39cff282573155
+accept	yes
+actor	Customer	Customer	normal
+actor	Staff	Order staff	hollow
+boundary	ordering	Ordering system	package	Browse,Checkout,Payment,Review
+direction	LR
+drawn	yes
+label	Browse products
+label	Checkout
+label	Core
+label	Customer
+label	Order staff
+label	Ordering system
+label	Process payment
+label	Review order
+label	Validates the cart before payment
+label	places order
+note	Checkout	Validates the cart before payment
+relation	Checkout	Payment	include	none	arrow		1
+relation	Customer	Browse	association	none	arrow		1
+relation	Customer	Checkout	association	none	arrow	places order	2
+relation	Staff	Review	association	none	arrow		1
+usecase	Browse	Browse products	ellipse			ordering
+usecase	Checkout	Checkout	ellipse		Core	ordering
+usecase	Payment	Process payment	ellipse			ordering
+usecase	Review	Review order	rect			ordering

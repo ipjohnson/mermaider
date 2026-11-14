@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source cc7884f2722a0260
+accept	yes
+actor	Reviewer	Reviewer	normal
+direction	LR
+drawn	yes
+label	**Literal markers**
+label	Formatted label with a physical line break
+label	Reviewer
+label	Show "quoted" text
+label	opens form
+relation	Reviewer	Formatted	association	none	arrow	opens form	1
+relation	Reviewer	Literal	association	none	arrow		1
+relation	Reviewer	Quoted	association	none	arrow		1
+usecase	Formatted	Formatted label with a physical line break	ellipse
+usecase	Literal	**Literal markers**	ellipse
+usecase	Quoted	Show "quoted" text	ellipse

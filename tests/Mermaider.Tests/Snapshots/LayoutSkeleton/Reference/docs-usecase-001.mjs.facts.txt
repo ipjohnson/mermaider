@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 00339c496aec5a45
+accept	yes
+actor	Customer	Customer	normal
+boundary	Order_system	Order system	rect	Checkout
+direction	LR
+drawn	yes
+label	Customer
+label	Order system
+label	Place order
+relation	Customer	Checkout	association	none	arrow		1
+usecase	Checkout	Place order	ellipse			Order_system

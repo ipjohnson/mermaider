@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ad6a3a578b0f599b
+accept	yes
+actor	Customer	Customer	normal
+direction	LR
+drawn	yes
+label	Customer
+label	Refund (partial)
+label	Reset password
+relation	Customer	Refund	association	none	arrow		1
+relation	Customer	Reset	association	none	arrow		1
+usecase	Refund	Refund (partial)	ellipse
+usecase	Reset	Reset password	ellipse

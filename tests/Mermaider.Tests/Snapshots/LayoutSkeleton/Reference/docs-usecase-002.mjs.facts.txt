@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1c58ec981dc2f11e
+accept	yes
+actor	Customer	Customer	normal
+actor	Support	Support	normal
+boundary	Fulfilment	Fulfilment	rect	Track
+boundary	Storefront	Storefront	rect	Browse,Checkout
+direction	LR
+drawn	yes
+label	Browse catalogue
+label	Checkout
+label	Customer
+label	Fulfilment
+label	Storefront
+label	Support
+label	Track delivery
+relation	Checkout	Browse	include	none	arrow		1
+relation	Customer	Browse	association	none	arrow		1
+relation	Customer	Checkout	association	none	arrow		1
+relation	Customer	Track	association	none	arrow		1
+relation	Support	Track	association	none	arrow		1
+usecase	Browse	Browse catalogue	ellipse			Storefront
+usecase	Checkout	Checkout	ellipse			Storefront
+usecase	Track	Track delivery	ellipse			Fulfilment

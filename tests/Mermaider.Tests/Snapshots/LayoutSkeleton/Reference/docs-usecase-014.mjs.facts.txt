@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9cb66c38e51b5a4d
+accept	yes
+actor	Admin	Admin	normal
+actor	Person	Person	normal
+direction	LR
+drawn	yes
+label	Admin
+label	ApplyCoupon
+label	Checkout
+label	Payment
+label	Person
+relation	Admin	Person	generalization	none	triangle		1
+relation	ApplyCoupon	Checkout	extend	none	arrow		1
+relation	ApplyCoupon	Checkout	generalization	none	triangle		1
+relation	Checkout	Payment	include	none	arrow		1
+usecase	ApplyCoupon	ApplyCoupon	ellipse
+usecase	Checkout	Checkout	ellipse
+usecase	Payment	Payment	ellipse

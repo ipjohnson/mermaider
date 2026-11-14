@@ -27,4 +27,5 @@ public enum DiagramType
 	Architecture,
 	Block,
 	TreeView,
+	Usecase,
 }

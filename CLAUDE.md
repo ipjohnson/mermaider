@@ -38,7 +38,7 @@ stripping), sanitizer tests for the scoped `<image>` href exception, and spec-co
 k8s/ECH diagram) under `Snapshots/ArchitectureSpecTests.cs`.
 
 `MjsFactsTests` (`tests/Mermaider.Tests/Snapshots/MjsFacts/`) diffs Mermaider's facts with committed mermaid.js facts
-(`Snapshots/LayoutSkeleton/Reference/*.mjs.facts.txt`) for the gallery examples of all 24 diagram types, the flowchart,
+(`Snapshots/LayoutSkeleton/Reference/*.mjs.facts.txt`) for the gallery examples of all 25 diagram types, the flowchart,
 state, class, sequence, ER and architecture spec-test sources, the repros in `MjsFacts/Cases/`, and the examples of
 mermaid's syntax docs in `MjsFacts/Docs/` (`scripts/mermaid-docs-corpus.py <mermaid checkout>` writes them for the types
 Mermaider draws; `Docs/SOURCE.txt` names the docs commit). Every case records

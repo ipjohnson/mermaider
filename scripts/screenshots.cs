@@ -49,6 +49,7 @@ var root = FindRoot();
 	("treeview", "treeview-monorepo"),
 	("packet", "packet-tcp-flags"),
 	("journey", "journey-onboarding"),
+	("usecase", "usecase-ordering"),
 ];
 
 // Landing page theme picker: each entry is a light / dark pair of built-in themes.
@@ -174,6 +175,7 @@ int RenderReadme()
 		{
 			"User Journey" => "journey",
 			"XY Chart" => "xychart",
+			"Use Case" => "usecase",
 			_ => heading.Split(' ')[0].ToLowerInvariant(),
 		};
 		var next = lines.FindIndex(i + 1, l => l.StartsWith("### ", StringComparison.Ordinal) || l.StartsWith("## ", StringComparison.Ordinal));
