@@ -1,0 +1,30 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source dbcef8ff2cd577d1
+accept	yes
+drawn	yes
+label	array
+label	array
+label	element
+label	element
+label	element
+label	element
+label	element
+label	false
+label	json
+label	member
+label	member
+label	member
+label	null
+label	number
+label	object
+label	object
+label	string
+label	string
+label	true
+rule	array	("[" [(<element> {("," <element>)}0..)] "]")
+rule	element	(<object> | <array> | <string> | <number> | "true" | "false" | "null")
+rule	json	<element>
+rule	member	(<string> ":" <element>)
+rule	object	("{" [(<member> {("," <member>)}0..)] "}")
+title	JSON Grammar

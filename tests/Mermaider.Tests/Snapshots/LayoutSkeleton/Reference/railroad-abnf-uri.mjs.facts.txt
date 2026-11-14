@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 78d5083364c6dcde
+accept	yes
+drawn	yes
+label	%x30-39
+label	%x41-46
+label	ALPHA
+label	ALPHA
+label	DIGIT
+label	DIGIT
+label	DIGIT
+label	DIGIT
+label	hexdig
+label	ipv4
+label	port
+label	scheme
+rule	hexdig	("%x30-39" | "%x41-46")
+rule	ipv4	({<DIGIT>}1..3 {("." {<DIGIT>}1..3)}3..3)
+rule	port	{<DIGIT>}0..5
+rule	scheme	(<ALPHA> {(<ALPHA> | <DIGIT> | "+" | "-" | ".")}0..)
+title	URI Scheme and Port

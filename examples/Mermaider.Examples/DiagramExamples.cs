@@ -29,6 +29,7 @@ public enum DiagramCategory
 	Usecase,
 	Wardley,
 	ZenUml,
+	Railroad,
 	RealWorld
 }
 
@@ -1638,6 +1639,7 @@ public static partial class DiagramExamples
 			.. CreateUsecaseExamples(),
 			.. CreateWardleyExamples(),
 			.. CreateZenUmlExamples(),
+			.. CreateRailroadExamples(),
 			.. CreateRealWorldExamples(),
 		];
 
@@ -1671,6 +1673,7 @@ public static partial class DiagramExamples
 		DiagramCategory.Usecase => "Use Case",
 		DiagramCategory.Wardley => "Wardley Map",
 		DiagramCategory.ZenUml => "ZenUML",
+		DiagramCategory.Railroad => "Railroad",
 		DiagramCategory.RealWorld => "Real World",
 		_ => c.ToString(),
 	};
@@ -1703,6 +1706,7 @@ public static partial class DiagramExamples
 		DiagramCategory.Usecase => "usecase",
 		DiagramCategory.Wardley => "wardley",
 		DiagramCategory.ZenUml => "zenuml",
+		DiagramCategory.Railroad => "railroad",
 		DiagramCategory.RealWorld => "real-world",
 		_ => c.ToString().ToLowerInvariant(),
 	};

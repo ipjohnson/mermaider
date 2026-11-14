@@ -78,7 +78,7 @@ one theming model, consistent output regardless of diagram type.
 - **[Pure .NET, zero interop](#pure-net-parsing-and-rendering):** just a NuGet reference. No Chromium, no Node.js, no subprocess management.
 - **[Native AOT](#native-aot):** every public API proven in CI on Linux, macOS, and Windows.
 - **[Built-in layout engine](#built-in-layout-engine):** zero-dependency layered layout with compound subgraphs and an orthogonal edge router.
-- **[27 diagram types](#supported-diagrams):** one API, one theming model for all of them.
+- **[28 diagram types](#supported-diagrams):** one API, one theming model for all of them.
 - **[Unified theming](#theming):** 15 themes, live-switchable via CSS custom properties.
 - **[Always-on SVG sanitization](#svg-sanitization):** allowlist-only, no opt-out.
 - **[Strict styling mode](#strict-styling):** enforce your design system on user-authored diagrams.
@@ -146,7 +146,7 @@ Coverage: [unit tests](tests/Mermaider.Tests/Rendering/SvgSanitizerTests.cs) and
 
 #### Visual consistency
 
-All 27 diagram types render from the same [`RenderOptions`](#render-options). A single set of values controls:
+All 28 diagram types render from the same [`RenderOptions`](#render-options). A single set of values controls:
 
 - **Colors**: `Bg`, `Fg`, `Accent`, `Muted`, `Surface`, `Border`, `Line`
 - **Style preset**: `Style` (Quiet, Blueprint, Tonal) plus `Gradient`, `Tint` and `Elevation`
@@ -332,9 +332,9 @@ Named sets:
 
 | Set | Contents |
 |-----|----------|
-| `DiagramTypes.All` | All 27 diagram types (default) |
+| `DiagramTypes.All` | All 28 diagram types (default) |
 | `DiagramTypes.Stable` | 16 types with stable Mermaid syntax (no `-beta` keyword) |
-| `DiagramTypes.Beta` | 11 types that use a `-beta` keyword (`radar-beta`, `architecture-beta`, etc.) |
+| `DiagramTypes.Beta` | 12 types that use a `-beta` keyword (`radar-beta`, `architecture-beta`, etc.) |
 
 ### Edge rounding
 
@@ -1212,11 +1212,36 @@ nested `{ … }`, async messages `A->B: text`, `new A(args)`, assignments `x = A
 the grammar refuses throws a `MermaidParseException` naming the line. Input ZenUML accepts but Mermaider does not draw,
 such as an `@Database` icon, a stereotype or an empty fragment, is listed on the parsed model with its line.
 
+### Railroad
+
+```csharp
+MermaidRenderer.RenderSvg("""
+    railroad-ebnf-beta
+    title "Arithmetic Expression Grammar"
+    expression = term ( ( "+" | "-" ) term )* ;
+    term = factor ( ( "*" | "/" ) factor )* ;
+    factor = number | "(" expression ")" ;
+    number = [ "-" ] digit+ ;
+    """);
+```
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nullean/mermaider/main/.github/readme/railroad.dark.svg" /><img src="https://raw.githubusercontent.com/nullean/mermaider/main/.github/readme/railroad.light.svg" alt="Railroad" /></picture></p>
+
+Follows mermaid 12.3.0's four railroad notations, which all draw the same way: `railroad-ebnf-beta` (W3C and ISO 14977
+EBNF: `=` or `::=`, `|`, optional `,`, `[ ]` and `?`, `{ }` and `*`, `+`, `? special ?`, `A - B`, `/* */` and
+`(* *)`), `railroad-abnf-beta` (RFC 5234: `/`, `[ ]`, `( )`, repeat prefixes `*`, `n*m` and `n`, `%x30-39` values, `;`
+comments), `railroad-peg-beta` (`<-`, `/`, `?`, `*`, `+`, `&`, `!`, `.`, `#` comments) and `railroad-beta` (the
+`terminal`, `nonterminal`, `special`, `sequence`, `choice`, `optional`, `zeroOrMore` and `oneOrMore` constructors).
+Mermaider also draws the title and the bounds of an ABNF repeat such as `2*4`, which mermaid leaves out. Input mermaid
+refuses throws a `MermaidParseException` naming the line. Input mermaid accepts but Mermaider does not draw, such as
+`railroad` config keys or the group under a PEG predicate (drawn as `(...)`, as mermaid draws it), is listed on the
+parsed model with its line.
+
 ## Packages
 
 | Package | What it is | |
 |---|---|---|
-| [`Mermaider`](src/Mermaider/README.md) | the parser, layout and SVG and text renderer for all 27 diagram types | [![NuGet](https://img.shields.io/nuget/v/Mermaider?style=flat-square)](https://www.nuget.org/packages/Mermaider) |
+| [`Mermaider`](src/Mermaider/README.md) | the parser, layout and SVG and text renderer for all 28 diagram types | [![NuGet](https://img.shields.io/nuget/v/Mermaider?style=flat-square)](https://www.nuget.org/packages/Mermaider) |
 | [`Mermaider.Cli`](src/Mermaider.Cli/README.md) | the `mermaid` command line tool | [![NuGet](https://img.shields.io/nuget/v/Mermaider.Cli?style=flat-square)](https://www.nuget.org/packages/Mermaider.Cli) |
 | [`Sugiyama`](src/Sugiyama/README.md) | the zero-dependency layered layout engine underneath, usable on its own | [![NuGet](https://img.shields.io/nuget/v/Sugiyama?style=flat-square)](https://www.nuget.org/packages/Sugiyama) |
 | [`Mermaider.Layout.Msagl`](src/Mermaider.Layout.Msagl/README.md) | optional, legacy-compatible MSAGL layout provider | [![NuGet](https://img.shields.io/nuget/v/Mermaider.Layout.Msagl?style=flat-square)](https://www.nuget.org/packages/Mermaider.Layout.Msagl) |

@@ -128,6 +128,9 @@ internal static partial class MermaiderFacts
 			case DiagramType.ZenUml:
 				ZenUml(ZenUmlParser.Parse(source), doc, facts);
 				break;
+			case DiagramType.Railroad:
+				Railroad(RailroadParser.Parse(source), doc, facts);
+				break;
 			default:
 				throw new InvalidOperationException("MermaiderFacts has no extractor for this diagram type; add one with its scripts/mjs-facts.mjs twin");
 		}
@@ -1074,6 +1077,50 @@ internal static partial class MermaiderFacts
 
 	[GeneratedRegex(@"\*\*|\*|~~", RegexOptions.None, TimeoutMs)]
 	private static partial Regex MarkdownMarkerPattern();
+
+	private static void Railroad(RailroadDiagram diagram, XDocument doc, List<string> facts)
+	{
+		var shown = new List<string?>();
+		if (!string.IsNullOrEmpty(diagram.Title))
+		{
+			facts.Add(Fact("title", diagram.Title));
+			shown.Add(diagram.Title);
+		}
+
+		string Expr(RailroadExpression node)
+		{
+			switch (node)
+			{
+				case RailroadTerminal t:
+					shown.Add(t.Value);
+					return $"\"{Norm(t.Value)}\"";
+				case RailroadNonTerminal n:
+					shown.Add(n.Name);
+					return $"<{Norm(n.Name)}>";
+				case RailroadSpecial s:
+					shown.Add(s.Text);
+					return $"?{Norm(s.Text)}?";
+				case RailroadSequence seq:
+					return "(" + string.Join(' ', seq.Items.Select(Expr)) + ")";
+				case RailroadChoice c:
+					return "(" + string.Join(" | ", c.Alternatives.Select(Expr)) + ")";
+				case RailroadOptional o:
+					return "[" + Expr(o.Item) + "]";
+				case RailroadRepetition r:
+					return "{" + Expr(r.Item) + "}" + Int(r.Min) + ".." + (r.Max is { } max ? Int(max) : string.Empty);
+				default:
+					return "!" + node.GetType().Name;
+			}
+		}
+
+		foreach (var rule in diagram.Rules)
+		{
+			facts.Add(Fact("rule", rule.Name, Expr(rule.Definition)));
+			shown.Add(rule.Name);
+		}
+
+		Labels(doc, facts, shown);
+	}
 
 	private static void Wardley(WardleyDiagram map, XDocument doc, List<string> facts)
 	{

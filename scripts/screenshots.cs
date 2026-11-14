@@ -52,6 +52,7 @@ var root = FindRoot();
 	("usecase", "usecase-ordering"),
 	("wardley", "wardley-platform"),
 	("zenuml", "zenuml-checkout"),
+	("railroad", "railroad-ebnf-csv"),
 ];
 
 // Landing page theme picker: each entry is a light / dark pair of built-in themes.

@@ -1,0 +1,8 @@
+railroad-ebnf-beta
+title Edge cases
+(* an ISO comment *)
+rule ::= ? letters ? , other-rule? x* y+ ;
+/* a W3C comment */
+except = a - b c ;
+group = ( a | b ) [ c ] { d } ;
+escaped = "a\"b" 'c' ;

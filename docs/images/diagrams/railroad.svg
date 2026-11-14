@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481 633" width="481" height="633" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<g class="diagram-title">
+  <rect x="20" y="25.5" width="9" height="9" rx="2" ry="2" fill="var(--accent, var(--fg))" />
+  <text x="36" y="30" text-anchor="start" font-size="var(--fs-l)" font-weight="700" fill="var(--_text)" dy="6.3">CSV Record</text>
+</g>
+<g class="railroad-rule" data-rule="record">
+  <text x="20" y="95.1" text-anchor="start" font-size="var(--fs-s)" font-weight="700" fill="var(--_text)" dy="4.9">record =</text>
+  <path class="railroad-track" d="M 169.04 95.1 L 179.04 95.1 M 237.24 95.1 L 247.24 95.1 M 179.04 95.1 L 199.04 95.1 M 296.22 95.1 L 316.22 95.1 M 296.22 95.1 A 10 10 0 0 1 306.22 105.1 L 306.22 124.2 A 10 10 0 0 1 296.22 134.2 L 199.04 134.2 A 10 10 0 0 1 189.04 124.2 L 189.04 105.1 A 10 10 0 0 1 199.04 95.1 M 179.04 95.1 A 10 10 0 0 0 189.04 85.1 L 189.04 66 A 10 10 0 0 1 199.04 56 L 296.22 56 A 10 10 0 0 1 306.22 66 L 306.22 85.1 A 10 10 0 0 0 316.22 95.1 M 105.06 95.1 L 120.06 95.1 M 316.22 95.1 L 321.22 95.1" fill="none" stroke="var(--_line)" stroke-width="1.5" stroke-linecap="round" />
+  <circle cx="100.06" cy="95.1" r="5" fill="var(--accent, var(--fg))" />
+  <circle cx="326.22" cy="95.1" r="5" fill="none" stroke="var(--accent, var(--fg))" stroke-width="2" />
+<circle cx="326.22" cy="95.1" r="2" fill="var(--accent, var(--fg))" />
+  <g class="node railroad-nonterminal" data-kind="nonterminal">
+    <rect x="120.06" y="76" width="48.98" height="38.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="144.55" y="95.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #64748b 44%, var(--fg))" dy="4.9">field</text>
+  </g>
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="199.04" y="76" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="218.14" y="95.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">,</text>
+  </g>
+  <g class="node railroad-nonterminal" data-kind="nonterminal">
+    <rect x="247.24" y="76" width="48.98" height="38.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="271.73" y="95.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #64748b 44%, var(--fg))" dy="4.9">field</text>
+  </g>
+</g>
+<g class="railroad-rule" data-rule="field">
+  <text x="20" y="204.4" text-anchor="start" font-size="var(--fs-s)" font-weight="700" fill="var(--_text)" dy="4.9">field =</text>
+  <path class="railroad-track" d="M 99.9 204.4 A 10 10 0 0 0 109.9 194.4 L 109.9 191.3 A 10 10 0 0 1 119.9 181.3 L 119.9 181.3 M 187.36 181.3 L 187.36 181.3 A 10 10 0 0 1 197.36 191.3 L 197.36 194.4 A 10 10 0 0 0 207.36 204.4 M 99.9 204.4 A 10 10 0 0 1 109.9 214.4 L 109.9 217.5 A 10 10 0 0 0 119.9 227.5 L 126.62 227.5 M 180.64 227.5 L 187.36 227.5 A 10 10 0 0 0 197.36 217.5 L 197.36 214.4 A 10 10 0 0 1 207.36 204.4 M 84.9 204.4 L 99.9 204.4 M 207.36 204.4 L 212.36 204.4" fill="none" stroke="var(--_line)" stroke-width="1.5" stroke-linecap="round" />
+  <circle cx="79.9" cy="204.39999999999998" r="5" fill="var(--accent, var(--fg))" />
+  <circle cx="217.36" cy="204.39999999999998" r="5" fill="none" stroke="var(--accent, var(--fg))" stroke-width="2" />
+<circle cx="217.36" cy="204.39999999999998" r="2" fill="var(--accent, var(--fg))" />
+  <g class="node railroad-nonterminal" data-kind="nonterminal">
+    <rect x="119.9" y="162.2" width="67.46" height="38.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="153.63" y="181.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #64748b 44%, var(--fg))" dy="4.9">quoted</text>
+  </g>
+  <g class="node railroad-nonterminal" data-kind="nonterminal">
+    <rect x="126.62" y="208.4" width="54.02" height="38.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="153.63" y="227.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #64748b 44%, var(--fg))" dy="4.9">bare</text>
+  </g>
+</g>
+<g class="railroad-rule" data-rule="quoted">
+  <text x="20" y="336.8" text-anchor="start" font-size="var(--fs-s)" font-weight="700" fill="var(--_text)" dy="4.9">quoted =</text>
+  <path class="railroad-track" d="M 156.58 336.8 L 166.58 336.8 M 260.6 313.7 L 270.6 313.7 M 308.8 313.7 L 318.8 313.7 M 186.58 336.8 A 10 10 0 0 0 196.58 326.8 L 196.58 323.7 A 10 10 0 0 1 206.58 313.7 L 206.58 313.7 M 357 313.7 L 357 313.7 A 10 10 0 0 1 367 323.7 L 367 326.8 A 10 10 0 0 0 377 336.8 M 186.58 336.8 A 10 10 0 0 1 196.58 346.8 L 196.58 349.9 A 10 10 0 0 0 206.58 359.9 L 262.69 359.9 M 300.89 359.9 L 357 359.9 A 10 10 0 0 0 367 349.9 L 367 346.8 A 10 10 0 0 1 377 336.8 M 166.58 336.8 L 186.58 336.8 M 377 336.8 L 397 336.8 M 377 336.8 A 10 10 0 0 1 387 346.8 L 387 389 A 10 10 0 0 1 377 399 L 186.58 399 A 10 10 0 0 1 176.58 389 L 176.58 346.8 A 10 10 0 0 1 186.58 336.8 M 166.58 336.8 A 10 10 0 0 0 176.58 326.8 L 176.58 284.6 A 10 10 0 0 1 186.58 274.6 L 377 274.6 A 10 10 0 0 1 387 284.6 L 387 326.8 A 10 10 0 0 0 397 336.8 M 397 336.8 L 407 336.8 M 103.38 336.8 L 118.38 336.8 M 445.2 336.8 L 450.2 336.8" fill="none" stroke="var(--_line)" stroke-width="1.5" stroke-linecap="round" />
+  <circle cx="98.38" cy="336.8" r="5" fill="var(--accent, var(--fg))" />
+  <circle cx="455.2" cy="336.8" r="5" fill="none" stroke="var(--accent, var(--fg))" stroke-width="2" />
+<circle cx="455.2" cy="336.8" r="2" fill="var(--accent, var(--fg))" />
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="118.38" y="317.7" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="137.48" y="336.8" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">&quot;</text>
+  </g>
+  <g class="node railroad-nonterminal" data-kind="nonterminal">
+    <rect x="206.58" y="294.6" width="54.02" height="38.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="233.59" y="313.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #64748b 44%, var(--fg))" dy="4.9">char</text>
+  </g>
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="270.6" y="294.6" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="289.7" y="313.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">-</text>
+  </g>
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="318.8" y="294.6" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="337.9" y="313.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">&quot;</text>
+  </g>
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="262.69" y="340.8" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="281.79" y="359.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">&quot;&quot;</text>
+  </g>
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="407" y="317.7" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="426.1" y="336.8" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">&quot;</text>
+  </g>
+</g>
+<g class="railroad-rule" data-rule="bare">
+  <text x="20" y="486.1" text-anchor="start" font-size="var(--fs-s)" font-weight="700" fill="var(--_text)" dy="4.9">bare =</text>
+  <path class="railroad-track" d="M 178.96 486.1 L 188.96 486.1 M 188.96 486.1 L 208.96 486.1 M 262.98 486.1 L 282.98 486.1 M 262.98 486.1 A 10 10 0 0 1 272.98 496.1 L 272.98 515.2 A 10 10 0 0 1 262.98 525.2 L 208.96 525.2 A 10 10 0 0 1 198.96 515.2 L 198.96 496.1 A 10 10 0 0 1 208.96 486.1 M 188.96 486.1 A 10 10 0 0 0 198.96 476.1 L 198.96 457 A 10 10 0 0 1 208.96 447 L 262.98 447 A 10 10 0 0 1 272.98 457 L 272.98 476.1 A 10 10 0 0 0 282.98 486.1 M 104.94 486.1 L 124.94 486.1 M 282.98 486.1 L 302.98 486.1 M 104.94 486.1 A 10 10 0 0 0 114.94 476.1 L 114.94 437 A 10 10 0 0 1 124.94 427 L 282.98 427 A 10 10 0 0 1 292.98 437 L 292.98 476.1 A 10 10 0 0 0 302.98 486.1 M 89.94 486.1 L 104.94 486.1 M 302.98 486.1 L 307.98 486.1" fill="none" stroke="var(--_line)" stroke-width="1.5" stroke-linecap="round" />
+  <circle cx="84.94" cy="486.1" r="5" fill="var(--accent, var(--fg))" />
+  <circle cx="312.98" cy="486.1" r="5" fill="none" stroke="var(--accent, var(--fg))" stroke-width="2" />
+<circle cx="312.98" cy="486.1" r="2" fill="var(--accent, var(--fg))" />
+  <g class="node railroad-nonterminal" data-kind="nonterminal">
+    <rect x="124.94" y="467" width="54.02" height="38.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="151.95" y="486.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #64748b 44%, var(--fg))" dy="4.9">char</text>
+  </g>
+  <g class="node railroad-nonterminal" data-kind="nonterminal">
+    <rect x="208.96" y="467" width="54.02" height="38.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="235.97" y="486.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #64748b 44%, var(--fg))" dy="4.9">char</text>
+  </g>
+</g>
+<g class="railroad-rule" data-rule="char">
+  <text x="20" y="573.2" text-anchor="start" font-size="var(--fs-s)" font-weight="700" fill="var(--_text)" dy="4.9">char =</text>
+  <path class="railroad-track" d="M 89.94 573.2 L 104.94 573.2 M 349.64 573.2 L 354.64 573.2" fill="none" stroke="var(--_line)" stroke-width="1.5" stroke-linecap="round" />
+  <circle cx="84.94" cy="573.2" r="5" fill="var(--accent, var(--fg))" />
+  <circle cx="359.64" cy="573.2" r="5" fill="none" stroke="var(--accent, var(--fg))" stroke-width="2" />
+<circle cx="359.64" cy="573.2" r="2" fill="var(--accent, var(--fg))" />
+  <g class="node railroad-special" data-kind="special">
+    <rect x="104.94" y="554.1" width="244.7" height="38.2" rx="8" ry="8" fill="color-mix(in srgb, var(--_line) 6%, var(--bg))" stroke="color-mix(in srgb, var(--_line) 42%, var(--bg))" stroke-width="1.25" stroke-dasharray="5 4" />
+    <text x="227.29" y="573.2" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, var(--_line) 44%, var(--fg))" dy="4.9">any character except a line break</text>
+  </g>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #f28e2b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #f28e2b 7%, var(--bg))" /></linearGradient>
+</defs>
+</svg>

@@ -452,6 +452,23 @@ internal static class DiagramSvgStage
 					sb = ZenUmlSvgRenderer.RenderToBuilder(parsed, context);
 					break;
 				}
+			case DiagramType.Railroad:
+				{
+					var parsed = RailroadParser.Parse(diagram.Source, limits.MaxRecursionDepth);
+
+					ResourceGuard.CheckElements(RailroadParser.CountNodes(parsed), limits);
+					ct.ThrowIfCancellationRequested();
+					try
+					{
+						sb = RailroadSvgRenderer.RenderToBuilder(parsed, context);
+					}
+					catch (InsufficientExecutionStackException ex)
+					{
+						throw new MermaidResourceLimitException(nameof(limits.MaxRecursionDepth), limits.MaxRecursionDepth + 1L, limits.MaxRecursionDepth, ex);
+					}
+
+					break;
+				}
 			default:
 				{
 					// Flowchart, State — primary Sugiyama path, most DoS-critical

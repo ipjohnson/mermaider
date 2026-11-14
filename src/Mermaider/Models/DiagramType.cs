@@ -30,4 +30,5 @@ public enum DiagramType
 	Usecase,
 	Wardley,
 	ZenUml,
+	Railroad,
 }
