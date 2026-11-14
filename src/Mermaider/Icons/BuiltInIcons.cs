@@ -6,7 +6,7 @@ namespace Mermaider.Icons;
 /// The built-in icon set: Mermaid's default architecture pictograms, a curated selection of
 /// vendor-flavored glyphs (AWS/Azure/GCP/Elastic), and a set of generic <c>ext:</c> components
 /// for common architecture vocabulary (WAF, API gateway, Kubernetes, pods, pools, reverse proxy,
-/// web, API) that doesn't belong to any one vendor. These are original, simplified shapes — not
+/// web, API) that doesn't belong to any one vendor, plus the <c>fa:</c> placeholders of <see cref="FontAwesomeIcons"/>. These are original, simplified shapes — not
 /// vendors' official trademarked artwork — sanitized and validated once at startup via
 /// <see cref="IconValidation"/>, the same path <see cref="IconRegistry.Register(string,string)"/> uses for
 /// user-supplied icons.
@@ -268,6 +268,8 @@ internal static class BuiltInIcons
 			["ext:cdn"] = VendorGlyph(CdnGlyph),
 			["ext:cache"] = VendorGlyph(CacheGlyph),
 		};
+		foreach (var (name, svg) in FontAwesomeIcons.All())
+			raw[name] = svg;
 
 		var validated = new Dictionary<string, string>(raw.Count, StringComparer.OrdinalIgnoreCase);
 		foreach (var (name, svg) in raw)

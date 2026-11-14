@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 73ca1cc59c97bafe
+accept	yes
+drawn	yes
+edge	B	C	none	arrow	solid
+edge	B	D	none	arrow	solid
+edge	B	E	none	arrow	solid	ok
+edge	E	F	none	arrow	solid
+edge	E	G	none	arrow	solid
+group	S	Cloud side	B,C
+icon	B	fa:fa-twitter
+icon	C	fa:fa-ban
+icon	D	fa:fa-spinner
+icon	E	fa:fa-camera-retro
+icon	F	fa:fa-heart
+icon	F	fa:fa-star
+icon	G	fa:fa-no-such-icon
+node	B	for peace	rect
+node	C	forbidden	rect
+node	D		rounded
+node	E	A perhaps?	rounded
+node	F	Bold and a long second line that wraps	rect
+node	G	unknown	rect

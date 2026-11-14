@@ -302,8 +302,8 @@ public class UsecaseParserTests
 			"""
 		);
 
-		d.Unused.Select(u => (u.Line, u.Text)).Should().Equal((3, "icon: fa:user"), (4, "icon: not-registered:user"));
-		d.Unused[1].Reason.Should().Be("actor 'Fallback': icon 'not-registered:user' is not registered, the 'generic' fallback glyph is drawn");
+		d.Unused.Select(u => (u.Line, u.Text)).Should().Equal((4, "icon: not-registered:user"));
+		d.Unused[0].Reason.Should().Be("actor 'Fallback': icon 'not-registered:user' is not registered, the 'generic' fallback glyph is drawn");
 		d.Actors.Single(a => a.Id == "Fallback").Type.Should().Be(UsecaseActorType.Icon);
 	}
 

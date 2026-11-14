@@ -343,7 +343,7 @@ internal sealed partial class DesignSystem
 		{
 			case ContainerKind.Tab:
 				{
-					var caps = title.ToUpperInvariant();
+					var caps = InlineIcons.Replace(title, out var slots).ToUpperInvariant();
 					var textW = XsWidth(caps, 600, letterSpacingPerChar: 1.0);
 					var tabX = x + 12;
 					// knock the border out behind the tab, then tick + caps title
@@ -365,6 +365,18 @@ internal sealed partial class DesignSystem
 						.Append("\" />");
 					_ = sb.Append('\n');
 					AppendText(sb, caps, tabX + 8, y, TypeRole.Eyebrow, family.Ink, anchor: "start");
+					InlineIcons.AppendIcons(
+						sb,
+						this,
+						caps,
+						slots,
+						tabX + 8,
+						y,
+						Px(TypeRole.Eyebrow),
+						"start",
+						s => XsWidth(s, 600, letterSpacingPerChar: 1.0),
+						family.Ink
+					);
 					if (count is not null)
 					{
 						_ = sb.Append('\n');
@@ -375,7 +387,8 @@ internal sealed partial class DesignSystem
 				}
 			case ContainerKind.Chip:
 				{
-					var textW = TextMetrics.MeasureTextWidth(title, Px(TypeRole.Subheading), 700);
+					var shown = InlineIcons.Replace(title, out var slots);
+					var textW = TextMetrics.MeasureTextWidth(shown, Px(TypeRole.Subheading), 700);
 					var chipW = textW + 34;
 					_ = sb
 						.Append("\n<rect x=\"")
@@ -396,7 +409,9 @@ internal sealed partial class DesignSystem
 						.Append(family.Stroke)
 						.Append("\" />");
 					_ = sb.Append('\n');
-					AppendText(sb, title, x + 30, y + 19, TypeRole.Subheading, family.Ink, anchor: "start", weight: 700);
+					AppendText(sb, shown, x + 30, y + 19, TypeRole.Subheading, family.Ink, anchor: "start", weight: 700);
+					var px = Px(TypeRole.Subheading);
+					InlineIcons.AppendIcons(sb, this, shown, slots, x + 30, y + 19, px, "start", s => TextMetrics.MeasurePlainWidth(s, px, 700), family.Ink);
 					if (count is not null)
 					{
 						_ = sb.Append('\n');
@@ -409,7 +424,7 @@ internal sealed partial class DesignSystem
 				{
 					// ink title in the strip
 					_ = sb.Append('\n');
-					AppendText(sb, title, x + 12, midY, TypeRole.Subheading, family.Ink, anchor: "start");
+					InlineIcons.AppendText(sb, this, title, x + 12, midY, TypeRole.Subheading, family.Ink, anchor: "start");
 					if (count is not null)
 					{
 						_ = sb.Append('\n');

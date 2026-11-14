@@ -63,7 +63,7 @@ public class FlowchartAssetNodeTests
 	[Test]
 	public void Unknown_icon_draws_a_placeholder_glyph_and_reports_it()
 	{
-		var (svg, diagnostics) = Render("flowchart TD\n  A@{ icon: \"fa:user\", label: \"User\" }");
+		var (svg, diagnostics) = Render("flowchart TD\n  A@{ icon: \"fa:no-such-icon\", label: \"User\" }");
 
 		NodeGroup(svg, "A")
 			.Elements()

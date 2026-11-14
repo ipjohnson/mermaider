@@ -18,6 +18,18 @@ public class MindmapParserTests
 	}
 
 	[Test]
+	public void Icon_line_sets_the_icon_of_the_node_read_last()
+	{
+		// docs-mindmap-012
+		var lines = new[] { "mindmap", "    Root", "        A", "        ::icon(fa fa-book)", "        B(B)", "        ::icon(mdi mdi-skull-outline)" };
+
+		var diagram = MindmapParser.Parse(lines);
+
+		diagram.Root.Children.Select(c => (c.Label, c.Icon)).Should().Equal(("A", "fa fa-book"), ("B", "mdi mdi-skull-outline"));
+		diagram.Root.Icon.Should().BeNull();
+	}
+
+	[Test]
 	public void Parses_children()
 	{
 		var lines = new[] { "mindmap", "  root", "    Topic A", "    Topic B", };

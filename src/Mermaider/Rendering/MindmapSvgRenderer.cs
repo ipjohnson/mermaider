@@ -1,4 +1,5 @@
 using System.Text;
+using Mermaider.Icons;
 using Mermaider.Models;
 using Mermaider.Text;
 using Mermaider.Theming;
@@ -15,6 +16,8 @@ internal static class MindmapSvgRenderer
 	private const double NodePadX = 20;
 	private const double NodePadY = 10;
 	private const double Margin = DesignSystem.BoardMargin;
+	private const double IconSize = 24;
+	private const double IconGap = 8;
 
 	internal static string Render(MindmapDiagram diagram, SvgRenderContext context)
 	{
@@ -97,8 +100,23 @@ internal static class MindmapSvgRenderer
 		double? ParentCx,
 		double? ParentCy,
 		double ParentHalfW = 0,
-		double ParentHalfH = 0
+		double ParentHalfH = 0,
+		string? Icon = null
 	);
+
+	/// <summary>One diagnostic per <c>::icon(...)</c> the <see cref="IconRegistry"/> has no icon for, in tree order.</summary>
+	internal static IEnumerable<MermaidDiagnostic> Diagnose(MindmapDiagram diagram)
+	{
+		var pending = new Stack<MindmapNode>([diagram.Root]);
+		while (pending.Count > 0)
+		{
+			var node = pending.Pop();
+			if (node.Icon is { } icon && IconReference.FromClasses(icon) is { RegistryName: null } reference)
+				yield return InlineIcons.Unknown(node.Label, $"Mindmap node '{node.Label}'", reference);
+			for (var i = node.Children.Count - 1; i >= 0; i--)
+				pending.Push(node.Children[i]);
+		}
+	}
 
 	// the root is the accent; every top-level branch takes a cluster family of its own (p1, p2 …)
 	private static ColorFamily Family(DesignSystem ds, PositionedMindmapNode node) => node.Branch < 0 ? ds.Accent : ds.Cluster(node.Branch);
@@ -111,7 +129,7 @@ internal static class MindmapSvgRenderer
 	private static void LayoutBalanced(MindmapNode root, List<PositionedMindmapNode> result, ResourceLimits limits, bool transposed)
 	{
 		var (rootLabel, rootW, rootH) = Measure(root, 0, transposed);
-		var rootNode = new PositionedMindmapNode(-rootW / 2, -rootH / 2, rootW, rootH, rootLabel, root.Shape, -1, 0, null, null);
+		var rootNode = new PositionedMindmapNode(-rootW / 2, -rootH / 2, rootW, rootH, rootLabel, root.Shape, -1, 0, null, null, Icon: root.Icon);
 
 		// each branch laid out to the right of x = 0 on its own
 		var branches = new List<(List<PositionedMindmapNode> Nodes, double Height)>();
@@ -229,8 +247,16 @@ internal static class MindmapSvgRenderer
 		var weight = MeasureWeight(depth);
 		var label = Wrap(node.Label, fontSizePx, weight);
 		var metrics = TextMetrics.MeasureMultiline(label.AsSpan(), fontSizePx, weight);
-		var w = metrics.Width + (NodePadX * 2);
-		var h = metrics.Height + (NodePadY * 2);
+		var (cw, ch) = (metrics.Width, metrics.Height);
+		// the icon sits left of the label, or above it in a circle
+		if (node.Icon is not null)
+		{
+			(cw, ch) = node.Shape == MindmapShape.Circle
+				? (Math.Max(cw, IconSize), ch + IconSize + IconGap)
+				: (cw + IconSize + IconGap, Math.Max(ch, IconSize));
+		}
+		var w = cw + (NodePadX * 2);
+		var h = ch + (NodePadY * 2);
 		if (node.Shape == MindmapShape.Circle)
 			w = h = Math.Sqrt((w * w) + (h * h));
 		else if (node.Shape == MindmapShape.Bang)
@@ -256,7 +282,7 @@ internal static class MindmapSvgRenderer
 
 		if (node.Children.Count == 0)
 		{
-			result.Add(new PositionedMindmapNode(x, y, w, h, label, node.Shape, branch, depth, null, null));
+			result.Add(new PositionedMindmapNode(x, y, w, h, label, node.Shape, branch, depth, null, null, Icon: node.Icon));
 			return h;
 		}
 
@@ -278,7 +304,7 @@ internal static class MindmapSvgRenderer
 		var nodeCx = x + (w / 2);
 		var nodeCy = nodeY + (h / 2);
 
-		result.Add(new PositionedMindmapNode(x, nodeY, w, h, label, node.Shape, branch, depth, null, null));
+		result.Add(new PositionedMindmapNode(x, nodeY, w, h, label, node.Shape, branch, depth, null, null, Icon: node.Icon));
 
 		for (var i = 0; i < childPositions.Count; i++)
 		{
@@ -472,8 +498,34 @@ internal static class MindmapSvgRenderer
 				break;
 		}
 
+		var (labelCx, labelCy) = (cx, cy);
+		if (node.Icon is { } icon)
+		{
+			var m = TextMetrics.MeasureMultiline(node.Label.AsSpan(), DesignSystem.Px(Role(node.Depth)), MeasureWeight(node.Depth));
+			double iconCx, iconCy;
+			if (node.Shape == MindmapShape.Circle)
+			{
+				var top = cy - ((IconSize + IconGap + m.Height) / 2);
+				(iconCx, iconCy) = (cx, top + (IconSize / 2));
+				labelCy = top + IconSize + IconGap + (m.Height / 2);
+			}
+			else
+			{
+				var left = cx - ((IconSize + IconGap + m.Width) / 2);
+				(iconCx, iconCy) = (left + (IconSize / 2), cy);
+				labelCx = left + IconSize + IconGap + (m.Width / 2);
+			}
+
+			var reference = IconReference.FromClasses(icon);
+			_ = sb.Append("\n<g class=\"mindmap-icon\" data-icon=\"");
+			MultilineUtils.AppendEscapedAttr(sb, reference.Text.AsSpan());
+			_ = sb.Append("\">");
+			ArchitectureSvgRenderer.AppendIcon(sb, ds, reference.RegistryName ?? IconRegistry.FallbackName, iconCx, iconCy, IconSize, family.Ink);
+			_ = sb.Append("</g>");
+		}
+
 		_ = sb.Append('\n');
-		ds.AppendText(sb, node.Label, cx, cy, Role(node.Depth), weight: Weight(ds, node.Depth));
+		ds.AppendText(sb, node.Label, labelCx, labelCy, Role(node.Depth), weight: Weight(ds, node.Depth));
 		_ = sb.Append("\n</g>");
 	}
 }

@@ -385,7 +385,7 @@ internal static class FlowchartShapes
 	/// <summary>The label's box grown by <see cref="OpenSidePadding"/>, kept inside the node.</summary>
 	private static (double X, double Y, double Right, double Bottom) PaddedLabel(string label, double x, double y, double w, double h)
 	{
-		var m = TextMetrics.MeasureMultiline(NodeSizing.WrapLabel(label).AsSpan(), RenderConstants.FontSizes.NodeLabel, RenderConstants.FontWeights.NodeLabel);
+		var m = NodeSizing.MeasureLabel(NodeSizing.WrapLabel(label));
 		var (cx, cy) = (x + (w / 2), y + (h / 2));
 		var hw = Math.Min(w / 2, (m.Width / 2) + OpenSidePadding);
 		var hh = Math.Min(h / 2, (m.Height / 2) + OpenSidePadding);

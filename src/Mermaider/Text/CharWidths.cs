@@ -27,6 +27,10 @@ internal static class CharWidths
 		if (c == ' ')
 			return 0.3;
 
+		// an em space is one em, and inline icons sit in one (see InlineIcons)
+		if (c == ' ')
+			return 1.75;
+
 		if (c is 'W' or 'M')
 			return 1.5;
 

@@ -69,5 +69,10 @@ catch (MermaidParseException e) { /* bad syntax or a disallowed diagram type */ 
   `IconRegistry.Register(name, svg)` before rendering. Image nodes (`A@{ img: ... }`) draw only base64
   `data:image/svg+xml` and `data:image/png` URIs. An unregistered icon or an `http(s)` image draws a placeholder and is
   reported to `RenderOptions.OnDiagnostics = diagnostics => ...` as a `MermaidDiagnostic` (`Kind`, `ElementId`, `Message`).
+- FontAwesome references in flowchart and state labels (`B["fa:fa-twitter for peace"]`, also `fab:`, `fas:`, `far:`,
+  `fal:`, `fak:`) and mindmap `::icon(fa fa-book)` draw an icon, never the reference text. `fa-name` resolves to the
+  registry name `pack:name`, then `fa:name`; the built-in `fa:` set holds original placeholder glyphs for common names,
+  not FontAwesome's artwork. Register the real icon, such as `IconRegistry.Register("fab:truck-bold", svg)`, to replace
+  one. An unknown name draws a placeholder glyph and is reported as `MermaidDiagnosticKind.UnknownIcon`.
 
 Docs: https://mermaider.nullean.net
