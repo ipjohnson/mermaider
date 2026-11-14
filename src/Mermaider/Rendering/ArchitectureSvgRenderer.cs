@@ -167,7 +167,7 @@ internal static class ArchitectureSvgRenderer
 	/// Artwork is embedded as a base64 data URI on an &lt;image&gt;, the one narrow case the SVG sanitizer allows an href
 	/// through (see <see cref="SvgSanitizer"/>); the markup was sanitized when it entered the <see cref="IconRegistry"/>.
 	/// </summary>
-	private static void AppendIcon(StringBuilder sb, DesignSystem ds, string iconName, double cx, double cy, double size, string ink)
+	internal static void AppendIcon(StringBuilder sb, DesignSystem ds, string iconName, double cx, double cy, double size, string ink)
 	{
 		if (BuiltInGlyph(iconName) is { } glyph)
 		{

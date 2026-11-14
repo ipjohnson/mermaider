@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348 468.68225099390855" width="348" height="468.68225099390855" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<path class="edge" data-from="user" data-to="api" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M92,244.28225099390858 L132,244.28225099390858" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="api" data-to="db" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M196,217.22225099390857 L211,217.22225099390857 Q219,217.22225099390857 219,209.22225099390857 L219,75.0411254969543 Q219,67.0411254969543 227,67.0411254969543 L254.41,67.0411254969543" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="api" data-to="cloud" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M196,235.2622509939086 L211,235.2622509939086 Q219,235.2622509939086 219,227.2622509939086 L219,199.18225099390858 Q219,191.18225099390858 227,191.18225099390858 L259.77,191.18225099390858" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="api" data-to="logo" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M196,253.3022509939086 L211,253.3022509939086 Q219,253.3022509939086 219,261.3022509939086 L219,289.3822509939086 Q219,297.3822509939086 227,297.3822509939086 L252,297.3822509939086" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="api" data-to="remote" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M176.22,271.3422509939086 L211,271.3422509939086 Q219,271.3422509939086 219,279.3422509939086 L219,401.5822509939086 Q219,409.5822509939086 227,409.5822509939086 L252,409.5822509939086" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<g class="node" data-id="user" data-label="User" data-shape="icon">
+  <rect x="16" y="219.382" width="76" height="76" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" /><g transform="translate(54 257.382) scale(2.727)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="-8" y="-8" width="16" height="16" rx="3" /><circle cx="0" cy="0" r="1.5" /></g>
+  <text x="54" y="202.28" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">User</text>
+</g>
+<g class="node" data-id="api" data-label="API" data-shape="icon">
+  <rect x="132" y="199.182" width="64" height="64" rx="12.8" ry="12.8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" /><g transform="translate(164 231.182) scale(2.182)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="-10" y="-9" width="20" height="7" rx="2" /><rect x="-10" y="2" width="20" height="7" rx="2" /><path d="M-5 -5.5 H-4 M-5 5.5 H-4" /></g>
+  <text x="164" y="280.28" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">API</text>
+</g>
+<g class="node" data-id="db" data-label="Orders" data-shape="icon">
+  <circle cx="289.941" cy="53.941" r="37.941" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" /><g transform="translate(289.941 53.941) scale(2.182)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="0" cy="-8" rx="9" ry="3.5" /><path d="M-9 -8 V8 C-9 10 9 10 9 8 V-8 M-9 0 C-9 2 9 2 9 0" /></g>
+  <text x="289.94" y="108.98" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Orders</text>
+</g>
+<g class="node" data-id="cloud" data-label="Bare icon" data-shape="icon">
+  <g transform="translate(283.773 178.082) scale(2.182)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-7 4.5 C-11 4.5 -11 -1.5 -6 -1.5 C-6 -6.5 3 -7.5 4 -1.5 C10 -2.5 11 4.5 6 4.5Z" /></g>
+  <text x="283.77" y="219.18" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Bare icon</text>
+</g>
+<g class="node" data-id="logo" data-label="Data URI" data-shape="image">
+  <image x="252" y="264.282" width="80" height="40" preserveAspectRatio="xMidYMid meet" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDgwIDQwIj48cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iNDAiIHJ4PSI2IiBmaWxsPSIjM2I4MmY2IiAvPjwvc3ZnPg==" />
+  <text x="292" y="321.38" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Data URI</text>
+</g>
+<g class="node" data-id="remote" data-label="Remote" data-shape="image">
+  <rect x="252" y="392.682" width="60" height="60" fill="color-mix(in srgb, #64748b 26%, var(--bg))" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1" stroke-dasharray="5 4" /><g transform="translate(282 422.682) scale(1.364)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="-8" y="-8" width="16" height="16" rx="3" /><circle cx="0" cy="0" r="1.5" /></g>
+  <text x="282" y="375.58" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Remote</text>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <marker id="m1814eb8b-mk-arrow" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <polygon points="0,1.5 10,6 0,10.5" fill="var(--_line)" stroke="var(--_line)" stroke-width="1" stroke-linejoin="miter" />
+  </marker>
+</defs>
+</svg>

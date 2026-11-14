@@ -32,7 +32,7 @@ internal static class LightweightLayoutEngine
 		{
 			if (!graph.Nodes.TryGetValue(id, out var node))
 				continue;
-			var (w, h) = NodeSizing.Estimate(node.Label, node.Shape, graph.IsFlowchart && graph.Direction is Direction.LR or Direction.RL);
+			var (w, h) = NodeSizing.Estimate(node.Label, node.Shape, graph.IsFlowchart && graph.Direction is Direction.LR or Direction.RL, node.Asset);
 			layoutNodes.Add(new LayoutNode(id, w, h)
 			{
 				Outline = node.Shape switch
@@ -210,6 +210,7 @@ internal static class LightweightLayoutEngine
 				InlineStyle = inlineStyle,
 				CssClassName = cssClass,
 				IsMarkdown = hasNode && mn.IsMarkdown,
+				Asset = hasNode ? mn.Asset : null,
 				SemanticRole = graph.ClassAssignments.TryGetValue(n.Id, out var roleClass) &&
 					(strict is null || strict.AllowedClasses.Any(c => c.Name == roleClass)) ? Rendering.ClusterPalette.RoleName(roleClass) : null,
 			});

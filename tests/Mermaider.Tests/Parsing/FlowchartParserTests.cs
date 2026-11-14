@@ -282,4 +282,54 @@ public class FlowchartParserTests
 		graph.Edges.Select(e => (e.Source, e.Target)).Should().Equal(("Start", "one"), ("one", "End"), ("one", "End"));
 		graph.EdgeStyles.Keys.Should().Equal(2);
 	}
+
+	[Test]
+	public void Icon_properties_make_an_icon_node()
+	{
+		var graph = MermaidRenderer.Parse("flowchart TD\n  A@{ icon: \"fa:user\", form: \"square\", label: \"User\", pos: \"t\", h: 60 }");
+
+		graph
+			.Nodes["A"]
+			.Should()
+			.Be(new MermaidNode("A", "User", NodeShape.Icon)
+			{
+				Asset = new NodeAsset(NodeAssetKind.Icon, "fa:user") { Form = IconForm.Square, LabelOnTop = true, Height = 60 },
+			});
+	}
+
+	[Test]
+	public void Image_properties_make_an_image_node_that_wins_over_icon_and_shape()
+	{
+		var graph = MermaidRenderer.Parse(
+			"flowchart TD\n  A@{ shape: diam, icon: \"database\", img: \"https://example.com/a.png\", w: 60, h: 40, constraint: \"on\" }"
+		);
+
+		graph
+			.Nodes["A"]
+			.Should()
+			.Be(new MermaidNode("A", "", NodeShape.Image)
+			{
+				Asset = new NodeAsset(NodeAssetKind.Image, "https://example.com/a.png") { Width = 60, Height = 40, KeepAspectRatio = true },
+			});
+	}
+
+	[Test]
+	public void Icon_node_keeps_an_explicit_label_and_drops_its_id()
+	{
+		var graph = MermaidRenderer.Parse("flowchart TD\n  A[Shown]\n  A@{ icon: \"server\" }\n  B@{ icon: \"server\" }");
+
+		graph.Nodes["A"].Label.Should().Be("Shown");
+		graph.Nodes["B"].Label.Should().BeEmpty();
+	}
+
+	[Test]
+	public void Asset_sizes_that_are_not_positive_numbers_are_ignored_and_large_ones_capped()
+	{
+		var graph = MermaidRenderer.Parse("flowchart TD\n  A@{ icon: \"server\", w: -5, h: 1e9 }\n  B@{ icon: \"server\", w: \"wide\", h: NaN }");
+
+		graph.Nodes["A"].Asset!.Width.Should().BeNull();
+		graph.Nodes["A"].Asset!.Height.Should().Be(1000);
+		graph.Nodes["B"].Asset!.Width.Should().BeNull();
+		graph.Nodes["B"].Asset!.Height.Should().BeNull();
+	}
 }

@@ -65,5 +65,9 @@ catch (MermaidParseException e) { /* bad syntax or a disallowed diagram type */ 
   `MermaidRenderer.Parse` returns a model only for flowchart and state.
 - `MermaidRenderer.SetLayoutProvider` is process-wide; for one call use `RenderOptions.LayoutProvider`.
 - `RenderDeadline` (5 s by default) is cooperative, not a hard timer. `ResourceLimits.Unlimited` is for trusted input only.
+- Flowchart icon nodes (`A@{ icon: "server" }`) resolve through `Mermaider.Icons.IconRegistry`; register an icon with
+  `IconRegistry.Register(name, svg)` before rendering. Image nodes (`A@{ img: ... }`) draw only base64
+  `data:image/svg+xml` and `data:image/png` URIs. An unregistered icon or an `http(s)` image draws a placeholder and is
+  reported to `RenderOptions.OnDiagnostics = diagnostics => ...` as a `MermaidDiagnostic` (`Kind`, `ElementId`, `Message`).
 
 Docs: https://mermaider.nullean.net

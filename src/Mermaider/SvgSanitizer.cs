@@ -467,6 +467,9 @@ public static partial class SvgSanitizer
 		return true;
 	}
 
+	/// <summary>True when <paramref name="value"/> is an <c>&lt;image&gt;</c> href this sanitizer keeps.</summary>
+	internal static bool IsSafeImageHref(string value) => IsSafeImageDataUri(value, 0);
+
 	private static bool IsSafeImageDataUri(string value, int nestedImageDepth)
 	{
 		Match match;
