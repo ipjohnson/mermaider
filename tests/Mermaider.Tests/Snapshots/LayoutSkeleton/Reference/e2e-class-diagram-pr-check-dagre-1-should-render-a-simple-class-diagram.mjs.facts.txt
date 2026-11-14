@@ -1,0 +1,59 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f880ef2181271fb4
+accept	yes
+attribute	Class01	#int protectedMarmoset
+attribute	Class01	+int publicGorilla
+attribute	Class01	-int privateChimp
+attribute	Class01	<<interface>>
+attribute	Class01	int chimp
+attribute	Class01	int gorilla
+attribute	Class07	Object[] elementData
+attribute	Class10	<<service>>
+attribute	Class10	int id
+bbox	label	Cool	92.4	273	121.2	294
+bbox	label	Cool label	797.7	631	859.9	652
+bbox	label	Where am i?	454.7	479	534.1	500
+bbox	node	AveryLongClass	39.8	346	173.8	427
+bbox	node	C2	698.9	677	740.8	758
+bbox	node	C3	529.4	346	571.3	427
+bbox	node	Class01	8	8	205.5	248
+bbox	node	Class03	255.5	87.5	332.5	168.5
+bbox	node	Class04	255.5	346	332.5	427
+bbox	node	Class05	382.5	87.5	459.4	168.5
+bbox	node	Class06	382.5	346	459.4	427
+bbox	node	Class07	621.3	319	803.3	454
+bbox	node	Class08	790.3	525	867.3	606
+bbox	node	Class09	511.9	87.5	588.8	168.5
+bbox	node	Class10	979.9	50	1107.4	206
+bbox	node	Class11	853.7	87.5	929.9	168.5
+bbox	node	Class12	853.3	346	930.3	427
+canvas	0	0	1115.4	766
+class	AveryLongClass	AveryLongClass
+class	C2	C2
+class	C3	C3
+class	Class01	Class01
+class	Class03	Class03
+class	Class04	Class04
+class	Class05	Class05
+class	Class06	Class06
+class	Class07	Class07
+class	Class08	Class08
+class	Class09	Class09
+class	Class10	Class10
+class	Class11	Class11
+class	Class12	Class12
+drawn	yes
+method	Class01	size()
+method	Class07	equals()
+method	Class10	test()
+relation	Class01	AveryLongClass	triangle	none	solid	Cool
+relation	Class03	Class04	diamond-filled	none	solid
+relation	Class05	Class06	diamond	none	solid
+relation	Class07	Class08	none	none	dashed
+relation	Class08	C2	arrow	arrow	solid	Cool label
+relation	Class09	C2	none	arrow	solid	Where am i?
+relation	Class09	C3	none	diamond-filled	solid
+relation	Class09	Class07	none	triangle	solid
+relation	Class11	Class12	none	arrow	dashed
+relation	Class12	Class08	triangle	none	dashed

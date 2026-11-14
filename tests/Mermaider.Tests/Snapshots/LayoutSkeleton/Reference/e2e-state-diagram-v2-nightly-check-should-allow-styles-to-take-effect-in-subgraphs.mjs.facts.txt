@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 567bb1aafb430276
+accept	yes
+drawn	yes
+group	roundWithTitle	roundWithTitle	C
+node	C	Black with white text	rounded
+node	D	Black with white text	rounded

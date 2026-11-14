@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1027eeced177411b
+accept	yes
+drawn	yes
+element	design_doc	document	docs/design.md
+label	10
+label	copies
+label	design_doc
+label	docs/design.md
+label	document
+label	sys_req
+label	system level requirement.
+relation	design_doc	sys_req	copies
+requirement	sys_req	requirement	10	system level requirement.	high	test

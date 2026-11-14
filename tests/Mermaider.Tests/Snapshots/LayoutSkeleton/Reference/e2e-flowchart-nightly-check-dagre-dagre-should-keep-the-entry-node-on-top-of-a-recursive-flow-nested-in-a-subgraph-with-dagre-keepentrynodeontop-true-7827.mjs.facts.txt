@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a4df0847a6680b16
+accept	yes
+drawn	yes
+edge	academic_sources	expert_voices	none	arrow	solid
+edge	brief	web_sources	none	arrow	solid
+edge	decision	brief	none	arrow	solid	Needs completion
+edge	decision	format_output	none	arrow	solid	If complete
+edge	expert_voices	synthesize	none	arrow	solid
+edge	research	done	none	arrow	solid
+edge	start	research	none	arrow	solid
+edge	synthesize	decision	none	arrow	solid
+edge	web_sources	academic_sources	none	arrow	solid
+group	research	Research	academic_sources,brief,decision,expert_voices,format_output,synthesize,web_sources
+node	academic_sources	academic_sources	rect
+node	brief	brief	rect
+node	decision	decision	rect
+node	done	Done	stadium
+node	expert_voices	expert_voices	rect
+node	format_output	format_output	rect
+node	start	Start	stadium
+node	synthesize	synthesize	rect
+node	web_sources	web_sources	rect

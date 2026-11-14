@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 51c6dff27ae91537
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	actor
+actor	Charlie	Charlie	boundary
+actor	David	David	control
+actor	Eve	Eve	entity
+bbox	label	Back to participant	415.2	261.4	546.8	280.2
+bbox	label	To actor	145.5	85.4	202.7	104.2
+bbox	label	To boundary	332	129.4	420	148.2
+bbox	label	To control	539.3	173.4	608.7	192.2
+bbox	label	To entity	745.2	217.4	804.8	236.2
+bbox	node	Alice	0	0	150	65
+bbox	node	Alice	0	305	150	370
+bbox	node	Bob	257	-5	293	76.9
+bbox	node	Bob	257	300	293	381.9
+bbox	node	Charlie	420	11	500.3	77.9
+bbox	node	Charlie	420	316	500.3	382.4
+bbox	node	David	653	10	697	75.9
+bbox	node	David	653	315	697	383.4
+canvas	-50	-10	1000	400
+drawn	yes
+message	Alice	Bob	solid	filled	To actor
+message	Bob	Charlie	dashed	filled	To boundary
+message	Charlie	David	solid	filled	To control
+message	David	Eve	dashed	filled-both	To entity
+message	Eve	Alice	solid	cross	Back to participant

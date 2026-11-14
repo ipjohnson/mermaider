@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fe186f5060b1489c
+accept	yes
+attribute	BOOK	int	*id
+attribute	BOOK	string	name
+attribute	BOOK	varchar(99)	summary
+attribute	STORE	int	*id
+attribute	STORE	string	name
+attribute	STORE	varchar(50)	address
+drawn	yes
+entity	BOOK	BOOK
+entity	STORE	STORE
+label	*id
+label	*id
+label	BOOK
+label	STORE
+label	address
+label	int
+label	int
+label	name
+label	name
+label	soldBy
+label	string
+label	string
+label	summary
+label	varchar(50)
+label	varchar(99)
+relation	BOOK	STORE	zero-or-more	zero-or-more	non-identifying	soldBy

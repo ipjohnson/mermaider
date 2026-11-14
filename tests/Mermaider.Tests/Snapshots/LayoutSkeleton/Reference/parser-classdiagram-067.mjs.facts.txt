@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9a26bf23ef9fe026
+accept	yes
+attribute	Car	wheels
+bbox	node	Car	12	12	91.3	126
+canvas	4	4	99.3	134
+class	Car	Car
+drawn	yes

@@ -1,0 +1,46 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8ab33aac13881555
+accept	yes
+actor	A	A	participant
+actor	B	B	participant
+actor	actor1	actor1	actor
+actor	boundary2	boundary2	boundary
+actor	collections6	collections6	collections
+actor	control3	control3	control
+actor	database5	database5	database
+actor	entity4	entity4	entity
+actor	participant0	participant0	participant
+actor	queue7	queue7	queue
+bbox	label	Hello actor	362.8	164	439.4	180.4
+bbox	label	Hello boundary	456.2	240	563.8	256.5
+bbox	label	Hello collections	1002.2	546	1117.8	562.4
+bbox	label	Hello control	631.5	317	720.5	333.4
+bbox	label	Hello database	897.6	470	1004.4	486.4
+bbox	label	Hello entity	773.4	393	852.6	409.5
+bbox	label	Hello participant	177.6	87	292.4	103.4
+bbox	label	Hello queue	1154.3	623	1239.7	639.4
+bbox	node	A	0	0	150	65
+bbox	node	A	0	697	150	762
+bbox	node	B	200	0	350	65
+bbox	node	B	200	697	350	762
+bbox	node	actor1	727.8	148	772.2	228.7
+bbox	node	actor1	727.8	692	772.2	772.7
+bbox	node	boundary2	970	240.5	1062.8	306.3
+bbox	node	boundary2	970	708	1062.8	773.3
+bbox	node	collections6	2050	535.5	2200	600.5
+bbox	node	collections6	2050	697	2200	762
+bbox	node	control3	1271.5	316	1328.5	380.7
+bbox	node	control3	1271.5	707	1328.5	774.2
+bbox	node	participant0	400	697	550	762
+bbox	node	participant0	400	76.5	550	141.5
+canvas	-50	-10	2525	792
+drawn	yes
+message	A	actor1	solid	filled	Hello actor
+message	A	boundary2	solid	filled	Hello boundary
+message	A	collections6	solid	filled	Hello collections
+message	A	control3	solid	filled	Hello control
+message	A	database5	solid	filled	Hello database
+message	A	entity4	solid	filled	Hello entity
+message	A	participant0	solid	filled	Hello participant
+message	A	queue7	solid	filled	Hello queue

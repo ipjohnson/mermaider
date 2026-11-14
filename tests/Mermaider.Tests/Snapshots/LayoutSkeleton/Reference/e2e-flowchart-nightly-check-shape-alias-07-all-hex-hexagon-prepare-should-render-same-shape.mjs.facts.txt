@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source da72601a7335d2e3
+accept	yes
+drawn	yes
+node	n0	hex	hex
+node	n1	hexagon	hex
+node	n2	prepare	hex

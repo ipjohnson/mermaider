@@ -1,0 +1,131 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9b5192218252a0ec
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Charlie	Charlie	participant
+actor	David	David	participant
+bbox	label	Bidirectional back	160.3	3054.4	289.7	3072.1
+bbox	label	Bidirectional dotted (<<-->>)	706.1	636.4	911.9	654.5
+bbox	label	Bidirectional solid (<<->>)	132.3	592.4	317.7	610.5
+bbox	label	Central dual connection	426	2922.4	598	2940.1
+bbox	label	Central reverse	752.8	3142.4	863.2	3160.2
+bbox	label	Circle at source with cross	135.2	1536.4	324.8	1554.2
+bbox	label	Circle at source with dotted	419.1	1448.4	620.9	1466.1
+bbox	label	Circle at source with open	426.6	1492.4	615.4	1510.5
+bbox	label	Circle at source with solid	136.4	1404.4	323.6	1422.1
+bbox	label	Cross message	460.9	3098.4	563.1	3116.5
+bbox	label	Cross with circle at destination	108.3	1311.4	331.7	1329.1
+bbox	label	Dotted arrow (-->>)	158	367.4	298	385.5
+bbox	label	Dotted cross (--x)	603.2	455.4	728.8	473.5
+bbox	label	Dotted open arrow (-->)	427.3	411.4	598.7	429.5
+bbox	label	Dotted point async (--)	146.4	499.4	309.6	517.5
+bbox	label	Dotted response	747.8	2966.4	864.2	2984.5
+bbox	label	Dotted solid bottom reverse (\|--)	393.1	998.4	636.9	1016.5
+bbox	label	Dotted solid top reverse (/|--)	115.9	954.4	334.1	972.5
+bbox	label	Dotted stick bottom reverse (\\--)	102.4	1086.4	343.6	1104.5
+bbox	label	Dotted stick top reverse (//--)	411.8	1042.4	630.2	1060.5
+bbox	label	Dotted with circle	459	3186.4	589	3204.1
+bbox	label	Dotted with circle at destination	242.7	1223.4	477.3	1241.1
+bbox	label	Dual circles with bidirectional dotted	675	1898.4	943	1916.2
+bbox	label	Dual circles with bidirectional solid	98.3	1854.4	351.7	1872.1
+bbox	label	Dual circles with cross	142.1	1761.4	301.9	1779.1
+bbox	label	Dual circles with dotted	276	1673.4	448	1691.1
+bbox	label	Dual circles with open	439.4	1717.4	598.6	1735.5
+bbox	label	Dual circles with solid	143.3	1629.4	300.7	1647.2
+bbox	label	Open with circle at destination	405.4	1267.4	628.6	1285.5
+bbox	label	Regular message	162.8	2878.4	281.2	2896.5
+bbox	label	Reverse arrow	468.2	3010.4	569.8	3028.1
+bbox	label	Self-ref bidirectional dotted	276.8	2755.4	479.2	2773.1
+bbox	label	Self-ref bidirectional solid	-14.9	2681.4	172.9	2699.2
+bbox	label	Self-ref reverse solid bottom	271.8	2410.4	478.2	2428.1
+bbox	label	Self-ref reverse solid top	-13.1	2336.4	165.1	2354.5
+bbox	label	Self-ref reverse stick bottom	860.7	2558.4	1067.3	2576.1
+bbox	label	Self-ref reverse stick top	566.8	2484.4	745.2	2502.5
+bbox	label	Self-reference cross	892.4	2213.4	1035.6	2231.2
+bbox	label	Self-reference dotted	297.3	2065.4	452.7	2083.1
+bbox	label	Self-reference open	584.7	2139.4	727.3	2157.5
+bbox	label	Self-reference solid	5.6	1991.4	146.4	2009.2
+bbox	label	Solid arrow (->>)	162.1	142.4	281.9	160.5
+bbox	label	Solid bottom reverse (\|-)	422.2	773.4	607.8	791.5
+bbox	label	Solid cross (-x)	463.3	230.4	568.7	248.5
+bbox	label	Solid open arrow (->)	289.4	186.4	440.6	204.5
+bbox	label	Solid point async (-)	150.4	274.4	293.6	292.5
+bbox	label	Solid top reverse (/|-)	145	729.4	305	747.5
+bbox	label	Solid with circle at destination	109.8	1179.4	330.2	1197.1
+bbox	label	Stick bottom reverse (\\-)	131.5	861.4	314.5	879.5
+bbox	label	Stick top reverse (//)	443.8	817.4	598.2	835.5
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	3230	150	3303
+bbox	node	Bob	299	0	449	73
+bbox	node	Bob	299	3230	449	3303
+bbox	node	Charlie	580	0	730	73
+bbox	node	Charlie	580	3230	730	3303
+bbox	node	David	888	0	1038	73
+bbox	node	David	888	3230	1038	3303
+bbox	note	BIDIRECTIONAL ARROWS	50	533	988	572
+bbox	note	BIDIRECTIONAL WITH CENTRAL CONNECTIONS	50	1795	988	1834
+bbox	note	CENTRAL CONNECTIONS (Circle at destination)	50	1120	988	1159
+bbox	note	CENTRAL CONNECTIONS DUAL (Circles at both ends)	50	1570	988	1609
+bbox	note	CENTRAL CONNECTIONS REVERSE (Circle at source)	50	1345	988	1384
+bbox	note	DOTTED ARROWS (Dashed line)	50	308	988	347
+bbox	note	DOTTED REVERSE ARROWS	50	895	988	934
+bbox	note	MIXED COMPLEX SCENARIO	50	2819	988	2858
+bbox	note	REVERSE ARROWS (Half arrows)	50	670	988	709
+bbox	note	SELF-REFERENCES (Same participant)	50	1932	988	1971
+bbox	note	SELF-REFERENCES BIDIRECTIONAL	50	2622	988	2661
+bbox	note	SELF-REFERENCES WITH REVERSE ARROWS	50	2277	988	2316
+bbox	note	SOLID ARROWS (Filled arrowhead)	50	83	988	122
+canvas	-55.5	-10	1105.5	3344
+drawn	yes
+message	Alice	Alice	solid	filled	Self-reference solid
+message	Alice	Alice	solid	filled-both	Self-ref bidirectional solid
+message	Alice	Bob	dashed	cross	Cross with circle at destination
+message	Alice	Bob	dashed	cross	Dual circles with cross
+message	Alice	Bob	solid	filled	Dual circles with solid
+message	Alice	Bob	solid	filled	Regular message
+message	Alice	Bob	solid	filled	Solid arrow (->>)
+message	Alice	Bob	solid	filled	Solid with circle at destination
+message	Alice	Bob	solid	filled-both	Bidirectional back
+message	Alice	Bob	solid	filled-both	Bidirectional solid (<<->>)
+message	Alice	Bob	solid	filled-both	Dual circles with bidirectional solid
+message	Alice	Bob	solid	open	Solid point async (-)
+message	Alice	Charlie	dashed	filled	Dotted with circle at destination
+message	Alice	Charlie	dashed	filled	Dual circles with dotted
+message	Alice	Charlie	solid	none	Solid open arrow (->)
+message	Alice	David	solid	cross	Solid cross (-x)
+message	Alice	David	solid	none	Dual circles with open
+message	Alice	David	solid	none	Open with circle at destination
+message	Bob	Alice	dashed	cross	Circle at source with cross
+message	Bob	Alice	dashed	filled	Dotted arrow (-->>)
+message	Bob	Alice	dashed	open	Dotted point async (--)
+message	Bob	Alice	solid	filled	Circle at source with solid
+message	Bob	Bob	dashed	filled	Self-reference dotted
+message	Bob	Bob	dashed	filled-both	Self-ref bidirectional dotted
+message	Bob	Charlie	dashed	none	Dotted open arrow (-->)
+message	Bob	Charlie	solid	cross	Cross message
+message	Bob	Charlie	solid	filled	Central dual connection
+message	Bob	David	dashed	cross	Dotted cross (--x)
+message	Charlie	Bob	dashed	filled	Circle at source with dotted
+message	Charlie	Charlie	solid	none	Self-reference open
+message	Charlie	David	dashed	filled	Dotted response
+message	Charlie	David	dashed	filled-both	Bidirectional dotted (<<-->>)
+message	Charlie	David	dashed	filled-both	Dual circles with bidirectional dotted
+message	Charlie	David	solid	filled	Central reverse
+message	David	Alice	dashed	filled	Dotted with circle
+message	David	Alice	solid	none	Circle at source with open
+message	David	David	solid	cross	Self-reference cross
+note	over	Alice,David	BIDIRECTIONAL ARROWS
+note	over	Alice,David	BIDIRECTIONAL WITH CENTRAL CONNECTIONS
+note	over	Alice,David	CENTRAL CONNECTIONS (Circle at destination)
+note	over	Alice,David	CENTRAL CONNECTIONS DUAL (Circles at both ends)
+note	over	Alice,David	CENTRAL CONNECTIONS REVERSE (Circle at source)
+note	over	Alice,David	DOTTED ARROWS (Dashed line)
+note	over	Alice,David	DOTTED REVERSE ARROWS
+note	over	Alice,David	MIXED COMPLEX SCENARIO
+note	over	Alice,David	REVERSE ARROWS (Half arrows)
+note	over	Alice,David	SELF-REFERENCES (Same participant)
+note	over	Alice,David	SELF-REFERENCES BIDIRECTIONAL
+note	over	Alice,David	SELF-REFERENCES WITH REVERSE ARROWS
+note	over	Alice,David	SOLID ARROWS (Filled arrowhead)

@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d309d432954ba3e4
+accept	yes
+actor	A	Database Server	database
+actor	B	Message Queue	queue
+bbox	label	Send message	118.6	94.1	225.4	111.5
+canvas	-50	-10	400	251
+drawn	yes
+message	A	B	solid	filled	Send message

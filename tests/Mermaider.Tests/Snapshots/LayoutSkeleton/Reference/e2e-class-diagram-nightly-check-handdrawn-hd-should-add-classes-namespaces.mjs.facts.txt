@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f68325ca65b12297
+accept	yes
+bbox	group	Namespace1	7.9	10.5	110.1	278.5
+bbox	node	C1	36.6	60.5	81.5	144.7
+bbox	node	C2	36.4	168.6	82	253.1
+bbox	node	C3	145.3	102.1	191.9	186.5
+bbox	node	C4	232.4	102.5	280	186.8
+canvas	-0.1	2.5	288	286.5
+class	C1	C1
+class	C2	C2
+class	C3	C3
+class	C4	C4
+drawn	yes
+namespace	Namespace1	C1,C2
+relation	C1	C2	none	arrow	solid

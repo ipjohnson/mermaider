@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 87d7bfb308d92986
+accept	yes
+drawn	yes
+entity	12	12
+entity	a	a
+label	12
+label	a
+label	label
+relation	a	12	zero-or-more	one	identifying	label

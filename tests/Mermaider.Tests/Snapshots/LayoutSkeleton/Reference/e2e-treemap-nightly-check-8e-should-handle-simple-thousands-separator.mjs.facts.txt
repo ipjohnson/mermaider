@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 19f64470df2e465b
+accept	yes
+drawn	yes
+label	Active Users
+label	Churned
+label	Converted
+label	New Signups
+label	User Counts
+node	User Counts
+node	User Counts / Active Users	1250345
+node	User Counts / Churned	12350
+node	User Counts / Converted	78975
+node	User Counts / New Signups	45789

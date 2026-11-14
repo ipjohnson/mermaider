@@ -10,7 +10,8 @@ namespace Mermaider.Tests.Snapshots.MjsFacts;
 /// The sources compared with mermaid.js: the gallery examples of every diagram type, the sources of the flowchart, state,
 /// class, sequence, ER and architecture spec tests, the committed repro files in <c>Cases/</c>, and the examples of
 /// mermaid's syntax docs in <c>Docs/</c> (scripts/mermaid-docs-corpus.py writes them; <c>Docs/SOURCE.txt</c> names the
-/// docs commit).
+/// docs commit), and the diagrams of mermaid's rendering and parser tests in <c>Suite/</c> (scripts/mermaid-test-corpus.py
+/// writes them; <c>Suite/SOURCE.txt</c> names the tag).
 /// </summary>
 internal static partial class MjsCorpus
 {
@@ -23,6 +24,8 @@ internal static partial class MjsCorpus
 	public static string CasesDir => Path.Combine(Here(), "Cases");
 
 	public static string DocsDir => Path.Combine(Here(), "Docs");
+
+	public static string SuiteDir => Path.Combine(Here(), "Suite");
 
 	/// <summary>The mermaid.js facts sit beside the layout skeleton references they share case names with.</summary>
 	public static string FactsDir => Path.GetFullPath(Path.Combine(Here(), "..", "LayoutSkeleton", "Reference"));
@@ -74,7 +77,7 @@ internal static partial class MjsCorpus
 					cases.Add(new Case(prefix + Kebab(method), source));
 		}
 
-		foreach (var dir in new[] { CasesDir, DocsDir })
+		foreach (var dir in new[] { CasesDir, DocsDir, SuiteDir })
 			cases.AddRange(
 				Directory
 					.EnumerateFiles(dir, "*.mmd")

@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 592e97b8b0b424cf
+accept	yes
+axis	x-left	낮음
+axis	x-right	높음
+drawn	yes
+label	낮음
+label	높음

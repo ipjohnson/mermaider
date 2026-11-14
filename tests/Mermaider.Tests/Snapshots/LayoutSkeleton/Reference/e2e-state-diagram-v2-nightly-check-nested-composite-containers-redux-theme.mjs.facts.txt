@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d9eb5165f742865e
+accept	yes
+drawn	yes
+edge	Boot	Running	none	arrow	solid
+edge	Running	[*]end@root	none	arrow	solid
+edge	[*]start@Boot	Firmware	none	arrow	solid
+edge	[*]start@Drivers	Probe	none	arrow	solid
+edge	[*]start@Kernel	Sched	none	arrow	solid
+edge	[*]start@Running	Serving	none	arrow	solid
+edge	[*]start@root	Boot	none	arrow	solid
+group	Boot	Boot	Firmware,Kernel,[*]start@Boot
+group	Drivers	Drivers	Probe,[*]start@Drivers
+group	Kernel	Kernel	Drivers,Sched,[*]start@Kernel
+group	Running	Running	Serving,[*]start@Running
+node	Firmware	Firmware	rounded
+node	Probe	Probe	rounded
+node	Sched	Sched	rounded
+node	Serving	Serving	rounded
+node	[*]end@root		fr-circ
+node	[*]start@Boot		sm-circ
+node	[*]start@Drivers		sm-circ
+node	[*]start@Kernel		sm-circ
+node	[*]start@Running		sm-circ
+node	[*]start@root		sm-circ

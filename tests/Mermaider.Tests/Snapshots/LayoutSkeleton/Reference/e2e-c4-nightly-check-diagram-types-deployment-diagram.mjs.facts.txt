@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 677620407bfe5321
+accept	yes
+boundary	dbn	ubuntu 22.04	DB Server	dc
+boundary	dc	us-east-1	Data Center
+boundary	srv	ubuntu 22.04	App Server	dc
+drawn	yes
+element	api	container	internal	API	Java, Spring		srv
+element	db	container_db	internal	Database	PostgreSQL		dbn
+label	API
+label	App Server
+label	DB Server
+label	Data Center
+label	Database
+label	Deployment diagram
+label	JDBC
+label	Java, Spring
+label	PostgreSQL
+label	reads/writes
+rel	api	db	one	reads/writes	JDBC
+title	Deployment diagram

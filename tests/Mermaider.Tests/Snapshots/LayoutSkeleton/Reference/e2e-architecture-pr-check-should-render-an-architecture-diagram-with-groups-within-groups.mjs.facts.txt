@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ade926bb6e57e176
+accept	yes
+drawn	yes
+edge	serv1	B	serv2	T	none	none
+edge	serv1	L	gateway	R	none	none
+edge	serv2	L	db	R	none	none
+group	api	API
+group	private	Private API	api
+group	public	Public API	api
+icon	db	database
+icon	gateway	internet
+icon	serv1	server
+icon	serv2	server
+label	API
+label	Database
+label	Gateway
+label	Private API
+label	Public API
+label	Server
+label	Server
+service	db	Database	private
+service	gateway	Gateway	api
+service	serv1	Server	public
+service	serv2	Server	private

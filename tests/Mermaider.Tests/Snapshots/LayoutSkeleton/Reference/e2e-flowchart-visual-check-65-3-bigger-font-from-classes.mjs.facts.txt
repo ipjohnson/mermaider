@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4378d3391b97bed4
+accept	yes
+drawn	yes
+edge	Node1	Node2	none	arrow	solid
+edge	Node1	Node3	none	arrow	solid
+edge	Node3	Node4	none	arrow	solid
+node	Node1	Node1	rect
+node	Node2	Node2	rect
+node	Node3	Node3	rect
+node	Node4	I am a circle	circle

@@ -1,0 +1,42 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9ee95fc4dc33f25e
+accept	yes
+bbox	label	Aggregation	199.1	133	274.6	154
+bbox	label	Association	294.6	133	366.2	154
+bbox	label	Composition	101.3	133	179.1	154
+bbox	label	Dependency	386.2	133	464.8	154
+bbox	label	Inheritance	12	133	81.3	154
+bbox	label	Realization	484.8	133	554.1	154
+bbox	node	A	29.9	12	64.1	93
+bbox	node	B	29.9	194	64.1	275
+bbox	node	C	123.2	12	157.3	93
+bbox	node	D	123.2	194	157.3	275
+bbox	node	E	220.4	12	253.8	93
+bbox	node	F	220.8	194	253.4	275
+bbox	node	G	313.2	12	348.1	93
+bbox	node	H	313.6	194	347.7	275
+bbox	node	I	411.8	12	439.7	93
+bbox	node	J	409.8	194	441.6	275
+bbox	node	K	502.8	12	536.9	93
+bbox	node	L	503.6	194	536.1	275
+canvas	4	4	562.1	283
+class	A	A
+class	B	B
+class	C	C
+class	D	D
+class	E	E
+class	F	F
+class	G	G
+class	H	H
+class	I	I
+class	J	J
+class	K	K
+class	L	L
+drawn	yes
+relation	A	B	triangle	none	solid	Inheritance
+relation	C	D	diamond-filled	none	solid	Composition
+relation	E	F	diamond	none	solid	Aggregation
+relation	G	H	none	arrow	solid	Association
+relation	I	J	none	arrow	dashed	Dependency
+relation	K	L	none	triangle	dashed	Realization

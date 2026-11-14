@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bdb1f809ff730903
+accept	yes
+boundary	b0	enterprise	BankBoundary0
+boundary	b1	enterprise	BankBoundary	b0
+drawn	yes
+element	SystemAA	system	internal	Internet Banking System		Allows customers to view information about their bank accounts, and make payments.	b0
+element	SystemC	system	external	E-mail system		The internal Microsoft Exchange e-mail system.	b1
+element	customerA	person	internal	Banking Customer A		A customer of the bank, with personal bank accounts.	b0
+element	msgQueue	component_queue	external	Message Queue	RabbitMQ	External message queue system for processing banking transactions	b1
+label	A customer of the bank, with personal bank accounts.
+label	Allows customers to view information about their bank accounts, and make payments.
+label	BankBoundary
+label	BankBoundary0
+label	Banking Customer A
+label	E-mail system
+label	External message queue system for processing banking transactions
+label	Internet Banking System
+label	Message Queue
+label	RabbitMQ
+label	SMTP
+label	Sends e-mails
+label	Sends messages to
+label	System Context diagram with ComponentQueue_Ext
+label	The internal Microsoft Exchange e-mail system.
+label	Uses
+rel	SystemAA	SystemC	one	Sends e-mails	SMTP
+rel	SystemAA	msgQueue	one	Sends messages to
+rel	customerA	SystemAA	both	Uses
+title	System Context diagram with ComponentQueue_Ext

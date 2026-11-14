@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ec86eeda284bf0be
+accept	yes
+drawn	yes
+label	;Design jison grammar
+label	Adding gantt diagram functionality to mermaid
+label	Documentation
+section	Documentation
+task	Documentation	;Design jison grammar	des1	2014-01-01 00:00	2014-01-04 00:00
+title	Adding gantt diagram functionality to mermaid

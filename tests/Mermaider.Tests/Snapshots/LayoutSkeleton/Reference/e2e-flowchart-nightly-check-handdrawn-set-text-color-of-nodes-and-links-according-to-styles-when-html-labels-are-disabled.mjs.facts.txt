@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 14b7fc57b533f2c5
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid	redtext
+edge	C	D	none	arrow	solid	bluetext
+edge	E	F	none	arrow	solid	defaultstyle
+node	A	red text	rect
+node	B	blue text	rounded
+node	C	red text	lean-r
+node	D	blue text	diam
+node	E	default style	hex
+node	F	default style	stadium

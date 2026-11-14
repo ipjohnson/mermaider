@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5efef8b83be2c5c5
+accept	yes
+drawn	yes
+label	Backend
+label	Channel
+label	Company Budget
+label	DevOps
+label	Digital
+label	Direct
+label	Engineering
+label	Events
+label	Frontend
+label	Marketing
+label	Print
+label	Sales
+node	Company Budget
+node	Company Budget / Engineering
+node	Company Budget / Engineering / Backend	400000
+node	Company Budget / Engineering / DevOps	200000
+node	Company Budget / Engineering / Frontend	300000
+node	Company Budget / Marketing
+node	Company Budget / Marketing / Digital	250000
+node	Company Budget / Marketing / Events	150000
+node	Company Budget / Marketing / Print	100000
+node	Company Budget / Sales
+node	Company Budget / Sales / Channel	300000
+node	Company Budget / Sales / Direct	500000

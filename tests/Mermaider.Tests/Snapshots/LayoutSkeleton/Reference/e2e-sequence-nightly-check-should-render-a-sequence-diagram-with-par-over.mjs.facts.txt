@@ -1,0 +1,40 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 488468b95499d59d
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	John	John	participant
+bbox	label	Message 1	132.9	139.1	211.1	156.5
+bbox	label	Message 1	132.9	526.1	211.1	543.5
+bbox	label	Message 2	332.9	200.1	411.1	217.5
+bbox	label	Mixed section	146.6	474	253.4	491.2
+bbox	label	Second line	130.2	156.1	213.8	173.2
+bbox	label	Section title	254.2	87	345.8	104.2
+bbox	label	[Two line	268.4	247	331.6	264.2
+bbox	label	par	-10	243	40	278
+bbox	label	par	64	470	114	505
+bbox	label	par	64	83	114	118
+bbox	label	section title]	257.8	264	342.2	281.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	626	150	699
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	626	350	699
+bbox	node	John	400	0	550	73
+bbox	node	John	400	626	550	699
+bbox	note	Alice note	0	302	150	339
+bbox	note	Alice/Bob Note	100	559	250	596
+bbox	note	Bob note	200	349	350	403
+bbox	note	John note	400	413	550	450
+block	par	Mixed section
+block	par	Section title
+block	par	Two line section title
+canvas	-60	-10	610	740
+drawn	yes
+message	Alice	Bob	solid	filled	Message 1
+message	Alice	Bob	solid	filled	Message 1 Second line
+message	Bob	John	solid	filled	Message 2
+note	left	Bob	Alice/Bob Note
+note	over	Alice	Alice note
+note	over	Bob	Bob note Second line
+note	over	John	John note

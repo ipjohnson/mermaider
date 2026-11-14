@@ -1,0 +1,37 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b2fdf720676ca846
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid
+edge	Active	SomethingElse2	none	arrow	solid
+edge	B	A	none	arrow	solid
+edge	CapsLockOff	CapsLockOn	none	arrow	solid	EvCapsLockPressed
+edge	CapsLockOn	CapsLockOff	none	arrow	solid	EvCapsLockPressed
+edge	NumLockOff	NumLockOn	none	arrow	solid	EvNumLockPressed
+edge	NumLockOn	NumLockOff	none	arrow	solid	EvNumLockPressed
+edge	ScrollLockOff	ScrollLockOn	none	arrow	solid	EvCapsLockPressed
+edge	ScrollLockOn	ScrollLockOff	none	arrow	solid	EvCapsLockPressed
+edge	[*]start@divider-id-1	NumLockOff	none	arrow	solid
+edge	[*]start@divider-id-2	CapsLockOff	none	arrow	solid
+edge	[*]start@divider-id-57	ScrollLockOff	none	arrow	solid
+edge	[*]start@root	Active	none	arrow	solid
+group	Active	Active	divider-id-1,divider-id-2,divider-id-57
+group	SomethingElse	SomethingElse	A,B
+group	divider-id-1		NumLockOff,NumLockOn,[*]start@divider-id-1
+group	divider-id-2		CapsLockOff,CapsLockOn,[*]start@divider-id-2
+group	divider-id-57		ScrollLockOff,ScrollLockOn,[*]start@divider-id-57
+node	A	A	rounded
+node	B	B	rounded
+node	CapsLockOff	CapsLockOff	rounded
+node	CapsLockOn	CapsLockOn	rounded
+node	NumLockOff	NumLockOff	rounded
+node	NumLockOn	NumLockOn	rounded
+node	ScrollLockOff	ScrollLockOff	rounded
+node	ScrollLockOn	ScrollLockOn	rounded
+node	SomethingElse2	SomethingElse2	rounded
+node	[*]start@divider-id-1		sm-circ
+node	[*]start@divider-id-2		sm-circ
+node	[*]start@divider-id-57		sm-circ
+node	[*]start@root		sm-circ
+note	SomethingElse2	This is the note to the right.

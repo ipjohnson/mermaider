@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e29c49cbb6867f19
+accept	yes
+drawn	yes
+label	2023-04
+label	2023-05
+label	2023-06
+label	2023-07
+label	2023-08
+label	2023-09
+label	2023-10
+label	2023-11
+label	2023-12
+label	2024-01
+label	2024-02
+label	2024-03
+label	2024-04
+label	2024-05
+label	2024-06
+label	2024-07
+label	2024-08
+label	2024-09
+label	2024-10
+label	Date
+label	Git Commits per Month
+label	Number of Commits
+series	bar	344,523,81,7,3,3,5,17,5,2,7,6,4,2,9,31,79,70,50
+title	Git Commits per Month
+x-axis	Date	2023-04,2023-05,2023-06,2023-07,2023-08,2023-09,2023-10,2023-11,2023-12,2024-01,2024-02,2024-03,2024-04,2024-05,2024-06,2024-07,2024-08,2024-09,2024-10
+y-axis	Number of Commits

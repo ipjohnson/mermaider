@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e5d4a6dfe612f3ef
+accept	yes
+drawn	yes
+label	Q1
+label	Q2
+label	Q3
+label	Q4
+label	Revenue
+node	Revenue
+node	Revenue / Q1	1250345.75
+node	Revenue / Q2	1645789.25
+node	Revenue / Q3	1845123.5
+node	Revenue / Q4	2145678.75

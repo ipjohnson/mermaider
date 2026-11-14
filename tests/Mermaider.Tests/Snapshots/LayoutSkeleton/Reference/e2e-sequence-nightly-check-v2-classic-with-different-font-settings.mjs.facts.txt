@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 197755bee24e719f
+accept	yes
+actor	actor1	actor1	actor
+actor	boundary2	boundary2	boundary
+actor	participant0	participant0	participant
+bbox	label	Regular message	111.3	86.1	236.7	103.5
+bbox	node	actor1	252.8	-5	297.2	76
+bbox	node	actor1	252.8	171	297.2	252
+bbox	node	boundary2	420	11	512.8	77.4
+bbox	node	boundary2	420	187	512.8	252.9
+bbox	node	participant0	0	0	150	65
+bbox	node	participant0	0	176	150	241
+bbox	note	Regular note	300	119	450	156
+canvas	-50	-10	600	252
+drawn	yes
+message	participant0	actor1	solid	filled	Regular message
+note	right	actor1	Regular note

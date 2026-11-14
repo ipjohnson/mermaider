@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2895b0f44973a933
+accept	yes
+drawn	yes
+node	n0	win-pane	win-pane
+node	n1	internal-storage	win-pane
+node	n2	window-pane	win-pane

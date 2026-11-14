@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 531090658361ac12
+accept	no
+# error No such shape: ellipse. Please check your syntax.

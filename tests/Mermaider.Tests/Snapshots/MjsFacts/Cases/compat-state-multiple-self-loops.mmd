@@ -1,0 +1,9 @@
+stateDiagram-v2
+  [*] --> WaitingForIP: Actor created
+  WaitingForIP --> WaitingForInit: InspectedData(ip)
+  WaitingForInit --> Ready: ContainerInitialised
+  Ready --> Ready: ClusterEndpoints
+  Ready --> Ready: AclData
+  Ready --> Ready: TreeCacheEvent
+  Ready --> Ready: InspectedData
+  Ready --> Stopped: RemoveRules

@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 123ebf19a362cfbc
+accept	yes
+drawn	yes
+entity	DEAD_PARROT	DEAD_PARROT
+entity	HERMIT	HERMIT
+entity	RECLUSE	RECLUSE
+entity	SOCIALITE	SOCIALITE
+label	DEAD_PARROT
+label	HERMIT
+label	RECLUSE
+label	SOCIALITE
+label	avoids
+label	interacts with
+relation	RECLUSE	SOCIALITE	zero-or-more	zero-or-more	identifying	avoids
+relation	SOCIALITE	SOCIALITE	zero-or-more	zero-or-more	identifying	interacts with

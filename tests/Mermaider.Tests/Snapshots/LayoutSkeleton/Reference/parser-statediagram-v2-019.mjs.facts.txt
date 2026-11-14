@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bde7f8455839bc22
+accept	yes
+drawn	yes
+edge	State1	State2	none	arrow	solid	Succeeded
+edge	State1	[*]end@root	none	arrow	solid	Aborted
+edge	State2	State3	none	arrow	solid	Succeeded
+edge	State2	[*]end@root	none	arrow	solid	Aborted
+edge	State3	State3	none	arrow	solid	Failed
+edge	State3	[*]end@root	none	arrow	solid	Aborted
+edge	State3	[*]end@root	none	arrow	solid	Succeeded / Save Result
+edge	[*]start@State3	long1	none	arrow	solid
+edge	[*]start@root	State1	none	arrow	solid
+edge	long1	ProcessData	none	arrow	solid	Enough Data
+edge	long1	long1	none	arrow	solid	New Data
+group	State3	State3	ProcessData,[*]start@State3,long1
+node	ProcessData	ProcessData	rounded
+node	State1	State1	rounded
+node	State2	State2	rounded
+node	[*]end@root		fr-circ
+node	[*]start@State3		sm-circ
+node	[*]start@root		sm-circ
+node	long1		rectWithTitle

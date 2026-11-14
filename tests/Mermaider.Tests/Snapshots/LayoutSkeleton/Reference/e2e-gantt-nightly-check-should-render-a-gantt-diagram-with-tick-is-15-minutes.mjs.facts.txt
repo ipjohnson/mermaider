@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2814ec4155ec5694
+accept	yes
+drawn	yes
+label	A Gantt Diagram
+label	A task
+label	Another
+label	Another task
+label	Section
+label	Task in sec
+label	another task
+section	Another
+section	Section
+task	Another	Task in sec		2022-10-03 00:00	2022-10-03 03:00
+task	Another	another task		2022-10-03 03:00	2022-10-03 06:00
+task	Section	A task	a1	2022-10-03 00:00	2022-10-03 06:00
+task	Section	Another task		2022-10-03 06:00	2022-10-03 12:00
+title	A Gantt Diagram

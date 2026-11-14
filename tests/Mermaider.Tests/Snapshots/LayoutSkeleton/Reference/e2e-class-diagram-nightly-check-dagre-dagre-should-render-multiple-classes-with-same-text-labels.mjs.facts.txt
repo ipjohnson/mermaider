@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 774c1827f1776006
+accept	yes
+bbox	node	C1	8	8	165.8	89
+bbox	node	C2	111.9	139	269.7	220
+bbox	node	C3	215.8	8	373.7	89
+canvas	0	0	381.7	228
+class	C1	Class with text label
+class	C2	Class with text label
+class	C3	Class with text label
+drawn	yes
+relation	C1	C2	none	arrow	solid
+relation	C3	C2	none	arrow	dashed

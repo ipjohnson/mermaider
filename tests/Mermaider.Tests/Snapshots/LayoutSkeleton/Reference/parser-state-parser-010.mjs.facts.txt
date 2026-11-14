@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e14b138efd3e2538
+accept	yes
+drawn	yes
+edge	locked	pending	none	arrow	solid	recoverable error (ex: timeout)
+node	locked	locked	rounded
+node	pending	pending	rounded

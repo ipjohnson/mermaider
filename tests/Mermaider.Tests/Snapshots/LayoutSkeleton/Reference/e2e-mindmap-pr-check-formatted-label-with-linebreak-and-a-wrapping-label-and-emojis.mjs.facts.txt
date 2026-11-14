@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 86f0d1de88ad4fae
+accept	yes
+drawn	yes
+label	`**Start** with a second line 😎`
+label	`The dog in **the** hog... a *very long text* about it Word!`
+node	`**Start** with a second line 😎`	rect
+node	`**Start** with a second line 😎` / `The dog in **the** hog... a *very long text* about it Word!`	rect

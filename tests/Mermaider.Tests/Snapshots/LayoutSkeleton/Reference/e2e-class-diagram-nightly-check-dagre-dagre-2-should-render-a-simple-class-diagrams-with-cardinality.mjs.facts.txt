@@ -1,0 +1,66 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2232ca046e809f09
+accept	yes
+attribute	Class01	<<interface>>
+attribute	Class01	int chimp
+attribute	Class01	int gorilla
+attribute	Class07	Object[] elementData
+attribute	Class10	<<service>>
+attribute	Class10	int id
+bbox	label	*	246.2	257.3	255.2	273.8
+bbox	label	*	471.2	596.5	480.2	613
+bbox	label	*	472.6	146.3	481.6	162.8
+bbox	label	*	502.6	257.3	511.6	273.8
+bbox	label	*	534.4	642.1	543.4	658.6
+bbox	label	*	664.5	436.3	673.5	452.8
+bbox	label	*	89.3	257.3	98.3	273.8
+bbox	label	1	215.3	146.3	224.3	162.8
+bbox	label	1	342.2	146.3	351.2	162.8
+bbox	label	1	447.5	138.5	456.5	155
+bbox	label	1	529.9	140.3	538.9	156.8
+bbox	label	1	58.4	194.3	67.4	210.8
+bbox	label	1	633.6	400.3	642.6	416.8
+bbox	label	1	633.6	552.3	642.6	568.8
+bbox	label	1	663.6	230.3	672.6	246.8
+bbox	label	Cool	62	210	90.8	231
+bbox	label	Cool label	620.5	568	682.8	589
+bbox	label	Where am i?	394.1	416	473.4	437
+bbox	label	many	361.8	257.3	397.8	273.8
+bbox	node	AveryLongClass	9.5	283	143.4	364
+bbox	node	C2	472.4	614	514.3	695
+bbox	node	C3	468.8	283	510.7	364
+bbox	node	Class01	8	8	144.9	185
+bbox	node	Class03	194.9	56	271.8	137
+bbox	node	Class04	194.9	283	271.8	364
+bbox	node	Class05	321.8	56	398.8	137
+bbox	node	Class06	321.8	283	398.8	364
+bbox	node	Class07	560.7	256	742.6	391
+bbox	node	Class08	613.2	462	690.1	543
+bbox	node	Class09	451.2	56	528.2	137
+bbox	node	Class10	578.2	18.5	705.7	174.5
+canvas	0	0	750.6	703
+class	AveryLongClass	AveryLongClass
+class	C2	C2
+class	C3	C3
+class	Class01	Class01
+class	Class03	Class03
+class	Class04	Class04
+class	Class05	Class05
+class	Class06	Class06
+class	Class07	Class07
+class	Class08	Class08
+class	Class09	Class09
+class	Class10	Class10
+drawn	yes
+method	Class01	size()
+method	Class07	equals()
+method	Class10	test()
+relation	Class01	AveryLongClass	triangle	triangle	solid	Cool	1	*
+relation	Class03	Class04	diamond-filled	none	solid		1	*
+relation	Class05	Class06	diamond	none	solid		1	many
+relation	Class07	Class08	none	none	dashed		1	*
+relation	Class08	C2	arrow	arrow	solid	Cool label	1	*
+relation	Class09	C2	none	arrow	solid	Where am i?	1	*
+relation	Class09	C3	none	diamond-filled	solid		*	*
+relation	Class09	Class07	none	triangle	solid		1	1

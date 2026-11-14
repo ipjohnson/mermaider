@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7650a8e74adfe293
+accept	yes
+attribute	This Title Has Many Newlines	#int Members
+attribute	This Title Has Many Newlines	+String Also
+attribute	This Title Has Many Newlines	-String Many
+bbox	node	This Title Has Many Newlines	12	12	151.2	315
+canvas	4	4	159.2	323
+class	This Title Has Many Newlines	This Title Has Many Newlines
+drawn	yes
+method	This Title Has Many Newlines	#Methods()
+method	This Title Has Many Newlines	+And()
+method	This Title Has Many Newlines	-Many()

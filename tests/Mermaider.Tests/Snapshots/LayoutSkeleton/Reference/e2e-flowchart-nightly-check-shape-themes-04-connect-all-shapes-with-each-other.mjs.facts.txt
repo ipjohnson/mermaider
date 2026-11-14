@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 29cfdec9770aecf2
+accept	yes
+drawn	yes
+edge	n00	n11	none	arrow	solid
+edge	n00	n22	none	arrow	solid
+edge	n00	n33	none	arrow	solid
+edge	n00	n44	none	arrow	solid
+edge	n11	n22	none	arrow	solid
+edge	n11	n33	none	arrow	solid
+edge	n11	n44	none	arrow	solid
+edge	n22	n33	none	arrow	solid
+edge	n22	n44	none	arrow	solid
+edge	n33	n44	none	arrow	solid
+node	n00	This is a label for document shape	doc
+node	n11	This is a label for notched-pentagon shape	notch-pent
+node	n22	This is a label for lined-cylinder shape	lin-cyl
+node	n33	This is a label for stacked-document shape	docs
+node	n44	This is a label for half-rounded-rectangle shape	delay

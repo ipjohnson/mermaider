@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ce83cdcd8015f056
+accept	yes
+drawn	yes
+edge	Configuring	Idle	none	arrow	solid	EvConfig
+edge	Idle	Configuring	none	arrow	solid	EvConfig
+edge	[*]start@NotShooting	Idle	none	arrow	solid
+edge	[*]start@root	NotShooting	none	arrow	solid
+group	NotShooting	Not Shooting State	Configuring,Idle,[*]start@NotShooting
+node	Configuring	Configuring mode	rounded
+node	Idle	Idle mode	rounded
+node	[*]start@NotShooting		sm-circ
+node	[*]start@root		sm-circ
+note	NotShooting	This is a note on a composite state

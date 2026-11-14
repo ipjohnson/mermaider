@@ -1,0 +1,41 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 92e828f6524bf5d5
+accept	yes
+branch	FORK-v1.0-MDR
+branch	main
+branch	v1-rc
+branch	v1.0-MDR
+commit	0	main	normal			initial commit
+commit	1	main	normal			work on first release
+commit	10	v1.0-MDR	normal	v1.0.2-MDR		brush up release
+commit	11	v1-rc	normal			bugfix without MDR
+commit	12	main	normal			work on v1.1
+commit	2	main	normal			design freeze from here
+commit	3	v1-rc	normal			bugfix 1
+commit	4	v1-rc	normal	v1.0.1		bigfix 2
+commit	5	v1-rc	normal	v1.0.2		minor design changes for MDR
+commit	6	FORK-v1.0-MDR	merge		v1-rc
+commit	7	main	normal			new feature for v1.1…
+commit	8	FORK-v1.0-MDR	normal			working on MDR
+commit	9	FORK-v1.0-MDR	normal			finishing MDR
+drawn	yes
+label	FORK-v1.0-MDR
+label	bigfix 2
+label	brush up release
+label	bugfix 1
+label	bugfix without MDR
+label	design freeze from here
+label	finishing MDR
+label	initial commit
+label	main
+label	minor design changes for MDR
+label	new feature for v1.1…
+label	v1-rc
+label	v1.0-MDR
+label	v1.0.1
+label	v1.0.2
+label	v1.0.2-MDR
+label	work on first release
+label	work on v1.1
+label	working on MDR

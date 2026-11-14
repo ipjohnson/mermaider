@@ -1,0 +1,33 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ae98924a0b333357
+accept	yes
+drawn	yes
+entity	T1	T1
+entity	T2	T2
+entity	T3	T3
+entity	T4	T4
+entity	T5	T5
+entity	T6	T6
+label	T1
+label	T2
+label	T3
+label	T4
+label	T5
+label	T6
+label	test
+label	test
+label	test
+label	test
+label	test
+label	test
+label	test
+label	test
+relation	T1	T2	zero-or-one	one-or-more	identifying	test
+relation	T1	T3	one	one	identifying	test
+relation	T2	T3	one-or-more	zero-or-one	non-identifying	test
+relation	T3	T4	zero-or-more	zero-or-more	identifying	test
+relation	T4	T5	zero-or-more	one-or-more	identifying	test
+relation	T4	T6	zero-or-more	one-or-more	identifying	test
+relation	T5	T6	zero-or-more	one	non-identifying	test
+relation	T6	T1	one	one	non-identifying	test

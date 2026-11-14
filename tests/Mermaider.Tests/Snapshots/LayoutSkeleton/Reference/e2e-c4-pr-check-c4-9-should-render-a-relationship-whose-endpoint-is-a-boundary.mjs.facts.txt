@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source cb3dcdf16505679a
+accept	yes
+boundary	banking	container	Internet Banking
+drawn	yes
+element	email	system	external	Email System		External mail
+element	spa	container	internal	SPA	JavaScript	Front-end	banking
+label	Email System
+label	External mail
+label	Forwards alerts
+label	Front-end
+label	Internet Banking
+label	JavaScript
+label	Relationship to a boundary
+label	SPA
+rel	banking	email	one	Forwards alerts
+title	Relationship to a boundary

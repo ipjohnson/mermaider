@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8bf67d31dc34d6a5
+accept	yes
+bbox	group	Outer	12	12	309.1	276
+bbox	group	Outer.Inner	36	60	158.6	252	Outer
+bbox	node	Baz	208.6	96	285.1	216
+bbox	node	Foo	60	108	134.6	228
+canvas	4	4	317.1	284
+class	Baz	Baz
+class	Foo	Foo
+drawn	yes
+method	Baz	+qux()
+method	Foo	+bar()
+namespace	Outer	Baz,Outer.Inner
+namespace	Outer.Inner	Foo

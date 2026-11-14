@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e367727a1455af5d
+accept	yes
+axis	x-left	Completeness of Vision ❤
+axis	x-right	x-axis-2
+axis	y-bottom	Ability to Execute
+axis	y-top	y-axis-2
+drawn	yes
+label	Ability to Execute
+label	Analytics and Business Intelligence Platforms
+label	Challengers
+label	Completeness of Vision ❤
+label	IBM
+label	Incorta
+label	Leaders
+label	Microsoft
+label	Niche
+label	Salesforce
+label	Visionaries
+label	x-axis-2
+label	y-axis-2
+point	IBM	0.51	0.4
+point	Incorta	0.2	0.3
+point	Microsoft	0.75	0.75
+point	Salesforce	0.55	0.6
+quadrant	1	Leaders
+quadrant	2	Challengers
+quadrant	3	Niche
+quadrant	4	Visionaries
+title	Analytics and Business Intelligence Platforms

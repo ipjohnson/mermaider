@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d8cd14540f39ab69
+accept	yes
+bbox	group	Auth	0	8	445.4	219
+bbox	label	uses	195.1	103	224.7	124
+bbox	node	TokenManager	262.2	53.5	407.9	173.5
+bbox	node	UserService	37.5	43	157.6	184
+canvas	-8	0	453.4	227
+class	TokenManager	TokenManager
+class	UserService	UserService
+drawn	yes
+method	TokenManager	+generate()
+method	UserService	+login()
+method	UserService	+logout()
+namespace	Auth	TokenManager,UserService
+relation	UserService	TokenManager	none	arrow	solid	uses

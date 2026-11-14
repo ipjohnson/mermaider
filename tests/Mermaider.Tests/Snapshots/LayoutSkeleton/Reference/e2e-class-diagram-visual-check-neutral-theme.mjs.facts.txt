@@ -1,0 +1,88 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source daa2d2b04208bde3
+accept	yes
+attribute	Animal	+String gender
+attribute	Animal	+int age
+attribute	Duck	+String beakColor
+attribute	Fish	-int sizeInFeet
+attribute	Zebra	+bool is_wild
+bbox	label	*	243.6	214	252.6	230.5
+bbox	label	1	101.5	276.5	110.5	293
+bbox	label	1	275.3	214	284.3	230.5
+bbox	label	10	297.1	276.5	315.1	293
+bbox	label	Aggregation	834.8	358.8	919.9	382.8
+bbox	label	Association	960.9	358.8	1041	382.8
+bbox	label	Composition	705.6	358.8	793.8	382.8
+bbox	label	Dependency	1198.8	358.8	1285.9	382.8
+bbox	label	Inheritance	583	358.8	664.6	382.8
+bbox	label	Link(Dashed)	1447.2	358.8	1539.5	382.8
+bbox	label	Link(Solid)	1082	358.8	1157.8	382.8
+bbox	label	Realization	1326.9	358.8	1406.2	382.8
+bbox	node	Animal	215.2	12	369	204
+bbox	node	Duck	12	297	181	465
+bbox	node	Fish	221	297	363.3	441
+bbox	node	Zebra	403.3	297	542	441
+bbox	node	classA	558.3	120	627.7	204
+bbox	node	classB	558.6	505	627.4	589
+bbox	node	classC	682.8	120	751.8	204
+bbox	node	classD	682.6	505	752.1	589
+bbox	node	classE	811.7	120	880	204
+bbox	node	classF	811.5	505	880.1	589
+bbox	node	classG	935.7	120	1005.7	204
+bbox	node	classH	935.6	505	1005.8	589
+bbox	node	classI	1058.7	120	1122.4	204
+bbox	node	classJ	1056.7	505	1124.4	589
+bbox	node	classK	1175.7	120	1244.8	204
+bbox	node	classL	1176.2	505	1244.3	589
+bbox	node	classM	1300.8	120	1371.9	204
+bbox	node	classN	1301.4	505	1371.3	589
+bbox	node	classO	1424.7	120	1495.2	204
+bbox	node	classP	1425.6	505	1494.2	589
+canvas	4	4	1547.5	597
+class	Animal	Animal
+class	Duck	Duck
+class	Fish	Fish
+class	Zebra	Zebra
+class	classA	classA
+class	classB	classB
+class	classC	classC
+class	classD	classD
+class	classE	classE
+class	classF	classF
+class	classG	classG
+class	classH	classH
+class	classI	classI
+class	classJ	classJ
+class	classK	classK
+class	classL	classL
+class	classM	classM
+class	classN	classN
+class	classO	classO
+class	classP	classP
+drawn	yes
+method	Animal	+isMammal()
+method	Animal	+mate()
+method	Duck	+quack()
+method	Duck	+swim()
+method	Fish	-canEat()
+method	Zebra	+run()
+relation	Animal	Duck	triangle	none	solid		*	1
+relation	Animal	Fish	triangle	none	solid		1	10
+relation	Animal	Zebra	triangle	none	solid
+relation	classA	classB	none	triangle	solid	Inheritance
+relation	classA	classB	triangle	none	solid
+relation	classC	classD	diamond-filled	none	solid
+relation	classC	classD	none	diamond-filled	solid	Composition
+relation	classE	classF	diamond	none	solid
+relation	classE	classF	none	diamond	solid	Aggregation
+relation	classG	classH	arrow	none	solid
+relation	classG	classH	none	arrow	solid	Association
+relation	classI	classJ	none	none	solid
+relation	classI	classJ	none	none	solid	Link(Solid)
+relation	classK	classL	arrow	none	dashed
+relation	classK	classL	none	arrow	dashed	Dependency
+relation	classM	classN	none	triangle	dashed	Realization
+relation	classM	classN	triangle	none	dashed
+relation	classO	classP	none	none	dashed
+relation	classO	classP	none	none	dashed	Link(Dashed)

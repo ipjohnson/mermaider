@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 78889a35762b2beb
+accept	yes
+drawn	yes
+label	Months
+label	Revenue (in $)
+label	Sales Revenue
+label	jan
+series	bar	4000
+title	Sales Revenue
+x-axis	Months	jan
+y-axis	Revenue (in $)

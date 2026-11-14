@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e427673c1cb81389
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid
+edge	C	D	none	arrow	solid
+edge	D	E	none	arrow	solid
+edge	E	F	none	arrow	solid
+edge	F	G	none	arrow	solid
+edge	F	H	none	arrow	solid
+group	Ingest	Ingest	A,B
+group	Observe	Observe	H
+group	Serve	Serve	F,G
+group	Store	Store	E
+group	Transform	Transform	C,D
+node	A	Fetch	rect
+node	B	Validate	rect
+node	C	Normalise	rect
+node	D	Enrich	rect
+node	E	Warehouse	cyl
+node	F	API	rect
+node	G	Cache	rect
+node	H	Metrics	rect

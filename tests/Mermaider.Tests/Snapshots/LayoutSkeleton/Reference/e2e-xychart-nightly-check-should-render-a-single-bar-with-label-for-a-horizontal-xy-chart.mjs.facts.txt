@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 07d70e6a26bafd60
+accept	yes
+drawn	yes
+label	A
+label	Categories
+label	Single Bar Chart
+label	Value
+orientation	horizontal
+series	bar	75
+title	Single Bar Chart
+x-axis	Categories	A
+y-axis	Value

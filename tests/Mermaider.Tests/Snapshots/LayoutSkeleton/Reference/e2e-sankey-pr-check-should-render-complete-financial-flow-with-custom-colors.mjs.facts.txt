@@ -1,0 +1,30 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 54c0b6f0d0b704ef
+accept	yes
+drawn	yes
+flow	Gross Profit	Op Expenses	51
+flow	Gross Profit	Op Profit	119
+flow	Mac	Products	40
+flow	Op Profit	Net Profit	100
+flow	Op Profit	Tax	19
+flow	Products	Revenue	315
+flow	Revenue	Cost of Revenue	223
+flow	Revenue	Gross Profit	170
+flow	Services	Revenue	78
+flow	Wearables	Products	41
+flow	iPad	Products	29
+flow	iPhone	Products	205
+label	Cost of Revenue
+label	Gross Profit
+label	Mac
+label	Net Profit
+label	Op Expenses
+label	Op Profit
+label	Products
+label	Revenue
+label	Services
+label	Tax
+label	Wearables
+label	iPad
+label	iPhone

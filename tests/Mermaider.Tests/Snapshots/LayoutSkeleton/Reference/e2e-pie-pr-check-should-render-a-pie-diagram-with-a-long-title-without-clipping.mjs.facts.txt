@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 092b8799be12b419
+accept	yes
+drawn	yes
+label	Bread
+label	Cheese
+label	Eggs
+label	Fruits
+label	Meat
+label	Milk
+label	Vegetables
+label	Weekly Grocery Consumption for a Family of 4
+slice	Bread	5
+slice	Cheese	5
+slice	Eggs	15
+slice	Fruits	5
+slice	Meat	30
+slice	Milk	15
+slice	Vegetables	25
+title	Weekly Grocery Consumption for a Family of 4

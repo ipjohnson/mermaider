@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ab78c3a4324186e6
+accept	yes
+drawn	yes
+edge	n00	n11	none	arrow	solid
+edge	n00	n22	none	arrow	solid
+edge	n00	n33	none	arrow	solid
+edge	n00	n44	none	arrow	solid
+edge	n11	n22	none	arrow	solid
+edge	n11	n33	none	arrow	solid
+edge	n11	n44	none	arrow	solid
+edge	n22	n33	none	arrow	solid
+edge	n22	n44	none	arrow	solid
+edge	n33	n44	none	arrow	solid
+node	n00		fork
+node	n11		choice
+node	n22	This is a label for note shape	note
+node	n33	This is a label for stadium shape	stadium
+node	n44	This is a label for odd shape	odd

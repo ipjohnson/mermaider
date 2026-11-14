@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bf613029e4fc06b5
+accept	yes
+drawn	yes
+element	customerA	person	external	Banking Customer A		A customer of the bank, with personal bank accounts.
+label	A customer of the bank, with personal bank accounts.
+label	Banking Customer A
+label	System Context diagram for Internet Banking System
+title	System Context diagram for Internet Banking System

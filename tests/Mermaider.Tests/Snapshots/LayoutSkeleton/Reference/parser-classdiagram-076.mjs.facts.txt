@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source da5672a068187071
+accept	yes
+bbox	node	actual	12	12	178.4	174
+canvas	4	4	186.4	182
+class	actual	actual
+drawn	yes
+method	actual	#protectedMethod()
+method	actual	+publicMethod()
+method	actual	-privateMethod()

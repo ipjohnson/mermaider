@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3246c8325cea8735
+accept	yes
+attribute	MyClass	+String publicAttr
+attribute	MyClass	-int privateAttr
+bbox	node	MyClass	12	12	223.9	231
+canvas	4	4	231.9	239
+class	MyClass	MyClass
+drawn	yes
+method	MyClass	#protectedMethod() : void
+method	MyClass	+publicMethod() : void
+method	MyClass	-privateMethod() : void
+method	MyClass	~packageMethod() : void

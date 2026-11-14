@@ -31,6 +31,11 @@ internal static partial class MermaiderFacts
 		{
 			return ["accept\tno"];
 		}
+		catch (MermaidRenderException)
+		{
+			// An internal error while drawing, not a refusal of the source.
+			return ["accept\tcrash"];
+		}
 
 		var (cleaned, _) = DiagramPreprocessor.Process(source);
 		var (accessibility, lines) = AccessibilityParser.Extract(MermaidRenderer.PreprocessLines(cleaned));

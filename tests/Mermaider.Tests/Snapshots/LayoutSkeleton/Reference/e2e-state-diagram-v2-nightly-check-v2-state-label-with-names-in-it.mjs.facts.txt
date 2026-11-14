@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8fd48d0464a3b45f
+accept	yes
+drawn	yes
+edge	[*]start@root	Yswsii	none	arrow	solid
+node	Yswsii	Your state with spaces in it	rounded
+node	[*]start@root		sm-circ

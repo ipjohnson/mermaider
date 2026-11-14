@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source aeab6a8baaa88ac6
+accept	yes
+drawn	yes
+edge	Ready	Ready	none	arrow	solid	AclData
+edge	Ready	Ready	none	arrow	solid	ClusterEndpoints
+edge	Ready	Ready	none	arrow	solid	InspectedData
+edge	Ready	Ready	none	arrow	solid	TreeCacheEvent
+edge	Ready	Stopped	none	arrow	solid	RemoveRules
+edge	WaitingForIP	WaitingForInit	none	arrow	solid	InspectedData(ip)
+edge	WaitingForInit	Ready	none	arrow	solid	ContainerInitialised
+edge	[*]start@root	WaitingForIP	none	arrow	solid	Actor created
+node	Ready	Ready	rounded
+node	Stopped	Stopped	rounded
+node	WaitingForIP	WaitingForIP	rounded
+node	WaitingForInit	WaitingForInit	rounded
+node	[*]start@root		sm-circ

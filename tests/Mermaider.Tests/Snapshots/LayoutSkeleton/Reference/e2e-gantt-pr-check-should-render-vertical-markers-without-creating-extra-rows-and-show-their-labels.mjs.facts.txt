@@ -1,0 +1,45 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 37fbdcb540b44f50
+accept	yes
+drawn	yes
+label	Final vert
+label	Final vert
+label	Final vert
+label	Final vert
+label	Final vert
+label	Final vert
+label	Initial vert
+label	Initial vert
+label	Initial vert
+label	Initial vert
+label	Initial vert
+label	Initial vert
+label	Middle vert
+label	Middle vert
+label	Middle vert
+label	Middle vert
+label	Middle vert
+label	Middle vert
+label	Task A
+label	Task B
+task		Final vert	v2	2000-01-01 17:58	2000-01-01 18:02
+task		Final vert	v2	2000-01-01 17:58	2000-01-01 18:02
+task		Final vert	v2	2000-01-01 17:58	2000-01-01 18:02
+task		Final vert	v2	2000-01-01 17:58	2000-01-01 18:02
+task		Final vert	v2	2000-01-01 17:58	2000-01-01 18:02
+task		Final vert	v2	2000-01-01 17:58	2000-01-01 18:02
+task		Initial vert	v1	2000-01-01 17:30	2000-01-01 17:32
+task		Initial vert	v1	2000-01-01 17:30	2000-01-01 17:32
+task		Initial vert	v1	2000-01-01 17:30	2000-01-01 17:32
+task		Initial vert	v1	2000-01-01 17:30	2000-01-01 17:32
+task		Initial vert	v1	2000-01-01 17:30	2000-01-01 17:32
+task		Initial vert	v1	2000-01-01 17:30	2000-01-01 17:32
+task		Middle vert	v3	2000-01-01 17:45	2000-01-01 17:47
+task		Middle vert	v3	2000-01-01 17:45	2000-01-01 17:47
+task		Middle vert	v3	2000-01-01 17:45	2000-01-01 17:47
+task		Middle vert	v3	2000-01-01 17:45	2000-01-01 17:47
+task		Middle vert	v3	2000-01-01 17:45	2000-01-01 17:47
+task		Middle vert	v3	2000-01-01 17:45	2000-01-01 17:47
+task		Task A		2000-01-01 17:32	2000-01-01 17:35
+task		Task B		2000-01-01 17:47	2000-01-01 17:55

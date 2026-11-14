@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ed5586dbfe36d420
+accept	yes
+drawn	yes
+icon	model.bin	fa:bell
+icon	weights.h5	folder
+label	data
+label	index.js
+label	model.bin
+label	src
+label	weights.h5
+node	data	dir
+node	index.js	file
+node	model.bin	file
+node	src	dir
+node	weights.h5	file

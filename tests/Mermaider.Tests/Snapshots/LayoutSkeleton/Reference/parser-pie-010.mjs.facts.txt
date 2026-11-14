@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 469c7f731ff0910e
+accept	no
+# error "ash" has invalid value: -60.67. Negative values are not allowed in pie charts. All slice values must be >= 0.

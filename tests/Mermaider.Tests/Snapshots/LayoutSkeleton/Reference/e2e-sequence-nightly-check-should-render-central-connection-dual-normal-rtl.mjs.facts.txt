@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 895c2f696f801af1
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Charlie	Charlie	participant
+bbox	label	Circles at both ends with close arrow (RTL)	103.4	269.5	412.6	287.9
+bbox	label	Circles at both ends with cross arrow (RTL)	282.7	225.5	591.3	243.9
+bbox	label	Circles at both ends with dotted arrow (RTL)	451.7	137.5	772.3	155.9
+bbox	label	Circles at both ends with open arrow (RTL)	101.1	181.5	408.9	199.9
+bbox	label	Circles at both ends with solid arrow (RTL)	105	93.5	411	111.9
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	313	150	386
+bbox	node	Bob	351	0	501	73
+bbox	node	Bob	351	313	501	386
+bbox	node	Charlie	709	0	859	73
+bbox	node	Charlie	709	313	859	386
+canvas	-50	-10	909	427
+drawn	yes
+message	Bob	Alice	dashed	open	Circles at both ends with close arrow (RTL)
+message	Bob	Alice	solid	filled	Circles at both ends with solid arrow (RTL)
+message	Bob	Alice	solid	none	Circles at both ends with open arrow (RTL)
+message	Charlie	Alice	dashed	cross	Circles at both ends with cross arrow (RTL)
+message	Charlie	Bob	dashed	filled	Circles at both ends with dotted arrow (RTL)

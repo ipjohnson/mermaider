@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4428e21d049c5d5b
+accept	yes
+drawn	yes
+node	AState	Should NOT be white	rounded
+node	BState	BState	rounded

@@ -1,0 +1,50 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 103d749e98e4a327
+accept	yes
+drawn	yes
+label	Add item
+label	Archive
+label	Browse
+label	Cart
+label	Close
+label	Confirm
+label	Contact
+label	Courier
+label	Deliver
+label	Enter card
+label	Fulfil
+label	Handover
+label	Land on site
+label	Pack
+label	Pay
+label	Request
+label	Return
+label	Search
+label	Ship
+label	Support
+label	Task and section fills
+label	View cart
+label	Visitor
+label	Warehouse
+section	Browse
+section	Cart
+section	Close
+section	Deliver
+section	Fulfil
+section	Pay
+section	Return
+section	Support
+task	Browse	Land on site	5	Visitor
+task	Browse	Search	3	Visitor
+task	Cart	Add item	4	Visitor
+task	Cart	View cart	3	Visitor
+task	Close	Archive	4	Visitor
+task	Deliver	Handover	5	Courier
+task	Fulfil	Pack	4	Warehouse
+task	Fulfil	Ship	3	Warehouse
+task	Pay	Confirm	5	Visitor
+task	Pay	Enter card	2	Visitor
+task	Return	Request	1	Visitor
+task	Support	Contact	2	Visitor
+title	Task and section fills

@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source cc6e6c5e3114c07a
+accept	yes
+drawn	yes
+entity	PROJECT	PROJECT
+entity	TEAM_MEMBER	TEAM_MEMBER
+label	PROJECT
+label	TEAM_MEMBER
+label	parent
+relation	PROJECT	TEAM_MEMBER	parent	zero-or-more	identifying	parent

@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 22d9aaa541c1fff3
+accept	yes
+drawn	yes
+label	A cloud
+label	Another bang
+label	bang
+node	bang	bang
+node	bang / A cloud	cloud
+node	bang / Another bang	bang

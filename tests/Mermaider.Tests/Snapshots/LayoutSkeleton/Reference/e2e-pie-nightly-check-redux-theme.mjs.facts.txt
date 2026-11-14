@@ -1,0 +1,31 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d708357fdbe1a7f1
+accept	yes
+drawn	yes
+label	Alpha
+label	Bravo
+label	Charlie
+label	Delta
+label	Echo
+label	Foxtrot
+label	Golf
+label	Hotel
+label	India
+label	Juliett
+label	Kilo
+label	Lima
+label	Slice palette
+slice	Alpha	20
+slice	Bravo	16
+slice	Charlie	14
+slice	Delta	12
+slice	Echo	10
+slice	Foxtrot	8
+slice	Golf	7
+slice	Hotel	6
+slice	India	3
+slice	Juliett	2
+slice	Kilo	1
+slice	Lima	1
+title	Slice palette

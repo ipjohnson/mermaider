@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6b7fd4e74add0638
+accept	yes
+block	di	Diamond	diam	1	shapes
+block	hx	Hexagon	hex	1	shapes
+block	lr	Lean	lean-r	1	shapes
+block	rn	Circle	circle	1	shapes
+block	shapes		composite	1
+block	sq	Square	rect	1	shapes
+block	sr	Subroutine	fr-rect	1	shapes
+block	st	Stadium	stadium	1	shapes
+block	tr	Trapezoid	trap-b	1	shapes
+drawn	yes
+label	Circle
+label	Diamond
+label	Hexagon
+label	Lean
+label	Square
+label	Stadium
+label	Subroutine
+label	Trapezoid

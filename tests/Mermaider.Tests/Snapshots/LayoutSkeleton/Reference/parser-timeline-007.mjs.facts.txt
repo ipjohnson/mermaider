@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5864ab3e386b9c61
+accept	yes
+drawn	yes
+event	task1	[event1](http://example.com)
+event	task2	event2
+event	task2	event3
+label	[event1](http://example.com)
+label	abc-123
+label	event2
+label	event3
+label	task1
+label	task2
+period	abc-123	task1
+period	abc-123	task2
+section	abc-123

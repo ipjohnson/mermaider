@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 09ab9737b8c85110
+accept	yes
+drawn	yes
+label	Budget Allocation
+label	Entertainment
+label	Food
+label	Rent
+slice	Entertainment	80
+slice	Food	300
+slice	Rent	500
+title	Budget Allocation

@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f1738e9fa80997af
+accept	yes
+drawn	yes
+label	A section
+label	Active
+label	Critical tasks
+label	Done
+label	Done critical
+label	Gantt dark mode done-task inside-text readability
+section	A section
+section	Critical tasks
+task	A section	Active		2014-01-20 00:00	2014-02-03 00:00	active
+task	A section	Done		2014-01-06 00:00	2014-01-20 00:00	done
+task	Critical tasks	Done critical		2014-01-06 00:00	2014-01-20 00:00	done,crit
+title	Gantt dark mode done-task inside-text readability

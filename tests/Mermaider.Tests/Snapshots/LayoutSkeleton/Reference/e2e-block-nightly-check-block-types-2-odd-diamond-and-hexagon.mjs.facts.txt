@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 888b02c7045456cc
+accept	yes
+block	A	rect_left_inv_arrow	odd	1
+block	B	diamond	diam	1
+block	C	hexagon	hex	1
+drawn	yes
+label	diamond
+label	hexagon
+label	rect_left_inv_arrow

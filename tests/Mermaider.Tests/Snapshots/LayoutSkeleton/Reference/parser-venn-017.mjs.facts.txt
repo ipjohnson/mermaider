@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8f9f861c6ada23c9
+accept	yes
+drawn	yes
+set	Buz		10
+set	Foo Bar		10
+union	Buz,Foo Bar		2.5

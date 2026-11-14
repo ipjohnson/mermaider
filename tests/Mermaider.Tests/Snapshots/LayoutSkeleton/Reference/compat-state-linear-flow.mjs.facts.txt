@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fee2225a812a1194
+accept	yes
+drawn	yes
+edge	Draft	Review	none	arrow	solid	submit
+edge	Published	[*]end@root	none	arrow	solid
+edge	Review	Published	none	arrow	solid	approve
+edge	[*]start@root	Draft	none	arrow	solid
+node	Draft	Draft	rounded
+node	Published	Published	rounded
+node	Review	Review	rounded
+node	[*]end@root		fr-circ
+node	[*]start@root		sm-circ

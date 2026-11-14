@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1348c701bec5dd20
+accept	yes
+drawn	yes
+label	Backend
+label	Frontend
+label	Shared
+set	A	Frontend	20
+set	B	Backend	12
+union	A,B	Shared	3

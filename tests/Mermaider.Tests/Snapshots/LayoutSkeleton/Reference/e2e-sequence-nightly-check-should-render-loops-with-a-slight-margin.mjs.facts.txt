@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 623cbfacbed8eeb6
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+bbox	label	Extremely utterly long line of	71.5	94.1	273	111.5
+bbox	label	Loopy	173.8	199	226.2	216.4
+bbox	label	Pasten	153.1	251.1	202.9	268.2
+bbox	label	be	163.1	163.1	180.9	180.2
+bbox	label	longness which had previously	63.5	111.1	280.5	128.5
+bbox	label	loop	64	195	114	230
+bbox	label	much longer than what it should	59	146.1	285	163.5
+bbox	label	overflown the actor box as it is	64.4	129.1	279.6	146.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	304	150	377
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	304	350	377
+block	loop	Loopy
+canvas	-50	-10	400	418
+drawn	yes
+message	Alice	Bob	solid	filled	Extremely utterly long line of longness which had previously overflown the actor box as it is much longer than what it should be
+message	Bob	Alice	solid	filled	Pasten

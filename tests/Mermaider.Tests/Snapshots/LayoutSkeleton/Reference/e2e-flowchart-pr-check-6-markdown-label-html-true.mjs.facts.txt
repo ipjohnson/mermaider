@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source eea13adccbce502d
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid
+node	A	This is bold and italic text	rect
+node	B	A second markdown label	rect

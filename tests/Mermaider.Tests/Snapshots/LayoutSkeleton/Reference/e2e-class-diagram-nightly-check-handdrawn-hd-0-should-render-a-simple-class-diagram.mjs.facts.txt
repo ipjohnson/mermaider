@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6a94be14e2892724
+accept	yes
+bbox	label	Inheritance	14.1	136.5	83.4	157.5
+bbox	label	link	126.2	136.5	147.2	157.5
+bbox	label	link	126.2	353.4	147.2	374.4
+bbox	node	classA	56.4	12.2	130.6	96.7
+bbox	node	classB	12.2	321.9	86.4	406.4
+bbox	node	classC	100.2	197.6	175	281.7
+bbox	node	classD	57.1	446.4	130.3	530.7
+canvas	4.2	4.2	183	538.7
+class	classA	classA
+class	classB	classB
+class	classC	classC
+class	classD	classD
+drawn	yes
+relation	classA	classB	none	none	solid	Inheritance
+relation	classA	classC	none	none	solid	link
+relation	classB	classD	none	none	solid
+relation	classC	classD	none	none	solid	link

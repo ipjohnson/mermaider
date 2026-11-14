@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 506847d59ca36245
+accept	yes
+drawn	yes
+entity	A	A
+entity	B	B
+entity	C	C
+entity	D	D
+entity	E	E
+entity	F	F
+entity	G	G
+entity	H	H
+label	A
+label	B
+label	C
+label	D
+label	E
+label	F
+label	G
+label	H
+label	dotted-dotted
+label	dotted-solid
+label	solid-dotted
+label	solid-solid
+relation	A	B	one	one	identifying	solid-solid
+relation	C	D	one	one	non-identifying	dotted-dotted
+relation	E	F	one	one	non-identifying	dotted-solid
+relation	G	H	one	one	non-identifying	solid-dotted

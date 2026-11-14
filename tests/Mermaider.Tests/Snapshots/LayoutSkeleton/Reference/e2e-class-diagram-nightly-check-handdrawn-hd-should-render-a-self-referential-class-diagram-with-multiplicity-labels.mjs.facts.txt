@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0536dae1125060e6
+accept	yes
+attribute	SelfReferential	+SelfReferential referenced
+attribute	SelfReferential	+int id
+attribute	SelfReferential	+int self_referential_id
+bbox	label	0..1	54.6	102.3	90.6	118.8
+bbox	label	1	72.8	42.1	81.8	58.6
+bbox	label	referenced	12	58.8	78.9	79.8
+bbox	node	SelfReferential	103.4	12.2	351.4	171.8
+canvas	4	4.2	359.4	179.8
+class	SelfReferential	SelfReferential
+drawn	yes
+relation	SelfReferential	SelfReferential	none	arrow	solid	referenced	1	0..1

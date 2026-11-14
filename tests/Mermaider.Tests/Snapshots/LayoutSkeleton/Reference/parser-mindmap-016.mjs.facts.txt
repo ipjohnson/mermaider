@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3d726a9cd7d3eb51
+accept	yes
+drawn	yes
+icon	The root	bomb
+label	The root
+node	The root	rect

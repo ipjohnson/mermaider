@@ -1,0 +1,29 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a744d3e50b94b4a6
+accept	yes
+drawn	yes
+label	Browse Features
+label	Complete Profile
+label	Engagement
+label	Invite Friends
+label	John
+label	Onboarding
+label	Retention
+label	Revisit Application
+label	Shahir
+label	Sign Up
+label	Use Core Functionality
+label	User Journey Example
+label	size
+section	Engagement
+section	Onboarding
+section	Retention
+task	Engagement	Browse Features	3	John
+task	Engagement	Use Core Functionality	4	John
+task	Onboarding	Complete Profile	4	John
+task	Onboarding	Sign Up	5	John,Shahir
+task	Retention	Invite Friends	3	John
+task	Retention	Revisit Application	5	John
+task	Retention	size	NaN
+title	User Journey Example

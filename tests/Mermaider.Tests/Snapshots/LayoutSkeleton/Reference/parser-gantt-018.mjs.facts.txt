@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source edbadb20d816e88e
+accept	yes
+drawn	yes
+label	Calling a callback
+label	Clickable
+label	Visit mermaidjs
+section	Clickable
+task	Clickable	Calling a callback	cl2	2014-01-10 00:00	2014-01-13 00:00
+task	Clickable	Visit mermaidjs	cl1	2014-01-07 00:00	2014-01-10 00:00	active

@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ef6f07e00b314562
+accept	no
+# error No such shape: rect_left_inv_arrow. Shape names should be lowercase.

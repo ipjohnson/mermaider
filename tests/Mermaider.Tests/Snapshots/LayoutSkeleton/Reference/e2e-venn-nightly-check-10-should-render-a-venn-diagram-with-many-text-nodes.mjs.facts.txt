@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 00f2779814a6ea37
+accept	yes
+drawn	yes
+set	Fruits		10
+set	Vegetables		10
+union	Fruits,Vegetables		2.5

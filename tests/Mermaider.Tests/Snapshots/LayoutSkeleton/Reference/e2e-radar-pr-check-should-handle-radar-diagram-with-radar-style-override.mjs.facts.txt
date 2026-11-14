@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f01d87cdf389b4e1
+accept	yes
+axis	A
+axis	B
+axis	C
+curve	mycurve	1,2,3
+drawn	yes
+label	A
+label	B
+label	C
+label	mycurve

@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a2ae403f6646a98c
+accept	yes
+boundary	b	enterprise	Enterprise
+drawn	yes
+element	s	system	internal	System		inside the enterprise boundary	b
+label	Enterprise
+label	Enterprise boundary
+label	System
+label	inside the enterprise boundary
+title	Enterprise boundary

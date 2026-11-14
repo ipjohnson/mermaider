@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4fcde876beadb71f
+accept	yes
+drawn	yes
+edge	C	D	none	arrow	solid	One
+edge	C	E	none	arrow	solid	Two
+edge	D	E	none	arrow	solid
+group	subgraph_ko6czgs5u	Untitled subgraph	D
+node	A	A	rect
+node	C	Evaluate	diam
+node	D	Option 1	rect
+node	E	Option 2	circle

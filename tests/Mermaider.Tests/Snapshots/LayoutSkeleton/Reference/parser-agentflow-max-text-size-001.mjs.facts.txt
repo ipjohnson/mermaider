@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source aee117acc07a8e5e
+accept	no
+# error Lexical error on line 1. Unrecognized text.

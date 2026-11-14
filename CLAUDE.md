@@ -39,10 +39,13 @@ k8s/ECH diagram) under `Snapshots/ArchitectureSpecTests.cs`.
 
 `MjsFactsTests` (`tests/Mermaider.Tests/Snapshots/MjsFacts/`) diffs Mermaider's facts with committed mermaid.js facts
 (`Snapshots/LayoutSkeleton/Reference/*.mjs.facts.txt`) for the gallery examples of all 24 diagram types, the flowchart,
-state, class, sequence, ER and architecture spec-test sources, the repros in `MjsFacts/Cases/`, and the examples of
-mermaid's syntax docs in `MjsFacts/Docs/` (`scripts/mermaid-docs-corpus.py <mermaid checkout>` writes them for the types
-Mermaider draws; `Docs/SOURCE.txt` names the docs commit). Every case records
-acceptance and whether anything is drawn. Each type adds its structure (labels, groups, edge ends, markers, node shapes in
+state, class, sequence, ER and architecture spec-test sources, the repros in `MjsFacts/Cases/` (the `compat-*` ones are
+the former `MermaidCompatTests`), the examples of mermaid's syntax docs in `MjsFacts/Docs/`
+(`scripts/mermaid-docs-corpus.py <mermaid checkout>` writes them for the types Mermaider draws; `Docs/SOURCE.txt` names
+the docs commit), and the diagrams of mermaid's rendering tests (`e2e/diagrams/**/*.mmd`) and parser tests
+(`packages/mermaid/src/diagrams/**/*.spec.*`) in `MjsFacts/Suite/` (`scripts/mermaid-test-corpus.py <mermaid checkout>`
+writes them; `Suite/SOURCE.txt` names the tag). Run both scripts on a checkout of the tag `package-lock.json` pins.
+A crash while drawing is recorded as `accept crash`. Every case records acceptance and whether anything is drawn. Each type adds its structure (labels, groups, edge ends, markers, node shapes in
 mermaid's short names, participant types, icons, chart data) and which of its labels the drawing shows; each extractor
 in `scripts/mjs-facts.mjs` says which facts come from mermaid's model and which from its DOM, and `MermaiderFacts`
 mirrors it. CI needs no Node. Accepted differences live in `mjs-facts-baseline.txt` under a reason or an issue; a new

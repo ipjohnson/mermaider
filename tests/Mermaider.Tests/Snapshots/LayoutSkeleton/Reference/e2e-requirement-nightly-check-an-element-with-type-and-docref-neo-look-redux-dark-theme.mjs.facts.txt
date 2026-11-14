@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9a7dc1753492b36e
+accept	yes
+drawn	yes
+element	test_suite	test suite	github.com/org/tests
+label	1
+label	github.com/org/tests
+label	latency under 100ms.
+label	perf_req
+label	test suite
+label	test_suite
+label	verifies
+relation	test_suite	perf_req	verifies
+requirement	perf_req	requirement	1	latency under 100ms.	high	test

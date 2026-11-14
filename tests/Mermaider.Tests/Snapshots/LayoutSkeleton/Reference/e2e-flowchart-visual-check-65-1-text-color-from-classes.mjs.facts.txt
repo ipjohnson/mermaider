@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 51ac937335dd4d17
+accept	yes
+drawn	yes
+edge	Ipsum	Dolor	none	arrow	solid
+edge	Lorem	Ipsum	none	arrow	solid
+node	Dolor	Dolor	rect
+node	Ipsum	Ipsum	rect
+node	Lorem	Lorem	rect

@@ -1,0 +1,3 @@
+The e2e-*.mmd files are the fixtures of mermaid's rendering tests (e2e/diagrams), and the parser-*.mmd files
+the diagram sources of its parser tests (packages/mermaid/src/diagrams/**/*.spec.*), MIT licensed, at
+mermaid-js/mermaid mermaid@12.3.0 commit 2086904e76c692331e34a45d7cc3bc30860d040e, written by scripts/mermaid-test-corpus.py.

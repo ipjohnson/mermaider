@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 13b1306f5ceec2e9
+accept	yes
+drawn	yes
+element	styled_entity	component
+label	1
+label	a styled requirement.
+label	component
+label	satisfies
+label	styled_entity
+label	styled_req
+relation	styled_entity	styled_req	satisfies
+requirement	styled_req	requirement	1	a styled requirement.	medium	inspection

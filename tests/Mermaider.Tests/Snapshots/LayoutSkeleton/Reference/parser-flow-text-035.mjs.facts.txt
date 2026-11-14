@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e3ffe39af9efc23f
+accept	yes
+drawn	yes
+edge	A	C	none	arrow	solid
+node	A	A	rect
+node	C	Chimpansen hoppar åäö-ÅÄÖ	diam

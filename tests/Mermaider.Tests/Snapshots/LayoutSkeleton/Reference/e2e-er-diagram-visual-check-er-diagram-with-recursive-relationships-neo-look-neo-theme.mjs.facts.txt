@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3e396971f1c9d318
+accept	yes
+attribute	EMPLOYEE	int	id	PK
+attribute	EMPLOYEE	int	managerId	FK
+attribute	EMPLOYEE	string	name
+drawn	yes
+entity	DEPARTMENT	DEPARTMENT
+entity	EMPLOYEE	EMPLOYEE
+label	DEPARTMENT
+label	EMPLOYEE
+label	employs
+label	id
+label	int
+label	int
+label	managerId
+label	manages
+label	name
+label	string
+relation	DEPARTMENT	EMPLOYEE	one	one-or-more	identifying	employs
+relation	EMPLOYEE	EMPLOYEE	one	zero-or-more	identifying	manages

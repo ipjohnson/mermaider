@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4e175cc997896e1d
+accept	yes
+block	a	Fetch	rect	1	ingest
+block	b	Validate	rect	1	ingest
+block	c	Normalise	rect	1	transform
+block	d	Enrich	rect	1	transform
+block	e	Warehouse	rect	1	store
+block	ingest		composite	1
+block	store		composite	1
+block	transform		composite	1
+drawn	yes
+label	Enrich
+label	Fetch
+label	Normalise
+label	Validate
+label	Warehouse

@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9e8632c1e9afe0cb
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Carol	Carol	participant
+bbox	label	Carol, let me introduce Alice?	383	137.8	591	155.2
+bbox	label	Hello Alice, please meet Carol?	101.8	181.8	324.2	199.3
+bbox	label	Hello Bob, how are you?	119.8	93.8	294.2	111.5
+bbox	label	Oh Bob, I'm so happy to be here!	373.9	225.8	608.1	243.5
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	269	150	342
+bbox	node	Bob	273	0	423	73
+bbox	node	Bob	273	269	423	342
+bbox	node	Carol	556	0	706	73
+bbox	node	Carol	556	269	706	342
+canvas	-50	-10	756	383
+drawn	yes
+message	Alice	Bob	dashed	filled	Hello Bob, how are you?
+message	Bob	Alice	dashed	filled	Hello Alice, please meet Carol?
+message	Bob	Carol	dashed	filled	Carol, let me introduce Alice?
+message	Carol	Bob	solid	filled	Oh Bob, I'm so happy to be here!

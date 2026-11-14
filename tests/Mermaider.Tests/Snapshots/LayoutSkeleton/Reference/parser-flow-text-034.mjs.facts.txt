@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d6b117bfe869f56c
+accept	yes
+drawn	yes
+edge	A_node	B	none	arrow	solid
+node	A_node	A_node	rect
+node	B	This node has a \ as text	lean-l

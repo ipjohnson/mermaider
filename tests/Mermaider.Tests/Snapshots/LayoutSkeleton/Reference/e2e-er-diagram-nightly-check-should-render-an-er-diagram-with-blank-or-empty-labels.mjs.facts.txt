@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e5c5a5896f2349e7
+accept	yes
+drawn	yes
+entity	AUTHOR	AUTHOR
+entity	BOOK	BOOK
+entity	GENRE	GENRE
+label	AUTHOR
+label	BOOK
+label	GENRE
+relation	AUTHOR	GENRE	one-or-more	one-or-more	non-identifying
+relation	BOOK	AUTHOR	one-or-more	one-or-more	non-identifying
+relation	BOOK	GENRE	one-or-more	one-or-more	non-identifying

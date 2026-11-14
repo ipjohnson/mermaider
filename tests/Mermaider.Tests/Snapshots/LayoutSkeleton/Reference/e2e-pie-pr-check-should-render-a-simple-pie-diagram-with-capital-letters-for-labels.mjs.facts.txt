@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7e94c33e07afb965
+accept	yes
+drawn	yes
+label	FAMILY
+label	FRIENDS
+label	NOSE
+label	What Voldemort doesn't have?
+slice	FAMILY	3
+slice	FRIENDS	2
+slice	NOSE	45
+title	What Voldemort doesn't have?

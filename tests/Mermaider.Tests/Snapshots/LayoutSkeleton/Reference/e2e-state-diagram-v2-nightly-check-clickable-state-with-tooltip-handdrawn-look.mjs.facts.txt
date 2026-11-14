@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4ed2696ff296c23c
+accept	yes
+drawn	yes
+node	A	Google	rounded

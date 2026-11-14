@@ -1,0 +1,35 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d8bcf1c47bd62c2e
+accept	yes
+drawn	yes
+entity	ENTITY_A0	ENTITY_A0
+entity	ENTITY_A1	ENTITY_A1
+entity	ENTITY_A2	ENTITY_A2
+entity	ENTITY_A3	ENTITY_A3
+entity	ENTITY_A4	ENTITY_A4
+entity	ENTITY_B0	ENTITY_B0
+entity	ENTITY_B1	ENTITY_B1
+entity	ENTITY_B2	ENTITY_B2
+entity	ENTITY_B3	ENTITY_B3
+entity	ENTITY_B4	ENTITY_B4
+label	ENTITY_A0
+label	ENTITY_A1
+label	ENTITY_A2
+label	ENTITY_A3
+label	ENTITY_A4
+label	ENTITY_B0
+label	ENTITY_B1
+label	ENTITY_B2
+label	ENTITY_B3
+label	ENTITY_B4
+label	many-to-many-identifying
+label	one-or-more-to-many-non-identifying
+label	one-to-many-identifying
+label	one-to-one-identifying
+label	one-to-zero-or-one-non-identifying
+relation	ENTITY_A0	ENTITY_B0	one	one	identifying	one-to-one-identifying
+relation	ENTITY_A1	ENTITY_B1	one	zero-or-more	identifying	one-to-many-identifying
+relation	ENTITY_A2	ENTITY_B2	zero-or-more	zero-or-more	identifying	many-to-many-identifying
+relation	ENTITY_A3	ENTITY_B3	one	zero-or-one	non-identifying	one-to-zero-or-one-non-identifying
+relation	ENTITY_A4	ENTITY_B4	one-or-more	zero-or-more	non-identifying	one-or-more-to-many-non-identifying

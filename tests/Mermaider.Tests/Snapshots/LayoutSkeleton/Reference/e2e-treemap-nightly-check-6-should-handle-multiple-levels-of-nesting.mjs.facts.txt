@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f840a5f4ecb44970
+accept	yes
+drawn	yes
+label	Level 1
+label	Level 2A
+label	Level 2B
+label	Level 3A
+label	Level 3B
+label	Level 3C
+label	Level 3D
+label	Level 4A
+label	Level 4B
+node	Level 1
+node	Level 1 / Level 2A
+node	Level 1 / Level 2A / Level 3A	10
+node	Level 1 / Level 2A / Level 3B	15
+node	Level 1 / Level 2B
+node	Level 1 / Level 2B / Level 3C	20
+node	Level 1 / Level 2B / Level 3D
+node	Level 1 / Level 2B / Level 3D / Level 4A	5
+node	Level 1 / Level 2B / Level 3D / Level 4B	5

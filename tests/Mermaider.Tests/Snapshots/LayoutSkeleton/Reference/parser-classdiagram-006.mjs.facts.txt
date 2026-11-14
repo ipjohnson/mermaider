@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fe0b5d9267e0c9d4
+accept	yes
+bbox	group	Company	12	12	352	309
+bbox	group	Company.Engineering	36	60	223.7	285	Company
+bbox	group	Company.Engineering.Backend	60	108	199.7	261	Company.Engineering
+bbox	node	CEO	273.7	132	328	213
+bbox	node	Developer	84	156	175.7	237
+canvas	4	4	360	317
+class	CEO	CEO
+class	Developer	Developer
+drawn	yes
+namespace	Company	CEO,Company.Engineering
+namespace	Company.Engineering	Company.Engineering.Backend
+namespace	Company.Engineering.Backend	Developer

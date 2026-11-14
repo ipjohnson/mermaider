@@ -1,0 +1,63 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 759f72d43a99fb77
+accept	yes
+drawn	yes
+label	All Shapes
+label	Another Bang
+label	Another Circle
+label	Another Cloud
+label	Another Hexagon
+label	Another Rounded
+label	Another Square
+label	Bang Branch
+label	Bang Node
+label	Circle Branch
+label	Circle Node
+label	Cloud Branch
+label	Cloud Node
+label	Default Branch
+label	Hexagon Branch
+label	Hexagon Node
+label	Nested Bang
+label	Nested Circle
+label	Nested Cloud
+label	Nested Hexagon
+label	Nested Rounded
+label	Nested Square
+label	Rounded Branch
+label	Rounded Node
+label	Square Branch
+label	Square Node
+label	df Default Node
+label	df1 Nested Default
+label	df2 Another Default
+node	All Shapes	circle
+node	All Shapes / Bang Branch	default
+node	All Shapes / Bang Branch / Bang Node	bang
+node	All Shapes / Bang Branch / Bang Node / Another Bang	bang
+node	All Shapes / Bang Branch / Bang Node / Nested Bang	bang
+node	All Shapes / Circle Branch	default
+node	All Shapes / Circle Branch / Circle Node	circle
+node	All Shapes / Circle Branch / Circle Node / Another Circle	circle
+node	All Shapes / Circle Branch / Circle Node / Nested Circle	circle
+node	All Shapes / Cloud Branch	default
+node	All Shapes / Cloud Branch / Cloud Node	cloud
+node	All Shapes / Cloud Branch / Cloud Node / Another Cloud	cloud
+node	All Shapes / Cloud Branch / Cloud Node / Nested Cloud	cloud
+node	All Shapes / Default Branch	default
+node	All Shapes / Default Branch / df Default Node	default
+node	All Shapes / Default Branch / df Default Node / df1 Nested Default	default
+node	All Shapes / Default Branch / df Default Node / df2 Another Default	default
+node	All Shapes / Hexagon Branch	default
+node	All Shapes / Hexagon Branch / Hexagon Node	hex
+node	All Shapes / Hexagon Branch / Hexagon Node / Another Hexagon	hex
+node	All Shapes / Hexagon Branch / Hexagon Node / Nested Hexagon	hex
+node	All Shapes / Rounded Branch	default
+node	All Shapes / Rounded Branch / Rounded Node	rounded
+node	All Shapes / Rounded Branch / Rounded Node / Another Rounded	rounded
+node	All Shapes / Rounded Branch / Rounded Node / Nested Rounded	rounded
+node	All Shapes / Square Branch	default
+node	All Shapes / Square Branch / Square Node	rect
+node	All Shapes / Square Branch / Square Node / Another Square	rect
+node	All Shapes / Square Branch / Square Node / Nested Square	rect

@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b270c6ac69c5e51b
+accept	yes
+drawn	yes
+label	London
+label	London
+label	Schedule
+label	Vacation
+section	Vacation
+task	Vacation	London		202-12-01 00:00	202-12-08 00:00
+task	Vacation	London		2024-12-01 00:00	2024-12-08 00:00
+title	Schedule

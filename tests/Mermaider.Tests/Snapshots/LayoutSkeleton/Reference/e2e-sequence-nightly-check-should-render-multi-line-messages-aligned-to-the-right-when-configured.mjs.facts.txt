@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 24c9431a051d1e8c
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+bbox	label	I'm short	197.2	94.1	258	111.2
+bbox	label	Short as well	172.4	172.1	264	189.2
+bbox	label	and also	203.5	189.1	264	206.2
+bbox	label	but also	202	111.1	258	128.2
+bbox	label	multiline	199.3	128.1	258	145.2
+bbox	label	multiline	205.3	206.1	264	223.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	249	150	322
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	249	350	322
+canvas	-50	-10	400	363
+drawn	yes
+message	Alice	Bob	solid	filled	I'm short but also multiline
+message	Bob	Alice	solid	filled	Short as well and also multiline

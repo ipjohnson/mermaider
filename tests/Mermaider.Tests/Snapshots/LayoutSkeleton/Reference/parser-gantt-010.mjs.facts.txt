@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7a2f2fc82b77c67d
+accept	yes
+drawn	yes
+label	Adding gantt diagram functionality to mermaid
+section	;Documentation
+title	Adding gantt diagram functionality to mermaid

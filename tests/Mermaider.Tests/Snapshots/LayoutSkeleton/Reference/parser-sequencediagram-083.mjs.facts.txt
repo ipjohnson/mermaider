@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 60ddf73fa3020d30
+accept	yes
+actor	Alice	Alice	participant
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	140	150	213
+bbox	note	Alice thinks	100	83	250	120
+canvas	-50	-10	300	254
+drawn	yes
+note	right	Alice	Alice thinks

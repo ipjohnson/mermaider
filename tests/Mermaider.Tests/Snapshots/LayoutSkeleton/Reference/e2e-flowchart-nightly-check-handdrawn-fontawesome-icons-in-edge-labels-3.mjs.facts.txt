@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7df7884e80302049
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid
+edge	B	C	none	arrow	solid
+edge	B	D	none	arrow	solid
+edge	B	G	none	arrow	solid
+edge	C	D	none	arrow	solid
+edge	D	E	none	arrow	solid
+edge	E	A	none	arrow	solid
+edge	E	F	none	arrow	solid
+edge	F	D	none	arrow	solid
+edge	F	G	none	arrow	solid
+edge	G	D	none	arrow	solid
+group	bar	Bar SubGraph	E,F
+group	foo	Foo SubGraph	C,D
+node	A	A	rect
+node	B	B	rect
+node	C	C	rect
+node	D	D	rect
+node	E	E	rect
+node	F	F	rect
+node	G	G	rect

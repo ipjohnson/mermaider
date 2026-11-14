@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 90dbf5e8b97e68dc
+accept	yes
+boundary	apache	apache tomcat 8.x	Apache Tomcat	dn
+boundary	dn	ubuntu 16.04 lts	bigbank-api*** x8	plc
+boundary	mob	apple ios or android	Customer's mobile device
+boundary	plc	big bank plc data center	Big Bank plc
+drawn	yes
+element	api	container	internal	API Application	Java and Spring MVC	Provides Internet Banking functionality via a JSON/HTTPS API.	apache
+element	mobile	container	internal	Mobile App	Xamarin	Provides a limited subset of the Internet Banking functionality to customers via their mobile device.	mob
+label	API Application
+label	Apache Tomcat
+label	Big Bank plc
+label	Customer's mobile device
+label	Deployment Diagram for Internet Banking System - Live
+label	Java and Spring MVC
+label	Makes API calls to
+label	Mobile App
+label	Provides Internet Banking functionality via a JSON/HTTPS API.
+label	Provides a limited subset of the Internet Banking functionality to customers via their mobile device.
+label	Xamarin
+label	bigbank-api*** x8
+label	json/HTTPS
+rel	mobile	api	one	Makes API calls to	json/HTTPS
+title	Deployment Diagram for Internet Banking System - Live

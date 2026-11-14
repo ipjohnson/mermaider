@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8781c1b2f7852451
+accept	yes
+drawn	yes
+icon	A	fa:fa-bell
+node	A	Bell	rounded

@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2229438e62e9e2ee
+accept	no
+# error Packet block 25 - 20 is invalid. End must be greater than start.

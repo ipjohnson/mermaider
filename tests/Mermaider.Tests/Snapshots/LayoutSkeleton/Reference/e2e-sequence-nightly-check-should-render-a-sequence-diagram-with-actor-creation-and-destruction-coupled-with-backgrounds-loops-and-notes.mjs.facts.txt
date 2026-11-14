@@ -1,0 +1,66 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 940d653f5e3caa5d
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	John	John Second Line	participant
+actor	Lola	Lola	actor
+bbox	label	Checking with John...	116	480.3	268	498.5
+bbox	label	Hello Bob, how are you?	99.9	150.3	274.1	168.5
+bbox	label	Hey John - we're still waiting to know	366.6	606.3	627.4	624.5
+bbox	label	How about you John?	380.6	194.3	535.4	212.5
+bbox	label	I am good thanks!	129.4	293.3	256.6	311.5
+bbox	label	I am good thanks!	433.4	337.3	560.6	355.5
+bbox	label	John! Cmon!	412.7	714.3	503.3	732.1
+bbox	label	Maybe	509	1189.3	557	1207.5
+bbox	label	No	519.8	1100.3	540.2	1118.1
+bbox	label	OK	522.4	1011.3	545.6	1029.1
+bbox	label	Parallel message 1	80	1288.3	216	1306.5
+bbox	label	Parallel message 2	462	1402.3	598	1420.5
+bbox	label	Yes	504.9	922.3	531.1	940.1
+bbox	label	alt	64	867	114	902
+bbox	label	either this	523.6	870.1	601.9	888.2
+bbox	label	how you're doing	436.8	623.3	557.2	641.5
+bbox	label	or this	511.5	1053.1	564	1071.2
+bbox	label	or this will happen	469.3	1142.1	606.2	1160.2
+bbox	label	par	64	1233	114	1268
+bbox	label	this happens in parallel	472	1236.1	644.5	1254.2
+bbox	node	Alice	0	0	150	90
+bbox	node	Alice	0	1456	150	1546
+bbox	node	Bob	230	0	380	90
+bbox	node	Bob	230	1267	380	1357
+bbox	node	John	619	173	769	263
+bbox	node	John	619	693	769	783
+bbox	node	Lola	976.4	1462	1006.6	1529.4
+bbox	node	Lola	976.4	918	1006.6	985.4
+bbox	note	After a few more moments, John	578.5	793	809.5	847
+bbox	note	John looks like he's	619	514	769	586
+bbox	note	John thinks a long	719	371	869	460
+bbox	note	John's trying hard not to break his train of thought.	521.5	657	866.5	694
+block	alt	either this
+block	par	this happens in parallel
+block	rect
+block	rect
+canvas	-50	-10	1116.5	1587
+divider
+divider	or this
+divider	or this will happen
+drawn	yes
+message	Alice	Bob	dashed	filled	Parallel message 1
+message	Alice	Bob	solid	filled	Hello Bob, how are you?
+message	Alice	Lola	dashed	filled	Parallel message 2
+message	Alice	Lola	solid	filled	No
+message	Alice	Lola	solid	filled	Yes
+message	Alice	Lola	solid	none	Maybe
+message	Bob	Alice	dashed	cross	I am good thanks!
+message	Bob	Alice	dashed	none	Checking with John...
+message	Bob	John	dashed	filled	How about you John?
+message	Bob	John	solid	cross	Hey John - we're still waiting to know how you're doing
+message	Bob	John	solid	cross	I am good thanks!
+message	Bob	John	solid	cross	John! Cmon!
+message	Lola	Alice	dashed	filled	OK
+note	over	John	After a few more moments, John finally snaps out of it.
+note	over	John	John looks like he's still thinking, so Bob prods him a bit.
+note	over	John	John's trying hard not to break his train of thought.
+note	right	John	John thinks a long long time, so long that the text does not fit on a row.

@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6f932b980b6b8166
+accept	yes
+actor	DB	User Database	database
+actor	U	End User	actor
+bbox	label	Query	150.2	94.1	193.8	111.5
+bbox	label	Result	155.3	138.1	200.7	155.2
+bbox	node	U	41.6	0	108.6	67
+bbox	node	U	41.6	187	108.6	254
+canvas	-50	-10	400	295
+drawn	yes
+message	DB	U	dashed	filled	Result
+message	U	DB	solid	filled	Query

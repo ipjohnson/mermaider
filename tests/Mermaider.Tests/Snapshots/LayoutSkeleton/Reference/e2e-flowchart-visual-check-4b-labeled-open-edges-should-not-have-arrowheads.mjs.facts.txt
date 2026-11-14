@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 74c7754eb67135d2
+accept	yes
+drawn	yes
+edge	A	B	none	none	solid	label text
+edge	C	D	none	none	solid
+edge	E	F	none	none	solid	open label
+edge	G	H	arrow	arrow	solid	bidirectional
+node	A	A	rect
+node	B	B	rect
+node	C	C	rect
+node	D	D	rect
+node	E	E	rect
+node	F	F	rect
+node	G	G	rect
+node	H	H	rect

@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 545053cf38104224
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	dotted	test text with ==
+node	A	A	rect
+node	B	B	rect

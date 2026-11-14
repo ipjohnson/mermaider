@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source cb707283b8e59587
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+bbox	label	Message	139.5	139.1	204.5	156.5
+bbox	label	Parallel overlap	140.4	87	259.6	104.2
+bbox	label	par	-110	83	-60	118
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	286	150	359
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	286	350	359
+bbox	note	Alice note	-100	172	50	209
+bbox	note	Bob note	300	219	450	256
+block	par	Parallel overlap
+canvas	-160	-10	510	400
+drawn	yes
+message	Alice	Bob	solid	filled	Message
+note	left	Alice	Alice note
+note	right	Bob	Bob note

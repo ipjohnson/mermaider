@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 31a3e7bd487138a8
+accept	yes
+drawn	yes
+node	State1	State1	rounded
+node	State2	State2	rounded

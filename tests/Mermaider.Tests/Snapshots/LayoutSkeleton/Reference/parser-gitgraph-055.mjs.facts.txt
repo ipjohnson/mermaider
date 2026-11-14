@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3fe6ae1f58f77f67
+accept	no
+# error Invalid operation: The specified parent commit is not an immediate parent of the cherry-picked commit.

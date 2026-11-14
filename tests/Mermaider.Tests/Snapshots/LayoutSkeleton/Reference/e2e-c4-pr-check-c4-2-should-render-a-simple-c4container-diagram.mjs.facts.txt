@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e3b1c2f1d546a748
+accept	yes
+boundary	c1	container	Internet Banking
+drawn	yes
+element	customer	person	internal	Customer		A customer of the bank, with personal bank accounts
+element	email_system	system	external	E-Mail System		The internal Microsoft Exchange system
+element	spa	container	internal	Single-Page App	JavaScript, Angular	Provides all the Internet banking functionality to customers via their web browser	c1
+label	A customer of the bank, with personal bank accounts
+label	Container diagram for Internet Banking System
+label	Customer
+label	E-Mail System
+label	HTTPS
+label	Internet Banking
+label	JavaScript, Angular
+label	Provides all the Internet banking functionality to customers via their web browser
+label	Sends e-mails to
+label	Single-Page App
+label	The internal Microsoft Exchange system
+label	Uses
+rel	customer	spa	one	Uses	HTTPS
+rel	email_system	customer	one	Sends e-mails to
+title	Container diagram for Internet Banking System

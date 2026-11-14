@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2defd2e6e7fd7d4e
+accept	yes
+drawn	yes
+label	Adding GANTT diagram to mermaid
+label	boss on leave
+label	chilling
+label	deadline A
+label	deadline B
+label	literature review
+label	new intern
+label	onboarding
+label	project A
+label	project B
+label	team's critical event
+section	new intern
+section	team's critical event
+task	new intern	chilling	chilling	2024-01-28 00:00	2024-02-01 00:00
+task	new intern	literature review	litreview	2024-01-02 00:00	2024-01-12 00:00
+task	new intern	onboarding	onboarding	2024-01-02 00:00	2024-01-09 00:00
+task	new intern	project A	projectA	2024-01-12 00:00	2024-01-28 00:00
+task	new intern	project B	projectB	2024-02-01 00:00	2024-02-15 00:00
+task	team's critical event	boss on leave	bossaway	2024-01-28 00:00	2024-02-11 00:00
+task	team's critical event	deadline A	deadlineA	2024-02-01 00:00	2024-02-01 00:00	crit,milestone
+task	team's critical event	deadline B	deadlineB	2024-02-15 00:00	2024-02-15 00:00	crit,milestone
+title	Adding GANTT diagram to mermaid

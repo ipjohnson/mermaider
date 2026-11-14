@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9c85afc9e50490aa
+accept	yes
+drawn	yes
+edge	State1	[*]end@root	none	arrow	solid
+edge	[*]start@root	State1	none	arrow	solid	This is the description +-!
+node	State1	State1	rounded
+node	[*]end@root		fr-circ
+node	[*]start@root		sm-circ

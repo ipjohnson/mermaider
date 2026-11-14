@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f9aa3d03cf0110c0
+accept	yes
+drawn	yes
+group	Parent	Parent	C
+group	PilotCockpit	PilotCockpit	Parent
+node	C	C	rounded

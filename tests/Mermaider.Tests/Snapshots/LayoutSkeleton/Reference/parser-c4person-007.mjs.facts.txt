@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 94a483f11d0e2149
+accept	yes
+drawn	yes
+element	customerA	person	internal	Banking Customer A		A customer.
+label	A customer.
+label	Banking Customer A

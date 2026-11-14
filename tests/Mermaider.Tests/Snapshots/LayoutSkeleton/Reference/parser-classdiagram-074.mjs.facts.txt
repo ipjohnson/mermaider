@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3fe1a061b4929772
+accept	yes
+bbox	node	Object	12	12	179.2	132
+canvas	4	4	187.2	140
+class	Object	Object
+drawn	yes
+method	Object	getObject() : Object

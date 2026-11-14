@@ -1,0 +1,11 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ad720a6dcb2450cc
+accept	yes
+drawn	yes
+label	Main Category
+label	Short item
+label	This is a very long item name that should wrap to the next line when rendered in the treemap diagram
+node	Main Category
+node	Main Category / Short item	20
+node	Main Category / This is a very long item name that should wrap to the next line when rendered in the treemap diagram	50

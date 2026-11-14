@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2b7103a5bc94c7a6
+accept	yes
+drawn	yes
+element	api	container	internal	API	Java
+element	db	container_db	internal	Database	SQL
+element	spa	container	internal	SPA	Angular
+label	1. Submits credentials
+label	2. Validates against
+label	3. Returns token
+label	API
+label	Angular
+label	Database
+label	Dynamic diagram
+label	Java
+label	SPA
+label	SQL
+rel	api	db	one	2. Validates against
+rel	api	spa	one	3. Returns token
+rel	spa	api	one	1. Submits credentials
+title	Dynamic diagram

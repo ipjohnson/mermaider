@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b20c85d25fc97944
+accept	yes
+drawn	yes
+label	Back
+label	Football Team Member Position
+label	Goalkeeper
+label	Midfielder
+label	Striker
+slice	Back	8
+slice	Goalkeeper	2
+slice	Midfielder	5
+slice	Striker	3
+title	Football Team Member Position

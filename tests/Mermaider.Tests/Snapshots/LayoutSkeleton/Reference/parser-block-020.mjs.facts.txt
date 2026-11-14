@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 52fbc5c529e8bd56
+accept	yes
+block	one	One Slot	rect	1
+block	two	Two slots	rect	2
+drawn	yes
+label	One Slot
+label	Two slots

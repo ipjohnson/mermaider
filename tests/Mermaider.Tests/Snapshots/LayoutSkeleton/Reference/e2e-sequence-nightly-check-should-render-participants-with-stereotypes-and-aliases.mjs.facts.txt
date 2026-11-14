@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7714370453ca51dd
+accept	yes
+actor	API	Public API	boundary
+actor	Auth	Auth Controller	control
+actor	Cache	Cache Layer	entity
+actor	DB	User Database	database
+bbox	label	Authenticate request	101.6	86	248.4	103.4
+bbox	label	Confirmed	442.1	262	515.9	279.4
+bbox	label	Query user	336.4	130	415.8	147.5
+bbox	label	Store session	427.5	218	524.5	235.4
+bbox	label	Token	156.7	306	199.3	323.4
+bbox	label	User data	344.3	174	413.7	191.4
+bbox	node	API	20	11	111.5	77.2
+bbox	node	API	20	360	111.5	425.7
+bbox	node	Auth	223.6	10	330.6	75.2
+bbox	node	Auth	223.6	359	330.6	426.7
+canvas	-50	-10	802	444
+drawn	yes
+message	API	Auth	solid	filled	Authenticate request
+message	Auth	API	dashed	filled	Token
+message	Auth	Cache	solid	filled	Store session
+message	Auth	DB	solid	filled	Query user
+message	Cache	Auth	dashed	filled	Confirmed
+message	DB	Auth	dashed	filled	User data

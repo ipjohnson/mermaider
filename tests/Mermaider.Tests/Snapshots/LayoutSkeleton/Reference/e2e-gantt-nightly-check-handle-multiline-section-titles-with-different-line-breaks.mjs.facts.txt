@@ -1,0 +1,47 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 66551afa970dece8
+accept	yes
+drawn	yes
+label	A section multiline
+label	Active task
+label	Add another diagram to demo page
+label	Add another diagram to demo page
+label	Add gantt diagram to demo page
+label	Add gantt diagram to demo page
+label	Add to mermaid
+label	Completed task
+label	Completed task in the critical line
+label	Create tests for parser
+label	Create tests for renderer
+label	Critical tasks multiline
+label	Describe gantt syntax
+label	Describe gantt syntax
+label	Documentation multiline
+label	Future task
+label	Future task in critical line
+label	Future task2
+label	GANTT diagram with multiline section titles
+label	Implement parser and jison
+label	Last section multiline
+section	A section multiline
+section	Critical tasks multiline
+section	Documentation multiline
+section	Last section multiline
+task	A section multiline	Active task	des2	2014-01-09 00:00	2014-01-13 00:00	active
+task	A section multiline	Completed task	des1	2014-01-06 00:00	2014-01-08 00:00	done
+task	A section multiline	Future task	des3	2014-01-13 00:00	2014-01-18 00:00
+task	A section multiline	Future task2	des4	2014-01-18 00:00	2014-01-23 00:00
+task	Critical tasks multiline	Add to mermaid		2014-01-21 00:00	2014-01-22 00:00
+task	Critical tasks multiline	Completed task in the critical line		2014-01-06 00:00	2014-01-07 00:00	done,crit
+task	Critical tasks multiline	Create tests for parser		2014-01-11 00:00	2014-01-14 00:00	active,crit
+task	Critical tasks multiline	Create tests for renderer		2014-01-19 00:00	2014-01-21 00:00
+task	Critical tasks multiline	Future task in critical line		2014-01-14 00:00	2014-01-19 00:00	crit
+task	Critical tasks multiline	Implement parser and jison		2014-01-08 00:00	2014-01-11 00:00	done,crit
+task	Documentation multiline	Add another diagram to demo page	doc1	2014-01-12 00:00	2014-01-14 00:00
+task	Documentation multiline	Add gantt diagram to demo page		2014-01-12 00:00	2014-01-12 20:00
+task	Documentation multiline	Describe gantt syntax	a1	2014-01-08 00:00	2014-01-12 00:00	active
+task	Last section multiline	Add another diagram to demo page		2014-01-17 20:00	2014-01-19 20:00
+task	Last section multiline	Add gantt diagram to demo page		2014-01-17 00:00	2014-01-17 20:00
+task	Last section multiline	Describe gantt syntax		2014-01-14 00:00	2014-01-17 00:00
+title	GANTT diagram with multiline section titles

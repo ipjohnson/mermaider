@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source f5f21e4911cf2be2
+accept	yes
+actor	Alice	Alice	actor
+actor	Charlie	Charlie	boundary
+bbox	node	Alice	57.6	0	92.3	67
+bbox	node	Alice	57.6	193	92.3	260
+bbox	node	Charlie	220	0	300.3	67
+bbox	node	Charlie	220	193	300.3	260
+bbox	note	Other note	200	130	350	167
+bbox	note	Some note	0	83	150	120
+canvas	-50	-10	400	301
+drawn	yes
+note	over	Alice	Some note
+note	over	Charlie	Other note

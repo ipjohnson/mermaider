@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source cd5159b653f76376
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+bbox	label	Hello Bob, are you alright?	110.7	94.1	299.3	111.5
+bbox	label	I feel surrounded by darkness	99.6	158.1	310.4	175.5
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	211	150	284
+bbox	node	Bob	259	0	409	73
+bbox	node	Bob	259	211	409	284
+block	rect
+canvas	-50	-10	459	325
+drawn	yes
+message	Alice	Bob	solid	none	Hello Bob, are you alright?
+message	Bob	Alice	solid	none	I feel surrounded by darkness

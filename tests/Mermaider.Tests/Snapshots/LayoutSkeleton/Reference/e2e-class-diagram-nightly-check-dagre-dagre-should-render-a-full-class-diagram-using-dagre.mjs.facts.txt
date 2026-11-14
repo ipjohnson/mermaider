@@ -1,0 +1,75 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6a973fa9ca594741
+accept	yes
+attribute	Class01	#int protectedMarmoset
+attribute	Class01	+int publicGorilla
+attribute	Class01	-int privateChimp
+attribute	Class01	<<interface>>
+attribute	Class01	int chimp
+attribute	Class01	int gorilla
+attribute	Class07	Object[] elementData
+attribute	Class10	<<service>>
+attribute	Class10	int id
+bbox	label	*	306.9	330.8	315.9	347.3
+bbox	label	*	533.2	177.8	542.2	194.3
+bbox	label	*	563.2	330.8	572.2	347.3
+bbox	label	*	870.1	708.5	879.1	725
+bbox	label	*	962.7	549.8	971.7	566.3
+bbox	label	1	276	177.8	285	194.3
+bbox	label	1	402.9	177.8	411.9	194.3
+bbox	label	1	512.7	171.6	521.7	188.1
+bbox	label	1	588	179.6	597	196.1
+bbox	label	1	694.3	473.8	703.3	490.3
+bbox	label	1	724.3	303.8	733.3	320.3
+bbox	label	Cool	92.4	273	121.2	294
+bbox	label	Cool label	985.5	652	1047.8	673
+bbox	label	Where am i?	454.7	500	534.1	521
+bbox	label	many	422.5	330.8	458.5	347.3
+bbox	node	AveryLongClass	39.8	356.5	173.8	437.5
+bbox	node	C2	886.7	698	928.6	779
+bbox	node	C3	529.4	356.5	571.3	437.5
+bbox	node	Class01	8	8	205.5	248
+bbox	node	Class03	255.5	87.5	332.5	168.5
+bbox	node	Class04	255.5	356.5	332.5	437.5
+bbox	node	Class05	382.5	87.5	459.4	168.5
+bbox	node	Class06	382.5	356.5	459.4	437.5
+bbox	node	Class07	621.3	329.5	803.3	464.5
+bbox	node	Class08	978.2	546	1055.1	627
+bbox	node	Class09	511.9	87.5	588.8	168.5
+bbox	node	Class10	853.3	319	980.8	475
+bbox	node	Class11	1229.4	87.5	1305.6	168.5
+bbox	node	Class12	1229	356.5	1305.9	437.5
+bbox	note	Cool class I said it's very cool class!	834.3	101	999.9	155
+bbox	note	I love this diagram! Do you love it?	1049.9	101	1179.4	155
+canvas	0	0	1313.9	787
+class	AveryLongClass	AveryLongClass
+class	C2	C2
+class	C3	C3
+class	Class01	Class01
+class	Class03	Class03
+class	Class04	Class04
+class	Class05	Class05
+class	Class06	Class06
+class	Class07	Class07
+class	Class08	Class08
+class	Class09	Class09
+class	Class10	Class10
+class	Class11	Class11
+class	Class12	Class12
+drawn	yes
+method	Class01	size()
+method	Class07	equals()
+method	Class10	test()
+note		I love this diagram! Do you love it?
+note	Class10	Cool class I said it's very cool class!
+relation	Class01	AveryLongClass	triangle	none	solid	Cool
+relation	Class03	Class04	diamond-filled	none	solid		1	*
+relation	Class05	Class06	diamond	none	solid		1	many
+relation	Class07	Class08	none	none	dashed		1	*
+relation	Class08	C2	arrow	arrow	solid	Cool label
+relation	Class09	C2	none	arrow	solid	Where am i?	1	*
+relation	Class09	C3	none	diamond-filled	solid		*	*
+relation	Class09	Class07	none	triangle	solid		1	1
+relation	Class11	Class12	none	arrow	dashed
+relation	Class12	Class08	triangle	none	dashed

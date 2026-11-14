@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2c31a7865af2d923
+accept	yes
+drawn	yes
+label	A section
+label	A very long label that will not fit inside the short bar
+label	A very long label that will not fit inside the short bar
+label	Active short bar
+label	Critical tasks
+label	Gantt dark mode done-task outside-text readability
+section	A section
+section	Critical tasks
+task	A section	A very long label that will not fit inside the short bar		2014-01-06 00:00	2014-01-07 00:00	done
+task	A section	Active short bar		2014-01-07 00:00	2014-01-08 00:00	active
+task	Critical tasks	A very long label that will not fit inside the short bar		2014-01-06 00:00	2014-01-07 00:00	done,crit
+title	Gantt dark mode done-task outside-text readability

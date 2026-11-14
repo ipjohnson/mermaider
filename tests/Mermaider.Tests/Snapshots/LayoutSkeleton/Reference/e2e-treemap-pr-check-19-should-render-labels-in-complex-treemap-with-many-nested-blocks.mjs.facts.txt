@@ -1,0 +1,92 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 033eceaa91f25114
+accept	yes
+drawn	yes
+label	packages/app (1115)
+label	packages/app-buildship (1)
+label	packages/app-buildship/src (1)
+label	packages/app-buildship/src/cleanupAssets (1)
+label	packages/app-observability (8)
+label	packages/app/prisma (11)
+label	packages/app/prisma/migrations (11)
+label	packages/app/scripts (1)
+label	packages/app/src (844)
+label	packages/app/src/lib (707)
+label	packages/app/src/routes (353)
+label	packages/app/static (15)
+label	packages/app/static/icons (8)
+label	packages/app/static/img (4)
+label	packages/app/tests (277)
+label	packages/app/tests/api (23)
+label	packages/app/tests/common (48)
+label	packages/app/tests/e2e (245)
+label	packages/app/tests/mobile (6)
+label	packages/app/tests/seed (2)
+label	packages/emails (26)
+label	packages/emails/src (18)
+label	packages/emails/src/components (8)
+label	packages/emails/src/emails (17)
+label	packages/eslint-plugin (6)
+label	packages/eslint-plugin/src (5)
+label	packages/eslint-plugin/src/rules (5)
+label	packages/icons (1)
+label	packages/llm-prompts (29)
+label	packages/llm-prompts/common (3)
+label	packages/llm-prompts/diagram-chat (15)
+label	packages/llm-prompts/diagram-chat/tests (6)
+label	packages/llm-prompts/regenerate-diagram (1)
+label	packages/llm-prompts/repair-diagram (1)
+label	packages/llm-prompts/shared (9)
+label	packages/llm-prompts/shared/patches (2)
+label	packages/llm-prompts/tests (4)
+label	packages/mermaid-pre-render-server (8)
+label	packages/mermaid-pre-render-server/src (2)
+label	packages/mermaid-pre-render-server/tests (3)
+label	packages/mermaid-pre-render-server/tests/e2e (3)
+label	🔴 High Activity (Top 50%)
+label	🟠 Medium Activity (35%)
+node	🔴 High Activity (Top 50%)
+node	🔴 High Activity (Top 50%) / packages/app (1115)	15
+node	🔴 High Activity (Top 50%) / packages/app-observability (8)	3
+node	🔴 High Activity (Top 50%) / packages/app/prisma (11)	3
+node	🔴 High Activity (Top 50%) / packages/app/prisma/migrations (11)	3
+node	🔴 High Activity (Top 50%) / packages/app/src (844)	12
+node	🔴 High Activity (Top 50%) / packages/app/src/lib (707)	11
+node	🔴 High Activity (Top 50%) / packages/app/src/routes (353)	7
+node	🔴 High Activity (Top 50%) / packages/app/static (15)	3
+node	🔴 High Activity (Top 50%) / packages/app/static/icons (8)	3
+node	🔴 High Activity (Top 50%) / packages/app/tests (277)	6
+node	🔴 High Activity (Top 50%) / packages/app/tests/api (23)	3
+node	🔴 High Activity (Top 50%) / packages/app/tests/common (48)	4
+node	🔴 High Activity (Top 50%) / packages/app/tests/e2e (245)	6
+node	🔴 High Activity (Top 50%) / packages/emails (26)	3
+node	🔴 High Activity (Top 50%) / packages/emails/src (18)	3
+node	🔴 High Activity (Top 50%) / packages/emails/src/components (8)	3
+node	🔴 High Activity (Top 50%) / packages/emails/src/emails (17)	3
+node	🔴 High Activity (Top 50%) / packages/llm-prompts (29)	3
+node	🔴 High Activity (Top 50%) / packages/llm-prompts/diagram-chat (15)	3
+node	🔴 High Activity (Top 50%) / packages/llm-prompts/shared (9)	3
+node	🔴 High Activity (Top 50%) / packages/mermaid-pre-render-server (8)	3
+node	🟠 Medium Activity (35%)
+node	🟠 Medium Activity (35%) / packages/app/scripts (1)	3
+node	🟠 Medium Activity (35%) / packages/app/static/img (4)	3
+node	🟠 Medium Activity (35%) / packages/app/tests/mobile (6)	3
+node	🟠 Medium Activity (35%) / packages/app/tests/seed (2)	3
+node	🟠 Medium Activity (35%) / packages/eslint-plugin (6)	3
+node	🟠 Medium Activity (35%) / packages/eslint-plugin/src (5)	3
+node	🟠 Medium Activity (35%) / packages/eslint-plugin/src/rules (5)	3
+node	🟠 Medium Activity (35%) / packages/llm-prompts/common (3)	3
+node	🟠 Medium Activity (35%) / packages/llm-prompts/diagram-chat/tests (6)	3
+node	🟠 Medium Activity (35%) / packages/llm-prompts/shared/patches (2)	3
+node	🟠 Medium Activity (35%) / packages/llm-prompts/tests (4)	3
+node	🟠 Medium Activity (35%) / packages/mermaid-pre-render-server/src (2)	3
+node	🟠 Medium Activity (35%) / packages/mermaid-pre-render-server/tests (3)	3
+node	🟠 Medium Activity (35%) / packages/mermaid-pre-render-server/tests/e2e (3)	3
+node	🟡 Low Activity (15%)
+node	🟡 Low Activity (15%) / packages/app-buildship (1)	3
+node	🟡 Low Activity (15%) / packages/app-buildship/src (1)	3
+node	🟡 Low Activity (15%) / packages/app-buildship/src/cleanupAssets (1)	3
+node	🟡 Low Activity (15%) / packages/icons (1)	3
+node	🟡 Low Activity (15%) / packages/llm-prompts/regenerate-diagram (1)	3
+node	🟡 Low Activity (15%) / packages/llm-prompts/repair-diagram (1)	3

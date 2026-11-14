@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2b5a183be970f2ef
+accept	yes
+actor	kebab-case	Kebab-Cased	control
+actor	lead-actor	lead-actor	database
+actor	order-svc	order-svc	queue
+actor	web-ui	Web UI	entity
+bbox	node	kebab-case	426.1	0	523.9	67.2
+bbox	node	kebab-case	426.1	99	523.9	166.2
+canvas	-50	-10	800	207
+drawn	yes

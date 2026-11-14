@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b2099eaa8e18ec53
+accept	yes
+actor	A	A	participant
+actor	Link	Channel	participant
+bbox	label	message	145.5	94.1	210.5	111.5
+bbox	node	A	0	0	150	73
+bbox	node	A	0	137	150	210
+bbox	node	Link	200	0	350	73
+bbox	node	Link	200	137	350	210
+canvas	-50	-10	400	251
+drawn	yes
+message	Link	A	dashed	filled	message

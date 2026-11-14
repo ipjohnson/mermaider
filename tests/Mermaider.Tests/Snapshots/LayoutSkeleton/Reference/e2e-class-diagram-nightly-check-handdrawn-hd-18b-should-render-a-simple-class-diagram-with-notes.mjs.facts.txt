@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 572c0929dce196d8
+accept	yes
+attribute	Class10	int id
+bbox	node	Class10	224	109.6	313	247.7
+bbox	note	Cool class I said it's very cool class!	184.1	12	352.9	69.4
+bbox	note	I love this diagram! Do you love it?	11.8	12.3	144	69.4
+canvas	3.8	4	360.9	255.7
+class	Class10	Class10
+drawn	yes
+method	Class10	size()
+note		I love this diagram! Do you love it?
+note	Class10	Cool class I said it's very cool class!

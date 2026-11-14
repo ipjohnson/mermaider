@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e524ecef980cab44
+accept	yes
+drawn	yes
+edge	A	ava	none	cross	solid
+node	A	A	rect
+node	ava	my text	rounded

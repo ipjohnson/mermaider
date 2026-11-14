@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7799324ad1209f4e
+accept	no
+# error Error: State name must be a single word. Found: "invalid syntax {"

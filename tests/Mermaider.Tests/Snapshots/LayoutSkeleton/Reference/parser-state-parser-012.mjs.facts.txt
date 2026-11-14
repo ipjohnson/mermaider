@@ -1,0 +1,6 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 50a9a3a9305e4642
+accept	yes
+drawn	yes
+node	myState	status: active	rounded

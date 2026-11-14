@@ -1,0 +1,20 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0c516ceabc826fc4
+accept	yes
+attribute	EMPLOYEE	bool	officer_of_firm
+attribute	PRIVATE_FINANCIAL_INSTITUTION	int	turnover
+attribute	PRIVATE_FINANCIAL_INSTITUTION	string	name
+drawn	yes
+entity	EMPLOYEE	EMPLOYEE
+entity	PRIVATE_FINANCIAL_INSTITUTION	PRIVATE_FINANCIAL_INSTITUTION
+label	EMPLOYEE
+label	PRIVATE_FINANCIAL_INSTITUTION
+label	bool
+label	employs
+label	int
+label	name
+label	officer_of_firm
+label	string
+label	turnover
+relation	PRIVATE_FINANCIAL_INSTITUTION	EMPLOYEE	one	one-or-more	non-identifying	employs

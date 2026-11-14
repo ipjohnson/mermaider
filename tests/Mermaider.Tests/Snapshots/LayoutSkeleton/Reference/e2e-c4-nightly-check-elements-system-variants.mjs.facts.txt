@@ -1,0 +1,25 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3e33384fe7d40d28
+accept	yes
+drawn	yes
+element	s	system	internal	System		A software system
+element	sdb	system_db	internal	SystemDb		A data store
+element	sdbe	system_db	external	SystemDb_Ext		An external data store
+element	se	system	external	System_Ext		An external software system
+element	sq	system_queue	internal	SystemQueue		A message queue
+element	sqe	system_queue	external	SystemQueue_Ext		An external message queue
+label	A data store
+label	A message queue
+label	A software system
+label	An external data store
+label	An external message queue
+label	An external software system
+label	System
+label	System variants
+label	SystemDb
+label	SystemDb_Ext
+label	SystemQueue
+label	SystemQueue_Ext
+label	System_Ext
+title	System variants

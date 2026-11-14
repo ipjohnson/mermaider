@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5e74f7bcd6a33e6b
+accept	yes
+drawn	yes
+edge	app	infra	none	arrow	solid
+edge	design	app	none	arrow	solid
+edge	org	platform	none	arrow	solid
+edge	org	product	none	arrow	solid
+edge	org	shared	none	arrow	solid
+group	platform	Platform and infrastructure services	infra
+group	product	Product experience and onboarding	app
+group	shared	Shared design system and tokens	design,icons
+node	app	app	rect
+node	design	design	rect
+node	icons	icons	rect
+node	infra	infra	rect
+node	org	Org	rect

@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source bd1f5119f5edc131
+accept	yes
+attribute	BOOK	string	title
+attribute	BOOK	string[]	authors
+attribute	BOOK	type~T~	type
+drawn	yes
+entity	BOOK	BOOK
+label	BOOK
+label	authors
+label	string
+label	string[]
+label	title
+label	type
+label	type~T~

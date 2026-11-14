@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 22da89b441d9eaad
+accept	yes
+attribute	Person	#double age
+attribute	Person	+String name
+attribute	Person	+Text demographicProfile
+attribute	Person	-Int id
+bbox	node	Person	12	12	218.1	189
+canvas	4	4	226.1	197
+class	Person	Person
+drawn	yes

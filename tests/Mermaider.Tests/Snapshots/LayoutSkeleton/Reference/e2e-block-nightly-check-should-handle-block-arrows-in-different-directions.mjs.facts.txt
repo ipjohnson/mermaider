@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1f412a4f9962424b
+accept	yes
+block	blockArrowId1	down	block_arrow	1
+block	blockArrowId2	right	block_arrow	1
+block	blockArrowId3	Sync	block_arrow	1
+block	blockArrowId4	left	block_arrow	1
+block	blockArrowId5	up	block_arrow	1
+block	blockArrowId6	x	block_arrow	1
+block	blockArrowId7	y	block_arrow	1
+drawn	yes
+label	Sync
+label	down
+label	left
+label	right
+label	up
+label	x
+label	y
+space		1
+space		1
+space		1
+space		1
+space		1

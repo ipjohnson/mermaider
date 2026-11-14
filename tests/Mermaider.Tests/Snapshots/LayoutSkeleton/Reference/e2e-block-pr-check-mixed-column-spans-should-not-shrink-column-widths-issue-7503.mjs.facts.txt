@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6c70c1c15351beae
+accept	yes
+block	CA	Cash back (actual) $128	rect	1
+block	DEF	Deficit $5,155	rect	4
+block	PA	Paid proceeds (actual) $613	rect	1
+block	SPO	Spoilage (35 unsold) $5,640	rect	4
+drawn	yes
+label	Cash back (actual) $128
+label	Deficit $5,155
+label	Paid proceeds (actual) $613
+label	Spoilage (35 unsold) $5,640

@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 7e25d0fe2a66f2a4
+accept	yes
+drawn	yes
+edge	b	c	none	arrow	solid
+node	b	The dog in the hog.(1).. a a a a very long text about it Word! Another line with many, many words. Another line with many, many words. Another line with many, many words. Another line with many, many words. Another line with many, many words. Another line with many, many words. Another line with many, many words. Another line with many, many words.	rounded
+node	c	c	rect

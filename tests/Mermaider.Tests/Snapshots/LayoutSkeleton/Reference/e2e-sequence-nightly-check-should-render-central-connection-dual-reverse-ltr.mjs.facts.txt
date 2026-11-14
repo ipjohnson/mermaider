@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source eed14e15e0bb6247
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Charlie	Charlie	participant
+bbox	label	Circles at both ends with dotted solid bottom reverse (LTR)	91.9	313.2	518.1	331.6
+bbox	label	Circles at both ends with dotted solid top reverse (LTR)	106	269.2	504	287.6
+bbox	label	Circles at both ends with dotted stick bottom reverse (LTR)	92.9	401.2	519.1	419.6
+bbox	label	Circles at both ends with dotted stick top reverse (LTR)	107	357.2	505	375.6
+bbox	label	Circles at both ends with solid bottom reverse (LTR)	118.2	137.2	491.8	155.6
+bbox	label	Circles at both ends with solid top reverse (LTR)	132.3	93.2	477.7	111.6
+bbox	label	Circles at both ends with stick bottom reverse (LTR)	119.2	225.2	492.8	243.6
+bbox	label	Circles at both ends with stick top reverse (LTR)	133.3	181.2	478.7	199.6
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	445	150	518
+bbox	node	Bob	451	0	601	73
+bbox	node	Bob	451	445	601	518
+bbox	node	Charlie	651	0	801	73
+bbox	node	Charlie	651	445	801	518
+canvas	-50	-10	851	559
+drawn	yes

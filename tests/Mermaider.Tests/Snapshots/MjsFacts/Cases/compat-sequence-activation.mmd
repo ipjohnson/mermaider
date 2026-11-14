@@ -1,0 +1,5 @@
+sequenceDiagram
+  Client->>+Server: POST /login
+  Server->>+DB: SELECT user
+  DB-->>-Server: User row
+  Server-->>-Client: 200 JWT

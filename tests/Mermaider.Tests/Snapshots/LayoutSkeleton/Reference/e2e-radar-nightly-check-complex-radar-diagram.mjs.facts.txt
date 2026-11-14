@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4a80f918578da582
+accept	yes
+axis	Agility
+axis	Intelligence
+axis	Speed
+axis	Stamina
+axis	Strength
+curve	Naruto Uzumaki	2,2,3,5,0
+curve	Ninja3	3,2,1,5,4
+curve	Sasuke	2,3,4,1,5
+drawn	yes
+label	Agility
+label	Intelligence
+label	My favorite ninjas
+label	Naruto Uzumaki
+label	Ninja3
+label	Sasuke
+label	Speed
+label	Stamina
+label	Strength
+title	My favorite ninjas

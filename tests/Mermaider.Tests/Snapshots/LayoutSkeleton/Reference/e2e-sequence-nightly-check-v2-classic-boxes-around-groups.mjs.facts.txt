@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source ac5a11a497d3fbf2
+accept	yes
+actor	actor1	actor1	actor
+actor	boundary2	boundary2	boundary
+actor	control0	control0	control
+actor	database2	database2	database
+actor	entity1	entity1	entity
+actor	participant0	participant0	participant
+bbox	label	Cross-group message	310.4	112.4	467.6	130.5
+bbox	node	actor1	257.8	151	302.2	232.5
+bbox	node	actor1	257.8	22	302.2	103.5
+bbox	node	boundary2	425	167	517.8	233.1
+bbox	node	boundary2	425	38	517.8	104.6
+bbox	node	control0	671.6	166	728.4	234
+bbox	node	control0	671.6	37	728.4	102.5
+bbox	node	participant0	5	156	155	221
+bbox	node	participant0	5	27	155	92
+box	Group 1	actor1,boundary2,participant0
+box	Group 2	control0,database2,entity1
+canvas	-50	-10	1230	261
+drawn	yes
+message	participant0	control0	solid	filled	Cross-group message

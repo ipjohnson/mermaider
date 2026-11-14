@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 611ea9fd6c42c315
+accept	yes
+drawn	yes
+label	Adding GANTT diagram to mermaid
+label	apple
+label	banana
+label	cherry
+task		apple	a	2017-07-20 00:00	2017-07-27 00:00
+task		banana	b	2017-07-23 00:00	2017-07-24 00:00	crit
+task		cherry	c	2017-07-27 00:00	2017-07-28 00:00	active
+title	Adding GANTT diagram to mermaid

@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 551814dc0e160f8b
+accept	yes
+drawn	yes
+label	the root
+node	the root	circle

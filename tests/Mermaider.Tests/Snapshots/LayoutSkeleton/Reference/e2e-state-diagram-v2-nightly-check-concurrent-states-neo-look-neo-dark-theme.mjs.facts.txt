@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 700abce76809f561
+accept	yes
+drawn	yes
+edge	CapsLockOff	CapsLockOn	none	arrow_barb_neo	solid
+edge	CapsLockOn	CapsLockOff	none	arrow_barb_neo	solid
+edge	NumLockOff	NumLockOn	none	arrow_barb_neo	solid
+edge	NumLockOn	NumLockOff	none	arrow_barb_neo	solid
+edge	[*]start@divider-id-1	NumLockOff	none	arrow_barb_neo	solid
+edge	[*]start@divider-id-39	CapsLockOff	none	arrow_barb_neo	solid
+edge	[*]start@root	Active	none	arrow_barb_neo	solid
+group	Active	Active	divider-id-1,divider-id-39
+group	divider-id-1		NumLockOff,NumLockOn,[*]start@divider-id-1
+group	divider-id-39		CapsLockOff,CapsLockOn,[*]start@divider-id-39
+node	CapsLockOff	CapsLockOff	rounded
+node	CapsLockOn	CapsLockOn	rounded
+node	NumLockOff	NumLockOff	rounded
+node	NumLockOn	NumLockOn	rounded
+node	[*]start@divider-id-1		sm-circ
+node	[*]start@divider-id-39		sm-circ
+node	[*]start@root		sm-circ

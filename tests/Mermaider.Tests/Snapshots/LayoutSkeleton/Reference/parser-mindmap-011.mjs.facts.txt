@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5ccc35785566fc73
+accept	yes
+drawn	yes
+label	the root
+node	the root	cloud

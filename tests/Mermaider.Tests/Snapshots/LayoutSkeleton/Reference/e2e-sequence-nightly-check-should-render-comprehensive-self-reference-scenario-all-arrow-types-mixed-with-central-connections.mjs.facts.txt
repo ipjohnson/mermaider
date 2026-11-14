@@ -1,0 +1,49 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d3376722ff68c34f
+accept	yes
+actor	Alice	Alice	participant
+actor	Bob	Bob	participant
+actor	Charlie	Charlie	participant
+bbox	label	Bidirectional dotted	7	684.2	151	703.2
+bbox	label	Bidirectional solid	414.3	610.2	543.7	629.2
+bbox	label	Bidirectional with dual central	-26.6	1275.2	192.6	1294.2
+bbox	label	Central at destination	197.2	807.2	354.8	826.2
+bbox	label	Central at source	418.1	881.2	541.9	900.2
+bbox	label	Dual central	36.2	955.2	123.8	974.2
+bbox	label	Normal dotted	224	216.2	328	235.2
+bbox	label	Normal open	430.4	290.2	521.6	309.2
+bbox	label	Normal solid	31.3	142.2	120.8	161.2
+bbox	label	Reverse solid bottom	200.8	487.2	351.2	506.2
+bbox	label	Reverse solid top	14.9	413.2	137.1	432.2
+bbox	label	Reverse with central at destination	349.8	1152.2	602.2	1171.2
+bbox	label	Reverse with dual central	188.4	1078.2	371.6	1097.2
+bbox	node	Alice	0	0	150	73
+bbox	node	Alice	0	1349	150	1422
+bbox	node	Bob	200	0	350	73
+bbox	node	Bob	200	1349	350	1422
+bbox	node	Charlie	400	0	550	73
+bbox	node	Charlie	400	1349	550	1422
+bbox	note	Bidirectional arrows	50	551	500	590
+bbox	note	Bidirectional with central	50	1216	500	1255
+bbox	note	Central connections	50	748	500	787
+bbox	note	Normal arrows	50	83	500	122
+bbox	note	Reverse arrows	50	354	500	393
+bbox	note	Reverse with central	50	1019	500	1058
+canvas	-64.5	-10	636.5	1463
+drawn	yes
+message	Alice	Alice	dashed	filled-both	Bidirectional dotted
+message	Alice	Alice	solid	filled	Dual central
+message	Alice	Alice	solid	filled	Normal solid
+message	Alice	Alice	solid	filled-both	Bidirectional with dual central
+message	Bob	Bob	dashed	filled	Normal dotted
+message	Bob	Bob	solid	filled	Central at destination
+message	Charlie	Charlie	solid	filled	Central at source
+message	Charlie	Charlie	solid	filled-both	Bidirectional solid
+message	Charlie	Charlie	solid	none	Normal open
+note	over	Alice,Charlie	Bidirectional arrows
+note	over	Alice,Charlie	Bidirectional with central
+note	over	Alice,Charlie	Central connections
+note	over	Alice,Charlie	Normal arrows
+note	over	Alice,Charlie	Reverse arrows
+note	over	Alice,Charlie	Reverse with central

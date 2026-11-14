@@ -1,0 +1,13 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d14041d7e755861b
+accept	yes
+block	A	lean right	lean-r	1
+block	B	lean left	rect	1
+block	C	trapezoid	rect	1
+block	D	trapezoid alt	rect	1
+drawn	yes
+label	lean left
+label	lean right
+label	trapezoid
+label	trapezoid alt

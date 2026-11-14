@@ -1,0 +1,38 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 8f5f84b56734e20a
+accept	yes
+drawn	yes
+edge	State1_____________	State2_____________	none	arrow	solid	Transition1_____
+edge	State2_____________	State3_____________	none	arrow	solid	Transition3_____
+edge	State2_____________	State4_____________	none	arrow	solid	Transition2_____
+edge	State2_____________	State7_____________	none	arrow	solid	Transition4_____
+edge	State3_____________	State2_____________	none	arrow	solid
+edge	State4_____________	State2_____________	none	arrow	solid	Transition5_____
+edge	State4_____________	State5_____________	none	arrow	solid	Transition6_____
+edge	State4_____________	State7_____________	none	arrow	solid	Transition4_____
+edge	State5_____________	State6_____________	none	arrow	solid	Transition7_____
+edge	State5_____________	State7_____________	none	arrow	solid	Transition4_____
+edge	State5_____________	State8_____________	none	arrow	solid	Transition10____
+edge	State6_____________	State4_____________	none	arrow	solid	Transition8_____
+edge	State6_____________	State7_____________	none	arrow	solid	Transition4_____
+edge	State7_____________	State1_____________	none	arrow	solid	Transition9_____
+edge	State8_____________	State5_____________	none	arrow	solid	Transition11____
+edge	[*]start@root	State1_____________	none	arrow	solid
+group	State1_____________	State1_____________	c0
+group	State2_____________	State2_____________	c1
+group	State3_____________	State3_____________	c7
+group	State4_____________	State4_____________	c2
+group	State5_____________	State5_____________	c3
+group	State6_____________	State6_____________	c4
+group	State7_____________	State7_____________	c5
+group	State8_____________	State8_____________	c6
+node	[*]start@root		sm-circ
+node	c0	c0	rounded
+node	c1	c1	rounded
+node	c2	c2	rounded
+node	c3	c3	rounded
+node	c4	c4	rounded
+node	c5	c5	rounded
+node	c6	c6	rounded
+node	c7	c7	rounded

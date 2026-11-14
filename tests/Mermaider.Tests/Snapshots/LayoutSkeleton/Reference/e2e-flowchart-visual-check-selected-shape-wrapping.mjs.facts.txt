@@ -1,0 +1,34 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2d02b2ef04cefdff
+accept	yes
+drawn	yes
+edge	A	T	none	arrow	solid
+edge	B	T	none	arrow	solid
+edge	C	Q	none	arrow	solid
+edge	D	A	none	arrow	solid
+edge	DC	DCB	none	arrow	solid
+edge	DL	DLB	none	arrow	solid
+edge	DP	DPB	none	arrow	solid
+edge	Q	T	none	arrow	solid
+edge	R	C	none	arrow	solid
+edge	R	D	none	arrow	solid
+edge	R	DC	none	arrow	solid
+edge	R	DL	none	arrow	solid
+edge	R	DP	none	arrow	solid
+edge	R	S	none	arrow	solid
+edge	S	B	none	arrow	solid
+node	A	First chosen line Second chosen line	diam
+node	B	First chosen line Second chosen line	stadium
+node	C	Choose how to continue from here	circle
+node	D	Choose how to continue from here	diam
+node	DC	Choose how to continue from here	dbl-circ
+node	DCB	First chosen line Second chosen line	dbl-circ
+node	DL	Choose how to continue from here	delay
+node	DLB	First chosen line Second chosen line	delay
+node	DP	Choose how to continue from here	curv-trap
+node	DPB	First chosen line Second chosen line	curv-trap
+node	Q	First chosen line Second chosen line	circle
+node	R	Choose how to continue from here	rect
+node	S	Choose how to continue from here	stadium
+node	T	Choose how to continue from here	rounded

@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2507612dfd82b1a4
+accept	yes
+actor	G	Gateway	boundary
+actor	S	Service	control
+actor	U	End User	actor
+bbox	label	Process	345.1	130.1	402.9	147.2
+bbox	label	Request	144.2	86.1	203.8	103.3
+bbox	label	Response	341	174.1	413	191.3
+bbox	label	Result	154.3	218.1	199.7	235.2
+bbox	node	G	220	11	306.6	77.4
+bbox	node	G	220	272	306.6	337.9
+bbox	node	S	448.3	10	501.7	75
+bbox	node	S	448.3	271	501.7	338.5
+bbox	node	U	41.6	-5	108.6	76
+bbox	node	U	41.6	256	108.6	337
+canvas	-50	-10	600	356
+drawn	yes
+message	G	S	solid	filled	Process
+message	G	U	dashed	filled	Result
+message	S	G	dashed	filled	Response
+message	U	G	solid	filled	Request

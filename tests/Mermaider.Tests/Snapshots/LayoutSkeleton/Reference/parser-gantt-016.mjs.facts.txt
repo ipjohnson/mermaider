@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 1780a07049618a20
+accept	yes
+drawn	yes
+label	Adding gantt diagram functionality to mermaid
+label	Documentation
+label	task A
+label	task B
+label	task C
+label	task D
+section	Documentation
+task	Documentation	task A	a	2024-01-27 00:00	2024-01-28 00:00
+task	Documentation	task B	b	2024-01-28 00:00	2024-01-30 00:00
+task	Documentation	task C	c	2024-01-20 00:00	2024-01-27 00:00
+task	Documentation	task D	d	2024-01-27 00:00	2024-01-28 00:00
+title	Adding gantt diagram functionality to mermaid

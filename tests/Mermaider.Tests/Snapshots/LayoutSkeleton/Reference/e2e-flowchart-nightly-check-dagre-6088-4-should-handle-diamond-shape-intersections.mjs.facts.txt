@@ -1,0 +1,35 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source d58ffd1ff891fed3
+accept	yes
+drawn	yes
+edge	A	B	none	arrow	solid	Some text
+edge	B	C	none	arrow	solid
+edge	C	D	none	arrow	solid	One
+edge	C	E	none	arrow	solid	Two
+edge	C	F	none	arrow	solid	Three
+edge	n1	n2	none	arrow	solid	One
+edge	n1	n3	none	arrow	solid	Two
+edge	n1	n4	none	arrow	solid	Three
+edge	n5	n6	none	arrow	solid	One
+edge	n5	n7	none	arrow	solid	Two
+edge	n5	n8	none	arrow	solid	Three
+group	s1	Untitled subgraph	n1,n2,n3,n4
+group	s2	Untitled subgraph	n5,n6,n7,n8
+icon	F	fa:fa-car
+icon	n4	fa:fa-car
+icon	n8	fa:fa-car
+node	A	Start	rect
+node	B	Continue	rounded
+node	C	Evaluate	diam
+node	D	Option 1	rect
+node	E	Option 2	rect
+node	F	Option 3	rect
+node	n1	Evaluate	diam
+node	n2	Option 1	rect
+node	n3	Option 2	rect
+node	n4	Option 3	rect
+node	n5	Evaluate	diam
+node	n6	Option 1	rect
+node	n7	Option 2	rect
+node	n8	Option 3	rect
