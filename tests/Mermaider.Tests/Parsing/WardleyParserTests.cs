@@ -157,6 +157,9 @@ public class WardleyParserTests
 	[Arguments("wardley-beta\ncomponent notebook [0.5, 0.5]\n", "line 2: expected a component name")]
 	[Arguments("wardley-beta\nA -.- (0.5, 0.5)", "line 2: unexpected character '.'")]
 	[Arguments("wardley-beta\npipeline Missing {\n  component X [0.5]\n}", "line 2: pipeline \"Missing\" must name")]
+	[Arguments("wardley-beta\nsize [99999999999, 600]\ncomponent A [0.5, 0.5]", "line 2: a width must fit in a 32-bit integer")]
+	[Arguments("wardley-beta\nannotation 99999999999,[0.1,0.1] \"x\"", "line 2: an annotation number must fit in a 32-bit integer")]
+	[Arguments("wardley-beta\ncomponent A [0.5, 0.5] label [99999999999, 0]", "line 2: a whole-number label offset must fit")]
 	[Arguments("Wardley-Beta\ncomponent A [0.5, 0.5]", "line 1: a Wardley map starts with 'wardley-beta'")]
 	public void Input_mermaid_refuses_throws_with_the_line(string source, string message)
 	{

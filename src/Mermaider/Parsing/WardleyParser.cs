@@ -318,7 +318,13 @@ internal static partial class WardleyParser
 
 		private double Number(string what) => double.Parse(Expect(T.Number, null, what).Text, CultureInfo.InvariantCulture);
 
-		private int Integer(string what) => int.Parse(Expect(T.Int, null, what).Text, CultureInfo.InvariantCulture);
+		private int Integer(string what)
+		{
+			var t = Expect(T.Int, null, what);
+			return int.TryParse(t.Text, NumberStyles.AllowLeadingSign, CultureInfo.InvariantCulture, out var value)
+				? value
+				: throw Error(t.Line, $"{what} must fit in a 32-bit integer, not {t.Text}");
+		}
 
 		private double Coordinate(string what)
 		{
