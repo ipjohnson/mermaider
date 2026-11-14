@@ -27,6 +27,26 @@ public class FlowchartSpecTests
 			.Should()
 			.MatchSnapshot(SvgSnapshotFormat.Instance);
 
+	/// <summary>Every shape of mermaid's table, nine to a chain, with a collapsed subgraph between two of them.</summary>
+	[Test]
+	[Arguments("TD")]
+	[Arguments("LR")]
+	[Arguments("BT")]
+	[Arguments("RL")]
+	public void Expanded_node_shapes(string direction)
+	{
+		var shapes = Mermaider.Parsing.FlowchartShapeNames.ShortNames.Select(s => s.ShortName).ToList();
+		var source = new System.Text.StringBuilder($"flowchart {direction}\n");
+		for (var i = 0; i < shapes.Count; i++)
+		{
+			var node = $"n{i}@{{ shape: {shapes[i]}, label: \"{shapes[i]}\" }}";
+			_ = source.Append(i % 9 == 0 ? $"  {node}\n" : $"  n{i - 1} --> {node}\n");
+		}
+		_ = source.Append("  n0 --> grp\n  subgraph grp [Collapsed group]\n    x1 --> x2\n  end\n  grp --> n9\n  grp@{ view: collapsed }\n");
+
+		MermaidRenderer.RenderSvg(source.ToString()).Should().MatchSnapshot(SvgSnapshotFormat.Instance, direction);
+	}
+
 	[Test]
 	public void Direction_LR() =>
 		MermaidRenderer.RenderSvg("""

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.598 102.2" width="438.598" height="102.2" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<path class="edge" data-from="Client" data-to="backend" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M93.212,51.1 L133.212,51.1" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="backend" data-to="Mail" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M292.618,51.1 L332.618,51.1" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<g class="node" data-id="Client" data-label="Client" data-shape="rectangle">
+  <rect x="16" y="30" width="77.212" height="42.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="54.61" y="51.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Client</text>
+</g>
+<g class="node" data-id="Mail" data-label="Receipt" data-shape="document">
+  
+<path d="M332.618,25 H422.598 V72.2 C400.103,62.2 355.113,82.2 332.618,72.2 Z" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="377.61" y="46.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Receipt</text>
+</g>
+<g class="node" data-id="backend" data-label="Backend services" data-shape="collapsedgroup">
+  
+<rect x="133.212" y="16" width="159.406" height="70.2" rx="8" fill="url(#m1814eb8b-cw-p0-0)" stroke="color-mix(in srgb, #64748b 42%, var(--bg))" stroke-width="1.25" />
+<line x1="141.212" y1="58.2" x2="284.618" y2="58.2" stroke="color-mix(in srgb, #64748b 42%, var(--bg))" stroke-width="1" stroke-dasharray="5 4" />
+<circle cx="202.915" cy="72.2" r="2.5" fill="color-mix(in srgb, #64748b 74%, var(--fg))" stroke="none" stroke-width="0" />
+<circle cx="212.915" cy="72.2" r="2.5" fill="color-mix(in srgb, #64748b 74%, var(--fg))" stroke="none" stroke-width="0" />
+<circle cx="222.915" cy="72.2" r="2.5" fill="color-mix(in srgb, #64748b 74%, var(--fg))" stroke="none" stroke-width="0" />
+  <text x="212.92" y="37.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Backend services</text>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-cw-p0-0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 2.1%, var(--bg))" /><stop offset="0.55" stop-color="color-mix(in srgb, #64748b 6%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 6%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <marker id="m1814eb8b-mk-arrow" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <polygon points="0,1.5 10,6 0,10.5" fill="var(--_line)" stroke="var(--_line)" stroke-width="1" stroke-linejoin="miter" />
+  </marker>
+</defs>
+</svg>

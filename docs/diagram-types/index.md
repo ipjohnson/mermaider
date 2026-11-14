@@ -8,7 +8,8 @@ Each image below renders the source under it, in the default Quiet style with th
 
 ### Flowchart
 
-General-purpose directed graphs (`flowchart` or `graph`). Supports the `TD`, `LR`, `RL` and `BT` directions, nested subgraphs, and the Mermaid node shapes.
+General-purpose directed graphs (`flowchart` or `graph`). Supports the `TD`, `LR`, `RL` and `BT` directions, nested subgraphs, and the Mermaid node shapes: the bracket forms and every shape name and alias of
+`A@{ shape: doc, label: "Report" }`. A subgraph given `id@{ view: collapsed }` is drawn as one box with its title.
 
 ![Flowchart](../images/diagrams/flowchart.svg)
 

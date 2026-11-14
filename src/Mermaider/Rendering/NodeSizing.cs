@@ -48,8 +48,16 @@ internal static class NodeSizing
 		return string.Join('\n', result);
 	}
 
-	internal static (double Width, double Height) Estimate(string label, NodeShape shape)
+	/// <param name="label">The node's label.</param>
+	/// <param name="shape">The node's shape.</param>
+	/// <param name="acrossFlow">True in a left-to-right or right-to-left flowchart, where a fork bar stands upright.</param>
+	internal static (double Width, double Height) Estimate(string label, NodeShape shape, bool acrossFlow = false)
 	{
+		if (shape == NodeShape.ForkJoin && acrossFlow)
+			return (8, 120);
+		if (FlowchartShapes.FixedSize(shape) is { } fixedSize)
+			return fixedSize;
+
 		label = WrapLabel(label);
 		var metrics = TextMetrics.MeasureMultiline(label.AsSpan(), RenderConstants.FontSizes.NodeLabel, RenderConstants.FontWeights.NodeLabel);
 
@@ -88,6 +96,9 @@ internal static class NodeSizing
 				return (24, 24);
 			case NodeShape.ForkJoin:
 				return (120, 8);
+			default:
+				(width, height) = FlowchartShapes.Grow(shape, width, height);
+				break;
 		}
 
 		width = Math.Max(width, 64);

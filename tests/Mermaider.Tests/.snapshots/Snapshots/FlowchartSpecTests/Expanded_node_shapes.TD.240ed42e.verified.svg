@@ -1,0 +1,382 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 996.454 1116.6280000000002" width="996.454" height="1116.6280000000002" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<path class="edge" data-from="n0" data-to="n1" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M134.85183333333333,58.2 L134.85183333333333,70.2 Q134.85183333333333,78.2 126.85183333333333,78.2 L75.374,78.2 Q67.374,78.2 67.374,86.2 L67.374,98.2" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n1" data-to="n2" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M67.374,140.4 L67.374,208.4" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n2" data-to="n3" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M67.374,250.60000000000002 L67.37399999999998,304.6" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n3" data-to="n4" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M67.37399999999998,346.8 L67.37399999999998,422.8" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n4" data-to="n5" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M67.37399999999998,479 L67.374,560.8" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n5" data-to="n6" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M67.374,603 L67.37399999999998,667" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n6" data-to="n7" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M67.37399999999998,717.2 L67.37399999999998,769.2" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n7" data-to="n8" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M67.37399999999998,825.4000000000001 L67.374,880.028" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n9" data-to="n10" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M224.875,264.6 L224.875,304.6" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n10" data-to="n11" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M224.875,382.8 L224.87499999999997,423" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n11" data-to="n12" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M224.87499999999997,521 L224.87499999999994,560.8" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n12" data-to="n13" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M224.87499999999994,627 L224.87499999999994,667" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n13" data-to="n14" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M224.87499999999994,729.2 L224.87499999999994,769" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n14" data-to="n15" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M224.87499999999994,840 L224.87499999999994,880.028" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n15" data-to="n16" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M224.87499999999994,922.2280000000001 L224.87499999999997,976.2280000000001" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n16" data-to="n17" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M224.87499999999997,1018.4280000000001 L224.87499999999997,1058.428" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n18" data-to="n19" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M406.69399999999996,58.2 L406.69399999999996,98.2" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n19" data-to="n20" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M406.69399999999996,140.4 L406.69399999999996,180.5" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n20" data-to="n21" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M406.69399999999996,301.5 L406.69399999999996,341.4" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n21" data-to="n22" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M406.69399999999996,383.59999999999997 L406.69399999999996,423.59999999999997" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n22" data-to="n23" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M406.69399999999996,465.79999999999995 L406.69399999999996,505.79999999999995" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n23" data-to="n24" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M406.69399999999996,548 L406.69399999999996,588" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n24" data-to="n25" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M406.69399999999996,612 L406.69399999999996,652" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n25" data-to="n26" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M406.69399999999996,676 L406.69399999999996,716" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n27" data-to="n28" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M571.386,52 L571.386,92" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n28" data-to="n29" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M571.386,134.2 L571.386,174.2" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n29" data-to="n30" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M571.386,216.39999999999998 L571.386,256.4" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n30" data-to="n31" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M571.386,298.59999999999997 L571.386,338.59999999999997" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n31" data-to="n32" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M571.386,386.59999999999997 L571.386,426.59999999999997" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n32" data-to="n33" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M571.386,478.79999999999995 L571.386,518.8" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n33" data-to="n34" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M571.386,561 L571.386,601" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n34" data-to="n35" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M571.386,643.2 L571.386,683.2" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n36" data-to="n37" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M745.435,58.2 L745.435,98.2" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n37" data-to="n38" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M745.435,150.4 L745.435,190.4" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n38" data-to="n39" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M745.435,253.70000000000002 L745.435,293.70000000000005" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n39" data-to="n40" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M745.435,345.90000000000003 L745.435,386" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n40" data-to="n41" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M745.435,402 L745.435,441.90000000000003" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n41" data-to="n42" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M745.435,484.1 L745.435,524.1" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n42" data-to="n43" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M745.435,587.4 L745.435,627.4000000000001" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n43" data-to="n44" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M745.435,679.6000000000001 L745.435,719.6000000000001" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n45" data-to="n46" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M921.8729999999999,68.2 L921.8729999999999,108.2" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n46" data-to="n47" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M921.8729999999999,150.4 L921.8729999999999,190.5" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n47" data-to="n48" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M921.8729999999999,226.5 L921.8729999999999,266.4" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n48" data-to="n49" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M921.8729999999999,318.6 L921.8729999999999,358.6" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n49" data-to="n50" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M921.8729999999999,400.8 L921.8729999999999,440.8" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n50" data-to="n51" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M921.8729999999999,493 L921.8729999999999,533" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n51" data-to="n52" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M921.8729999999999,575.2 L921.8729999999999,615.2" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="n0" data-to="grp" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M157.3971666666667,58.2 L157.3971666666667,70.2 Q157.3971666666667,78.2 165.3971666666667,78.2 L216.875,78.2 Q224.875,78.2 224.875,86.2 L224.875,98.2" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<path class="edge" data-from="grp" data-to="n9" data-style="solid" data-arrow-start="false" data-arrow-end="true" d="M224.875,168.4 L224.875,208.4" fill="none" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+<g class="node" data-id="n0" data-label="rect" data-shape="rectangle">
+  <rect x="112.30650000000001" y="16" width="67.636" height="42.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="146.12" y="37.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">rect</text>
+</g>
+<g class="node" data-id="n1" data-label="rounded" data-shape="rounded">
+  <rect x="19.191999999999993" y="98.2" width="96.364" height="42.2" rx="14" ry="14" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="67.37" y="119.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">rounded</text>
+</g>
+<g class="node" data-id="n2" data-label="stadium" data-shape="stadium">
+  <rect x="22.384" y="208.4" width="89.97999999999999" height="42.2" rx="21.1" ry="21.1" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.75" />
+  <text x="67.37" y="229.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">stadium</text>
+</g>
+<g class="node" data-id="n3" data-label="fr-rect" data-shape="subroutine">
+  <rect x="26.772999999999982" y="304.6" width="81.202" height="42.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+<line x1="34.77299999999998" y1="304.6" x2="34.77299999999998" y2="346.8" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+<line x1="99.97499999999998" y1="304.6" x2="99.97499999999998" y2="346.8" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="67.37" y="325.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">fr-rect</text>
+</g>
+<g class="node" data-id="n4" data-label="cyl" data-shape="cylinder">
+  <rect x="35.37399999999998" y="429.8" width="64" height="42.2" fill="url(#m1814eb8b-ng-n)" stroke="none" />
+<line x1="35.37399999999998" y1="429.8" x2="35.37399999999998" y2="472" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+<line x1="99.37399999999998" y1="429.8" x2="99.37399999999998" y2="472" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+<ellipse cx="67.37399999999998" cy="472" rx="32" ry="7" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+<ellipse cx="67.37399999999998" cy="429.8" rx="32" ry="7" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+  <text x="67.37" y="450.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">cyl</text>
+</g>
+<g class="node" data-id="n5" data-label="datastore" data-shape="datastore">
+  
+<path d="M16,560.8 H118.748 V603 H16 Z" fill="url(#m1814eb8b-ng-n)" stroke="none" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M16,560.8 H118.748 M16,603 H118.748" fill="none" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="67.37" y="581.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">datastore</text>
+</g>
+<g class="node" data-id="n6" data-label="folder" data-shape="folder">
+  
+<path d="M27.97,667 H59.493 L65.493,675 H106.778 V717.2 H27.97 Z" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="67.37" y="696.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">folder</text>
+</g>
+<g class="node" data-id="n7" data-label="bucket" data-shape="bucket">
+  
+<path d="M24.778,775.2 L31.593,819.4 A35.781,6 0 0 0 103.155,819.4 L109.97,775.2" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<ellipse cx="67.374" cy="775.2" rx="42.596" ry="6" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="67.37" y="800.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">bucket</text>
+</g>
+<g class="node" data-id="n8" data-label="console" data-shape="console">
+  
+<rect x="20.788" y="880.028" width="93.172" height="56.2" rx="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+<path d="M20.788,894.028 H113.96 M28.788,884.028 L32.788,887.028 L28.788,890.028 M34.788,890.028 H39.788" fill="none" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="67.37" y="915.13" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">console</text>
+</g>
+<g class="node" data-id="n9" data-label="browser" data-shape="browser">
+  
+<rect x="176.693" y="208.4" width="96.364" height="56.2" rx="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+<path d="M176.693,222.4 H273.057" fill="none" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<circle cx="184.693" cy="215.4" r="2" fill="color-mix(in srgb, #64748b 74%, var(--fg))" stroke="none" stroke-width="0" />
+<circle cx="191.693" cy="215.4" r="2" fill="color-mix(in srgb, #64748b 74%, var(--fg))" stroke="none" stroke-width="0" />
+<circle cx="198.693" cy="215.4" r="2" fill="color-mix(in srgb, #64748b 74%, var(--fg))" stroke="none" stroke-width="0" />
+  <text x="224.88" y="243.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">browser</text>
+</g>
+<g class="node" data-id="n10" data-label="person" data-shape="person">
+  
+<circle cx="224.875" cy="314.6" r="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+<path d="M208.875,338.6 Q208.875,324.6 224.875,324.6 Q240.875,324.6 240.875,338.6 Z" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="224.88" y="361.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">person</text>
+</g>
+<g class="node" data-id="n11" data-label="circle" data-shape="circle">
+  <circle cx="224.87499999999997" cy="471.8" r="49" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="224.88" y="471.8" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">circle</text>
+</g>
+<g class="node" data-id="n12" data-label="bang" data-shape="bang">
+  
+<path d="M224.875,560.8 L235.577,568.962 L251.38,565.235 L254.112,575.644 L270.783,577.35 L264.814,587.218 L277.885,593.9 L264.814,600.582 L270.783,610.45 L254.112,612.156 L251.38,622.565 L235.577,618.838 L224.875,627 L214.173,618.838 L198.37,622.565 L195.638,612.156 L178.967,610.45 L184.936,600.582 L171.865,593.9 L184.936,587.218 L178.967,577.35 L195.638,575.644 L198.37,565.235 L214.173,568.962 Z" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="224.88" y="593.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">bang</text>
+</g>
+<g class="node" data-id="n13" data-label="cloud" data-shape="cloud">
+  
+<path d="M224.875,671 A19.128,19.128 0 0 1 256.118,677.34 A13.866,13.866 0 0 1 272.743,693.394 A11.488,11.488 0 0 1 266.969,711.65 A16.872,16.872 0 0 1 241.499,723.566 A19.949,19.949 0 0 1 208.251,723.566 A16.872,16.872 0 0 1 182.781,711.65 A11.488,11.488 0 0 1 177.007,693.394 A13.866,13.866 0 0 1 193.632,677.34 A19.128,19.128 0 0 1 224.875,671 Z" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="224.88" y="698.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">cloud</text>
+</g>
+<g class="node" data-id="n14" data-label="diam" data-shape="diamond">
+  <polygon points="224.87499999999994,769.2 260.28899999999993,804.614 224.87499999999994,840.028 189.46099999999996,804.614" fill="url(#m1814eb8b-ng-a)" stroke="color-mix(in srgb, var(--accent, var(--fg)) 74%, var(--fg))" stroke-width="1.25" />
+  <text x="224.88" y="804.61" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">diam</text>
+</g>
+<g class="node" data-id="n15" data-label="hex" data-shape="hexagon">
+  <polygon points="192.40499999999997,880.028 257.34499999999997,880.028 267.895,901.128 257.34499999999997,922.2280000000001 192.40499999999997,922.2280000000001 181.85499999999996,901.128" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="224.88" y="901.13" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">hex</text>
+</g>
+<g class="node" data-id="n16" data-label="lean-r" data-shape="parallelogram">
+  <polygon points="190.01289999999997,976.2280000000001 274.678,976.2280000000001 259.7371,1018.4280000000001 175.07199999999997,1018.4280000000001" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="224.88" y="997.33" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">lean-r</text>
+</g>
+<g class="node" data-id="n17" data-label="lean-l" data-shape="parallelogramalt">
+  <polygon points="176.66799999999998,1058.428 258.6199,1058.428 273.082,1100.6280000000002 191.13009999999997,1100.6280000000002" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="224.88" y="1079.53" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">lean-l</text>
+</g>
+<g class="node" data-id="grp" data-label="Collapsed group" data-shape="collapsedgroup">
+  
+<rect x="151.556" y="98.2" width="146.638" height="70.2" rx="8" fill="url(#m1814eb8b-cw-p0-0)" stroke="color-mix(in srgb, #64748b 42%, var(--bg))" stroke-width="1.25" />
+<line x1="159.556" y1="140.4" x2="290.194" y2="140.4" stroke="color-mix(in srgb, #64748b 42%, var(--bg))" stroke-width="1" stroke-dasharray="5 4" />
+<circle cx="214.875" cy="154.4" r="2.5" fill="color-mix(in srgb, #64748b 74%, var(--fg))" stroke="none" stroke-width="0" />
+<circle cx="224.875" cy="154.4" r="2.5" fill="color-mix(in srgb, #64748b 74%, var(--fg))" stroke="none" stroke-width="0" />
+<circle cx="234.875" cy="154.4" r="2.5" fill="color-mix(in srgb, #64748b 74%, var(--fg))" stroke="none" stroke-width="0" />
+  <text x="224.88" y="119.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Collapsed group</text>
+</g>
+<g class="node" data-id="n18" data-label="trap-b" data-shape="trapezoid">
+  <polygon points="371.83189999999996,16 441.55609999999996,16 456.49699999999996,58.2 356.89099999999996,58.2" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="406.69" y="37.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">trap-b</text>
+</g>
+<g class="node" data-id="n19" data-label="trap-t" data-shape="trapezoidalt">
+  <polygon points="359.28499999999997,98.2 454.10299999999995,98.2 439.8803,140.4 373.50769999999994,140.4" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="406.69" y="119.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">trap-t</text>
+</g>
+<g class="node" data-id="n20" data-label="dbl-circ" data-shape="doublecircle">
+  <circle cx="406.69399999999996" cy="240.9" r="60.5" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+<circle cx="406.69399999999996" cy="240.9" r="55.5" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="406.69" y="240.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">dbl-circ</text>
+</g>
+<g class="node" data-id="n21" data-label="text" data-shape="text">
+  
+  <text x="406.69" y="362.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">text</text>
+</g>
+<g class="node" data-id="n22" data-label="notch-rect" data-shape="notchedrectangle">
+  
+<path d="M360.325,423.6 H465.063 V465.8 H348.325 V435.6 Z" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="406.69" y="444.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">notch-rect</text>
+</g>
+<g class="node" data-id="n23" data-label="lin-rect" data-shape="linedrectangle">
+  
+<rect x="358.699" y="505.8" width="95.99" height="42.2" rx="0" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+<path d="M368.699,505.8 V548" fill="none" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="411.69" y="526.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">lin-rect</text>
+</g>
+<g class="node" data-id="n24" data-label="" data-shape="statestart">
+  <circle cx="406.69399999999996" cy="600" r="10" fill="var(--accent, var(--fg))" />
+  
+</g>
+<g class="node" data-id="n25" data-label="" data-shape="stateend">
+  <circle cx="406.69399999999996" cy="664" r="10" fill="none" stroke="var(--accent, var(--fg))" stroke-width="2" />
+<circle cx="406.69399999999996" cy="664" r="6" fill="var(--accent, var(--fg))" />
+  
+</g>
+<g class="node" data-id="n26" data-label="" data-shape="forkjoin">
+  <rect x="346.69399999999996" y="716" width="120" height="8" rx="2" ry="2" fill="var(--_line-strong)" stroke="none" />
+  
+</g>
+<g class="node" data-id="n27" data-label="" data-shape="hourglass">
+  
+<path d="M553.386,16 H589.386 L553.386,52 H589.386 Z" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  
+</g>
+<g class="node" data-id="n28" data-label="brace" data-shape="braceleft">
+  
+<path d="M537.184,92 Q532.184,92 532.184,98 V107.1 Q532.184,113.1 527.184,113.1 Q532.184,113.1 532.184,119.1 V128.2 Q532.184,134.2 537.184,134.2" fill="none" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="571.39" y="113.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">brace</text>
+</g>
+<g class="node" data-id="n29" data-label="brace-r" data-shape="braceright">
+  
+<path d="M610.775,174.2 Q615.775,174.2 615.775,180.2 V189.3 Q615.775,195.3 620.775,195.3 Q615.775,195.3 615.775,201.3 V210.4 Q615.775,216.4 610.775,216.4" fill="none" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="571.39" y="195.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">brace-r</text>
+</g>
+<g class="node" data-id="n30" data-label="braces" data-shape="braces">
+  
+<path d="M527.194,256.4 Q522.194,256.4 522.194,262.4 V271.5 Q522.194,277.5 517.194,277.5 Q522.194,277.5 522.194,283.5 V292.6 Q522.194,298.6 527.194,298.6" fill="none" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M615.578,256.4 Q620.578,256.4 620.578,262.4 V271.5 Q620.578,277.5 625.578,277.5 Q620.578,277.5 620.578,283.5 V292.6 Q620.578,298.6 615.578,298.6" fill="none" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="571.39" y="277.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">braces</text>
+</g>
+<g class="node" data-id="n31" data-label="" data-shape="lightningbolt">
+  
+<path d="M575.226,338.6 L555.386,365.48 H569.786 L566.906,386.6 L587.386,358.76 H573.306 Z" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  
+</g>
+<g class="node" data-id="n32" data-label="doc" data-shape="document">
+  
+<path d="M538.366,426.6 H604.406 V473.8 C587.896,463.8 554.876,483.8 538.366,473.8 Z" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="571.39" y="447.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">doc</text>
+</g>
+<g class="node" data-id="n33" data-label="delay" data-shape="delay">
+  
+<path d="M522.78,518.8 H598.892 A21.1,21.1 0 0 1 598.892,561 H522.78 Z" fill="url(#m1814eb8b-ng-p2)" stroke="color-mix(in srgb, #76b7b2 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="571.39" y="539.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">delay</text>
+</g>
+<g class="node" data-id="n34" data-label="h-cyl" data-shape="horizontalcylinder">
+  
+<path d="M534.775,601 H607.997 A7,21.1 0 0 1 607.997,643.2 H534.775 A7,21.1 0 0 1 534.775,601 Z" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<ellipse cx="607.997" cy="622.1" rx="7" ry="21.1" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+  <text x="571.39" y="622.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">h-cyl</text>
+</g>
+<g class="node" data-id="n35" data-label="lin-cyl" data-shape="linedcylinder">
+  
+<path d="M531.583,690.2 V738.4 A39.803,7 0 0 0 611.189,738.4 V690.2" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<ellipse cx="571.386" cy="690.2" rx="39.803" ry="7" fill="url(#m1814eb8b-ng-n)" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" />
+<path d="M531.583,696.2 A39.803,7 0 0 0 611.189,696.2" fill="none" stroke="color-mix(in srgb, var(--_line) 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="571.39" y="714.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">lin-cyl</text>
+</g>
+<g class="node" data-id="n36" data-label="curv-trap" data-shape="curvedtrapezoid">
+  
+<path d="M698.527,16 H785.31 A21.1,21.1 0 0 1 785.31,58.2 H698.527 L684.46,37.1 Z" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="745.44" y="37.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">curv-trap</text>
+</g>
+<g class="node" data-id="n37" data-label="div-rect" data-shape="dividedrectangle">
+  
+<rect x="700.046" y="98.2" width="90.778" height="52.2" rx="0" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" />
+<path d="M700.046,108.2 H790.824" fill="none" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="745.44" y="129.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">div-rect</text>
+</g>
+<g class="node" data-id="n38" data-label="tri" data-shape="triangle">
+  
+<path d="M745.435,190.4 L804.519,253.7 H686.351 Z" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="745.44" y="232.6" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">tri</text>
+</g>
+<g class="node" data-id="n39" data-label="win-pane" data-shape="windowpane">
+  
+<rect x="691.056" y="293.7" width="108.758" height="52.2" rx="0" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" />
+<path d="M701.056,293.7 V345.9 M691.056,303.7 H799.814" fill="none" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="750.44" y="324.8" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">win-pane</text>
+</g>
+<g class="node" data-id="n40" data-label="" data-shape="filledcircle">
+  
+<circle cx="745.435" cy="393.9" r="8" fill="var(--_line-strong)" stroke="none" stroke-width="0" />
+  
+</g>
+<g class="node" data-id="n41" data-label="notch-pent" data-shape="notchedpentagon">
+  
+<path d="M696.268,441.9 H794.602 L804.602,451.9 V484.1 H686.268 V451.9 Z" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="745.44" y="463" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">notch-pent</text>
+</g>
+<g class="node" data-id="n42" data-label="flip-tri" data-shape="flippedtriangle">
+  
+<path d="M675.578,524.1 H815.292 L745.435,587.4 Z" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="745.44" y="545.2" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">flip-tri</text>
+</g>
+<g class="node" data-id="n43" data-label="sl-rect" data-shape="slopedrectangle">
+  
+<path d="M704.036,637.4 L786.834,627.4 V679.6 H704.036 Z" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="745.44" y="658.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">sl-rect</text>
+</g>
+<g class="node" data-id="n44" data-label="docs" data-shape="stackeddocument">
+  
+<path d="M713.425,719.6 H787.445 V766.8 C768.94,756.8 731.93,776.8 713.425,766.8 Z" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M708.425,724.6 H782.445 V771.8 C763.94,761.8 726.93,781.8 708.425,771.8 Z" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M703.425,729.6 H777.445 V776.8 C758.94,766.8 721.93,786.8 703.425,776.8 Z" fill="url(#m1814eb8b-ng-p3)" stroke="color-mix(in srgb, #b07aa1 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="740.44" y="750.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">docs</text>
+</g>
+<g class="node" data-id="n45" data-label="st-rect" data-shape="stackedrectangle">
+  
+<rect x="885.474" y="16" width="82.798" height="42.2" rx="0" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" />
+<rect x="880.474" y="21" width="82.798" height="42.2" rx="0" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" />
+<rect x="875.474" y="26" width="82.798" height="42.2" rx="0" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" />
+  <text x="916.87" y="47.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">st-rect</text>
+</g>
+<g class="node" data-id="n46" data-label="bow-rect" data-shape="bowtierectangle">
+  
+<path d="M871.292,108.2 H980.454 A8,21.1 0 0 0 980.454,150.4 H871.292 A8,21.1 0 0 1 871.292,108.2 Z" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="921.87" y="129.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">bow-rect</text>
+</g>
+<g class="node" data-id="n47" data-label="" data-shape="crossedcircle">
+  
+<circle cx="921.873" cy="208.4" r="18" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" />
+<path d="M909.145,195.672 L934.601,221.128 M934.601,195.672 L909.145,221.128" fill="none" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  
+</g>
+<g class="node" data-id="n48" data-label="tag-doc" data-shape="taggeddocument">
+  
+<path d="M877.282,266.4 H966.464 V313.6 C944.168,303.6 899.577,323.6 877.282,313.6 Z" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M952.464,311.6 L966.464,299.6" fill="none" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="921.87" y="287.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">tag-doc</text>
+</g>
+<g class="node" data-id="n49" data-label="tag-rect" data-shape="taggedrectangle">
+  
+<rect x="876.484" y="358.6" width="90.778" height="42.2" rx="0" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" />
+<path d="M953.262,400.8 L967.262,386.8" fill="none" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="921.87" y="379.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">tag-rect</text>
+</g>
+<g class="node" data-id="n50" data-label="flag" data-shape="flag">
+  
+<path d="M889.651,445.8 C905.762,455.8 937.984,435.8 954.095,445.8 V488 C937.984,478 905.762,498 889.651,488 Z" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="921.87" y="466.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">flag</text>
+</g>
+<g class="node" data-id="n51" data-label="odd" data-shape="asymmetric">
+  <polygon points="894.853,533 960.8929999999999,533 960.8929999999999,575.2 894.853,575.2 882.853,554.1" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" />
+  <text x="921.87" y="554.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">odd</text>
+</g>
+<g class="node" data-id="n52" data-label="lin-doc" data-shape="lineddocument">
+  
+<path d="M874.676,615.2 H969.07 V662.4 C945.471,652.4 898.274,672.4 874.676,662.4 Z" fill="url(#m1814eb8b-ng-p4)" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+<path d="M884.676,615.2 V662.4" fill="none" stroke="color-mix(in srgb, #9c755f 74%, var(--fg))" stroke-width="1.25" stroke-linejoin="round" />
+  <text x="926.87" y="636.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">lin-doc</text>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-cw-p0-0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 2.1%, var(--bg))" /><stop offset="0.55" stop-color="color-mix(in srgb, #64748b 6%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 6%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, var(--accent, var(--fg)) 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-n" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, var(--_line) 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, var(--_line) 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #f28e2b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #f28e2b 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #76b7b2 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #76b7b2 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #b07aa1 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #b07aa1 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #9c755f 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #9c755f 7%, var(--bg))" /></linearGradient>
+  <marker id="m1814eb8b-mk-arrow" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <polygon points="0,1.5 10,6 0,10.5" fill="var(--_line)" stroke="var(--_line)" stroke-width="1" stroke-linejoin="miter" />
+  </marker>
+</defs>
+</svg>

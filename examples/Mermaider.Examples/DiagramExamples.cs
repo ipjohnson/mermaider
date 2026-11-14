@@ -72,6 +72,42 @@ public static partial class DiagramExamples
 			"""
 			),
 			new(
+				"flowchart-expanded-shapes",
+				"Expanded Shapes",
+				DiagramCategory.Flowchart,
+				"""
+			flowchart TB
+			  a1@{ shape: rect, label: "rect" } ~~~ a2@{ shape: rounded, label: "rounded" } ~~~ a3@{ shape: stadium, label: "stadium" } ~~~ a4@{ shape: fr-rect, label: "fr-rect" }
+			  a4 ~~~ a5@{ shape: cyl, label: "cyl" } ~~~ a6@{ shape: datastore, label: "datastore" } ~~~ a7@{ shape: folder, label: "folder" } ~~~ a8@{ shape: bucket, label: "bucket" }
+			  b1@{ shape: console, label: "console" } ~~~ b2@{ shape: browser, label: "browser" } ~~~ b3@{ shape: person, label: "person" } ~~~ b4@{ shape: circle, label: "circle" }
+			  b4 ~~~ b5@{ shape: bang, label: "bang" } ~~~ b6@{ shape: cloud, label: "cloud" } ~~~ b7@{ shape: diam, label: "diam" } ~~~ b8@{ shape: hex, label: "hex" }
+			  c1@{ shape: lean-r, label: "lean-r" } ~~~ c2@{ shape: lean-l, label: "lean-l" } ~~~ c3@{ shape: trap-b, label: "trap-b" } ~~~ c4@{ shape: trap-t, label: "trap-t" }
+			  c4 ~~~ c5@{ shape: dbl-circ, label: "dbl-circ" } ~~~ c6@{ shape: text, label: "text" } ~~~ c7@{ shape: notch-rect, label: "notch-rect" } ~~~ c8@{ shape: lin-rect, label: "lin-rect" }
+			  d1@{ shape: sm-circ } ~~~ d2@{ shape: fr-circ } ~~~ d3@{ shape: fork } ~~~ d4@{ shape: hourglass }
+			  d4 ~~~ d5@{ shape: brace, label: "brace" } ~~~ d6@{ shape: brace-r, label: "brace-r" } ~~~ d7@{ shape: braces, label: "braces" } ~~~ d8@{ shape: bolt }
+			  e1@{ shape: doc, label: "doc" } ~~~ e2@{ shape: delay, label: "delay" } ~~~ e3@{ shape: h-cyl, label: "h-cyl" } ~~~ e4@{ shape: lin-cyl, label: "lin-cyl" }
+			  e4 ~~~ e5@{ shape: curv-trap, label: "curv-trap" } ~~~ e6@{ shape: div-rect, label: "div-rect" } ~~~ e7@{ shape: tri, label: "tri" } ~~~ e8@{ shape: win-pane, label: "win-pane" }
+			  f1@{ shape: f-circ } ~~~ f2@{ shape: notch-pent, label: "notch-pent" } ~~~ f3@{ shape: flip-tri, label: "flip-tri" } ~~~ f4@{ shape: sl-rect, label: "sl-rect" }
+			  f4 ~~~ f5@{ shape: docs, label: "docs" } ~~~ f6@{ shape: st-rect, label: "st-rect" } ~~~ f7@{ shape: bow-rect, label: "bow-rect" } ~~~ f8@{ shape: cross-circ }
+			  g1@{ shape: tag-doc, label: "tag-doc" } ~~~ g2@{ shape: tag-rect, label: "tag-rect" } ~~~ g3@{ shape: flag, label: "flag" } ~~~ g4@{ shape: odd, label: "odd" } ~~~ g5@{ shape: lin-doc, label: "lin-doc" }
+			"""
+			),
+			new(
+				"flowchart-collapsed-subgraph",
+				"Collapsed Subgraph",
+				DiagramCategory.Flowchart,
+				"""
+			flowchart LR
+			  Client --> API
+			  subgraph backend [Backend services]
+			    API --> Orders
+			    Orders --> DB@{ shape: cyl, label: "Orders DB" }
+			  end
+			  Orders --> Mail@{ shape: doc, label: "Receipt" }
+			  backend@{ view: collapsed }
+			"""
+			),
+			new(
 				"flowchart-edges",
 				"Edge Styles",
 				DiagramCategory.Flowchart,
