@@ -7,19 +7,23 @@ internal static class NodeSizing
 {
 	private const double MaxContentWidth = 220;
 
+	/// <summary>A wrapped node label's size, each <c>fa:fa-name</c> reference measured as its inline icon.</summary>
+	internal static MultilineMetrics MeasureLabel(string wrapped) =>
+		TextMetrics.MeasureMultiline(InlineIcons.ForMeasure(wrapped).AsSpan(), RenderConstants.FontSizes.NodeLabel, RenderConstants.FontWeights.NodeLabel);
+
+	private static double Width(string text) =>
+		TextMetrics.MeasureTextWidth(InlineIcons.ForMeasure(text), RenderConstants.FontSizes.NodeLabel, RenderConstants.FontWeights.NodeLabel);
+
 	internal static string WrapLabel(string label)
 	{
-		if (
-			!label.Contains('\n') && TextMetrics.MeasureTextWidth(label, RenderConstants.FontSizes.NodeLabel, RenderConstants.FontWeights.NodeLabel) <=
-				MaxContentWidth
-		)
+		if (!label.Contains('\n') && Width(label) <= MaxContentWidth)
 			return label;
 
 		var lines = label.Split('\n');
 		var result = new List<string>();
 		foreach (var line in lines)
 		{
-			var lineW = TextMetrics.MeasureTextWidth(line, RenderConstants.FontSizes.NodeLabel, RenderConstants.FontWeights.NodeLabel);
+			var lineW = Width(line);
 			if (lineW <= MaxContentWidth)
 			{
 				result.Add(line);
@@ -31,7 +35,7 @@ internal static class NodeSizing
 			foreach (var word in words)
 			{
 				var candidate = current.Length == 0 ? word : current + " " + word;
-				var candidateW = TextMetrics.MeasureTextWidth(candidate, RenderConstants.FontSizes.NodeLabel, RenderConstants.FontWeights.NodeLabel);
+				var candidateW = Width(candidate);
 				if (candidateW > MaxContentWidth && current.Length > 0)
 				{
 					result.Add(current);
@@ -62,7 +66,7 @@ internal static class NodeSizing
 			return fixedSize;
 
 		label = WrapLabel(label);
-		var metrics = TextMetrics.MeasureMultiline(label.AsSpan(), RenderConstants.FontSizes.NodeLabel, RenderConstants.FontWeights.NodeLabel);
+		var metrics = MeasureLabel(label);
 
 		var width = metrics.Width + (RenderConstants.NodePadding.Horizontal * 2);
 		var height = metrics.Height + (RenderConstants.NodePadding.Vertical * 2);

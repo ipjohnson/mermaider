@@ -355,7 +355,9 @@ internal static class DiagramSvgStage
 				}
 			case DiagramType.Mindmap:
 				{
-					sb = MindmapSvgRenderer.RenderToBuilder(MindmapParser.Parse(MermaidRenderer.PreprocessLinesPreserveIndent(diagram.CleanedSource)), context);
+					var parsed = MindmapParser.Parse(MermaidRenderer.PreprocessLinesPreserveIndent(diagram.CleanedSource));
+					request.Diagnostics.AddRange(MindmapSvgRenderer.Diagnose(parsed));
+					sb = MindmapSvgRenderer.RenderToBuilder(parsed, context);
 					break;
 				}
 			case DiagramType.Gantt:
@@ -476,6 +478,7 @@ internal static class DiagramSvgStage
 					ResourceGuard.CheckElements(parsed.Nodes.Count + parsed.Edges.Count, limits);
 					ct.ThrowIfCancellationRequested();
 					request.Diagnostics.AddRange(NodeAssets.Diagnose(parsed));
+					request.Diagnostics.AddRange(InlineIcons.Diagnose(parsed));
 
 					// For the built-in layout provider, thread the token and node cap directly into
 					// Sugiyama so hot loops can be interrupted. Custom providers get the pre-call check only.

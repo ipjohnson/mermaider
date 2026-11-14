@@ -71,7 +71,11 @@ internal static class LightweightLayoutEngine
 			var minLength = edge.MinLength;
 			if (edge.Label is { Length: > 0 })
 			{
-				var metrics = TextMetrics.MeasureMultiline(edge.Label.AsSpan(), RenderConstants.FontSizes.EdgeLabel, RenderConstants.FontWeights.EdgeLabel);
+				var metrics = TextMetrics.MeasureMultiline(
+					InlineIcons.ForMeasure(edge.Label).AsSpan(),
+					RenderConstants.FontSizes.EdgeLabel,
+					RenderConstants.FontWeights.EdgeLabel
+				);
 				labelW = ErSvgRenderer.LabelBoxWidth(metrics.Width) + 4;
 				labelH = metrics.Height + ErSvgRenderer.LabelPadY + 2;
 				if (applyLabelMinLength)

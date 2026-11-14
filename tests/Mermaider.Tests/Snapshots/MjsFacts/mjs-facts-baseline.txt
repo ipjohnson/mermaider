@@ -94,25 +94,6 @@ rs-garbage-line - accept | no
 rs-unclosed-label + accept | yes
 rs-unclosed-label - accept | no
 
-# ipjohnson/mermaider#8: FontAwesome references are drawn as their fa:fa-name text instead of an icon, and a mindmap
-# ::icon(...) line becomes a child node.
-flowchart-fa-label + node | B | fa:fa-twitter for peace | rect
-flowchart-fa-label + node | D | fa:fa-spinner | rounded
-flowchart-fa-label + node | E | A fa:fa-camera-retro perhaps? | rounded
-flowchart-fa-label - icon | B | fa:fa-twitter
-flowchart-fa-label - icon | C | fa:fa-ban
-flowchart-fa-label - icon | D | fa:fa-spinner
-flowchart-fa-label - icon | E | fa:fa-camera-retro
-flowchart-fa-label - node | B | for peace | rect
-flowchart-fa-label - node | D |  | rounded
-flowchart-fa-label - node | E | A perhaps? | rounded
-mindmap-icon + label | fa fa-book
-mindmap-icon + label | fa fa-film
-mindmap-icon + node | Library / Books / fa fa-book | rounded
-mindmap-icon + node | Library / Films / fa fa-film | rounded
-mindmap-icon - icon | Library / Books | fa:fa-book
-mindmap-icon - icon | Library / Films | fa:fa-film
-
 # ipjohnson/mermaider#10: sequence participants typed with @{ "type": ... } are drawn as plain participants.
 seq-participant-types + actor | B | B | participant
 seq-participant-types + actor | C | C | participant
@@ -152,8 +133,10 @@ spec-er-attributes-with-comments - label | Non-negative
 spec-er-attributes-with-comments - label | Required
 
 # ipjohnson/mermaider#20: `B-->C[label]` without spaces is read as one asymmetric node `B--`.
-flowchart-fa-label + node | B-- | C[fa:fa-ban forbidden | odd
+flowchart-fa-label + icon | B-- | fa:fa-ban
+flowchart-fa-label + node | B-- | C[ forbidden | odd
 flowchart-fa-label - edge | B | C | none | arrow | solid
+flowchart-fa-label - icon | C | fa:fa-ban
 flowchart-fa-label - node | C | forbidden | rect
 
 # The examples of mermaid 12.3.0's syntax docs (MjsFacts/Docs, from scripts/mermaid-docs-corpus.py).
@@ -203,26 +186,16 @@ docs-flowchart-094 - edge | A | B | circle | circle | solid
 docs-flowchart-094 - edge | C | D | cross | cross | solid
 docs-flowchart-094 - node | D | D | rect
 
-# ipjohnson/mermaider#20: B-->C[label] without spaces is read as one node. ipjohnson/mermaider#8: fa:fa-name icons are drawn as text.
-docs-flowchart-114 + node | B | fa:fa-twitter for peace | rect
-docs-flowchart-114 + node | B-- | C[fa:fa-ban forbidden | odd
-docs-flowchart-114 + node | D | fa:fa-spinner | rounded
-docs-flowchart-114 + node | E | A fa:fa-camera-retro perhaps? | rounded
+# ipjohnson/mermaider#20: B-->C[label] without spaces is read as one node, which takes C's icon.
+docs-flowchart-114 + icon | B-- | fa:fa-ban
+docs-flowchart-114 + node | B-- | C[ forbidden | odd
 docs-flowchart-114 - edge | B | C | none | arrow | solid
-docs-flowchart-114 - icon | B | fa:fa-twitter
 docs-flowchart-114 - icon | C | fa:fa-ban
-docs-flowchart-114 - icon | D | fa:fa-spinner
-docs-flowchart-114 - icon | E | fa:fa-camera-retro
-docs-flowchart-114 - node | B | for peace | rect
 docs-flowchart-114 - node | C | forbidden | rect
-docs-flowchart-114 - node | D |  | rounded
-docs-flowchart-114 - node | E | A perhaps? | rounded
-docs-flowchart-115 + node | B | fa:fa-twitter for peace | rect
-docs-flowchart-115 + node | B-- | C["fab:fa-truck-bold a custom icon" | odd
+docs-flowchart-115 + icon | B-- | fab:fa-truck-bold
+docs-flowchart-115 + node | B-- | C[" a custom icon" | odd
 docs-flowchart-115 - edge | B | C | none | arrow | solid
-docs-flowchart-115 - icon | B | fa:fa-twitter
 docs-flowchart-115 - icon | C | fab:fa-truck-bold
-docs-flowchart-115 - node | B | for peace | rect
 docs-flowchart-115 - node | C | a custom icon | rect
 
 # ipjohnson/AgentDriver#4283: a flowchart click statement is drawn as a node named click.
@@ -899,17 +872,8 @@ docs-c4-006 - boundary | oracle | oracle 12c | Oracle - Primary | bigbankdb01
 docs-c4-006 - boundary | oracle2 | oracle 12c | Oracle - Secondary | bigbankdb02
 docs-c4-006 - boundary | plc | big bank plc data center | Big Bank plc
 
-# ipjohnson/mermaider#31: timeline and mindmap draw <br> literally, and mindmap ::icon, ::: and multi-line lines become nodes.
-docs-mindmap-001 + label | fa fa-book
-docs-mindmap-001 + node | mindmap / Origins / fa fa-book | rounded
-docs-mindmap-001 - icon | mindmap / Origins / Long history | fa:fa-book
+# ipjohnson/mermaider#31: timeline and mindmap draw <br> literally, and mindmap ::: and multi-line lines become nodes.
 docs-mindmap-001 - label | On effectiveness and features
-docs-mindmap-012 + label | fa fa-book
-docs-mindmap-012 + label | mdi mdi-skull-outline
-docs-mindmap-012 + node | Root / fa fa-book | rounded
-docs-mindmap-012 + node | Root / mdi mdi-skull-outline | rounded
-docs-mindmap-012 - icon | Root / A | fa:fa-book
-docs-mindmap-012 - icon | Root / B | mdi:mdi-skull-outline
 docs-mindmap-013 + label | :::urgent large
 docs-mindmap-013 + node | Root / :::urgent large | default
 docs-mindmap-015 + label | id1["` Root with

@@ -1,9 +1,11 @@
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
+using Mermaider.Icons;
 using Mermaider.Layout;
 using Mermaider.Models;
 using Mermaider.Parsing;
+using Mermaider.Rendering;
 using Mermaider.Text;
 
 namespace Mermaider.Tests.Snapshots.MjsFacts;
@@ -310,7 +312,8 @@ internal static partial class MermaiderFacts
 		var groupLabels = Elements(doc)
 			.Where(e => e.Name.LocalName == "g" && HasClass(e, "subgraph"))
 			.GroupBy(e => Attr(e, "data-id")!)
-			.ToDictionary(g => g.Key, g => Display(Attr(g.First(), "data-label")));
+			// the header draws a FontAwesome reference as an icon, not as text
+			.ToDictionary(g => g.Key, g => Display(InlineIcons.ForMeasure(Attr(g.First(), "data-label"))));
 		var subgraphIds = new HashSet<string>();
 		foreach (var sg in AllSubgraphs(graph.Subgraphs))
 		{
@@ -325,6 +328,9 @@ internal static partial class MermaiderFacts
 			facts.Add(Fact("node", node.Id, drawn, Shape(node.Shape)));
 			if (node.Asset is { } asset)
 				facts.Add(Fact(asset.Kind == NodeAssetKind.Icon ? "icon" : "image", node.Id, asset.Source));
+			// the FontAwesome references a label draws as icons
+			foreach (var icon in g?.Descendants().Where(e => HasClass(e, "label-icon")) ?? [])
+				facts.Add(Fact("icon", node.Id, Attr(icon, "data-icon")));
 		}
 
 		var label = EdgeLabels(doc, "edge-label");
@@ -767,6 +773,8 @@ internal static partial class MermaiderFacts
 				_ => "rounded",
 			};
 			facts.Add(Fact("node", path, shape));
+			if (n.Icon is { } icon)
+				facts.Add(Fact("icon", path, IconReference.FromClasses(icon).Text));
 			shown.Add(Display(n.Label));
 			foreach (var c in n.Children)
 				Walk(c, path);

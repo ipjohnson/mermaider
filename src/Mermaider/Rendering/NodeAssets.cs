@@ -275,7 +275,7 @@ internal static class NodeAssets
 	{
 		if (label.Length == 0)
 			return (0, 0);
-		var m = TextMetrics.MeasureMultiline(NodeSizing.WrapLabel(label).AsSpan(), RenderConstants.FontSizes.NodeLabel, RenderConstants.FontWeights.NodeLabel);
+		var m = NodeSizing.MeasureLabel(NodeSizing.WrapLabel(label));
 		return (m.Width, m.Height);
 	}
 

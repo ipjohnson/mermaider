@@ -40,7 +40,11 @@ internal static class MsaglFlowchartLayout
 			var msaglEdge = new MsaglEdge(sourceNode, targetNode);
 			if (edge.Label is { Length: > 0 })
 			{
-				var metrics = TextMetrics.MeasureMultiline(edge.Label.AsSpan(), RenderConstants.FontSizes.EdgeLabel, RenderConstants.FontWeights.EdgeLabel);
+				var metrics = TextMetrics.MeasureMultiline(
+					InlineIcons.ForMeasure(edge.Label).AsSpan(),
+					RenderConstants.FontSizes.EdgeLabel,
+					RenderConstants.FontWeights.EdgeLabel
+				);
 				msaglEdge.Label = new Label(metrics.Width + 8, metrics.Height + 6, msaglEdge);
 			}
 			edgeMap.Add((msaglEdge, edge));

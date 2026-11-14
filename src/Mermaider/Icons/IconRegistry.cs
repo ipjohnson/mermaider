@@ -9,8 +9,9 @@ namespace Mermaider.Icons;
 /// Ships a small built-in set — Mermaid's default architecture icons (<c>cloud</c>, <c>database</c>,
 /// <c>disk</c>, <c>internet</c>, <c>server</c>), a <c>generic</c> fallback glyph, and a curated
 /// selection of common AWS / GCP / Azure service glyphs plus the full Elastic set (see
-/// <see cref="Names"/> for the exact list). These are original, simplified pictograms — not the
-/// vendors' official trademarked logos — meant to render something reasonable out of the box.
+/// <see cref="Names"/> for the exact list), and <c>fa:</c> placeholders for common FontAwesome names that flowchart
+/// <c>fa:fa-name</c> label references and mindmap <c>::icon(...)</c> draw. These are original, simplified pictograms — not the
+/// vendors' official trademarked logos or FontAwesome's artwork — meant to render something reasonable out of the box.
 /// Register real/licensed vendor logos via <see cref="Register(string,string)"/> if you have the rights to use them.
 /// </para>
 /// </summary>

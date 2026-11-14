@@ -144,14 +144,7 @@ internal static class SvgRenderer
 		if (InlineStyleValue(group.InlineStyle, "stroke") is { } stroke)
 		{
 			_ = sb.Append('\n');
-			MultilineUtils.AppendMultilineText(
-				sb,
-				group.Label,
-				group.X + 12,
-				group.Y + (DesignSystem.StripHeight / 2),
-				DesignSystem.Px(TypeRole.Subheading),
-				ds.TextAttributes(TypeRole.Subheading, stroke, anchor: "start")
-			);
+			InlineIcons.AppendText(sb, ds, group.Label, group.X + 12, group.Y + (DesignSystem.StripHeight / 2), TypeRole.Subheading, stroke, anchor: "start");
 		}
 		else
 		{
@@ -406,7 +399,11 @@ internal static class SvgRenderer
 		_ = sb.Append("\" data-label=\"");
 		MultilineUtils.AppendEscapedAttr(sb, label.AsSpan());
 		_ = sb.Append("\">\n  ");
-		ds.AppendEdgeLabel(sb, mid.X, mid.Y, label, InlineStyleValue(edge.InlineStyle, "color"));
+		var color = InlineStyleValue(edge.InlineStyle, "color");
+		var shown = InlineIcons.Replace(label, out var slots);
+		ds.AppendEdgeLabel(sb, mid.X, mid.Y, shown, color);
+		var (px, weight) = (DesignSystem.Px(TypeRole.Caption), ds.Spec.Label == LabelKind.Chip ? 600 : ds.Weight(TypeRole.Caption));
+		InlineIcons.AppendIcons(sb, ds, shown, slots, mid.X, mid.Y, px, "middle", s => TextMetrics.MeasurePlainWidth(s, px, weight), color ?? "var(--_text)");
 		_ = sb.Append("\n</g>");
 	}
 
@@ -931,9 +928,24 @@ internal static class SvgRenderer
 		var textColor = InlineStyleValue(node.InlineStyle, "color") ?? "var(--_text)";
 
 		if (node.IsMarkdown)
-			AppendMarkdownLabel(sb, node.Label, cx, cy, FontSizes.NodeLabel, FsVar.S, textColor);
+		{
+			var shown = InlineIcons.Replace(node.Label, out var slots);
+			AppendMarkdownLabel(sb, shown, cx, cy, FontSizes.NodeLabel, FsVar.S, textColor);
+			InlineIcons.AppendIcons(
+				sb,
+				ds,
+				shown,
+				slots,
+				cx,
+				cy,
+				FontSizes.NodeLabel,
+				"middle",
+				s => TextMetrics.MeasureTextWidth(s.Replace("*", "", StringComparison.Ordinal), FontSizes.NodeLabel, FontWeights.NodeLabel),
+				textColor
+			);
+		}
 		else
-			ds.AppendText(sb, node.Label, cx, cy, TypeRole.Label, textColor);
+			InlineIcons.AppendText(sb, ds, node.Label, cx, cy, TypeRole.Label, textColor);
 	}
 
 	private static void AppendMarkdownLabel(StringBuilder sb, string label, double cx, double cy, int fontSizePx, string fontSizeVar, string fill)

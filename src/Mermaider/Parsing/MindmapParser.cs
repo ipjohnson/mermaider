@@ -25,6 +25,9 @@ internal static partial class MindmapParser
 	[GeneratedRegex(@"(?<!\))\)(.+?)\($", RegexOptions.None, TimeoutMs)]
 	private static partial Regex BangShape();
 
+	[GeneratedRegex(@"^::icon\((.*)\)$", RegexOptions.None, TimeoutMs)]
+	private static partial Regex IconLine();
+
 	internal static MindmapDiagram Parse(string[] lines)
 	{
 		try
@@ -42,7 +45,7 @@ internal static partial class MindmapParser
 		if (lines.Length < 2)
 			return new MindmapDiagram { Root = new MindmapNode { Label = "mindmap", Children = [] } };
 
-		var stack = new List<(int Indent, string Label, MindmapShape Shape, List<MindmapNode> Children)>();
+		var stack = new List<(int Indent, string Label, MindmapShape Shape, string? Icon, List<MindmapNode> Children)>();
 
 		for (var i = 1; i < lines.Length; i++)
 		{
@@ -60,34 +63,46 @@ internal static partial class MindmapParser
 			if (trimmed.Length == 0)
 				continue;
 
+			// as in mermaid.js, ::icon(...) decorates the node read last, whatever its indent
+			if (IconLine().Match(trimmed) is { Success: true } icon)
+			{
+				if (stack.Count > 0)
+				{
+					var last = stack[^1];
+					last.Icon = icon.Groups[1].Value.Trim();
+					stack[^1] = last;
+				}
+				continue;
+			}
+
 			var (label, shape) = ParseNodeText(trimmed);
 
 			while (stack.Count > 0 && stack[^1].Indent >= indent)
 			{
 				var popped = stack[^1];
 				stack.RemoveAt(stack.Count - 1);
-				var node = new MindmapNode { Label = popped.Label, Shape = popped.Shape, Children = popped.Children };
+				var node = new MindmapNode { Label = popped.Label, Shape = popped.Shape, Icon = popped.Icon, Children = popped.Children };
 				if (stack.Count > 0)
 					stack[^1].Children.Add(node);
 				else
 					return new MindmapDiagram { Root = node };
 			}
 
-			stack.Add((indent, label, shape, []));
+			stack.Add((indent, label, shape, null, []));
 		}
 
 		while (stack.Count > 1)
 		{
 			var popped = stack[^1];
 			stack.RemoveAt(stack.Count - 1);
-			var node = new MindmapNode { Label = popped.Label, Shape = popped.Shape, Children = popped.Children };
+			var node = new MindmapNode { Label = popped.Label, Shape = popped.Shape, Icon = popped.Icon, Children = popped.Children };
 			stack[^1].Children.Add(node);
 		}
 
 		if (stack.Count == 1)
 		{
 			var root = stack[0];
-			return new MindmapDiagram { Root = new MindmapNode { Label = root.Label, Shape = root.Shape, Children = root.Children } };
+			return new MindmapDiagram { Root = new MindmapNode { Label = root.Label, Shape = root.Shape, Icon = root.Icon, Children = root.Children } };
 		}
 
 		return new MindmapDiagram { Root = new MindmapNode { Label = "mindmap", Children = [] } };

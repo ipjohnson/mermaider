@@ -65,6 +65,27 @@ public class FlowchartSpecTests
 			.Should()
 			.MatchSnapshot(SvgSnapshotFormat.Instance, direction);
 
+	/// <summary>FontAwesome references in node, edge and subgraph labels, drawn as inline icons (docs example flowchart-114 and more).</summary>
+	[Test]
+	public void Fontawesome_labels() =>
+		MermaidRenderer
+			.RenderSvg(
+				"""
+				flowchart TD
+				  subgraph S [fa:fa-cloud Cloud side]
+				    B["fa:fa-twitter for peace"]
+				    C[fa:fa-ban forbidden]
+				  end
+				  B --> C
+				  B --> D(fa:fa-spinner)
+				  B -->|fas:fa-check ok| E(A fa:fa-camera-retro perhaps?)
+				  E --> F["`**Bold** fa:fa-star and a long second line that wraps fa:fa-heart`"]
+				  E --> G[fa:fa-no-such-icon unknown]
+				"""
+			)
+			.Should()
+			.MatchSnapshot(SvgSnapshotFormat.Instance);
+
 	[Test]
 	public void Direction_LR() =>
 		MermaidRenderer.RenderSvg("""

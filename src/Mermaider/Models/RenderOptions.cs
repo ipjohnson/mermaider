@@ -159,7 +159,8 @@ public sealed record RenderOptions
 
 	/// <summary>
 	/// Optional callback invoked once per diagram with every <see cref="MermaidDiagnostic"/> of the render, such as a flowchart
-	/// icon the <see cref="Icons.IconRegistry"/> does not have or an <c>http(s)</c> image that was drawn as a placeholder. Not
+	/// icon, <c>fa:fa-name</c> label reference or mindmap <c>::icon(...)</c> the <see cref="Icons.IconRegistry"/> does not have,
+	/// or an <c>http(s)</c> image that was drawn as a placeholder. Not
 	/// called when there are none.
 	/// </summary>
 	public Action<IReadOnlyList<MermaidDiagnostic>>? OnDiagnostics { get; init; }
