@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 725.718 738" width="725.718" height="738" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<g class="diagram-title">
+  <rect x="30" y="25.5" width="9" height="9" rx="2" ry="2" fill="var(--accent, var(--fg))" />
+  <text x="46" y="30" text-anchor="start" font-size="var(--fs-l)" font-weight="700" fill="var(--_text)" dy="6.3">Checkout</text>
+</g>
+<g class="block" data-type="alt" data-label="ok">
+  <rect x="30" y="330" width="665.718" height="264" rx="10" ry="10" fill="color-mix(in srgb, #f28e2b 6%, var(--bg))" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" />
+  <path d="M30,352 L30,340 Q30,330 40,330 L64.75999999999999,330 L64.75999999999999,352 Z" fill="color-mix(in srgb, #f28e2b 22%, var(--bg))" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" />
+  <text x="47.38" y="341" text-anchor="middle" font-size="var(--fs-xs)" font-weight="600" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.2">alt</text>
+  <text x="362.86" y="341" text-anchor="middle" font-size="var(--fs-s)" font-weight="600" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">ok</text>
+  <line x1="30" y1="512" x2="695.718" y2="512" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" stroke-dasharray="5 4" />
+  <text x="362.86" y="526" text-anchor="middle" font-size="var(--fs-s)" font-weight="600" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">else</text>
+</g>
+<line class="lifeline" data-actor="Customer" x1="88.374" y1="110" x2="88.374" y2="668" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="Shop" x1="235.718" y1="110" x2="235.718" y2="668" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="Inventory" x1="375.71799999999996" y1="110" x2="375.71799999999996" y2="668" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="Payments" x1="515.718" y1="110" x2="515.718" y2="668" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="Mailer" x1="655.718" y1="110" x2="655.718" y2="668" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<rect class="activation" data-actor="Inventory" x="370.71799999999996" y="242" width="10" height="66" rx="3" ry="3" fill="color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg))" stroke="color-mix(in srgb, var(--accent, var(--fg)) 74%, var(--fg))" stroke-width="1.25" />
+<rect class="activation" data-actor="Payments" x="510.71799999999996" y="388" width="10" height="66" rx="3" ry="3" fill="color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg))" stroke="color-mix(in srgb, var(--accent, var(--fg)) 74%, var(--fg))" stroke-width="1.25" />
+<rect class="activation" data-actor="Shop" x="230.718" y="154" width="10" height="436" rx="3" ry="3" fill="color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg))" stroke="color-mix(in srgb, var(--accent, var(--fg)) 74%, var(--fg))" stroke-width="1.25" />
+<g class="message" data-from="Customer" data-to="Shop" data-label="checkout(cart)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="88.374" y1="154" x2="235.718" y2="154" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+  <rect x="113.47399999999999" y="129.2" width="97.144" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="162.05" y="140" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">checkout(cart)</text>
+</g>
+<g class="message" data-from="Shop" data-to="Inventory" data-label="reserve(items)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="235.718" y1="242" x2="375.71799999999996" y2="242" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+  <rect x="257.14599999999996" y="217.2" width="97.14399999999998" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="305.72" y="228" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">reserve(items)</text>
+</g>
+<g class="message" data-from="Inventory" data-to="Shop" data-label="ok" data-line-style="dashed" data-arrow-head="open" data-self="false">
+  <line x1="375.71799999999996" y1="292" x2="235.718" y2="292" stroke="var(--_line)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="289.97799999999995" y="267.2" width="31.48" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="305.72" y="278" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">ok</text>
+</g>
+<g class="message" data-from="Shop" data-to="Payments" data-label="charge(card,total)" data-line-style="solid" data-arrow-head="filled" data-self="false">
+  <line x1="235.718" y1="388" x2="515.718" y2="388" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-arrow)" />
+  <rect x="318.25399999999996" y="363.2" width="114.92800000000001" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="375.72" y="374" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">charge(card,total)</text>
+</g>
+<g class="message" data-from="Payments" data-to="Shop" data-label="receipt" data-line-style="dashed" data-arrow-head="open" data-self="false">
+  <line x1="515.718" y1="438" x2="235.718" y2="438" stroke="var(--_line)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="347.66599999999994" y="413.2" width="56.10399999999999" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="375.72" y="424" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">receipt</text>
+</g>
+<g class="message" data-from="Shop" data-to="Mailer" data-label="send receipt" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="235.718" y1="488" x2="655.718" y2="488" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="402.96" y="463.2" width="85.51599999999999" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="445.72" y="474" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">send receipt</text>
+</g>
+<g class="message" data-from="Shop" data-to="Customer" data-label="out of stock" data-line-style="dashed" data-arrow-head="open" data-self="false">
+  <line x1="235.718" y1="574" x2="88.374" y2="574" stroke="var(--_line)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="123.05" y="549.2" width="77.99199999999999" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="162.05" y="560" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">out of stock</text>
+</g>
+<g class="sequence-note" data-position="over" data-actors="Shop,Inventory">
+<g class="note">
+  <rect x="200.74799999999996" y="164" width="208.344" height="38" rx="4" ry="4" fill="color-mix(in srgb, var(--accent, var(--fg)) 9%, var(--bg))" stroke="color-mix(in srgb, var(--accent, var(--fg)) 42%, var(--bg))" stroke-width="1" />
+  <rect x="200.74799999999996" y="164" width="3" height="38" fill="var(--accent, var(--fg))" />
+  <text x="306.42" y="183" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="color-mix(in srgb, var(--accent, var(--fg)) 44%, var(--fg))" dy="4.2">reserve before charging</text>
+</g>
+</g>
+<g class="actor" data-id="Customer" data-label="Customer" data-type="actor">
+  <rect x="30" y="70" width="116.74799999999999" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <g transform="translate(54 90)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="-4.5" r="3.6" /><path d="M-7 8 C-7 1.5 7 1.5 7 8" /></g>
+  <text x="68" y="90" text-anchor="start" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Customer</text>
+</g>
+<g class="actor" data-id="Shop" data-label="Web Shop" data-type="participant">
+  <rect x="186.748" y="70" width="97.94" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="235.72" y="90" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Web Shop</text>
+</g>
+<g class="actor" data-id="Inventory" data-label="Inventory" data-type="participant">
+  <rect x="328.34399999999994" y="70" width="94.74799999999999" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="375.72" y="90" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Inventory</text>
+</g>
+<g class="actor" data-id="Payments" data-label="Payments" data-type="participant">
+  <rect x="467.54599999999994" y="70" width="96.34400000000001" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="515.72" y="90" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Payments</text>
+</g>
+<g class="actor" data-id="Mailer" data-label="Mailer" data-type="participant">
+  <rect x="615.718" y="70" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="655.72" y="90" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Mailer</text>
+</g>
+<g class="actor actor-bottom" data-id="Customer" data-label="Customer" data-type="actor">
+  <rect x="30" y="668" width="116.74799999999999" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <g transform="translate(54 688)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="-4.5" r="3.6" /><path d="M-7 8 C-7 1.5 7 1.5 7 8" /></g>
+  <text x="68" y="688" text-anchor="start" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Customer</text>
+</g>
+<g class="actor actor-bottom" data-id="Shop" data-label="Web Shop" data-type="participant">
+  <rect x="186.748" y="668" width="97.94" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="235.72" y="688" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Web Shop</text>
+</g>
+<g class="actor actor-bottom" data-id="Inventory" data-label="Inventory" data-type="participant">
+  <rect x="328.34399999999994" y="668" width="94.74799999999999" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="375.72" y="688" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Inventory</text>
+</g>
+<g class="actor actor-bottom" data-id="Payments" data-label="Payments" data-type="participant">
+  <rect x="467.54599999999994" y="668" width="96.34400000000001" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="515.72" y="688" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Payments</text>
+</g>
+<g class="actor actor-bottom" data-id="Mailer" data-label="Mailer" data-type="participant">
+  <rect x="615.718" y="668" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="655.72" y="688" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Mailer</text>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <marker id="m1814eb8b-mk-arrow" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <polygon points="0,1.5 10,6 0,10.5" fill="var(--_line)" stroke="var(--_line)" stroke-width="1" stroke-linejoin="miter" />
+  </marker>
+  <marker id="m1814eb8b-mk-open" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0,1.5 L10,6 L0,10.5" fill="none" stroke="var(--_line)" stroke-width="1.25" stroke-linejoin="miter" stroke-linecap="round" />
+  </marker>
+</defs>
+</svg>

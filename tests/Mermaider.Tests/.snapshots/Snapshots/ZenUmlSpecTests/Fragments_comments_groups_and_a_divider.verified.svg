@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457.376 936" width="457.376" height="936" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<g class="box" data-label="Services">
+  <rect x="22" y="12" width="273.84000000000003" height="900" rx="12" ry="12" fill="url(#m1814eb8b-cw-p1-0)" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" />
+  <path d="M22,40 L22,24 Q22,12 34,12 L283.84000000000003,12 Q295.84000000000003,12 295.84000000000003,24 L295.84000000000003,40 Z" fill="color-mix(in srgb, #f28e2b 22%, var(--bg))" />
+  <line x1="22" y1="40" x2="295.84000000000003" y2="40" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" />
+</g>
+<text x="34" y="26" text-anchor="start" font-size="var(--fs-s)" font-weight="600" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">Services</text>
+<g class="block" data-type="loop" data-label="attempts &lt; 3">
+  <rect x="30" y="532" width="397.376" height="260" rx="10" ry="10" fill="color-mix(in srgb, #b07aa1 6%, var(--bg))" stroke="color-mix(in srgb, #b07aa1 42%, var(--bg))" stroke-width="1.25" />
+  <path d="M30,554 L30,542 Q30,532 40,532 L76.28,532 L76.28,554 Z" fill="color-mix(in srgb, #b07aa1 22%, var(--bg))" stroke="color-mix(in srgb, #b07aa1 42%, var(--bg))" stroke-width="1.25" />
+  <text x="53.14" y="543" text-anchor="middle" font-size="var(--fs-xs)" font-weight="600" fill="color-mix(in srgb, #b07aa1 44%, var(--fg))" dy="4.2">loop</text>
+  <text x="228.69" y="543" text-anchor="middle" font-size="var(--fs-s)" font-weight="600" fill="color-mix(in srgb, #b07aa1 44%, var(--fg))" dy="4.9">attempts &lt; 3</text>
+</g>
+<g class="block" data-type="try">
+  <rect x="30" y="206" width="397.376" height="250" rx="10" ry="10" fill="color-mix(in srgb, #f28e2b 6%, var(--bg))" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" />
+  <path d="M30,228 L30,216 Q30,206 40,206 L67.64,206 L67.64,228 Z" fill="color-mix(in srgb, #f28e2b 22%, var(--bg))" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" />
+  <text x="48.82" y="217" text-anchor="middle" font-size="var(--fs-xs)" font-weight="600" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.2">try</text>
+  <line x1="30" y1="288" x2="427.376" y2="288" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" stroke-dasharray="5 4" />
+  <text x="228.69" y="302" text-anchor="middle" font-size="var(--fs-s)" font-weight="600" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">catch</text>
+  <line x1="30" y1="374" x2="427.376" y2="374" stroke="color-mix(in srgb, #f28e2b 42%, var(--bg))" stroke-width="1.25" stroke-dasharray="5 4" />
+  <text x="228.69" y="388" text-anchor="middle" font-size="var(--fs-s)" font-weight="600" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">finally</text>
+</g>
+<g class="block" data-type="par">
+  <rect x="30" y="628" width="397.376" height="164" rx="10" ry="10" fill="color-mix(in srgb, #76b7b2 6%, var(--bg))" stroke="color-mix(in srgb, #76b7b2 42%, var(--bg))" stroke-width="1.25" />
+  <path d="M30,650 L30,638 Q30,628 40,628 L71.96,628 L71.96,650 Z" fill="color-mix(in srgb, #76b7b2 22%, var(--bg))" stroke="color-mix(in srgb, #76b7b2 42%, var(--bg))" stroke-width="1.25" />
+  <text x="50.98" y="639" text-anchor="middle" font-size="var(--fs-xs)" font-weight="600" fill="color-mix(in srgb, #76b7b2 44%, var(--fg))" dy="4.2">par</text>
+  <line x1="30" y1="734" x2="427.376" y2="734" stroke="color-mix(in srgb, #76b7b2 42%, var(--bg))" stroke-width="1.25" stroke-dasharray="5 4" />
+</g>
+<line class="lifeline" data-actor="API" x1="70" y1="86" x2="70" y2="866" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="BookingService" x1="218.92000000000002" y1="86" x2="218.92000000000002" y2="866" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="Consumer" x1="377.608" y1="86" x2="377.608" y2="866" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<g class="message" data-from="Consumer" data-to="API" data-label="Book something" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="377.608" y1="168" x2="70" y2="168" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="172.154" y="143.2" width="103.29999999999998" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="223.8" y="154" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">Book something</text>
+</g>
+<g class="message" data-from="API" data-to="BookingService" data-label="Start booking process" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="264" x2="218.92000000000002" y2="264" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="75.36800000000001" y="239.2" width="138.184" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="144.46" y="250" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">Start booking process</text>
+</g>
+<g class="message" data-from="API" data-to="Consumer" data-label="show failure" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="350" x2="377.608" y2="350" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="182.414" y="325.2" width="82.78" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="223.8" y="336" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">show failure</text>
+</g>
+<g class="message" data-from="API" data-to="BookingService" data-label="rollback status" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="436" x2="218.92000000000002" y2="436" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="95.54600000000002" y="411.2" width="97.82799999999997" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="144.46" y="422" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">rollback status</text>
+</g>
+<g class="message" data-from="API" data-to="Consumer" data-label="still trying" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="590" x2="377.608" y2="590" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="189.25400000000002" y="565.2" width="69.1" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="223.8" y="576" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">still trying</text>
+</g>
+<g class="message" data-from="API" data-to="BookingService" data-label="ping" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="686" x2="218.92000000000002" y2="686" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="123.93200000000002" y="661.2" width="41.056" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="144.46" y="672" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">ping</text>
+</g>
+<g class="message" data-from="API" data-to="Consumer" data-label="wait" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="70" y1="772" x2="377.608" y2="772" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="204.644" y="747.2" width="38.32" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="223.8" y="758" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">wait</text>
+</g>
+<g class="sequence-note" data-position="over" data-actors="Consumer,API">
+<g class="note">
+  <rect x="152.00000000000003" y="96" width="133.83999999999997" height="38" rx="4" ry="4" fill="color-mix(in srgb, var(--accent, var(--fg)) 9%, var(--bg))" stroke="color-mix(in srgb, var(--accent, var(--fg)) 42%, var(--bg))" stroke-width="1" />
+  <rect x="152.00000000000003" y="96" width="3" height="38" fill="var(--accent, var(--fg))" />
+  <text x="220.42" y="115" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="color-mix(in srgb, var(--accent, var(--fg)) 44%, var(--fg))" dy="4.2">start the booking</text>
+</g>
+</g>
+<g class="sequence-note" data-position="over" data-actors="API,Consumer">
+<g class="note">
+  <rect x="44" y="466" width="369.376" height="38" rx="4" ry="4" fill="color-mix(in srgb, var(--accent, var(--fg)) 9%, var(--bg))" stroke="color-mix(in srgb, var(--accent, var(--fg)) 42%, var(--bg))" stroke-width="1" />
+  <rect x="44" y="466" width="3" height="38" fill="var(--accent, var(--fg))" />
+  <text x="230.19" y="485" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="color-mix(in srgb, var(--accent, var(--fg)) 44%, var(--fg))" dy="4.2">retries</text>
+</g>
+</g>
+<g class="actor" data-id="API" data-label="API" data-type="participant">
+  <rect x="30" y="46" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="70" y="66" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">API</text>
+</g>
+<g class="actor" data-id="BookingService" data-label="BookingService" data-type="participant">
+  <rect x="150" y="46" width="137.84" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="218.92" y="66" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">BookingService</text>
+</g>
+<g class="actor" data-id="Consumer" data-label="Consumer" data-type="participant">
+  <rect x="327.84000000000003" y="46" width="99.536" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="377.61" y="66" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Consumer</text>
+</g>
+<g class="actor actor-bottom" data-id="API" data-label="API" data-type="participant">
+  <rect x="30" y="866" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="70" y="886" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">API</text>
+</g>
+<g class="actor actor-bottom" data-id="BookingService" data-label="BookingService" data-type="participant">
+  <rect x="150" y="866" width="137.84" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="218.92" y="886" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">BookingService</text>
+</g>
+<g class="actor actor-bottom" data-id="Consumer" data-label="Consumer" data-type="participant">
+  <rect x="327.84000000000003" y="866" width="99.536" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="377.61" y="886" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Consumer</text>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-cw-p1-0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #f28e2b 2.1%, var(--bg))" /><stop offset="0.55" stop-color="color-mix(in srgb, #f28e2b 6%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #f28e2b 6%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <marker id="m1814eb8b-mk-open" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0,1.5 L10,6 L0,10.5" fill="none" stroke="var(--_line)" stroke-width="1.25" stroke-linejoin="miter" stroke-linecap="round" />
+  </marker>
+</defs>
+</svg>

@@ -1,0 +1,14 @@
+zenuml
+    @Actor
+    // a comment on a participant is not drawn
+    A
+    x = 
+    await A.load()
+    opt
+    try {
+      A->B: work
+    } catch(Timeout e) {
+      A->B: retry
+    } finally {
+    }
+    // a trailing comment is not drawn

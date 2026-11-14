@@ -1,0 +1,48 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source aa1856fa9700853d
+accept	yes
+drawn	yes
+fragment	loop	attempts < 3
+fragment	par
+fragment	try
+group	Backend	API,BookingService
+label	API
+label	Audit
+label	Backend
+label	Booking
+label	BookingService
+label	Calendar
+label	Client
+label	attempts < 3
+label	block slot
+label	book(slot)
+label	booking
+label	booking:Booking
+label	catch(Timeout e)
+label	confirm(booking)
+label	confirmed
+label	finally
+label	log attempt
+label	retry later
+label	start attempts
+label	«slot»
+message	async	API	Audit	log attempt
+message	async	API	Audit	start attempts
+message	async	API	Calendar	block slot
+message	async	API	Client	confirmed
+message	async	API	Client	retry later
+message	create	API	booking:Booking	«slot»
+message	return	booking:Booking	API	booking
+message	sync	API	BookingService	confirm(booking)
+message	sync	Client	API	book(slot)
+participant	0	API	API
+participant	1	BookingService	BookingService
+participant	2	Client	Client
+participant	3	booking:Booking	booking:Booking
+participant	4	Audit	Audit
+participant	5	Calendar	Calendar
+section	par
+section	try	catch(Timeout e)
+section	try	finally
+title	Booking

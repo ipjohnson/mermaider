@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5b94bc24f6cb4921
+accept	yes
+drawn	yes
+label	Aliases
+label	Alice
+label	Great!
+label	Hello John, how are you?
+label	John
+message	async	A	J	Hello John, how are you?
+message	async	J	A	Great!
+participant	0	A	Alice
+participant	1	J	John
+title	Aliases

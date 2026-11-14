@@ -437,6 +437,14 @@ internal static class DiagramSvgStage
 					sb = WardleySvgRenderer.RenderToBuilder(parsed, context);
 					break;
 				}
+			case DiagramType.ZenUml:
+				{
+					var parsed = ZenUmlParser.Parse(diagram.Source);
+					ResourceGuard.CheckElements(parsed.Participants.Count + ZenUmlParser.CountStatements(parsed.Statements), limits);
+					ct.ThrowIfCancellationRequested();
+					sb = ZenUmlSvgRenderer.RenderToBuilder(parsed, context);
+					break;
+				}
 			default:
 				{
 					// Flowchart, State — primary Sugiyama path, most DoS-critical

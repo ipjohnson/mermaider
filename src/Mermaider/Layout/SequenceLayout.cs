@@ -27,8 +27,20 @@ internal static class SequenceLayout
 	private const double NoteFontSize = 14;
 	private const double NestingOffset = 4;
 	private const double BoxHeaderRoom = 16;
+	private const double ActivationTail = 16;
 
-	internal static PositionedSequenceDiagram Layout(SequenceDiagram diagram)
+	/// <summary>
+	/// Lays out <paramref name="diagram"/>. <paramref name="top"/> moves everything down, for a title above the
+	/// participants. Each of <paramref name="activationEnds"/> closes the actor's newest activation just below the message
+	/// at that index, for a call that ends without a message back. With <paramref name="notesBelowFrames"/>, a note after
+	/// the last message of a frame goes below the frame's bottom edge instead of over it.
+	/// </summary>
+	internal static PositionedSequenceDiagram Layout(
+		SequenceDiagram diagram,
+		double top = 0,
+		IReadOnlyList<(string ActorId, int AfterIndex)>? activationEnds = null,
+		bool notesBelowFrames = false
+	)
 	{
 		if (diagram.Actors.Count == 0)
 		{
@@ -72,7 +84,7 @@ internal static class SequenceLayout
 			actorIndex[diagram.Actors[i].Id] = i;
 
 		// boxes put a header strip above the participants
-		var actorY = Padding + (diagram.Boxes.Count > 0 ? BoxHeaderRoom : 0);
+		var actorY = top + Padding + (diagram.Boxes.Count > 0 ? BoxHeaderRoom : 0);
 		var actors = new PositionedSequenceActor[diagram.Actors.Count];
 		for (var i = 0; i < diagram.Actors.Count; i++)
 		{
@@ -142,6 +154,16 @@ internal static class SequenceLayout
 
 		var activationStacks = new Dictionary<string, Stack<(double StartY, int Depth)>>();
 		var activations = new List<Activation>();
+		var endsAfter = new Dictionary<int, List<string>>();
+		foreach (var (actorId, afterIndex) in activationEnds ?? [])
+		{
+			if (!endsAfter.TryGetValue(afterIndex, out var ending))
+			{
+				ending = [];
+				endsAfter[afterIndex] = ending;
+			}
+			ending.Add(actorId);
+		}
 
 		for (var msgIdx = 0; msgIdx < diagram.Messages.Count; msgIdx++)
 		{
@@ -191,8 +213,30 @@ internal static class SequenceLayout
 				});
 			}
 
+			if (endsAfter.TryGetValue(msgIdx, out var endingHere))
+			{
+				foreach (var actorId in endingHere)
+				{
+					if (!activationStacks.TryGetValue(actorId, out var endStack) || endStack.Count == 0)
+						continue;
+					var (startY, depth) = endStack.Pop();
+					_ = actorIndex.TryGetValue(actorId, out var idx);
+					activations.Add(new Activation
+					{
+						ActorId = actorId,
+						X = actorCenterX[idx] - (ActivationWidth / 2) + (depth * NestingOffset),
+						TopY = startY,
+						BottomY = messageY + (isSelf ? SelfMessageHeight : 0) + ActivationTail,
+						Width = ActivationWidth,
+					});
+				}
+			}
+
 			// a note after a self-message sits below its loop, not on top of the loop's label
-			messageY += PlaceNotes(msgIdx, messageY + (isSelf ? SelfMessageHeight : 0) + 10);
+			var clearance = notesBelowFrames && notesByAfterIndex.ContainsKey(msgIdx) && diagram.Blocks.Any(b => b.EndIndex == msgIdx)
+				? BlockPadBottom + 12
+				: 0;
+			messageY += PlaceNotes(msgIdx, messageY + (isSelf ? SelfMessageHeight : 0) + 10 + clearance) + clearance;
 			messageY += isSelf ? SelfMessageHeight + MessageRowHeight : MessageRowHeight;
 		}
 

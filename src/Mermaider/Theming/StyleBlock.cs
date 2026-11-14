@@ -206,6 +206,7 @@ internal static class StyleBlock
 		DiagramType.TreeView => "tree view",
 		DiagramType.Usecase => "use case diagram",
 		DiagramType.Wardley => "Wardley map",
+		DiagramType.ZenUml => "ZenUML sequence diagram",
 		_ => "diagram"
 	};
 
