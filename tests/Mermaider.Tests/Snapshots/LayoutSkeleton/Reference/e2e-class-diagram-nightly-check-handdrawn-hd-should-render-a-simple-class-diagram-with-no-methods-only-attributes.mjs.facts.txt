@@ -5,7 +5,7 @@ accept	yes
 attribute	Duck	+String beakColor
 attribute	Duck	+float weight
 attribute	Duck	+int age
-bbox	node	Duck	12.1	12.1	170.6	171.4
-canvas	4.1	4.1	178.6	179.4
+bbox	node	Duck	12.3	12.3	171.1	171.9
+canvas	4.3	4.3	179.1	179.9
 class	Duck	Duck
 drawn	yes

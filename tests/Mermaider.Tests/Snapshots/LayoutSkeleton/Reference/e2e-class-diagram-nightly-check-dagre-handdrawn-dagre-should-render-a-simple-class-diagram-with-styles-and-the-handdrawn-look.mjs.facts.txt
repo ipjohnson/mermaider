@@ -2,7 +2,7 @@
 # mermaid 12.3.0
 # source 1fb58a2add14a748
 accept	yes
-bbox	node	Class10	8.5	8.3	90	92.4
-canvas	0.5	0.3	98	100.4
+bbox	node	Class10	8.3	8.4	89.6	92.7
+canvas	0.3	0.4	97.6	100.7
 class	Class10	Class10
 drawn	yes

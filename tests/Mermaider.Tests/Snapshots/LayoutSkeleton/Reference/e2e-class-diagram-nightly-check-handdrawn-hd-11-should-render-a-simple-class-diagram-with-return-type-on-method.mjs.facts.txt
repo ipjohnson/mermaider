@@ -3,8 +3,8 @@
 # source 42946738df584a17
 accept	yes
 attribute	Class10	int[] id
-bbox	node	Class10	12.4	12.1	193.5	171.7
-canvas	4.4	4.1	201.5	179.7
+bbox	node	Class10	11.8	12.3	194.6	171.7
+canvas	3.8	4.3	202.6	179.7
 class	Class10	Class10<T>
 drawn	yes
 method	Class10	test(int[] ids) : bool

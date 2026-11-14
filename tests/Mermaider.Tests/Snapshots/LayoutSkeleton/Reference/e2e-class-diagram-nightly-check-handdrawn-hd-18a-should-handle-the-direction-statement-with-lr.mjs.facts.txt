@@ -7,16 +7,16 @@ attribute	Bike	-name : string
 attribute	IdCard	-id : int
 attribute	IdCard	-name : string
 attribute	Student	-idCard : IdCard
-bbox	label	1	170.5	158.8	179.5	175.3
-bbox	label	1	170.5	191.2	179.5	207.7
-bbox	label	1	304.6	231.6	313.6	248.1
+bbox	label	1	170.4	158.9	179.4	175.4
+bbox	label	1	170.4	191.3	179.4	207.8
+bbox	label	1	304.6	231.7	313.6	248.2
 bbox	label	1	304.6	53.5	313.6	70
-bbox	label	carries	216.6	70	258.6	91
-bbox	label	rides	222.4	248.1	252.8	269.1
-bbox	node	Bike	320.5	190	448.3	328.2
-bbox	node	IdCard	321	12.1	457.3	150.1
-bbox	node	Student	11.9	111.5	166.4	228.7
-canvas	3.9	4.1	465.3	336.2
+bbox	label	carries	216.5	70	258.6	91
+bbox	label	rides	222.4	248.2	252.7	269.2
+bbox	node	Bike	320.8	190.2	449.7	328.5
+bbox	node	IdCard	320.7	12.1	456.5	150.2
+bbox	node	Student	12.1	111.5	166.5	228.7
+canvas	4.1	4.1	464.5	336.5
 class	Bike	Bike
 class	IdCard	IdCard
 class	Student	Student

@@ -1,0 +1,9 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 24078984295d08d5
+accept	yes
+drawn	yes
+label	expression
+label	number
+label	term
+rule	term	(<number> | ("(" <expression> ")"))

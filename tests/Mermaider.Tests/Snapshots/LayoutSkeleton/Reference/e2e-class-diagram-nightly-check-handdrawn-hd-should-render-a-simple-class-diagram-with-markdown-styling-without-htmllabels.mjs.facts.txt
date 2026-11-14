@@ -4,8 +4,8 @@
 accept	yes
 attribute	Class10	+attribute italic
 attribute	Class10	~attribute bold
-bbox	node	Class10	12.2	12	164.1	211.3
-canvas	4.2	4	172.1	219.3
+bbox	node	Class10	12.7	12	163.2	211.4
+canvas	4.7	4	171.2	219.4
 class	Class10	Class10
 drawn	yes
 method	Class10	+ swim () : a

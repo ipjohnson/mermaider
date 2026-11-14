@@ -2,12 +2,12 @@
 # mermaid 12.3.0
 # source f68325ca65b12297
 accept	yes
-bbox	group	Namespace1	7.9	10.5	110.1	278.5
-bbox	node	C1	36.6	60.5	81.5	144.7
-bbox	node	C2	36.4	168.6	82	253.1
-bbox	node	C3	145.3	102.1	191.9	186.5
-bbox	node	C4	232.4	102.5	280	186.8
-canvas	-0.1	2.5	288	286.5
+bbox	group	Namespace1	8.3	10.5	110.4	278.4
+bbox	node	C1	36.1	60.1	82.2	144.3
+bbox	node	C2	36.2	168.3	82	252.7
+bbox	node	C3	146.6	102.5	193.3	186.8
+bbox	node	C4	232.9	102.5	278.5	186.9
+canvas	0.3	2.5	286.5	286.4
 class	C1	C1
 class	C2	C2
 class	C3	C3

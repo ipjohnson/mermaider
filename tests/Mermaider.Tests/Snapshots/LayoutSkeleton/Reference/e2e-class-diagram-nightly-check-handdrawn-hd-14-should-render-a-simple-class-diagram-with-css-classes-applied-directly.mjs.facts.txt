@@ -4,8 +4,8 @@
 accept	yes
 attribute	Class10	List<int> ids
 attribute	Class10	int[] id
-bbox	node	Class10	12.5	12.3	250.5	193
-canvas	4.5	4.3	258.5	201
+bbox	node	Class10	12.5	12.2	251.1	192.9
+canvas	4.5	4.2	259.1	200.9
 class	Class10	Class10
 drawn	yes
 method	Class10	test(List<int> ids) : List<bool>

@@ -2,15 +2,15 @@
 # mermaid 12.3.0
 # source e6bf72728f785c8b
 accept	yes
-bbox	group	Platform	10.5	10.5	445	540.2
-bbox	group	Platform.Auth	34.5	296.6	209.4	515.9	Platform
-bbox	group	Platform.Data	256.7	296.4	421.3	515.9	Platform
-bbox	label	delegates	308.3	243.1	369	264.1
-bbox	label	delegates	91.6	243.1	152.3	264.1
-bbox	node	Gateway	177.5	60	284.7	183
-bbox	node	Repository	282.4	346.2	395.6	490.3
-bbox	node	UserService	60	346.3	184.2	490.6
-canvas	2.5	2.5	453	548.2
+bbox	group	Platform	10.6	10.7	443.7	540.4
+bbox	group	Platform.Auth	34.6	296.4	209.4	516	Platform
+bbox	group	Platform.Data	255.9	296.7	418.9	516	Platform
+bbox	label	delegates	306.8	243	367.6	264
+bbox	label	delegates	91.2	243	151.9	264
+bbox	node	Gateway	176.3	60.1	283.1	183.2
+bbox	node	Repository	281.6	346.2	393.6	490.5
+bbox	node	UserService	60.2	346.1	183.6	490.3
+canvas	2.6	2.7	451.7	548.4
 class	Gateway	Gateway
 class	Repository	Repository
 class	UserService	UserService

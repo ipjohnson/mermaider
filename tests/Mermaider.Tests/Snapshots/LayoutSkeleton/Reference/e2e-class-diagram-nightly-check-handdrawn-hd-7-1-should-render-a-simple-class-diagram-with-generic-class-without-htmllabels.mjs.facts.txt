@@ -6,12 +6,12 @@ attribute	Class01	int chimp
 attribute	Class01	int gorilla
 attribute	Class10	<<service>>
 attribute	Class10	int id
-bbox	label	Cool label	182.5	194.6	248.8	214.6
-bbox	node	C2	192.9	254.1	239.2	332.4
-bbox	node	Class01	12.6	12.5	135.7	154.7
-bbox	node	Class08	176	75.6	257.9	154.3
-bbox	node	Class10	297.6	12.3	442	154.9
-canvas	4.6	4.3	450	340.4
+bbox	label	Cool label	182.4	194.6	248.6	214.6
+bbox	node	C2	192.6	254.4	239.2	332.6
+bbox	node	Class01	11.7	12.3	134.3	154.9
+bbox	node	Class08	175	75.8	257.6	154.6
+bbox	node	Class10	297.2	12.2	441.6	154.8
+canvas	3.7	4.2	449.6	340.6
 class	C2	C2
 class	Class01	Class01<T>
 class	Class08	Class08

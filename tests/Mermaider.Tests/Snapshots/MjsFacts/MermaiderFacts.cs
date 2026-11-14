@@ -21,12 +21,15 @@ internal static partial class MermaiderFacts
 {
 	private const int TimeoutMs = 2000;
 
+	// Thousands of cases render in parallel, so the default 5 s deadline refuses the largest ones when the machine is busy.
+	private static readonly RenderOptions Options = new() { Limits = ResourceLimits.Default with { RenderDeadline = null } };
+
 	public static IReadOnlyList<string> For(string source)
 	{
 		string svg;
 		try
 		{
-			svg = MermaidRenderer.RenderSvg(source);
+			svg = MermaidRenderer.RenderSvg(source, Options);
 		}
 		catch (Exception e) when (e is MermaidParseException or OperationCanceledException)
 		{

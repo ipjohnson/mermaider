@@ -3,10 +3,10 @@
 # source 572c0929dce196d8
 accept	yes
 attribute	Class10	int id
-bbox	node	Class10	224	109.6	313	247.7
-bbox	note	Cool class I said it's very cool class!	184.1	12	352.9	69.4
-bbox	note	I love this diagram! Do you love it?	11.8	12.3	144	69.4
-canvas	3.8	4	360.9	255.7
+bbox	node	Class10	224.2	109.6	312.1	247.9
+bbox	note	Cool class I said it's very cool class!	184.3	12.6	352.1	69.9
+bbox	note	I love this diagram! Do you love it?	12.2	12.2	144.5	69.8
+canvas	4.2	4.2	360.1	255.9
 class	Class10	Class10
 drawn	yes
 method	Class10	size()

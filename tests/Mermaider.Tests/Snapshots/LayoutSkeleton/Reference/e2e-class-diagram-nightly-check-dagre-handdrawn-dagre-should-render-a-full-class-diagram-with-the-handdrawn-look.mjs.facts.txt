@@ -11,38 +11,38 @@ attribute	Class01	int gorilla
 attribute	Class07	Object[] elementData
 attribute	Class10	<<service>>
 attribute	Class10	int id
-bbox	label	*	315.5	334.5	324.5	351
-bbox	label	*	552.5	181.3	561.5	197.8
-bbox	label	*	582.5	335.2	591.5	351.7
-bbox	label	*	895.5	720.5	904.5	737
-bbox	label	*	991.2	558.2	1000.2	574.7
-bbox	label	1	284.6	181.2	293.6	197.7
-bbox	label	1	416.9	181.2	425.9	197.7
-bbox	label	1	530.8	175	539.8	191.5
-bbox	label	1	610	183.1	619	199.6
-bbox	label	1	718.5	481	727.5	497.5
-bbox	label	1	748.5	307.5	757.5	324
-bbox	label	Cool	95.4	276.6	124.2	297.6
-bbox	label	Cool label	1016.6	662.5	1078.9	683.5
-bbox	label	Where am i?	471.6	507.4	550.9	528.4
-bbox	label	many	436.5	334.4	472.5	350.9
-bbox	node	AveryLongClass	41.2	360.5	179.5	445.1
-bbox	node	C2	912.4	708.9	958.3	793.6
-bbox	node	C3	546.7	361.2	593.6	444.4
-bbox	node	Class01	8.2	8.2	211.9	251.9
-bbox	node	Class03	261.9	87.8	343.9	172.1
-bbox	node	Class04	262.2	360.4	344.3	445
-bbox	node	Class05	395.3	87.9	476.1	172.1
-bbox	node	Class06	394.3	360.4	476.9	445
-bbox	node	Class07	643.6	333.4	830.4	471.9
-bbox	node	Class08	1007.3	553.5	1089.5	637.6
-bbox	node	Class09	529.6	87.9	611.6	172.3
-bbox	node	Class10	880.6	322.9	1013.3	482.7
-bbox	node	Class11	1263.2	87.8	1344.4	172.4
-bbox	node	Class12	1263.2	360.3	1344.7	444.9
-bbox	note	Cool class I said it's very cool class!	862.1	101.2	1030.8	158.7
-bbox	note	I love this diagram! Do you love it?	1081	101.4	1213.6	158.6
-canvas	0.2	0.2	1352.7	801.6
+bbox	label	*	313.7	334.1	322.7	350.6
+bbox	label	*	550.4	181.1	559.4	197.6
+bbox	label	*	580.4	334.4	589.4	350.9
+bbox	label	*	892.9	719.9	901.9	736.4
+bbox	label	*	988.6	557.7	997.6	574.2
+bbox	label	1	282.8	181	291.8	197.5
+bbox	label	1	415.4	181.2	424.4	197.7
+bbox	label	1	529	174.8	538	191.3
+bbox	label	1	607.6	182.7	616.6	199.2
+bbox	label	1	716	480.5	725	497
+bbox	label	1	746	307	755	323.5
+bbox	label	Cool	94.5	276.4	123.3	297.4
+bbox	label	Cool label	1013.6	662.2	1075.8	683.2
+bbox	label	Where am i?	470.4	506.7	549.8	527.7
+bbox	label	many	435	334.1	471	350.6
+bbox	node	AveryLongClass	39.6	360	178.6	444.7
+bbox	node	C2	909.2	708.6	955.4	792.8
+bbox	node	C3	545.1	360.2	590	444
+bbox	node	Class01	8.6	8.2	210.4	251.6
+bbox	node	Class03	259.9	87.9	341.8	172.1
+bbox	node	Class04	259.9	360.2	341.8	444.5
+bbox	node	Class05	393.3	87.6	474.1	172
+bbox	node	Class06	392.2	360.2	475.5	444.6
+bbox	node	Class07	640.3	332.9	828.4	471.4
+bbox	node	Class08	1004.3	553	1085.6	637.6
+bbox	node	Class09	527.3	87.7	608.7	172
+bbox	node	Class10	878.3	322.7	1009.7	482
+bbox	node	Class11	1260.3	87.5	1341.3	171.9
+bbox	node	Class12	1261.2	360.4	1342.6	444.6
+bbox	note	Cool class I said it's very cool class!	859.9	101.2	1028.1	158.7
+bbox	note	I love this diagram! Do you love it?	1077.8	101	1210.3	158.6
+canvas	0.6	0.2	1350.6	800.8
 class	AveryLongClass	AveryLongClass
 class	C2	C2
 class	C3	C3

@@ -9810,8 +9810,24 @@ docs-railroad-011 + label | Phone Number
 docs-railroad-012 + label | Calculator Grammar
 docs-railroad-013 + label | Identifiers (keywords excluded)
 docs-railroad-014 + label | Expression Grammar
+parser-abnfdiagram-009 + label | Test Grammar
+parser-abnfdiagram-010 + label | URI
+parser-ebnfdiagram-010 + label | Test Grammar
+parser-ebnfdiagram-012 + label | Simple Expression
+parser-langium-railroad-001 + label | Example Grammar
+parser-pegdiagram-011 + label | Test Grammar
+parser-pegdiagram-012 + label | Calculator
+parser-railroaddiagram-011 + label | Test Grammar
+parser-railroaddiagram-024 + label | Simple Expression
+parser-railroaddiagram-025 + label | JSON Subset
 railroad-abnf-uri + label | URI Scheme and Port
 railroad-ebnf-csv + label | CSV Record
 railroad-ebnf-edge-cases + label | Edge cases
 railroad-ir-statement + label | Statement
 railroad-peg-list + label | Comma Separated List
+
+# By design: Mermaider draws the title of a railroad diagram that has no rules. mermaid.js 12.3.0 draws nothing for
+# it.
+parser-railroaddiagram-017 + drawn | yes
+parser-railroaddiagram-017 + label | Empty Grammar
+parser-railroaddiagram-017 - drawn | no

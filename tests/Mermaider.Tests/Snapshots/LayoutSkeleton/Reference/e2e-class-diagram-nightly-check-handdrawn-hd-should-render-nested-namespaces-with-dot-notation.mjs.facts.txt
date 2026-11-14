@@ -2,16 +2,16 @@
 # mermaid 12.3.0
 # source 5500153a7d7acbda
 accept	yes
-bbox	group	Company	10.5	10.5	563.2	590.9
-bbox	group	Company.Engineering	34.6	58.4	539.4	567.3	Company
-bbox	group	Company.Engineering.Backend	58.5	344.5	252.9	542.5	Company.Engineering
-bbox	group	Company.Engineering.Frontend	299.7	344.4	515.5	543.1	Company.Engineering
-bbox	label	leads	138.6	290.9	172.1	311.9
-bbox	label	leads	390.2	290.9	423.7	311.9
-bbox	node	Designer	324.7	394	488.8	517.3
-bbox	node	Developer	84.2	394	227.4	517.1
-bbox	node	TechLead	210.3	108.1	352.6	231
-canvas	2.5	2.5	571.2	598.9
+bbox	group	Company	10.4	10.3	564.3	592
+bbox	group	Company.Engineering	34.6	58.5	539.4	567.4	Company
+bbox	group	Company.Engineering.Backend	58.5	344.9	253.4	544	Company.Engineering
+bbox	group	Company.Engineering.Frontend	300.5	344.9	515.5	543.1	Company.Engineering
+bbox	label	leads	139	291.4	172.5	312.4
+bbox	label	leads	391	291.4	424.4	312.4
+bbox	node	Designer	326.5	394.4	490.4	517.4
+bbox	node	Developer	84.2	394.5	228.2	518.1
+bbox	node	TechLead	212	108	352.7	231.4
+canvas	2.4	2.3	572.3	600
 class	Designer	Designer
 class	Developer	Developer
 class	TechLead	TechLead

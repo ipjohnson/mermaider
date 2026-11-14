@@ -2,10 +2,10 @@
 # mermaid 12.3.0
 # source 284ff1f183eaa515
 accept	yes
-bbox	label	Cool	68.6	165.4	101.4	185.4
-bbox	node	AveryLongClass	15.5	225.3	154.9	304.3
-bbox	node	Class01	12.6	12.1	158.8	125.6
-canvas	4.6	4.1	166.8	312.3
+bbox	label	Cool	68.7	165.3	101.5	185.3
+bbox	node	AveryLongClass	16.3	225.3	154.4	304.5
+bbox	node	Class01	12.2	12.3	158.6	125.6
+canvas	4.2	4.3	166.6	312.5
 class	AveryLongClass	AveryLongClass
 class	Class01	Class01
 drawn	yes

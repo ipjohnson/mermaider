@@ -6,16 +6,16 @@ attribute	Class01	int chimp
 attribute	Class01	int gorilla
 attribute	Class10	<<service>>
 attribute	Class10	int id
-bbox	label	Cool	66.8	243.3	95.6	264.3
-bbox	label	Cool label	338.1	243.3	400.3	264.3
-bbox	node	AveryLongClass	12.5	336.4	151.1	420.8
-bbox	node	C2	346.4	336.5	392.3	420.9
-bbox	node	Class01	19.9	12	143.1	171.4
-bbox	node	Class03	183.1	86.9	289.2	171.7
-bbox	node	Class04	183.4	211.6	289	296.3
-bbox	node	Class08	329.7	87.3	410.8	171.6
-bbox	node	Class10	450.1	12.1	596.4	171.6
-canvas	4.5	4	604.4	428.9
+bbox	label	Cool	67	243.4	95.8	264.4
+bbox	label	Cool label	338.5	243.4	400.8	264.4
+bbox	node	AveryLongClass	12.8	336.5	151.7	421
+bbox	node	C2	347.3	336.4	393.2	420.5
+bbox	node	Class01	19.6	12.2	143.2	171.8
+bbox	node	Class03	183.6	87.4	289.6	172
+bbox	node	Class04	183	212	289.6	296.7
+bbox	node	Class08	329.8	87.6	411.5	172
+bbox	node	Class10	451	12.3	594.3	171.7
+canvas	4.8	4.2	602.3	429
 class	AveryLongClass	AveryLongClass
 class	C2	C2
 class	Class01	Class01<T>
