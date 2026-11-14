@@ -1,5 +1,6 @@
 using System.Buffers.Binary;
 using System.Globalization;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Xml;
 using System.Xml.Linq;
@@ -22,8 +23,8 @@ internal static class NodeAssets
 	/// <summary>Icon and image size when the source gives none, as in mermaid.js.</summary>
 	private const double DefaultSize = 48;
 
-	/// <summary>Largest side of an image drawn at its natural size.</summary>
-	private const double MaxNaturalSize = 1000;
+	/// <summary>Largest side of an icon or image, whatever its <c>w</c>, <c>h</c>, natural size and <c>constraint</c>.</summary>
+	internal const double MaxSize = 1000;
 
 	/// <summary>Space between an icon and its square, rounded or circle frame, on each side.</summary>
 	private const double FramePadding = 8;
@@ -48,11 +49,24 @@ internal static class NodeAssets
 		double LabelHeight
 	);
 
-	internal static ResolvedImage ResolveImage(string source)
+	/// <summary>
+	/// Resolved images by source string instance. Sizing, outlining, drawing and diagnosing all resolve the same node's
+	/// image, so this keeps it to one decode per render. The parser gives equal sources one instance, and an entry lives
+	/// only as long as the parsed graph that holds its source.
+	/// </summary>
+	private static readonly ConditionalWeakTable<string, StrongBox<ResolvedImage>> Resolved = [];
+
+	/// <summary>Called with the source each time an image is decoded. Tests use it to count decodes.</summary>
+	internal static Action<string>? Decoded;
+
+	internal static ResolvedImage ResolveImage(string source) => Resolved.GetValue(source, static s => new StrongBox<ResolvedImage>(Decode(s))).Value;
+
+	private static ResolvedImage Decode(string source)
 	{
-		if (SvgSanitizer.IsSafeImageHref(source))
+		Decoded?.Invoke(source);
+		if (SvgSanitizer.DecodeSafeImageHref(source) is var (bytes, isPng))
 		{
-			var (w, h) = NaturalSize(source);
+			var (w, h) = Fit(isPng ? PngSize(bytes) : SvgSize(bytes));
 			return new ResolvedImage(source, w, h, null);
 		}
 		var problem = source.StartsWith("data:", StringComparison.OrdinalIgnoreCase)
@@ -219,7 +233,7 @@ internal static class NodeAssets
 	{
 		if (asset.Kind == NodeAssetKind.Icon)
 		{
-			var size = Math.Max(asset.Height ?? DefaultSize, asset.Width ?? DefaultSize);
+			var size = Math.Min(MaxSize, Math.Max(asset.Height ?? DefaultSize, asset.Width ?? DefaultSize));
 			return (size, size);
 		}
 
@@ -228,11 +242,21 @@ internal static class NodeAssets
 		{
 			var aspect = natural.Width / natural.Height;
 			if (asset.Height is { } h)
-				return (h * aspect, h);
+				return Fit((h * aspect, h));
 			if (asset.Width is { } w)
-				return (w, w / aspect);
+				return Fit((w, w / aspect));
 		}
-		return (asset.Width ?? natural.Width, asset.Height ?? natural.Height);
+		return Fit((asset.Width ?? natural.Width, asset.Height ?? natural.Height));
+	}
+
+	/// <summary>Scales a size down, keeping its aspect ratio, so neither side exceeds <see cref="MaxSize"/>. A size that is not positive and finite becomes the default.</summary>
+	private static (double Width, double Height) Fit((double Width, double Height) size)
+	{
+		var (w, h) = size;
+		if (w <= 0 || h <= 0 || !double.IsFinite(w) || !double.IsFinite(h))
+			return (DefaultSize, DefaultSize);
+		var scale = Math.Min(1, MaxSize / Math.Max(w, h));
+		return (w * scale, h * scale);
 	}
 
 	private static (double Width, double Height) FrameSize(NodeAsset asset, (double Width, double Height) art)
@@ -255,18 +279,7 @@ internal static class NodeAssets
 		return (m.Width, m.Height);
 	}
 
-	/// <summary>The image's own size: a PNG's IHDR, or an SVG's width and height or viewBox. Scaled to fit <see cref="MaxNaturalSize"/>.</summary>
-	private static (double Width, double Height) NaturalSize(string href)
-	{
-		var comma = href.IndexOf(',');
-		var bytes = Convert.FromBase64String(href[(comma + 1)..]);
-		var (w, h) = href.StartsWith("data:image/png", StringComparison.Ordinal) ? PngSize(bytes) : SvgSize(bytes);
-		if (w <= 0 || h <= 0 || !double.IsFinite(w) || !double.IsFinite(h))
-			return (DefaultSize, DefaultSize);
-		var scale = Math.Min(1, MaxNaturalSize / Math.Max(w, h));
-		return (w * scale, h * scale);
-	}
-
+	/// <summary>A PNG's size from its IHDR.</summary>
 	private static (double Width, double Height) PngSize(byte[] bytes) =>
 		bytes.Length >= 24 ? (BinaryPrimitives.ReadUInt32BigEndian(bytes.AsSpan(16, 4)), BinaryPrimitives.ReadUInt32BigEndian(bytes.AsSpan(20, 4))) : (0, 0);
 
