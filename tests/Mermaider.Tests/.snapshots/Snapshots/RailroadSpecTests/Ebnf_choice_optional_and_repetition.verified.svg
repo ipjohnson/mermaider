@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595 446" width="595" height="446" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<g class="diagram-title">
+  <rect x="20" y="25.5" width="9" height="9" rx="2" ry="2" fill="var(--accent, var(--fg))" />
+  <text x="36" y="30" text-anchor="start" font-size="var(--fs-l)" font-weight="700" fill="var(--_text)" dy="6.3">Signed Number</text>
+</g>
+<g class="railroad-rule" data-rule="number">
+  <text x="20" y="95.1" text-anchor="start" font-size="var(--fs-s)" font-weight="700" fill="var(--_text)" dy="4.9">number =</text>
+  <path class="railroad-track" d="M 123.42 95.1 L 143.42 95.1 M 194.08 95.1 L 214.08 95.1 M 123.42 95.1 A 10 10 0 0 0 133.42 85.1 L 133.42 66 A 10 10 0 0 1 143.42 56 L 194.08 56 A 10 10 0 0 1 204.08 66 L 204.08 85.1 A 10 10 0 0 0 214.08 95.1 M 214.08 95.1 L 224.08 95.1 M 273.06 95.1 L 283.06 95.1 M 283.06 95.1 L 303.06 95.1 M 352.04 95.1 L 372.04 95.1 M 352.04 95.1 A 10 10 0 0 1 362.04 105.1 L 362.04 124.2 A 10 10 0 0 1 352.04 134.2 L 303.06 134.2 A 10 10 0 0 1 293.06 124.2 L 293.06 105.1 A 10 10 0 0 1 303.06 95.1 M 283.06 95.1 A 10 10 0 0 0 293.06 85.1 L 293.06 66 A 10 10 0 0 1 303.06 56 L 352.04 56 A 10 10 0 0 1 362.04 66 L 362.04 85.1 A 10 10 0 0 0 372.04 95.1 M 372.04 95.1 L 382.04 95.1 M 440.24 95.1 L 450.24 95.1 M 450.24 95.1 L 470.24 95.1 M 519.22 95.1 L 539.22 95.1 M 519.22 95.1 A 10 10 0 0 1 529.22 105.1 L 529.22 124.2 A 10 10 0 0 1 519.22 134.2 L 470.24 134.2 A 10 10 0 0 1 460.24 124.2 L 460.24 105.1 A 10 10 0 0 1 470.24 95.1 M 382.04 95.1 L 402.04 95.1 M 539.22 95.1 L 559.22 95.1 M 382.04 95.1 A 10 10 0 0 0 392.04 85.1 L 392.04 66 A 10 10 0 0 1 402.04 56 L 539.22 56 A 10 10 0 0 1 549.22 66 L 549.22 85.1 A 10 10 0 0 0 559.22 95.1 M 108.42 95.1 L 123.42 95.1 M 559.22 95.1 L 564.22 95.1" fill="none" stroke="var(--_line)" stroke-width="1.5" stroke-linecap="round" />
+  <circle cx="103.42" cy="95.1" r="5" fill="var(--accent, var(--fg))" />
+  <circle cx="569.22" cy="95.1" r="5" fill="none" stroke="var(--accent, var(--fg))" stroke-width="2" />
+<circle cx="569.22" cy="95.1" r="2" fill="var(--accent, var(--fg))" />
+  <g class="node railroad-nonterminal" data-kind="nonterminal">
+    <rect x="143.42" y="76" width="50.66" height="38.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="168.75" y="95.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #64748b 44%, var(--fg))" dy="4.9">sign</text>
+  </g>
+  <g class="node railroad-nonterminal" data-kind="nonterminal">
+    <rect x="224.08" y="76" width="48.98" height="38.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="248.57" y="95.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #64748b 44%, var(--fg))" dy="4.9">digit</text>
+  </g>
+  <g class="node railroad-nonterminal" data-kind="nonterminal">
+    <rect x="303.06" y="76" width="48.98" height="38.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="327.55" y="95.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #64748b 44%, var(--fg))" dy="4.9">digit</text>
+  </g>
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="402.04" y="76" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="421.14" y="95.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">.</text>
+  </g>
+  <g class="node railroad-nonterminal" data-kind="nonterminal">
+    <rect x="470.24" y="76" width="48.98" height="38.2" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="494.73" y="95.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #64748b 44%, var(--fg))" dy="4.9">digit</text>
+  </g>
+</g>
+<g class="railroad-rule" data-rule="sign">
+  <text x="20" y="204.4" text-anchor="start" font-size="var(--fs-s)" font-weight="700" fill="var(--_text)" dy="4.9">sign =</text>
+  <path class="railroad-track" d="M 101.58 204.4 A 10 10 0 0 0 111.58 194.4 L 111.58 191.3 A 10 10 0 0 1 121.58 181.3 L 121.58 181.3 M 159.78 181.3 L 159.78 181.3 A 10 10 0 0 1 169.78 191.3 L 169.78 194.4 A 10 10 0 0 0 179.78 204.4 M 101.58 204.4 A 10 10 0 0 1 111.58 214.4 L 111.58 217.5 A 10 10 0 0 0 121.58 227.5 L 121.58 227.5 M 159.78 227.5 L 159.78 227.5 A 10 10 0 0 0 169.78 217.5 L 169.78 214.4 A 10 10 0 0 1 179.78 204.4 M 86.58 204.4 L 101.58 204.4 M 179.78 204.4 L 184.78 204.4" fill="none" stroke="var(--_line)" stroke-width="1.5" stroke-linecap="round" />
+  <circle cx="81.57999999999998" cy="204.39999999999998" r="5" fill="var(--accent, var(--fg))" />
+  <circle cx="189.77999999999997" cy="204.39999999999998" r="5" fill="none" stroke="var(--accent, var(--fg))" stroke-width="2" />
+<circle cx="189.77999999999997" cy="204.39999999999998" r="2" fill="var(--accent, var(--fg))" />
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="121.58" y="162.2" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="140.68" y="181.3" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">+</text>
+  </g>
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="121.58" y="208.4" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="140.68" y="227.5" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">-</text>
+  </g>
+</g>
+<g class="railroad-rule" data-rule="digit">
+  <text x="20" y="339.9" text-anchor="start" font-size="var(--fs-s)" font-weight="700" fill="var(--_text)" dy="4.9">digit =</text>
+  <path class="railroad-track" d="M 99.9 339.9 A 10 10 0 0 0 109.9 329.9 L 109.9 303.7 A 10 10 0 0 1 119.9 293.7 L 119.9 293.7 M 158.1 293.7 L 158.1 293.7 A 10 10 0 0 1 168.1 303.7 L 168.1 329.9 A 10 10 0 0 0 178.1 339.9 M 99.9 339.9 L 119.9 339.9 M 158.1 339.9 L 178.1 339.9 M 99.9 339.9 A 10 10 0 0 1 109.9 349.9 L 109.9 376.1 A 10 10 0 0 0 119.9 386.1 L 119.9 386.1 M 158.1 386.1 L 158.1 386.1 A 10 10 0 0 0 168.1 376.1 L 168.1 349.9 A 10 10 0 0 1 178.1 339.9 M 84.9 339.9 L 99.9 339.9 M 178.1 339.9 L 183.1 339.9" fill="none" stroke="var(--_line)" stroke-width="1.5" stroke-linecap="round" />
+  <circle cx="79.9" cy="339.90000000000003" r="5" fill="var(--accent, var(--fg))" />
+  <circle cx="188.10000000000002" cy="339.90000000000003" r="5" fill="none" stroke="var(--accent, var(--fg))" stroke-width="2" />
+<circle cx="188.10000000000002" cy="339.90000000000003" r="2" fill="var(--accent, var(--fg))" />
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="119.9" y="274.6" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="139" y="293.7" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">0</text>
+  </g>
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="119.9" y="320.8" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="139" y="339.9" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">1</text>
+  </g>
+  <g class="node railroad-terminal" data-kind="terminal">
+    <rect x="119.9" y="367" width="38.2" height="38.2" rx="19.1" ry="19.1" fill="url(#m1814eb8b-ng-p1)" stroke="color-mix(in srgb, #f28e2b 74%, var(--fg))" stroke-width="1.25" />
+    <text x="139" y="386.1" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="color-mix(in srgb, #f28e2b 44%, var(--fg))" dy="4.9">2</text>
+  </g>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <linearGradient id="m1814eb8b-ng-p1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #f28e2b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #f28e2b 7%, var(--bg))" /></linearGradient>
+</defs>
+</svg>

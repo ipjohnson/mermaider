@@ -1,0 +1,22 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 41e29febcb6136f5
+accept	yes
+drawn	yes
+label	ALPHA
+label	ALPHA
+label	DIGIT
+label	DIGIT
+label	address
+label	domain
+label	domain
+label	label
+label	label
+label	label
+label	local-part
+label	local-part
+rule	address	(<local-part> "@" <domain>)
+rule	domain	(<label> {("." <label>)}0..)
+rule	label	{(<ALPHA> | <DIGIT> | "-")}1..
+rule	local-part	{(<ALPHA> | <DIGIT> | "." | "-")}1..
+title	Email Address

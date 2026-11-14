@@ -1,6 +1,6 @@
 # Diagram types
 
-Mermaider renders 26 Mermaid diagram types. Every type shares the same design system: set `Bg`, `Fg` and `Accent` once in `RenderOptions`, or pick a [theme or style preset](../theming/index.md), and the change applies everywhere.
+Mermaider renders 28 Mermaid diagram types. Every type shares the same design system: set `Bg`, `Fg` and `Accent` once in `RenderOptions`, or pick a [theme or style preset](../theming/index.md), and the change applies everywhere.
 
 Each image below renders the source under it, in the default Quiet style with the `zinc-light` theme.
 
@@ -666,6 +666,50 @@ Customer->Shop.checkout(cart) {
   annotator icons other than `@Actor` (the participant is drawn as a box), stereotypes, widths and colours, the
   modifiers `const`, `readonly`, `static` and `await`, a comment anywhere but above a message or fragment, a fragment or
   section without a message, and incomplete messages such as `A->` or `x =`.
+
+### Railroad (`railroad-beta`, `railroad-ebnf-beta`, `railroad-abnf-beta`, `railroad-peg-beta`)
+
+Railroad (syntax) diagrams draw grammar rules, one row per rule: the rule's name, a start marker, the tracks and an end
+marker. Nonterminals (rule references) are boxes, terminals (literals) are pills, and special sequences, PEG predicates
+and PEG's `.` are dashed boxes. A choice stacks its alternatives, an optional adds a bypass above, and a repetition adds a
+loop below, with a bypass above when it may repeat zero times. The four headers are four notations for the same drawing.
+Geometry is mermaid 12.3.0's.
+
+![Railroad](../images/diagrams/railroad.svg)
+
+```text
+railroad-ebnf-beta
+title "CSV Record"
+(* ISO 14977 comment *)
+record = field { "," field } ;
+field = quoted | bare ;
+quoted = '"' { char - '"' | '""' } '"' ;
+bare = [ char { char } ] ;
+char = ? any character except a line break ? ;
+```
+
+- Every notation takes `title`, `accTitle:` and `accDescr:` before the first rule, and `%%` comments. Each rule ends
+  with `;`.
+- `railroad-ebnf-beta`: `name = …;` or `name ::= …;`. Sequence is `A B` or `A , B`, choice `A | B`, optional `[ A ]` or
+  `A?`, zero or more `{ A }` or `A*`, one or more `A+`, grouping `( A )`, special `? text ?`, and `A - B` draws A, `-`
+  and B in sequence. Strings are `"…"` or `'…'` with backslash escapes. Comments are `/* … */` and `(* … *)`.
+- `railroad-abnf-beta` (RFC 5234): `name = …;`, alternatives `A / B`, concatenation `A B`, `( )` and optional `[ ]`.
+  Repeats are `*A`, `n*A`, `*mA`, `n*mA` and `nA`; Mermaider writes the bounds under the loop (`×3`, `×2–4`, `×2+`),
+  which mermaid does not. Terminals are `"…"` (no escapes) and `%x41`, `%d65`, `%b1000001` values with ranges and dots.
+  A comment runs from `;` to the end of the line, so a rule's `;` must end its line: `a = b ; note` is refused, as
+  mermaid refuses it.
+- `railroad-peg-beta`: `Name <- …;`, ordered choice `/`, sequence `A B`, suffixes `?`, `*` and `+`, predicates `&A` and
+  `!A`, any character `.`, and `#` comments. A predicate is one dashed box labelled with its operand.
+- `railroad-beta`: `name = expression ;` with `terminal("…")`, `nonterminal("…")`, `special("…")`, `sequence(a, …)`,
+  `choice(a, …)`, `optional(a)`, `zeroOrMore(a)` and `oneOrMore(a)`. Comments are `/* … */`. A constructor name cannot
+  name a rule.
+- Mermaider draws the title, which mermaid's railroad renderer leaves out.
+- Input mermaid refuses, such as an empty alternative, a missing `;`, a PEG character class `[a-z]` or a header in
+  another case, throws a `MermaidParseException` naming the line. As in mermaid, a name starting with `title` is read as
+  a title. Input mermaid accepts but Mermaider does not draw is listed on the parsed model's `Unused` with its line and
+  the reason: the keys of the `railroad` config section in front matter or `%%{init}%%` (sizes, spacing and colours come
+  from the design system), and the operand of a PEG predicate that is not a single item, drawn as `(...)` as mermaid
+  draws it. Definitions nested deeper than `ResourceLimits.MaxRecursionDepth` throw a `MermaidResourceLimitException`.
 
 ### Treemap
 

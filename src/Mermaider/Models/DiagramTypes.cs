@@ -47,6 +47,7 @@ public enum DiagramTypes : long
 	Usecase = 1L << 24,
 	Wardley = 1L << 25,
 	ZenUml = 1L << 26,
+	Railroad = 1L << 27,
 
 	/// <summary>
 	/// Diagram types with stable, non-beta Mermaid syntax.
@@ -57,9 +58,9 @@ public enum DiagramTypes : long
 
 	/// <summary>
 	/// Diagram types that use a <c>-beta</c> keyword in Mermaid source.
-	/// Radar, Treemap, Venn, Sankey, XyChart, Packet, Architecture, Block, TreeView, Usecase, Wardley.
+	/// Radar, Treemap, Venn, Sankey, XyChart, Packet, Architecture, Block, TreeView, Usecase, Wardley, Railroad.
 	/// </summary>
-	Beta = Radar | Treemap | Venn | Sankey | XyChart | Packet | Architecture | Block | TreeView | Usecase | Wardley,
+	Beta = Radar | Treemap | Venn | Sankey | XyChart | Packet | Architecture | Block | TreeView | Usecase | Wardley | Railroad,
 
 	/// <summary>All diagram types — both <see cref="Stable"/> and <see cref="Beta"/>. This is the default.</summary>
 	All = Stable | Beta,
@@ -96,6 +97,7 @@ internal static class DiagramTypeExtensions
 		DiagramType.Usecase => DiagramTypes.Usecase,
 		DiagramType.Wardley => DiagramTypes.Wardley,
 		DiagramType.ZenUml => DiagramTypes.ZenUml,
+		DiagramType.Railroad => DiagramTypes.Railroad,
 		_ => 0,
 	};
 }

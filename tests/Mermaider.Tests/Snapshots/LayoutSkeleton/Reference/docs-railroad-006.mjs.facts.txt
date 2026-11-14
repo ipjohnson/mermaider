@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 9794f34e0a3fb230
+accept	yes
+drawn	yes
+label	0
+label	1
+label	2
+label	a
+label	b
+label	c
+label	d
+label	digit
+label	digit
+label	e
+label	identifier
+label	letter
+label	letter
+label	letter
+rule	digit	("0" | "1" | "2")
+rule	identifier	(<letter> {(<letter> | <digit> | "_")}0..)
+rule	letter	("a" | "b" | "c" | "d" | "e")
+title	Identifier with Repetition

@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3fab267fc31fd24f
+accept	yes
+drawn	yes
+label	!Keyword
+label	Identifier
+label	Keyword
+label	Letter
+label	Letter
+label	Letter
+label	a
+label	b
+label	c
+label	else
+label	if
+label	while
+rule	Identifier	(?!Keyword? <Letter> {<Letter>}0..)
+rule	Keyword	("if" | "else" | "while")
+rule	Letter	("a" | "b" | "c" | "_")
+title	Identifiers (keywords excluded)

@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0e1c852216c043a2
+accept	yes
+drawn	yes
+label	a
+label	a
+label	a"b
+label	b
+label	b
+label	c
+label	c
+label	c
+label	d
+label	escaped
+label	except
+label	group
+label	letters
+label	other-rule
+label	rule
+label	x
+label	y
+rule	escaped	("a"b" "c")
+rule	except	((<a> "-" <b>) <c>)
+rule	group	((<a> | <b>) [<c>] {<d>}0..)
+rule	rule	(?letters? [<other-rule>] {<x>}0.. {<y>}1..)
+title	Edge cases

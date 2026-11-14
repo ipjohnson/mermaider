@@ -452,3 +452,21 @@ test_entity - satisfies -> test_req
   `g.participant-group`. Message ends are the participants nearest the line's ends; a creation ends at the box drawn
   level with it.
 - Valid input that is not drawn goes to `ZenUmlDiagram.Unused` with its line, until ipjohnson/AgentDriver#4284.
+
+### Railroad (2026-11)
+
+- Four headers, one type: `railroad-beta`, `railroad-ebnf-beta`, `railroad-abnf-beta` and `railroad-peg-beta` each have
+  their own Langium grammar in mermaid (`packages/parser/src/language/railroad*/`) and their own parser
+  (`RailroadIrParser`, `RailroadEbnfParser`, `RailroadAbnfParser`, `RailroadPegParser`), all filling one
+  `RailroadDiagram`, as mermaid's four parsers fill one db. Detector: `^railroad-(?:ebnf-|abnf-|peg-)?beta`,
+  case-insensitive; the parser then requires the exact keyword, as Langium does.
+- `RailroadReader` lexes like Langium: whitespace, then keywords longest first, then terminals in grammar order. A
+  keyword yields to a terminal it can start when that terminal matches more: EBNF `?` to `? special ?`, `(` to
+  `(* comment *)`, ABNF `;` to a `;` comment (so `a = b ; note` loses its `;` and is refused), and a constructor name
+  to a longer identifier. `TITLE` comes before the identifier, so `titles = …` is a title and a rule `s`.
+- Single-item sequences and choices collapse, and EBNF `A - B` is the sequence A, `-`, B, exactly as mermaid's
+  transforms build them, so the facts compare rule by rule.
+- Geometry is mermaid's `railroadRenderer.ts`; Mermaider adds the title (mermaid draws none, baselined) and ABNF repeat
+  bounds. Postfixes nest without parser recursion, so each rule's depth is checked after parsing.
+- The facts extractor reads `db.getRules()` and writes each rule's tree in a compact notation shared with
+  `MermaiderFacts`.
