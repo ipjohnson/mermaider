@@ -68,8 +68,19 @@ await page.addScriptTag({
 	content: `{ const now = Date.UTC(2000, 0, 1); const D = Date;
 	globalThis.Date = class extends D { constructor(...a) { super(...(a.length ? a : [now])) } static now() { return now } } }`,
 })
+// @zenuml/core reads localStorage, which a page made with setContent may not touch; an in-memory store stands in.
+await page.addScriptTag({
+	content: `{ const m = new Map(); Object.defineProperty(window, 'localStorage', { value: {
+		getItem: k => m.get(k) ?? null, setItem: (k, v) => m.set(k, String(v)), removeItem: k => m.delete(k), clear: () => m.clear(),
+		key: i => [...m.keys()][i] ?? null, get length() { return m.size } } }) }`,
+})
 await page.addScriptTag({ path: path.join(mermaidDir, 'dist', 'mermaid.min.js') })
-await page.evaluate(() => mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' }))
+// ZenUML is an external diagram: mermaid-cli registers @mermaid-js/mermaid-zenuml, so the facts do too.
+await page.addScriptTag({ path: path.join(root, 'node_modules', '@mermaid-js', 'mermaid-zenuml', 'dist', 'mermaid-zenuml.min.js') })
+await page.evaluate(async () => {
+	await mermaid.registerExternalDiagrams([globalThis.__esbuild_esm_mermaid_nm['mermaid-zenuml'].default])
+	mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' })
+})
 
 fs.mkdirSync(factsDir, { recursive: true })
 if (svgDir) fs.mkdirSync(svgDir, { recursive: true })
@@ -170,7 +181,7 @@ async function extractFacts(source, name, shapes) {
 		classDiagram: () => { classDiagram(); classBoxes() },
 		sequence: () => { sequence(); sequenceBoxes() },
 		er, pie, quadrantChart: quadrant, timeline, gitGraph, radar, treemap, venn, mindmap, gantt, journey, c4, sankey,
-		xychart, requirement, packet, kanban, architecture, block, treeView, usecase, wardley,
+		xychart, requirement, packet, kanban, architecture, block, treeView, usecase, wardley, zenuml,
 	}
 	const extract = extractors[type]
 	if (!extract) return { unknownType: type }
@@ -551,6 +562,65 @@ async function extractFacts(source, name, shapes) {
 		if (d.annotationsBox) facts.push(tab('annotations', num(d.annotationsBox.x), num(d.annotationsBox.y)))
 		for (const a of d.accelerators) { facts.push(tab('accelerator', a.name, num(a.x), num(a.y))); shown.push(a.name) }
 		for (const a of d.deaccelerators) { facts.push(tab('deaccelerator', a.name, num(a.x), num(a.y))); shown.push(a.name) }
+		labels(shown)
+	}
+
+	// DOM only: the plugin's db is empty, because @zenuml/core parses and draws in one call. Title; participants left to
+	// right with their label and whether an icon is drawn; groups with their members; messages by kind (a closed arrow head
+	// is a sync call) with the participants nearest their ends; fragments with their condition and each later section's
+	// label; comments and dividers. Labels: all of those texts.
+	function zenuml() {
+		const shown = []
+		const n = (el, a) => Number(el.getAttribute(a))
+		const title = text(dom.querySelector('.frame-title'))
+		if (title) { facts.push(tab('title', title)); shown.push(title) }
+		const parts = [...dom.querySelectorAll('g.participant')].map(g => {
+			const r = g.querySelector('rect.participant-box')
+			return { id: g.dataset.participant, label: text(g.querySelector('.participant-label')), icon: !!g.querySelector('.participant-icon'), x: n(r, 'x') + n(r, 'width') / 2, top: n(r, 'y'), bottom: n(r, 'y') + n(r, 'height') }
+		}).sort((a, b) => a.x - b.x)
+		parts.forEach((p, i) => {
+			facts.push(tab('participant', String(i), p.id, p.label))
+			if (p.icon) facts.push(tab('icon', p.id))
+			shown.push(p.label)
+		})
+		const near = x => parts.reduce((best, p) => Math.abs(p.x - x) < Math.abs(best.x - x) ? p : best).id
+		for (const g of dom.querySelectorAll('g.participant-group')) {
+			const r = g.querySelector('rect.group-outline')
+			const name = text(g.querySelector('.group-title-text'))
+			const members = parts.filter(p => p.x > n(r, 'x') && p.x < n(r, 'x') + n(r, 'width')).map(p => p.id)
+			facts.push(tab('group', name, members.join(',')))
+			shown.push(name)
+		}
+		for (const g of dom.querySelectorAll('g.message, g.creation, g.return')) {
+			const head = g.querySelector('.arrow-head path, :scope svg svg path')?.getAttribute('d') ?? ''
+			const kind = g.classList.contains('creation') ? 'create' : g.classList.contains('return') ? 'return' : /Z\s*$/.test(head) ? 'sync' : 'async'
+			const labelEl = g.querySelector('.message-label, .return-label')
+			const line = g.querySelector(':scope > line')
+			// a creation ends at the edge of the new participant's box, drawn level with it
+			const created = kind === 'create' && parts.find(p => p.top <= n(line, 'y1') && n(line, 'y1') <= p.bottom)
+			const [from, to] = line ? [near(n(line, 'x1')), created ? created.id : near(n(line, 'x2'))] : [near(n(labelEl, 'x')), near(n(labelEl, 'x'))]
+			facts.push(tab('message', kind, from, to, text(labelEl)))
+			shown.push(text(labelEl))
+		}
+		const unbracket = s => s.replace(/^\[(.*)\]$/, '$1')
+		for (const g of dom.querySelectorAll('g.fragment')) {
+			const kind = { tcf: 'try' }[[...g.classList].find(c => c.startsWith('fragment-')).slice(9)] ?? [...g.classList].find(c => c.startsWith('fragment-')).slice(9)
+			const condition = unbracket([...g.querySelectorAll('.fragment-condition')].filter(el => el.closest('g.fragment') === g).map(text).join(''))
+			facts.push(tab('fragment', kind, condition))
+			shown.push(condition)
+			const sections = []
+			for (const el of g.children) {
+				if (el.matches('line.fragment-separator')) sections.push([])
+				else if (sections.length) sections.at(-1).push(...[...(el.matches('.fragment-section-label') ? [el] : el.querySelectorAll('.fragment-section-label'))].map(text).filter(Boolean))
+			}
+			for (const parts of sections) {
+				const label = unbracket(parts[0] === 'catch' && parts.length > 1 ? `catch(${parts.slice(1).join(' ')})` : parts.join(''))
+				facts.push(tab('section', kind, label))
+				shown.push(label)
+			}
+		}
+		for (const el of dom.querySelectorAll('.comment-text')) { facts.push(tab('comment', text(el))); shown.push(text(el)) }
+		for (const el of dom.querySelectorAll('.divider-label')) { facts.push(tab('divider', text(el))); shown.push(text(el)) }
 		labels(shown)
 	}
 

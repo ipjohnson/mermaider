@@ -1,0 +1,15 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source dac67717be23eed1
+accept	yes
+drawn	yes
+icon	_STARTER_
+label	A1
+label	A2
+label	«create»
+label	«with,parameters»
+message	create	_STARTER_	A1	«create»
+message	create	_STARTER_	A2	«with,parameters»
+participant	0	_STARTER_
+participant	1	A1	A1
+participant	2	A2	A2

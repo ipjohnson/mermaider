@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284.01 368" width="284.01" height="368" style="--bg:#FFFFFF;--fg:#27272A;--line:#546072;--accent:#3b82f6">
+<style>
+  text { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace; }
+  svg {
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 72%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 64%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 30%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_line-soft:     color-mix(in srgb, var(--fg) 14%, var(--bg));
+    --_line-strong:   color-mix(in srgb, var(--fg) 68%, var(--bg));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 70%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 10%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 22%, var(--bg)));
+    --_group-fill:    color-mix(in srgb, var(--fg) 4%, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--accent, var(--fg)) 15%, var(--bg));
+    --_group-stroke:  color-mix(in srgb, var(--fg) 10%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 9%, var(--bg));
+    --_accent-fill:   color-mix(in srgb, var(--accent, var(--fg)) 8%, var(--bg));
+    --_accent-stroke: color-mix(in srgb, var(--accent, var(--fg)) 20%, var(--bg));
+    --_accent-text:   color-mix(in srgb, var(--accent, var(--fg)) 65%, var(--bg));
+    --fs-xs: 0.75rem;
+    --fs-s:  0.875rem;
+    --fs-m:  1rem;
+    --fs-l:  1.125rem;
+  }
+  .node, .actor, .entity, .class-node, .architecture-service, .kanban-card { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 12%, transparent)); }
+  .subgraph, .kanban-column { filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--fg) 7%, transparent)); }
+</style>
+
+<g class="diagram-title">
+  <rect x="30" y="25.5" width="9" height="9" rx="2" ry="2" fill="var(--accent, var(--fg))" />
+  <text x="46" y="30" text-anchor="start" font-size="var(--fs-l)" font-weight="700" fill="var(--_text)" dy="6.3">Greeting</text>
+</g>
+<line class="lifeline" data-actor="Alice" x1="74.00999999999999" y1="110" x2="74.00999999999999" y2="298" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<line class="lifeline" data-actor="J" x1="214.01" y1="110" x2="214.01" y2="298" stroke="var(--_line-soft)" stroke-width="1.25" stroke-dasharray="4 4" />
+<g class="message" data-from="Alice" data-to="J" data-label="Hello John, how are you?" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="74.00999999999999" y1="154" x2="214.01" y2="154" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="67.39399999999998" y="129.2" width="153.23200000000003" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="144.01" y="140" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">Hello John, how are you?</text>
+</g>
+<g class="message" data-from="J" data-to="Alice" data-label="Great!" data-line-style="solid" data-arrow-head="open" data-self="false">
+  <line x1="214.01" y1="204" x2="74.00999999999999" y2="204" stroke="var(--_line)" stroke-width="1.5" marker-end="url(#m1814eb8b-mk-open)" />
+  <rect x="118.69399999999999" y="179.2" width="50.632" height="21.6" rx="10.8" ry="10.8" fill="var(--bg)" stroke="var(--_line)" stroke-width="1.5" /> <text x="144.01" y="190" text-anchor="middle" font-size="var(--fs-xs)" font-weight="500" fill="var(--_text)" dy="4.2">Great!</text>
+</g>
+<g class="actor" data-id="Alice" data-label="Alice" data-type="actor">
+  <rect x="29.999999999999993" y="70" width="88.02" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <g transform="translate(54 90)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="-4.5" r="3.6" /><path d="M-7 8 C-7 1.5 7 1.5 7 8" /></g>
+  <text x="68" y="90" text-anchor="start" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Alice</text>
+</g>
+<g class="actor" data-id="J" data-label="John" data-type="participant">
+  <rect x="174.01" y="70" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="214.01" y="90" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">John</text>
+</g>
+<g class="actor actor-bottom" data-id="Alice" data-label="Alice" data-type="actor">
+  <rect x="29.999999999999993" y="298" width="88.02" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <g transform="translate(54 318)" fill="none" stroke="color-mix(in srgb, #64748b 44%, var(--fg))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="-4.5" r="3.6" /><path d="M-7 8 C-7 1.5 7 1.5 7 8" /></g>
+  <text x="68" y="318" text-anchor="start" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">Alice</text>
+</g>
+<g class="actor actor-bottom" data-id="J" data-label="John" data-type="participant">
+  <rect x="174.01" y="298" width="80" height="40" rx="8" ry="8" fill="url(#m1814eb8b-ng-p0)" stroke="color-mix(in srgb, #64748b 74%, var(--fg))" stroke-width="1.25" />
+  <text x="214.01" y="318" text-anchor="middle" font-size="var(--fs-s)" font-weight="500" fill="var(--_text)" dy="4.9">John</text>
+</g>
+<defs>
+  <linearGradient id="m1814eb8b-ng-p0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb, #64748b 15%, var(--bg))" /><stop offset="1" stop-color="color-mix(in srgb, #64748b 7%, var(--bg))" /></linearGradient>
+  <marker id="m1814eb8b-mk-open" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0,1.5 L10,6 L0,10.5" fill="none" stroke="var(--_line)" stroke-width="1.25" stroke-linejoin="miter" stroke-linecap="round" />
+  </marker>
+</defs>
+</svg>

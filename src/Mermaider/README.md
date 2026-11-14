@@ -42,7 +42,7 @@ browsers.
 - **Native AOT:** every public API proven in CI on Linux, macOS and Windows.
 - **Built-in layout engine:** [Sugiyama](https://www.nuget.org/packages/Sugiyama), a zero-dependency layered layout
   with compound subgraphs and an orthogonal edge router.
-- **26 diagram types:** one API, one theming model for all of them.
+- **27 diagram types:** one API, one theming model for all of them.
 - **Unified theming:** 15 themes, live-switchable via CSS custom properties.
 - **Always-on SVG sanitization:** allowlist-only, no opt-out.
 - **Strict styling mode:** enforce your design system on user-authored diagrams.

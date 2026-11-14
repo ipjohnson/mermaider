@@ -1,0 +1,27 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0807c6f7a9b20f69
+accept	yes
+comment	return early
+drawn	yes
+fragment	alt	condition
+label	A
+label	B
+label	Client
+label	Reply message
+label	condition
+label	method()
+label	method()
+label	return early
+label	x1
+label	x11
+label	x2
+message	return	A	Client	x11
+message	return	A	Client	x2
+message	return	B	A	x1
+message	sync	A	B	method()
+message	sync	Client	A	method()
+participant	0	Client	Client
+participant	1	A	A
+participant	2	B	B
+title	Reply message

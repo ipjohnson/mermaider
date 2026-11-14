@@ -1,0 +1,21 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 025597d98c4285c0
+accept	yes
+comment	bold and it second line
+comment	in loop
+drawn	yes
+fragment	loop	i < 10
+icon	_STARTER_
+label	A
+label	B
+label	bold and it second line
+label	go()
+label	i < 10
+label	in loop
+label	x
+message	async	A	B	x
+message	sync	_STARTER_	B	go()
+participant	0	_STARTER_
+participant	1	A	A
+participant	2	B	B

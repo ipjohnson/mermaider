@@ -29,4 +29,5 @@ public enum DiagramType
 	TreeView,
 	Usecase,
 	Wardley,
+	ZenUml,
 }

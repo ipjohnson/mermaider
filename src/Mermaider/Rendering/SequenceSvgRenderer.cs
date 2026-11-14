@@ -32,7 +32,18 @@ internal static class SequenceSvgRenderer
 		}
 	}
 
-	internal static StringBuilder RenderToBuilder(PositionedSequenceDiagram diagram, SvgRenderContext context)
+	/// <summary>Space a <see cref="RenderToBuilder"/> title takes above the participants; pass it to the layout's top.</summary>
+	internal const double TitleBand = 40;
+
+	/// <summary>Left edge and centre line of a title, inside the layout's padding.</summary>
+	private const double TitleX = 30;
+	private const double TitleCy = 30;
+
+	/// <summary>The width a title needs, so a narrow diagram can be widened to fit it.</summary>
+	internal static double TitleWidth(string title) =>
+		TitleX + DesignSystem.TitleIndent + TextMetrics.MeasureTextWidth(title, DesignSystem.Px(TypeRole.Title), 700) + TitleX;
+
+	internal static StringBuilder RenderToBuilder(PositionedSequenceDiagram diagram, SvgRenderContext context, string? title = null)
 	{
 		var sb = SharedStringBuilderPool.Instance.Get();
 		StyleBlock.AppendSvgOpenTag(
@@ -47,6 +58,8 @@ internal static class SequenceSvgRenderer
 		StyleBlock.AppendStyleBlock(sb, context.Styles);
 		var ds = DesignSystem.For(context);
 		var strict = context.Styles.Strict is not null;
+		if (title is { Length: > 0 })
+			ds.AppendTitle(sb, TitleX, TitleCy, title);
 
 		// participants that talk to each other share a cluster family; boxes and frames take the next palette slots
 		var palette = ClusterPalette.Build(

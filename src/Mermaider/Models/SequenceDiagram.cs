@@ -61,7 +61,10 @@ public enum SequenceBlockType
 	Par,
 	Critical,
 	Break,
-	Rect
+	Rect,
+
+	/// <summary>A ZenUML <c>try</c> with its <c>catch</c> and <c>finally</c> sections.</summary>
+	Try
 }
 
 public readonly record struct SequenceBlockDivider(int Index, string Label);

@@ -1,0 +1,26 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0026bc0b5e1dc512
+accept	yes
+drawn	yes
+fragment	opt
+fragment	try
+icon	A
+icon	_STARTER_
+label	A
+label	B
+label	catch(Timeout e)
+label	finally
+label	load()
+label	retry
+label	work
+label	x
+message	async	A	B	retry
+message	async	A	B	work
+message	return	A	_STARTER_	x
+message	sync	_STARTER_	A	load()
+participant	0	_STARTER_
+participant	1	A	A
+participant	2	B	B
+section	try	catch(Timeout e)
+section	try	finally

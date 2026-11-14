@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 976da0c74d547c53
+accept	yes
+drawn	yes
+fragment	opt
+label	Alice
+label	Bob
+label	Hello Bob, how are you?
+label	Not so good :(
+label	Thanks for asking
+message	async	Alice	Bob	Hello Bob, how are you?
+message	async	Bob	Alice	Not so good :(
+message	async	Bob	Alice	Thanks for asking
+participant	0	Alice	Alice
+participant	1	Bob	Bob

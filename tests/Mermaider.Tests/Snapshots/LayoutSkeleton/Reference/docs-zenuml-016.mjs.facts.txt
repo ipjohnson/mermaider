@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6a12b47cbe7adaf2
+accept	yes
+drawn	yes
+fragment	try
+label	API
+label	Book something
+label	BookingService
+label	Consumer
+label	Start booking process
+label	catch
+label	finally
+label	rollback status
+label	show failure
+message	async	API	BookingService	Start booking process
+message	async	API	BookingService	rollback status
+message	async	API	Consumer	show failure
+message	async	Consumer	API	Book something
+participant	0	Consumer	Consumer
+participant	1	API	API
+participant	2	BookingService	BookingService
+section	try	catch
+section	try	finally

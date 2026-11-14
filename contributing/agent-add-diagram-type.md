@@ -434,3 +434,21 @@ test_entity - satisfies -> test_req
   Measure captions with `DesignSystem.XsWidth` so Blueprint's mono text fits without a preset branch.
 - Valid input mermaid does not draw goes to `WardleyDiagram.Unused` with its line, until ipjohnson/AgentDriver#4284.
 - The facts extractor reads `db.getWardleyData()`.
+
+### ZenUML (2026-11)
+
+- mermaid draws ZenUML through the external `@mermaid-js/mermaid-zenuml` plugin, whose parser is a no-op: `@zenuml/core`
+  parses and draws in one call. Its grammar is ANTLR (`src/g4/sequenceLexer.g4` and `sequenceParser.g4` in ZenUml/core)
+  with line breaks hidden, so the parser is a token lexer and a recursive-descent reader, not a line parser. Only the
+  text after `:` and a `title` run to the end of the line, which is why `A->B: x }` keeps the brace in its label.
+- Detector: `^zenuml` with no word boundary, like mermaid's `/^\s*zenuml/`. The renderer removes that match, so the
+  rest of the header line is source.
+- Reuse the sequence diagram: `ZenUmlLayout.ToSequence` maps statements onto `SequenceDiagram` and draws with
+  `SequenceLayout` and `SequenceSvgRenderer`. Sync calls need explicit activation ends because ZenUML draws an occurrence
+  for every call, so `SequenceLayout.Layout` takes `activationEnds`, a `top` for the title band and `notesBelowFrames`.
+- The facts extractor loads the plugin into the page (with an in-memory `localStorage`, which `@zenuml/core` reads) and
+  reads the DOM, because the plugin's db is empty: `g.participant[data-participant]`, `g.message` (a closed arrow head
+  path is sync), `g.creation`, `g.return`, `g.fragment.fragment-*`, `.comment-text`, `.divider-label` and
+  `g.participant-group`. Message ends are the participants nearest the line's ends; a creation ends at the box drawn
+  level with it.
+- Valid input that is not drawn goes to `ZenUmlDiagram.Unused` with its line, until ipjohnson/AgentDriver#4284.
