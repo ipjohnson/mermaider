@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source c02c48881b1f3fab
+accept	no
+# error Business actor 'Awesome' must use normal or hollow geometry at line 2, column 7 [19,26)

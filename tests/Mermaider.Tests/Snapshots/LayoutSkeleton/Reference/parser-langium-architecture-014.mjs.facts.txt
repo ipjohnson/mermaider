@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 4a9c80fb73c82e58
+accept	yes
+drawn	yes
+group	g1	你好世界
+icon	g1	server
+label	你好世界

@@ -4,7 +4,8 @@ Usage: python3 -I scripts/mermaid-test-corpus.py <mermaid checkout> [<out dir>]
 
 Rendering tests: every e2e/diagrams/**/*.mmd fixture, written as e2e-<path>.mmd with the path's slashes as dashes.
 Parser tests: every string literal of packages/mermaid/src/diagrams/**/*.spec.{js,ts}, or chain of literals joined with
-+, written as parser-<spec>-<n>.mmd, where <n> counts the kept sources of the spec files with that name from 1. A parser source is
++, written as parser-<spec>-<n>.mmd, where <n> counts the kept sources of the spec files with that name from 1, and of
+packages/parser/tests/*.test.{js,ts}, written as parser-langium-<file>-<n>.mmd. A parser source is
 dedented and trimmed; a template literal with ${...} is left out, because its text is only known when the test runs.
 
 Only sources whose first line (after front matter and %% comments) is a header Mermaider draws are kept; the header list
@@ -23,11 +24,11 @@ here = os.path.dirname(os.path.abspath(__file__))
 facts = os.path.join(here, '..', 'tests', 'Mermaider.Tests', 'Snapshots', 'MjsFacts')
 out = sys.argv[2] if len(sys.argv) > 2 else os.path.join(facts, 'Suite')
 
-header = re.compile(
-    r'^(flowchart|graph|stateDiagram(-v2)?|classDiagram(-v2)?|sequenceDiagram|erDiagram|pie|quadrantChart|timeline'
-    r'|gitGraph|radar-beta|treemap-beta|venn-beta|mindmap|gantt|journey|C4(Context|Container|Component|Dynamic|Deployment)'
-    r'|sankey(-beta)?|xychart(-beta)?|requirementDiagram|packet(-beta)?|kanban|architecture-beta|block(-beta)?'
-    r'|treeView(-beta)?)\b')
+# The header list is read from MjsCorpus.HeaderPattern's [GeneratedRegex] attribute, so the two stay the same.
+with open(os.path.join(facts, 'MjsCorpus.cs'), encoding='utf-8') as f:
+    corpus_cs = f.read()
+header = re.compile(re.search(r'\[GeneratedRegex\(@"([^"]*)"[^\]]*\]\s*private static partial Regex HeaderPattern\(\)',
+                              corpus_cs).group(1))
 
 
 def first_line(body):
@@ -260,12 +261,27 @@ for root, dirs, files in os.walk(diagrams):
             if keep('parser', f'parser-{spec}-{numbers[spec] + 1:03}', body, body):
                 numbers[spec] += 1
 
+# The langium grammars (architecture, gitGraph, pie, radar, treeView, ...) keep their parser tests in packages/parser.
+langium = os.path.join(checkout, 'packages', 'parser', 'tests')
+for file in sorted(os.listdir(langium)):
+    if not re.search(r'\.test\.[jt]s$', file):
+        continue
+    spec = 'langium-' + re.sub(r'[^A-Za-z0-9]+', '-', re.sub(r'\.test\.[jt]s$', '', file)).strip('-').lower()
+    code = open(os.path.join(langium, file), encoding='utf-8').read()
+    for text in literals(code):
+        if text is None or not text.strip():
+            continue
+        body = normalize(text)
+        if keep('parser', f'parser-{spec}-{numbers[spec] + 1:03}', body, body):
+            numbers[spec] += 1
+
 commit = subprocess.run(['git', '-C', checkout, 'rev-parse', 'HEAD'], capture_output=True, text=True, check=True).stdout.strip()
 tags = subprocess.run(['git', '-C', checkout, 'tag', '--points-at', 'HEAD'], capture_output=True, text=True).stdout.split()
 tag = next((t for t in tags if t.startswith('mermaid@')), tags[0] if tags else '')
 with open(os.path.join(out, 'SOURCE.txt'), 'w', encoding='utf-8', newline='\n') as f:
     f.write('The e2e-*.mmd files are the fixtures of mermaid\'s rendering tests (e2e/diagrams), and the parser-*.mmd files\n')
-    f.write('the diagram sources of its parser tests (packages/mermaid/src/diagrams/**/*.spec.*), MIT licensed, at\n')
+    f.write('the diagram sources of its parser tests (packages/mermaid/src/diagrams/**/*.spec.* and\n')
+    f.write('packages/parser/tests/*.test.*), MIT licensed, at\n')
     f.write(f'mermaid-js/mermaid {tag or "(untagged)"} commit {commit}, written by scripts/mermaid-test-corpus.py.\n')
 print(f"{counts['e2e']} rendering and {counts['parser']} parser sources kept; {counts['duplicate']} already in the corpus "
       f"and {counts['other type']} of types Mermaider does not draw left out")

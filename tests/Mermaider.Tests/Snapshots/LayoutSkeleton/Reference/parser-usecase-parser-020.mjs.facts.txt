@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 980a2bdaa0b10893
+accept	no
+# error Metadata property 'fillColor' is invalid for actor 'User' at line 2, column 14 [26,35)

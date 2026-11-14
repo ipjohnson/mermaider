@@ -1,0 +1,18 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fa9cccf5ec2377fe
+accept	yes
+boundary	sb1	Payment service	package	Authorize
+boundary	sb2	Billing	rect	Invoice
+boundary	sb3	Support	rect	Refund
+direction	LR
+drawn	yes
+label	Authorize payment
+label	Billing
+label	Create invoice
+label	Issue refund
+label	Payment service
+label	Support
+usecase	Authorize	Authorize payment	ellipse			sb1
+usecase	Invoice	Create invoice	rect			sb2
+usecase	Refund	Issue refund	rect			sb3

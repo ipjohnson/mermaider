@@ -1,0 +1,24 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 5dc4f2d0e0271d6b
+accept	yes
+actor	Admin	Admin	normal
+actor	User	User	normal
+boundary	Authentication_System	Authentication System	rect	Login,Logout,Register,ResetPassword
+direction	LR
+drawn	yes
+label	Admin
+label	Authentication System
+label	Login
+label	Logout
+label	Register
+label	ResetPassword
+label	User
+relation	Admin	Login	association	none	arrow		1
+relation	User	Login	association	none	arrow		1
+relation	User	Logout	association	none	arrow		1
+relation	User	Register	association	none	arrow		1
+usecase	Login	Login	ellipse			Authentication_System
+usecase	Logout	Logout	ellipse			Authentication_System
+usecase	Register	Register	ellipse			Authentication_System
+usecase	ResetPassword	ResetPassword	ellipse			Authentication_System

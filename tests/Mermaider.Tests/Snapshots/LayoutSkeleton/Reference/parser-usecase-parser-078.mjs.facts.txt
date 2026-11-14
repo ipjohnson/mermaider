@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source b2a1ad5fa8f6dc16
+accept	no
+# error Error parsing usecase diagram: Expecting token of type --> END <-- but found --> 'systemBoundary' <-- at line 3, column 1 [30,44)

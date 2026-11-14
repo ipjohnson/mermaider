@@ -5,4 +5,4 @@ accept	yes
 drawn	yes
 edge	C	one	none	arrow	solid
 node	C	C	rect
-node	one		collapsedGroup
+node	one	My Group	collapsedGroup

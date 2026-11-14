@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 388d157ad5917ad6
+accept	yes
+actor	Clerk	Clerk	normal			sb1
+actor	Extra	Extra	normal
+boundary	sb1	Payment service	rect	Clerk
+boundary	sb2	Shipping	rect	Dispatch
+direction	LR
+drawn	yes
+label	Clerk
+label	Dispatch order
+label	Extra
+label	Payment service
+label	Shipping
+usecase	Dispatch	Dispatch order	ellipse			sb2

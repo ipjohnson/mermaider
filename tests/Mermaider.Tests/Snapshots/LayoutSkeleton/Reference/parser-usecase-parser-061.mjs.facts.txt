@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 26e6928716e6b637
+accept	no
+# error Error parsing usecase diagram: Redundant input, expecting EOF but found: / at line 2, column 1 [13,14)

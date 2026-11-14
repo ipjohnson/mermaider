@@ -1256,8 +1256,9 @@ internal static partial class MermaiderFacts
 				var path = trail.Length == 0 ? Display(n.Label) : trail + " / " + Display(n.Label);
 				facts.Add(Fact("node", path, n.IsDirectory ? "dir" : "file", Display(n.Description)));
 				shown.AddRange([Display(n.Label), Display(n.Description)]);
-				if (!string.IsNullOrEmpty(n.Icon))
-					facts.Add(Fact("icon", path, n.Icon));
+				// The parser keeps icon() and icon(none) as an empty icon; mermaid.js records both as none.
+				if (n.Icon is not null)
+					facts.Add(Fact("icon", path, n.Icon.Length == 0 ? "none" : n.Icon));
 				Walk(n.Children, path);
 			}
 		}

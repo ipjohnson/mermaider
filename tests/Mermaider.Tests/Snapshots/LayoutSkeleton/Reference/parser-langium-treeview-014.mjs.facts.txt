@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 07b8ffb5cdc21d5b
+accept	yes
+drawn	yes
+label	But _ _ton💓.tsx
+node	But _ _ton💓.tsx	file

@@ -937,9 +937,6 @@ docs-requirementDiagram-004 + requirement | __test_req__ | requirement | 1 | ita
 docs-requirementDiagram-004 - label | *italicized text* **bold text**
 docs-requirementDiagram-004 - requirement | __test_req__ | requirement | 1 | *italicized text* **bold text** | high | test
 
-# Facts form: mermaid.js records an explicit tree view icon(none) as the icon none. Mermaider reads it as no icon and has no fact. Neither draws an icon.
-docs-treeView-009 - icon | src / index.js | none
-
 # ipjohnson/mermaider#32: a small treemap leaf is drawn with its value and without its name.
 docs-treemap-008 - label | Company C
 
@@ -1029,15 +1026,13 @@ e2e-flowchart-nightly-check-dagre-07-render-with-stylized-arrows + node | oC | o
 e2e-flowchart-nightly-check-dagre-07-render-with-stylized-arrows - edge | B | C | none | circle | dotted
 e2e-flowchart-nightly-check-dagre-07-render-with-stylized-arrows - edge | C | D | none | cross | thick
 
-# Unsupported, ipjohnson/mermaider#5 ipjohnson/mermaider#6: Nodes given with @{ shape: ... } are drawn as rectangles, and the edge IDs (e1@-->) drop the edges.
+# Unsupported, ipjohnson/mermaider#5: An edge ID (e1@-->) drops the edge, so its target node is lost or drawn without its @{ shape }.
 parser-flow-edges-007 - edge | A | B | none | arrow | solid
 parser-flow-edges-007 - edge | B | C | none | arrow | solid
 parser-flow-edges-007 - node | B | B | rect
 parser-flow-edges-007 - node | C | C | rect
-parser-flow-edges-009 + node | A | A | rect
 parser-flow-edges-009 - edge | A | B | none | arrow | solid
 parser-flow-edges-009 - edge | B | C | none | arrow | solid
-parser-flow-edges-009 - node | A | A | circle
 parser-flow-edges-009 - node | B | B | circle
 parser-flow-edges-009 - node | C | C | rect
 
@@ -1144,681 +1139,70 @@ parser-flow-node-data-035 + node | e1 | e1 | rect
 parser-flow-node-data-035 - edge | A | B | none | arrow | solid
 parser-flow-node-data-035 - node | B | B | rect
 
-# Unsupported, ipjohnson/mermaider#6 ipjohnson/mermaider#8: An @{ shape: diam } node is drawn as a rectangle, and the fa:fa-car icon is drawn as text.
+# Unsupported, ipjohnson/mermaider#8: The fa:fa-car icon in an @{ shape: diam } node's label is drawn as text.
 e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections + node | F | fa:fa-car Option 3 | rect
-e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections + node | n1 | Evaluate | rect
 e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections + node | n4 | fa:fa-car Option 3 | rect
-e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections + node | n5 | Evaluate | rect
 e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections + node | n8 | fa:fa-car Option 3 | rect
 e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections - icon | F | fa:fa-car
 e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections - icon | n4 | fa:fa-car
 e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections - icon | n8 | fa:fa-car
 e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections - node | F | Option 3 | rect
-e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections - node | n1 | Evaluate | diam
 e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections - node | n4 | Option 3 | rect
-e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections - node | n5 | Evaluate | diam
 e2e-flowchart-nightly-check-dagre-6080-should-handle-diamond-shape-intersections - node | n8 | Option 3 | rect
 e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections + node | F | fa:fa-car Option 3 | rect
-e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections + node | n1 | Evaluate | rect
 e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections + node | n4 | fa:fa-car Option 3 | rect
-e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections + node | n5 | Evaluate | rect
 e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections + node | n8 | fa:fa-car Option 3 | rect
 e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections - icon | F | fa:fa-car
 e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections - icon | n4 | fa:fa-car
 e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections - icon | n8 | fa:fa-car
 e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections - node | F | Option 3 | rect
-e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections - node | n1 | Evaluate | diam
 e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections - node | n4 | Option 3 | rect
-e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections - node | n5 | Evaluate | diam
 e2e-flowchart-nightly-check-dagre-6088-4-should-handle-diamond-shape-intersections - node | n8 | Option 3 | rect
 
-# Unsupported, ipjohnson/mermaider#6: A node or subgraph property given with @{ ... } (shape, label, view: collapsed) is not read, so the node is a rectangle labelled with its id and the lines that follow it may be lost.
-e2e-flowchart-nightly-check-handdrawn-should-redirect-a-collapsed-subgraph-using-the-handdrawn-look + edge | P | Q | none | arrow | solid
-e2e-flowchart-nightly-check-handdrawn-should-redirect-a-collapsed-subgraph-using-the-handdrawn-look + group | grp | Hand Drawn Group | P,Q
-e2e-flowchart-nightly-check-handdrawn-should-redirect-a-collapsed-subgraph-using-the-handdrawn-look + node | P | P | rect
-e2e-flowchart-nightly-check-handdrawn-should-redirect-a-collapsed-subgraph-using-the-handdrawn-look + node | Q | Q | rect
-e2e-flowchart-nightly-check-handdrawn-should-redirect-a-collapsed-subgraph-using-the-handdrawn-look - node | grp |  | collapsedGroup
-e2e-flowchart-nightly-check-redux-color-subgraphs-03-should-render-collapsed-subgraph-containers + edge | B | C | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-03-should-render-collapsed-subgraph-containers + edge | C | D | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-03-should-render-collapsed-subgraph-containers + group | second | Second | C
-e2e-flowchart-nightly-check-redux-color-subgraphs-03-should-render-collapsed-subgraph-containers + node | C | c | rect
-e2e-flowchart-nightly-check-redux-color-subgraphs-03-should-render-collapsed-subgraph-containers - edge | B | second | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-03-should-render-collapsed-subgraph-containers - edge | second | D | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-03-should-render-collapsed-subgraph-containers - node | second |  | collapsedGroup
-e2e-flowchart-nightly-check-redux-color-subgraphs-07-should-render-collapsed-subgraph-containers + edge | B | C | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-07-should-render-collapsed-subgraph-containers + edge | C | D | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-07-should-render-collapsed-subgraph-containers + group | second | Second | C
-e2e-flowchart-nightly-check-redux-color-subgraphs-07-should-render-collapsed-subgraph-containers + node | C | c | rect
-e2e-flowchart-nightly-check-redux-color-subgraphs-07-should-render-collapsed-subgraph-containers - edge | B | second | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-07-should-render-collapsed-subgraph-containers - edge | second | D | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-07-should-render-collapsed-subgraph-containers - node | second |  | collapsedGroup
-e2e-flowchart-nightly-check-redux-color-subgraphs-11-should-render-collapsed-subgraph-containers + edge | B | C | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-11-should-render-collapsed-subgraph-containers + edge | C | D | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-11-should-render-collapsed-subgraph-containers + group | second | Second | C
-e2e-flowchart-nightly-check-redux-color-subgraphs-11-should-render-collapsed-subgraph-containers + node | C | c | rect
-e2e-flowchart-nightly-check-redux-color-subgraphs-11-should-render-collapsed-subgraph-containers - edge | B | second | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-11-should-render-collapsed-subgraph-containers - edge | second | D | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-11-should-render-collapsed-subgraph-containers - node | second |  | collapsedGroup
-e2e-flowchart-nightly-check-redux-color-subgraphs-15-should-render-collapsed-subgraph-containers + edge | B | C | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-15-should-render-collapsed-subgraph-containers + edge | C | D | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-15-should-render-collapsed-subgraph-containers + group | second | Second | C
-e2e-flowchart-nightly-check-redux-color-subgraphs-15-should-render-collapsed-subgraph-containers + node | C | c | rect
-e2e-flowchart-nightly-check-redux-color-subgraphs-15-should-render-collapsed-subgraph-containers - edge | B | second | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-15-should-render-collapsed-subgraph-containers - edge | second | D | none | arrow | solid
-e2e-flowchart-nightly-check-redux-color-subgraphs-15-should-render-collapsed-subgraph-containers - node | second |  | collapsedGroup
-e2e-flowchart-nightly-check-shape-themes-01-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-01-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-01-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-01-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-01-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-01-connect-all-shapes-with-each-other - node | n00 | This is a label for triangle shape | tri
-e2e-flowchart-nightly-check-shape-themes-01-connect-all-shapes-with-each-other - node | n11 | This is a label for sloped-rectangle shape | sl-rect
-e2e-flowchart-nightly-check-shape-themes-01-connect-all-shapes-with-each-other - node | n22 | This is a label for horizontal-cylinder shape | h-cyl
-e2e-flowchart-nightly-check-shape-themes-01-connect-all-shapes-with-each-other - node | n33 | This is a label for flipped-triangle shape | flip-tri
-e2e-flowchart-nightly-check-shape-themes-01-connect-all-shapes-with-each-other - node | n44 |  | hourglass
-e2e-flowchart-nightly-check-shape-themes-02-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-02-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-02-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-02-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-02-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-02-connect-all-shapes-with-each-other - node | n00 | This is a label for tagged-rectangle shape | tag-rect
-e2e-flowchart-nightly-check-shape-themes-02-connect-all-shapes-with-each-other - node | n11 | This is a label for documents shape | docs
-e2e-flowchart-nightly-check-shape-themes-02-connect-all-shapes-with-each-other - node | n22 |  | bolt
-e2e-flowchart-nightly-check-shape-themes-02-connect-all-shapes-with-each-other - node | n33 |  | f-circ
-e2e-flowchart-nightly-check-shape-themes-02-connect-all-shapes-with-each-other - node | n44 | This is a label for window-pane shape | win-pane
-e2e-flowchart-nightly-check-shape-themes-03-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-03-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-03-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-03-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-03-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-03-connect-all-shapes-with-each-other - node | n00 | This is a label for curved-trapezoid shape | curv-trap
-e2e-flowchart-nightly-check-shape-themes-03-connect-all-shapes-with-each-other - node | n11 | This is a label for bow-rect shape | bow-rect
-e2e-flowchart-nightly-check-shape-themes-03-connect-all-shapes-with-each-other - node | n22 | This is a label for tagged-document shape | tag-doc
-e2e-flowchart-nightly-check-shape-themes-03-connect-all-shapes-with-each-other - node | n33 | This is a label for divided-rectangle shape | div-rect
-e2e-flowchart-nightly-check-shape-themes-03-connect-all-shapes-with-each-other - node | n44 |  | cross-circ
-e2e-flowchart-nightly-check-shape-themes-04-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-04-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-04-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-04-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-04-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-04-connect-all-shapes-with-each-other - node | n00 | This is a label for document shape | doc
-e2e-flowchart-nightly-check-shape-themes-04-connect-all-shapes-with-each-other - node | n11 | This is a label for notched-pentagon shape | notch-pent
-e2e-flowchart-nightly-check-shape-themes-04-connect-all-shapes-with-each-other - node | n22 | This is a label for lined-cylinder shape | lin-cyl
-e2e-flowchart-nightly-check-shape-themes-04-connect-all-shapes-with-each-other - node | n33 | This is a label for stacked-document shape | docs
-e2e-flowchart-nightly-check-shape-themes-04-connect-all-shapes-with-each-other - node | n44 | This is a label for half-rounded-rectangle shape | delay
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other + node | n55 | n55 | rect
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other - node | n00 | This is a label for lined-document shape | lin-doc
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other - node | n11 | This is a label for tagged-document shape | tag-doc
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other - node | n22 | This is a label for brace-l shape | brace
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other - node | n33 | This is a label for comment shape | brace
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other - node | n44 | This is a label for braces shape | braces
-e2e-flowchart-nightly-check-shape-themes-05-connect-all-shapes-with-each-other - node | n55 | This is a label for brace-r shape | brace-r
-e2e-flowchart-nightly-check-shape-themes-06-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-06-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-06-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-06-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-06-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-06-connect-all-shapes-with-each-other - node | n00 | This is a label for text shape | text
-e2e-flowchart-nightly-check-shape-themes-06-connect-all-shapes-with-each-other - node | n11 | This is a label for card shape | notch-rect
-e2e-flowchart-nightly-check-shape-themes-06-connect-all-shapes-with-each-other - node | n22 | This is a label for lin-rect shape | lin-rect
-e2e-flowchart-nightly-check-shape-themes-06-connect-all-shapes-with-each-other - node | n33 | This is a label for diamond shape | diam
-e2e-flowchart-nightly-check-shape-themes-06-connect-all-shapes-with-each-other - node | n44 | This is a label for hexagon shape | hex
-e2e-flowchart-nightly-check-shape-themes-07-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-07-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-07-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-07-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-07-connect-all-shapes-with-each-other - node | n00 | This is a label for rounded shape | rounded
-e2e-flowchart-nightly-check-shape-themes-07-connect-all-shapes-with-each-other - node | n11 | This is a label for rect shape | rect
-e2e-flowchart-nightly-check-shape-themes-07-connect-all-shapes-with-each-other - node | n22 |  | sm-circ
-e2e-flowchart-nightly-check-shape-themes-07-connect-all-shapes-with-each-other - node | n33 |  | fr-circ
-e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other - node | n00 |  | fork
+# ipjohnson/mermaider#64: @{ shape: choice | note | anchor } is drawn as a labelled rectangle, a quoted label holding } ends
+# the block, a `label: |` block is drawn as |, a block after a [label] that spans lines is not applied, and
+# A@{shape:circle} with no space is read as a circle where mermaid.js reads YAML and draws a rectangle.
+e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other + node | n11 | This is a label for choice shape | rect
+e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other + node | n22 | This is a label for note shape | rect
 e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other - node | n11 |  | choice
 e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other - node | n22 | This is a label for note shape | note
-e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other - node | n33 | This is a label for stadium shape | stadium
-e2e-flowchart-nightly-check-shape-themes-08-connect-all-shapes-with-each-other - node | n44 | This is a label for odd shape | odd
-e2e-flowchart-nightly-check-shape-themes-09-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-09-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-09-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-09-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-09-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-09-connect-all-shapes-with-each-other - node | n00 | This is a label for subroutine shape | fr-rect
-e2e-flowchart-nightly-check-shape-themes-09-connect-all-shapes-with-each-other - node | n11 | This is a label for cylinder shape | cyl
-e2e-flowchart-nightly-check-shape-themes-09-connect-all-shapes-with-each-other - node | n22 | This is a label for circle shape | circle
-e2e-flowchart-nightly-check-shape-themes-09-connect-all-shapes-with-each-other - node | n33 | This is a label for doublecircle shape | dbl-circ
-e2e-flowchart-nightly-check-shape-themes-09-connect-all-shapes-with-each-other - node | n44 | This is a label for odd shape | odd
-e2e-flowchart-nightly-check-shape-themes-10-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-10-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-10-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-10-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-10-connect-all-shapes-with-each-other + node | n44 | n44 | rect
+e2e-flowchart-nightly-check-shape-themes-10-connect-all-shapes-with-each-other + node | n00 | This is a label for anchor shape | rect
 e2e-flowchart-nightly-check-shape-themes-10-connect-all-shapes-with-each-other - node | n00 |  | anchor
-e2e-flowchart-nightly-check-shape-themes-10-connect-all-shapes-with-each-other - node | n11 | This is a label for lean-r shape | lean-r
-e2e-flowchart-nightly-check-shape-themes-10-connect-all-shapes-with-each-other - node | n22 | This is a label for lean-l shape | lean-l
-e2e-flowchart-nightly-check-shape-themes-10-connect-all-shapes-with-each-other - node | n33 | This is a label for trap-t shape | trap-t
-e2e-flowchart-nightly-check-shape-themes-10-connect-all-shapes-with-each-other - node | n44 | This is a label for trap-b shape | trap-b
-e2e-flowchart-nightly-check-shape-themes-11-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-11-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-11-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-11-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-11-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-11-connect-all-shapes-with-each-other - node | n00 | This is a label for triangle shape | tri
-e2e-flowchart-nightly-check-shape-themes-11-connect-all-shapes-with-each-other - node | n11 | This is a label for sloped-rectangle shape | sl-rect
-e2e-flowchart-nightly-check-shape-themes-11-connect-all-shapes-with-each-other - node | n22 | This is a label for horizontal-cylinder shape | h-cyl
-e2e-flowchart-nightly-check-shape-themes-11-connect-all-shapes-with-each-other - node | n33 | This is a label for flipped-triangle shape | flip-tri
-e2e-flowchart-nightly-check-shape-themes-11-connect-all-shapes-with-each-other - node | n44 |  | hourglass
-e2e-flowchart-nightly-check-shape-themes-12-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-12-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-12-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-12-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-12-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-12-connect-all-shapes-with-each-other - node | n00 | This is a label for tagged-rectangle shape | tag-rect
-e2e-flowchart-nightly-check-shape-themes-12-connect-all-shapes-with-each-other - node | n11 | This is a label for documents shape | docs
-e2e-flowchart-nightly-check-shape-themes-12-connect-all-shapes-with-each-other - node | n22 |  | bolt
-e2e-flowchart-nightly-check-shape-themes-12-connect-all-shapes-with-each-other - node | n33 |  | f-circ
-e2e-flowchart-nightly-check-shape-themes-12-connect-all-shapes-with-each-other - node | n44 | This is a label for window-pane shape | win-pane
-e2e-flowchart-nightly-check-shape-themes-13-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-13-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-13-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-13-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-13-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-13-connect-all-shapes-with-each-other - node | n00 | This is a label for curved-trapezoid shape | curv-trap
-e2e-flowchart-nightly-check-shape-themes-13-connect-all-shapes-with-each-other - node | n11 | This is a label for bow-rect shape | bow-rect
-e2e-flowchart-nightly-check-shape-themes-13-connect-all-shapes-with-each-other - node | n22 | This is a label for tagged-document shape | tag-doc
-e2e-flowchart-nightly-check-shape-themes-13-connect-all-shapes-with-each-other - node | n33 | This is a label for divided-rectangle shape | div-rect
-e2e-flowchart-nightly-check-shape-themes-13-connect-all-shapes-with-each-other - node | n44 |  | cross-circ
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other + node | n55 | n55 | rect
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other - node | n00 | This is a label for lined-document shape | lin-doc
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other - node | n11 | This is a label for tagged-document shape | tag-doc
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other - node | n22 | This is a label for brace-l shape | brace
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other - node | n33 | This is a label for comment shape | brace
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other - node | n44 | This is a label for braces shape | braces
-e2e-flowchart-nightly-check-shape-themes-14-connect-all-shapes-with-each-other - node | n55 | This is a label for brace-r shape | brace-r
-e2e-flowchart-nightly-check-shape-themes-15-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-15-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-15-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-15-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-15-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-15-connect-all-shapes-with-each-other - node | n00 | This is a label for document shape | doc
-e2e-flowchart-nightly-check-shape-themes-15-connect-all-shapes-with-each-other - node | n11 | This is a label for notched-pentagon shape | notch-pent
-e2e-flowchart-nightly-check-shape-themes-15-connect-all-shapes-with-each-other - node | n22 | This is a label for lined-cylinder shape | lin-cyl
-e2e-flowchart-nightly-check-shape-themes-15-connect-all-shapes-with-each-other - node | n33 | This is a label for stacked-document shape | docs
-e2e-flowchart-nightly-check-shape-themes-15-connect-all-shapes-with-each-other - node | n44 | This is a label for half-rounded-rectangle shape | delay
-e2e-flowchart-nightly-check-shape-themes-16-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-16-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-16-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-16-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-16-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-16-connect-all-shapes-with-each-other - node | n00 | This is a label for text shape | text
-e2e-flowchart-nightly-check-shape-themes-16-connect-all-shapes-with-each-other - node | n11 | This is a label for card shape | notch-rect
-e2e-flowchart-nightly-check-shape-themes-16-connect-all-shapes-with-each-other - node | n22 | This is a label for lin-rect shape | lin-rect
-e2e-flowchart-nightly-check-shape-themes-16-connect-all-shapes-with-each-other - node | n33 | This is a label for diamond shape | diam
-e2e-flowchart-nightly-check-shape-themes-16-connect-all-shapes-with-each-other - node | n44 | This is a label for hexagon shape | hex
-e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other - node | n00 |  | fork
+e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other + node | n11 | This is a label for choice shape | rect
+e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other + node | n22 | This is a label for note shape | rect
 e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other - node | n11 |  | choice
 e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other - node | n22 | This is a label for note shape | note
-e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other - node | n33 | This is a label for stadium shape | stadium
-e2e-flowchart-nightly-check-shape-themes-17-connect-all-shapes-with-each-other - node | n44 | This is a label for odd shape | odd
-e2e-flowchart-nightly-check-shape-themes-18-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-18-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-18-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-18-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-18-connect-all-shapes-with-each-other - node | n00 | This is a label for rounded shape | rounded
-e2e-flowchart-nightly-check-shape-themes-18-connect-all-shapes-with-each-other - node | n11 | This is a label for rect shape | rect
-e2e-flowchart-nightly-check-shape-themes-18-connect-all-shapes-with-each-other - node | n22 |  | sm-circ
-e2e-flowchart-nightly-check-shape-themes-18-connect-all-shapes-with-each-other - node | n33 |  | fr-circ
-e2e-flowchart-nightly-check-shape-themes-19-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-19-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-19-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-19-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-19-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-19-connect-all-shapes-with-each-other - node | n00 | This is a label for subroutine shape | fr-rect
-e2e-flowchart-nightly-check-shape-themes-19-connect-all-shapes-with-each-other - node | n11 | This is a label for cylinder shape | cyl
-e2e-flowchart-nightly-check-shape-themes-19-connect-all-shapes-with-each-other - node | n22 | This is a label for circle shape | circle
-e2e-flowchart-nightly-check-shape-themes-19-connect-all-shapes-with-each-other - node | n33 | This is a label for doublecircle shape | dbl-circ
-e2e-flowchart-nightly-check-shape-themes-19-connect-all-shapes-with-each-other - node | n44 | This is a label for odd shape | odd
-e2e-flowchart-nightly-check-shape-themes-20-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-20-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-20-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-20-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-20-connect-all-shapes-with-each-other + node | n44 | n44 | rect
+e2e-flowchart-nightly-check-shape-themes-20-connect-all-shapes-with-each-other + node | n00 | This is a label for anchor shape | rect
 e2e-flowchart-nightly-check-shape-themes-20-connect-all-shapes-with-each-other - node | n00 |  | anchor
-e2e-flowchart-nightly-check-shape-themes-20-connect-all-shapes-with-each-other - node | n11 | This is a label for lean-r shape | lean-r
-e2e-flowchart-nightly-check-shape-themes-20-connect-all-shapes-with-each-other - node | n22 | This is a label for lean-l shape | lean-l
-e2e-flowchart-nightly-check-shape-themes-20-connect-all-shapes-with-each-other - node | n33 | This is a label for trap-t shape | trap-t
-e2e-flowchart-nightly-check-shape-themes-20-connect-all-shapes-with-each-other - node | n44 | This is a label for trap-b shape | trap-b
-e2e-flowchart-nightly-check-shape-themes-21-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-21-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-21-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-21-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-21-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-21-connect-all-shapes-with-each-other - node | n00 | This is a label for triangle shape | tri
-e2e-flowchart-nightly-check-shape-themes-21-connect-all-shapes-with-each-other - node | n11 | This is a label for sloped-rectangle shape | sl-rect
-e2e-flowchart-nightly-check-shape-themes-21-connect-all-shapes-with-each-other - node | n22 | This is a label for horizontal-cylinder shape | h-cyl
-e2e-flowchart-nightly-check-shape-themes-21-connect-all-shapes-with-each-other - node | n33 | This is a label for flipped-triangle shape | flip-tri
-e2e-flowchart-nightly-check-shape-themes-21-connect-all-shapes-with-each-other - node | n44 |  | hourglass
-e2e-flowchart-nightly-check-shape-themes-22-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-22-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-22-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-22-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-22-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-22-connect-all-shapes-with-each-other - node | n00 | This is a label for tagged-rectangle shape | tag-rect
-e2e-flowchart-nightly-check-shape-themes-22-connect-all-shapes-with-each-other - node | n11 | This is a label for documents shape | docs
-e2e-flowchart-nightly-check-shape-themes-22-connect-all-shapes-with-each-other - node | n22 |  | bolt
-e2e-flowchart-nightly-check-shape-themes-22-connect-all-shapes-with-each-other - node | n33 |  | f-circ
-e2e-flowchart-nightly-check-shape-themes-22-connect-all-shapes-with-each-other - node | n44 | This is a label for window-pane shape | win-pane
-e2e-flowchart-nightly-check-shape-themes-23-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-23-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-23-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-23-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-23-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-23-connect-all-shapes-with-each-other - node | n00 | This is a label for document shape | doc
-e2e-flowchart-nightly-check-shape-themes-23-connect-all-shapes-with-each-other - node | n11 | This is a label for notched-pentagon shape | notch-pent
-e2e-flowchart-nightly-check-shape-themes-23-connect-all-shapes-with-each-other - node | n22 | This is a label for lined-cylinder shape | lin-cyl
-e2e-flowchart-nightly-check-shape-themes-23-connect-all-shapes-with-each-other - node | n33 | This is a label for stacked-document shape | docs
-e2e-flowchart-nightly-check-shape-themes-23-connect-all-shapes-with-each-other - node | n44 | This is a label for half-rounded-rectangle shape | delay
-e2e-flowchart-nightly-check-shape-themes-24-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-24-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-24-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-24-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-24-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-24-connect-all-shapes-with-each-other - node | n00 | This is a label for curved-trapezoid shape | curv-trap
-e2e-flowchart-nightly-check-shape-themes-24-connect-all-shapes-with-each-other - node | n11 | This is a label for bow-rect shape | bow-rect
-e2e-flowchart-nightly-check-shape-themes-24-connect-all-shapes-with-each-other - node | n22 | This is a label for tagged-document shape | tag-doc
-e2e-flowchart-nightly-check-shape-themes-24-connect-all-shapes-with-each-other - node | n33 | This is a label for divided-rectangle shape | div-rect
-e2e-flowchart-nightly-check-shape-themes-24-connect-all-shapes-with-each-other - node | n44 |  | cross-circ
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other + node | n55 | n55 | rect
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other - node | n00 | This is a label for lined-document shape | lin-doc
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other - node | n11 | This is a label for tagged-document shape | tag-doc
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other - node | n22 | This is a label for brace-l shape | brace
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other - node | n33 | This is a label for comment shape | brace
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other - node | n44 | This is a label for braces shape | braces
-e2e-flowchart-nightly-check-shape-themes-25-connect-all-shapes-with-each-other - node | n55 | This is a label for brace-r shape | brace-r
-e2e-flowchart-nightly-check-shape-themes-26-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-26-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-26-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-26-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-26-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-26-connect-all-shapes-with-each-other - node | n00 | This is a label for text shape | text
-e2e-flowchart-nightly-check-shape-themes-26-connect-all-shapes-with-each-other - node | n11 | This is a label for card shape | notch-rect
-e2e-flowchart-nightly-check-shape-themes-26-connect-all-shapes-with-each-other - node | n22 | This is a label for lin-rect shape | lin-rect
-e2e-flowchart-nightly-check-shape-themes-26-connect-all-shapes-with-each-other - node | n33 | This is a label for diamond shape | diam
-e2e-flowchart-nightly-check-shape-themes-26-connect-all-shapes-with-each-other - node | n44 | This is a label for hexagon shape | hex
-e2e-flowchart-nightly-check-shape-themes-27-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-27-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-27-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-27-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-27-connect-all-shapes-with-each-other - node | n00 | This is a label for rounded shape | rounded
-e2e-flowchart-nightly-check-shape-themes-27-connect-all-shapes-with-each-other - node | n11 | This is a label for rect shape | rect
-e2e-flowchart-nightly-check-shape-themes-27-connect-all-shapes-with-each-other - node | n22 |  | sm-circ
-e2e-flowchart-nightly-check-shape-themes-27-connect-all-shapes-with-each-other - node | n33 |  | fr-circ
-e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other - node | n00 |  | fork
+e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other + node | n11 | This is a label for choice shape | rect
+e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other + node | n22 | This is a label for note shape | rect
 e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other - node | n11 |  | choice
 e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other - node | n22 | This is a label for note shape | note
-e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other - node | n33 | This is a label for stadium shape | stadium
-e2e-flowchart-nightly-check-shape-themes-28-connect-all-shapes-with-each-other - node | n44 | This is a label for odd shape | odd
-e2e-flowchart-nightly-check-shape-themes-29-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-29-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-29-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-29-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-29-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-29-connect-all-shapes-with-each-other - node | n00 | This is a label for subroutine shape | fr-rect
-e2e-flowchart-nightly-check-shape-themes-29-connect-all-shapes-with-each-other - node | n11 | This is a label for cylinder shape | cyl
-e2e-flowchart-nightly-check-shape-themes-29-connect-all-shapes-with-each-other - node | n22 | This is a label for circle shape | circle
-e2e-flowchart-nightly-check-shape-themes-29-connect-all-shapes-with-each-other - node | n33 | This is a label for doublecircle shape | dbl-circ
-e2e-flowchart-nightly-check-shape-themes-29-connect-all-shapes-with-each-other - node | n44 | This is a label for odd shape | odd
-e2e-flowchart-nightly-check-shape-themes-30-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-30-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-30-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-30-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-30-connect-all-shapes-with-each-other + node | n44 | n44 | rect
+e2e-flowchart-nightly-check-shape-themes-30-connect-all-shapes-with-each-other + node | n00 | This is a label for anchor shape | rect
 e2e-flowchart-nightly-check-shape-themes-30-connect-all-shapes-with-each-other - node | n00 |  | anchor
-e2e-flowchart-nightly-check-shape-themes-30-connect-all-shapes-with-each-other - node | n11 | This is a label for lean-r shape | lean-r
-e2e-flowchart-nightly-check-shape-themes-30-connect-all-shapes-with-each-other - node | n22 | This is a label for lean-l shape | lean-l
-e2e-flowchart-nightly-check-shape-themes-30-connect-all-shapes-with-each-other - node | n33 | This is a label for trap-t shape | trap-t
-e2e-flowchart-nightly-check-shape-themes-30-connect-all-shapes-with-each-other - node | n44 | This is a label for trap-b shape | trap-b
-e2e-flowchart-nightly-check-shape-themes-31-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-31-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-31-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-31-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-31-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-31-connect-all-shapes-with-each-other - node | n00 | This is a label for triangle shape | tri
-e2e-flowchart-nightly-check-shape-themes-31-connect-all-shapes-with-each-other - node | n11 | This is a label for sloped-rectangle shape | sl-rect
-e2e-flowchart-nightly-check-shape-themes-31-connect-all-shapes-with-each-other - node | n22 | This is a label for horizontal-cylinder shape | h-cyl
-e2e-flowchart-nightly-check-shape-themes-31-connect-all-shapes-with-each-other - node | n33 | This is a label for flipped-triangle shape | flip-tri
-e2e-flowchart-nightly-check-shape-themes-31-connect-all-shapes-with-each-other - node | n44 |  | hourglass
-e2e-flowchart-nightly-check-shape-themes-32-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-32-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-32-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-32-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-32-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-32-connect-all-shapes-with-each-other - node | n00 | This is a label for tagged-rectangle shape | tag-rect
-e2e-flowchart-nightly-check-shape-themes-32-connect-all-shapes-with-each-other - node | n11 | This is a label for documents shape | docs
-e2e-flowchart-nightly-check-shape-themes-32-connect-all-shapes-with-each-other - node | n22 |  | bolt
-e2e-flowchart-nightly-check-shape-themes-32-connect-all-shapes-with-each-other - node | n33 |  | f-circ
-e2e-flowchart-nightly-check-shape-themes-32-connect-all-shapes-with-each-other - node | n44 | This is a label for window-pane shape | win-pane
-e2e-flowchart-nightly-check-shape-themes-33-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-33-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-33-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-33-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-33-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-33-connect-all-shapes-with-each-other - node | n00 | This is a label for curved-trapezoid shape | curv-trap
-e2e-flowchart-nightly-check-shape-themes-33-connect-all-shapes-with-each-other - node | n11 | This is a label for bow-rect shape | bow-rect
-e2e-flowchart-nightly-check-shape-themes-33-connect-all-shapes-with-each-other - node | n22 | This is a label for tagged-document shape | tag-doc
-e2e-flowchart-nightly-check-shape-themes-33-connect-all-shapes-with-each-other - node | n33 | This is a label for divided-rectangle shape | div-rect
-e2e-flowchart-nightly-check-shape-themes-33-connect-all-shapes-with-each-other - node | n44 |  | cross-circ
-e2e-flowchart-nightly-check-shape-themes-34-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-34-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-34-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-34-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-34-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-34-connect-all-shapes-with-each-other - node | n00 | This is a label for document shape | doc
-e2e-flowchart-nightly-check-shape-themes-34-connect-all-shapes-with-each-other - node | n11 | This is a label for notched-pentagon shape | notch-pent
-e2e-flowchart-nightly-check-shape-themes-34-connect-all-shapes-with-each-other - node | n22 | This is a label for lined-cylinder shape | lin-cyl
-e2e-flowchart-nightly-check-shape-themes-34-connect-all-shapes-with-each-other - node | n33 | This is a label for stacked-document shape | docs
-e2e-flowchart-nightly-check-shape-themes-34-connect-all-shapes-with-each-other - node | n44 | This is a label for half-rounded-rectangle shape | delay
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other + node | n55 | n55 | rect
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other - node | n00 | This is a label for lined-document shape | lin-doc
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other - node | n11 | This is a label for tagged-document shape | tag-doc
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other - node | n22 | This is a label for brace-l shape | brace
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other - node | n33 | This is a label for comment shape | brace
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other - node | n44 | This is a label for braces shape | braces
-e2e-flowchart-nightly-check-shape-themes-35-connect-all-shapes-with-each-other - node | n55 | This is a label for brace-r shape | brace-r
-e2e-flowchart-nightly-check-shape-themes-36-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-36-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-36-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-36-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-36-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-36-connect-all-shapes-with-each-other - node | n00 | This is a label for text shape | text
-e2e-flowchart-nightly-check-shape-themes-36-connect-all-shapes-with-each-other - node | n11 | This is a label for card shape | notch-rect
-e2e-flowchart-nightly-check-shape-themes-36-connect-all-shapes-with-each-other - node | n22 | This is a label for lin-rect shape | lin-rect
-e2e-flowchart-nightly-check-shape-themes-36-connect-all-shapes-with-each-other - node | n33 | This is a label for diamond shape | diam
-e2e-flowchart-nightly-check-shape-themes-36-connect-all-shapes-with-each-other - node | n44 | This is a label for hexagon shape | hex
-e2e-flowchart-nightly-check-shape-themes-37-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-37-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-37-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-37-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-37-connect-all-shapes-with-each-other - node | n00 | This is a label for rounded shape | rounded
-e2e-flowchart-nightly-check-shape-themes-37-connect-all-shapes-with-each-other - node | n11 | This is a label for rect shape | rect
-e2e-flowchart-nightly-check-shape-themes-37-connect-all-shapes-with-each-other - node | n22 |  | sm-circ
-e2e-flowchart-nightly-check-shape-themes-37-connect-all-shapes-with-each-other - node | n33 |  | fr-circ
-e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other - node | n00 |  | fork
+e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other + node | n11 | This is a label for choice shape | rect
+e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other + node | n22 | This is a label for note shape | rect
 e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other - node | n11 |  | choice
 e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other - node | n22 | This is a label for note shape | note
-e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other - node | n33 | This is a label for stadium shape | stadium
-e2e-flowchart-nightly-check-shape-themes-38-connect-all-shapes-with-each-other - node | n44 | This is a label for odd shape | odd
-e2e-flowchart-nightly-check-shape-themes-39-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-39-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-39-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-39-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-39-connect-all-shapes-with-each-other + node | n44 | n44 | rect
-e2e-flowchart-nightly-check-shape-themes-39-connect-all-shapes-with-each-other - node | n00 | This is a label for subroutine shape | fr-rect
-e2e-flowchart-nightly-check-shape-themes-39-connect-all-shapes-with-each-other - node | n11 | This is a label for cylinder shape | cyl
-e2e-flowchart-nightly-check-shape-themes-39-connect-all-shapes-with-each-other - node | n22 | This is a label for circle shape | circle
-e2e-flowchart-nightly-check-shape-themes-39-connect-all-shapes-with-each-other - node | n33 | This is a label for doublecircle shape | dbl-circ
-e2e-flowchart-nightly-check-shape-themes-39-connect-all-shapes-with-each-other - node | n44 | This is a label for odd shape | odd
-e2e-flowchart-nightly-check-shape-themes-40-connect-all-shapes-with-each-other + node | n00 | n00 | rect
-e2e-flowchart-nightly-check-shape-themes-40-connect-all-shapes-with-each-other + node | n11 | n11 | rect
-e2e-flowchart-nightly-check-shape-themes-40-connect-all-shapes-with-each-other + node | n22 | n22 | rect
-e2e-flowchart-nightly-check-shape-themes-40-connect-all-shapes-with-each-other + node | n33 | n33 | rect
-e2e-flowchart-nightly-check-shape-themes-40-connect-all-shapes-with-each-other + node | n44 | n44 | rect
+e2e-flowchart-nightly-check-shape-themes-40-connect-all-shapes-with-each-other + node | n00 | This is a label for anchor shape | rect
 e2e-flowchart-nightly-check-shape-themes-40-connect-all-shapes-with-each-other - node | n00 |  | anchor
-e2e-flowchart-nightly-check-shape-themes-40-connect-all-shapes-with-each-other - node | n11 | This is a label for lean-r shape | lean-r
-e2e-flowchart-nightly-check-shape-themes-40-connect-all-shapes-with-each-other - node | n22 | This is a label for lean-l shape | lean-l
-e2e-flowchart-nightly-check-shape-themes-40-connect-all-shapes-with-each-other - node | n33 | This is a label for trap-t shape | trap-t
-e2e-flowchart-nightly-check-shape-themes-40-connect-all-shapes-with-each-other - node | n44 | This is a label for trap-b shape | trap-b
-e2e-flowchart-visual-check-document-shape-label-clearance + node | A | A | rect
-e2e-flowchart-visual-check-document-shape-label-clearance + node | B | B | rect
-e2e-flowchart-visual-check-document-shape-label-clearance + node | C | C | rect
-e2e-flowchart-visual-check-document-shape-label-clearance + node | D | D | rect
-e2e-flowchart-visual-check-document-shape-label-clearance - node | A | aaaaaa bbbbbb cccccc dddddd eeeeee ffffff gggggg hhhhhh | doc
-e2e-flowchart-visual-check-document-shape-label-clearance - node | B | aaaaaa bbbbbb cccccc dddddd eeeeee ffffff gggggg hhhhhh | docs
-e2e-flowchart-visual-check-document-shape-label-clearance - node | C | aaaaaa bbbbbb cccccc dddddd eeeeee ffffff gggggg hhhhhh | lin-doc
-e2e-flowchart-visual-check-document-shape-label-clearance - node | D | aaaaaa bbbbbb cccccc dddddd eeeeee ffffff gggggg hhhhhh | tag-doc
-e2e-flowchart-visual-check-selected-shape-wrapping + node | A | A | rect
-e2e-flowchart-visual-check-selected-shape-wrapping + node | DCB | DCB | rect
-e2e-flowchart-visual-check-selected-shape-wrapping + node | DL | DL | rect
-e2e-flowchart-visual-check-selected-shape-wrapping + node | DLB | DLB | rect
-e2e-flowchart-visual-check-selected-shape-wrapping + node | DP | DP | rect
-e2e-flowchart-visual-check-selected-shape-wrapping + node | DPB | DPB | rect
-e2e-flowchart-visual-check-selected-shape-wrapping - node | A | First chosen line Second chosen line | diam
-e2e-flowchart-visual-check-selected-shape-wrapping - node | DCB | First chosen line Second chosen line | dbl-circ
-e2e-flowchart-visual-check-selected-shape-wrapping - node | DL | Choose how to continue from here | delay
-e2e-flowchart-visual-check-selected-shape-wrapping - node | DLB | First chosen line Second chosen line | delay
-e2e-flowchart-visual-check-selected-shape-wrapping - node | DP | Choose how to continue from here | curv-trap
-e2e-flowchart-visual-check-selected-shape-wrapping - node | DPB | First chosen line Second chosen line | curv-trap
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-on-multi-nodes + node | n4 | n4 | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-on-multi-nodes - node | n4 | label for n4 | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-on-multi-nodes - node | n5 | label for n5 | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces + node | n4 | n4 | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces + node | n5 | n5 | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces - node | n4 | label for n4 | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces - node | n5 | label for n5 | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces-and + node | n4 | n4 | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces-and - node | n4 | label for n4 | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces-and - node | n5 | label for n5 | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces-and-edge-link + node | C | C | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces-and-edge-link + node | D | D | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces-and-edge-link - edge | A | E | none | arrow | solid
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces-and-edge-link - node | C | for c | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces-and-edge-link - node | D | for D | rect
-e2e-flowchart-visual-check-should-be-possible-to-use-syntax-to-add-labels-with-trail-spaces-and-edge-link - node | E | for E | rect
-e2e-flowchart-visual-check-should-collapse-nested-subgraphs-to-the-outermost-collapsed-ancestor + edge | A | B | none | arrow | solid
-e2e-flowchart-visual-check-should-collapse-nested-subgraphs-to-the-outermost-collapsed-ancestor + edge | Start | inner | none | arrow | solid
-e2e-flowchart-visual-check-should-collapse-nested-subgraphs-to-the-outermost-collapsed-ancestor + group | inner | Inner | A,B
-e2e-flowchart-visual-check-should-collapse-nested-subgraphs-to-the-outermost-collapsed-ancestor + group | outer | Outer | inner
-e2e-flowchart-visual-check-should-collapse-nested-subgraphs-to-the-outermost-collapsed-ancestor + node | A | A | rect
-e2e-flowchart-visual-check-should-collapse-nested-subgraphs-to-the-outermost-collapsed-ancestor + node | B | B | rect
-e2e-flowchart-visual-check-should-collapse-nested-subgraphs-to-the-outermost-collapsed-ancestor - edge | Start | outer | none | arrow | solid
-e2e-flowchart-visual-check-should-collapse-nested-subgraphs-to-the-outermost-collapsed-ancestor - node | outer |  | collapsedGroup
-e2e-flowchart-visual-check-should-redirect-an-edge-targeting-a-deeply-nested-node-to-the-outermost-collapsed-subgraph + edge | A | B | none | arrow | solid
-e2e-flowchart-visual-check-should-redirect-an-edge-targeting-a-deeply-nested-node-to-the-outermost-collapsed-subgraph + edge | Start | A | none | arrow | solid
-e2e-flowchart-visual-check-should-redirect-an-edge-targeting-a-deeply-nested-node-to-the-outermost-collapsed-subgraph + group | inner | Inner | A,B
-e2e-flowchart-visual-check-should-redirect-an-edge-targeting-a-deeply-nested-node-to-the-outermost-collapsed-subgraph + group | outer | Outer | inner
-e2e-flowchart-visual-check-should-redirect-an-edge-targeting-a-deeply-nested-node-to-the-outermost-collapsed-subgraph + node | A | A | rect
-e2e-flowchart-visual-check-should-redirect-an-edge-targeting-a-deeply-nested-node-to-the-outermost-collapsed-subgraph + node | B | B | rect
-e2e-flowchart-visual-check-should-redirect-an-edge-targeting-a-deeply-nested-node-to-the-outermost-collapsed-subgraph - edge | Start | outer | none | arrow | solid
-e2e-flowchart-visual-check-should-redirect-an-edge-targeting-a-deeply-nested-node-to-the-outermost-collapsed-subgraph - node | outer |  | collapsedGroup
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-alongside-an-expanded-one + edge | A1 | A2 | none | arrow | solid
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-alongside-an-expanded-one + group | g1 | Collapsed | A1,A2
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-alongside-an-expanded-one + node | A1 | A1 | rect
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-alongside-an-expanded-one + node | A2 | A2 | rect
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-alongside-an-expanded-one - node | g1 |  | collapsedGroup
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-as-a-single-node-with-edges-redirected-to-it + edge | A | B | none | arrow | solid
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-as-a-single-node-with-edges-redirected-to-it + edge | B | C | none | arrow | solid
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-as-a-single-node-with-edges-redirected-to-it + group | one | My Group | A,B,C
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-as-a-single-node-with-edges-redirected-to-it + node | A | A | rect
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-as-a-single-node-with-edges-redirected-to-it + node | B | B | rect
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-as-a-single-node-with-edges-redirected-to-it + node | C | C | rect
-e2e-flowchart-visual-check-should-render-a-collapsed-subgraph-as-a-single-node-with-edges-redirected-to-it - node | one |  | collapsedGroup
-e2e-flowchart-visual-check-should-render-a-diamond-shaped-node-using-shape-config + node | n1 | Diamond | rect
-e2e-flowchart-visual-check-should-render-a-diamond-shaped-node-using-shape-config - node | n1 | Diamond | diam
-e2e-flowchart-visual-check-should-render-a-rounded-rectangle-and-a-normal-rectangle + node | n1 | Rounded Rectangle | rect
-e2e-flowchart-visual-check-should-render-a-rounded-rectangle-and-a-normal-rectangle - node | n1 | Rounded Rectangle | rounded
-parser-flow-edges-010 + node | A | A | rect
-parser-flow-edges-010 - node | A | A | circle
-parser-flow-node-data-001 + node | D | D | rect
-parser-flow-node-data-001 - node | D | D | rounded
-parser-flow-node-data-002 + node | D | D | rect
-parser-flow-node-data-002 - node | D | D | rounded
-parser-flow-node-data-003 + node | D | D | rect
-parser-flow-node-data-003 - node | D | D | rounded
-parser-flow-node-data-003 - node | E | E | rect
-parser-flow-node-data-004 + node | D | D | rect
-parser-flow-node-data-004 - edge | D | E | none | arrow | solid
-parser-flow-node-data-004 - node | D | D | rounded
-parser-flow-node-data-004 - node | E | E | rect
-parser-flow-node-data-005 + node | D | D | rect
-parser-flow-node-data-005 - edge | D | F | none | arrow | solid
-parser-flow-node-data-005 - edge | E | F | none | arrow | solid
-parser-flow-node-data-005 - node | D | D | rounded
-parser-flow-node-data-005 - node | E | E | rect
-parser-flow-node-data-005 - node | F | F | rect
-parser-flow-node-data-006 + node | D | D | rect
-parser-flow-node-data-006 - edge | D | F | none | arrow | solid
-parser-flow-node-data-006 - edge | E | F | none | arrow | solid
-parser-flow-node-data-006 - node | D | D | rounded
-parser-flow-node-data-006 - node | E | E | rounded
-parser-flow-node-data-006 - node | F | F | rect
-parser-flow-node-data-007 + node | D | D | rect
-parser-flow-node-data-007 - edge | D | F | none | arrow | solid
-parser-flow-node-data-007 - edge | D | G | none | arrow | solid
-parser-flow-node-data-007 - edge | E | F | none | arrow | solid
-parser-flow-node-data-007 - edge | E | G | none | arrow | solid
-parser-flow-node-data-007 - node | D | D | rounded
-parser-flow-node-data-007 - node | E | E | rounded
-parser-flow-node-data-007 - node | F | F | rect
-parser-flow-node-data-007 - node | G | G | rounded
-parser-flow-node-data-008 + node | D | D | rect
-parser-flow-node-data-008 - edge | D | F | none | arrow | solid
-parser-flow-node-data-008 - edge | D | G | none | arrow | solid
-parser-flow-node-data-008 - edge | E | F | none | arrow | solid
-parser-flow-node-data-008 - edge | E | G | none | arrow | solid
-parser-flow-node-data-008 - node | D | D | rounded
-parser-flow-node-data-008 - node | E | E | rounded
-parser-flow-node-data-008 - node | F | F | rounded
-parser-flow-node-data-008 - node | G | G | rounded
-parser-flow-node-data-009 + node | D | D | rect
-parser-flow-node-data-009 - edge | D | F | none | arrow | solid
-parser-flow-node-data-009 - edge | D | G | none | arrow | solid
-parser-flow-node-data-009 - edge | E | F | none | arrow | solid
-parser-flow-node-data-009 - edge | E | G | none | arrow | solid
-parser-flow-node-data-009 - node | D | D | rounded
-parser-flow-node-data-009 - node | E | E | rounded
-parser-flow-node-data-009 - node | F | shape: rounded | diam
-parser-flow-node-data-009 - node | G | shape: rounded | diam
-parser-flow-node-data-010 + node | D | D | rect
-parser-flow-node-data-010 - node | D | D | rounded
-parser-flow-node-data-011 + node | D | D | rect
-parser-flow-node-data-011 - node | D | D | rounded
-parser-flow-node-data-012 + node | D | D | rect
-parser-flow-node-data-012 - node | D | D | rounded
-parser-flow-node-data-013 + node | D | D | rect
-parser-flow-node-data-013 - node | D | DD | rounded
-parser-flow-node-data-014 + node | D | D | rect
-parser-flow-node-data-014 + node | other | other | rect
-parser-flow-node-data-014 + node | shape | shape | rect
-parser-flow-node-data-014 - node | D | D | circle
-parser-flow-node-data-015 + node | B | B | rect
+parser-flow-edges-007 + node | A | A | circle
+parser-flow-edges-007 - node | A | A | rect
+parser-flow-edges-008 + node | A | A | circle
+parser-flow-edges-008 - node | A | A | rect
 parser-flow-node-data-015 + node | C | Hello | rect
-parser-flow-node-data-015 + node | other | other | rect
-parser-flow-node-data-015 + node | shape | shape | rect
-parser-flow-node-data-015 - node | B | B | circle
 parser-flow-node-data-015 - node | C | Hello | circle
 parser-flow-node-data-016 + node | A | A | rect
-parser-flow-node-data-016 + node | label | label | rect
 parser-flow-node-data-016 + node | other | other | rect
 parser-flow-node-data-016 - node | A | This is } | rect
-parser-flow-node-data-020 + node | A | A | rect
-parser-flow-node-data-020 + node | This | This | rect
-parser-flow-node-data-020 + node | label | label | rect
-parser-flow-node-data-020 + node | multiline | multiline | rect
-parser-flow-node-data-020 + node | other | other | rect
+parser-flow-node-data-020 + node | A | | | rect
 parser-flow-node-data-020 - node | A | This is a multiline string | rect
-parser-flow-node-data-021 + node | A | A | rect
-parser-flow-node-data-021 + node | label | label | rect
-parser-flow-node-data-021 + node | multiline | multiline | rect
-parser-flow-node-data-021 + node | other | other | rect
-parser-flow-node-data-021 - node | A | This is a multiline string | rect
 parser-flow-node-data-022 + node | A | A | rect
-parser-flow-node-data-022 + node | label | label | rect
 parser-flow-node-data-022 + node | other | other | rect
 parser-flow-node-data-022 - node | A | This is a string with } | rect
-parser-flow-node-data-023 + node | A | A | rect
-parser-flow-node-data-023 + node | label | label | rect
-parser-flow-node-data-023 + node | other | other | rect
-parser-flow-node-data-023 - node | A | This is a string with @ | rect
 parser-flow-node-data-024 + node | A | A | rect
-parser-flow-node-data-024 + node | label | label | rect
 parser-flow-node-data-024 + node | other | other | rect
 parser-flow-node-data-024 - node | A | This is a string with} | rect
-parser-flow-node-data-025 + node | n4 | n4 | rect
-parser-flow-node-data-025 - node | n4 | label for n4 | rect
-parser-flow-node-data-025 - node | n5 | label for n5 | rect
-parser-flow-node-data-026 + node | C | C | rect
-parser-flow-node-data-026 + node | D | D | rect
-parser-flow-node-data-026 - edge | A | E | none | arrow | solid
-parser-flow-node-data-026 - node | C | for c | rect
-parser-flow-node-data-026 - node | D | for D | rect
-parser-flow-node-data-026 - node | E | for E | rect
-parser-flow-node-data-027 + node | C | C | rect
-parser-flow-node-data-027 - edge | A | D | none | arrow | solid
-parser-flow-node-data-027 - edge | A | E | none | arrow | solid
-parser-flow-node-data-027 - node | C | @for@ c@ | rect
-parser-flow-node-data-027 - node | D | @for@ D@ | circle
-parser-flow-node-data-027 - node | E | @for@ E@ | diam
-parser-subgraph-041 + edge | A | B | none | arrow | solid
-parser-subgraph-041 + edge | C | A | none | arrow | solid
-parser-subgraph-041 + group | one | My Group | A,B
-parser-subgraph-041 + node | A | A | rect
-parser-subgraph-041 + node | B | B | rect
-parser-subgraph-041 - edge | C | one | none | arrow | solid
-parser-subgraph-041 - node | one |  | collapsedGroup
-
-# Unsupported, ipjohnson/mermaider#7: A node given with @{ icon: ..., label: ... } is drawn as a plain rectangle named by its id, without the icon or label.
-e2e-flowchart-pr-check-5-icon-shape-bundled + node | B | B | rect
-e2e-flowchart-pr-check-5-icon-shape-bundled - icon | B | fa:bell
-e2e-flowchart-pr-check-5-icon-shape-bundled - node | B | Notify | rect
-e2e-flowchart-visual-check-should-render-aws-icons-with-labels-and-rect-elements + node | Cloudwatch | Cloudwatch | rect
-e2e-flowchart-visual-check-should-render-aws-icons-with-labels-and-rect-elements + node | EKS | EKS | rect
-e2e-flowchart-visual-check-should-render-aws-icons-with-labels-and-rect-elements + node | Route53 | Route53 | rect
-e2e-flowchart-visual-check-should-render-aws-icons-with-labels-and-rect-elements - icon | Cloudwatch | aws:arch-amazon-cloudwatch
-e2e-flowchart-visual-check-should-render-aws-icons-with-labels-and-rect-elements - icon | EKS | aws:arch-amazon-eks-cloud
-e2e-flowchart-visual-check-should-render-aws-icons-with-labels-and-rect-elements - icon | Route53 | aws:arch-amazon-route-53
-e2e-flowchart-visual-check-should-render-aws-icons-with-labels-and-rect-elements - node | Cloudwatch | CloudWatch | rect
-e2e-flowchart-visual-check-should-render-aws-icons-with-labels-and-rect-elements - node | EKS | EKS Cloud | rect
-e2e-flowchart-visual-check-should-render-aws-icons-with-labels-and-rect-elements - node | Route53 | Route 53 | rect
-e2e-flowchart-visual-check-should-render-multiple-aws-icons-with-rect-elements-in-a-flowchart + node | Cloudfront | Cloudfront | rect
-e2e-flowchart-visual-check-should-render-multiple-aws-icons-with-rect-elements-in-a-flowchart + node | Cloudwatch | Cloudwatch | rect
-e2e-flowchart-visual-check-should-render-multiple-aws-icons-with-rect-elements-in-a-flowchart + node | Route53 | Route53 | rect
-e2e-flowchart-visual-check-should-render-multiple-aws-icons-with-rect-elements-in-a-flowchart - icon | Cloudfront | aws:arch-amazon-route-53
-e2e-flowchart-visual-check-should-render-multiple-aws-icons-with-rect-elements-in-a-flowchart - icon | Cloudwatch | aws:arch-amazon-cloudwatch
-e2e-flowchart-visual-check-should-render-multiple-aws-icons-with-rect-elements-in-a-flowchart - icon | Route53 | aws:arch-amazon-eks-cloud
-e2e-flowchart-visual-check-should-render-multiple-aws-icons-with-rect-elements-in-a-flowchart - node | Cloudfront |  | rect
-e2e-flowchart-visual-check-should-render-multiple-aws-icons-with-rect-elements-in-a-flowchart - node | Cloudwatch |  | rect
-e2e-flowchart-visual-check-should-render-multiple-aws-icons-with-rect-elements-in-a-flowchart - node | Route53 |  | rect
-e2e-flowchart-visual-check-should-render-single-aws-icon-with-rect-elements-without-unintended-opacity + node | Cloudwatch | Cloudwatch | rect
-e2e-flowchart-visual-check-should-render-single-aws-icon-with-rect-elements-without-unintended-opacity - icon | Cloudwatch | aws:arch-amazon-cloudwatch
-e2e-flowchart-visual-check-should-render-single-aws-icon-with-rect-elements-without-unintended-opacity - node | Cloudwatch |  | rect
 
 # Unsupported, ipjohnson/mermaider#8: A node or edge label with fa:fa-name or fab:fa-name is drawn as that text instead of an icon followed by the label.
 e2e-flowchart-nightly-check-classic-01-38-should-render-a-flowchart-when-usemaxwidth-is-true-default + node | F | fa:fa-car Car | rect
@@ -6981,10 +6365,6 @@ parser-flowdb-001 + accept | crash
 parser-flowdb-001 - accept | yes
 parser-flowdb-002 + accept | crash
 parser-flowdb-002 - accept | yes
-parser-flowdb-003 + accept | crash
-parser-flowdb-003 - accept | yes
-parser-flowdb-004 + accept | crash
-parser-flowdb-004 - accept | yes
 parser-flowdb-006 + accept | crash
 parser-flowdb-006 - accept | yes
 parser-flowdb-007 + accept | crash
@@ -10117,10 +9497,6 @@ parser-quadrant-jison-025 + axis | y-top | 高参与度
 parser-quadrant-jison-025 - axis | x-left | 低参与度
 parser-quadrant-jison-025 - axis | x-right | 高参与度
 
-# Facts form: mermaid.js records an explicit tree view icon(none) as the icon none. Mermaider reads it as no icon and has no fact. Neither draws an icon.
-e2e-tree-view-nightly-check-should-hide-default-icons-with-icon-none-and-icon - icon | src / App.tsx | none
-e2e-tree-view-nightly-check-should-hide-default-icons-with-icon-none-and-icon - icon | src / index.js | none
-
 # Facts form: mermaid.js's model holds a C4 deployment node's type as its lower-cased type text, Mermaider's facts hold the kind node. Mermaider draws the type text as mermaid.js does.
 e2e-c4-nightly-check-c4-5-should-render-a-simple-c4deployment-diagram + boundary | apache | node | Apache Tomcat | dn
 e2e-c4-nightly-check-c4-5-should-render-a-simple-c4deployment-diagram + boundary | dn | node | bigbank-api*** x8 | plc
@@ -10311,3 +9687,113 @@ parser-statediagram-v2-016 - group | NotShooting | NotShooting | Configuring,Idl
 # mermaid.js quirk: the stray line `size: 2rem` becomes a task named size with a NaN score. Mermaider ignores a task whose score is not a number.
 e2e-journey-nightly-check-title-styling - label | size
 e2e-journey-nightly-check-title-styling - task | Retention | size | NaN
+
+# ipjohnson/AgentDriver#4284: Mermaider renders a source mermaid.js refuses: a service in an undeclared group, a git graph
+# that merges, checks out or cherry-picks something that does not exist or has an unknown attribute, and a radar axis
+# or curve without a name, values or axes.
+parser-langium-architecture-008 + accept | yes
+parser-langium-architecture-008 - accept | no
+parser-langium-architecture-009 + accept | yes
+parser-langium-architecture-009 - accept | no
+parser-langium-architecture-010 + accept | yes
+parser-langium-architecture-010 - accept | no
+parser-langium-architecture-012 + accept | yes
+parser-langium-architecture-012 - accept | no
+parser-langium-architecture-013 + accept | yes
+parser-langium-architecture-013 - accept | no
+parser-langium-gitgraph-006 + accept | yes
+parser-langium-gitgraph-006 - accept | no
+parser-langium-gitgraph-014 + accept | yes
+parser-langium-gitgraph-014 - accept | no
+parser-langium-gitgraph-015 + accept | yes
+parser-langium-gitgraph-015 - accept | no
+parser-langium-gitgraph-016 + accept | yes
+parser-langium-gitgraph-016 - accept | no
+parser-langium-gitgraph-017 + accept | yes
+parser-langium-gitgraph-017 - accept | no
+parser-langium-gitgraph-019 + accept | yes
+parser-langium-gitgraph-019 - accept | no
+parser-langium-gitgraph-020 + accept | yes
+parser-langium-gitgraph-020 - accept | no
+parser-langium-gitgraph-021 + accept | yes
+parser-langium-gitgraph-021 - accept | no
+parser-langium-gitgraph-022 + accept | yes
+parser-langium-gitgraph-022 - accept | no
+parser-langium-gitgraph-026 + accept | yes
+parser-langium-gitgraph-026 - accept | no
+parser-langium-gitgraph-027 + accept | yes
+parser-langium-gitgraph-027 - accept | no
+parser-langium-radar-004 + accept | yes
+parser-langium-radar-004 - accept | no
+parser-langium-radar-005 + accept | yes
+parser-langium-radar-005 - accept | no
+parser-langium-radar-006 + accept | yes
+parser-langium-radar-006 - accept | no
+parser-langium-radar-007 + accept | yes
+parser-langium-radar-007 - accept | no
+parser-langium-radar-008 + accept | yes
+parser-langium-radar-008 - accept | no
+parser-langium-radar-009 + accept | yes
+parser-langium-radar-009 - accept | no
+parser-langium-radar-010 + accept | yes
+parser-langium-radar-010 - accept | no
+parser-langium-radar-011 + accept | yes
+parser-langium-radar-011 - accept | no
+parser-langium-radar-012 + accept | yes
+parser-langium-radar-012 - accept | no
+parser-langium-radar-013 + accept | yes
+parser-langium-radar-013 - accept | no
+parser-langium-radar-014 + accept | yes
+parser-langium-radar-014 - accept | no
+parser-langium-radar-015 + accept | yes
+parser-langium-radar-015 - accept | no
+parser-langium-radar-016 + accept | yes
+parser-langium-radar-016 - accept | no
+parser-langium-radar-017 + accept | yes
+parser-langium-radar-017 - accept | no
+
+# ipjohnson/mermaider#45: radar-beta: with a trailing colon is refused.
+parser-langium-radar-002 + accept | no
+parser-langium-radar-002 - accept | yes
+parser-langium-radar-003 + accept | no
+parser-langium-radar-003 - accept | yes
+
+# By design: a diagram with no data draws nothing in Mermaider: a pie without slices, a radar chart without axes, and a
+# git graph whose only line is a branch. mermaid.js draws an empty frame, or the bare branch lines with their names.
+parser-langium-gitgraph-011 + drawn | no
+parser-langium-gitgraph-011 - drawn | yes
+parser-langium-gitgraph-011 - label | feature/test-branch
+parser-langium-gitgraph-011 - label | main
+parser-langium-gitgraph-012 + drawn | no
+parser-langium-gitgraph-012 - drawn | yes
+parser-langium-gitgraph-012 - label | main
+parser-langium-gitgraph-012 - label | my-feature_branch
+parser-langium-gitgraph-013 + drawn | no
+parser-langium-gitgraph-013 - drawn | yes
+parser-langium-gitgraph-013 - label | feature
+parser-langium-gitgraph-013 - label | main
+parser-langium-pie-001 + drawn | no
+parser-langium-pie-001 - drawn | yes
+parser-langium-pie-002 + drawn | no
+parser-langium-pie-002 - drawn | yes
+parser-langium-pie-003 + drawn | no
+parser-langium-pie-003 - drawn | yes
+parser-langium-pie-004 + drawn | no
+parser-langium-pie-004 - drawn | yes
+parser-langium-radar-001 + drawn | no
+parser-langium-radar-001 - drawn | yes
+
+# ipjohnson/mermaider#30: Git graph: a cherry-pick commit is drawn without its tag.
+parser-langium-gitgraph-025 + commit | 3 | main | cherry-pick
+parser-langium-gitgraph-025 - commit | 3 | main | cherry-pick | critical fix
+parser-langium-gitgraph-025 - label | critical fix
+
+# ipjohnson/mermaider#65: Tree view: a single-quoted name keeps its quotes and is a file, and a title line is drawn as a node.
+parser-langium-treeview-010 + label | 'my folder/'
+parser-langium-treeview-010 + node | 'my folder/' | file
+parser-langium-treeview-010 - label | my folder
+parser-langium-treeview-010 - node | my folder | dir
+parser-langium-treeview-023 + label | title My TreeView Diagram
+parser-langium-treeview-023 + node | title My TreeView Diagram | file
+parser-langium-treeview-026 + label | title My TreeView Diagram
+parser-langium-treeview-026 + node | title My TreeView Diagram | file

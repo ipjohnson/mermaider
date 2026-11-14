@@ -3,4 +3,4 @@
 # source 76bc2c387fbafbb5
 accept	yes
 drawn	yes
-node	S		collapsedGroup
+node	S	S	collapsedGroup

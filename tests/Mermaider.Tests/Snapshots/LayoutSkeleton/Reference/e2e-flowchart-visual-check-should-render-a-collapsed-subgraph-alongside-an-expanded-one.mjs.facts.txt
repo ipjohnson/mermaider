@@ -8,4 +8,4 @@ edge	g1	g2	none	arrow	solid
 group	g2	Expanded	B1,B2
 node	B1	B1	rect
 node	B2	B2	rect
-node	g1		collapsedGroup
+node	g1	Collapsed	collapsedGroup

@@ -1,0 +1,17 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 83e2e036b295a765
+accept	yes
+drawn	yes
+label	A
+label	Commodity / Accepted
+label	Custom / Emerging
+label	Genesis / Concept
+label	Product / Converging
+label	Test
+node	A	A	component	50	50
+stage	0	Genesis / Concept
+stage	1	Custom / Emerging
+stage	2	Product / Converging
+stage	3	Commodity / Accepted
+title	Test

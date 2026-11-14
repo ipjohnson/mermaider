@@ -11,4 +11,4 @@ group	third	Third	D
 node	A	a	rect
 node	B	b	rect
 node	D	d	rect
-node	second		collapsedGroup
+node	second	Second	collapsedGroup

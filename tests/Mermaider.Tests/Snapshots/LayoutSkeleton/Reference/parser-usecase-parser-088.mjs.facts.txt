@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 64d7edc01ac0e1f3
+accept	no
+# error Error parsing usecase diagram: Expecting token of type --> STEREOTYPE_TEXT <-- but found --> 'first' <-- at line 2, column 5 [17,22)

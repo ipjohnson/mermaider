@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fa066ed5989a0df8
+accept	no
+# error Metadata property 'animation' is invalid for edge 'link' at line 3, column 8 [33,42)

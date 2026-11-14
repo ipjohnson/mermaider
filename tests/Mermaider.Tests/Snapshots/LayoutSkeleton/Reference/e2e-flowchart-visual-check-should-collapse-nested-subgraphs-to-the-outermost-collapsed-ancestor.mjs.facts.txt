@@ -5,4 +5,4 @@ accept	yes
 drawn	yes
 edge	Start	outer	none	arrow	solid
 node	Start	Start	rect
-node	outer		collapsedGroup
+node	outer	Outer	collapsedGroup

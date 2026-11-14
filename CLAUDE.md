@@ -43,16 +43,16 @@ state, class, sequence, ER and architecture spec-test sources, the repros in `Mj
 the former `MermaidCompatTests`), the examples of mermaid's syntax docs in `MjsFacts/Docs/`
 (`scripts/mermaid-docs-corpus.py <mermaid checkout>` writes them for the types Mermaider draws; `Docs/SOURCE.txt` names
 the docs commit), and the diagrams of mermaid's rendering tests (`e2e/diagrams/**/*.mmd`) and parser tests
-(`packages/mermaid/src/diagrams/**/*.spec.*`) in `MjsFacts/Suite/` (`scripts/mermaid-test-corpus.py <mermaid checkout>`
-writes them; `Suite/SOURCE.txt` names the tag). Run both scripts on a checkout of the tag `package-lock.json` pins.
-A crash while drawing is recorded as `accept crash`. Every case records acceptance and whether anything is drawn.
-Each type adds its structure (labels, groups, edge ends, markers, node shapes in
-mermaid's short names, participant types, icons, chart data) and which of its labels the drawing shows; each extractor
-in `scripts/mjs-facts.mjs` says which facts come from mermaid's model and which from its DOM, and `MermaiderFacts`
-mirrors it. CI needs no Node. Accepted differences live in `mjs-facts-baseline.txt` under a reason or an issue; a new
-difference and a vanished one both fail.
-`mise run mjs-facts` (or `scripts/mjs-facts.sh`) re-renders the facts with the mermaid version `package-lock.json` pins,
-in UTC on a page clock fixed at 2000-01-01, so two runs write the same files.
+(`packages/mermaid/src/diagrams/**/*.spec.*`, `packages/parser/tests/*.test.*`) in `MjsFacts/Suite/`
+(`scripts/mermaid-test-corpus.py <mermaid checkout>` writes them; `Suite/SOURCE.txt` names the tag). Run both scripts on
+a checkout of the tag `package-lock.json` pins. A crash while drawing is recorded as `accept crash`. Every case records
+acceptance and whether anything is drawn. Each type adds its structure (labels, groups, edge ends, markers, node shapes
+in mermaid's short names, participant types, icons, chart data) and which of its labels the drawing shows; each
+extractor in `scripts/mjs-facts.mjs` says which facts come from mermaid's model and which from its DOM, and
+`MermaiderFacts` mirrors it. CI needs no Node. Accepted differences live in `mjs-facts-baseline.txt` under a reason or
+an issue; a new difference and a vanished one both fail. `mise run mjs-facts` (or `scripts/mjs-facts.sh`) re-renders the
+facts with the mermaid version `package-lock.json` pins, in UTC on a page clock fixed at 2000-01-01, so two runs write
+the same files.
 
 `OverlapLintTests` (`Snapshots/LayoutSkeleton/OverlapLint.cs`) checks the class and sequence cases of that corpus for labels
 on labels, labels on class or actor boxes, notes on anything, intersecting sibling groups and boxes outside the canvas.

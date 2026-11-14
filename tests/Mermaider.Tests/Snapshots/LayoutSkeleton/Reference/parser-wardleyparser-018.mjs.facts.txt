@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 88396f2d845ab8cd
+accept	yes
+drawn	yes
+label	Data Store
+label	batch-loader
+label	real-time queue
+node	Data Store	Data Store	component	50	50					yes
+node	Data Store_batch-loader	batch-loader	pipeline-component	70	50
+node	Data Store_real-time queue	real-time queue	pipeline-component	30	50	-40	20
+pipeline	Data Store	Data Store_real-time queue,Data Store_batch-loader

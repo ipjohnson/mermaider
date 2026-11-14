@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 2bd590828c1e714f
+accept	no
+# error Class/style target 'missingEdge' is unresolved or anonymous at line 3, column 7 [33,44)

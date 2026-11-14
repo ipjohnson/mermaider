@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 10e61c474d74c9d6
+accept	no
+# error Generalization requires actor-to-actor or use-case-to-use-case endpoints at line 4, column 6 [35,45)

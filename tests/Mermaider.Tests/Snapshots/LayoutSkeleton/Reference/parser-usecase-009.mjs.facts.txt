@@ -1,0 +1,12 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a839335dce6855a6
+accept	yes
+actor	Developer	Developer	normal
+direction	LR
+drawn	yes
+label	Developer
+label	WriteCode
+label	important
+relation	Developer	WriteCode	association	none	arrow	important	1
+usecase	WriteCode	WriteCode	ellipse

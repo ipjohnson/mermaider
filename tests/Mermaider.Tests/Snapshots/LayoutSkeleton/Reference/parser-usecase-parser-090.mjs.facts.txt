@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 3e22a18cc9189a00
+accept	no
+# error Error parsing usecase diagram: Expecting token of type --> JSON_OBJECT_LITERAL <-- but found --> '{"nested": {

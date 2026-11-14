@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 962a0344087da153
+accept	yes
+drawn	yes
+label	GitHub
+label	GitLab
+showdata	yes
+slice	GitHub	100
+slice	GitLab	50

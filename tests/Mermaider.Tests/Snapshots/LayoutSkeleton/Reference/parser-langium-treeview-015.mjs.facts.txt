@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0f7c8d858a495983
+accept	yes
+drawn	yes
+icon	data.bin	folder
+label	data.bin
+node	data.bin	file

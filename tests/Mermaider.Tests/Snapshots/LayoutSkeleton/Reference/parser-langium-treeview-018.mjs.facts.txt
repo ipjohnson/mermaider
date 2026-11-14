@@ -1,0 +1,8 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e1add1596083d410
+accept	yes
+drawn	yes
+label	entry point
+label	index.js
+node	index.js	file	entry point

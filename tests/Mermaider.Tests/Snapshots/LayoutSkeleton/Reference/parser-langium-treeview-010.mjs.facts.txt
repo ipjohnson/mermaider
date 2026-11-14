@@ -1,0 +1,7 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 343316503154d852
+accept	yes
+drawn	yes
+label	my folder
+node	my folder	dir

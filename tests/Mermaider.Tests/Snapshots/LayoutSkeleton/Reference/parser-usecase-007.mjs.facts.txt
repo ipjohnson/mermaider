@@ -1,0 +1,16 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 96f4255597e145f2
+accept	yes
+actor	Customer_Service	Customer Service	normal
+actor	System_Administrator	System Administrator	normal
+direction	LR
+drawn	yes
+label	Customer Service
+label	Handle Tickets
+label	Manage System
+label	System Administrator
+relation	Customer_Service	Handle_Tickets	association	none	arrow		1
+relation	System_Administrator	Manage_System	association	none	arrow		1
+usecase	Handle_Tickets	Handle Tickets	ellipse
+usecase	Manage_System	Manage System	ellipse

@@ -1,0 +1,23 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source a67c7c3073414b6a
+accept	yes
+drawn	yes
+label	API
+label	App
+label	Cloud
+label	Custom Size Map
+label	Database
+label	User
+link	API	Database		none
+link	App	API		none
+link	Database	Cloud		none
+link	User	App		none
+node	API	API	component	70	50
+node	App	App	component	85	75
+node	Cloud	Cloud	component	30	15
+node	Database	Database	component	50	30
+node	User	User	anchor	90	95
+size	600	800
+title	Custom Size Map
+trend	Database	60	30

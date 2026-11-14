@@ -5,4 +5,4 @@ accept	yes
 drawn	yes
 edge	X	grp	none	arrow	solid
 node	X	X	rect
-node	grp		collapsedGroup
+node	grp	Hand Drawn Group	collapsedGroup

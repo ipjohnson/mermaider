@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 27f1d4c76822567e
+accept	no
+# error Parsing failed:  Parse error on line 3, column 12: Expecting token of type 'ID' but found `

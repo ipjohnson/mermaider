@@ -1,0 +1,19 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 6654579942a4defa
+accept	yes
+actor	Admin	Administrator	normal
+actor	Customer	Customer	normal
+direction	LR
+drawn	yes
+label	Administrator
+label	Browse catalog
+label	Customer
+label	Manage catalog
+label	Place order
+relation	Admin	Manage	association	none	arrow		1
+relation	Customer	Browse	association	none	arrow		1
+relation	Customer	Checkout	association	none	arrow		1
+usecase	Browse	Browse catalog	ellipse
+usecase	Checkout	Place order	ellipse
+usecase	Manage	Manage catalog	rect

@@ -1,0 +1,14 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source 0f5fdf6fdb401690
+accept	yes
+drawn	yes
+label	Campfire Kettle
+label	Electric Kettle
+label	Kettle
+label	Test Pipeline
+node	Kettle	Kettle	component	57	45					yes
+node	Kettle_Campfire Kettle	Campfire Kettle	pipeline-component	35	45	-60	35
+node	Kettle_Electric Kettle	Electric Kettle	pipeline-component	53	45
+pipeline	Kettle	Kettle_Campfire Kettle,Kettle_Electric Kettle
+title	Test Pipeline

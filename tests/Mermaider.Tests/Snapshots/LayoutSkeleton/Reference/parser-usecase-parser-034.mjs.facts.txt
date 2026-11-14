@@ -1,0 +1,5 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source fb02e778134065d4
+accept	no
+# error Rectangular use case 'Report' cannot be a business use case at line 2, column 1 [13,19)

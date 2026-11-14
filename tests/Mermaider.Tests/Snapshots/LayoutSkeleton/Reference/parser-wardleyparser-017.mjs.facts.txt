@@ -1,0 +1,10 @@
+# mermaid.js facts. Refresh with: mise run mjs-facts
+# mermaid 12.3.0
+# source e367fb06790da27d
+accept	yes
+drawn	yes
+label	baz
+label	foo-bar
+link	foo-bar	baz		none
+node	baz	baz	component	60	60
+node	foo-bar	foo-bar	component	30	30
