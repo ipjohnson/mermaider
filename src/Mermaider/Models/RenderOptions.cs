@@ -158,6 +158,13 @@ public sealed record RenderOptions
 	public Action<IReadOnlyList<SvgViolation>>? OnSanitized { get; init; }
 
 	/// <summary>
+	/// Optional callback invoked once per diagram with every <see cref="MermaidDiagnostic"/> of the render, such as a flowchart
+	/// icon the <see cref="Icons.IconRegistry"/> does not have or an <c>http(s)</c> image that was drawn as a placeholder. Not
+	/// called when there are none.
+	/// </summary>
+	public Action<IReadOnlyList<MermaidDiagnostic>>? OnDiagnostics { get; init; }
+
+	/// <summary>
 	/// Resource limits for the parse + layout + render pipeline.
 	/// Defaults to <see cref="ResourceLimits.Default"/> — generous on-by-default
 	/// limits that reject pathological inputs while accommodating real-world diagrams.

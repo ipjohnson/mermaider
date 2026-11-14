@@ -48,6 +48,24 @@ public class FlowchartSpecTests
 	}
 
 	[Test]
+	[Arguments("TD")]
+	[Arguments("LR")]
+	public void Icon_and_image_nodes(string direction) =>
+		MermaidRenderer
+			.RenderSvg(
+				$$"""
+				flowchart {{direction}}
+				  user@{ icon: "fa:user", form: "square", label: "User", pos: "t", h: 60 } --> api
+				  api@{ icon: "server", form: "rounded", label: "API" } --> db@{ icon: "database", form: "circle", label: "Orders" }
+				  api --> cloud@{ icon: "cloud", label: "Bare icon" }
+				  api --> logo@{ img: "{{Rendering.FlowchartAssetNodeTests.SvgDataUri}}", label: "Data URI", w: 80, h: 40, constraint: "on" }
+				  api --> remote@{ img: "https://example.com/logo.png", label: "Remote", pos: "t", w: 60, h: 60 }
+				"""
+			)
+			.Should()
+			.MatchSnapshot(SvgSnapshotFormat.Instance, direction);
+
+	[Test]
 	public void Direction_LR() =>
 		MermaidRenderer.RenderSvg("""
 			graph LR

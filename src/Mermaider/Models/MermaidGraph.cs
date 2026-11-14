@@ -69,7 +69,11 @@ public enum GraphNotePosition
 }
 
 /// <summary>A single node in the parsed graph.</summary>
-public readonly record struct MermaidNode(string Id, string Label, NodeShape Shape, bool IsMarkdown = false);
+public readonly record struct MermaidNode(string Id, string Label, NodeShape Shape, bool IsMarkdown = false)
+{
+	/// <summary>The icon or image of a <see cref="NodeShape.Icon"/> or <see cref="NodeShape.Image"/> node; null otherwise.</summary>
+	public NodeAsset? Asset { get; init; }
+}
 
 /// <summary>A directed edge between two nodes.</summary>
 public sealed record MermaidEdge(string Source, string Target, string? Label, EdgeStyle Style, bool HasArrowStart, bool HasArrowEnd, int MinLength = 1);

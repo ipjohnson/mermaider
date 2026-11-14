@@ -14,7 +14,8 @@ internal static class ShapeOutlineClipper
 		var outlines = new Dictionary<string, (PositionedNode Node, IReadOnlyList<IReadOnlyList<(double X, double Y)>> Polygons)>(StringComparer.Ordinal);
 		foreach (var n in positioned.Nodes)
 		{
-			if (FlowchartShapes.Outline(n.Shape, n.Label, n.X, n.Y, n.Width, n.Height) is { } polygons)
+			var polygons = n.Asset is { } asset ? NodeAssets.Outline(n, asset) : FlowchartShapes.Outline(n.Shape, n.Label, n.X, n.Y, n.Width, n.Height);
+			if (polygons is not null)
 				outlines[n.Id] = (n, polygons);
 		}
 		if (outlines.Count == 0)

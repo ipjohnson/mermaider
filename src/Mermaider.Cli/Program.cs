@@ -188,6 +188,11 @@ static RenderOptions BuildOptions(string? themeName, bool transparent)
 		Warning = colors.Warning,
 		Info = colors.Info,
 		Transparent = transparent,
+		OnDiagnostics = diagnostics =>
+		{
+			foreach (var d in diagnostics)
+				Console.Error.WriteLine($"Warning: {d.Message}");
+		},
 	};
 }
 

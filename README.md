@@ -1024,7 +1024,8 @@ MermaidRenderer.RenderSvg("""
 
 #### Built-in icons
 
-Icons resolve through `Mermaider.Icons.IconRegistry`, referenced in a diagram as `service id(iconName)[Title]`.
+Icons resolve through `Mermaider.Icons.IconRegistry`, referenced in a diagram as `service id(iconName)[Title]`, or in a
+flowchart as an icon node, `A@{ icon: "iconName", form: "square", label: "Title" }`.
 
 | Pack | Icons |
 | --- | --- |

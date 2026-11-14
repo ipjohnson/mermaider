@@ -682,8 +682,9 @@ internal static partial class FlowchartParser
 	}
 
 	/// <summary>
-	/// Applies <c>shape</c> and <c>label</c> to the node, and records <c>view: collapsed</c>. Other keys (icon and image
-	/// settings, edge animation) are not read here.
+	/// Applies <c>shape</c>, <c>label</c> and the icon and image keys (<c>icon</c>, <c>img</c>, <c>form</c>, <c>pos</c>,
+	/// <c>w</c>, <c>h</c>, <c>constraint</c>) to the node, and records <c>view: collapsed</c>. As in mermaid.js, an image
+	/// wins over an icon and both win over <c>shape</c>, and an icon or image node without a label drops its id as label.
 	/// </summary>
 	private static void ApplyProperties(string id, Dictionary<string, string> props, Dictionary<string, MermaidNode> nodes, HashSet<string> collapsedIds)
 	{
@@ -692,16 +693,71 @@ internal static partial class FlowchartParser
 
 		var hasShape = props.TryGetValue("shape", out var shapeName);
 		var hasLabel = props.TryGetValue("label", out var rawLabel);
-		if (!hasShape && !hasLabel)
+		var asset = ReadAsset(props, nodes[id].Asset);
+		if (!hasShape && !hasLabel && asset is null)
 			return;
 
 		var node = nodes[id];
 		var shape = hasShape && FlowchartShapeNames.TryGet(shapeName!.Trim('"'), out var named) ? named : node.Shape;
 		var (label, isMarkdown) = hasLabel ? ReadLabel(rawLabel!) : (node.Label, node.IsMarkdown);
+		if (asset is not null)
+		{
+			shape = asset.Kind == NodeAssetKind.Image ? NodeShape.Image : NodeShape.Icon;
+			if (string.IsNullOrWhiteSpace(label) || (!hasLabel && label == id))
+				(label, isMarkdown) = (string.Empty, false);
+		}
 		if (!FlowchartShapeNames.DrawsLabel(shape))
 			(label, isMarkdown) = (string.Empty, false);
-		nodes[id] = new MermaidNode(id, label, shape, isMarkdown);
+		nodes[id] = new MermaidNode(id, label, shape, isMarkdown) { Asset = asset };
 	}
+
+	/// <summary>Largest <c>w</c> or <c>h</c> an icon or image node takes, so a source cannot ask for a huge canvas.</summary>
+	private const double MaxAssetSize = 1000;
+
+	/// <summary>The icon or image the properties ask for, on top of the node's earlier one. Null when there is neither.</summary>
+	private static NodeAsset? ReadAsset(Dictionary<string, string> props, NodeAsset? earlier)
+	{
+		NodeAsset? asset = earlier;
+		if (props.TryGetValue("img", out var img) && Unquote(img) is { Length: > 0 } src)
+			asset = new NodeAsset(NodeAssetKind.Image, src);
+		else if (props.TryGetValue("icon", out var icon) && Unquote(icon) is { Length: > 0 } name && asset?.Kind != NodeAssetKind.Image)
+			asset = new NodeAsset(NodeAssetKind.Icon, name);
+		if (asset is null)
+			return null;
+
+		if (props.TryGetValue("form", out var form))
+		{
+			asset = asset with
+			{
+				Form = Unquote(form) switch
+				{
+					"square" => IconForm.Square,
+					"circle" => IconForm.Circle,
+					"rounded" => IconForm.Rounded,
+					_ => IconForm.None,
+				},
+			};
+		}
+		if (props.TryGetValue("pos", out var pos))
+			asset = asset with { LabelOnTop = Unquote(pos) == "t" };
+		if (props.TryGetValue("constraint", out var constraint))
+			asset = asset with { KeepAspectRatio = Unquote(constraint) == "on" };
+		if (props.TryGetValue("w", out var w) && ReadSize(w) is { } width)
+			asset = asset with { Width = width };
+		if (props.TryGetValue("h", out var h) && ReadSize(h) is { } height)
+			asset = asset with { Height = height };
+		return asset;
+	}
+
+	private static string Unquote(string value) => value.Trim().Trim('"').Trim();
+
+	private static double? ReadSize(string value) =>
+		double.TryParse(
+			Unquote(value),
+			System.Globalization.NumberStyles.Float,
+			System.Globalization.CultureInfo.InvariantCulture,
+			out var size
+		) && double.IsFinite(size) && size > 0 ? Math.Min(size, MaxAssetSize) : null;
 
 	/// <summary>
 	/// Replaces each collapsed subgraph with one <see cref="NodeShape.CollapsedGroup"/> node carrying its title, in the

@@ -421,7 +421,7 @@ internal static class FlowchartShapes
 		}
 	}
 
-	private static List<(double X, double Y)> CirclePoints(double cx, double cy, double radius)
+	internal static List<(double X, double Y)> CirclePoints(double cx, double cy, double radius)
 	{
 		const int steps = 48;
 		var pts = new List<(double X, double Y)>(steps);
