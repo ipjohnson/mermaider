@@ -69,4 +69,30 @@ public class ZenUmlSpecTests
 			)
 			.Should()
 			.MatchSnapshot(SvgSnapshotFormat.Instance);
+
+	[Test]
+	public void Nested_fragments_without_a_message_between() =>
+		MermaidRenderer
+			.RenderSvg(
+				"""
+			zenuml
+			try {
+			  while(attempts < 3) {
+			    par {
+			      A->B: a
+			      A->C: b
+			    }
+			  }
+			} catch {
+			  A->C: give up
+			}
+			while(x) {
+			  opt {
+			    A->B: same messages
+			  }
+			}
+			"""
+			)
+			.Should()
+			.MatchSnapshot(SvgSnapshotFormat.Instance);
 }
